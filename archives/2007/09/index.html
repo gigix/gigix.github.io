@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+        归档: 2007/9
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+    <meta name="author" content="Jeff Xiong">
+    
+    
+
+    <meta name="description">
+<meta property="og:type" content="website">
+<meta property="og:title" content="归档: 2007/9">
+<meta property="og:url" content="http://gigix.thoughtworkers.org/archives/2007/09/index.html">
+<meta property="og:site_name" content="透明思考">
+<meta property="og:description">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="归档: 2007/9">
+<meta name="twitter:description">
+
+    
+    <link rel="alternate" href="/atom.xml" title="透明思考" type="application/atom+xml">
+    
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css" type="text/css">
+
+    <script src="/js/jquery.min.js"></script>
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+<header class="panel-cover panel-cover--collapsed">
+
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">透明思考</a></h1>
+
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">
+          Transparent Thoughts
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">Blog</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+------------------------------ -->
+
+<nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+
+  <!-- Github -->
+  <li class="navigation__item">
+    <a href="https://github.com/gigix" title="Gigix on GitHub" target="_blank">
+      <i class='icon icon-social-github'></i>
+      <span class="label">GitHub</span>
+    </a>
+  </li>
+
+  </ul>
+</nav>
+
+          <script>
+    function doSearch() {
+        var keyword = $('#keyword').val();
+        if (keyword.trim() === '') {
+            window.location.href = 'http://gigix.thoughtworkers.org/#blog';
+        } else {
+            window.open('http://www.google.com/search?q=site:gigix.thoughtworkers.org+' + keyword);
+        }
+    }
+</script>
+
+<div class="search">
+    <input id="keyword" type="text"/>
+    <input type="button" value="Search" class="btn" onclick="doSearch()"/>
+</div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+
+  <h1 class="archive-title">归档: 2007/9</h1>
+  <hr class="post-list__divider" />
+
+
+<div class="main-post-list">
+    <ol class="post-list">
+    
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2007/9/25/do-not-program-defensively/" title="link to Do not program &quot;defensively&quot;">Do not program &quot;defensively&quot;</a></h2>
+
+      <p class="excerpt">
+        <p></p><p>(From<a href="http://www.erlang.se/doc/programming_rules.shtml" target="_blank" rel="external">Erlang Programming Rules</a>)</p><p>A defensive program is one where the programmer does not “trust” the input data to thepart of the system they are programming. In general one should not test input data to functions forcorrectness. Most of the code in the system should be written with the assumption that the inputdata to the function in question is correct. Only a small part of the code should actually performany checking of the data. This is usually done when data “enters” the system for thefirst time, once data has been checked as it enters the system it should thereafter be assumedcorrect.</p>Example:<pre><code>%% Args: Option is all|normalget_server_usage_info(Option, AsciiPid) -Pid = list_to_pid(AsciiPid),case Option ofall - get_all_info(Pid);normal - get_normal_info(Pid)end.</code></pre>The function will crash if Option neither normal nor all, and it should do that. The caller isresponsible for supplying correct input.<p></p>
+
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="9月 25 2007" class="post-list__meta--date date">9月 25 2007</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2007/9/24/look-big-do-small/" title="link to 琐碎的伟大">琐碎的伟大</a></h2>
+
+      <p class="excerpt">
+        <p>Alexey告诉我，在德国的<a href="http://www.railsconfeurope.com/" target="_blank" rel="external">RailsConf Europe</a>大会上，很多人对我们说“谢谢”，谢谢我们做出了那么好用的<a href="http://rubyworks.rubyforge.org/" target="_blank" rel="external">production stack</a>。Alexey说，我们肯定是干了些了不起的事情。</p><p>整整一年没联系的S，原来去了奥组委工作。仍然是编辑出版的工作，S也说，最初的激动过去以后，日常工作还是很琐碎的。</p><p>事情就是这样的吧。事后看起来很了不起的工作，正经在做的时候，也都是些很琐碎的小破事。唯一的区别是，它事后看起来是了不起的。</p><p>结论是，即便仍然是在做着琐碎的小破事，也希望它们是了不起的工作中的一部分。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="9月 24 2007" class="post-list__meta--date date">9月 24 2007</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2007/9/15/rolling-out-from-rubyworks/" title="link to RubyWorks近况很好，将来会更好">RubyWorks近况很好，将来会更好</a></h2>
+
+      <p class="excerpt">
+        <p>经过一番调整之后，<a href="http://cruisecontrolrb.thoughtworks.com/" target="_blank" rel="external">CruiseControl.rb</a>的网站又回来了，顺便host了<a href="http://cruisecontrolrb.thoughtworks.com/projects" target="_blank" rel="external">Ruby on Rails的持续集成</a>。这次用了一个<a href="http://www.centos.org/" target="_blank" rel="external">CentOS 5</a>的服务器，用<a href="http://rubyworks.rubyforge.org/" target="_blank" rel="external">RubyWorks Production Stack</a>做部署环境。自己的狗食自己吃，自己的产品自己用。在下周的<a href="http://www.railsconfeurope.com/" target="_blank" rel="external">RailsConf Europe 2007</a>上，我们的CC.rb、Production Stack和<a href="http://gigix.thoughtworkers.org/2007/8/17/jrubyworks-j2ee-on-rails">JRubyWorks</a>都会亮相。这就是我们<a href="http://studios.thoughtworks.com/rubyworks" target="_blank" rel="external">RubyWorks</a>团队取得的阶段性成果。</p><p>不过，当负责宣传推广的同事去参加RailsConf Europe的时候，我就已经从这个项目中rollout了。至少在可预见的将来，我的角色将从RubyWorks的核心开发者变成热心的开源参与者之一。这就是控球后卫的姿态，运球推进到前场，晃开防守找到空档，把球传给位置最好的队友让他得分，自己转身投入防守。</p><p>不过说真的，但愿很快能再进入一个Ruby项目……昨天和<a href="http://dreamhead.blogbus.com/" target="_blank" rel="external">dreamhead</a>聊天的时候瞎扯了一句：你知道为什么以前的程序员总是想做几年技术就转为做管理吗？因为他们用C++编程太没乐趣了。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="9月 15 2007" class="post-list__meta--date date">9月 15 2007</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2007/9/12/对冲基金那些事/" title="link to 对冲基金那些事">对冲基金那些事</a></h2>
+
+      <p class="excerpt">
+        <p>在JavaEye写一个系列：对冲基金那些事。现在写了两篇，“<a href="http://gigix.javaeye.com/blog/122407" target="_blank" rel="external">沽空与空头</a>”和“<a href="http://gigix.javaeye.com/blog/122616" target="_blank" rel="external">风险对冲</a>”，下一个要写写套利。</p><p>其实也不是为了什么目的，只是看期权定价之类的东西，觉得很有趣。为了保持这个blog的软件技术品味，就不再转载了。最后会写出多少呢？不知道。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="9月 12 2007" class="post-list__meta--date date">9月 12 2007</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2007/9/1/iTechTag-intro/" title="link to iTechTag：声望创造价值">iTechTag：声望创造价值</a></h2>
+
+      <p class="excerpt">
+        <p>以前在<a href="http://www.javaeye.com/topic/102677?page=2" target="_blank">JavaEye的一个讨论</a>里，有位同志说“简历嘛，大家都知道，肯定是有水分的”。于是我在<a href="http://gigix.thoughtworkers.org/2007/7/19/%E7%9C%9F%E5%AE%9E%E7%9A%84%E7%AE%80%E5%8E%86%EF%BC%8C%E7%9C%9F%E5%AE%9E%E7%9A%84%E8%87%AA%E6%88%91" target="_blank">另一个blog</a>里说到，简历里唯一有意义的，就是工作经历。认真回想一下，我在看应聘者的简历时，也基本上不看基本信息、自我评价之类的，只看工作经历：做过什么项目，用过什么技术，比说什么“熟练”、“精通”要有意义得多。我的期望、我的评估、整个后续的面试过程都是围绕着工作经历来展开的。</p><p>求职者的工作经历，这份信息对于潜在雇主有价值。但这份价值在求职者自己身上实现了多少？作为软件开发者，不妨问问自己：还有谁记得你几年前完成的那些“不可能的任务”？还有谁记得你通宵加班为项目做出的贡献？还有谁记得客户和领导曾给你的赞扬？有多少求贤若渴的潜在雇主想要知道你曾经那些了不起的成就，却无从获取这些信息？那么这份信息的价值去了哪里？我们把工作经历告诉了谁？是的，我们把工作经历写在简历里，把简历放在了招聘网站；而招聘网站把我们的简历锁起来，把我们的工作经历信息卖给潜在雇主。我们的工作经历，去给招聘网站创造价值了。</p><p>并非所有行业都是这样的。就拿电影来说吧，除了导演和演员以外，一部好电影离不开无数的幕后英雄：灯光、音乐、武指、剪辑……不过这些幕后英雄并没有因为身处幕后而被埋没，他们的名字出现在影片的演职员表里，展现在所有观众的眼前。当大导演想要拍下一部大影片时，他立即就能想到自己喜欢哪部影片里的配乐，然后立即就能找出这个配乐的人。幕后英雄们的每一段工作经历不仅给自己带来收入，还积累成为自己的声望，为自己打开了未来的门。</p><p><a href="http://www.itechtag.com/" target="_blank">iTechTag</a>的目标就是让软件开发者的工作经历真正成为自己的<strong>声望</strong>，让声望给我们自己创造价值。我们希望记录下自己辛勤工作的成果，并与他人分享我们的骄傲。我们希望让别人知道我们掌握什么技能、参与过什么项目、帮助过什么客户、做出过什么贡献。我们希望让自己、让同事、让朋友、让所有关注我们的人有机会了解：我们是多么优秀的软件开发者。</p><p><a href="http://www.itechtag.com/widget/index" target="_blank"><img src="http://gigix.thoughtworkers.org/assets/2007/9/1/techtag.png" border="0"></a></p><p>把这样一朵“技能云”贴在自己的blog旁边，向所有人炫耀自己的强大技能和丰富经验，让自己的声望开始发挥价值。这就是iTechTag想要给你的。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="9月 1 2007" class="post-list__meta--date date">9月 1 2007</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+  </ol>
+
+  <hr class="post-list__divider " />
+
+<nav class="pagination" role="navigation">
+    
+
+    <span class="pagination__page-number">Page 1 of 1</span>
+    
+    
+</nav>
+
+
+</div>
+            <footer class="footer">
+    <span class="footer__copyright">&copy;
+        2015
+        Transparent Thoughts. All rights reserved.</span>
+</footer>
+        </div>
+    </div>
+
+    <!-- The main JavaScript file for Casper -->
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    <script src="/js/jquery.imagesloaded.min.js"></script>
+    <script src="/js/gallery.js"></script>
+    <script src="/js/jquery.githubRepoWidget.min.js"></script>
+    <script type="text/javascript"
+            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> 
+      MathJax.Hub.Config({ 
+        tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+    }); 
+
+    </script>
+
+    <!--kill ie6 -->
+    <!--[if IE 6]>
+    <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+    <![endif]-->
+
+    <!--  google analytics -->
+    <script>
+        // add your google analytics code here
+    </script>
+
+    <!-- totop -->
+    <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">
+        <a title="back to top"><img style="width:30px;height:30px;" src="/images/totop.png"/></a>
+    </div>
+    <script>
+        (function ($) {
+            var upperLimit = 100;
+            var scrollElem = $('#totop');
+            var scrollSpeed = 500;
+            scrollElem.hide();
+            $(window).scroll(function () {
+                var scrollTop = $(document).scrollTop();
+                if (scrollTop > upperLimit) {
+                    $(scrollElem).stop().fadeTo(300, 1); // fade back in
+                } else {
+                    $(scrollElem).stop().fadeTo(300, 0); // fade out
+                }
+            });
+            $(scrollElem).click(function () {
+                $('html, body').animate({scrollTop: 0}, scrollSpeed);
+                return false;
+            });
+        })(jQuery);
+    </script>
+
+    <!-- fancybox -->
+    
+    <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+    <script src="/fancybox/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript">
+        (function ($) {
+            $('.fancybox').fancybox();
+        })(jQuery);
+    </script>
+    
+
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-113927-4', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <!-- CNZZ Analytics -->
+    <script src="http://s4.cnzz.com/z_stat.php?id=1255092465&web_id=1255092465" language="JavaScript"></script>
+
+</body>
+</html>

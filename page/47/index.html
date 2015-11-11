@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+        page 47 | 透明思考
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+    <meta name="author" content="Jeff Xiong">
+    
+    
+
+    <meta name="description">
+<meta property="og:type" content="website">
+<meta property="og:title" content="page 47 | 透明思考">
+<meta property="og:url" content="http://gigix.thoughtworkers.org/page/47/index.html">
+<meta property="og:site_name" content="透明思考">
+<meta property="og:description">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="page 47 | 透明思考">
+<meta name="twitter:description">
+
+    
+    <link rel="alternate" href="/atom.xml" title="透明思考" type="application/atom+xml">
+    
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css" type="text/css">
+
+    <script src="/js/jquery.min.js"></script>
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+<header class="panel-cover panel-cover--collapsed">
+
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">透明思考</a></h1>
+
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">
+          Transparent Thoughts
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">Blog</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+------------------------------ -->
+
+<nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+
+  <!-- Github -->
+  <li class="navigation__item">
+    <a href="https://github.com/gigix" title="Gigix on GitHub" target="_blank">
+      <i class='icon icon-social-github'></i>
+      <span class="label">GitHub</span>
+    </a>
+  </li>
+
+  </ul>
+</nav>
+
+          <script>
+    function doSearch() {
+        var keyword = $('#keyword').val();
+        if (keyword.trim() === '') {
+            window.location.href = 'http://gigix.thoughtworkers.org/#blog';
+        } else {
+            window.open('http://www.google.com/search?q=site:gigix.thoughtworkers.org+' + keyword);
+        }
+    }
+</script>
+
+<div class="search">
+    <input id="keyword" type="text"/>
+    <input type="button" value="Search" class="btn" onclick="doSearch()"/>
+</div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+
+   <!-- do nothing -->
+
+
+<div class="main-post-list">
+    <ol class="post-list">
+    
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2007/6/28/svlogd-runit-s-service-logging-daemon/" title="link to svlogd- runit&#39;s service logging daemon">svlogd- runit&#39;s service logging daemon</a></h2>
+
+      <p class="excerpt">
+        <p>After install<a href="http://smarden.org/runit/" target="_blank" rel="external">runit</a>, you’ll get /usr/bin/svlogd in yoursystem, which is runit’s service logging daemon. Although there’s a<a href="http://smarden.org/runit/svlogd.8.html" target="_blank" rel="external">manual</a>, it took me a while to figure ourhow to use it …</p><p>(BTW, runit package in Ubuntu Feisty official repository is<a href="https://bugs.launchpad.net/ubuntu/+source/runit/+bug/74135" target="_blank" rel="external">broken</a>…)</p><p>svlogd accepts input from its<span class="caps">STDIN</span>and write it to log files. For example you can do following:</p><pre>ls / | svlogd -v ./log</pre><p>There will be a “log/current” file, which includes the output of “ls /”.</p><p>To<a href="http://smarden.org/runit/faq.html#createlog" target="_blank" rel="external">log a runit’s service</a>,you need create a “log” subdirectory within the service directory,thenrun svlogd in the subdirectory. Given I have a “mongrel_3002”service, I’ll create following stuff:</p><pre>/var/service/mongrel_3002/log/var/service/mongrel_3002/log/run</pre><p>Put following script in “log/run”, and make it executable:</p><pre>#!/bin/shexec svlogd -tt /path/to/log # /path/to/log must be writable</pre><p><a href="http://mongrel.rubyforge.org/" target="_blank" rel="external">Mongrel</a>(in non-daemon mode, i.e. without “-d” option) makes it morecomplicated: it outputs log to log file of itself (such as”#{RAILS_ROOT}/log/production.log”), or outputs log to<span class="caps">STDERR</span>if thelog file is not writable. In order to collect Mongrel’s log withsvlogd, I first make “production.log” not writable, then redirect<span class="caps">STDERR</span>to<span class="caps">STDOUT</span>in Mongrel starting script:</p><pre>gigix@gigix-laptop:~$ cat /var/service/mongrel_3002/run#!/bin/sh/usr/bin/mongrel_rails -c /path/to/rails/app -C /path/to/mongrel/config 2&amp;1</pre><p>Dirty, but it works …            </p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="6月 28 2007" class="post-list__meta--date date">6月 28 2007</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2007/6/26/for（finance-on-rails）第一步：铁道上选基金/" title="link to FOR（Finance on Rails）第一步：铁道上选基金">FOR（Finance on Rails）第一步：铁道上选基金</a></h2>
+
+      <p class="excerpt">
+        <p><a href="http://for.thoughtworkers.org/funds/show" target="_blank" rel="external">http://for.thoughtworkers.org/funds/show</a></p><p>想法很简单：我一直根据晨星评级选基金，不过每次看晨星报表要翻来翻去的排序，还要和以前的旧表对比参考。把这些动作简化，就对我有价值了。</p><p>第一步是列出最近的晨星报表，根据几个重要字段排序（已经做好了）；加上高亮标记的功能，在排序时就不会忘记自己前面看中的基金。</p><p>第二步是自定义基金筛选条件，例如“<strong>年度排名前10，并且在6月1日、6月8日和6月22日这三周的收益率都在-0.2%以上</strong>”。可以分享别人的筛选条件，可以看到哪个筛选条件得到的效果比较好。</p><p>更多的需求，还没想清楚。反馈欢迎中。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="6月 26 2007" class="post-list__meta--date date">6月 26 2007</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2007/6/25/敏捷｜认证｜随便联想/" title="link to 敏捷｜认证｜随便联想">敏捷｜认证｜随便联想</a></h2>
+
+      <p class="excerpt">
+        <p>JavaEye的<a href="http://www.javaeye.com/post/310176" target="_blank" rel="external">一个讨论</a>，不幸已经被隐掉了。Scrum Master认证培训，4500~6000RMB。</p><p>InfoQ：<a href="http://www.infoq.com/cn/news/2007/06/life_after_csm" target="_blank" rel="external">超越CSM的敏捷认证</a><br>ScottAmbler说：“从几个邮件中的讨论来看，很明显，那些没有拿CSM的人认为那只是个噱头，拿了CSM的人也认为那只是个噱头，甚至CSM培训者也这么认为。然而，CSM课程还是照样进行着……只要通过两天的培训课程就可以宣称是通过认证的ScrumMaster了，这明显就是欺诈。”</p><p>敏捷中国的<a href="http://groups.google.com/group/agilechina/browse_thread/thread/3a14b15fb039d7a1" target="_blank" rel="external">另一个讨论</a>。敏捷是一种“过程体系”吗？敏捷的过程是可以被认证的吗？</p><p>全世界都在讲泰勒制管理。泰勒究竟发明了什么？是挥动煤铲的最佳动作，还是“借助高速摄影机去发现最佳动作”这一实践？</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="6月 25 2007" class="post-list__meta--date date">6月 25 2007</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2007/6/19/rubyworks迈出第二步：production-stack-on-ubuntu/" title="link to RubyWorks迈出第二步：Production Stack on Ubuntu">RubyWorks迈出第二步：Production Stack on Ubuntu</a></h2>
+
+      <p class="excerpt">
+        <p><a href="http://rubyworks.rubyforge.org/" target="_blank" rel="external">RubyWorks Production Stack</a>今天发布0.0.2版本。</p><p>虽然只是千分位上的进展，不过也可以说是比前一个版本进步了一倍——事实也差不多正是这样：除了Redhat/CentOS以外，我们现在开始支持<a href="http://www.debian.org/" target="_blank" rel="external">Debian</a>4 Etch和<a href="http://www.ubuntu.com/" target="_blank" rel="external">Ubuntu</a>7.04 Feisty Fawn。此外我们还用<a href="http://smarden.org/runit/" target="_blank" rel="external">runit</a>替换了<a href="http://www.tildeslash.com/monit/" target="_blank" rel="external">monit</a>来负责管理所有的服务器进程，从而避免了由于非正常退出而留下PID文件、导致服务无法启动的问题。monit仍然可以提供监控服务器进程的功能。</p><p>我们还全面重写了<a href="http://rubyworks.rubyforge.org/index.html" target="_blank" rel="external">文档</a>。Alexey和我，两个“外国人”写出的文档，文采就不敢说了，但愿对用户有所帮助就行。</p><p>下一步我们将支持x64架构的服务器，进一步加强安全性和可管理性，以及增加对<a href="http://www.capify.org/" target="_blank" rel="external">Capistrano</a>的支持。下一次的发布——如果一切顺利的话——应该在<a href="http://subject.csdn.net/agilechina/" target="_blank" rel="external">“敏捷中国”技术大会</a>之前出来。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="6月 19 2007" class="post-list__meta--date date">6月 19 2007</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2007/6/18/抄书-erlang的接口库/" title="link to (抄书)Erlang的接口库">(抄书)Erlang的接口库</a></h2>
+
+      <p class="excerpt">
+        <p>However, several libraries included in the Erlang distribution simplifythe job of interfacingErlang to external programs; these include the following:</p><p><a href="http://www.erlang.org/doc/pdf/erl_interface.pdf" target="_blank" rel="external">http://www.erlang.org/doc/pdf/erl_interface.pdf</a></p><p>Erl interface (ei) is a set of C routines and macros for encoding and decoding the Erlang externalformat. On the Erlang side, an Erlang program uses term_to_binary to serialize an Erlang term, andon the C side the routines in ei can be used to unpack this binary. ei can also be used to constructa binary, which the Erlang side can unpack with binary_to_term.</p><p><a href="http://www.erlang.org/doc/pdf/ic.pdf" target="_blank" rel="external">http://www.erlang.org/doc/pdf/ic.pdf</a></p><p>The Erlang<span class="caps">IDL</span>Compiler (ic). The ic application is an Erlang implementation of an<span class="caps">OMG IDL</span>complier.</p><p><a href="http://www.erlang.org/doc/pdf/jinterface.pdf" target="_blank" rel="external">http://www.erlang.org/doc/pdf/jinterface.pdf</a></p><p>Jinteface is a set of tools for interfacing Java to Erlang. It provides a full mapping of Erlangtypes to Java objects, encoding and decoding Erlang terms, linking to Erlang processes, and so on,as well as a wide range of additional features.</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="6月 18 2007" class="post-list__meta--date date">6月 18 2007</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2007/6/18/抄书-erlang如何使用外部程序/" title="link to (抄书)Erlang如何使用外部程序">(抄书)Erlang如何使用外部程序</a></h2>
+
+      <p class="excerpt">
+        <p>Many programming languages allow code in foreign languages to be linked into the applicationexecutable. In Erlang, we don’t allow this for reasons of safety.1 If we were to link an externalprogram into the Erlang executable, then a mistake in the external program could easily crash theErlang system. For this reason, all foreign language code must be run outside the Erlang system inan external operating system process. The Erlang system and the external process communicate througha byte stream.</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="6月 18 2007" class="post-list__meta--date date">6月 18 2007</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2007/6/15/塑造敏捷企业：第二届“敏捷中国”技术大会/" title="link to 塑造敏捷企业：第二届“敏捷中国”技术大会">塑造敏捷企业：第二届“敏捷中国”技术大会</a></h2>
+
+      <p class="excerpt">
+        <p>软件项目需要敏捷，企业同样需要敏捷。一支敏捷的团队能够在项目中收获成功，而一家敏捷的企业能够在市场的风雨中屹立不倒。</p><p>本次<a href="http://subject.csdn.net/agilechina/" target="_blank" rel="external">“敏捷中国”技术大会</a>将会集中展现塑造敏捷企业所需的方方面面：业界领先的敏捷项目管理工具；极大提升软件开发效率的新语言和新框架；数据库领域的敏捷实践；全方位的敏捷项目管理指导；还有身临其境的亲身体验。来自开源社区和<strong>Thought</strong>Works公司的技术领导者们将带领听众全面感受敏捷企业。</p><p><strong>塑造敏捷企业，就从<a href="http://subject.csdn.net/agilechina/" target="_blank" rel="external">第二届“敏捷中国”技术大会</a>开始。</strong></p><ul><li><strong>时 间：</strong>2007年7月14日 星期六</li><li><strong>地 址：</strong>北京市海淀区知春路25号 <a href="http://www.go2map.com/htm/poi/1/10004057/1_100040576907.htm" target="_blank" rel="external">北京丽亭华苑酒店</a>（原天鸿科园） 鸿运厅</li><li><strong>联系方式</strong>：</li><ul><li>电 话： 010-51661202转286</li><li>E-mail：<a href="mailto:%20wanglin@csdn.net" target="_blank" rel="external">wanglin@csdn.net</a></li></ul></ul><p>.现在即可<a href="http://subject.csdn.net/agilechina/baoming.htm" target="_blank" rel="external">在线报名</a>。流火七月，我们相约北京。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="6月 15 2007" class="post-list__meta--date date">6月 15 2007</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2007/6/14/erlang继续学习中……/" title="link to Erlang继续学习中……">Erlang继续学习中……</a></h2>
+
+      <p class="excerpt">
+        <p><a href="http://www.pragmaticprogrammer.com/titles/jaerlang/" target="_blank" rel="external">Programming Erlang</a>读到第9章，错误处理。把多个进程link起来，监控或者错误恢复或者后备。记得以前看到过一句很牛的话：Erlang is not reliable—Java is reliable,Erlang just rocks.</p><p>不过疑问仍然存在：什么时候才需要这样“rocks”的进程管理能力？什么时候才需要如此清晰的进程建模？当然高性能服务器需要。但高性能服务器不是谁都会拿着玩玩的。Ruby onRails会走红，因为谁都可以拿它做个网站然后做创业梦。那么Erlang呢？它带来的联想是什么？</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="6月 14 2007" class="post-list__meta--date date">6月 14 2007</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2007/6/10/erlang-exercise-ring-benchmark/" title="link to Erlang Exercise- Ring Benchmark">Erlang Exercise- Ring Benchmark</a></h2>
+
+      <p class="excerpt">
+        <p>Ring benchmark：创建N个进程，把它们组合成环状；把一条消息在环上传递M圈，这样总共有N*M次消息传递。对于不同的N和M值，记录所需的时间。</p><pre>+ erl -noshell -s ring benchmark 3000 1000 -s init stopBenchmark starting: ring with 3000 nodes, send message around 1000 timesBenchmark doneTime=750000 (827000) microseconds</pre><p>第二问：用你熟悉的其他语言编写类似的程序，比较结果。</p><p>首先，0.8秒完成三百万次进程间消息传递，这足以说明问题。其次（也更重要的），我很怀疑自己是否能用别的语言写出同样功能的程序——Erlang的程序共计41行。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="6月 10 2007" class="post-list__meta--date date">6月 10 2007</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2007/6/9/escript-running-erlang-as-scripts/" title="link to Escript- Running Erlang As Scripts">Escript- Running Erlang As Scripts</a></h2>
+
+      <p class="excerpt">
+        <p></p><p>（以下摘抄自<a href="http://www.pragmaticprogrammer.com/titles/jaerlang/" target="_blank" rel="external">Programming Erlang</a>第六章）</p><p>Using escript you can run your programs directly as scripts—there’s no need to compile them first.</p><p><em>Warning:escript is included in Erlang versions<span class="caps">R11B</span>-4 and onward. If you havean earlier version of Erlang, then you should upgrade to the latestversion of Erlang.</em></p><p>To run hello as an escript, we create the following file:</p><pre>#!/usr/bin/env escriptmain(_) -gt;nbsp;io:format(“Hello world\n” ).</pre><p>On a Unix system,we can run this immediately and without compilation as follows:</p><pre>$ chmod u+x hello$ ./helloHello world$</pre><p></p>
+
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="6月 9 2007" class="post-list__meta--date date">6月 9 2007</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+  </ol>
+
+  <hr class="post-list__divider " />
+
+<nav class="pagination" role="navigation">
+    
+    	
+          <a class="newer-posts pagination__newer btn btn-small btn-tertiary" href="/page/46/">&larr; Newer Posts</a>
+        
+    
+
+    <span class="pagination__page-number">Page 47 of 51</span>
+    
+    
+        <a class="older-posts pagination__older btn btn-small btn-tertiary" href="/page/48/">Older Posts &rarr;</a>
+    
+</nav>
+
+
+</div>
+            <footer class="footer">
+    <span class="footer__copyright">&copy;
+        2015
+        Transparent Thoughts. All rights reserved.</span>
+</footer>
+        </div>
+    </div>
+
+    <!-- The main JavaScript file for Casper -->
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    <script src="/js/jquery.imagesloaded.min.js"></script>
+    <script src="/js/gallery.js"></script>
+    <script src="/js/jquery.githubRepoWidget.min.js"></script>
+    <script type="text/javascript"
+            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> 
+      MathJax.Hub.Config({ 
+        tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+    }); 
+
+    </script>
+
+    <!--kill ie6 -->
+    <!--[if IE 6]>
+    <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+    <![endif]-->
+
+    <!--  google analytics -->
+    <script>
+        // add your google analytics code here
+    </script>
+
+    <!-- totop -->
+    <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">
+        <a title="back to top"><img style="width:30px;height:30px;" src="/images/totop.png"/></a>
+    </div>
+    <script>
+        (function ($) {
+            var upperLimit = 100;
+            var scrollElem = $('#totop');
+            var scrollSpeed = 500;
+            scrollElem.hide();
+            $(window).scroll(function () {
+                var scrollTop = $(document).scrollTop();
+                if (scrollTop > upperLimit) {
+                    $(scrollElem).stop().fadeTo(300, 1); // fade back in
+                } else {
+                    $(scrollElem).stop().fadeTo(300, 0); // fade out
+                }
+            });
+            $(scrollElem).click(function () {
+                $('html, body').animate({scrollTop: 0}, scrollSpeed);
+                return false;
+            });
+        })(jQuery);
+    </script>
+
+    <!-- fancybox -->
+    
+    <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+    <script src="/fancybox/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript">
+        (function ($) {
+            $('.fancybox').fancybox();
+        })(jQuery);
+    </script>
+    
+
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-113927-4', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <!-- CNZZ Analytics -->
+    <script src="http://s4.cnzz.com/z_stat.php?id=1255092465&web_id=1255092465" language="JavaScript"></script>
+
+</body>
+</html>

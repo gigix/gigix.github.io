@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+        数据采集的新时代 | 透明思考
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+    <meta name="author" content="Jeff Xiong">
+    
+    
+    <meta name="description" content="中午帮同事订餐，大家都想吃点什么？周末搞个团队建设，大家想去哪里玩？买保险，要提供个人信息。进医院，要先挂个号。这几件事有什么共通之处？答案是，它们本质上都是在做数据采集。如果把这些收集信息的过程放到电脑上做，可能会用个Excel表格；如果要做个软件来处理这些事，大概最主要的界面就是一张表单（form），有文本框啦单选按钮啦多选按钮啦下拉列表啦之类的，最后还有个“提交”或者“完成”之类的按钮。这些">
+    
+
+    <meta name="description" content="中午帮同事订餐，大家都想吃点什么？周末搞个团队建设，大家想去哪里玩？买保险，要提供个人信息。进医院，要先挂个号。这几件事有什么共通之处？答案是，它们本质上都是在做数据采集。如果把这些收集信息的过程放到电脑上做，可能会用个Excel表格；如果要做个软件来处理这些事，大概最主要的界面就是一张表单（form），有文本框啦单选按钮啦多选按钮啦下拉列表啦之类的，最后还有个“提交”或者“完成”之类的按钮。这些">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据采集的新时代 | 透明思考">
+<meta property="og:url" content="http://gigix.thoughtworkers.org/2013/11/16/new-era-of-data-collecting/index.html">
+<meta property="og:site_name" content="透明思考">
+<meta property="og:description" content="中午帮同事订餐，大家都想吃点什么？周末搞个团队建设，大家想去哪里玩？买保险，要提供个人信息。进医院，要先挂个号。这几件事有什么共通之处？答案是，它们本质上都是在做数据采集。如果把这些收集信息的过程放到电脑上做，可能会用个Excel表格；如果要做个软件来处理这些事，大概最主要的界面就是一张表单（form），有文本框啦单选按钮啦多选按钮啦下拉列表啦之类的，最后还有个“提交”或者“完成”之类的按钮。这些">
+<meta property="og:image" content="http://gigix.thoughtworkers.org/assets/2013/11/16/appsforms2.jpg">
+<meta property="og:image" content="http://gigix.thoughtworkers.org/assets/2013/11/16/Screen_Shot_2013-11-16_at_6.14.58_PM.png">
+<meta property="og:image" content="http://gigix.thoughtworkers.org/assets/2013/11/16/enketo.png">
+<meta property="og:updated_time" content="2015-11-11T07:46:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="数据采集的新时代 | 透明思考">
+<meta name="twitter:description" content="中午帮同事订餐，大家都想吃点什么？周末搞个团队建设，大家想去哪里玩？买保险，要提供个人信息。进医院，要先挂个号。这几件事有什么共通之处？答案是，它们本质上都是在做数据采集。如果把这些收集信息的过程放到电脑上做，可能会用个Excel表格；如果要做个软件来处理这些事，大概最主要的界面就是一张表单（form），有文本框啦单选按钮啦多选按钮啦下拉列表啦之类的，最后还有个“提交”或者“完成”之类的按钮。这些">
+
+    
+    <link rel="alternate" href="/atom.xml" title="透明思考" type="application/atom+xml">
+    
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css" type="text/css">
+
+    <script src="/js/jquery.min.js"></script>
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+<header class="panel-cover panel-cover--collapsed">
+
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">透明思考</a></h1>
+
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">
+          Transparent Thoughts
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">Blog</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+------------------------------ -->
+
+<nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+
+  <!-- Github -->
+  <li class="navigation__item">
+    <a href="https://github.com/gigix" title="Gigix on GitHub" target="_blank">
+      <i class='icon icon-social-github'></i>
+      <span class="label">GitHub</span>
+    </a>
+  </li>
+
+  </ul>
+</nav>
+
+          <script>
+    function doSearch() {
+        var keyword = $('#keyword').val();
+        if (keyword.trim() === '') {
+            window.location.href = 'http://gigix.thoughtworkers.org/#blog';
+        } else {
+            window.open('http://www.google.com/search?q=site:gigix.thoughtworkers.org+' + keyword);
+        }
+    }
+</script>
+
+<div class="search">
+    <input id="keyword" type="text"/>
+    <input type="button" value="Search" class="btn" onclick="doSearch()"/>
+</div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+    <header class="post-header">
+
+        
+        <div class="post-meta">
+            <time datetime="11月 16 2013"
+                  class="post-meta__date date">11月 16 2013</time>
+            &#8226;
+
+        <span class="post-meta__tags tags">
+
+            <font class="categories">
+                
+            </font>
+            
+
+        </span>
+        </div>
+        
+
+        <h1 class="post-title">数据采集的新时代</h1>
+    </header>
+
+    <section class="post">
+        <p>中午帮同事订餐，大家都想吃点什么？周末搞个团队建设，大家想去哪里玩？买保险，要提供个人信息。进医院，要先挂个号。</p><p>这几件事有什么共通之处？答案是，它们本质上都是在做数据采集。如果把这些收集信息的过程放到电脑上做，可能会用个Excel表格；如果要做个软件来处理这些事，大概最主要的界面就是一张表单（form），有文本框啦单选按钮啦多选按钮啦下拉列表啦之类的，最后还有个“提交”或者“完成”之类的按钮。</p><p><img src="http://gigix.thoughtworkers.org/assets/2013/11/16/appsforms2.jpg" width="420px"></p><p>这些表单比乍一看的要复杂。比如说，你会希望表单有校验，明显不合法的数据最好就不要填进去了。再比如说，表单会有条件判断在里面，例如男性就不用问是否怀孕女性就不用问是否做过结扎。当然了，表单还应该长得好看，而且最好在电脑上和手机上都好看。更不用说还有一些并非HTML直接支持但颇为常见的数据类型，比如地点经纬度，比如照片。</p><p>你还在用HTML一个字段一个字段实现表单吗？你的开发工作量还和表单长度成正比吗？那弱爆了好吗？</p><p><a href="https://jinshuju.net/" target="_blank" rel="external">金数据</a>是一个在线创建和管理表单、收集数据的工具。不用多废话介绍它，网站上一看就知道了。有趣的部分在于，金数据提供了<a href="http://developer.jinshuju.net/" target="_blank" rel="external"><span class="caps">JSON</span>格式的API</a>，你可以把放在金数据上的表单拿给别人去填，收到新数据的时候通过这个API推送给你自己的服务器程序。觉得金数据的表单还不够好？或者压根儿不想让金数据知道你采集了哪些数据？你还可以把表单定义抓下来，自己写程序解释这个JSON定义，得到完全自己控制的表单——听起来有点麻烦，但至少有意思，总好过一个字段一个字段写HTML。</p><p><img src="http://gigix.thoughtworkers.org/assets/2013/11/16/Screen_Shot_2013-11-16_at_6.14.58_PM.png" alt=""></p><p>如果解释金数据的JSON格式表单定义确实有点麻烦（或者技术挑战），这儿还有个更简单一点的解决方案。<a href="https://enketo.org/" target="_blank" rel="external">Enketo</a>也是一个在线设计表单和手机数据的工具，不过不像金数据，Enketo更多像是一个帮助软件开发者的工具：你可以用Excel设计表单，然后把Excel格式的表单定义上传到<a href="https://formhub.org/" target="_blank" rel="external">FormHub</a>（Enketo的一个部署），然后就可以让用户在线填表；更妙的是当你把表单定义下载过来，Enketo还提供了开源的<a href="https://github.com/MartijnR/enketo-core" target="_blank" rel="external">Javascript Library</a>帮你显示和操作表单——所以就不用操心“自己写程序解释表单定义”什么的啦，毕竟要实现那些常见的表单功能并不是件很容易的事。</p><p>如果感兴趣怎么使用Enketo来做你自己的表单，我做了一个<a href="https://github.com/gigix/shivaganda" target="_blank" rel="external">简单的Demo</a>来演示。</p>
+
+<pre>$ git clone https://github.com/gigix/shivaganda.git
+$ cd shivaganda/village-enketo$ npm install$ bin/server.js
+</pre>
+
+<p>然后就可以去 <a href="http://localhost:8002" target="_blank" rel="external">http://localhost:8002</a> 看这个表单了。代码非常简单，40行HTML加100行Javascript而已，表单就搞定啦，而且做成手机应用也完全没问题。点“提交”按钮的话，你得到的是一个XML格式的数据包，所以程序员就只管处理数据就好啦。</p><p><img src="http://gigix.thoughtworkers.org/assets/2013/11/16/enketo.png" width="420px"></p><p>还是那话：你还在一个字段一个字段拿HTML写表单吗？那弱爆了好吗？……可是这真的还在很多我所知道的项目里发生呢。特别是来自发达国家（尤其是南太平洋发达国家，嗯，你懂的）的项目，客户似乎对于花这点工夫也不在意，毕竟一个项目上线就能赚很多钱回来嘛。但是在，比如说，UNICEF在非洲的项目里，我们没钱啊，我们资源非常受限啊，我们舍不得把程序员宝贵的时间拿去复制粘贴HTML表单字段啊，所以我们就得想破脑袋找这些法子，让程序员做必须做的事，可以自动化的全都自动化。其结果呢，就是项目做得很有意思，每段程序写下去都是有创造性的——没创造性的那些都被自动化了。</p><p>所以呢，穷人的孩子早当家，穷人的项目更好玩 :D</p>
+    </section>
+
+    <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style_32x32" style="height: 40px">
+    <a class="jiathis_button_tsina"></a>
+    <a class="jiathis_button_weixin"></a>
+    <a class="jiathis_button_douban"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis"
+       target="_blank"></a>
+</div>
+<script type="text/javascript">
+    var jiathis_config = {
+        summary: "",
+        shortUrl: false,
+        hideMore: false
+    }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code_mini/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+    
+</article>
+
+
+            <footer class="footer">
+    <span class="footer__copyright">&copy;
+        2013
+        Transparent Thoughts. All rights reserved.</span>
+</footer>
+        </div>
+    </div>
+
+    <!-- The main JavaScript file for Casper -->
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    <script src="/js/jquery.imagesloaded.min.js"></script>
+    <script src="/js/gallery.js"></script>
+    <script src="/js/jquery.githubRepoWidget.min.js"></script>
+    <script type="text/javascript"
+            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> 
+      MathJax.Hub.Config({ 
+        tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+    }); 
+
+    </script>
+
+    <!--kill ie6 -->
+    <!--[if IE 6]>
+    <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+    <![endif]-->
+
+    <!--  google analytics -->
+    <script>
+        // add your google analytics code here
+    </script>
+
+    <!-- totop -->
+    <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">
+        <a title="back to top"><img style="width:30px;height:30px;" src="/images/totop.png"/></a>
+    </div>
+    <script>
+        (function ($) {
+            var upperLimit = 100;
+            var scrollElem = $('#totop');
+            var scrollSpeed = 500;
+            scrollElem.hide();
+            $(window).scroll(function () {
+                var scrollTop = $(document).scrollTop();
+                if (scrollTop > upperLimit) {
+                    $(scrollElem).stop().fadeTo(300, 1); // fade back in
+                } else {
+                    $(scrollElem).stop().fadeTo(300, 0); // fade out
+                }
+            });
+            $(scrollElem).click(function () {
+                $('html, body').animate({scrollTop: 0}, scrollSpeed);
+                return false;
+            });
+        })(jQuery);
+    </script>
+
+    <!-- fancybox -->
+    
+    <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+    <script src="/fancybox/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript">
+        (function ($) {
+            $('.fancybox').fancybox();
+        })(jQuery);
+    </script>
+    
+
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-113927-4', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <!-- CNZZ Analytics -->
+    <script src="http://s4.cnzz.com/z_stat.php?id=1255092465&web_id=1255092465" language="JavaScript"></script>
+
+</body>
+</html>

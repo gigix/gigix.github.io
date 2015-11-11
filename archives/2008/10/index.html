@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+        归档: 2008/10
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+    <meta name="author" content="Jeff Xiong">
+    
+    
+
+    <meta name="description">
+<meta property="og:type" content="website">
+<meta property="og:title" content="归档: 2008/10">
+<meta property="og:url" content="http://gigix.thoughtworkers.org/archives/2008/10/index.html">
+<meta property="og:site_name" content="透明思考">
+<meta property="og:description">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="归档: 2008/10">
+<meta name="twitter:description">
+
+    
+    <link rel="alternate" href="/atom.xml" title="透明思考" type="application/atom+xml">
+    
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css" type="text/css">
+
+    <script src="/js/jquery.min.js"></script>
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+<header class="panel-cover panel-cover--collapsed">
+
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">透明思考</a></h1>
+
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">
+          Transparent Thoughts
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">Blog</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+------------------------------ -->
+
+<nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+
+  <!-- Github -->
+  <li class="navigation__item">
+    <a href="https://github.com/gigix" title="Gigix on GitHub" target="_blank">
+      <i class='icon icon-social-github'></i>
+      <span class="label">GitHub</span>
+    </a>
+  </li>
+
+  </ul>
+</nav>
+
+          <script>
+    function doSearch() {
+        var keyword = $('#keyword').val();
+        if (keyword.trim() === '') {
+            window.location.href = 'http://gigix.thoughtworkers.org/#blog';
+        } else {
+            window.open('http://www.google.com/search?q=site:gigix.thoughtworkers.org+' + keyword);
+        }
+    }
+</script>
+
+<div class="search">
+    <input id="keyword" type="text"/>
+    <input type="button" value="Search" class="btn" onclick="doSearch()"/>
+</div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+
+  <h1 class="archive-title">归档: 2008/10</h1>
+  <hr class="post-list__divider" />
+
+
+<div class="main-post-list">
+    <ol class="post-list">
+    
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2008/10/19/hack-rails-transaction/" title="link to Hack Rails的事务机制">Hack Rails的事务机制</a></h2>
+
+      <p class="excerpt">
+        <ol><li>ActiveRecord不支持嵌套事务。</li><li>为了简单我们在ApplicationController里做了个filter，于是所有POST/PUT/DELETE的action都被包裹在一个事务里，事务边界是整个请求。</li><li>偏偏有时候你希望让某个操作中的某个部分不被包含在事务里。原因是当某些操作同时进行，你想看到的不是原子的结果，而是所有同时进行的操作汇总的最终结果<ul><li>比如说，“审核改进措施”这个操作中包含了“重新算分”。</li><li>某企业有两项改进措施R1和R2，分别对应考核类别C1和C2。C1的原始分数是98，C2的原始分数是89。</li><li>R1能给C1加回1分，R2能给C2加回11分。也就是说审核R1之后C1变成99分，审核R2后C2变成100分。</li><li>但，“重新算分”是在整个“审核”的事务之中的，于是如果R1和R2同时审核，你一定会看到下列两种原子结果之一：<ul><li><span class="caps">C1 99</span>分，C2 89分；或者</li><li><span class="caps">C1 98</span>分，C2 100分。</li></ul></li><li>其实这个时候我们不想让“重新算分”跟“审核”成为原子操作，我们希望把“算分”从“审核”的事务里拿出来，这样最后一次算分一定能体现最终的分数状态。</li></ul></li><li>可以开一个<a href="http://www.ruby-doc.org/core/classes/Thread.html" target="_blank" rel="external">线程</a>或者进程（比如<a href="http://ruby-doc.org/core/classes/Kernel.html" target="_blank" rel="external">Kernel.system</a>）把算分的逻辑分出来。</li><li>因为可以确定“算分”不会跟“审核”发生死锁，所以把这个线程join起来。<ul><li>一定要小心，要是算分跟审核修改到同一条数据那么就会死锁…因为审核等待算分线程结束，而算分线程等待审核交出数据锁。</li><li>多个算分线程之间是不会死锁滴…为了确保时序可以一上来就锁自己最后要更新的分数记录。</li></ul></li></ol>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="10月 19 2008" class="post-list__meta--date date">10月 19 2008</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2008/10/14/prefer-keyboard-than-mouse/" title="link to 首选键盘而非鼠标">首选键盘而非鼠标</a></h2>
+
+      <p class="excerpt">
+        <p>（摘自<a href="http://oreilly.com/catalog/9780596519780/" target="_blank" rel="external">The Productive Programmer</a>）</p><p>开发人员实质上是特殊的数据录入职员。我们输入计算机的数据不是来自外界资源，而是来自于我们的大脑。但是数据录入操作员的教训仍能使我们产生共鸣。根据他们所能输入的信息量来收费的数据录入工人知道，使用鼠标会以数量级程度降低他们的速度。开发人员可以从中学到重要的一课。</p><p>VI和Emacs都支持一个非常重要的加速器：永远不要将你的双手从字符按键上移开。即使是下移到键盘上的箭头按键都会使你慢下来，因为你必须再次回到主排键来输入字符。真正有用的编辑器会使你的手保持在最佳位置，同时进行输入和导航。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="10月 14 2008" class="post-list__meta--date date">10月 14 2008</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2008/10/5/start-to-change/" title="link to 开始豆瓣，读书，蹭饭">开始豆瓣，读书，蹭饭</a></h2>
+
+      <p class="excerpt">
+        <p><a href="http://yeka52.ycool.com/" target="_blank" rel="external">叶卡</a>粉八卦…自己开了豆瓣以后就要窥探我读什么书…貌似要监督我的样子…昨天驾车经过几年前一起吃火锅的位于熊妍妍家隔壁的地方，突然的觉得不应该辜负她的期望…于是也把<a href="http://www.douban.com/people/gigix/" target="_blank" rel="external">读书情况</a>记下来…去年这个时候在西安是能坚持每天读5万字的，最近有点手忙脚乱都顾不上几日不读书口臭了，不应该。</p><p>（某位大人说，书读得越多越扼杀想象力。然则，真善美之中大概我最喜欢的还是真实…知道什么比创造什么更要紧…关于第三次世界大战之后情景的科幻小说恐怕我是写不出咯，该位大人应该体谅我这脑子里已然装满了各种关于此题材的小说，毕竟太阳下没有新雪…）</p><p>还有<a href="http://jerrylovesrebol.blogspot.com/" target="_blank" rel="external">一位大人</a>已然到了北京好几个月我还没去蹭顿饭…这个也很不应该…那么，就行动起来吧。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="10月 5 2008" class="post-list__meta--date date">10月 5 2008</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2008/10/2/ten-thousand-kms/" title="link to 一万公里">一万公里</a></h2>
+
+      <p class="excerpt">
+        <p>4月中买的<a href="http://www.octaviachina.com/" target="_blank" rel="external">明锐</a>，国庆假期里就开到一万公里了…竟然连一张锐锐的靓照也没有…</p><p><img src="http://img.article.pchome.net/00/21/70/64/41.jpg" alt=""></p><p>第二次换机油滤芯，全车检查。听着时速70时柔和得几乎听不见的引擎声在林荫的道路上行驶，风在耳边沙沙作响。</p><p>不在乎目的地，就是喜欢，这样的在路上。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="10月 2 2008" class="post-list__meta--date date">10月 2 2008</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+  </ol>
+
+  <hr class="post-list__divider " />
+
+<nav class="pagination" role="navigation">
+    
+
+    <span class="pagination__page-number">Page 1 of 1</span>
+    
+    
+</nav>
+
+
+</div>
+            <footer class="footer">
+    <span class="footer__copyright">&copy;
+        2015
+        Transparent Thoughts. All rights reserved.</span>
+</footer>
+        </div>
+    </div>
+
+    <!-- The main JavaScript file for Casper -->
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    <script src="/js/jquery.imagesloaded.min.js"></script>
+    <script src="/js/gallery.js"></script>
+    <script src="/js/jquery.githubRepoWidget.min.js"></script>
+    <script type="text/javascript"
+            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> 
+      MathJax.Hub.Config({ 
+        tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+    }); 
+
+    </script>
+
+    <!--kill ie6 -->
+    <!--[if IE 6]>
+    <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+    <![endif]-->
+
+    <!--  google analytics -->
+    <script>
+        // add your google analytics code here
+    </script>
+
+    <!-- totop -->
+    <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">
+        <a title="back to top"><img style="width:30px;height:30px;" src="/images/totop.png"/></a>
+    </div>
+    <script>
+        (function ($) {
+            var upperLimit = 100;
+            var scrollElem = $('#totop');
+            var scrollSpeed = 500;
+            scrollElem.hide();
+            $(window).scroll(function () {
+                var scrollTop = $(document).scrollTop();
+                if (scrollTop > upperLimit) {
+                    $(scrollElem).stop().fadeTo(300, 1); // fade back in
+                } else {
+                    $(scrollElem).stop().fadeTo(300, 0); // fade out
+                }
+            });
+            $(scrollElem).click(function () {
+                $('html, body').animate({scrollTop: 0}, scrollSpeed);
+                return false;
+            });
+        })(jQuery);
+    </script>
+
+    <!-- fancybox -->
+    
+    <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+    <script src="/fancybox/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript">
+        (function ($) {
+            $('.fancybox').fancybox();
+        })(jQuery);
+    </script>
+    
+
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-113927-4', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <!-- CNZZ Analytics -->
+    <script src="http://s4.cnzz.com/z_stat.php?id=1255092465&web_id=1255092465" language="JavaScript"></script>
+
+</body>
+</html>

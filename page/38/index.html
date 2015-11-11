@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+        page 38 | 透明思考
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+    <meta name="author" content="Jeff Xiong">
+    
+    
+
+    <meta name="description">
+<meta property="og:type" content="website">
+<meta property="og:title" content="page 38 | 透明思考">
+<meta property="og:url" content="http://gigix.thoughtworkers.org/page/38/index.html">
+<meta property="og:site_name" content="透明思考">
+<meta property="og:description">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="page 38 | 透明思考">
+<meta name="twitter:description">
+
+    
+    <link rel="alternate" href="/atom.xml" title="透明思考" type="application/atom+xml">
+    
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css" type="text/css">
+
+    <script src="/js/jquery.min.js"></script>
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+<header class="panel-cover panel-cover--collapsed">
+
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">透明思考</a></h1>
+
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">
+          Transparent Thoughts
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">Blog</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+------------------------------ -->
+
+<nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+
+  <!-- Github -->
+  <li class="navigation__item">
+    <a href="https://github.com/gigix" title="Gigix on GitHub" target="_blank">
+      <i class='icon icon-social-github'></i>
+      <span class="label">GitHub</span>
+    </a>
+  </li>
+
+  </ul>
+</nav>
+
+          <script>
+    function doSearch() {
+        var keyword = $('#keyword').val();
+        if (keyword.trim() === '') {
+            window.location.href = 'http://gigix.thoughtworkers.org/#blog';
+        } else {
+            window.open('http://www.google.com/search?q=site:gigix.thoughtworkers.org+' + keyword);
+        }
+    }
+</script>
+
+<div class="search">
+    <input id="keyword" type="text"/>
+    <input type="button" value="Search" class="btn" onclick="doSearch()"/>
+</div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+
+   <!-- do nothing -->
+
+
+<div class="main-post-list">
+    <ol class="post-list">
+    
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2008/5/30/database-view-in-rails-app/" title="link to 给Rails应用搞上数据库视图">给Rails应用搞上数据库视图</a></h2>
+
+      <p class="excerpt">
+        <p>第一次在Rails应用里用到了<a href="http://dev.mysql.com/tech-resources/articles/mysql-views.html" target="_blank" rel="external">MySQL 5的视图</a>，留个纪念。</p><p>Rails创建大概50,000个ActiveRecord对象就会很慢（大概50~60秒，在我的双核Mac Mini上），为了对付一个报表，就搞了一个视图。整体时间从70秒降到7秒。</p><p>Rails预先定义的rake任务中有db:test:prepare（里面调用db:test:clone_structure），但这个任务只把development库的所有表复制到test，不会复制视图，所以要自己在Rakefile里准备test库。</p><p>以上。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="5月 30 2008" class="post-list__meta--date date">5月 30 2008</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2008/5/30/what-is-it/" title="link to IT是什么（以及软件价值流）">IT是什么（以及软件价值流）</a></h2>
+
+      <p class="excerpt">
+        <p>在JavaEye看到一个<a href="http://www.javaeye.com/topic/198723" target="_blank" rel="external">颇不靠谱的帖子</a>讨论这个，正好和我不靠谱的胡思乱想有点像。</p><p>IT是工业化的自然顺延。工业化的特征是自动化，一切可以被自动化的工作都将被自动化，并且自动化的成本不断降低。由此产能将被日用品化而不再构成竞争力，信息处理和决策才是。IT是信息的自动化，或者说是工业化时代在信息领域的延伸。一切重复的信息转换都应该被自动化，是谓信息产业。</p><p><a href="http://www.javaeye.com/topic/198461" target="_blank" rel="external">另一个不靠谱的帖子</a>引用我的胡思乱想。然则我原话不是这么说的。程序员不必要是价值链上最重要或者附加价值最多的部分，但一定是<strong>价值流图上的关键路径</strong>。不过，资本家应该让程序员尽可能的把全部时间用来做编程这件事，结论是对的。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="5月 30 2008" class="post-list__meta--date date">5月 30 2008</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2008/5/27/majong-in-earthquake/" title="link to 地震也莫荒废了麻将">地震也莫荒废了麻将</a></h2>
+
+      <p class="excerpt">
+        <p>摘自某人的邮件：<blockquote>余震就像打麻将，如果半天没的啥子动静，就绝对是在做大的<br>成都是麻将之城，现在成都麻将的最新规定是<ul><li>不准打512</li><li>不准打血战到底</li><li>不准打刮风下雨</li><li>不准胡推倒胡</li></ul><p>灾区人民无房可住，在余震中等待吃喝；<br>成都人民有房不住，在吃喝中等待余震。</p>上联：小震不用跑<br>下联：大震跑不了<br>横批：就不用跑了</blockquote></p>
+
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="5月 27 2008" class="post-list__meta--date date">5月 27 2008</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2008/5/23/refactoring-or-rewrite/" title="link to 重构？重写？">重构？重写？</a></h2>
+
+      <p class="excerpt">
+        <p>InfoQ:<a href="http://www.infoq.com/cn/news/2008/05/software-rewrite-4-architecture" target="_blank" rel="external">争论：是否应该避免架构重写？</a></p><blockquote>Joel认为在许多案例中做出需要重写软件的判断带有一定的主观性，其往往是由重用代码时遇到困难造成的。…即使旧的代码集就架构而言真的很糟糕，也应该努力清理代码、重构、修改接口，而不是进行全面的重写。</blockquote><p>一种常见的担心是重构需要的成本不比重写来得小。第一，这是真的。基于一些真实的大规模重构得到的经验，重构遗留系统和重写需要的开发工作量基本上正好相等。不过第二，如果选择重构而不重写，可以确保原来的功能不被破坏。其实真实的担心往往并不是成本，而是效果：如果重构做到一半做不下去了再开始重写，那才是最坏的情况。所以真正解决这个问题需要切实可行的重构策略和手段，例如我在<a href="http://blog.csdn.net/gigix/archive/2008/04/04/2249120.aspx" target="_blank" rel="external">这篇文章</a>里介绍的方法。</p><p>有很多这样的案例：面对着一堆遗留代码，人们说“那就既往不咎从头来过吧”。但事实证明从头设计一个优雅的架构于是软件就可以在将来的五年十年中保持良好的扩展性这样美好的愿望从来就没有实现过。因为，软件技术的发展是很快的，代码质量的腐化是很快的。良好的扩展性只有靠持续不断强力有效的质量保证才能做到。至于起点，重构还是重写，影响并不大──如果不介意重写的大风险的话。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="5月 23 2008" class="post-list__meta--date date">5月 23 2008</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2008/5/12/lead-in-agile-team/" title="link to 场上核心">场上核心</a></h2>
+
+      <p class="excerpt">
+        <p>昨天去打球…确实老了，要活动好一阵才能找回感觉。不过热身好以后还是足够欺负一帮本科生小弟弟的。现在打球越来越平和了，把球吊给中锋，看着他坐吃内线就好了。就算自己一球也不投进，传传球，只要自己这队能赢就行。</p><p>InfoQ:<a href="http://www.infoq.com/cn/news/2008/05/seniority-conflict-agile-team" target="_blank" rel="external">老资格、尊重、威信和敏捷团队</a></p><blockquote>两个讨论组的其他大部分成员都同意：一个人多年的经验并不一定能为他带来威信和尊重。威信和尊重来自于他的行动表现。Ajay Danait补充说，真正的领导者不会因为没有赋予权威而退缩，他们会通过建立共识来建立自己的威信。</blockquote><p>其实没有威信又如何呢，如果这支队伍一直在赢？</p><p>而且不会有那么轻松的事。本科生小弟弟们慌乱的时候，我还得投进几个球─很高兴我还有体力连续投进4球。不过说实话，如果这是一种“建立威信”的行动，我宁可不要威信─一边叉腰喘着大气一边这样的想着。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="5月 12 2008" class="post-list__meta--date date">5月 12 2008</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2008/5/6/yet-another-certification/" title="link to 无利不起早">无利不起早</a></h2>
+
+      <p class="excerpt">
+        <p>我<a href="http://gigix.thoughtworkers.org/2008/4/30/thoughts-about-lean-and-agile">早说过</a>，王洋同志突然那么热心的要<a href="http://blog.csdn.net/arthur5933/archive/2008/04/29/2343988.aspx" target="_blank" rel="external">解读精益</a>，一定是为了混口饭吃。果然吧，不幸而言中。挂个好羊头，卖的是这块<a href="http://blog.csdn.net/arthur5933/archive/2008/05/05/2391923.aspx" target="_blank" rel="external">狗肉</a>。</p><blockquote><span class="caps">CSDP</span>英文为Certified Software DevelopmentProfessional，即“被认证的软件开发人员”。CSDP认证体系由IEEE-CS于2002年创建，是对全世界范围的软件工程师在知识领域、工作经验及职业道德等方面的资质认证程序。它不仅是一个对软件从业人员的专业评测体系，而且还蕴涵了软件开发与管理的诸多标准，熟悉和掌握这些软件工程国际标准对于我国软件企业走向国际市场具有重要意义。</blockquote><p>我这个人偏偏记性比较好。IEEE-CS的SWBOK无疾而终这才几年呢？现在又改头换面来认证软件开发人员了。真是把戏人人会变各有奥妙不同啊。（刚才坐在旁边的销售总监扫了一眼我的标题说：“谁不是无利不起早呢？”嗯嗯，这话说得很对。）</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="5月 6 2008" class="post-list__meta--date date">5月 6 2008</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2008/5/5/tw-news/" title="link to 新闻两则">新闻两则</a></h2>
+
+      <p class="excerpt">
+        <p>第一件，<a href="http://www.thoughtworks.com.cn" target="_blank" rel="external"><strong>Thought</strong>Works中国公司</a>被评为<a href="http://blog.csdn.net/programmer_editor/archive/2008/05/05/2392083.aspx" target="_blank" rel="external">2007年度最受程序员欢迎雇主</a>。</p><blockquote>1、聪明(Smart)是第一要素：公司的HR对猎头寻访候选人的最根本要求就是Smart。<strong>Thought</strong>Works是聪明人聚集的地方，即使工作经验再丰富、背景再好，如果不聪明，也不是他们所要的。聪明人在一起才会碰撞火花产生智慧。<p>2、平等沟通：<strong>Thought</strong>Works管理扁平，每位员工都能充分发挥积极性。平等的沟通氛围是难得一求的。没有高管独立办公室就很能说明问题。</p></blockquote><p>另一件是关于几个“聪明人”（嘿嘿…）去年做的事情：<a href="http://rubyforge.org/pipermail/cruisecontrolrb-developers/2008-May/000260.html" target="_blank" rel="external">CruiseControl.rb的下载量达到10,000次</a>。Alexey说：</p><blockquote>Once upon a time (around version 0.1) I said that building CC.rb will be worth the hassle ifitevergetsover 10k downloads. Just an arbitrary big number, yes. But yay! We are there now. :)</blockquote><p><a href="http://rubyforge.org/top/toplist.php?type=downloads" target="_blank" rel="external">最新的数字</a>是10174次下载。看见自己做的东西有人用，感觉也挺不错的。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="5月 5 2008" class="post-list__meta--date date">5月 5 2008</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2008/4/30/thoughts-about-lean-and-agile/" title="link to 大词大家说">大词大家说</a></h2>
+
+      <p class="excerpt">
+        <p>看起来“敏捷”就快过热过气了。就好像前一阵跟<a href="http://ozzzzzz.javaeye.com/" target="_blank" rel="external">胖子</a>和<a href="http://dear.blogbus.com/" target="_blank" rel="external">李剑</a>等人半开玩笑半认真说的，用不了多久所有人都会说自己其实一开始就是敏捷的，再然后就是“听说你搞敏捷了？”“你才搞敏捷呢，你们全家都敏捷！”这样的对骂。有人在InfoQ上回帖说的，国足出线以后保米派气势汹汹的想找倒米派算帐，结果发现找不着了，所有人都是保米派。</p><p>勇敢的预测一下，下一个被玩烂的大词是“精益”。比如说看看曾经那么勇敢那么不顾一切然则还是不得不混口饭吃的<a href="http://blog.csdn.net/arthur5933/archive/2008/04/29/2343988.aspx" target="_blank" rel="external">王洋同志</a>说些什么：</p><blockquote>随着软件工程思想在我国软件产业界的普及，《4S主义》­——标准化、专业化、系统化、简单化必将深入到每一个软件开发企业的技术管理者心中，软件产业研发必将进入到《4S主义》。</blockquote><p>我经常说，要是不知道什么是精益什么是敏捷，没有关系，这个东西很容易了解。你走京通快速路，远通桥南边，到一汽丰田的4S店去看看，就能有些最基本的了解。你最起码去看看，也省得说出“标准化、专业化、系统化、简单化”这些能把大野耐一给气得炸尸的精益解读来。</p><p>好的解读也是有的。<a href="http://tech.it168.com/erp/2007-11-26/200711260956724.shtml" target="_blank" rel="external"><span class="caps">IT168</span>的一篇文章</a>说得有点意思：</p><blockquote>所以精益思想强调，首先正确设计你的流程，然后再去找合适的工具让这个流程开动起来。不管是软件开发用到工作工具，还是别的工具，只要能够支持这个流程，就是合适的工具。</blockquote><p>标准化，huh？</p><p>今天还看了一篇有意思的blog，童继龙写的<a href="http://blog.csdn.net/drate/archive/2008/04/16/2296974.aspx" target="_blank" rel="external">防窜货管理的杀手锏</a>。虽然说<a href="http://www.agilechina.net/" target="_blank" rel="external">公司的市场活动</a>还是得认真的去做，不过大词说多了觉得累得慌，看看人家怎么解决实际问题挺好玩的。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="4月 30 2008" class="post-list__meta--date date">4月 30 2008</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2008/4/27/conference-2-0/" title="link to Conference 2.0">Conference 2.0</a></h2>
+
+      <p class="excerpt">
+        <p>当然…“<a href="http://www.agilechina.net/" target="_blank">敏捷中国</a>”大会今年已经是第三届了。不过，我们这次尝试用Web2.0的方式来组织这次大会。</p><p><a href="http://www.agilechina.net/" target="_blank" rel="external">大会网站</a>用<a href="http://publishwithimpunity.com/" target="_blank" rel="external">Mephisto</a>来搭建</p><p>报名参会mashup了<a href="http://www.baomingba.com" target="_blank" rel="external">报名吧</a></p><p>还用<a href="http://www.facebook.com/event.php?eid=32065855184" target="_blank" rel="external">Facebook</a>来帮忙宣传</p><p>我觉得这样规模的会议应该能够彻底的2.0起来，今年试试看吧。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="4月 27 2008" class="post-list__meta--date date">4月 27 2008</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2008/4/23/codejam/" title="link to 两天一网站">两天一网站</a></h2>
+
+      <p class="excerpt">
+        <p><a href="http://www.rickylui.com/blog/2008/04/20/codejamthoughtworks-beijing/" target="_blank" rel="external">Ricky</a>和<a href="http://dreamhead.blogbus.com/logs/19475526.html" target="_blank" rel="external">dreamhead</a>都写了我们周末玩的CodeJam。一言以蔽之曰，好玩，刺激。</p><p><a href="http://hl.thoughtworkers.org/" target="_blank" rel="external">黄亮</a>，<a href="http://www.blogjava.net/raimundox/" target="_blank" rel="external">徐x</a>，<a href="http://www.rickylui.com/blog/" target="_blank" rel="external">Ricky Lui</a>，<a href="http://dreamhead.blogbus.com/" target="_blank" rel="external">dreamhead</a>，<a href="http://blog.nona.name/" target="_blank" rel="external">李默</a>…</p><p>我很喜欢这个团队。很好很强大。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="4月 23 2008" class="post-list__meta--date date">4月 23 2008</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+  </ol>
+
+  <hr class="post-list__divider " />
+
+<nav class="pagination" role="navigation">
+    
+    	
+          <a class="newer-posts pagination__newer btn btn-small btn-tertiary" href="/page/37/">&larr; Newer Posts</a>
+        
+    
+
+    <span class="pagination__page-number">Page 38 of 51</span>
+    
+    
+        <a class="older-posts pagination__older btn btn-small btn-tertiary" href="/page/39/">Older Posts &rarr;</a>
+    
+</nav>
+
+
+</div>
+            <footer class="footer">
+    <span class="footer__copyright">&copy;
+        2015
+        Transparent Thoughts. All rights reserved.</span>
+</footer>
+        </div>
+    </div>
+
+    <!-- The main JavaScript file for Casper -->
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    <script src="/js/jquery.imagesloaded.min.js"></script>
+    <script src="/js/gallery.js"></script>
+    <script src="/js/jquery.githubRepoWidget.min.js"></script>
+    <script type="text/javascript"
+            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> 
+      MathJax.Hub.Config({ 
+        tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+    }); 
+
+    </script>
+
+    <!--kill ie6 -->
+    <!--[if IE 6]>
+    <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+    <![endif]-->
+
+    <!--  google analytics -->
+    <script>
+        // add your google analytics code here
+    </script>
+
+    <!-- totop -->
+    <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">
+        <a title="back to top"><img style="width:30px;height:30px;" src="/images/totop.png"/></a>
+    </div>
+    <script>
+        (function ($) {
+            var upperLimit = 100;
+            var scrollElem = $('#totop');
+            var scrollSpeed = 500;
+            scrollElem.hide();
+            $(window).scroll(function () {
+                var scrollTop = $(document).scrollTop();
+                if (scrollTop > upperLimit) {
+                    $(scrollElem).stop().fadeTo(300, 1); // fade back in
+                } else {
+                    $(scrollElem).stop().fadeTo(300, 0); // fade out
+                }
+            });
+            $(scrollElem).click(function () {
+                $('html, body').animate({scrollTop: 0}, scrollSpeed);
+                return false;
+            });
+        })(jQuery);
+    </script>
+
+    <!-- fancybox -->
+    
+    <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+    <script src="/fancybox/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript">
+        (function ($) {
+            $('.fancybox').fancybox();
+        })(jQuery);
+    </script>
+    
+
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-113927-4', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <!-- CNZZ Analytics -->
+    <script src="http://s4.cnzz.com/z_stat.php?id=1255092465&web_id=1255092465" language="JavaScript"></script>
+
+</body>
+</html>

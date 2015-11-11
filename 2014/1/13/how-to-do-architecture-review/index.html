@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+        遗留系统评审怎么做？ | 透明思考
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+    <meta name="author" content="Jeff Xiong">
+    
+    
+    <meta name="description" content="有一个需求摆在你面前，有一个现成的软件摆在你面前。你是在现有的软件基础上继续改进实现新需求，还是扔开这个现有软件重新做？就这么简单的一个问题，简直能让人——尤其是像我这种本来就有选择障碍的人——挠破头皮。用现成的软件吧，质量不见得好，扩展不见得容易，说不定做起来就发现步步是陷阱；从头做吧，看着别人做好的东西要重新做总是不甘心，更何况还可能有政治压力，没准儿这个软件正是哪个领导的最爱呢。怎么办？作为">
+    
+
+    <meta name="description" content="有一个需求摆在你面前，有一个现成的软件摆在你面前。你是在现有的软件基础上继续改进实现新需求，还是扔开这个现有软件重新做？就这么简单的一个问题，简直能让人——尤其是像我这种本来就有选择障碍的人——挠破头皮。用现成的软件吧，质量不见得好，扩展不见得容易，说不定做起来就发现步步是陷阱；从头做吧，看着别人做好的东西要重新做总是不甘心，更何况还可能有政治压力，没准儿这个软件正是哪个领导的最爱呢。怎么办？作为">
+<meta property="og:type" content="article">
+<meta property="og:title" content="遗留系统评审怎么做？ | 透明思考">
+<meta property="og:url" content="http://gigix.thoughtworkers.org/2014/1/13/how-to-do-architecture-review/index.html">
+<meta property="og:site_name" content="透明思考">
+<meta property="og:description" content="有一个需求摆在你面前，有一个现成的软件摆在你面前。你是在现有的软件基础上继续改进实现新需求，还是扔开这个现有软件重新做？就这么简单的一个问题，简直能让人——尤其是像我这种本来就有选择障碍的人——挠破头皮。用现成的软件吧，质量不见得好，扩展不见得容易，说不定做起来就发现步步是陷阱；从头做吧，看着别人做好的东西要重新做总是不甘心，更何况还可能有政治压力，没准儿这个软件正是哪个领导的最爱呢。怎么办？作为">
+<meta property="og:image" content="http://gigix.thoughtworkers.org/assets/2013/12/20/difficult_choice_by_areeen.jpg">
+<meta property="og:updated_time" content="2015-11-11T07:46:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="遗留系统评审怎么做？ | 透明思考">
+<meta name="twitter:description" content="有一个需求摆在你面前，有一个现成的软件摆在你面前。你是在现有的软件基础上继续改进实现新需求，还是扔开这个现有软件重新做？就这么简单的一个问题，简直能让人——尤其是像我这种本来就有选择障碍的人——挠破头皮。用现成的软件吧，质量不见得好，扩展不见得容易，说不定做起来就发现步步是陷阱；从头做吧，看着别人做好的东西要重新做总是不甘心，更何况还可能有政治压力，没准儿这个软件正是哪个领导的最爱呢。怎么办？作为">
+
+    
+    <link rel="alternate" href="/atom.xml" title="透明思考" type="application/atom+xml">
+    
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css" type="text/css">
+
+    <script src="/js/jquery.min.js"></script>
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+<header class="panel-cover panel-cover--collapsed">
+
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">透明思考</a></h1>
+
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">
+          Transparent Thoughts
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">Blog</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+------------------------------ -->
+
+<nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+
+  <!-- Github -->
+  <li class="navigation__item">
+    <a href="https://github.com/gigix" title="Gigix on GitHub" target="_blank">
+      <i class='icon icon-social-github'></i>
+      <span class="label">GitHub</span>
+    </a>
+  </li>
+
+  </ul>
+</nav>
+
+          <script>
+    function doSearch() {
+        var keyword = $('#keyword').val();
+        if (keyword.trim() === '') {
+            window.location.href = 'http://gigix.thoughtworkers.org/#blog';
+        } else {
+            window.open('http://www.google.com/search?q=site:gigix.thoughtworkers.org+' + keyword);
+        }
+    }
+</script>
+
+<div class="search">
+    <input id="keyword" type="text"/>
+    <input type="button" value="Search" class="btn" onclick="doSearch()"/>
+</div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+    <header class="post-header">
+
+        
+        <div class="post-meta">
+            <time datetime="1月 13 2014"
+                  class="post-meta__date date">1月 13 2014</time>
+            &#8226;
+
+        <span class="post-meta__tags tags">
+
+            <font class="categories">
+                
+            </font>
+            
+
+        </span>
+        </div>
+        
+
+        <h1 class="post-title">遗留系统评审怎么做？</h1>
+    </header>
+
+    <section class="post">
+        <p>有一个需求摆在你面前，有一个现成的软件摆在你面前。你是在现有的软件基础上继续改进实现新需求，还是扔开这个现有软件重新做？就这么简单的一个问题，简直能让人——尤其是像我这种本来就有选择障碍的人——挠破头皮。用现成的软件吧，质量不见得好，扩展不见得容易，说不定做起来就发现步步是陷阱；从头做吧，看着别人做好的东西要重新做总是不甘心，更何况还可能有政治压力，没准儿这个软件正是哪个领导的最爱呢。</p><p><img src="http://gigix.thoughtworkers.org/assets/2013/12/20/difficult_choice_by_areeen.jpg" alt=""></p><p>怎么办？作为一个有选择障碍的体系爱好者，答案自然是：创造一套体系，让体系来给出答案，那么我就不用挠头啦。以下就是我的体系，遗留系统评审我就照着这个套路来。</p><h2>第一步：需求评估</h2><p>脱离需求的上下文就很难讲一个软件好还是不好，因此首先要做的不是评估这个软件本身，而是评估要用它来做什么。首先框定需求的上下文，然后你才能说出为了满足这个需求软件应该具备哪些特质。</p><h2>第二步：功能评估</h2><p>接下来是评估这个软件现有的功能。当初开发这个软件时考虑的需求上下文与你现在要满足的未必一致，但是要充分了解一个软件，你就不能脱离它本身的上下文来讲它的功能。你还得回到它当初设想的需求当中，在那个上下文里来看，这个软件实现了哪些功能。</p><h2>第三步：差距分析</h2><p>这时候才轮到谈现有软件缺少了什么：把已有的功能放到新的需求当中，做个对比，看看已有的功能是否满足新的需求、缺少了什么、偏差了什么。这时候需要把差距一条条列出来，甚至可能需要大致估计如果要弥补这些差距需要多大工作量，因为“继续用现有的软件”始终都会是一个选项。</p><h2>第四步：技术质量评估</h2><p>如果继续用现有的软件是一个选项，那么在这个软件基础上修修改改究竟有多难、多快就严重取决于这个软件的技术质量——如果代码质量一团糟，在上面做修改必然会慢很多。技术质量评估可以有很多常见的度量指标，我比较愿意谈可维护性和可扩展性，影响它们的因素就会有代码可读性、模块设计、接口设计等等。</p><h2>第五步：结论</h2><p>千万不能说“把这个破软件扔了我们从头做吧”——虽然我知道很多时候我们就是想这么说。我们的评估应该是基于事实的，而且至少得有两个选项让客户来做选择：除了“从头做”之外，至少还得有“继续用现有的软件”这个选项存在。从头做一个符合新需求的软件需要多少成本，未来的总体拥有成本是什么趋势；修修改改现有的软件需要多少成本，未来的总体拥有成本又是个什么趋势；两者有什么好处有什么风险。把这些东西列出来，让客户能基于这些事实做一个明智的决定，就是我们做评估的目标了。</p>
+    </section>
+
+    <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style_32x32" style="height: 40px">
+    <a class="jiathis_button_tsina"></a>
+    <a class="jiathis_button_weixin"></a>
+    <a class="jiathis_button_douban"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis"
+       target="_blank"></a>
+</div>
+<script type="text/javascript">
+    var jiathis_config = {
+        summary: "",
+        shortUrl: false,
+        hideMore: false
+    }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code_mini/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+    
+</article>
+
+
+            <footer class="footer">
+    <span class="footer__copyright">&copy;
+        2014
+        Transparent Thoughts. All rights reserved.</span>
+</footer>
+        </div>
+    </div>
+
+    <!-- The main JavaScript file for Casper -->
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    <script src="/js/jquery.imagesloaded.min.js"></script>
+    <script src="/js/gallery.js"></script>
+    <script src="/js/jquery.githubRepoWidget.min.js"></script>
+    <script type="text/javascript"
+            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> 
+      MathJax.Hub.Config({ 
+        tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+    }); 
+
+    </script>
+
+    <!--kill ie6 -->
+    <!--[if IE 6]>
+    <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+    <![endif]-->
+
+    <!--  google analytics -->
+    <script>
+        // add your google analytics code here
+    </script>
+
+    <!-- totop -->
+    <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">
+        <a title="back to top"><img style="width:30px;height:30px;" src="/images/totop.png"/></a>
+    </div>
+    <script>
+        (function ($) {
+            var upperLimit = 100;
+            var scrollElem = $('#totop');
+            var scrollSpeed = 500;
+            scrollElem.hide();
+            $(window).scroll(function () {
+                var scrollTop = $(document).scrollTop();
+                if (scrollTop > upperLimit) {
+                    $(scrollElem).stop().fadeTo(300, 1); // fade back in
+                } else {
+                    $(scrollElem).stop().fadeTo(300, 0); // fade out
+                }
+            });
+            $(scrollElem).click(function () {
+                $('html, body').animate({scrollTop: 0}, scrollSpeed);
+                return false;
+            });
+        })(jQuery);
+    </script>
+
+    <!-- fancybox -->
+    
+    <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+    <script src="/fancybox/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript">
+        (function ($) {
+            $('.fancybox').fancybox();
+        })(jQuery);
+    </script>
+    
+
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-113927-4', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <!-- CNZZ Analytics -->
+    <script src="http://s4.cnzz.com/z_stat.php?id=1255092465&web_id=1255092465" language="JavaScript"></script>
+
+</body>
+</html>

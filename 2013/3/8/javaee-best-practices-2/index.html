@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+        都是为了半夜能提交（二） | 透明思考
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+    <meta name="author" content="Jeff Xiong">
+    
+    
+    <meta name="description" content="项目里会集成外部的web services，怎么测试？当然最不费脑子的做法就是假装它没什么特别，该怎么写测试还怎么写测试。但这么做的结果就是一大堆测试都会真的去调用webservices，并且至少造成这么几个问题：测试慢。带着web services跑测试，测试的速度会降低好几个数量级。测试不稳定。一旦有个service挂掉，你自己的build就会跟着挂掉。测试不易重复。比如有个service是用">
+    
+
+    <meta name="description" content="项目里会集成外部的web services，怎么测试？当然最不费脑子的做法就是假装它没什么特别，该怎么写测试还怎么写测试。但这么做的结果就是一大堆测试都会真的去调用webservices，并且至少造成这么几个问题：测试慢。带着web services跑测试，测试的速度会降低好几个数量级。测试不稳定。一旦有个service挂掉，你自己的build就会跟着挂掉。测试不易重复。比如有个service是用">
+<meta property="og:type" content="article">
+<meta property="og:title" content="都是为了半夜能提交（二） | 透明思考">
+<meta property="og:url" content="http://gigix.thoughtworkers.org/2013/3/8/javaee-best-practices-2/index.html">
+<meta property="og:site_name" content="透明思考">
+<meta property="og:description" content="项目里会集成外部的web services，怎么测试？当然最不费脑子的做法就是假装它没什么特别，该怎么写测试还怎么写测试。但这么做的结果就是一大堆测试都会真的去调用webservices，并且至少造成这么几个问题：测试慢。带着web services跑测试，测试的速度会降低好几个数量级。测试不稳定。一旦有个service挂掉，你自己的build就会跟着挂掉。测试不易重复。比如有个service是用">
+<meta property="og:updated_time" content="2015-11-11T07:46:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="都是为了半夜能提交（二） | 透明思考">
+<meta name="twitter:description" content="项目里会集成外部的web services，怎么测试？当然最不费脑子的做法就是假装它没什么特别，该怎么写测试还怎么写测试。但这么做的结果就是一大堆测试都会真的去调用webservices，并且至少造成这么几个问题：测试慢。带着web services跑测试，测试的速度会降低好几个数量级。测试不稳定。一旦有个service挂掉，你自己的build就会跟着挂掉。测试不易重复。比如有个service是用">
+
+    
+    <link rel="alternate" href="/atom.xml" title="透明思考" type="application/atom+xml">
+    
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css" type="text/css">
+
+    <script src="/js/jquery.min.js"></script>
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+<header class="panel-cover panel-cover--collapsed">
+
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">透明思考</a></h1>
+
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">
+          Transparent Thoughts
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">Blog</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+------------------------------ -->
+
+<nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+
+  <!-- Github -->
+  <li class="navigation__item">
+    <a href="https://github.com/gigix" title="Gigix on GitHub" target="_blank">
+      <i class='icon icon-social-github'></i>
+      <span class="label">GitHub</span>
+    </a>
+  </li>
+
+  </ul>
+</nav>
+
+          <script>
+    function doSearch() {
+        var keyword = $('#keyword').val();
+        if (keyword.trim() === '') {
+            window.location.href = 'http://gigix.thoughtworkers.org/#blog';
+        } else {
+            window.open('http://www.google.com/search?q=site:gigix.thoughtworkers.org+' + keyword);
+        }
+    }
+</script>
+
+<div class="search">
+    <input id="keyword" type="text"/>
+    <input type="button" value="Search" class="btn" onclick="doSearch()"/>
+</div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+    <header class="post-header">
+
+        
+        <div class="post-meta">
+            <time datetime="3月 8 2013"
+                  class="post-meta__date date">3月 8 2013</time>
+            &#8226;
+
+        <span class="post-meta__tags tags">
+
+            <font class="categories">
+                
+            </font>
+            
+
+        </span>
+        </div>
+        
+
+        <h1 class="post-title">都是为了半夜能提交（二）</h1>
+    </header>
+
+    <section class="post">
+        <p>项目里会集成外部的web services，怎么测试？当然最不费脑子的做法就是假装它没什么特别，该怎么写测试还怎么写测试。但这么做的结果就是一大堆测试都会真的去调用webservices，并且至少造成这么几个问题：</p><ol><li><strong>测试慢</strong>。带着web services跑测试，测试的速度会降低好几个数量级。</li><li><strong>测试不稳定</strong>。一旦有个service挂掉，你自己的build就会跟着挂掉。</li><li><strong>测试不易重复</strong>。比如有个service是用来创建用户的，你怎么办？每次跑build创建一个新用户？还是创建完马上删掉？如果删除出错怎么办？</li></ol><p>所以这是不行的。</p><p>我们先站在集成点外来看其他程序怎么使用集成点。显然最终我们会把一个web service包装成一个Java方法。比如“创建用户”这个service最终会体现成这样：</p><blockquote>public interface IdentityService {<br>void createUser(Customer customer);<br>…</blockquote><p>那么使用这个service的所有代码都应该通过<a href="http://martinfowler.com/articles/injection.html" target="_blank" rel="external">依赖注入</a>得到实现IdentityService接口的一个对象，因此这些地方的测试可以很简单地注入一个mock的IdentityService对象，不需要依赖真正的webservice。主要需要看的，还是集成点内部的测试。</p><p>集成点内（也就是IdentityService.createUser的实现）实际上有以下几部分逻辑：</p><ol><li><strong>确定服务地址</strong>。不同的服务方法通常位于不同的URL、接受不同的HTTP方法（GET、POST或PUT）。</li><li><strong>参数转换</strong>。把方法参数转换成service需要的参数，可能是（但不限于）XML文档或URL参数。</li><li><strong>执行网络访问</strong>。朝向步骤（1）确定的服务地址，发送步骤（2）得到的参数，拿回一个HTTP应答。</li><li><strong>解析HTTP应答</strong>。HTTP应答通常包含两部分：HTTP状态码（例如“200<span class="caps">SUCCESS</span>”或者“404<span class="caps">NOT FOUND</span>”），以及应答正文（不一定有），有时还会在HTTP头或者Cookie中携带信息。要把这些信息转换成服务方法调用的结果（函数返回值、给参数传入的对象填充值、或者抛出异常）。</li></ol><p>可以看到，真正与外部web services打交道的其实只有步骤（3）而已。并且步骤（3）所需的程序基本上可以简化地描述为：</p><blockquote>public class EndPoint {<br>public Response get(String url);<br>public Response post(String url, String requestBody);<br>public Response put(String url, String requestBody);<br>}</blockquote><p>如此而已。其中Response类包含以下信息：</p><blockquote>class Response {<br>private int statusCode;<br>private String body;</blockquote><p>请注意：从EndPoint的方法签名可以看到，这里的方法与真实的web services的请求/应答格式是<strong>毫无关系</strong>的。它所做的就是朝一个URL发送一个请求、拿回应答。至于请求正文是什么格式、应答正文是什么格式、是XML还是JSON，它<strong>完全不关心</strong>。换句话说，对唯一的这个产生网络访问的类的测试，第一不需要访问真正的web services，第二不需要考虑真正web services的请求/应答协议格式。这个发现对于我们的测试策略非常有价值。</p><p><em>（今天讲了集成点的结构，并着重考察了需要执行网络访问的EndPoint类。下一篇就开始讲测试策略。）</em></p>
+    </section>
+
+    <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style_32x32" style="height: 40px">
+    <a class="jiathis_button_tsina"></a>
+    <a class="jiathis_button_weixin"></a>
+    <a class="jiathis_button_douban"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis"
+       target="_blank"></a>
+</div>
+<script type="text/javascript">
+    var jiathis_config = {
+        summary: "",
+        shortUrl: false,
+        hideMore: false
+    }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code_mini/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+    
+</article>
+
+
+            <footer class="footer">
+    <span class="footer__copyright">&copy;
+        2013
+        Transparent Thoughts. All rights reserved.</span>
+</footer>
+        </div>
+    </div>
+
+    <!-- The main JavaScript file for Casper -->
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    <script src="/js/jquery.imagesloaded.min.js"></script>
+    <script src="/js/gallery.js"></script>
+    <script src="/js/jquery.githubRepoWidget.min.js"></script>
+    <script type="text/javascript"
+            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> 
+      MathJax.Hub.Config({ 
+        tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+    }); 
+
+    </script>
+
+    <!--kill ie6 -->
+    <!--[if IE 6]>
+    <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+    <![endif]-->
+
+    <!--  google analytics -->
+    <script>
+        // add your google analytics code here
+    </script>
+
+    <!-- totop -->
+    <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">
+        <a title="back to top"><img style="width:30px;height:30px;" src="/images/totop.png"/></a>
+    </div>
+    <script>
+        (function ($) {
+            var upperLimit = 100;
+            var scrollElem = $('#totop');
+            var scrollSpeed = 500;
+            scrollElem.hide();
+            $(window).scroll(function () {
+                var scrollTop = $(document).scrollTop();
+                if (scrollTop > upperLimit) {
+                    $(scrollElem).stop().fadeTo(300, 1); // fade back in
+                } else {
+                    $(scrollElem).stop().fadeTo(300, 0); // fade out
+                }
+            });
+            $(scrollElem).click(function () {
+                $('html, body').animate({scrollTop: 0}, scrollSpeed);
+                return false;
+            });
+        })(jQuery);
+    </script>
+
+    <!-- fancybox -->
+    
+    <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+    <script src="/fancybox/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript">
+        (function ($) {
+            $('.fancybox').fancybox();
+        })(jQuery);
+    </script>
+    
+
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-113927-4', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <!-- CNZZ Analytics -->
+    <script src="http://s4.cnzz.com/z_stat.php?id=1255092465&web_id=1255092465" language="JavaScript"></script>
+
+</body>
+</html>

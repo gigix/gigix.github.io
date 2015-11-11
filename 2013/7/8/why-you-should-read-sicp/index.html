@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+        为什么大家都应该读SICP | 透明思考
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+    <meta name="author" content="Jeff Xiong">
+    
+    
+    <meta name="description" content="【2006年】来到班加罗尔，我的包里带着一本《计算机程序的构造和解释》，也就是传说中的SICP。这本书是MIT（麻省理工学院）的6.001课程、电子工程与计算机科学系本科第一门编程课的教材，MIT网站上还有教学视频公开着。这本使用LISP作为教学语言的教材在MIT被使用了超过二十年，甚至在1984年成书之前就已经被该系教师用于教学，直到2008年才宣告退休，且继续被无数黑客顶礼膜拜。可别小看了这本">
+    
+
+    <meta name="description" content="【2006年】来到班加罗尔，我的包里带着一本《计算机程序的构造和解释》，也就是传说中的SICP。这本书是MIT（麻省理工学院）的6.001课程、电子工程与计算机科学系本科第一门编程课的教材，MIT网站上还有教学视频公开着。这本使用LISP作为教学语言的教材在MIT被使用了超过二十年，甚至在1984年成书之前就已经被该系教师用于教学，直到2008年才宣告退休，且继续被无数黑客顶礼膜拜。可别小看了这本">
+<meta property="og:type" content="article">
+<meta property="og:title" content="为什么大家都应该读SICP | 透明思考">
+<meta property="og:url" content="http://gigix.thoughtworkers.org/2013/7/8/why-you-should-read-sicp/index.html">
+<meta property="og:site_name" content="透明思考">
+<meta property="og:description" content="【2006年】来到班加罗尔，我的包里带着一本《计算机程序的构造和解释》，也就是传说中的SICP。这本书是MIT（麻省理工学院）的6.001课程、电子工程与计算机科学系本科第一门编程课的教材，MIT网站上还有教学视频公开着。这本使用LISP作为教学语言的教材在MIT被使用了超过二十年，甚至在1984年成书之前就已经被该系教师用于教学，直到2008年才宣告退休，且继续被无数黑客顶礼膜拜。可别小看了这本">
+<meta property="og:updated_time" content="2015-11-11T07:46:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="为什么大家都应该读SICP | 透明思考">
+<meta name="twitter:description" content="【2006年】来到班加罗尔，我的包里带着一本《计算机程序的构造和解释》，也就是传说中的SICP。这本书是MIT（麻省理工学院）的6.001课程、电子工程与计算机科学系本科第一门编程课的教材，MIT网站上还有教学视频公开着。这本使用LISP作为教学语言的教材在MIT被使用了超过二十年，甚至在1984年成书之前就已经被该系教师用于教学，直到2008年才宣告退休，且继续被无数黑客顶礼膜拜。可别小看了这本">
+
+    
+    <link rel="alternate" href="/atom.xml" title="透明思考" type="application/atom+xml">
+    
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css" type="text/css">
+
+    <script src="/js/jquery.min.js"></script>
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+<header class="panel-cover panel-cover--collapsed">
+
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">透明思考</a></h1>
+
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">
+          Transparent Thoughts
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">Blog</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+------------------------------ -->
+
+<nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+
+  <!-- Github -->
+  <li class="navigation__item">
+    <a href="https://github.com/gigix" title="Gigix on GitHub" target="_blank">
+      <i class='icon icon-social-github'></i>
+      <span class="label">GitHub</span>
+    </a>
+  </li>
+
+  </ul>
+</nav>
+
+          <script>
+    function doSearch() {
+        var keyword = $('#keyword').val();
+        if (keyword.trim() === '') {
+            window.location.href = 'http://gigix.thoughtworkers.org/#blog';
+        } else {
+            window.open('http://www.google.com/search?q=site:gigix.thoughtworkers.org+' + keyword);
+        }
+    }
+</script>
+
+<div class="search">
+    <input id="keyword" type="text"/>
+    <input type="button" value="Search" class="btn" onclick="doSearch()"/>
+</div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+    <header class="post-header">
+
+        
+        <div class="post-meta">
+            <time datetime="7月 8 2013"
+                  class="post-meta__date date">7月 8 2013</time>
+            &#8226;
+
+        <span class="post-meta__tags tags">
+
+            <font class="categories">
+                
+            </font>
+            
+
+        </span>
+        </div>
+        
+
+        <h1 class="post-title">为什么大家都应该读SICP</h1>
+    </header>
+
+    <section class="post">
+        <p>【2006年】来到班加罗尔，我的包里带着一本《计算机程序的构造和解释》，也就是传说中的SICP。这本书是MIT（麻省理工学院）的6.001课程、电子工程与计算机科学系本科第一门编程课的教材，MIT网站上还有教学视频公开着。这本使用LISP作为教学语言的教材在MIT被使用了超过二十年，甚至在1984年成书之前就已经被该系教师用于教学，直到2008年才宣告退休，且继续被无数黑客顶礼膜拜。</p><p>可别小看了这本MIT的编程入门教材。看看目录你就会发现，这本书不一般：</p><pre>第1章 构造过程抽象1.1 程序设计的基本元素1.2 过程与它们所产生的计算1.3 用高阶函数做抽象第2章 构造数据现象2.1 数据抽象导引2.2 层次性数据和闭包性质2.3 符号数据2.4 抽象数据的多重表示2.5 带有通用型操作的系统第3章 模块化、对象和状态3.1 赋值和局部状态3.2 求值的环境模型3.3 用变动数据做模拟3.4 并发：时间是一个本质问题3.5 流第4章 元语言抽象4.1 元循环求值器4.2 Scheme的变形——惰性求值4.3 Scheme的变形——非确定性计算4.4 逻辑程序设计第5章 寄存器机器里的计算5.1 寄存器机器的设计5.2 一个寄存器机器模拟器5.3 存储分配和废料收集5.4 显式控制的求值器5.5 编译</pre><p>每个小节的标题看起来已经有点高级了吧？其中的内容比标题所透露出来的还要高级。比如第二章，一上来讲的就是“什么是整数”：在只有函数（准确说，只有lambda运算）的情况下，如何定义“0”，如何定义加法，从而得到一个完整的整数系统。再比如第三章，它讲的是“什么是时间”。当“整数”、“时间”这样的基本概念都需要被重新定义，这本书对读者世界观的颠覆性可想而知。</p><p>如果说这些内容有点过于抽象、过于远离现实的话，书中关于列表和高阶函数的内容则会改变一个程序员看待很多编程任务的方式——主要是看待列表（list）操作的方式。众所周知，LISP是“LIStProcessing”的缩写，也就是说“操作链表（linkedlist）”乃是LISP的题中应有之义。从最原始的递归函数调用开始，SICP归纳出一组基本的列表操作（求长度、添加元素、排序、反转等），然后是几个最常用的列表计算：map、filter、accumulate。这几个概念是如此简洁清晰，实现又是如此简单，一旦进入了脑子里就再也无法忘记。比如map操作，SICP的描述是：</p><blockquote>…to apply some transformation to each element in a list and generate the list of results.</blockquote><p>也就是说，你手上有一个列表，你要对这个列表里的每个元素通过“某种方式”进行转换，从而得到一个等长的列表，前后两个列表中的元素根据“某种方式”一一对应。这就是列表的映射（map）操作。于是对于所有“从一个列表映射到另一个等长列表”的操作，你就再也不会去写for循环。例如“列出一组用户的年龄并由大到小排序”这个需求，你就会这样写（Ruby代码）：</p><blockquote># users是一个列表<p>users.map{|user| user.age}.sort.reverse</p></blockquote><p>显然这比每处理一次users列表就写一次for循环要漂亮太多了。有了这样的概念在脑子里，我才开始愈发清晰地意识到：针对列表的for循环，在大多数情况下也是一种重复代码。后来Google的Java基础库Guava提供了列表的transform操作（也就是map操作，只是换了个名字）和filter操作，使这些发轫于LISP的列表操作终于被广大Java程序员所了解。</p><p>有趣之处在于，像“抽象出基本的列表操作”这样的想法，即使是经验丰富的程序员，没有通过读书或者别人的讲解获得这个概念之前，是很难通过自己的实践和思考总结出来的；而一旦获得了这个概念，又会觉得它如此符合直觉以至于不这样思考才是奇怪的。在厦门的好望角项目里，我自己实现了map操作和accumulate操作，用来处理程序中的列表。Andy看了这段代码的第一反应是“Err…it’sclever…”我们知道，“clever”其实不是什么褒义词。后来我又在一个超过20年经验的老程序员身上看到过类似的反应，尽管这次用Guava写出来的代码更加好看。没有获得“天启”之前，我们就是根本看不到这种“高阶的”重复代码的存在。如果说在我学习编程的整个过程中有那么一本书是不可替代、不可能靠自己的勤学苦练弥补起来的，那就是这本SICP。所以我现在也总是向所有有志于从事软件开发工作的人推荐这本书——未必急在一时，但早晚得读。</p>
+    </section>
+
+    <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style_32x32" style="height: 40px">
+    <a class="jiathis_button_tsina"></a>
+    <a class="jiathis_button_weixin"></a>
+    <a class="jiathis_button_douban"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis"
+       target="_blank"></a>
+</div>
+<script type="text/javascript">
+    var jiathis_config = {
+        summary: "",
+        shortUrl: false,
+        hideMore: false
+    }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code_mini/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+    
+</article>
+
+
+            <footer class="footer">
+    <span class="footer__copyright">&copy;
+        2013
+        Transparent Thoughts. All rights reserved.</span>
+</footer>
+        </div>
+    </div>
+
+    <!-- The main JavaScript file for Casper -->
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    <script src="/js/jquery.imagesloaded.min.js"></script>
+    <script src="/js/gallery.js"></script>
+    <script src="/js/jquery.githubRepoWidget.min.js"></script>
+    <script type="text/javascript"
+            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> 
+      MathJax.Hub.Config({ 
+        tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+    }); 
+
+    </script>
+
+    <!--kill ie6 -->
+    <!--[if IE 6]>
+    <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+    <![endif]-->
+
+    <!--  google analytics -->
+    <script>
+        // add your google analytics code here
+    </script>
+
+    <!-- totop -->
+    <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">
+        <a title="back to top"><img style="width:30px;height:30px;" src="/images/totop.png"/></a>
+    </div>
+    <script>
+        (function ($) {
+            var upperLimit = 100;
+            var scrollElem = $('#totop');
+            var scrollSpeed = 500;
+            scrollElem.hide();
+            $(window).scroll(function () {
+                var scrollTop = $(document).scrollTop();
+                if (scrollTop > upperLimit) {
+                    $(scrollElem).stop().fadeTo(300, 1); // fade back in
+                } else {
+                    $(scrollElem).stop().fadeTo(300, 0); // fade out
+                }
+            });
+            $(scrollElem).click(function () {
+                $('html, body').animate({scrollTop: 0}, scrollSpeed);
+                return false;
+            });
+        })(jQuery);
+    </script>
+
+    <!-- fancybox -->
+    
+    <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+    <script src="/fancybox/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript">
+        (function ($) {
+            $('.fancybox').fancybox();
+        })(jQuery);
+    </script>
+    
+
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-113927-4', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <!-- CNZZ Analytics -->
+    <script src="http://s4.cnzz.com/z_stat.php?id=1255092465&web_id=1255092465" language="JavaScript"></script>
+
+</body>
+</html>

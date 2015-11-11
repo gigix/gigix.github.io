@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+        page 2 | 归档: 2008 | 透明思考
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+    <meta name="author" content="Jeff Xiong">
+    
+    
+    <meta name="description" content="page 2 |">
+    
+
+    <meta name="description" content="page 2 |">
+<meta property="og:type" content="website">
+<meta property="og:title" content="page 2 | 归档: 2008 | 透明思考">
+<meta property="og:url" content="http://gigix.thoughtworkers.org/archives/2008/page/2/index.html">
+<meta property="og:site_name" content="透明思考">
+<meta property="og:description" content="page 2 |">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="page 2 | 归档: 2008 | 透明思考">
+<meta name="twitter:description" content="page 2 |">
+
+    
+    <link rel="alternate" href="/atom.xml" title="透明思考" type="application/atom+xml">
+    
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css" type="text/css">
+
+    <script src="/js/jquery.min.js"></script>
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+<header class="panel-cover panel-cover--collapsed">
+
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">透明思考</a></h1>
+
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">
+          Transparent Thoughts
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">Blog</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+------------------------------ -->
+
+<nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+
+  <!-- Github -->
+  <li class="navigation__item">
+    <a href="https://github.com/gigix" title="Gigix on GitHub" target="_blank">
+      <i class='icon icon-social-github'></i>
+      <span class="label">GitHub</span>
+    </a>
+  </li>
+
+  </ul>
+</nav>
+
+          <script>
+    function doSearch() {
+        var keyword = $('#keyword').val();
+        if (keyword.trim() === '') {
+            window.location.href = 'http://gigix.thoughtworkers.org/#blog';
+        } else {
+            window.open('http://www.google.com/search?q=site:gigix.thoughtworkers.org+' + keyword);
+        }
+    }
+</script>
+
+<div class="search">
+    <input id="keyword" type="text"/>
+    <input type="button" value="Search" class="btn" onclick="doSearch()"/>
+</div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+
+  <h1 class="archive-title">归档: 2008</h1>
+  <hr class="post-list__divider" />
+
+
+<div class="main-post-list">
+    <ol class="post-list">
+    
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2008/10/19/hack-rails-transaction/" title="link to Hack Rails的事务机制">Hack Rails的事务机制</a></h2>
+
+      <p class="excerpt">
+        <ol><li>ActiveRecord不支持嵌套事务。</li><li>为了简单我们在ApplicationController里做了个filter，于是所有POST/PUT/DELETE的action都被包裹在一个事务里，事务边界是整个请求。</li><li>偏偏有时候你希望让某个操作中的某个部分不被包含在事务里。原因是当某些操作同时进行，你想看到的不是原子的结果，而是所有同时进行的操作汇总的最终结果<ul><li>比如说，“审核改进措施”这个操作中包含了“重新算分”。</li><li>某企业有两项改进措施R1和R2，分别对应考核类别C1和C2。C1的原始分数是98，C2的原始分数是89。</li><li>R1能给C1加回1分，R2能给C2加回11分。也就是说审核R1之后C1变成99分，审核R2后C2变成100分。</li><li>但，“重新算分”是在整个“审核”的事务之中的，于是如果R1和R2同时审核，你一定会看到下列两种原子结果之一：<ul><li><span class="caps">C1 99</span>分，C2 89分；或者</li><li><span class="caps">C1 98</span>分，C2 100分。</li></ul></li><li>其实这个时候我们不想让“重新算分”跟“审核”成为原子操作，我们希望把“算分”从“审核”的事务里拿出来，这样最后一次算分一定能体现最终的分数状态。</li></ul></li><li>可以开一个<a href="http://www.ruby-doc.org/core/classes/Thread.html" target="_blank" rel="external">线程</a>或者进程（比如<a href="http://ruby-doc.org/core/classes/Kernel.html" target="_blank" rel="external">Kernel.system</a>）把算分的逻辑分出来。</li><li>因为可以确定“算分”不会跟“审核”发生死锁，所以把这个线程join起来。<ul><li>一定要小心，要是算分跟审核修改到同一条数据那么就会死锁…因为审核等待算分线程结束，而算分线程等待审核交出数据锁。</li><li>多个算分线程之间是不会死锁滴…为了确保时序可以一上来就锁自己最后要更新的分数记录。</li></ul></li></ol>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="10月 19 2008" class="post-list__meta--date date">10月 19 2008</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2008/10/14/prefer-keyboard-than-mouse/" title="link to 首选键盘而非鼠标">首选键盘而非鼠标</a></h2>
+
+      <p class="excerpt">
+        <p>（摘自<a href="http://oreilly.com/catalog/9780596519780/" target="_blank" rel="external">The Productive Programmer</a>）</p><p>开发人员实质上是特殊的数据录入职员。我们输入计算机的数据不是来自外界资源，而是来自于我们的大脑。但是数据录入操作员的教训仍能使我们产生共鸣。根据他们所能输入的信息量来收费的数据录入工人知道，使用鼠标会以数量级程度降低他们的速度。开发人员可以从中学到重要的一课。</p><p>VI和Emacs都支持一个非常重要的加速器：永远不要将你的双手从字符按键上移开。即使是下移到键盘上的箭头按键都会使你慢下来，因为你必须再次回到主排键来输入字符。真正有用的编辑器会使你的手保持在最佳位置，同时进行输入和导航。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="10月 14 2008" class="post-list__meta--date date">10月 14 2008</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2008/10/5/start-to-change/" title="link to 开始豆瓣，读书，蹭饭">开始豆瓣，读书，蹭饭</a></h2>
+
+      <p class="excerpt">
+        <p><a href="http://yeka52.ycool.com/" target="_blank" rel="external">叶卡</a>粉八卦…自己开了豆瓣以后就要窥探我读什么书…貌似要监督我的样子…昨天驾车经过几年前一起吃火锅的位于熊妍妍家隔壁的地方，突然的觉得不应该辜负她的期望…于是也把<a href="http://www.douban.com/people/gigix/" target="_blank" rel="external">读书情况</a>记下来…去年这个时候在西安是能坚持每天读5万字的，最近有点手忙脚乱都顾不上几日不读书口臭了，不应该。</p><p>（某位大人说，书读得越多越扼杀想象力。然则，真善美之中大概我最喜欢的还是真实…知道什么比创造什么更要紧…关于第三次世界大战之后情景的科幻小说恐怕我是写不出咯，该位大人应该体谅我这脑子里已然装满了各种关于此题材的小说，毕竟太阳下没有新雪…）</p><p>还有<a href="http://jerrylovesrebol.blogspot.com/" target="_blank" rel="external">一位大人</a>已然到了北京好几个月我还没去蹭顿饭…这个也很不应该…那么，就行动起来吧。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="10月 5 2008" class="post-list__meta--date date">10月 5 2008</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2008/10/2/ten-thousand-kms/" title="link to 一万公里">一万公里</a></h2>
+
+      <p class="excerpt">
+        <p>4月中买的<a href="http://www.octaviachina.com/" target="_blank" rel="external">明锐</a>，国庆假期里就开到一万公里了…竟然连一张锐锐的靓照也没有…</p><p><img src="http://img.article.pchome.net/00/21/70/64/41.jpg" alt=""></p><p>第二次换机油滤芯，全车检查。听着时速70时柔和得几乎听不见的引擎声在林荫的道路上行驶，风在耳边沙沙作响。</p><p>不在乎目的地，就是喜欢，这样的在路上。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="10月 2 2008" class="post-list__meta--date date">10月 2 2008</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2008/9/28/jason-williams/" title="link to 白巧克力融化">白巧克力融化</a></h2>
+
+      <p class="excerpt">
+        <p><i>他年轻的时候没有人能防住他，除了他自己没有人能看清楚他的运球，除了他自己没有人知道下一秒他会做什么；当球在他手上时，你要做的就是睁大双眼，然后尖叫。</i></p><div><object id="ssss" width="480" height="370"><param name="allowScriptAccess" value="always"><embed pluginspage="http://www.macromedia.com/go/getflashplayer" src="http://vhead.blog.sina.com.cn/player/outer_player.swf?auto=1&amp;vid=16286564&amp;uid=1349866550" type="application/x-shockwave-flash" name="ssss" allowfullscreen="true" allowscriptaccess="always" width="480" height="370"></object></div><p><div><object id="ssss" width="480" height="370"><param name="allowScriptAccess" value="always"><embed pluginspage="http://www.macromedia.com/go/getflashplayer" src="http://vhead.blog.sina.com.cn/player/outer_player.swf?auto=1&amp;vid=10473800&amp;uid=1316169020" type="application/x-shockwave-flash" name="ssss" allowfullscreen="true" allowscriptaccess="always" width="480" height="370"></object></div></p><p>现在已经不太有人知道了…大学时候我的床头一直贴他的海报，我一直穿国王的球衣，还会在半夜时戴着手套练胯下运球，而且至今还会偶尔做一个突破中的脑后传球。</p><p>最后一个把背后传球、不看人传球和长距离击地传球当常规武器用的NBA球员。最后一个像本能一样做脑后传球的NBA球员。最后一个以华丽、匪夷所思和玩弄对手为至高目标的NBA球员。</p><p>向曾经的白巧克力，以及那些曾经或者仍然固执着不被职业篮球改变的伟大球员们，致敬。</p><p><a href="http://sports.sina.com.cn/k/2008-09-27/05193975582.shtml" target="_blank" rel="external">一代传球怪才宣布退役</a></p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="9月 28 2008" class="post-list__meta--date date">9月 28 2008</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2008/9/26/the-way-of-chinese-software-industry/" title="link to (LINK)敏捷与精益- 中国软件的发展之路">(LINK)敏捷与精益- 中国软件的发展之路</a></h2>
+
+      <p class="excerpt">
+        <p></p><p>最近在计算机世界发表了<a href="http://soft.ccw.com.cn/it/htm2008/20080916_502511.shtml" target="_blank" rel="external">一篇文章</a></p><blockquote>中国应该追求并效仿印度的软件公司吗，比如把它们的组织结构和做事方式都照搬过来？这里的建议是”不”。印度的软件业建立在外包业务的基础上，而中国软件企业有一个更为广大的内需市场。相比用完全可预测的提前计划来保护自己的既得利益，中国更为重要的应该是为快速发展的中国经济提供适应变化的IT支持，从而创造更大的价值。<p>正在日益发展壮大的中国软件公司应该拥抱敏捷的开发方法和精益管理的行事方式以及一种不同于以往的软件开发者能力模型。笔者相信，通过采用敏捷与精益，这些公司将有能力更快速地交付低成本、高客户满意度的软件产品，并在市场上凸显出中国公司的与众不同。这也是一条可以同印度软件公司竞争的发展之路。</p></blockquote><p></p>
+
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="9月 26 2008" class="post-list__meta--date date">9月 26 2008</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2008/9/23/replace-long-calculation-with-asynch/" title="link to 重构模式：用异步计算替代长计算">重构模式：用异步计算替代长计算</a></h2>
+
+      <p class="excerpt">
+        <p></p><h2>问题</h2><p>当一个JavaScript计算进程耗时太长，浏览器会弹出警告框，不仅烦人而且一不小心就会点错导致后面的程序不被执行。</p><p>很多这类长计算是由于操作大数组造成的。虽然每个元素的处理耗时很少，当数组有几百上千个元素时整个计算时间就会长到超时。由于数组元素数不确定，对单一元素操作调优仍然不能根本解决问题。</p><h2>办法</h2><p>把长计算拆解成多个异步的短计算。</p><p>即使计算所需的总时间并不缩短，将阻塞的长计算拆解成异步的短计算至少带来响应性的提升：在计算进行的同时用户还可以做其他操作，而不是眼看着整个浏览器失去响应。</p><p>在拆解的基础上可以改进任务分发机制以提升整体计算时间。</p><h2>步骤</h2><ul><li>重构原来的长计算<ul><li>把整个长计算抽取到一个方法中</li><li>重构该方法使之呈现以下结构：</li></ul></li></ul><pre>function longCalculation() {before();var items = getItems();items.each(handleSingleItem);after();}</pre><ul><li>把循环重构为递归<ul><li>把“操作数组中所有元素”的逻辑抽取到一个递归调用的方法，使之呈现以下结构：</li></ul></li></ul><pre>function handleItems(items, cur) {if(cur == items.length - 1) {after();return;}var item = items[cur];handleSingleItem(item);handleItems(items, cur + 1);}function longCalculation() {before();var items = getItems();handleItems(items, 0);}</pre><ul><li>把针对每个元素的操作变成一个异步的计算进程──这一步很简单，只要在调用handleItems方法时始终加上delay就行。</li></ul><p>以上。应该很容易写出一个类似于library的玩意来封装这个模式。太容易了以至于我不想写。</p><p></p>
+
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="9月 23 2008" class="post-list__meta--date date">9月 23 2008</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2008/9/19/starwood-footprint/" title="link to Starwood Footprint">Starwood Footprint</a></h2>
+
+      <p class="excerpt">
+        <p>受到<a href="http://andyhu1007.spaces.live.com/" target="_blank">Andy</a>的鼓励，也来贴footprint</p><pre>Revision: 4203+———————-+——-+——-+———+———+—–+——-+| Name | Lines | LOC | Classes | Methods | M/C | LOC/M |+———————-+——-+——-+———+———+—–+——-+| Controllers | 1922 | 1600 | 35 | 232 | 6 | 4 || Helpers | 1451 | 1210 | 8 | 206 | 25 | 3 || Models | 4337 | 3555 | 63 | 567 | 9 | 4 || Libraries | 2786 | 2317 | 37 | 233 | 6 | 7 || Model specs | 6689 | 5536 | 1 | 3 | 3 | 1843 || Controller specs | 5216 | 4355 | 0 | 7 | 0 | 620 || Helper specs | 939 | 765 | 0 | 1 | 0 | 763 || Library specs | 2744 | 2262 | 1 | 7 | 7 | 321 |+———————-+——-+——-+———+———+—–+——-+| Total | 26084 | 21600 | 145 | 1256 | 8 | 15 |+———————-+——-+——-+———+———+—–+——-+Code LOC: 8682 Test LOC: 12918 Code to Test Ratio: 1:1.5</pre><p>正如Andy说的，4月到9月，trunk上共计约2400次commit。按照平均4个pair来算，每个pair每天提交6次。</p><p>除去统计失准的rspec部分，功能代码共计8682行，1238个方法，平均每个方法7行。测试代码是功能代码的1.5倍。</p><p>考虑到<a href="http://www.rubyonrails.org" target="_blank" rel="external">Ruby on Rails</a>作为特别擅长开发web应用的框架所具备的强大表现力，以及对重复代码的低容忍，再加上stats所统计的只是Ruby代码（不包括HTML、JavaScript等代码），我毫不怀疑这个系统的复杂度能够等量于很多十万行代码级别的系统。</p><p>而重要的是，这个团队里的每个developer了解系统的每个角落──至少是能够在相当短的时间内通过阅读功能代码和测试来了解。每天6次的提交频率就是明证。</p><p>所以，作为总结，是一个值得骄傲的项目。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="9月 19 2008" class="post-list__meta--date date">9月 19 2008</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2008/9/19/why-not-start-with-ci/" title="link to 从持续集成开始，你怕啥呢？">从持续集成开始，你怕啥呢？</a></h2>
+
+      <p class="excerpt">
+        <p>鼠标说，很多人认为<a href="http://www.infoq.com/cn/articles/road-of-ic" target="_blank" rel="external">敏捷从持续集成开始</a>，于是就<a href="http://www.zhangxun.com/_templates/tmpl_AddComment.aspx?sname=NewsAID&amp;id=54" target="_blank" rel="external">有人害怕了</a>。</p><p>人家说，你们搞这贸贸然的就持续集成，不行的。</p><blockquote>1、认清真正的敏捷<p>通过学习和调研，认清什么是真正的敏捷。如果一些基本初始概念就错了，那么在后续的推行中必然会差之毫厘、谬之千里，真正的敏捷实施也就无从谈起。</p><p>2、预估推行敏捷的收益</p><p>在确认知道什么是真正敏捷的前提下，对自己团队、组织的现状、问题和薄弱环节进行评估，设定改进目标，并预估敏捷能否解决这些问题，带来潜在的改进。如果成功的把握小于 50%或者现状已经足够好，就不要推行敏捷，何必劳民伤财呢。</p></blockquote><p>有意思啊。弄不清什么是“真正的敏捷”，“现状已经足够好”，就不需要改进了？就不要解决问题了？</p><p>怕啥呢？怕的就是这持续集成它是实打实的东西吧。怕的就是持续集成一上，所有的问题都以测试是红是绿这么截然的方式暴露出来，逼着不得不解决吧。怕的就是持续集成它没有放之四海而皆准的套话可以讲，build脚本得一点点写出来吧。怕的就是没人跟您玩“学习和调研”了吧。怕的就是“真正的敏捷实施”卖不掉了吧。</p><p>作为一个专门帮人解决问题的，我越来越频繁的说，我不在乎敏捷不敏捷。你告诉我，你有什么问题，咱们一起来看看怎么解决。可能一个项目做到最后你还是不搞敏捷，没关系，我解决你的问题提高你的效率就行。</p><p><a href="http://www.thoughtworks.com" target="_blank" rel="external"><strong>Thought</strong>Works</a>是一个做实事的公司，所以我们认为每个项目应该做的第一件事就是让真正的软件开口说话，说出它有什么问题，然后我们来解决问题。难怪有人要怕呢。光顾着解决问题，那学习和调研基本初始概念的事可扔到哪儿去了呢？</p><p>怕是又动了谁的奶酪了吧。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="9月 19 2008" class="post-list__meta--date date">9月 19 2008</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2008/9/18/full-moon-festival/" title="link to 南戴河，中秋">南戴河，中秋</a></h2>
+
+      <p class="excerpt">
+        <p>到昌黎的葡萄沟去买了新鲜的葡萄酒。</p><table style="width:auto;"><tr><td><a href="http://picasaweb.google.com/lh/photo/BM2bTVpZdXBfuHjM5ZSPfQ" target="_blank" rel="external"><img src="http://lh6.ggpht.com/gigix1980/SM8FHldc1qI/AAAAAAAAFEk/IMVjBX2l3ko/s400/DSCF1971.JPG"></a></td></tr><tr><td style="font-family:arial,sans-serif; font-size:11px; text-align:right">From<a href="http://picasaweb.google.com/gigix1980/gyETZF" target="_blank" rel="external">昌黎葡萄沟</a></td></tr></table><p>葡萄一串串的，很好看。</p><table style="width:auto;"><tr><td><a href="http://picasaweb.google.com/lh/photo/J05YQhcQQhLQBJcedhNF3g" target="_blank" rel="external"><img src="http://lh3.ggpht.com/gigix1980/SM8E7AVXOuI/AAAAAAAAFEU/b-Fw8dn9HdM/s400/DSCF1962.JPG"></a></td></tr><tr><td style="font-family:arial,sans-serif; font-size:11px; text-align:right">From<a href="http://picasaweb.google.com/gigix1980/gyETZF" target="_blank" rel="external">昌黎葡萄沟</a></td></tr></table><p>在平坦又少人的路上跑了一天，明明的平均油耗降到5.7…到晚上走了一段乡间路最终到了5.9。</p><table style="width:auto;"><tr><td><a href="http://picasaweb.google.com/lh/photo/47eLpBZE5FQSh5p-kudyFQ" target="_blank" rel="external"><img src="http://lh5.ggpht.com/gigix1980/SNEsQzBkLlI/AAAAAAAAFFs/4ki2k31E7pE/s400/DSCF1990.JPG"></a></td></tr><tr><td style="font-family:arial,sans-serif; font-size:11px; text-align:right">From<a href="http://picasaweb.google.com/gigix1980/gyETZF" target="_blank" rel="external">昌黎葡萄沟</a></td></tr></table><p>乐极生悲…拖底了。跑完长途回京一定要去4S店检查，这个好习惯要保持下去。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="9月 18 2008" class="post-list__meta--date date">9月 18 2008</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+  </ol>
+
+  <hr class="post-list__divider " />
+
+<nav class="pagination" role="navigation">
+    
+    	
+          <a class="newer-posts pagination__newer btn btn-small btn-tertiary" href="/archives/2008/">&larr; Newer Posts</a>
+        
+    
+
+    <span class="pagination__page-number">Page 2 of 8</span>
+    
+    
+        <a class="older-posts pagination__older btn btn-small btn-tertiary" href="/archives/2008/page/3/">Older Posts &rarr;</a>
+    
+</nav>
+
+
+</div>
+            <footer class="footer">
+    <span class="footer__copyright">&copy;
+        2015
+        Transparent Thoughts. All rights reserved.</span>
+</footer>
+        </div>
+    </div>
+
+    <!-- The main JavaScript file for Casper -->
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    <script src="/js/jquery.imagesloaded.min.js"></script>
+    <script src="/js/gallery.js"></script>
+    <script src="/js/jquery.githubRepoWidget.min.js"></script>
+    <script type="text/javascript"
+            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> 
+      MathJax.Hub.Config({ 
+        tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+    }); 
+
+    </script>
+
+    <!--kill ie6 -->
+    <!--[if IE 6]>
+    <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+    <![endif]-->
+
+    <!--  google analytics -->
+    <script>
+        // add your google analytics code here
+    </script>
+
+    <!-- totop -->
+    <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">
+        <a title="back to top"><img style="width:30px;height:30px;" src="/images/totop.png"/></a>
+    </div>
+    <script>
+        (function ($) {
+            var upperLimit = 100;
+            var scrollElem = $('#totop');
+            var scrollSpeed = 500;
+            scrollElem.hide();
+            $(window).scroll(function () {
+                var scrollTop = $(document).scrollTop();
+                if (scrollTop > upperLimit) {
+                    $(scrollElem).stop().fadeTo(300, 1); // fade back in
+                } else {
+                    $(scrollElem).stop().fadeTo(300, 0); // fade out
+                }
+            });
+            $(scrollElem).click(function () {
+                $('html, body').animate({scrollTop: 0}, scrollSpeed);
+                return false;
+            });
+        })(jQuery);
+    </script>
+
+    <!-- fancybox -->
+    
+    <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+    <script src="/fancybox/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript">
+        (function ($) {
+            $('.fancybox').fancybox();
+        })(jQuery);
+    </script>
+    
+
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-113927-4', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <!-- CNZZ Analytics -->
+    <script src="http://s4.cnzz.com/z_stat.php?id=1255092465&web_id=1255092465" language="JavaScript"></script>
+
+</body>
+</html>

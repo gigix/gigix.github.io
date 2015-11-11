@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+        重构？重写？ | 透明思考
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+    <meta name="author" content="Jeff Xiong">
+    
+    
+    <meta name="description" content="InfoQ:争论：是否应该避免架构重写？Joel认为在许多案例中做出需要重写软件的判断带有一定的主观性，其往往是由重用代码时遇到困难造成的。…即使旧的代码集就架构而言真的很糟糕，也应该努力清理代码、重构、修改接口，而不是进行全面的重写。一种常见的担心是重构需要的成本不比重写来得小。第一，这是真的。基于一些真实的大规模重构得到的经验，重构遗留系统和重写需要的开发工作量基本上正好相等。不过第二，如果选">
+    
+
+    <meta name="description" content="InfoQ:争论：是否应该避免架构重写？Joel认为在许多案例中做出需要重写软件的判断带有一定的主观性，其往往是由重用代码时遇到困难造成的。…即使旧的代码集就架构而言真的很糟糕，也应该努力清理代码、重构、修改接口，而不是进行全面的重写。一种常见的担心是重构需要的成本不比重写来得小。第一，这是真的。基于一些真实的大规模重构得到的经验，重构遗留系统和重写需要的开发工作量基本上正好相等。不过第二，如果选">
+<meta property="og:type" content="article">
+<meta property="og:title" content="重构？重写？ | 透明思考">
+<meta property="og:url" content="http://gigix.thoughtworkers.org/2008/5/23/refactoring-or-rewrite/index.html">
+<meta property="og:site_name" content="透明思考">
+<meta property="og:description" content="InfoQ:争论：是否应该避免架构重写？Joel认为在许多案例中做出需要重写软件的判断带有一定的主观性，其往往是由重用代码时遇到困难造成的。…即使旧的代码集就架构而言真的很糟糕，也应该努力清理代码、重构、修改接口，而不是进行全面的重写。一种常见的担心是重构需要的成本不比重写来得小。第一，这是真的。基于一些真实的大规模重构得到的经验，重构遗留系统和重写需要的开发工作量基本上正好相等。不过第二，如果选">
+<meta property="og:updated_time" content="2015-11-11T07:46:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="重构？重写？ | 透明思考">
+<meta name="twitter:description" content="InfoQ:争论：是否应该避免架构重写？Joel认为在许多案例中做出需要重写软件的判断带有一定的主观性，其往往是由重用代码时遇到困难造成的。…即使旧的代码集就架构而言真的很糟糕，也应该努力清理代码、重构、修改接口，而不是进行全面的重写。一种常见的担心是重构需要的成本不比重写来得小。第一，这是真的。基于一些真实的大规模重构得到的经验，重构遗留系统和重写需要的开发工作量基本上正好相等。不过第二，如果选">
+
+    
+    <link rel="alternate" href="/atom.xml" title="透明思考" type="application/atom+xml">
+    
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css" type="text/css">
+
+    <script src="/js/jquery.min.js"></script>
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+<header class="panel-cover panel-cover--collapsed">
+
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">透明思考</a></h1>
+
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">
+          Transparent Thoughts
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">Blog</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+------------------------------ -->
+
+<nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+
+  <!-- Github -->
+  <li class="navigation__item">
+    <a href="https://github.com/gigix" title="Gigix on GitHub" target="_blank">
+      <i class='icon icon-social-github'></i>
+      <span class="label">GitHub</span>
+    </a>
+  </li>
+
+  </ul>
+</nav>
+
+          <script>
+    function doSearch() {
+        var keyword = $('#keyword').val();
+        if (keyword.trim() === '') {
+            window.location.href = 'http://gigix.thoughtworkers.org/#blog';
+        } else {
+            window.open('http://www.google.com/search?q=site:gigix.thoughtworkers.org+' + keyword);
+        }
+    }
+</script>
+
+<div class="search">
+    <input id="keyword" type="text"/>
+    <input type="button" value="Search" class="btn" onclick="doSearch()"/>
+</div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+    <header class="post-header">
+
+        
+        <div class="post-meta">
+            <time datetime="5月 23 2008"
+                  class="post-meta__date date">5月 23 2008</time>
+            &#8226;
+
+        <span class="post-meta__tags tags">
+
+            <font class="categories">
+                
+            </font>
+            
+
+        </span>
+        </div>
+        
+
+        <h1 class="post-title">重构？重写？</h1>
+    </header>
+
+    <section class="post">
+        <p>InfoQ:<a href="http://www.infoq.com/cn/news/2008/05/software-rewrite-4-architecture" target="_blank" rel="external">争论：是否应该避免架构重写？</a></p><blockquote>Joel认为在许多案例中做出需要重写软件的判断带有一定的主观性，其往往是由重用代码时遇到困难造成的。…即使旧的代码集就架构而言真的很糟糕，也应该努力清理代码、重构、修改接口，而不是进行全面的重写。</blockquote><p>一种常见的担心是重构需要的成本不比重写来得小。第一，这是真的。基于一些真实的大规模重构得到的经验，重构遗留系统和重写需要的开发工作量基本上正好相等。不过第二，如果选择重构而不重写，可以确保原来的功能不被破坏。其实真实的担心往往并不是成本，而是效果：如果重构做到一半做不下去了再开始重写，那才是最坏的情况。所以真正解决这个问题需要切实可行的重构策略和手段，例如我在<a href="http://blog.csdn.net/gigix/archive/2008/04/04/2249120.aspx" target="_blank" rel="external">这篇文章</a>里介绍的方法。</p><p>有很多这样的案例：面对着一堆遗留代码，人们说“那就既往不咎从头来过吧”。但事实证明从头设计一个优雅的架构于是软件就可以在将来的五年十年中保持良好的扩展性这样美好的愿望从来就没有实现过。因为，软件技术的发展是很快的，代码质量的腐化是很快的。良好的扩展性只有靠持续不断强力有效的质量保证才能做到。至于起点，重构还是重写，影响并不大──如果不介意重写的大风险的话。</p>
+    </section>
+
+    <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style_32x32" style="height: 40px">
+    <a class="jiathis_button_tsina"></a>
+    <a class="jiathis_button_weixin"></a>
+    <a class="jiathis_button_douban"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis"
+       target="_blank"></a>
+</div>
+<script type="text/javascript">
+    var jiathis_config = {
+        summary: "",
+        shortUrl: false,
+        hideMore: false
+    }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code_mini/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+    
+</article>
+
+
+            <footer class="footer">
+    <span class="footer__copyright">&copy;
+        2008
+        Transparent Thoughts. All rights reserved.</span>
+</footer>
+        </div>
+    </div>
+
+    <!-- The main JavaScript file for Casper -->
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    <script src="/js/jquery.imagesloaded.min.js"></script>
+    <script src="/js/gallery.js"></script>
+    <script src="/js/jquery.githubRepoWidget.min.js"></script>
+    <script type="text/javascript"
+            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> 
+      MathJax.Hub.Config({ 
+        tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+    }); 
+
+    </script>
+
+    <!--kill ie6 -->
+    <!--[if IE 6]>
+    <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+    <![endif]-->
+
+    <!--  google analytics -->
+    <script>
+        // add your google analytics code here
+    </script>
+
+    <!-- totop -->
+    <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">
+        <a title="back to top"><img style="width:30px;height:30px;" src="/images/totop.png"/></a>
+    </div>
+    <script>
+        (function ($) {
+            var upperLimit = 100;
+            var scrollElem = $('#totop');
+            var scrollSpeed = 500;
+            scrollElem.hide();
+            $(window).scroll(function () {
+                var scrollTop = $(document).scrollTop();
+                if (scrollTop > upperLimit) {
+                    $(scrollElem).stop().fadeTo(300, 1); // fade back in
+                } else {
+                    $(scrollElem).stop().fadeTo(300, 0); // fade out
+                }
+            });
+            $(scrollElem).click(function () {
+                $('html, body').animate({scrollTop: 0}, scrollSpeed);
+                return false;
+            });
+        })(jQuery);
+    </script>
+
+    <!-- fancybox -->
+    
+    <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+    <script src="/fancybox/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript">
+        (function ($) {
+            $('.fancybox').fancybox();
+        })(jQuery);
+    </script>
+    
+
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-113927-4', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <!-- CNZZ Analytics -->
+    <script src="http://s4.cnzz.com/z_stat.php?id=1255092465&web_id=1255092465" language="JavaScript"></script>
+
+</body>
+</html>

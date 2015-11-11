@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+        对象健身操：拒绝else | 透明思考
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+    <meta name="author" content="Jeff Xiong">
+    
+    
+    <meta name="description" content="（摘自《ThoughtWorks文集》，第6章，“对象健身操”）规则2. 拒绝else关键字每个程序员都熟知if/else结构。几乎每种语言都支持if/esle。简单的条件判断对于任何人来说都不难理解。不过大多数程序员也见识过令人眩晕的层层嵌套的条件判断，以及连绵数页的case语句。更糟糕的是，在现有的判断条件上加一个新的分支通常是非常容易的，而将它重构为一个更好的方式的想法却罕有人去提及。条件判">
+    
+
+    <meta name="description" content="（摘自《ThoughtWorks文集》，第6章，“对象健身操”）规则2. 拒绝else关键字每个程序员都熟知if/else结构。几乎每种语言都支持if/esle。简单的条件判断对于任何人来说都不难理解。不过大多数程序员也见识过令人眩晕的层层嵌套的条件判断，以及连绵数页的case语句。更糟糕的是，在现有的判断条件上加一个新的分支通常是非常容易的，而将它重构为一个更好的方式的想法却罕有人去提及。条件判">
+<meta property="og:type" content="article">
+<meta property="og:title" content="对象健身操：拒绝else | 透明思考">
+<meta property="og:url" content="http://gigix.thoughtworkers.org/2009/7/7/program-without-else/index.html">
+<meta property="og:site_name" content="透明思考">
+<meta property="og:description" content="（摘自《ThoughtWorks文集》，第6章，“对象健身操”）规则2. 拒绝else关键字每个程序员都熟知if/else结构。几乎每种语言都支持if/esle。简单的条件判断对于任何人来说都不难理解。不过大多数程序员也见识过令人眩晕的层层嵌套的条件判断，以及连绵数页的case语句。更糟糕的是，在现有的判断条件上加一个新的分支通常是非常容易的，而将它重构为一个更好的方式的想法却罕有人去提及。条件判">
+<meta property="og:updated_time" content="2015-11-11T07:46:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="对象健身操：拒绝else | 透明思考">
+<meta name="twitter:description" content="（摘自《ThoughtWorks文集》，第6章，“对象健身操”）规则2. 拒绝else关键字每个程序员都熟知if/else结构。几乎每种语言都支持if/esle。简单的条件判断对于任何人来说都不难理解。不过大多数程序员也见识过令人眩晕的层层嵌套的条件判断，以及连绵数页的case语句。更糟糕的是，在现有的判断条件上加一个新的分支通常是非常容易的，而将它重构为一个更好的方式的想法却罕有人去提及。条件判">
+
+    
+    <link rel="alternate" href="/atom.xml" title="透明思考" type="application/atom+xml">
+    
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css" type="text/css">
+
+    <script src="/js/jquery.min.js"></script>
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+<header class="panel-cover panel-cover--collapsed">
+
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">透明思考</a></h1>
+
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">
+          Transparent Thoughts
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">Blog</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+------------------------------ -->
+
+<nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+
+  <!-- Github -->
+  <li class="navigation__item">
+    <a href="https://github.com/gigix" title="Gigix on GitHub" target="_blank">
+      <i class='icon icon-social-github'></i>
+      <span class="label">GitHub</span>
+    </a>
+  </li>
+
+  </ul>
+</nav>
+
+          <script>
+    function doSearch() {
+        var keyword = $('#keyword').val();
+        if (keyword.trim() === '') {
+            window.location.href = 'http://gigix.thoughtworkers.org/#blog';
+        } else {
+            window.open('http://www.google.com/search?q=site:gigix.thoughtworkers.org+' + keyword);
+        }
+    }
+</script>
+
+<div class="search">
+    <input id="keyword" type="text"/>
+    <input type="button" value="Search" class="btn" onclick="doSearch()"/>
+</div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+    <header class="post-header">
+
+        
+        <div class="post-meta">
+            <time datetime="7月 7 2009"
+                  class="post-meta__date date">7月 7 2009</time>
+            &#8226;
+
+        <span class="post-meta__tags tags">
+
+            <font class="categories">
+                
+            </font>
+            
+
+        </span>
+        </div>
+        
+
+        <h1 class="post-title">对象健身操：拒绝else</h1>
+    </header>
+
+    <section class="post">
+        <p>（摘自《<a href="http://www.pragprog.com/titles/twa/thoughtworks-anthology" target="_blank" rel="external">ThoughtWorks文集</a>》，第6章，“对象健身操”）</p><p><strong>规则2. 拒绝else关键字</strong></p><p>每个程序员都熟知if/else结构。几乎每种语言都支持if/esle。简单的条件判断对于任何人来说都不难理解。不过大多数程序员也见识过令人眩晕的层层嵌套的条件判断，以及连绵数页的case语句。更糟糕的是，在现有的判断条件上加一个新的分支通常是非常容易的，而将它重构为一个更好的方式的想法却罕有人去提及。条件判断结构通常还是重复代码的来源。例如，状态标识经常会带来这样的问题：</p><pre>public static void endMe() {if (status == DONE) {doSomething();} else {// other code}}</pre><p>你有很多种方式重写这段代码，去掉else关键字。例如下面的代码：</p><pre>public static void endMe() {if (status == DONE) {doSomething();return;}// other code}public static Node head() {if (isAdvancing()) { return first; }else { return last; }}public static Node head() {return isAdvancing() ? first : last;}</pre><p>在上面的例子中，第二段代码由于使用了三元运算符，所以代码长度从四行压缩到了一行。需要小心的是，如果过度使用“提前返回”，代码的清晰度很快会降低。《设计模式》[GHJV95]一书中关于策略模式的部分里有一个实例，演示了如何使用多态避免根据状态进行分支选择的代码。如果这种根据状态进行分支选择的代码大量地重复，就应该考虑使用策略模式了。</p><p>面向对象编程语言给我们提供了一种更为强大的工具——多态。它能够处理更为复杂的条件判断。对于简单的条件判断，我们可以使用“卫语句”和“提前返回”替换它。而基于多态的设计则更容易阅读与维护，从而可以更清晰地表达代码的内在意图。但是，程序员要做出这样的转变并不是一帆风顺的。尤其是你的代码中可能早已充斥了else。所以，作为这个练习的一部分，你是不可以使用else的。在某些场景下可以使用<a href="http://en.wikipedia.org/wiki/Null_Object_pattern" target="_blank" rel="external">Null Object</a>模式，它会对你有所帮助。另外还有很多工具和技术都可以帮助你甩掉else。试一试，看你能提出多少种方案来？</p>
+    </section>
+
+    <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style_32x32" style="height: 40px">
+    <a class="jiathis_button_tsina"></a>
+    <a class="jiathis_button_weixin"></a>
+    <a class="jiathis_button_douban"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis"
+       target="_blank"></a>
+</div>
+<script type="text/javascript">
+    var jiathis_config = {
+        summary: "",
+        shortUrl: false,
+        hideMore: false
+    }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code_mini/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+    
+</article>
+
+
+            <footer class="footer">
+    <span class="footer__copyright">&copy;
+        2009
+        Transparent Thoughts. All rights reserved.</span>
+</footer>
+        </div>
+    </div>
+
+    <!-- The main JavaScript file for Casper -->
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    <script src="/js/jquery.imagesloaded.min.js"></script>
+    <script src="/js/gallery.js"></script>
+    <script src="/js/jquery.githubRepoWidget.min.js"></script>
+    <script type="text/javascript"
+            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> 
+      MathJax.Hub.Config({ 
+        tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+    }); 
+
+    </script>
+
+    <!--kill ie6 -->
+    <!--[if IE 6]>
+    <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+    <![endif]-->
+
+    <!--  google analytics -->
+    <script>
+        // add your google analytics code here
+    </script>
+
+    <!-- totop -->
+    <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">
+        <a title="back to top"><img style="width:30px;height:30px;" src="/images/totop.png"/></a>
+    </div>
+    <script>
+        (function ($) {
+            var upperLimit = 100;
+            var scrollElem = $('#totop');
+            var scrollSpeed = 500;
+            scrollElem.hide();
+            $(window).scroll(function () {
+                var scrollTop = $(document).scrollTop();
+                if (scrollTop > upperLimit) {
+                    $(scrollElem).stop().fadeTo(300, 1); // fade back in
+                } else {
+                    $(scrollElem).stop().fadeTo(300, 0); // fade out
+                }
+            });
+            $(scrollElem).click(function () {
+                $('html, body').animate({scrollTop: 0}, scrollSpeed);
+                return false;
+            });
+        })(jQuery);
+    </script>
+
+    <!-- fancybox -->
+    
+    <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+    <script src="/fancybox/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript">
+        (function ($) {
+            $('.fancybox').fancybox();
+        })(jQuery);
+    </script>
+    
+
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-113927-4', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <!-- CNZZ Analytics -->
+    <script src="http://s4.cnzz.com/z_stat.php?id=1255092465&web_id=1255092465" language="JavaScript"></script>
+
+</body>
+</html>

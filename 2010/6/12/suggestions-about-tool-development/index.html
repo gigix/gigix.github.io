@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+        关于内部工具开发的若干建议 | 透明思考
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+    <meta name="author" content="Jeff Xiong">
+    
+    
+    <meta name="description" content="（本文都是基于某些现状与设想的建议，没有得到实践验证。仅供参考，责任自负。）作为一个超级大软件企业的内部工具开发部门，需要考虑几个重要问题：避免作恶发布管理技术支持在考虑开发一个工具提供什么价值之前，首先考虑可能造成什么伤害。世界上有很多的开源工具。这些工具不仅仅是源代码的堆积，其中融入了一些最优秀的软件开发者在某一领域的经验与智慧。贸然开发一个新的工具，哪怕只是对现有开源工具的包装，都可能导致很">
+    
+
+    <meta name="description" content="（本文都是基于某些现状与设想的建议，没有得到实践验证。仅供参考，责任自负。）作为一个超级大软件企业的内部工具开发部门，需要考虑几个重要问题：避免作恶发布管理技术支持在考虑开发一个工具提供什么价值之前，首先考虑可能造成什么伤害。世界上有很多的开源工具。这些工具不仅仅是源代码的堆积，其中融入了一些最优秀的软件开发者在某一领域的经验与智慧。贸然开发一个新的工具，哪怕只是对现有开源工具的包装，都可能导致很">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于内部工具开发的若干建议 | 透明思考">
+<meta property="og:url" content="http://gigix.thoughtworkers.org/2010/6/12/suggestions-about-tool-development/index.html">
+<meta property="og:site_name" content="透明思考">
+<meta property="og:description" content="（本文都是基于某些现状与设想的建议，没有得到实践验证。仅供参考，责任自负。）作为一个超级大软件企业的内部工具开发部门，需要考虑几个重要问题：避免作恶发布管理技术支持在考虑开发一个工具提供什么价值之前，首先考虑可能造成什么伤害。世界上有很多的开源工具。这些工具不仅仅是源代码的堆积，其中融入了一些最优秀的软件开发者在某一领域的经验与智慧。贸然开发一个新的工具，哪怕只是对现有开源工具的包装，都可能导致很">
+<meta property="og:updated_time" content="2015-11-11T07:46:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="关于内部工具开发的若干建议 | 透明思考">
+<meta name="twitter:description" content="（本文都是基于某些现状与设想的建议，没有得到实践验证。仅供参考，责任自负。）作为一个超级大软件企业的内部工具开发部门，需要考虑几个重要问题：避免作恶发布管理技术支持在考虑开发一个工具提供什么价值之前，首先考虑可能造成什么伤害。世界上有很多的开源工具。这些工具不仅仅是源代码的堆积，其中融入了一些最优秀的软件开发者在某一领域的经验与智慧。贸然开发一个新的工具，哪怕只是对现有开源工具的包装，都可能导致很">
+
+    
+    <link rel="alternate" href="/atom.xml" title="透明思考" type="application/atom+xml">
+    
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css" type="text/css">
+
+    <script src="/js/jquery.min.js"></script>
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+<header class="panel-cover panel-cover--collapsed">
+
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">透明思考</a></h1>
+
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">
+          Transparent Thoughts
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">Blog</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+------------------------------ -->
+
+<nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+
+  <!-- Github -->
+  <li class="navigation__item">
+    <a href="https://github.com/gigix" title="Gigix on GitHub" target="_blank">
+      <i class='icon icon-social-github'></i>
+      <span class="label">GitHub</span>
+    </a>
+  </li>
+
+  </ul>
+</nav>
+
+          <script>
+    function doSearch() {
+        var keyword = $('#keyword').val();
+        if (keyword.trim() === '') {
+            window.location.href = 'http://gigix.thoughtworkers.org/#blog';
+        } else {
+            window.open('http://www.google.com/search?q=site:gigix.thoughtworkers.org+' + keyword);
+        }
+    }
+</script>
+
+<div class="search">
+    <input id="keyword" type="text"/>
+    <input type="button" value="Search" class="btn" onclick="doSearch()"/>
+</div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+    <header class="post-header">
+
+        
+        <div class="post-meta">
+            <time datetime="6月 12 2010"
+                  class="post-meta__date date">6月 12 2010</time>
+            &#8226;
+
+        <span class="post-meta__tags tags">
+
+            <font class="categories">
+                
+            </font>
+            
+
+        </span>
+        </div>
+        
+
+        <h1 class="post-title">关于内部工具开发的若干建议</h1>
+    </header>
+
+    <section class="post">
+        <p>（本文都是基于某些现状与设想的建议，没有得到实践验证。仅供参考，责任自负。）</p>作为一个超级大软件企业的内部工具开发部门，需要考虑几个重要问题：<ol><li>避免作恶</li><li>发布管理</li><li>技术支持</li></ol><p>在考虑开发一个工具提供什么价值之前，首先考虑可能造成什么伤害。世界上有很多的开源工具。这些工具不仅仅是源代码的堆积，其中融入了一些最优秀的软件开发者在某一领域的经验与智慧。贸然开发一个新的工具，哪怕只是对现有开源工具的包装，都可能导致很多人失去学习这些经验与智慧的机会。优先考虑知识的普及。教人读《<a href="http://book.douban.com/subject/1436131/" target="_blank" rel="external"><span class="caps">J2EE</span>Development Without<span class="caps">EJB</span></a>》比开发又一套框架要好，虽然做起来会更难。<a href="http://www.springside.org.cn/" target="_blank" rel="external">春天的旁边</a>是一个好的框架，因为它重视知识的传递而非包装现有代码。</p><p>使用业界公认的依赖管理工具来发布。通过邮件发给用户一个“XxxxXxx-V001R002C004B035SP02.exe”是不负责任的。使用<a href="http://maven.apache.org/" target="_blank" rel="external">Maven2</a>或者<a href="http://en.wikipedia.org/wiki/Yellowdog_Updater,_Modified" target="_blank" rel="external"><span class="caps">YUM</span></a>或者<a href="http://en.wikipedia.org/wiki/Advanced_Packaging_Tool" target="_blank" rel="external"><span class="caps">APT</span></a>或者<a href="http://rubygems.org/" target="_blank" rel="external">RubyGems</a>这样体面的依赖包管理工具来发布你的作品。这样能让用户知道自己得到的每个版本都是经过某种发布流程的而不是一个野版本，并且使你的工具能以最低成本与其他依赖包集成。如果公司的信息安全规定禁止普通开发人员上外网从而导致他们无法使用这些体面的依赖管理工具来搭建自己的工作环境，给他们搭一个内部私服，并把下载新依赖的请求委派到互联网。这不仅有利于你自己的工作，而且能让开发人员的生活变得更容易，他们会因此感谢你。</p><p>（Windows到现在也没有一个体面的依赖管理工具，所以Windows is stupid。）</p><p>用一个简单易用的Bug跟踪工具来管理所有的支持要求，例如<a href="http://trac.edgewall.org/" target="_blank" rel="external">Trac</a>就很好。建立一个邮件列表，把所有曾经提出支持要求的人都加进去。给用户建立社群，他们就会自己解决绝大部分的愚蠢问题。不要为了漂亮的界面而把事情搞得复杂。用户提问，你解答，把这些事情都变得就像发一个邮件那么简单，你就能得到一个社群──你确实应该考虑充分利用邮件，因为用户不会在知道了支持人员的邮件地址之后还记住你的在线支持社区地址。向那些体面的开源社区学习，向Google学习，看看他们是如何响应用户需求的。</p><p>最后，开放源代码。尽管概率很小，但确实有些用户会给你贡献源代码（至少在他们失去耐心继续等待你的fix时）。像Microshit那样暴露几个莫名其妙的编程接口然后宣称“我们的软件具有可扩展性”是不够的，因为扩展永远都会在你没有想到的地方发生。不要把工具的开发者和用户隔开，因为那些用户很可能是比你更好的软件开发者。开放你的SVN地址，把它和开发指南的链接放在工具介绍的第一页上，就像绝大多数体面的开源项目所做的那样。及时并真诚地感谢那些给你贡献代码的人，以及那些checkout了你的代码库并嘲笑它的人，因为他们会让你的软件变得更好。</p><p>最后的最后，随时准备抛弃你自己的任何东西，从一段源代码，到一个功能，甚至整个软件。如果你的目标是让别人的工作更容易的话。</p>
+    </section>
+
+    <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style_32x32" style="height: 40px">
+    <a class="jiathis_button_tsina"></a>
+    <a class="jiathis_button_weixin"></a>
+    <a class="jiathis_button_douban"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis"
+       target="_blank"></a>
+</div>
+<script type="text/javascript">
+    var jiathis_config = {
+        summary: "",
+        shortUrl: false,
+        hideMore: false
+    }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code_mini/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+    
+</article>
+
+
+            <footer class="footer">
+    <span class="footer__copyright">&copy;
+        2010
+        Transparent Thoughts. All rights reserved.</span>
+</footer>
+        </div>
+    </div>
+
+    <!-- The main JavaScript file for Casper -->
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    <script src="/js/jquery.imagesloaded.min.js"></script>
+    <script src="/js/gallery.js"></script>
+    <script src="/js/jquery.githubRepoWidget.min.js"></script>
+    <script type="text/javascript"
+            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> 
+      MathJax.Hub.Config({ 
+        tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+    }); 
+
+    </script>
+
+    <!--kill ie6 -->
+    <!--[if IE 6]>
+    <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+    <![endif]-->
+
+    <!--  google analytics -->
+    <script>
+        // add your google analytics code here
+    </script>
+
+    <!-- totop -->
+    <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">
+        <a title="back to top"><img style="width:30px;height:30px;" src="/images/totop.png"/></a>
+    </div>
+    <script>
+        (function ($) {
+            var upperLimit = 100;
+            var scrollElem = $('#totop');
+            var scrollSpeed = 500;
+            scrollElem.hide();
+            $(window).scroll(function () {
+                var scrollTop = $(document).scrollTop();
+                if (scrollTop > upperLimit) {
+                    $(scrollElem).stop().fadeTo(300, 1); // fade back in
+                } else {
+                    $(scrollElem).stop().fadeTo(300, 0); // fade out
+                }
+            });
+            $(scrollElem).click(function () {
+                $('html, body').animate({scrollTop: 0}, scrollSpeed);
+                return false;
+            });
+        })(jQuery);
+    </script>
+
+    <!-- fancybox -->
+    
+    <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+    <script src="/fancybox/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript">
+        (function ($) {
+            $('.fancybox').fancybox();
+        })(jQuery);
+    </script>
+    
+
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-113927-4', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <!-- CNZZ Analytics -->
+    <script src="http://s4.cnzz.com/z_stat.php?id=1255092465&web_id=1255092465" language="JavaScript"></script>
+
+</body>
+</html>

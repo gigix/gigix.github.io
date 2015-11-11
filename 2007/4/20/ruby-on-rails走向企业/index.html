@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+        Ruby on Rails走向企业 | 透明思考
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+    <meta name="author" content="Jeff Xiong">
+    
+    
+    <meta name="description" content="我的标题不是一个问句。因为我已经相当确定，Ruby on Rails走向企业是早晚的事情。已经有太多的讨论围绕着“用Rails要快多少多少倍”展开。但是，对于企业级超复杂来说，开发的效率只是一方面。至少还有其他几个方面是必须关注的。非功能性需求，也就是软件的-ilities：性能，并发吞吐量，伸缩性，安全，等等。完整的生命周期支持：需求，设计，开发，配置管理，质量保证，部署，维护，升级。软件生命周">
+    
+
+    <meta name="description" content="我的标题不是一个问句。因为我已经相当确定，Ruby on Rails走向企业是早晚的事情。已经有太多的讨论围绕着“用Rails要快多少多少倍”展开。但是，对于企业级超复杂来说，开发的效率只是一方面。至少还有其他几个方面是必须关注的。非功能性需求，也就是软件的-ilities：性能，并发吞吐量，伸缩性，安全，等等。完整的生命周期支持：需求，设计，开发，配置管理，质量保证，部署，维护，升级。软件生命周">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ruby on Rails走向企业 | 透明思考">
+<meta property="og:url" content="http://gigix.thoughtworkers.org/2007/4/20/ruby-on-rails走向企业/index.html">
+<meta property="og:site_name" content="透明思考">
+<meta property="og:description" content="我的标题不是一个问句。因为我已经相当确定，Ruby on Rails走向企业是早晚的事情。已经有太多的讨论围绕着“用Rails要快多少多少倍”展开。但是，对于企业级超复杂来说，开发的效率只是一方面。至少还有其他几个方面是必须关注的。非功能性需求，也就是软件的-ilities：性能，并发吞吐量，伸缩性，安全，等等。完整的生命周期支持：需求，设计，开发，配置管理，质量保证，部署，维护，升级。软件生命周">
+<meta property="og:updated_time" content="2015-11-11T07:46:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Ruby on Rails走向企业 | 透明思考">
+<meta name="twitter:description" content="我的标题不是一个问句。因为我已经相当确定，Ruby on Rails走向企业是早晚的事情。已经有太多的讨论围绕着“用Rails要快多少多少倍”展开。但是，对于企业级超复杂来说，开发的效率只是一方面。至少还有其他几个方面是必须关注的。非功能性需求，也就是软件的-ilities：性能，并发吞吐量，伸缩性，安全，等等。完整的生命周期支持：需求，设计，开发，配置管理，质量保证，部署，维护，升级。软件生命周">
+
+    
+    <link rel="alternate" href="/atom.xml" title="透明思考" type="application/atom+xml">
+    
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css" type="text/css">
+
+    <script src="/js/jquery.min.js"></script>
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+<header class="panel-cover panel-cover--collapsed">
+
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">透明思考</a></h1>
+
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">
+          Transparent Thoughts
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">Blog</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+------------------------------ -->
+
+<nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+
+  <!-- Github -->
+  <li class="navigation__item">
+    <a href="https://github.com/gigix" title="Gigix on GitHub" target="_blank">
+      <i class='icon icon-social-github'></i>
+      <span class="label">GitHub</span>
+    </a>
+  </li>
+
+  </ul>
+</nav>
+
+          <script>
+    function doSearch() {
+        var keyword = $('#keyword').val();
+        if (keyword.trim() === '') {
+            window.location.href = 'http://gigix.thoughtworkers.org/#blog';
+        } else {
+            window.open('http://www.google.com/search?q=site:gigix.thoughtworkers.org+' + keyword);
+        }
+    }
+</script>
+
+<div class="search">
+    <input id="keyword" type="text"/>
+    <input type="button" value="Search" class="btn" onclick="doSearch()"/>
+</div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+    <header class="post-header">
+
+        
+        <div class="post-meta">
+            <time datetime="4月 20 2007"
+                  class="post-meta__date date">4月 20 2007</time>
+            &#8226;
+
+        <span class="post-meta__tags tags">
+
+            <font class="categories">
+                
+            </font>
+            
+
+        </span>
+        </div>
+        
+
+        <h1 class="post-title">Ruby on Rails走向企业</h1>
+    </header>
+
+    <section class="post">
+        <p>我的标题不是一个问句。因为我已经相当确定，<a href="http://www.rubyonrails.org" target="_blank" rel="external">Ruby on Rails</a>走向企业是早晚的事情。</p><p>已经有太多的讨论围绕着“<a href="http://rubako.com/2007/04/19/who-said-development-on-rails-is-x-times-faster/" target="_blank" rel="external">用Rails要快多少多少倍</a>”展开。但是，对于<a href="http://patricklogan.blogspot.com/2006/03/its-enterprisey.html" target="_blank" rel="external">企业级超复杂</a>来说，开发的效率只是一方面。至少还有其他几个方面是必须关注的。</p><ol><li>非功能性需求，也就是软件的-ilities：性能，并发吞吐量，伸缩性，安全，等等。</li><li>完整的生命周期支持：需求，设计，开发，配置管理，质量保证，部署，维护，升级。软件生命周期的各个环节是否有适当的工具和/或最佳实践来覆盖。</li><li>系统整合。与遗留系统是否能够协同工作。这主要体现在两个方面：（1）消息系统；（2）遗留数据库。</li></ol><p>实际上动态语言早已在各种企业IT系统中扮演胶水的角色，一些成熟的组织早已认识到它们并<a href="http://www.infoworld.com/archives/emailPrint.jsp?R=printThis&amp;A=/article/07/04/16/16FEscripting_1.html" target="_blank" rel="external">不止是急就章</a>拼凑软件的法宝。动态语言本身的特点使得它们能够相当漂亮地描述各种领域，这正是<a href="http://www.oreillynet.com/ruby/blog/2007/03/why_was_rails_only_possible_wi.html?ref=most_discussed" target="_blank" rel="external">为何Rails只会在Ruby上出现</a>的原因。</p><p>至于前面提到的、企业级超复杂所看重的三个方面。结合<a href="http://httpd.apache.org/" target="_blank" rel="external">Apache</a>、<a href="http://mongrel.rubyforge.org/" target="_blank" rel="external">Mongrel</a>和<a href="http://haproxy.1wt.eu/" target="_blank" rel="external">HAProxy</a>的部署方案已经被证明具有轻松超过任何J2EE应用服务器的性能和吞吐量，<a href="http://zefhemel.com/archives/2004/09/01/the-share-nothing-architecture" target="_blank" rel="external">无共享架构</a>使其具有完全线性的水平伸缩能力；至于安全性，Unix本身就已经构造了完备而可靠的安全体系。在今年的<a href="http://conferences.oreillynet.com/rails/" target="_blank" rel="external">RailsConf</a>上，我们将看到关于“如何部署高性能企业级Rails应用环境”的产品和最佳实践。</p><p>在生命周期方面，我们已经有了<a href="http://cruisecontrolrb.thoughtworks.com/" target="_blank" rel="external">CruiseControl.rb</a>和<a href="http://wiki.rubyonrails.org/rails/pages/Capistrano" target="_blank" rel="external">Capistrano</a>；我们即将看到<a href="http://studios.thoughtworks.com/" target="_blank" rel="external">Mingle</a>的正式亮相，以及基于这些工具的最佳实践。系统整合或许是目前最不明朗的一个领域：我们有<a href="http://www.infoq.com/articles/intro-active-messaging-rails" target="_blank" rel="external">ActiveMessaging</a>，我们有<a href="http://compositekeys.rubyforge.org/" target="_blank" rel="external">复合主键支持</a>，但是很明显这离着“方便的遗留系统整合”还有相当距离。在未来的一年中，这可能是“<a href="http://blog.csdn.net/mfowler/archive/2006/08/14/1061954.aspx" target="_blank" rel="external">企业级Rails</a>”最有看头的一个领域。</p><p>总而言之，不难看到，即便是对于企业级超复杂的要求，Ruby和Rails也已经做好了——至少是大部分的——准备。即便客气一点不说“<a href="http://jutopia.tirsen.com/articles/2005/10/22/rails-is-more-enterprise-ready-than-j2ee-in-a-way" target="_blank" rel="external">Rails比J2EE还要适合企业使用</a>”这样的话，对于那些愿意承担一定风险来提升IT效率的企业而言，是的，Ruby和Rails整装待发。</p>
+    </section>
+
+    <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style_32x32" style="height: 40px">
+    <a class="jiathis_button_tsina"></a>
+    <a class="jiathis_button_weixin"></a>
+    <a class="jiathis_button_douban"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis"
+       target="_blank"></a>
+</div>
+<script type="text/javascript">
+    var jiathis_config = {
+        summary: "",
+        shortUrl: false,
+        hideMore: false
+    }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code_mini/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+    
+</article>
+
+
+            <footer class="footer">
+    <span class="footer__copyright">&copy;
+        2007
+        Transparent Thoughts. All rights reserved.</span>
+</footer>
+        </div>
+    </div>
+
+    <!-- The main JavaScript file for Casper -->
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    <script src="/js/jquery.imagesloaded.min.js"></script>
+    <script src="/js/gallery.js"></script>
+    <script src="/js/jquery.githubRepoWidget.min.js"></script>
+    <script type="text/javascript"
+            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> 
+      MathJax.Hub.Config({ 
+        tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+    }); 
+
+    </script>
+
+    <!--kill ie6 -->
+    <!--[if IE 6]>
+    <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+    <![endif]-->
+
+    <!--  google analytics -->
+    <script>
+        // add your google analytics code here
+    </script>
+
+    <!-- totop -->
+    <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">
+        <a title="back to top"><img style="width:30px;height:30px;" src="/images/totop.png"/></a>
+    </div>
+    <script>
+        (function ($) {
+            var upperLimit = 100;
+            var scrollElem = $('#totop');
+            var scrollSpeed = 500;
+            scrollElem.hide();
+            $(window).scroll(function () {
+                var scrollTop = $(document).scrollTop();
+                if (scrollTop > upperLimit) {
+                    $(scrollElem).stop().fadeTo(300, 1); // fade back in
+                } else {
+                    $(scrollElem).stop().fadeTo(300, 0); // fade out
+                }
+            });
+            $(scrollElem).click(function () {
+                $('html, body').animate({scrollTop: 0}, scrollSpeed);
+                return false;
+            });
+        })(jQuery);
+    </script>
+
+    <!-- fancybox -->
+    
+    <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+    <script src="/fancybox/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript">
+        (function ($) {
+            $('.fancybox').fancybox();
+        })(jQuery);
+    </script>
+    
+
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-113927-4', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <!-- CNZZ Analytics -->
+    <script src="http://s4.cnzz.com/z_stat.php?id=1255092465&web_id=1255092465" language="JavaScript"></script>
+
+</body>
+</html>

@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+        page 41 | 透明思考
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+    <meta name="author" content="Jeff Xiong">
+    
+    
+
+    <meta name="description">
+<meta property="og:type" content="website">
+<meta property="og:title" content="page 41 | 透明思考">
+<meta property="og:url" content="http://gigix.thoughtworkers.org/page/41/index.html">
+<meta property="og:site_name" content="透明思考">
+<meta property="og:description">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="page 41 | 透明思考">
+<meta name="twitter:description">
+
+    
+    <link rel="alternate" href="/atom.xml" title="透明思考" type="application/atom+xml">
+    
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css" type="text/css">
+
+    <script src="/js/jquery.min.js"></script>
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+<header class="panel-cover panel-cover--collapsed">
+
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">透明思考</a></h1>
+
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">
+          Transparent Thoughts
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">Blog</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+------------------------------ -->
+
+<nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+
+  <!-- Github -->
+  <li class="navigation__item">
+    <a href="https://github.com/gigix" title="Gigix on GitHub" target="_blank">
+      <i class='icon icon-social-github'></i>
+      <span class="label">GitHub</span>
+    </a>
+  </li>
+
+  </ul>
+</nav>
+
+          <script>
+    function doSearch() {
+        var keyword = $('#keyword').val();
+        if (keyword.trim() === '') {
+            window.location.href = 'http://gigix.thoughtworkers.org/#blog';
+        } else {
+            window.open('http://www.google.com/search?q=site:gigix.thoughtworkers.org+' + keyword);
+        }
+    }
+</script>
+
+<div class="search">
+    <input id="keyword" type="text"/>
+    <input type="button" value="Search" class="btn" onclick="doSearch()"/>
+</div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+
+   <!-- do nothing -->
+
+
+<div class="main-post-list">
+    <ol class="post-list">
+    
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2007/12/7/state-handling-mechanisms-in-erlang/" title="link to 在Erlang程序里处理状态">在Erlang程序里处理状态</a></h2>
+
+      <p class="excerpt">
+        <p>从题外话说起：据我亲身经历，很多令人郁结的程序员最大的问题不是不熟悉语言和类库，不是不了解算法，不是不会用工具，而是对程序里的信息流没有概念——弄不清哪些信息应该在什么地方、信息从哪里来、经过怎样的转换、到哪里去。而顺序化编程语言（C、C++、Java、C#……）很大程度上加重了这个毛病：在一些不那么漂亮的代码里经常可以看到被滥用的static方法和变量，说到底还是不恰当的全局变量的延续，说到底还是没弄清楚哪些信息应该在哪些位置出现。</p><p>而Erlang的编程练习对此很有帮助。没有全局变量，变量赋值后就不能改变。于是一些常见的badsmell自然而然地就不会出现了，一些常用的重构手法自然而然地就用不上了。不过呢，这个世界毕竟是有状态的。比如说一个<a href="http://stomp.codehaus.org/" target="_blank" rel="external">Stomp</a>server就需要记住哪个client订阅了哪个频道。于是当你认真思考“什么信息应该在什么地方”这个问题时，Erlang的几种选择就显得很有意思了。</p><p><strong>参数传递</strong>。只有当你认真思考的时候，你才会发现原来很多信息都是很容易得到的。要控制一个函数的行为，最简单也最常用的办法就是改变传递给它的参数。如果这个函数需要一种新的状态，也许那意味着给它增加一个参数。</p><p><a href="http://www.erlang.org/course/advanced.html#dict" target="_blank" rel="external"><strong>进程字典</strong></a>。调用<code>put</code>和<code>get</code>方法可以把信息放入一个“每个进程一个实例”的字典。例如<a href="http://www.erlang.org/doc/man/random.html" target="_blank" rel="external"><code>random</code></a>在字典里放了一个名叫<code>random_seed</code>的变量，用来生成伪随机数。</p><p><a href="http://www.erlang.org/doc/man/ets.html" target="_blank" rel="external"><strong><span class="caps">ETS</span></strong></a>。同样是一张二维表，ETS里的信息是所有进程都能访问的。例如<a href="http://code.google.com/p/stomperl/" target="_blank" rel="external">Stomperl</a>需要记录哪个client订阅哪个mailer进程，显然所有监听socket的进程都需要了解这个订阅信息，才能正确分发消息。于是订阅信息就应该（至少）在ETS里保存。</p><p><a href="http://www.erlang.org/doc/man/dets.html" target="_blank" rel="external"><strong><span class="caps">DETS</span></strong></a>。ETS只在内存中存在，这意味着两件事：第一，程序结束数据就消失；第二，数据只能在一个节点共享。DETS的API和ETS相似，但它是基于文件的，所以持久保存和多节点共享都是题中应有之义。注意，ETS和DETS保存的数据都必须是tuple。</p><p><a href="http://www.erlang.org/doc/apps/mnesia/index.html" target="_blank" rel="external"><strong>Mnesia</strong></a>。这是一个真正的数据库。功能齐备，并且仍然软实时。</p><p>以上四种方式的排列不是随机的。应该首先考虑靠前的手段，如果有明确的理由表明一种手段不能满足需要时才可以考虑比较靠后的手段。这很费脑子，有时让人沮丧。但经过深思熟虑的程序好过不假思索的程序，发现自己犯错好过犯错而不自知。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="12月 7 2007" class="post-list__meta--date date">12月 7 2007</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2007/12/7/stomperl-stomp-with-erlang/" title="link to Stomperl- Stomp with Erlang">Stomperl- Stomp with Erlang</a></h2>
+
+      <p class="excerpt">
+        <p><a href="http://code.google.com/p/stomperl/" target="_blank" rel="external">Stomperl</a>is an attempt to build something not-so-that-non-trivial (in this case, a<a href="http://stomp.codehaus.org/" target="_blank" rel="external">Stomp</a>server) with<a href="http://erlang.org/" target="_blank" rel="external">Erlang</a>. To kick it off, I stole the server architecturefrom<a href="http://www.trapexit.org/Building_a_Non-blocking_TCP_server_using_OTP_principles" target="_blank" rel="external">here</a>and<a href="http://d.hatena.ne.jp/cooldaemon/20071024/1193193093" target="_blank" rel="external">here</a>. Currently it doesn’teven support the full<a href="http://stomp.codehaus.org/Protocol" target="_blank" rel="external">protocol</a>: only CONNECT,SUBSCRIBE and SEND commands are supported. But anyway, it’s moving forward and I’m learning from it.</p><p>To make it run:</p><ol><li><code>make test</code>, which hopefully succeeds.</li><li><code>make start</code>, then you’ll get an Erlang console.</li><li>In the Erlang console,<code>tcp_server_sup:start_server().</code></li><li>In another shell console,<code>make acceptance</code>, which hopefully succeeds.</li></ol><p>I created an extremely simple acceptance test with<a href="http://www.germane-software.com/software/Java/Gozirra/" target="_blank" rel="external">Gozirra</a>.</p><p>What’s the<a href="http://stomperl.googlecode.com/svn/trunk/TODO" target="_blank" rel="external">next</a>? Well, I suppose I’llimplement the full protocol, and fix some defects. As a newbie to Erlang, I made and am makingstupid mistakes. Welcome to be stupid together with me.</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="12月 7 2007" class="post-list__meta--date date">12月 7 2007</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2007/11/30/oracle-mix-powered-by-jruby-on-rails/" title="link to Oracle Mix, Powered by JRuby on Rails">Oracle Mix, Powered by JRuby on Rails</a></h2>
+
+      <p class="excerpt">
+        <p>Oracle AppsLab Blog<br>“Mix is Live”<br><a href="http://tinyurl.com/2hcp8p" target="blank">http://tinyurl.com/2hcp8p</a><br>An announcement of the Mix application we built in partnership withOracle. In case you had forgotten, we have a logo/link at the bottom ofevery page of the application – there for Oracle’s 300,000 customersto see. By the end of the recent Oracle OpenWorld conference, the Mixhad over 1,500 signups.</p><p>Oracle AppsLab Blog<br>“Let’s Mix”<br><a href="http://tinyurl.com/26fal3" target="blank">http://tinyurl.com/26fal3</a><br>The Mix application built in<b>less than 5 weeks</b>“with thehelp of the wonderful people at ThoughtWorks.” Mike Royle, Toby Tripp,Matthew Wastrodowski and Sid Pinney were all part of this relationship.</p><p>InfoQ<br>Oracle Mix: First large JRuby on Rails app online<br><a href="http://tinyurl.com/yqjzqb" target="blank">http://tinyurl.com/yqjzqb</a><br>ThoughtWorks, JRuby and Ola mentioned in excerpts</p><p>Oracle AppsLab Blog<br>Mix, JRuby on Rails, Small Teams, Agile, and it’s Effects on the World<br><a href="http://tinyurl.com/26fg5p" target="blank">http://tinyurl.com/26fg5p</a><br>A good post about JRuby and its role in the Mix development. Ola Bini and ThoughtWorks arementioned.</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="11月 30 2007" class="post-list__meta--date date">11月 30 2007</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2007/11/23/jruby-on-rails-a-tale-of-two-worlds/" title="link to JRuby on Rails- A Tale of Two Worlds">JRuby on Rails- A Tale of Two Worlds</a></h2>
+
+      <p class="excerpt">
+        <p><a href="http://blog.csdn.net/jakarta99" target="_blank" rel="external">Jini</a>说<a href="http://news.csdn.net/n/20071123/111022.html" target="_blank" rel="external">脚本语言唯Java马首是瞻</a>，<a href="http://c2.com/cgi-bin/wiki?AlexeyVerkhovsky" target="_blank" rel="external">Alexey</a>（在一个邮件里）说Ruby就是新时代的COBOL。两种说法的意思是一样的：在Java平台上跑Ruby程序，同时收获两个世界最好的东西。</p><p>Oracle已经尝试了。<a href="https://mix.oracle.com/" target="_blank" rel="external">Oracle Mix</a>是一个社会网络站点，也是<a href="http://www.infoq.com/cn/news/2007/11/oracle-mix-jruby" target="_blank" rel="external">第一个大型的JRuby on Rails的应用</a>。效率？效率真的不错。<a href="http://oracleappslab.com/2007/11/21/mix-jruby-on-rails-small-teams-agile-and-its-effects-on-the-world/" target="_blank" rel="external">Oracle的同志说</a>，Mix每秒能处理400～600个请求。比较不理想的是内存使用情况，这里有一个已知的问题存在。不过在Oracle那样的强大服务器上，这个已经不成问题，于是也没有人去动它。</p><p>更好的想象来自<a href="http://www.hibernate.org/" target="_blank" rel="external">Hibernate</a>。<a href="http://wiki.rubyonrails.org/rails/pages/ActiveRecord" target="_blank" rel="external">ActiveRecord</a>的不足是显而易见的，但用Ruby重新实现一个Hibernate不是件很轻松的事，特别是考虑到Hibernate支持那么多数据库。那么，Hibernate加一个<a href="http://softwareengineering.vazexqi.com/files/pattern.html" target="_blank" rel="external">Convention overConfiguration</a>的Ruby API又如何呢？把Hibernate融入Rails又如何呢？Alexey正在着手做一些东西。</p><p>近在眼前的，JRuby on Rails感觉上更像是一个Java的<strong>框架</strong>，而不是另一个<strong>平台</strong>，这让它更容易被比较保守的企业和政府客户接受，特别是那些已经在J2EE服务器上投入了大量成本的客户。现在好了，你的投资重新焕发青春，开发效率提升5倍。谁会不喜欢呢？</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="11月 23 2007" class="post-list__meta--date date">11月 23 2007</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2007/11/22/programming-distributed-erlang-applications-pitfalls-and-recipes-chinese-version/" title="link to Programming Distributed Erlang Applications- Pitfalls and Recipes (Chinese Version)">Programming Distributed Erlang Applications- Pitfalls and Recipes (Chinese Version)</a></h2>
+
+      <p class="excerpt">
+        <p>原文：<a href="http://delivery.acm.org/10.1145/1300000/1292527/p37-svensson.pdf?key1=1292527&amp;key2=8758891911&amp;coll=ACM&amp;dl=ACM&amp;CFID=15151515&amp;CFTOKEN=6184618" target="_blank" rel="external">Programming Distributed Erlang Applications: Pitfalls and Recipes</a></p><p>译文：<a href="http://erlang-china.org/WordPress/wp-content/uploads/2007/11/p37-svensson-cn.pdf" target="_blank" rel="external"><strong>编写分布式的Erlang程序：陷阱和对策</strong></a></p><p>为了在Erlang运行时系统基础上开发更可靠的分布式系统和算法，我们研究了Erlang编程语言中分布式的部分。使用Erlang，把一个运行在单个节点上的程序转换成完全分布式（运行在多个节点上）的应用程序可谓易如反掌（只需要修改对spawn函数的调用，使之在不同节点上产生进程）；但尽管如此，Erlang语言和API中仍然有一些阴暗的角落可能在引入分布式运算时带来问题。在本文中，我们将介绍几个这样的陷阱：在这些地方，取决于进程是否运行在同一个节点上，进程间通信的语义会有显著的差异。我们同时还提供了一些关于“编写安全的分布式系统”的指导原则。</p><p>更多Erlang文档见<a href="http://erlang-china.org/wiki/erlang-doc" target="_blank" rel="external">Erlang文档计划</a></p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="11月 22 2007" class="post-list__meta--date date">11月 22 2007</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2007/11/19/extended-process-registry-for-erlang/" title="link to Extended Process Registry for Erlang- Chinese Version">Extended Process Registry for Erlang- Chinese Version</a></h2>
+
+      <p class="excerpt">
+        <p>原文：<a href="http://delivery.acm.org/10.1145/1300000/1292522/p1-wiger.pdf?key1=1292522&amp;key2=5178891911&amp;coll=ACM&amp;dl=ACM&amp;CFID=15151515&amp;CFTOKEN=6184618" target="_blank" rel="external">Extended Process Registry for Erlang</a></p><p>中译：<a href="http://erlang-china.org/WordPress/wp-content/uploads/2007/11/p1-wiger-cn.pdf" target="_blank" rel="external"><strong>扩展Erlang的进程注册表</strong></a></p><p>内建的进程注册表早已被实践证明是Erlang语言中一项极其有用的特性。它使得开发者能够很轻松地提供具名服务 （named services）：用户无需知道服务进程的进程标识符（processidentifier，PID）即可使用这些服务。</p><p>但目前的进程注册表也有其局限性：进程的名字必须是atom（不支持有结构的数据），每个进程只能用一个名字注册，并且缺乏有效的搜索和遍历机制。</p><p>在Ericsson下属的IMSGateways的产品开发中，我们经常需要维护一张映射表，以便根据各种属性找到负责处理调用的进程。我们从中发现了一个通用的模式（一种索引表），并由此开始开发一个扩展的进程注册表。</p><p>一开始这个想法并没有立即体现出价值，甚至看不出在实用中提供了多大的便利。但随着开发的进行，程序设计者们越来越多地使用这个扩展的进程注册表，并因此显著减少了代码量、提高了实现一致性。此外，扩展的进程注册表还提供了一种强大的调试机制，能够在数万个进程中进行有效的调试。</p><p>本文介绍了这种扩展的进程注册表，并对其进行检讨，从而提出一种新的实现方式，使之更具一致性、效率更高、并且支持全局命名空间。</p><p>全文见<a href="http://erlang-china.org/wiki/erlang-doc" target="_blank" rel="external">Erlang文档计划</a></p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="11月 19 2007" class="post-list__meta--date date">11月 19 2007</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2007/11/15/root-of-quality/" title="link to 质量之本在哪里">质量之本在哪里</a></h2>
+
+      <p class="excerpt">
+        <p>在CSDN看到朱少民的一篇blog：<a href="http://blog.csdn.net/KerryZhu/archive/2007/11/14/1885584.aspx%20" target="_blank" rel="external">勿忘质量之本</a>（相信作者是把标题写了错别字）。略有感，说说我对QA这件事情的想法。</p><p>在北京理工大学做招聘宣讲的时候，有同学问<a href="http://www.thoughtworks.com.cn" target="_blank" rel="external"><strong>Thought</strong>Works</a>的QA做什么。我们似乎很习惯于把QA和测试等同起来，就是坐在门边那个负责抓出所有bug的人。朱少民的blog里说“测试就是为了发现缺陷”，当然这毫无疑问是对的。但作为QA这个角色，我认为他/她的职责分两半：第一是发现缺陷；第二是确保缺陷被修复，并且修复过的缺陷永不再重现。前者是测试工作，后者是流程工作。作为QA（质量保障或者叫质量分析）的负责人，流程工作至少与测试工作具有同样的重要地位。</p><p>（那天晚上和江焱风一起吃饭，说到质量管理体系的话题。其实ISO9000就很明白了：质量来自过程和管理，而不是来自检验。）</p><p>所以，尽可能地把测试自动化，这实际上是在积累质量管理体系。这事情分为三个环节：（1）发现缺陷；（2）用自动化的测试案例描述缺陷，以测试案例通过为依据验收缺陷修复；（3）频繁运行所有测试案例，确保已经被修复的缺陷永不再进入代码库。而朱少民所说的“为追求测试自动化而忘记发现缺陷之根本”的问题，实际上是一个不存在的伪问题，因为这两件事情分别位于环节（1）和环节（2），彼此正交。朱少民还说“70％缺陷【的发现】还是需要人的智慧和思考”。不是的，100%都得靠人的智慧和思考。你不想发现的缺陷，它是不会被发现的——当然了用户会发现然后暴跳如雷地来找你，那就是另一回事情了。</p><p>总结：QA的工作分为测试、流程制定和流程监督三部分。质量不是靠守门守出来的，而是靠贯穿整个软件生命周期的管理管出来的。敏捷项目为什么容易获得更好的质量？因为它把质量管理落实到每个小时的每件具体事情上，而不是写在纸上。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="11月 15 2007" class="post-list__meta--date date">11月 15 2007</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2007/11/13/improving-agile-in-product-designing/" title="link to 产品研发中的敏捷：不足与方向">产品研发中的敏捷：不足与方向</a></h2>
+
+      <p class="excerpt">
+        <p><a href="http://www.infoq.com/cn" target="_blank" rel="external">InfoQ</a>的一篇题为“<a href="http://www.infoq.com/cn/news/2007/11/agile-pragmatic-marketing" target="_blank" rel="external">敏捷遭遇实效营销</a>”的新闻指出：敏捷方法不是产品开发中的银弹。当然我们早就知道<a href="http://c2.com/cgi/wiki?NoSilverBullet" target="_blank" rel="external">没有银弹</a>，但仍然有必要强调一遍，尤其是在这个敏捷方法在中国逐渐开始热门的时候。</p><blockquote>有一件事是可以肯定的，即敏捷方法并不能解决业务中的根本性问题，尤其是当业务本身不能决定如何做，或无法决定优先级时，敏捷方法根本帮不上忙。</blockquote><p>几乎同时，<a href="http://www.javaeye.com" target="_blank" rel="external">JavaEye</a>出了一个题为“<a href="http://www.javaeye.com/post/411373" target="_blank" rel="external">XP or not</a>”的帖子，提出了几乎同样的观点。这位作者说“XP isn’t suitable for every type of software development, it hasits own suitable area”，显然这是毋庸置疑的事实，我们甚至用不着为此进行讨论。我们应该做的是，找出敏捷方法（具体说，<a href="http://www.extremeprogramming.org/" target="_blank" rel="external">XP</a>）为什么和如何不适合产品开发，并且找出改进的方向。正如我在InfoQ那篇新闻下面<a href="http://www.infoq.com/cn/news/2007/11/agile-pragmatic-marketing#view_13575" target="_blank" rel="external">回复</a>的，</p><blockquote>对于产品研发，只有敏捷是不足够的。敏捷能做出<strong>你想要的</strong>，但没办法保证做出<strong>好的</strong>或者<strong>正确的</strong>或者<strong>受欢迎的</strong>。而且作为从内部IT项目衍生而来的敏捷方法，它本身有一种趋势：把功能做到<strong>能用</strong>而非<strong>完美</strong>。对于内部IT项目，这很好，两个能用的功能往往能提供比一个完美的功能多得多的价值；但对于面向公共用户的产品，你麻烦了，因为不完美的功能很可能<strong>根本就没人用</strong>。</blockquote><p>王晓明显然经过和我在飞机上的讨论有了<a href="http://ossme.com/2007/09/28/is-agile-a-good-idea-for-product-development/" target="_blank" rel="external">很多想法</a>，并且这些想法看起来相当靠谱。问题的根源就在于：面对企业内部用户和面对公众用户，<a href="http://www.mmmbook.com/review/beauty.htm" target="_blank" rel="external">概念完整性</a>的估价（priority）是完全不同的；同样，还有<a href="http://www.usability.gov/" target="_blank" rel="external">可用性</a>——千万不要误会，我并不是打算说敏捷项目一定忽视概念完整性或者可用性。只是很多敏捷团队的经验来自类似<a href="http://martinfowler.com/bliki/C3.html" target="_blank" rel="external">C3项目</a>这样的企业内部IT项目，他们的经验蒙蔽了他们的双眼，让他们看不到各种软件特性估价的变化。这个问题是比较容易解决的，只要意识到不够好用的功能将没有人用因此无法创造任何价值，他们就会重新调整自己对于各种软件特性的估价，因为<a href="http://www.infoq.com/cn/news/2007/07/agile-and-lean" target="_blank" rel="external">敏捷的核心就在于价值驱动</a>。</p><p>不那么容易解决的问题是方法和工具的欠缺。这也就是为什么我说“只有敏捷是<strong>不足够</strong>的”。譬如说为了提高可用性我们就需要<a href="http://www.dedream.com/" target="_blank" rel="external">交互设计</a>。还有很多类似这样的、适用于产品开发的方法和工具，它们从不同角度影响软件特性。敏捷能做出<strong>你想要的</strong>，但如果只有敏捷而缺乏这些方法和工具，很可能你永远不知道自己<strong>究竟想要</strong>什么。然而更严重的问题是看待这些方法和工具的态度，</p><blockquote>交互设计是改进的办法之一。但很多敏捷的组织对此认识并不充分，他们只是在项目进行中让交互设计师来做一次评估和设计。这是不足够的，就好像在软件项目的交付之前才进行QA工作是不足够的一样。质量来自整个流程，同样好的交互设计也来自整个流程。</blockquote><p>敏捷团队都充分地意识到，质量保证必须贯穿整个流程进行，这是敏捷方法带来更高软件质量的根本原因所在——测试驱动和持续集成当然是很好的实践，但这些实践能够得以工作，是因为我们在流程层面对质量的重视。而对于概念完整性、可用性和其他软件特性，我们有类似这样的流程层面的重视吗？正如我在InfoQ的回复里说的，有了敏捷方法，还要有一套全流程的产品设计方法支持，才可能做出好的产品。这就是我们要去学习和探索的方向。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="11月 13 2007" class="post-list__meta--date date">11月 13 2007</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2007/11/10/random-thoughts/" title="link to 海阔天空">海阔天空</a></h2>
+
+      <p class="excerpt">
+        <p>仍然自由自我<br>永远高唱我歌<br>走遍千里</p><p>原谅我这一生不羁放纵爱自由<br>也会怕有一天会跌倒<br>背弃了理想谁人都可以<br>那会怕有一天只你共我</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="11月 10 2007" class="post-list__meta--date date">11月 10 2007</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2007/11/6/itechtag-recruiting/" title="link to 招技术人才，试试iTechTag">招技术人才，试试iTechTag</a></h2>
+
+      <p class="excerpt">
+        <p><a href="http://www.itechtag.com" target="_blank" rel="external">iTechTag</a>迈出了新的一步：<a href="http://www.itechtag.com/jobs" target="_blank" rel="external">工作机会交流</a>。有招聘需求的用户可以在这里发布自己要招聘的职位，其他感兴趣的用户就会直接和你联系，或者按照你提供的在线申请地址进行在线申请。在可预见的将来，我们的招聘信息发布服务都将是免费的。如果你正好要招技术人才（特别是互联网行业的技术人才），不妨来iTechTag一试。</p><p>当然目前的功能——发布和查看——还只是最基本的。我们正在进行之中的工作，是把工作机会与<a href="http://www.itechtag.com/user" target="_blank" rel="external">技能云</a>联系起来。拥有技能云的用户，也能及时获知自己是哪些企业渴求的人才；发布工作机会的招聘者，也能直观搜索到适合自己的人才——适合不适合，嘴上说的不算，根据工作经历分析出来的才真客观。</p><p>其实原本没打算这么快就做“发布职位”功能的，因为我一开始认为，只有当注册技能云的人比较多以后，招聘者才会感兴趣。但即便我们现在只有百余名用户，仍然有公司感兴趣了，因为这些注册用户都是中国软件开发者社群中最活跃的分子。于是我们立即调整方向，一个周末之后职位交流就上线了。多亏了<a href="http://www.1sters.com/" target="_blank" rel="external">IceskYsl</a>的出色工作。敏捷啊。</p><p>我<a href="http://www.infoq.com/cn/articles/itechtag-team-interview" target="_blank" rel="external">早就说过</a>，iTechTag的目标是帮助软件开发者实现自己的价值。我们一直在努力。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="11月 6 2007" class="post-list__meta--date date">11月 6 2007</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+  </ol>
+
+  <hr class="post-list__divider " />
+
+<nav class="pagination" role="navigation">
+    
+    	
+          <a class="newer-posts pagination__newer btn btn-small btn-tertiary" href="/page/40/">&larr; Newer Posts</a>
+        
+    
+
+    <span class="pagination__page-number">Page 41 of 51</span>
+    
+    
+        <a class="older-posts pagination__older btn btn-small btn-tertiary" href="/page/42/">Older Posts &rarr;</a>
+    
+</nav>
+
+
+</div>
+            <footer class="footer">
+    <span class="footer__copyright">&copy;
+        2015
+        Transparent Thoughts. All rights reserved.</span>
+</footer>
+        </div>
+    </div>
+
+    <!-- The main JavaScript file for Casper -->
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    <script src="/js/jquery.imagesloaded.min.js"></script>
+    <script src="/js/gallery.js"></script>
+    <script src="/js/jquery.githubRepoWidget.min.js"></script>
+    <script type="text/javascript"
+            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> 
+      MathJax.Hub.Config({ 
+        tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+    }); 
+
+    </script>
+
+    <!--kill ie6 -->
+    <!--[if IE 6]>
+    <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+    <![endif]-->
+
+    <!--  google analytics -->
+    <script>
+        // add your google analytics code here
+    </script>
+
+    <!-- totop -->
+    <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">
+        <a title="back to top"><img style="width:30px;height:30px;" src="/images/totop.png"/></a>
+    </div>
+    <script>
+        (function ($) {
+            var upperLimit = 100;
+            var scrollElem = $('#totop');
+            var scrollSpeed = 500;
+            scrollElem.hide();
+            $(window).scroll(function () {
+                var scrollTop = $(document).scrollTop();
+                if (scrollTop > upperLimit) {
+                    $(scrollElem).stop().fadeTo(300, 1); // fade back in
+                } else {
+                    $(scrollElem).stop().fadeTo(300, 0); // fade out
+                }
+            });
+            $(scrollElem).click(function () {
+                $('html, body').animate({scrollTop: 0}, scrollSpeed);
+                return false;
+            });
+        })(jQuery);
+    </script>
+
+    <!-- fancybox -->
+    
+    <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+    <script src="/fancybox/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript">
+        (function ($) {
+            $('.fancybox').fancybox();
+        })(jQuery);
+    </script>
+    
+
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-113927-4', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <!-- CNZZ Analytics -->
+    <script src="http://s4.cnzz.com/z_stat.php?id=1255092465&web_id=1255092465" language="JavaScript"></script>
+
+</body>
+</html>

@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[透明思考]]></title>
+  <subtitle><![CDATA[Transparent Thoughts]]></subtitle>
+  <link href="/atom.xml" rel="self"/>
+  <link href="http://gigix.thoughtworkers.org/"/>
+  <updated>2015-11-11T13:40:51.000Z</updated>
+  <id>http://gigix.thoughtworkers.org/</id>
+  
+  <author>
+    <name><![CDATA[Jeff Xiong]]></name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[胜任力挑战：现有研究导览]]></title>
+    <link href="http://gigix.thoughtworkers.org/2015/11/11/literature-review-competence/"/>
+    <id>http://gigix.thoughtworkers.org/2015/11/11/literature-review-competence/</id>
+    <published>2015-11-11T10:30:00.000Z</published>
+    <updated>2015-11-11T13:40:51.000Z</updated>
+    <content type="html"><![CDATA[<p>为了充分理解当今普遍存在的技术胜任力紧缺的问题并为之找到解决办法，需要关注三个方面已有的研究。首先，技术尤其是IT技术造成对高技术劳动者的大量需求，是造成全球技术胜任力紧缺的根本原因。随后，传统的人力资源职能无力于管理高技能工作所需的无形的胜任力，因此人力资源管理的理论与实践需要围绕新型胜任力做出改变。最后，刻意练习理论可以系统地改善专业技能的获得，从而使“建设无形胜任力”的过程变得有形、可控。</p>
+<p><img src="/assets/2015/11/11/competence.jpg"></p>
+<p>针对这三个方向，笔者选取了几篇有代表性的论文，对已有的相关研究做一导览。</p>
+<h2 id="对高技能劳动者的需求">对高技能劳动者的需求</h2><p><a href="http://www.nber.org/papers/w7136" target="_blank" rel="external">Bresnahan、Brynjolfsson和Hitt的研究</a>指出，早在1999年之前，已经有众多研究者注意到<a href="http://www.nber.org/papers/w8769" target="_blank" rel="external">“技术偏向的技术变革”（SBTC）</a>这个趋势：这类技术变革“把对劳动者的需求移向技能较高的一端”。从前的技术进步大多能创造更多低技能的就业机会，而IT发展的趋势却是在取代低技能劳动者，同时增加对高技能劳动者的需求。这个趋势会加剧全球范围的经济不平等，并导致技术型人才的普遍稀缺。</p>
+<p>IT技术有一个重要的特征：作为支持心智（而非物质）行为的工具，IT不是只要花钱采购实施就能产生效果的。为了充分发挥IT的效力，组织的工作方式需要做出调整；通过加速和自动化原来手工的工作流程，IT又会改变组织提供的产品和服务。当计算性能的成本随着摩尔定律不断走低，IT对工作空间及工作产物的影响也愈发深远，使之朝向一个偏向于高技能知识工作者的方向发展。</p>
+<p>Bresnahan、Brynjolfsson和Hitt使用大量历史数据验证了上述猜想。他们发现，IT的使用程度与员工的技能水平有显著的正相关。另一个对管理者的调查也显示出同样的倾向：IT使用越多，管理者越需要高技能胜任力。</p>
+<p>这个十多年前的研究很具前瞻性。在后来的两本畅销书《<a href="http://book.douban.com/subject/21326266/" target="_blank" rel="external">与机器赛跑</a>》和《<a href="http://book.douban.com/subject/25953932/" target="_blank" rel="external">第二次机器革命</a>》中，Brynjolfsson指出：IT的指数性发展已经进入“棋盘的后半”，机器将全面且无可逆转地取代低技能劳动者，人类劳动者必须发展机器尚无法取代的胜任力：想象力、大规模模式匹配、复杂的沟通。这一观点从高层面上为胜任力模型的定义划定了框架。</p>
+<h2 id="基于胜任力的人力资源管理">基于胜任力的人力资源管理</h2><p><a href="http://www.researchgate.net/publication/201381783_Competency-Based_or_a_Traditional_Approach_to_Training" target="_blank" rel="external">Dubois和Rothwell的研究</a>有一个基调：由于技术导致工作内容及结果快速改变，传统的基于职位分析的人力资源管理方法变得过时。不仅因为难以保持职位分析随工作本身的变化而随时更新，更是因为无形胜任力在工作中的比重日益提升，使得清晰定义职位的要求变得愈发困难、甚至不可能。因此Dubois和Rothwell建议，所有的人力资源职能都需要以基于胜任力的方式重新审视。这两位作者在《<a href="http://book.douban.com/subject/2053469/" target="_blank" rel="external">Competency-Based Human Resource Management</a>》一书中介绍了一个全面的基于胜任力的人力资源管理架构。在这篇论文里，他们聚焦审视了员工培训这一具体职能。</p>
+<p>传统的员工培训常建立在<a href="https://en.wikipedia.org/wiki/Instructional_design" target="_blank" rel="external">指导系统设计（ISD）</a>模型的基础上。ISD模型常被批评过于强调预先设计，忽视来自学习者的反馈，使学习者在培训过程中感到缺乏主动性。然而尽管有这个问题，ISD模型实际上能很好地交付预期的内容，尤其是与e-learning等技术结合时。</p>
+<p>ISD模型真正的问题在于它尝试“开展彻底的培训需求评估”，即从职位分析出发设计培训。然而高技能的知识工作越来越无法被泰勒式地彻底分析。无形的、个人的特质在知识工作者的胜任力中扮演越来越重要的角色。传统的培训套路仍然能高效地传递内容，但职位分析无法得出与胜任力相关的有效的培训内容，这才是基于ISD模型的员工培训面临的最大挑战。</p>
+<p>因此，Dubois和Rothwell建议将注意力从“职位需要什么行为”上移开，转而关注“组织需要什么胜任力”，并鼓励自我导向的、基于团队的员工发展。这两位作者对传统的和基于胜任力的两种人力资源管理方法做了对比，结论很明显：基于胜任力的人力资源管理方法更适用于高技能的工作环境。</p>
+<h2 id="刻意练习">刻意练习</h2><p>人们普遍认为顶级的专家技能无法习得，只能靠神秘的天赋。这个论断如果是真的，对于今天的雇主来说则格外糟糕，因为他们比历史上任何时候都更需要专家技能。幸好，<a href="http://doi.apa.org/psycinfo/1993-40718-001" target="_blank" rel="external">Ericsson、Krampe和Tesch-Römer的研究</a>打破了“才华天赋”的神话。通过审视之前的研究，他们发现对于大多数专业技能而言，专家技能的获得与基因遗传几乎没有关系。与此同时，他们也发现：仅靠练习与经验并不能保证高水平。换言之，高水平（甚至世界级水平）的专家技能大多数人都可以达到，如果他们有足够的动力并且练习得法的话。</p>
+<p>这几位研究者审视了来自多个不同领域的数据：国际象棋、作曲、科学、写作、医疗等等。他们发现各个领域都有一个共通点：最高水平的专家级表现都出现在大约十年的从业时间之后。细致的考察表明，这些世界级的水平来源于大约一万小时的刻意练习。更重要的是，他们识别出了刻意练习的核心要素：这些练习应该基于练习者当前的水平设计、目标是提升其能力水平；练习应该与即时的反馈相结合；练习应该重复很多很多次。有些“神童”在很年轻时就展现出了世界级的水平，仅仅因为他们很早就开始密集的刻意练习。后来的畅销书《<a href="http://book.douban.com/subject/4010185/" target="_blank" rel="external">哪来的天才</a>》阐释了这篇文章的观点。</p>
+<p>刻意练习理论与精益/敏捷理论有内在的相通之处，尤其是对短反馈周期的重视。有理由相信精益/敏捷与刻意练习能够彼此增益，成为现代组织有系统地提升员工个人胜任力、并最终提升组织胜任力的重要环节。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>为了充分理解当今普遍存在的技术胜任力紧缺的问题并为之找到解决办法，需要关注三个方面已有的研究。首先，技术尤其是IT技术造成对高技术劳动者的大量需求，是造成全球技术胜任力紧缺的根本原因。随后，传统的人力资源职能无力于管理高技能工作所需的无形的胜任力，因此人力资源管理的理论与实]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[无人驾驶汽车意味着什么]]></title>
+    <link href="http://gigix.thoughtworkers.org/2015/8/28/driverless-cars/"/>
+    <id>http://gigix.thoughtworkers.org/2015/8/28/driverless-cars/</id>
+    <published>2015-08-28T08:04:00.000Z</published>
+    <updated>2015-11-11T07:46:00.000Z</updated>
+    <content type="html"><![CDATA[<p>把车载GPS、定速巡航、<a href="http://auto.sina.com.cn/video/2013-07-29/160462724679.html" target="_blank" rel="external">自动泊车</a>、<a href="http://auto.sina.com.cn/video/2014-03-24/141363657029.html" target="_blank" rel="external">防碰撞主动刹车</a>、<a href="http://v.youku.com/v_show/id_XMTA2OTA4MTA4.html" target="_blank" rel="external">车道偏离报警</a>这几样技术放在一起，实际上一辆可以无人驾驶的汽车在技术上就已经成熟了。几个月前纽约市已经与Google达成一个协议，<a href="http://inhabitat.com/nyc/google-signs-agreement-with-nyc-mayor-to-replace-nyc-taxis-with-driverless-google-cabs/#ixzz2g7ZE4pUa&amp;i" target="_blank" rel="external">从2016年起引入无人驾驶的出租车</a>。然而技术的成熟与投入实用远不是变革的终点，恰恰相反，这只是一场更为深远的变革的起点。</p>
+<p><img src="/assets/2015/8/28/Volvo-Driverless-car1.jpg"></p>
+<p>首先，我们必须清楚地意识到，无人驾驶汽车一旦开始普及，人们自己开车的日子就一去不复返了。和很多人的想象不同，你将无法再选择自己开车。还不用说你是否能以时速100公里与前车保持50公分距离跟车，能从层层叠叠密不透风的自动控制的地下车库里把车开出来就是个巨大的挑战。车险条款也会变得对人为驾驶非常苛刻。驾驶汽车将成为一种专门的、只有少数人在少数特殊情况下使用的职业技能。</p>
+<p>当所有人不用在通勤路上驾驶汽车，全球每年可以省出十亿小时时间，两倍于建造埃及吉萨金字塔所耗用的工作量。这个时间和空间将成为一片全新的市场。由于车辆全局统筹共享，利用率大幅提升，车辆小型化将成为趋势，只能搭载一到两个人的小型车辆将成为主流。既然不需要人为驾驶（以及支持人为驾驶的一整套装置），即使小型车辆也可以有非常宽松的乘坐空间。而且对外视野不再是必须品，因此车辆内部可以做成360度全景屏幕，乘客可以根据自己的需要来设定车内环境。通勤路上的时间既可以用于个人娱乐，也可以用于远程会议，坐进车内就跟坐进自己的工作室没有区别。</p>
+<p>统筹共享会让车辆保有量大幅下降。由于车辆不需要整天整天地停在车位上，城市车辆保有量只需要现在的20%。今天的大城市（尤其在中国）规划设计很大程度上以车辆为中心，首先关注道路的通畅。这种城市设计的理念将变得不合时宜。当数量仅为今天20%的车辆更加快速且安全地自动行驶，城市的道路便不需要如此宽阔，居民区和商业区也不需要如此多的停车位，更多的空间可以被用在市民身上。</p>
+<p>车辆保有量的大幅下降和车辆的小型化，将降低用于交通运输的能源消耗。<a href="http://needtoknow.nas.edu/energy/energy-use/transportation/" target="_blank" rel="external">美国能源消耗的28%用于交通运输</a>，因此这个项目上的节省意义重大。同时，由于“驾驶体验”变得毫无意义，且车辆在全局统筹共享，电动汽车的劣势将不复存在，电动汽车的比例将大幅增加。大量的电动汽车将成为一个巨大的、移动的蓄电池，使风电、光电、潮汐电等有明显峰谷因此无法成为骨干电网主力的绿色能源得到充分利用。</p>
+<p>城市区块的优劣将被重新评估，居民区/商业区与周边环境的互动更少，贫富人群生活更加割裂。城市的安全程度将大幅提升。不仅因为没有了交通事故，而且因为所有人在所有时间进行的所有距离稍长的位移都受到监控，控制犯罪将变得容易。同时个人隐私也受到更严重的侵犯。</p>
+<p>中产阶级将失去一种用于身份定位和自我表达的重要的文化载体。众多受过良好教育的中产阶级将迫切需要一种明显可见的、能呈现一定个性特色的、价格大致相当于半年到一年收入的消费品，作为汽车的替代。在没有了汽车这个重要道具之后，中产阶级将需要一组新的行为语言来具象表达“责任”、“财富”、“自由”、“放纵”乃至“爱情”等抽象概念。一套全新的装逼方式将被发明出来。</p>
+<p><strong>参考资料</strong></p>
+<ul>
+<li>Gao, P., Hensley, R. and Zielke, A. (2014). <a href="http://www.mckinsey.com/insights/manufacturing/a_road_map_to_the_future_for_the_auto_industry" target="_blank" rel="external">A road map to the future for the auto industry</a>.</li>
+<li>Bertoncello, M. and Wee, D. (2015). <a href="http://www.mckinsey.com/insights/automotive_and_assembly/ten_ways_autonomous_driving_could_redefine_the_automotive_world" target="_blank" rel="external">Ten ways autonomous driving could redefine the automotive world</a>.</li>
+<li>Claudel, M. and Ratti, C. (2015). <a href="http://www.mckinsey.com/insights/sustainability/full_speed_ahead_how_the_driverless_car_could_transform_cities" target="_blank" rel="external">Full speed ahead: How the driverless car could transform cities</a>.</li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>把车载GPS、定速巡航、<a href="http://auto.sina.com.cn/video/2013-07-29/160462724679.html" target="_blank" rel="external">自动泊车</a>、<a href="http://]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[公益IT的精益之路]]></title>
+    <link href="http://gigix.thoughtworkers.org/2015/8/17/ngo-digital-ecosystem/"/>
+    <id>http://gigix.thoughtworkers.org/2015/8/17/ngo-digital-ecosystem/</id>
+    <published>2015-08-17T08:04:00.000Z</published>
+    <updated>2015-11-11T07:46:00.000Z</updated>
+    <content type="html"><![CDATA[<p>_（本文发表于《<a href="http://epaper.gmw.cn/zhdsb/html/2015-08/12/nw.D110000zhdsb_20150812_1-17.htm?div=-1" target="_blank" rel="external">中华读书报</a>》2015年8月12日）_</p>
+<p>不止一位在公益机构工作的朋友对我说：现在大家都在谈数字化、谈“互联网+”，我们机构也想用互联网思维武装自己，你看我们是不是应该开发一个某某某系统……听他们畅想自己的数字化宏图，在这场对话中扮演“IT专家”角色的笔者往往却只能泼冷水地说：开发系统太贵了。笔者在一篇题为《<a href="http://gigix.thoughtworkers.org/2015/6/3/how-expensive-developing-software/">开发软件有多贵</a>》的文章里曾粗略估计，自行建设并拥有一个普通IT系统的成本可以轻易地达到上百万人民币。这个级别的开销对于普通的公益机构来说，无疑是难以承受的。</p>
+<p><img src="/assets/2015/8/17/road.jpg"></p>
+<p>应该看到，大多数组织、大多数人看待IT的方式，本来就是由少数几家大企业通过不懈的广告宣传给培养出来的。也就是说，“主流的”IT视角是为金融、电信、零售……这样的大型商业机构服务的，因为这些机构才是IT大厂商的主要顾客。这种视角的差异，决定了主流的IT话语未必适用于公益机构。1968年，一位名叫梅尔文·康威的程序员指出：IT系统的结构与组织机构的结构相匹配。按照“康威法则”我们不难明白，为什么传统上大家观念中的“企业应用”都是大规模、整体化、高复杂度、高定制度的软件系统，例如ERP、CRM等等——因为现代的大企业正是这样，由大批专门人才紧密结合成一个个部门、再组合成高度内聚的商业机构。</p>
+<p>然而公益机构的结构并不经常像企业这样紧密内聚。很多时候，公益机构的运作是以少量全职员工加上捐赠者、志愿者、政府等各方力量共同构成的松散组织来进行。当组织结构的性质变化，照搬企业IT的建设思路自然会遭遇困难。且把定制IT系统高昂的成本放在一边不谈，公益机构既难像企业那样对志愿者进行高密度的IT培训，又难像企业那样严格约束志愿者，实施定制IT系统的难度可想而知。更不用说公益机构面对的问题域往往不像商业领域那样有清晰的定义，这又给IT建设增加不少变数。</p>
+<p>面对成本受限又充满未知的领域，《<a href="http://book.douban.com/subject/10945606/" target="_blank" rel="external">精益创业</a>》提供了一条切实可行的路径。以“开发-度量-学习”的循环快速迭代，精益创业方法提倡验证性学习、灵活调整方向、以及“快速地失败、廉价地失败”。作者介绍了一个创业者开始网上订餐业务的故事：这位创业者没有开发任何复杂的软件系统，只是手工把几家餐馆的菜单放上网，然后自己接电话收订单、自己到餐馆取餐、自己送货兼收款，以此验证自己的点子，随后在营业额上升、人手不敷的时候才开发软件来自动化。这种建设IT系统的方式，对于公益机构而言不无借鉴意义。</p>
+<p>沿着精益创业的路径，公益机构不太可能建设出像企业应用那样高度集成的“IT系统”，更有可能建设出一系列简单IT工具组成的“IT生态”：用WordPress之类的工具搭建的简单网站用作机构介绍；微信订阅号用于传播内容；<a href="https://jinshuju.net/" target="_blank" rel="external">金数据</a>用于收集捐赠者信息和招募志愿者；内部的捐赠者管理和志愿者管理则用有版本管理的Excel表单完成……有趣的是，这样的IT生态却恰好与公益领域多方协作的生态结构相匹配，又因为大量借用现有软件工具而降低了所有使用者的学习曲线，于是这样“生长”出的IT系统不仅成本较低，而且往往比以企业模式集中实施的IT系统更为使用者们接受。</p>
+<p>借用现有软件、让IT生态“生长”，不表示公益机构的IT建设不需要规划设计，只是设计的重心不再是单一的IT系统，而是与公益生态对应的IT生态。《<a href="http://book.douban.com/subject/6718487/" target="_blank" rel="external">商业模式新生代</a>》把听来高冷的“商业模式”放在一张纸上描绘出来，帮助设计者思考一个机构、一个“生意”最根本的要素：顾客、价值、渠道、客户关系、收入来源、核心资源、关键操作、重要合作、成本结构。虽然公益不是商业，但这种灵活而可视的方法同样有助于公益机构厘清生态系统中各方的关系与协作模式，进而定义与之匹配的IT生态。</p>
+<p>媒介学家德布雷说，吸引人关注某一问题最好的方式是通过互动，“让观众参与”。在思考公益机构的IT规划与建设时，需要跳出企业IT内聚、内向的视角，纵观整个生态系统，设计各种IT工具在各方交互中扮演的角色。对于资金有限的公益机构而言，这可能是一条更实用且效果更佳的数字化路径。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>_（本文发表于《<a href="http://epaper.gmw.cn/zhdsb/html/2015-08/12/nw.D110000zhdsb_20150812_1-17.htm?div=-1" target="_blank" rel="external">中华读书]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[被信息塑造的新工人阶级]]></title>
+    <link href="http://gigix.thoughtworkers.org/2015/6/24/digital-labour-class/"/>
+    <id>http://gigix.thoughtworkers.org/2015/6/24/digital-labour-class/</id>
+    <published>2015-06-24T11:31:00.000Z</published>
+    <updated>2015-11-11T07:46:00.000Z</updated>
+    <content type="html"><![CDATA[<p><em>(本文发表于《中华读书报》2015年6月17日号）</em></p>
+<p>当你看见十多个年轻小伙子围坐在一张长条型电脑桌上，各自神情专注地紧盯着自己面前的屏幕，一边快速地敲击着各自的键盘与鼠标，还不时互相呼喊，你会认为他们在干什么？玩游戏？没错。但又不止于此。他们可能受雇于一个“工头”，每天在后者提供的电脑上玩网络游戏超过十小时，将游戏中获得的装备和宝物交给工头变卖并从后者那里领到一份工资。尽管不为任何现实中的职业认证或劳动保障机构认可，这些被称为“游戏矿工”的职业游戏玩家确实是在劳动并撑起一个<a href="http://www.seed.manchester.ac.uk/subjects/idpm/research/publications/wp/di/di-wp32/" target="_blank" rel="external">每年交易额超过十亿美金、年增长超过20%</a>的市场。他们是信息时代塑造的新工人阶级成员。</p>
+<p>赵月枝教授在《<a href="http://book.douban.com/subject/6523444/" target="_blank" rel="external">传播与社会</a>》书中提到一个有趣的事实：中国在2001年制定的国家信息化指标是全球第一个官方确定的全国性信息化指标。政府对信息化建设的重视由此可见一斑。然而，精英驱动、市场驱动的信息化建设在制造“高大上”的城市白领信息时代生活方式之余，却常常有意无意地忽视工人、农民等“信息中下阶层”。难怪赵月枝教授要问出“手机之后，是什么？”——被迫卷入这场数字革命的广大劳动人民在这场革命中有何收获，这是一个颇可玩味的问题。</p>
+<p><img src="http://img6.douban.com/lpic/s27041993.jpg"></p>
+<p>邱林川所著的《<a href="http://book.douban.com/subject/25723889/" target="_blank" rel="external">信息时代的世界工厂</a>》是对这个问题一次有益的探索。首先，他带领读者回顾了两种主要的信息技术——手机与互联网——在中国普及的过程。从“信息中下阶层”的视角，他敏锐地捕捉到了这样一个“迅速扩散与变异”的模式：中下阶层在商业机构跑马圈地的扩张过程中被卷入信息化大潮，而后又因从他们身上无利可图而被市场边缘化，最终使得中下阶层尽管“被信息化”，却无力于表达和决定自己的信息化需求。用这样一个草根视角回顾网吧、寻呼机、小灵通、短信等信息技术的兴衰历程，能使读者在这些耳熟能详的故事中读出一层别样的意味。</p>
+<p>在作者的探索过程中，流动者、尤其是中下阶层的在外务工人员是一个特别吸引他关注的人群。作者准确地指出，在传统的“知识工作者”（或称“可自我编程的劳工”）与“体力劳动者”（或者“一般劳工”）之间，还存在着一个为数众多且高速增长“灰领”阶层（或称“可被编程的劳工”）。一如汪晖在一篇文章中所写，这些受过高等教育、工作于高档写字楼、外表光鲜亮丽的“<a href="http://www.bwchinese.com/article/1069883.html" target="_blank" rel="external">新穷人</a>”，实质上干的却是枯燥程度与蓝领工人相当的工作——薪酬也堪相比较。当信息的加工处理成为一类价值增长点，工业时代的泰勒主义便自然地延伸到信息时代，将文员、质检等职业塑造成日益枯燥重复的“灰领”，并创造出短信写手、网游代练等新的“灰领”职业。尽管劳动的场所和形式与传统意义上的“劳工”相去甚远，这些被信息技术催生的新工人与前者面临同样的信息挑战：信息技术使他们被原子化、边缘化，他们在新技术塑造的工作环境中不仅承受资本的剥削，而且还在精英导向的话语体系中失语，然后又在无力于表达的状态中被主流媒体污名化。从时下流行的“屌丝”、“蚁族”等戏谑又不乏苦涩的自称中，人们不难看到这个群体的挣扎与无奈。</p>
+<p>资本透过信息技术对中下阶层的剥削还不仅限于工作空间。通过消费主义和娱乐至上的意识形态构建，信息技术与服务的提供者们着眼于如何将中下阶层工作之余本已为数不多的闲余时间与金钱压榨干净，而非如何为他们提供更为有益的信息工具。正如安杰维克在《<a href="http://news.artintern.net/html.php?id=45676" target="_blank" rel="external">异化的自由劳动</a>》（收录于《<a href="http://book.douban.com/subject/10841498/" target="_blank" rel="external">数字劳工</a>》）一文中所说，曾经开放、自由的互联网已经被高度私有化，对于已经没有太多购买力的中下阶层，资本则将他们异化为免费劳力。当提供免费上网时段的飞宇网吧被清一色的网络游戏专用机取代，当数亿<a href="http://sh.eastday.com/m/20131101/u1a7747461.html" target="_blank" rel="external">微信用户平均每天花1.7小时刷朋友圈</a>，我们可以清晰地看到无远弗届的信息技术是如何协助资本来榨干中下阶层的最后一点剩余价值。</p>
+<p>然而正如马克思所说，资本主义是它自己的掘墓人。信息技术被用于塑造、束缚和剥削一个新工人阶级的同时，也为这个新工人阶级的成长、联合和斗争提供了工具。不无遗憾地，邱林川在他的书中并未深入探索中下阶层信息化的现状可以如何发展，从而使这个阶层本身（而非控制信息技术的资本家和精英群体）受益和赋权。这个“怎么办”的问题并不容易，因为回答它不仅需要兼具人文社科与信息技术的跨界知识与技能，而且需要具备这样技能的一个专业人士站在无产者（而非资本家）的立场上思考。不过，即令留下了“怎么办”的问题，这本《信息时代的世界工厂》毕竟用无产者的视角清晰勾勒了我国信息空间的发展图景，为后来者的继续探索预备了一个坚实的基础。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><em>(本文发表于《中华读书报》2015年6月17日号）</em></p>
+<p>当你看见十多个年轻小伙子围坐在一张长条型电脑桌上，各自神情专注地紧盯着自己面前的屏幕，一边快速地敲击着各自的键盘与鼠标，还不时互相呼喊，你会认为他们在干什么？玩游戏？没错。但又不止于此。他们]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[同情心的贩卖]]></title>
+    <link href="http://gigix.thoughtworkers.org/2015/6/19/selling-sympathy/"/>
+    <id>http://gigix.thoughtworkers.org/2015/6/19/selling-sympathy/</id>
+    <published>2015-06-19T11:31:00.000Z</published>
+    <updated>2015-11-11T07:46:00.000Z</updated>
+    <content type="html"><![CDATA[<p><em>（本文同时发表于<a href="http://groundbreaking.cn/shehui/guonei/1746.html" target="_blank" rel="external">破土网</a>）</em></p>
+<p>毫无征兆地，微信朋友圈里突然流行开一条消息，内容是：“建议国家改变贩卖儿童的法律条款拐卖儿童判死刑！买孩子的判无期！”第二天，<a href="http://www.guancha.cn/FaZhi/2015_06_18_323776.shtml" target="_blank" rel="external">观察网一篇文章</a>便引用微信公众号“移动互联网”的观点，指这条朋友圈其实是某婚恋网站进行的互联网营销，并估算一天的营销 可以为该婚恋网站获得2.5万名注册用户，同时给此条朋友圈消息的作者带来12.5万元收入。</p>
+<p><img src="/assets/2015/6/19/money.jpg"></p>
+<p>正如笔者在《<a href="http://gigix.thoughtworkers.org/2015/5/16/review-of-digital-labour/">数字时代的劳动与剥削</a>》一文中所说，以微信为代表的“社交软件”其设计目的就是为了吸引用户上瘾，从而使企业能够打包销售用户的时间和注意力。这次朋友圈营销事件正好给了我们一个契机，来近看大众的同情心是如何被资本利用并打包贩卖的。</p>
+<p>齐泽克在《<a href="http://book.douban.com/subject/10544787/" target="_blank" rel="external">暴力</a>》中指出，中产阶级知识分子由于其丰富的信息渠道以及优渥的生活条件，经常会产生对贫穷者、被损害者的同情及对社会不公的道德愤怒。然而资本主义进化出了一种能力，不仅使其自身免疫于这种道德愤怒的攻击，甚而能从同情与愤怒本身营利。</p>
+<blockquote>“在这个国家每六秒就有一个女人被强奸”及“在你阅读这段文字的过程中，十个儿童将死于饥饿”，这只是其中两个例子。隐藏在这一切之下的，是一种道德愤怒的伪批判情结。几年前星巴克（Starbucks）正是利用了这种伪紧迫感：当时星巴克在每家店门口贴了一张宣传海报指出该公司拨出部分连锁店利润援助危地马拉——它们的咖啡豆来源地——的儿童健康计划。意思是说你每喝一杯它的咖啡，就救活一名儿童的性命。</blockquote>
+
+<p>这种“伪紧迫感”之所以有效，恰好反映出中产阶级知识分子——正是该婚恋网站的目标顾客群——对社会问题的关注是抽离的、抽象的。对于众多都市白领而言，底层人群的悲惨境遇只是一个抽象概念，无论是被拐卖的儿童，还是自杀的留守儿童，对于他们而言只是无差别地唤起一种模糊的同情与愤怒，以及随之而来的、迫切想要将这种模糊的同情与愤怒宣泄出去的伪紧迫感。居住在钢筋水泥森林、工作在玻璃办公室里，都市白领们似乎已经没有什么具体的事需要去同情和愤怒，只需定期宣泄内心积累的“愤怒定额”，然后就可以继续安稳于自己每天的工作与生活了。</p>
+<p>紧接着，资本家们帮中产阶级找到了宣泄这种抽离、抽象的同情与愤怒的途径：消费。中产阶级本来会对消费至上的社会形态、对社会的不公感到有负罪感，资本家却趁机贩卖“赎罪券”，宣称只要多付一元钱（或者五分钟时间，或者你的个人信息），消费者就不必再有任何负罪感，仿佛世间的不公就会自动消泯。当然我们知道，不公与苦难不会自动消泯，消费者多付的一元钱（或者时间，或者个人信息）只是增加了资本家的财富。通过贩卖苦难与不公、同情与愤怒，资本主义、消费主义的体系得以运转得愈发顺滑，资本家的财富得以加速积累，无怪乎齐泽克在电影《<a href="http://movie.douban.com/subject/11613507/" target="_blank" rel="external">变态者意识形态指南</a>》中辛辣地将星巴克的营销手段称为“消费主义的最高形态”。</p>
+<p>媒体也适时地加入这场消费同情心的盛宴。据说某知名社交网站的编辑部门每当有灾难事件发生时便一片欢呼，无疑是已将苦难与同情的打包贩卖做得驾轻就熟。在这条传播与营销的流水线上，中产阶级的同情心、负罪感与愤怒被纯熟地物化、被唤起、被打包销售、然后迅速平复以待下一轮的生产。至于真正承受苦难的那些人，他们只是耗尽其“新闻价值”然后被弃如敝屐，至于他们的境况是否因为中产阶级每天宣泄的“愤怒定额”而有所改善，又何曾是资本家关心的问题？</p>
+<p>既然认识到这种消费苦难与同情的资本主义逻辑本质的伪善，中产阶级知识分子可以做些什么来对抗？首先，我们需要反抗资本主义营销机器制造的伪紧迫感。我们需要承认：社会问题之所以根深蒂固，就说明它们通常没有一个简单的解决办法。我们需要摈弃自私的、以消解内心负罪感为目标的急切而浅薄的“行动”。我们需要保持内心的愤怒，将其转化为持续学习的动力，通过学习去理解错综复杂的社会问题背后的逻辑。最后也是最重要的，我们需要走出都市白领的玻璃办公室，走进工农群众，走进那些贫困者、被剥削者、被损害者、无声者，与他们紧密团结在一起。惟其如此，知识分子才有可能真正改变社会的不公。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><em>（本文同时发表于<a href="http://groundbreaking.cn/shehui/guonei/1746.html" target="_blank" rel="external">破土网</a>）</em></p>
+<p>毫无征兆地，微信朋友圈里突然]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[金数据，让无声者发声]]></title>
+    <link href="http://gigix.thoughtworkers.org/2015/6/9/golden-data-for-activism/"/>
+    <id>http://gigix.thoughtworkers.org/2015/6/9/golden-data-for-activism/</id>
+    <published>2015-06-09T11:31:00.000Z</published>
+    <updated>2015-11-11T07:46:00.000Z</updated>
+    <content type="html"><![CDATA[<p>格雷厄姆·默多克在他的文章《<a href="http://book.douban.com/subject/1704310/" target="_blank" rel="external">疆域与十字路口</a>》中说到，除了获得信息与知识之外，公民还应该有权准确而公正地表达自己的意见。然而让社会底层的“无声者”发声，在很多时候是一件困难、成本高昂、甚至有风险的事。互联网技术改变了这一切。随着智能手机的普及，像<a href="https://jinshuju.net/" target="_blank" rel="external">金数据</a>这样的工具可以被用于帮助更多公民发出自己的声音。</p>
+<p><img src="/assets/2015/6/9/jinshuju.png"></p>
+<p>金数据是一个“在线表单设计、数据收集、统计和分享工具”。用这个工具，你可以快速创建调查表，然后通过微信或QQ将调查表分发给很多人。收到调查表的人可以在智能手机上方便地填表，从而表达出自己真实的声音。举个例子，如果某个NGO想了解工厂里的工人们对工作环境是否满意，他们可以选择去询问工厂代表（得到的信息未必真实），也可以在工厂门口请工人填写调查表（工作量大，且可能受到阻挠），或者他们也可以创建一个金数据表单。注册金数据用户，选择“创建新表单”，你就会看到很多现成的表单模板。“调查问卷”分类中的“员工满意度调查”与我们的例子最接近，我们就选择这个模板开始好了。</p>
+<p><img src="/assets/2015/6/9/select_template.png"></p>
+<p>选用“员工满意度调查”模板之后，我们就来到了表单设计的界面。首先是表单本身的描述部分，包括调查表的名字和一段简要的介绍。我们可以修改这些内容，以便受访者理解接受调查的意义。</p>
+<p><img src="/assets/2015/6/9/form_description.png"></p>
+<p>模板中已经提供了一些常用的问题。点击选中任何一个问题，我们都可以修改问题的描述和选项，也可以添加提示信息以便受访者更好地理解每一个问题。被选中的问题右下角会出现红色的“删除”按钮，不需要的问题可以直接删掉。</p>
+<p><img src="/assets/2015/6/9/edit_field.png"></p>
+<p>当然也可以添加新的问题。点击页面最底下的“添加新字段”按钮，你就可以从多种字段类型中选择一个最合适的类型来新增问题。如果你想让受访者从几个固定的答案中做选择，可以用“单项选择”或“多项选择”类型；如果想让受访者填写某些信息，可以用“单行文字”；“多行文字”则允许受访者做更大篇幅的意见和观点表达；“邮箱”、“电话”、“手机”等类型可以用来获得受访者的联系方式；“地理位置”可以用来获知受访者所处的地点；等等。</p>
+<p><img src="/assets/2015/6/9/field_types.png"></p>
+<p>把所有的问题都设计好之后，点击页面底部的“保存表单”按钮把我们的设计保存起来，我们的调查表就可以分发出去了。点击页面顶部的“发布”链接，可以看到有两种方式来发布调查表。我们可以复制网址，把网址通过邮件或者QQ发给别人，让他们在电脑上填写调查。对于使用智能手机的受访者，我们可以把二维码打印或印刷出来让他们扫描，或者自己在微信中扫描二维码、打开调查表以后再转发给他们。</p>
+<p><img src="/assets/2015/6/9/publish_form.png"></p>
+<p>现在，工人们只要有微信，就可以打开调查表来接受调查了。</p>
+<p><img src="/assets/2015/6/9/fill_form_mobile.png"></p>
+<p>作为调查表的拥有者，你还可以进入“数据”和“报表”这两个链接，看到所有受访者提交的调查结果，以及对数据的分析报告。数据也可以导出到Excel，以便做更深入的分析。当然金数据还有很多高级的功能，你可以在使用的过程中继续去探索发现。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>格雷厄姆·默多克在他的文章《<a href="http://book.douban.com/subject/1704310/" target="_blank" rel="external">疆域与十字路口</a>》中说到，除了获得信息与知识之外，公民还应该有权准确而公正地表]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[开发软件有多贵]]></title>
+    <link href="http://gigix.thoughtworkers.org/2015/6/3/how-expensive-developing-software/"/>
+    <id>http://gigix.thoughtworkers.org/2015/6/3/how-expensive-developing-software/</id>
+    <published>2015-06-03T11:31:00.000Z</published>
+    <updated>2015-11-11T07:46:00.000Z</updated>
+    <content type="html"><![CDATA[<p>有个朋友的朋友想做一个公益的事。因为出资的都是教育水平较高的精英人士，所以对项目的监控透明度要求比较高。于是这个朋友的朋友就想了，信息时代嘛，IT工具不是可以促进交流提升效率么？于是他对我说：我们想做个app，可以干这个这个这个……</p>
+<p>我打断他说，别着急，做软件很贵的，你不一定玩得起。</p>
+<p><img src="/assets/2015/6/3/GoldCoins.jpg"></p>
+<p>做个软件究竟有多贵？我们可以做一个非常粗略的估算。市场上定制开发软件的人工成本按一人月20,000人民币来算，平均每人天1,000人民币。根据《<a href="http://book.douban.com/subject/2348918/" target="_blank" rel="external">软件估算</a>》提供的经验数据，随软件复杂度变化，在整个交付项目期间，平均每个程序员每天产出的代码量在2行到200行之间。如果以平均每天产出100行代码来算，则编写每行代码的成本是10元钱。</p>
+<p>把软件写出来只是第一步。软件要放在某个环境上去运行的。服务器端的软件要部署在可靠的服务器上，要有可靠的网络连接。客户端的软件（比如一个app）要安装在使用者的电脑或手机上。软件要维护要升级要管理要排错的。有了一个软件，有了一台服务器，就得有掌握这个技能的人来管理它的。根据Oracle引用<a href="http://www.oracle.com/technetwork/cn/community/developer-day/2-oracle-em-1708282-zhs.pdf" target="_blank" rel="external">Enterprise Management Associates的数据</a>，60%~70%的IT预算耗费在运营和维护上。于是我们可以大致估算到，加上运营和维护成本，一行代码的成本就会达到30元。</p>
+<p>那么一个app会有多少行代码呢？当然也随复杂度不同会有很大变化，只能举两个例子作为参考。<a href="https://github.com/rapidftr/RapidFTR" target="_blank" rel="external">RapidFTR</a>是一个用于“家庭跟踪和团聚”的Android应用。当战争、地震、海啸等灾害发生时，国际援助团队可以用这个应用来寻找失散的儿童。这个软件大约有34,000行代码。另一个Android应用是<a href="http://www.clintonhealthaccess.org/" target="_blank" rel="external">克林顿健康倡议</a>给非洲国家开发的<a href="https://github.com/chailmis/chailmis-android" target="_blank" rel="external">基层医疗物流管理软件</a>，乡村医生可以用这个工具来管理他们的药品库存。这个软件的代码超过46,000行。换句话说，这两个目标很单纯、功能并不复杂的Android应用，拥有它们的成本都在百万人民币以上。</p>
+<p>而且上面估算的还只是软件本身的开发、运营和维护成本。在IT的基础上调整组织机构、优化工作流程、创造高质量内容、市场传播推广……那需要的人财物力就更加难以估计了。更不用说，移动互联网本身是一个充满变化与创新的领域，犯错与试错是家常便饭。所以你看，想开发一个新软件，这是多么贵的事。</p>
+<p>软件这么贵，是不是没钱的组织、尤其公益组织就注定享受不到科技带来的强大能力了？不是。其实有大量的软件工具已经存在，它们非常成熟，它们经过了无数用户的检验、能很好地完成它们想要完成的任务，而且它们非常便宜甚至免费。要做个网站吗？<a href="http://blog.ghost.org/" target="_blank" rel="external">Ghost</a>或者<a href="https://wordpress.org/" target="_blank" rel="external">WordPress</a>都可以。要点对点的传播？微信和QQ是蛮不错的工具。想收集很多人的观点和意见？<a href="https://jinshuju.net/" target="_blank" rel="external">金数据</a>就是干这个的。发邮件期刊？可以考虑<a href="http://mailchimp.com/" target="_blank" rel="external">MailChimp</a>。需要客户关系管理（CRM）？其实一个设计合理的Excel表单就可以做得很好。</p>
+<p>所以，一个机构想要用IT技术提升能力，首先需要的是互联网思维，是设计能力。首先理解自己的目标用户，理解用户的整个体验，理解体验之中的困难与挑战，然后选择适当的工具来应对这些困难与挑战。当你把问题细化到一个具体的设计挑战，往往就能找到现成的工具来解决它。至于开发一个新软件这种又贵又费神的事情，还是能不做就不做吧。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>有个朋友的朋友想做一个公益的事。因为出资的都是教育水平较高的精英人士，所以对项目的监控透明度要求比较高。于是这个朋友的朋友就想了，信息时代嘛，IT工具不是可以促进交流提升效率么？于是他对我说：我们想做个app，可以干这个这个这个……</p>
+<p>我打断他说，别着急，做软件]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[数字时代的劳动与剥削]]></title>
+    <link href="http://gigix.thoughtworkers.org/2015/5/16/review-of-digital-labour/"/>
+    <id>http://gigix.thoughtworkers.org/2015/5/16/review-of-digital-labour/</id>
+    <published>2015-05-16T11:31:00.000Z</published>
+    <updated>2015-11-11T07:46:00.000Z</updated>
+    <content type="html"><![CDATA[<p><em>(本文发表于《中华读书报》2015年5月13日号）</em></p>
+<p>你为什么玩微信？</p>
+<p>这个问题乍看起来有点无聊。微信的网站上介绍它是“一款跨平台的通讯工具”。然而很明显地，一个可以“发送语音、图片、视频和文字”且免费的手机短信替代品可能是很多人开始使用微信的原因，却不是人们<a href="http://sh.eastday.com/m/20131101/u1a7747461.html" target="_blank" rel="external">每天在上面花1.7个小时</a>的原因。人们可能是因为必要的工作或亲友联系而开始使用微信，但每天在微信上做得最多的事却是在刷朋友圈。</p>
+<p><img src="/assets/2015/5/16/o-PHONE-ADDICT-facebook.jpg"></p>
+<p>想及这一层，事情就开始变得有意思了，因为你会很快发现，这个被归类为“社交软件”的工具并没有改善人们的社交：人们面对面坐在一起吃饭却不和彼此交谈，只顾各自埋头刷着朋友圈里毫无价值的谣言和鸡汤。于是我们会提出一个（或者两个）有趣的问题：如果微信（以及其他跟它类似的“社交软件”）既没有改善我们与身边人的社交，又没有改善我们与远方人的社交，那它存在的目的是什么？为什么它会让人们如此上瘾？</p>
+<p>答案很简单。微信存在的目的从来不是改善人们的社交，而是增加腾讯这家公司的财富。至于它为什么让人们上瘾，因为这样的软件本来就是被制造出来让人上瘾的。人们在其中沉浸越深，腾讯公司越能把用户打包销售，从中赚到越多的利润。</p>
+<p>剥离掉所有的花言巧语，一个简单的描述摆在我们面前：我们用了一定的时间做某事，而做这件事的目的是为某企业增加财富。你把这件事叫做什么？我叫它“劳动”。微信的用户们都是免费的劳动力，当他们每天花1.7个小时刷朋友圈，他们就是在给腾讯打工，腾讯的财富就是建立在剥削这些免费劳动力之上的。</p>
+<p>这个颇为惊人的论断，正是《<a href="http://book.douban.com/subject/10841498/" target="_blank" rel="external">数字劳工</a>》的作者们试图告诉我们的。马克思说，资本家的财富来自对劳动者的剥削。然而建立在技术变革之上的新经济呈现出另一种样貌：白领知识工作者拿着高薪，在舒适的工作环境中追求更高的个人成就，这一表象使得像腾讯这样的互联网企业似乎脱离了马克思的理论，似乎被科技庇佑的他们可以毋须剥削劳动者即获得大笔利润。在这样的时代背景下，《数字劳工》的作者们指出：以互联网为代表的信息与通信技术改变了劳动力市场的位置与形式，将劳动的场所从工厂转移到网络、到每个人的电脑与手机，并通过宣传和意识形态的灌输让人们心甘情愿地免费劳动。然而归根到底，资本对劳动者的剥削没有变——毋宁说是变得更残酷了：在数字化、网络化的大工厂中，资本家不仅不给劳动者提供社会保障，连工资都不付。</p>
+<p>有人会辩称，这些软件只是继承了互联网自由共享的传统，让人们与亲朋好友分享信息与乐趣，而且人们确实乐在其中。对此《数字劳工》的作者们指出，大多数由商业巨头运营的互联网服务根本不是提倡分享的“礼品经济”：人们并非赠送彼此有益的礼品，而是争先恐后地制造垃圾信息，只有资本家在从中获益；而以Wikipedia为代表的少数确实秉承着“礼品经济”精神的服务却被整个互联网生态边缘化了。正如齐泽克所说，大多数人被意识形态灌输后真心相信自己喜欢（或者离不开）这些软件。但如果退后一步看看微信朋友圈里传播的那些内容，你真的会说它们是给人带来快乐的礼品吗？</p>
+<p>在指出现状之可悲的同时，《数字劳工》也指出了一种颇具冲击力的未来可能性。在使资本家能剥削数亿免费劳动力的同时，信息与通信技术也使“全世界劳动者联合起来”成为可能。《<a href="http://book.douban.com/subject/4775187/" target="_blank" rel="external">为了胜利</a>》讲述的就是这样一个故事：来自印度、中国、新加坡、美国……世界各地的职业网络游戏玩家（也被称为“游戏矿工”）们在全球联接的、独一无二的劳动场所——游戏——中展开了罢工和占领，迫使资本家为他们提供更好的劳动条件和社会保障。虽然仍是一个虚构故事，但《为了胜利》和《数字劳工》不约而同地指向这样一种可能性：当资本家通过科技工具剥削劳动者，同样的工具也在增强劳动者的能力并帮助他们团结起来、使他们有可能在他们熟悉的数字世界里反抗资本家的剥削。正如马克思所说，资本家一手创造出了自己的掘墓人。</p>
+<p>和很多批评全球化资本主义的著作一样，《数字劳工》在尖锐地指出问题之后，并未给出一个明确而具体的替代方案。对于“怎么办”的缺失，使得前面的批评多少显得像阿雷格里港运动那样后继乏力。既然作者们没有提出明确的解决方案，在《为了胜利》的虚构情景尚未成为现实之前，已经被当作免费劳工剥削的万千用户们又能做点什么呢？</p>
+<p>我私人给我朋友们的建议就是：如非必要，远离微信。如果作为设计师的你不肯免费给人做Logo，如果作为写作者的你不肯免费给人写文案，如果作为程序员的你不肯免费给人开发软件，那么你就不应该继续把自己的时间用来刷朋友圈给腾讯创造价值。放下手机，去阅读，去运动，去欣赏艺术，去陪伴所爱的人，这些才是真正能令你快乐的事。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><em>(本文发表于《中华读书报》2015年5月13日号）</em></p>
+<p>你为什么玩微信？</p>
+<p>这个问题乍看起来有点无聊。微信的网站上介绍它是“一款跨平台的通讯工具”。然而很明显地，一个可以“发送语音、图片、视频和文字”且免费的手机短信替代品可能是很多人]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[如何得到并留住高级技术人才]]></title>
+    <link href="http://gigix.thoughtworkers.org/2015/5/7/acquire-and-retain-technical-talents/"/>
+    <id>http://gigix.thoughtworkers.org/2015/5/7/acquire-and-retain-technical-talents/</id>
+    <published>2015-05-07T11:31:00.000Z</published>
+    <updated>2015-11-11T07:46:00.000Z</updated>
+    <content type="html"><![CDATA[<p>在一篇<a href="http://www.mckinsey.com/insights/business_technology/winning_the_battle_for_technology_talent" target="_blank" rel="external">麦肯锡的文章</a>中作者提到一位CIO，他急需几个资深的架构师——甚至都不敢奢求“优秀的”架构师——来应对日新月异的技术创新。高级技术人才日益成为企业生存与发展必备的战略性资源。这些抢手的人才不仅不易获得，也不易留住。来自怡安翰威特的一篇<a href="http://tcmchina.aon.com/TCM/2014_Aon_Hewitt_Quarterly_Watch_Q4_Report.pdf" target="_blank" rel="external">研究报告</a>显示，2014年中国高科技员工离职率高达30.5%，其中四分之三是主动离职。<a href="http://www.ingentaconnect.com/content/iri/rtm/2001/00000044/00000003/art00006" target="_blank" rel="external">Kochanski和Ledford的研究</a>则指出，损失一名技术人才的成本可以高达6倍于损失一名管理人员。于是我们可以看到两个关于高级技术人才的重要挑战：如何获得这些人才，以及如何留住他们。</p>
+<p><img src="/assets/2015/5/6/Strategic-HR.jpg"></p>
+<h3 id="如何获得高级技术人才">如何获得高级技术人才</h3><p>获得高级技术人才的第一个渠道是对外招聘。除了传统的招聘渠道之外，<a href="https://books.google.co.uk/books?hl=en&amp;lr=&amp;id=Hfy2zoCLxUAC&amp;oi=fnd&amp;pg=PA131&amp;dq=Research+on+Internet+recruiting+and+testing:+Current+status+and+future+directions&amp;ots=aBCwdOJWnr&amp;sig=avzStoLv18pZD5KZS8pUEKda5dQ#v=onepage&amp;q&amp;f=false" target="_blank" rel="external">Lievens和Harris的文章</a>介绍了通过互联网招聘的一些渠道。尤为值得一提的是社交网络在招聘中扮演越来越重要的角色。一篇发表在IEEE《软件》杂志的<a href="http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=6336698" target="_blank" rel="external">文章</a>指出，GitHub、LinkedIn等新生的在线社交网络使招聘者能更容易地寻找、接触和评估高级技术人才。企业需要用有效的宣传信息去吸引这些人才。<a href="http://mbastory.tistory.com/attachment/ck58.pdf" target="_blank" rel="external">麦肯锡的一篇文章</a>讲到，针对现代人才的宣传信息需要同时传达出实在的、可度量的价值和抽象的、不易度量的价值，并通过有效的渠道来传达。另外，招聘的流程也很重要。<a href="http://www.cipd.co.uk/hr-resources/survey-reports/resourcing-talent-planning-2012.aspx" target="_blank" rel="external">CIPD的调查</a>显示，冗长的面试流程会使更多应聘者放弃职位。如何优化招聘流程使之兼顾质量与效率，这是招聘团队需要解决的一个重要问题。</p>
+<p>另一个获得高级技术人才的渠道是从企业内部培养。<a href="http://www.researchgate.net/publication/232517646_The_spiritual_dimension_of_the_learning_organisation" target="_blank" rel="external">Hawkins的文章</a>指出，学习型组织会促使员工持续学习和自我转变，并将自发的学习行动与组织的战略相结合。基于活跃的学习氛围，下一个任务是准确、高效、公平地识别出潜在的领导者。《<a href="http://book.douban.com/subject/2802242/" target="_blank" rel="external">培养领导者</a>》提出了一套识别潜在领导者的机制，综合考虑背景、经验、绩效、技能、适应力、多样性等多方面因素。培养人才的方式有很多种，例如培训、指导、短期体验、任务分配等都可以是培养人才的方式。高级管理者必须直接对潜力员工的培养负责，不是期望一个放诸四海而皆准的“领导力培养计划”，而是要针对每个员工的特点定制适合她的领导力培养计划。</p>
+<p>这个领域有很多新事物新现象，需要按照精益创业的方法，不断尝试、不断度量、不断学习。发表在HBR的<a href="https://hbr.org/2010/10/competing-on-talent-analytics/ar/1" target="_blank" rel="external">一篇文章</a>给出了六个对人力资源部门有用的数据分析：人力资本事实，人力资本投资分析，人才价值模型，人力资源管理分析，人员预测，人才供应链。</p>
+<h3 id="如何留住高级技术人才">如何留住高级技术人才</h3><p>留住高级技术人才的第一要素是薪酬奖励体系。激励机制的设置需要平衡各种因素，并与组织战略相一致。举例来说，完全不与绩效挂钩的薪酬体系可能使员工失去斗志；然而<a href="http://connection.ebscohost.com/c/articles/91712844/are-pay-for-performance-systems-missing-mark" target="_blank" rel="external">Bukovinsky的文章</a>指出，与绩效强挂钩的激励机制可能导致员工过度重视个人绩效目标而损害企业整体目标。再比如，年轻而技术出众的“明星”需要得到重视，同时又不能使其他员工感到受轻视。</p>
+<p>除了薪酬之外，留住高级技术人才的另一个重要因素是个人发展，尤其是技能的发展。<a href="http://www.sciencedirect.com/science/article/pii/S1072751507000683" target="_blank" rel="external">Aggarwal等人的文章</a>提出了一个系统化的技术性技能培训和评估框架，其中把技术能力建设分为五个步骤：知识学习；实作任务分解；实验环境训练；真实环境训练；独立操作。很多人和组织在能力建设时仅仅聚焦“知识学习”这一个步骤，以致知识没有有效地转化为技能和——个人的或组织的——竞争力。因此高级管理者在为潜在领导者设置领导力培养计划时，需要以多种能力培养方式覆盖能力建设的各个步骤。</p>
+<p>超出激励与个人发展的范畴，<a href="http://amj.aom.org/content/33/4/692.short" target="_blank" rel="external">Kahn的文章</a>指出，当员工与组织建立情感上的连接、自我认知为组织的主人翁，他们会表现出更高的绩效、并且更不容易离职。建立这种情感连接和归属感的方式可以有多种，例如一个组织对专业技术有特别的重视和行业领导力，或一个组织有特别的社会责任感，都可以使之区别于其他组织，并有助于员工建立情感连接和归属感。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>在一篇<a href="http://www.mckinsey.com/insights/business_technology/winning_the_battle_for_technology_talent" target="_blank" rel="external"]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[新自由主义的意识形态解读]]></title>
+    <link href="http://gigix.thoughtworkers.org/2015/3/14/neoliberalism-ideology/"/>
+    <id>http://gigix.thoughtworkers.org/2015/3/14/neoliberalism-ideology/</id>
+    <published>2015-03-14T11:31:00.000Z</published>
+    <updated>2015-11-11T07:46:00.000Z</updated>
+    <content type="html"><![CDATA[<p>有<a href="http://www.douban.com/note/488352443/" target="_blank" rel="external">一篇文章</a>提出这样一个问题：究竟是工人养活了老板，还是老板养活了工人。从这个讨论中我们可以窥到超出这个讨论本身的事情：因为资本家在社会的各个领域占据优势，他们不仅剥削劳动人民，而且还通过文化、教育等种种手段让劳动人民认为自己应该被剥削、甚至应该对剥削感恩戴德。这种影响和控制人们思想的东西，就叫做“意识形态”。</p>
+<p>关于什么是意识形态，齐泽克在<a href="http://movie.douban.com/subject/11613507/" target="_blank" rel="external">他的电影</a>里有一个很好的阐释。在电影《极度空间》中，男主角捡到了一堆神奇的太阳镜。这些太阳镜，用齐泽克的话说，有着类似“意识形态批评”的功能，使你能看到“所有政治宣传、广告和海报底下的真正信息”。例如写着“我们创造透明的计算环境”的大幅广告，底下真正的信息就两个字：“服从”。</p>
+<p><img src="/assets/2015/3/14/glasses_after.png"></p>
+<p><img src="/assets/2015/3/14/glasses_before.png"></p>
+<p>正如齐泽克所说，意识形态不是简单地强加在我们身上的，意识形态是我们自发地与社会所建立的关系。某种程度上我们在享受我们的意识形态。走出意识形态是痛苦的，你需要强迫你自己去做这件事。</p>
+<p><img src="/assets/2015/3/14/ideology.png"></p>
+<p>《<a href="http://book.douban.com/subject/6435564/" target="_blank" rel="external">资本主义的真相</a>》也是这样的一副具备意识形态批评功能的太阳镜。通过长期的、或隐或显的教育和灌输，新自由主义——即“政府不应干预经济”的主张——让人们习惯于一些断言而不对其多做思考。例如作为整个新自由主义基础的“自由市场”，本身就是一个意识形态塑造的产物——传说中不被政府干预的自由市场从来就没有存在过，包括在全世界推行自由市场的国家，他们的市场同样是被政治力量塑造并服务于其统治阶级的。其他的若干相关的断言，例如自由市场会使穷国变富，例如自由市场给每个人公平的竞争机会，在韩裔经济学家张夏准看来，无不是新自由主义意识形态的一部分。</p>
+<p>在这本书中，张夏准用大量的论据讲述了23个关于自由市场的秘密。在我看来，这本书的价值不仅在于揭穿新自由主义经济学一些最重要的洗脑材料，更重要的是使我们看到“洗脑”这一事实的存在。当我们能够对那些听起来无比美好的词——例如“自由”、“开放”——提出疑问，开始怀疑它们是否真的像某些人宣称的乃至我们自己曾经相信的那样代表普世价值观，我们便迈出了打破意识形态桎梏与蒙蔽的第一步。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>有<a href="http://www.douban.com/note/488352443/" target="_blank" rel="external">一篇文章</a>提出这样一个问题：究竟是工人养活了老板，还是老板养活了工人。从这个讨论中我们可以窥到超出这个讨论本]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[打造创新型组织：对“创新漏斗”模型的补充完善]]></title>
+    <link href="http://gigix.thoughtworkers.org/2015/1/31/update-on-innovative-organisation/"/>
+    <id>http://gigix.thoughtworkers.org/2015/1/31/update-on-innovative-organisation/</id>
+    <published>2015-01-31T10:31:00.000Z</published>
+    <updated>2015-11-11T07:46:00.000Z</updated>
+    <content type="html"><![CDATA[<p>2013年，我发表了《<a href="http://www.infoq.com/cn/articles/learn-thinking-shape-innovative-organization" target="_blank" rel="external">用精益思想塑造创新型组织</a>》一文（及<a href="http://www.infoq.com/articles/building-innovative-organisations" target="_blank" rel="external">英文版</a>），在ThoughtWorks成都分公司的经验基础上总结了“创新漏斗”模型。本文的目的是在前文基础上对该模型进行补充完善，以期有助于企业领导者打造创新型组织。</p>
+<p><img src="http://cdn3.infoqstatic.com/resource/articles/learn-thinking-shape-innovative-organization/zh/resources/000.jpg"></p>
+<p>在《用》文中我强调将日常工作中的细小痛点作为创新的起点。这种方法的好处是能激发员工的创新动力、获得大量的创新来源。然而仅仅聚焦于日常工作的痛点而忽视其他创新来源，培育出的创新项目就会倾向于规模小、适用范围窄的渐进式改进，而不易培育出规模大、影响深远的颠覆性创新。作为补充，创新型组织应该打开视野，着眼多种创新来源，例如<a href="http://book.douban.com/subject/2781901/" target="_blank" rel="external">开放式创新</a>、<a href="https://hbr.org/1995/01/disruptive-technologies-catching-the-wave" target="_blank" rel="external">颠覆性的新技术</a>、以及<a href="http://en.wikipedia.org/wiki/Lead_user" target="_blank" rel="external">领先用户</a>等，从而获得更丰富的、外向型的创新项目。</p>
+<p>创新漏斗模型并非首创。Cooper早在1990年就已提出与创新漏斗模型相似的<a href="http://www.sciencedirect.com/science/article/pii/000768139090040I" target="_blank" rel="external">“Stage-Gate”模型</a>。<a href="http://www.sciencedirect.com/science/article/pii/S0923474813000325" target="_blank" rel="external">Högman和Johannesson的研究</a>指出类似的分阶段的创新管理模型中一个重要的投资原则：对于浮现早期的创新项目，投资额度要小，同时“晋级”的门槛也低；越向上晋级，创新项目的成熟度越高，继续晋级的门槛越高，越需要考虑真实的商业需求，相应的投资额度也越大。</p>
+<p><a href="http://onlinelibrary.wiley.com/doi/10.1002/smj.2107/full" target="_blank" rel="external">Klingebiel和Rammer的研究</a>指出一个非常值得注意的现象：在三个考察的因素中，企业从创新中获得的收益只与“投资的广度”有关，与“选择创新的眼光”和“创新意愿”几乎无关。换言之，企业领导者自身可以不必有独到的眼光和热烈的激情，同样可以打造一个高效的创新型组织。领导者最需要的是有效的投资策略。例如前面提到的分阶段的、逐渐加码的投资策略，就可以允许企业用有限的资源达到更广的投资范围。</p>
+<p>另一个在《用》文中没有详述的话题是创新的扩展：如何将适用于一时一地的创新点子扩展成为具有广泛适用性及可持续性的通用解决方案。<a href="http://www.cap-tb.org/resources/scaling-innovation%E2%80%99s-missing-middle" target="_blank" rel="external">McClure和Gray</a>对此已有很好的论述，我也有计划<a href="http://gigix.thoughtworkers.org/2015/1/15/innovations-missing-middle/">另文</a>讨论这个话题，在此不作赘述。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>2013年，我发表了《<a href="http://www.infoq.com/cn/articles/learn-thinking-shape-innovative-organization" target="_blank" rel="external">用精益思想塑造]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[扩展创新：缺失的中间环节]]></title>
+    <link href="http://gigix.thoughtworkers.org/2015/1/15/innovations-missing-middle/"/>
+    <id>http://gigix.thoughtworkers.org/2015/1/15/innovations-missing-middle/</id>
+    <published>2015-01-15T10:31:00.000Z</published>
+    <updated>2015-11-11T07:46:00.000Z</updated>
+    <content type="html"><![CDATA[<p>在社会领域，创新是一个热门话题。众多的NGO和社会企业乐于谈论如何用创新的技术、产品和模式解决社会问题。然而层出不穷的创新也带来了新的挑战。以乌干达为例，这个东非国家有三千七百万人口，却一度有数百个由各种NGO主导的医疗IT创新试点项目在全国各地开展。大量的创新试点给基层的社区医疗工作者造成了一定的困扰，更给政府的监管与协调造成困难。“如果创新一直停留在一个村庄、一个社区的规模，不能延伸到更广的范围，不能应用于更大的人群，这样的创新对全面改善我们国家的医疗卫生条件就毫无意义。”一位乌干达卫生部的官员这样说道。</p>
+<p><img src="/assets/2015/1/15/thousand-flowers.png"></p>
+<p>为什么在试点项目中取得良好效果的创新却每每难于扩展到更大规模？因为创新的扩展并非“把试点做大”或者“把试点复制到其他地方”这么简单。在试点阶段，为了快速学习、快速验证，创新者通常对环境、问题和解决方案做了简化。比如说，试点项目往往在一个相对单纯的环境中进行，隔离了很多现实的复杂问题；试点阶段的解决方案更多是一个最小可接受产品（MVP），而非充分考虑各种复杂性的成熟产品；在试点阶段，创新者往往投入高水平的团队进行实施，而这个水平的人力资源在扩展到大规模时是非常奢侈的；对于试点阶段遇到的各种艰难险阻，初始团队往往靠自己的热情加以克服，然而要求所有实施团队都有同样的热情则很困难。如果不能完善这些简化，小规模试点中取得成功的创新就会在扩展到大规模时遭遇困境。</p>
+<p>当我们谈论创新的扩展时，这里有四种可能的扩展方式：</p>
+<ol>
+<li><strong>更长的时间</strong>。当试点阶段的高水平团队撤离之后，创新方案是否能由本地的、相对能力较低的团队可持续地运营下去？</li>
+<li><strong>更完善的方案</strong>。随着对环境、对人群的了解加深，创新者能否设计出更完善、更复杂的方案？方案的变更能否有效落地？</li>
+<li><strong>更多的用户</strong>。当覆盖的人群变大，创新方案是否能支撑更大的体量？如何能尽早获知潜在的承载能力风险？</li>
+<li><strong>不同的环境</strong>。适用于一个地区、一个国家、一种语言……的创新方案能否应用于其他环境？</li>
+</ol>
+<p>可以看到，前两种扩展方式使一个创新方案由“试点方案”发展成为一个可持续的方案，后两种扩展方式则把一个可持续的方案延展到更大覆盖范围。这两个阶段又被称为“向上扩展”（scale up）和“向外扩展”（scale out）。它们弥补了由“创新”和“试点”到“可复制的方案”之间缺失的中间地带。</p>
+<p><img src="/assets/2015/1/15/innovation-lifecycle.png"></p>
+<p>在接下来的文章里（如果我能战胜拖延症写出接下来的文章的话），我将介绍在医疗IT领域，技术如何支持创新以上述四种方式扩展。</p>
+<p><em>（本文得益于我的同事Dan McClure和Ian Gray的文章<a href="http://www.cap-tb.org/resources/scaling-innovation%E2%80%99s-missing-middle" target="_blank" rel="external">Scaling: Innovation’s Missing Middle</a>。）</em></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>在社会领域，创新是一个热门话题。众多的NGO和社会企业乐于谈论如何用创新的技术、产品和模式解决社会问题。然而层出不穷的创新也带来了新的挑战。以乌干达为例，这个东非国家有三千七百万人口，却一度有数百个由各种NGO主导的医疗IT创新试点项目在全国各地开展。大量的创新试点给基层的]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[行走布拉格]]></title>
+    <link href="http://gigix.thoughtworkers.org/2015/1/10/prague/"/>
+    <id>http://gigix.thoughtworkers.org/2015/1/10/prague/</id>
+    <published>2015-01-10T12:00:00.000Z</published>
+    <updated>2015-11-11T07:46:00.000Z</updated>
+    <content type="html"><![CDATA[<p>从维也纳开车到布拉格，途经布尔诺，需要三个半小时。想到这一点，我就觉得当年苏军六小时占领捷克全境的行动还挺酷的。</p>
+<p>“是非观呢！？”充满正义感的全都是风同学<a href="http://www.douban.com/people/gigix/status/1566696508/" target="_blank" rel="external">问道</a>。</p>
+<p>我不知道。布拉格是如此丰富又充满矛盾的一座城市，它给我的问题，远多于它告诉我的答案。</p>
+<p><img src="/assets/2015/1/10/prague_night.jpg"></p>
+<p>当法国人说“<a href="http://zh.wikipedia.org/wiki/%E6%B3%A2%E5%B8%8C%E7%B1%B3%E4%BA%9E%E4%B8%BB%E7%BE%A9" target="_blank" rel="external">波希米亚人</a>”，他们指的其实是<a href="http://zh.wikipedia.org/wiki/%E7%BD%97%E5%A7%86%E4%BA%BA" target="_blank" rel="external">罗姆人</a>。而真正的波希米亚人为了捍卫自己的宗教信仰两次把帝国的代表<a href="http://zh.wikipedia.org/wiki/%E5%B8%83%E6%8B%89%E6%A0%BC%E6%89%94%E5%87%BA%E7%AA%97%E5%A4%96%E4%BA%8B%E4%BB%B6" target="_blank" rel="external">扔出窗外</a>，捷克人民的性格大概要从这里去追溯。</p>
+<p>当苏军的坦克隆隆驶进布拉格，<a href="http://www.douban.com/note/229096977/" target="_blank" rel="external">玛尔塔·库碧索娃</a>以为是美军来解放捷克人了，<a href="http://zh.wikipedia.org/wiki/%E6%83%85%E9%99%B7%E5%B8%83%E6%8B%89%E6%A0%BC" target="_blank" rel="external">托马什医生</a>刚和新婚妻子特瑞莎发生了争吵。随后艰难的日子里，库碧索娃和<a href="http://zh.wikipedia.org/wiki/%E7%93%A6%E8%8C%A8%E6%8B%89%E5%A4%AB%C2%B7%E5%93%88%E7%BB%B4%E5%B0%94" target="_blank" rel="external">哈维尔</a>留在布拉格继续抗争，<a href="http://movie.douban.com/celebrity/1012743/" target="_blank" rel="external">扬·内梅克</a>和萨宾娜远走异国，<a href="http://zh.wikipedia.org/wiki/%E7%B1%B3%E5%85%B0%C2%B7%E6%98%86%E5%BE%B7%E6%8B%89" target="_blank" rel="external">米兰·昆德拉</a>先抗争而后远走，托马什医生和特瑞莎先远走而后回到了布拉格。</p>
+<p><img src="/assets/2015/1/10/havel.jpg"></p>
+<p>所有人都知道那恐怖的怪兽是什么。然而有趣的问题是，反对那恐怖的怪兽，是否就意味着正义？打败了那恐怖的怪兽，是否美好的世界就接踵而至？萨宾娜对此并不乐观。她喜爱的时代，“音乐就像玫瑰盛开在雪原般的无边无际的寂静之上”。而如今这个时代，丑陋的噪音被称为音乐泛滥于每个角落，“人类由此而进入了完全丑陋的历史阶段”。萨宾娜颇有洞见地指出：“在共产主义和法西斯主义的后面，在所有占领和入侵的后面，潜在着更本质更普遍的邪恶，这邪恶的形象就是人们举着拳头，众口一声地喊着同样的口号齐步游行。”</p>
+<p>然而她没有说出口。她“知道自己永远也没法使别人明白这些，便尴尴尬尬地改变了话题”。正如齐泽克所说，“当我们的注意力转向资本主义全球化的后果时……数以百万计人命丧失的罪责就被否认了。所有这些罪行看似一个‘客观’过程的结果，没有人刻意策划和执行，自然也没有一个‘资本主义宣言’”。在《<a href="http://book.douban.com/subject/10544787/" target="_blank" rel="external">暴力</a>》里他引用亚瑟·凯斯特勒：“假如权力使人腐化，那么其反面也应该成立：迫害使受害者腐化，虽然或许是以一种更微妙和更悲剧的方式。”当瓦茨拉夫广场的人们欢呼，当<a href="http://zh.wikipedia.org/wiki/%E5%88%97%E4%BE%AC%E5%A2%99" target="_blank" rel="external">列侬墙</a>的人们欢呼，他们如此欣喜于爱与和平的回归，是否有人仍然——像萨宾娜一样——留意<a href="http://gigix.thoughtworkers.org/2013/1/9/brave-new-world/">美丽新世界</a>的潜入？</p>
+<p><img src="/assets/2015/1/10/lenon_wall.jpg"></p>
+<p>对手的不合法性，不能证明你的合法性。对手的丑陋，不能成就你的美好。</p>
+<p>然而归根结底，这是一座如此美丽如此丰富的城市，还有美味的<a href="http://en.wikipedia.org/wiki/Trdeln%C3%ADk" target="_blank" rel="external">甜面包圈</a>和<a href="http://cs.wikipedia.org/wiki/Sva%C5%99en%C3%A9_v%C3%ADno" target="_blank" rel="external">热红酒</a>。无论如何，布拉格仍然是美好的。大概未来还会再去的吧，我这样觉得。</p>
+<p><img src="/assets/2015/1/10/vltava.jpg"></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>从维也纳开车到布拉格，途经布尔诺，需要三个半小时。想到这一点，我就觉得当年苏军六小时占领捷克全境的行动还挺酷的。</p>
+<p>“是非观呢！？”充满正义感的全都是风同学<a href="http://www.douban.com/people/gigix/status/15]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[2014年读过的好书们]]></title>
+    <link href="http://gigix.thoughtworkers.org/2015/1/7/good-books-in-2014/"/>
+    <id>http://gigix.thoughtworkers.org/2015/1/7/good-books-in-2014/</id>
+    <published>2015-01-06T19:00:00.000Z</published>
+    <updated>2015-11-11T07:46:00.000Z</updated>
+    <content type="html"><![CDATA[<p><a href="http://www.yuedudna.com/users/2298277/book/2014" target="_blank" rel="external">阅读DNA说</a>：“透明2014年共读过59本书，五星好书20本”。不算多。不过，在一边读MBA的情况下仍然读完了超过50本，也算差强人意吧。</p>
+<h2 id="关于这个世界的不公正">关于这个世界的不公正</h2><p>这一年来都在从事与社会公正有关的工作，读了更多关于社会的不公正、以及这些不公正之根源的书，有了更多的愤怒与深思。</p>
+<ul>
+<li><strong><a href="http://book.douban.com/subject/10946694/" target="_blank" rel="external">The Price of Inequality</a></strong> - 当我们谈社会公正，我们首先得理解什么是不公正，因为现代社会的不公正往往隐藏在一系列合法甚至貌似合理的安排之下。既有卓越的专业技能，又有慈悲的人文关怀，像斯蒂格利茨这样的学者才是社会的希望。</li>
+<li><strong><a href="http://book.douban.com/subject/4091815/" target="_blank" rel="external">后殖民理论</a></strong> - 精彩！尤其是最后一章关于香港和中国的内容，因为有切身感受就更觉得精彩。</li>
+<li><strong><a href="http://book.douban.com/subject/2332174/" target="_blank" rel="external">从解构到全球化批判 : 斯皮瓦克读本</a></strong> - 殖民主义对殖民地最大的损害，是使之失去了谈论自身所需的语言，其中底层人则是受到多重的损害而无法说话。印度人说“每个人都是少数派”，令这些位居底层的、被忽视的少数派可以发声，其难度与意义不亚于给予他们物质的帮助。</li>
+</ul>
+<h2 id="关于斗争">关于斗争</h2><p>令人振奋地，也看到了那些勇敢的、智慧的斗士们。他们奔走在前的身影增添了勇气与动力。</p>
+<ul>
+<li><strong><a href="http://book.douban.com/subject/25896883/" target="_blank" rel="external">无处可藏 : 斯诺登、美国国安局与全球监控</a></strong> - 清晰重现了棱镜门的前后，分析冷静深入。正义，深思，理智，勇敢，斯诺登把科技工作者应有的社会形象体现得淋漓尽致，堪为楷模。</li>
+<li><strong><a href="http://book.douban.com/subject/6392071/" target="_blank" rel="external">Mountains Beyond Mountains</a></strong> - 聪明绝顶的天才，加上长袖善舞的人际能力，他选择了用最艰难的、自我牺牲的方式去拯救那些贫穷者、被压迫者、被忽视者。你甚至都无法嫉妒他。他存在的意义就是让你时刻提醒自己，不管你做了多少，你都还做得不够。以及，无论如何，你会感激这个世界上有他这样一个人存在。</li>
+<li><strong><a href="http://book.douban.com/subject/4775187/" target="_blank" rel="external">For the Win</a></strong> - 简直激动得语无伦次了。全球化给了资本更大的流动性，让工人失去了跟资本家斗争的可能。但是全球化以及信息技术也让全世界无产者有可能团结起来。资本家可以从美国跑到中国再跑到越南柬埔寨，可是如果全世界工人同时罢工，又会怎么样？</li>
+</ul>
+<h2 id="真实的记叙">真实的记叙</h2><p>在《<a href="http://book.douban.com/subject/26135794/" target="_blank" rel="external">不敢止步</a>》的前言里我说：“想要用一些与市场部宣传文稿和微博吐槽皆不同的、真实而认真的文字来记录一个IT工作者的普通生活。”既然“使失言”是系统暴力的一种方式，那么真实的记叙本身就可以是一种反抗吧。</p>
+<ul>
+<li><p><strong><a href="http://book.douban.com/subject/5288681/" target="_blank" rel="external">被“废除不平等条约”遮蔽的北洋修约史（1912-1928）</a></strong> - 看来不平等条约与其说是国力问题，不如说是技术问题居多，更不如说是中国偶遇即将进入现代的西方的特定历史时期产物。看掌握了技术的北洋外交家们谈得如此卓有成效，再反观现代的种种国民观念，不由得想起有人说：我们身上是负着一个19世纪的“西方”的，并且常常宣称它是“中国”。</p>
+</li>
+<li><p><strong><a href="http://book.douban.com/subject/7060185/" target="_blank" rel="external">江城</a></strong> - 非常真实，并因其真实而有力量、而感人。涪陵的人们是幸运的，因为他们未加修饰的、毫不高大上的真实生活曾被书写被记录。</p>
+</li>
+<li><p><strong><a href="http://book.douban.com/subject/20507206/" target="_blank" rel="external">众病之王 : 癌症传</a></strong> - 一个完整的癌症传记，从历史到文化到社会到临床到生物科学一览无遗。令人感动而且想戒烟。</p>
+</li>
+</ul>
+<h2 id="以及虚构的故事">以及虚构的故事</h2><ul>
+<li><p><strong><a href="http://book.douban.com/subject/1829226/" target="_blank" rel="external">肖申克的救赎</a></strong> - 其实根本讲的不是希望，而是每个人都会沿着早已注定的路线成为他自己。还有，肖申克的救赎是前三个故事中最乏味的一个，大概是因为中产阶级银行家本来就很乏味吧。</p>
+</li>
+<li><p><strong><a href="http://book.douban.com/subject/6073466/" target="_blank" rel="external">死光</a></strong> - 这本讲的才是希望呢。不管我们内心深处的恐怖有多恐怖，我们会战胜它。多么令人振奋的1958年失败者俱乐部。</p>
+</li>
+<li><p><strong><a href="http://book.douban.com/subject/20381805/" target="_blank" rel="external">冰与火之歌·卷五·魔龙的狂舞</a></strong> - 冰与火最牛逼的地方就在于，不仅每个人物有鲜明的性格，而且性格的成长非常鲜活。另外，写到第五卷，主要人物领便当的节奏终于缓下来了……</p>
+</li>
+<li><p><strong><a href="http://book.douban.com/subject/24882304/" target="_blank" rel="external">地海传奇</a></strong> - 用了整整五本铺垫背景，终于在最后一本完成了所有的故事，这个故事讲得真宏大。前一两本觉得太过轻描淡写，看完才知道，前面要是用力过猛，这个解决就没法写了。不过作者说，不是讲故事，是故事和背景渐渐生长出来，必须要问的问题和问题的答案就自己浮现了——这个更高级。</p>
+</li>
+<li><p><strong><a href="http://book.douban.com/subject/25808977/" target="_blank" rel="external">全息玫瑰碎片 : 威廉·吉布森短篇杰作选</a></strong> - 赛博朋克的开山之作。高级。</p>
+</li>
+<li><p><strong><a href="http://book.douban.com/subject/25837539/" target="_blank" rel="external">美洲纳粹文学</a></strong> - 好几次想去搜索书里提到的作家们的书和杂志，说明故事讲得很不错。</p>
+</li>
+</ul>
+<h2 id="最后，总算有本一板正经的">最后，总算有本一板正经的</h2><ul>
+<li><strong><a href="http://book.douban.com/subject/10828931/" target="_blank" rel="external">Organization Theory and Design</a></strong> - 堪称字字珠玑，分析到位又实用，而且参考文献引用得也精彩。大开眼界。</li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><a href="http://www.yuedudna.com/users/2298277/book/2014" target="_blank" rel="external">阅读DNA说</a>：“透明2014年共读过59本书，五星好书20本”。不算多。不过，在一边读M]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[丰富多彩的2014年]]></title>
+    <link href="http://gigix.thoughtworkers.org/2014/12/13/end-2014/"/>
+    <id>http://gigix.thoughtworkers.org/2014/12/13/end-2014/</id>
+    <published>2014-12-12T22:00:00.000Z</published>
+    <updated>2015-11-11T07:46:00.000Z</updated>
+    <content type="html"><![CDATA[<p>又是一年过去了。以前每年会许愿，前年许了几个<a href="/2012/12/31/wishes-in-2013/">很朴实的愿望</a>，去年在忙乱的旅行之间完全忘了这茬。现在开完了今年最后一个大会，在即将进入假期的状态下回首这一年，才发现，哇，真是做了很多事啊。</p>
+<p><img src="/assets/2014/12/13/merry_xmas.jpg"></p>
+<p>今年出书了。不是什么正经的主题，一本<a href="http://book.douban.com/subject/26135794/" target="_blank" rel="external">拉杂闲谈的流水账</a>。才三十几岁就写回忆录这样合适吗？不光别人会问，我自己也为这个纠结了好久。不过想来想去，这些故事要是不写下来，一些平凡人做过的平凡事大概就会被历史彻底遗忘了。怀着不管怎样至少为历史留点记录的想法，终于还是把书出了出来。然后惊喜地发现，居然还真有人喜欢这些故事呢。</p>
+<p>今年开始读MBA了。没有文凭这件事，不管怎么嘴硬，它困扰我十多年了。今年终于下定决心要解决这个问题。说起来，下这个决心还是去年<a href="/2014/1/9/kilimanjaro/">登乞力马扎罗</a>的时候。以前也不是没想过读个MBA，每次都是说“好忙啊等忙过这阵儿再说吧”。去年看着乞力马扎罗就想：现在要是不去的话，也许一辈子也去不成了。然后一边登山一边想这事：以后也会一直这么忙吧，那么要是现在不开始读书的话，也许一辈子也不会开始了吧。于是从坦桑尼亚回来，就立即报名、交钱。第一年学过来，成绩平平，每个module都顺利通过。再坚持两年，我也是有文凭的人了。</p>
+<p>今年大半时间都在乌干达，其间做了一些真正对人有用的软件，特别是为抗击埃博拉做了<a href="http://mhero.org/mHero-Liberia/" target="_blank" rel="external">一点贡献</a>。这周在华盛顿参加<a href="http://www.mhealthsummit.org/" target="_blank" rel="external">全球移动医疗峰会</a>，所有人都在谈论这个软件。我跟肖然说，如果我做的软件能挽救哪怕一个人的生命，我觉得比我之前做过的所有项目加起来都更有价值。今年思想变得越来越左倾，越来越想为那些穷苦的人、受压迫的人、被忽视的人做点事。想帮助更多人，随便要我做什么都成。</p>
+<p>今年到目前为止<a href="http://book.douban.com/people/gigix/collect" target="_blank" rel="external">读完了56本书</a>，第57本大概在明天的飞机上就能读完。IT技术相关的书读得越来越少，开始读越来越多的社会科学，特别是那些关于社会的不公正的著作。渐渐地学会了用一个连贯的左翼视角看待世界各处的种种问题，美国的黑人被杀、加沙的轰炸、巴西的占领运动、非洲的困境与抗争，等等。今年遇到了很多同志，增长了斗争的勇气。</p>
+<p>今年把身体练得很好。体重降了十公斤下来，早上能轻松地到纽约中央公园跑个十公里。每天早睡早起，健身上瘾，吃东西有节制。很高兴找到了和自己的身体友好相处的方式。</p>
+<p>明年有什么愿望呢？明年大概希望做几件事：</p>
+<ol>
+<li>在<a href="http://www.thoughtworks.com/global-health" target="_blank" rel="external">全球医疗</a>领域继续深入，折腾出一点动静来。</li>
+<li>在中国让更多的同事参与到用技术推动社会变革中来。</li>
+<li>继续保持和改善跟自己友好相处的状态，身体和心理都是，放松，愉快，不拧巴。</li>
+</ol>
+<p>就是这么简单了。2014年过去了，我想我会一直记得它。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>又是一年过去了。以前每年会许愿，前年许了几个<a href="/2012/12/31/wishes-in-2013/">很朴实的愿望</a>，去年在忙乱的旅行之间完全忘了这茬。现在开完了今年最后一个大会，在即将进入假期的状态下回首这一年，才发现，哇，真是做了很多事啊。</p]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[于我而言的阶级自杀]]></title>
+    <link href="http://gigix.thoughtworkers.org/2014/10/23/return-not-suicide/"/>
+    <id>http://gigix.thoughtworkers.org/2014/10/23/return-not-suicide/</id>
+    <published>2014-10-23T00:30:00.000Z</published>
+    <updated>2015-11-11T07:46:00.000Z</updated>
+    <content type="html"><![CDATA[<p>Walton医生突然问我：你是为什么对社会的不公有那么多愤怒？我想了一下，说，大概是跟我的家庭出身有关吧。</p>
+<p>我家来自<a href="http://zh.wikipedia.org/zh/%E9%87%8D%E5%BA%86%E5%B9%B3%E5%B1%B1%E6%9C%BA%E6%A2%B0%E5%8E%82" target="_blank" rel="external">平山机械厂</a>，三线建设时候从北方迁到重庆山沟里的一个国防厂。从我记事时起，这家厂已经军转民生产摩托车。那个时候工人阶级的待遇很好，而且不光是物质待遇，工厂里有自己的学校、电影院、商店、篮球场，厂里的工人多有舞文弄墨能歌善舞身怀一技的人才。坐落在山沟里，四周都是川黔交界地区“地无三尺平”的农村，拥有三千职工、一万家属的工厂不仅是周边农副产品的最终消费处，而且是一个区域性的文化辐射中心。像我父母一样的工人阶级，在那个时候是条件相对优越并且很受尊重的。到90年代初期，虽然没有什么奢侈的享受，我父亲还是会提笼架鸟，还找一位当地的书法家写了一幅字勉励我发奋读书。</p>
+<p>1992年对于很多深圳人来说值得纪念，对于重庆人同样值得纪念。从<a href="http://info.textile.hc360.com/2008/10/29092969138.shtml" target="_blank" rel="external">重庆针织总厂</a>破产开始，国有企业制度改革在重庆这个老工业基地带来的是一波接一波的破产、兼并、重组和下岗。另外一面，市场化让工人阶级突然之间发现他们的工资变得捉襟见肘了。1995年我到城里上高中，我父亲从厂里停薪留职，借高利贷买了一台大货车开始跑运输。我母亲45岁内退以后也开始给父亲帮忙。直到2001年我正式参加工作，他们才终于把车卖掉，正式进入退休生活。</p>
+<p>那段时间是我家最困难的一个时期。我上高中的前两年，为了方便父亲找活也为了离我学校近一点，一家人几乎是居无定所，租过几个不同的地方住。父亲运的是长安铃木产的奥拓车，一个超长超宽超高的大货车上装8台奥拓，一路运到北京广州上海。那时高速公路很少，而且各地都在修路，一趟北京单程要开七天。为了方便出城，装车都是在晚上，半夜装好车上路，一天一夜才能开到湖北利川。两个司机搭伴，饿了吃方便面，困了在大货车上躺倒就睡。这是个很辛苦的活路。后来我自驾经过娄山关拍了几张公路转弯的照片，我父亲看一眼就知道具体是哪个弯角，因为开着超长超宽的大货车每过一个弯都不是件轻松的事，他就这么一个弯一个弯地挣出了我高中和大学的学费生活费。</p>
+<p>我偶尔会帮父母干点活，装车的时候帮着拉下篷布，换轮胎的时候帮着拿撬杠拧螺丝。大部分时候是不用我干活的。十五六岁长身体的时候胃口很大，吃不上什么好东西吃饱还是没问题的。回想起来，经济条件的变化只是一个方面的影响，社会地位的变化也很重要。虽然我家没有落到贫穷那一步，但是亲眼见证一个大厂由欣欣向荣到破落衰败，听到周边农村的父母教育小孩“不好好读书以后就只有去平山厂当工人”，心理上的落差是对我产生了影响的。</p>
+<p>曾经厂里的宣传口号是“献了青春献终身，献了终身献儿孙”，可是当像我父母一样的工人阶级真的献了终身，摆在他们面前的却是飞涨的物价、学费和医疗费。“先富带动后富”的口号于我从来都缺乏吸引力，因为让先富起来的人开上小车的代价就是我父亲多年积劳留下的腰椎间盘突出和慢性胃炎。有一次我和同事争论薄熙来的功过，我说你根本不可能说服我，因为你讲的都是书本上的大道理，我讲的是薄熙来刚下课我父亲的退休工资就被砍了60块钱。</p>
+<p>所以，当我自己成了中产阶级，我在内心深处是有负罪感的。我想这是我所有愤怒的源头。即使是透过一双不成熟的眼睛，亲眼看到了工人阶级经历的变化，我会本能地感到那些纸面上漂亮的经济学理论有什么地方不对。我会不由自主地去想那些生活艰难的人，就像想起我父母的艰难一样。我没有办法对这些人这些事视而不见。当我的能力不足以为他们做点什么事的时候，我就会感到格外愤怒，归根结底是在气自己。</p>
+<p>1998年我高考结束，我父亲开着超长超宽的大货车到学校门口来接我，那时候我觉得无比自豪，这车比我同学们家里的轿车拉风多了。所以我本质上还是个工人阶级的子弟。Roy说ThoughtWorker们需要阶级自杀，于我而言是回归本来的工人阶级。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Walton医生突然问我：你是为什么对社会的不公有那么多愤怒？我想了一下，说，大概是跟我的家庭出身有关吧。</p>
+<p>我家来自<a href="http://zh.wikipedia.org/zh/%E9%87%8D%E5%BA%86%E5%B9%B3%E5%B1%B1]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[山外又一山]]></title>
+    <link href="http://gigix.thoughtworkers.org/2014/10/5/mountains-beyond-mountains/"/>
+    <id>http://gigix.thoughtworkers.org/2014/10/5/mountains-beyond-mountains/</id>
+    <published>2014-10-05T10:30:00.000Z</published>
+    <updated>2015-11-11T07:46:00.000Z</updated>
+    <content type="html"><![CDATA[<p>_（《<a href="http://book.douban.com/subject/6392071/" target="_blank" rel="external">Mountains Beyond Mountains</a>》讲的是<a href="http://en.wikipedia.org/wiki/Paul_Farmer" target="_blank" rel="external">Paul Farmer医生</a>在海地以及其他贫穷地区行医的故事。读完这本书以后我这样描述自己的感受：“他选择了用最艰难的、自我牺牲的方式去拯救那些贫穷者、被压迫者、被忽视者。你甚至都无法嫉妒他。他存在的意义就是让你时刻提醒自己，不管你做了多少，你都还做得不够。以及，无论如何，你会感激这个世界上有他这样一个人存在。”本文内容是摘录书中部分对我触动最深的片段。）_</p>
+<p><img src="/assets/2014/10/5/paul_farmer.jpg"></p>
+<p>Farmer医生写过一本书，《<a href="http://book.douban.com/subject/2894676/" target="_blank" rel="external">Infections and Inequalities</a>》。传染病，尤其是桑塔格在《<a href="http://book.douban.com/subject/1064734/" target="_blank" rel="external">疾病的隐喻</a>》中着重提及的结核病和艾滋病，不仅仅是身体的疾病，更是社会的疾病。贫穷者也是传染病最大的受害者。</p>
+<p>这个哈佛医学院毕业的医生为什么选择在海地这个全世界最贫穷的国家免费行医？Farmer医生说，你可以认为这是一种自我牺牲，但也可以说是一种解决内心矛盾的方式。“我向这个世界出售我的服务，但有些人买不起，我对此感到内心矛盾。你会感到矛盾，因为你应该感到矛盾，‘逗号’。”——Farmer医生用“逗号”代表了逗号后面跟着的那个词，“asshole”。</p>
+<p>海地的中央高原地区曾经很贫穷。然后美国用国际援助和军队给海地带来了一个民主的政府和艾滋病，然后他们变得更贫穷。一部分国际援助被用于修建水电站。水电站修好了，住在首都太子港的美国人和海地中产阶级有了源源不断的电力。而水坝淹没了中央高原地区的农田，农民被迫耕种山脊上的小块田地。然后当邻国多米尼加爆发猪瘟的时候，美国担心猪瘟威胁本国养猪业，于是要求海地与多米尼加一起杀掉了所有土生猪，并事后补偿给农民衣阿华农场饲养的猪。这些农场养大的猪在山上根本无法生存。于是海地农民又失去了他们的猪。第二年，由于失去了一切额外收入来源，小学入学率急剧下降。感谢美国博爱的国际援助。</p>
+<p>关于什么是人人生而应有的基本权利，Farmer医生说：“干净的水，医疗，学校，食物，铁皮屋顶和水泥地板。”2000年阿里斯蒂德连任海地总统，联合国认为一个人连当十年总统是不民主的，于是他们中止了对海地的国际援助和贷款。“有时候我会想，也许脑子有问题的是我。”Farmer医生这样评价，“不让人得到干净的饮水，不让小孩上学识字，不让这个国家重建公共卫生体系，也许这一切都有它好的一面。但我还是觉得，发疯的不是我，是做这些决定的人。”</p>
+<p>然后，面对患病的穷人，这个世界说，治疗他们太不“经济”。Farmer医生在中央高原地区治疗结核病患者，他和他的同事们会步行几小时山路就为走访一个结核病患者，确保患者按时吃药、有钱吃饭、房子能遮风挡雨。他们得到了100%的结核病治愈率。有人会说“你不能要求每个医生都像你这样工作”，Farmer医生说，他的回答是“Fuck you”。知识分子们坐在空调开得太足的玻璃办公室里谈论针对贫困地区的病患使用“适当的技术”。“你知道‘适当的技术’是什么意思吗？意思就是富人用好东西，穷人用狗屎。”Farmer医生这样评价。</p>
+<p>Farmer医生说到“WL”——白人自由主义者——会谈论穷人的一种方式：他们很穷，但他们很快乐。对此，Farmer医生说：“他们会友善地微笑，他们很有幽默感，但这是跟‘快乐’完全不同的两码事。”现在世界银行的行长Jim Kim早年跟Farmer医生一道在海地行医。有人问他，你凭什么把你的病人叫做“穷人”，他们并不这样称呼自己。Kim答道：“好啊，要不叫他们快死的人怎么样？”</p>
+<p>年轻的中产阶级大学生们去海地（以及其他若干贫穷的地方）做志愿者，并且半真半假地希望融入本地社区。Farmer医生的评价是：“穷人不想要你看起来跟他们一样。穷人想要你穿西装打领带并且给他们带来食物和水，‘逗号’。”</p>
+<p>在贫穷国家，患耐多药结核（MDR）的病人通常会死，因为变异的结核菌对一线药物产生抗药性，而二线药物又太贵。Jim Kim说：“幸亏结核病是空气传播的。”——否则有钱人会任由结核病患者自生自灭，没人有动力去推低药品价格。在Kim全力推动之前，这种缺乏动力到了如此的程度：生产二线抗结核药物的几家厂商垄断市场收取高价，没有其他厂商尝试低价打入这个市场，甚至几乎没人知道相关的专利早都已经过期多年了。相信自由市场会自动消灭垄断的人应该来解释这个现象。</p>
+<p>而在“自由”的对立面。古巴的平均医生密度全世界最高，几乎有美国两倍。话说回来，美国糟糕到了什么程度？波士顿的传教山社区婴幼儿死亡率高于古巴。纽约的哈林区5到65岁男性死亡率高于孟加拉。哈佛的一位教授说，斯堪地纳维亚国家提供了一个既保障优质公共医疗又保障政治自由的例子。Farmer医生说：“他们是在管理富裕，我们是在管理贫穷。在管理贫穷这方面，海地是个坏典型，古巴是个好典型。”</p>
+<p>这个世界的各种不对的事，Farmer医生认为最根本的是抹去了具体的人、具体的痛苦。“我惊讶于人们如何可以不关心、抹去、忘记。”可能这是他一直不脱离一线临床实践的原因。“没有临床工作，我什么也不是。”他这样说道。PIH曾经花费两万美元用专机把一个患鼻咽癌的儿童送到波士顿治疗。有人问这样的做法是否合理，Farmer医生说：“你为患者做任何你能做的事。如果是我自己病重，我不会觉得这个做法不合理。”但是两万美元本来不是可以用来干很多别的事吗？“比如用来给医生开工资。‘天，我的薪水就有五倍于John需要的专机费用，而我才29岁’——如果你这么说出来，你听起来就像个asshole；而如果你说这两万美元可以花在别的地方，你听起来就很深思熟虑。这是哪儿不对了？我说不清。我发现很难在不冒犯某些人的前提下把这个道理讲明白。”</p>
+<p>“如果你说走七个小时去看两家病人不值得，你就是在说他们的命不如别人的命重要。而认为有些人的命不那么重要，是这个世界上所有错误的根源。”又一整天的跋山涉水以后，Farmer医生说，“谈到公共卫生，很多人说家庭、村庄、社区、城市、国家。首先是病人，一个一个的病人，治疗病人的时候，你才会学到怎么治疗一个家庭、一个村庄、一个城市、一个国家，也许整个世界。”</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>_（《<a href="http://book.douban.com/subject/6392071/" target="_blank" rel="external">Mountains Beyond Mountains</a>》讲的是<a href="http://en.]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[DHIS2：穷人的大数据]]></title>
+    <link href="http://gigix.thoughtworkers.org/2014/8/17/dhis2-intro/"/>
+    <id>http://gigix.thoughtworkers.org/2014/8/17/dhis2-intro/</id>
+    <published>2014-08-17T01:30:00.000Z</published>
+    <updated>2015-11-11T07:46:00.000Z</updated>
+    <content type="html"><![CDATA[<p>为乡村医疗工作者、乡村教师以及其他类似的深入边远基层的工作者设计IT系统时，数据采集、上报和分析是一类常见的需求。比如说，各个村的村医统计新生儿人数，或者各个村的教师统计学龄儿童人数，然后由村到乡、由乡到县、再到市省乃至全国逐级上报；某个中央机构（政府或者NGO）可以获得全国的分析报表，可以从各个维度分析，可以深入某个行政区域查看具体情况，等等。</p>
+<p><img src="/assets/2014/8/17/dhis2-cloud.png"></p>
+<p><a href="https://www.dhis2.org/" target="_blank" rel="external">DHIS2</a>正是为这种情景设计的软件工具。虽然名字来自“地区医疗信息系统”（District Health Information System），但DHIS2不仅是一个医疗信息系统，而是一个通用的数据采集、上报、分析和可视化平台。这个开源的软件平台在设计之初就针对低资源地区、基层工作者的特点，目前在<a href="https://www.dhis2.org/deployments" target="_blank" rel="external">46个国家</a>（大多是贫穷国家）部署应用，堪称“穷人的大数据”。</p>
+<p>DHIS2有几个最大的亮点：</p>
+<ol>
+<li><p><strong>丰富灵活的数据模型。</strong><br>DHIS2有一个灵活而且通用的数据模型，这个数据模型的核心是基于<a href="https://www.dhis2.org/doc/snapshot/en/user/html/ch04.html" target="_blank" rel="external">数据元素</a>的采集。当管理员把需要采集的数据元素配置到一个<a href="https://www.dhis2.org/doc/snapshot/en/user/html/ch05.html" target="_blank" rel="external">数据集</a>中，这个数据集就会呈现为一张表单，用户就可以用这张表单采集不同时间、不同<a href="https://www.dhis2.org/doc/snapshot/en/user/html/ch03.html" target="_blank" rel="external">组织机构</a>的数据。在这个简洁的核心之上，管理员可以给数据元素设定若干不同的维度，从而获得丰富的信息供分析之用。</p>
+</li>
+<li><p><strong>完全RESTful的数据上报接口。</strong><br>DHIS2提供完全RESTful的<a href="https://www.dhis2.org/doc/snapshot/en/user/html/ch32.html" target="_blank" rel="external">数据查询/提交接口</a>，从而使前端采集数据的软件不必依赖DHIS2。比如说，你可以开发自己的移动应用，允许用户在没有网络的情况下进行日常操作，有网络联接时自动将数据同步到DHIS2服务器。由克林顿基金会资助，<a href="https://github.com/chailmis/chailmis-android" target="_blank" rel="external">尼日利亚的医疗物流管理系统</a>就是这么做的。</p>
+</li>
+<li><p><strong>多样的数据分析和呈现方式。</strong><br>DHIS2提供了基于<a href="https://www.dhis2.org/doc/snapshot/en/user/html/ch16.html" target="_blank" rel="external">转向表</a>的分析支持，让数据管理员可以很轻松地定义各个不同维度的分析。支持各种不同形式的报表当然就不在话下了，都可以在<a href="https://www.dhis2.org/doc/snapshot/en/user/html/ch17.html" target="_blank" rel="external">可视化的报表定义工具</a>中定义，而且还有准备好的<a href="https://www.dhis2.org/doc/snapshot/en/user/html/ch18.html" target="_blank" rel="external">地理信息支持</a>。如果自带的报表呈现形式还不够好，同样可以通过RESTful API得到报表背后的数据，然后自己做呈现。</p>
+</li>
+</ol>
+<p>根据与<a href="http://www.clintonhealthaccess.org/" target="_blank" rel="external">克林顿基金会</a>、<a href="http://www.msf.org/" target="_blank" rel="external">无国界医生</a>等组织合作项目的经验，DHIS2很好地满足了基层采集数据、逐级汇总上报、统计分析、决策支持等常见的数据需求，并且很好地平衡了简单性和灵活性，使得低成本开发高质量的国家级数据管理系统成为可能。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>为乡村医疗工作者、乡村教师以及其他类似的深入边远基层的工作者设计IT系统时，数据采集、上报和分析是一类常见的需求。比如说，各个村的村医统计新生儿人数，或者各个村的教师统计学龄儿童人数，然后由村到乡、由乡到县、再到市省乃至全国逐级上报；某个中央机构（政府或者NGO）可以获得全]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[浅薄：通向被机器取代之路]]></title>
+    <link href="http://gigix.thoughtworkers.org/2014/8/11/book-review-to-swallows/"/>
+    <id>http://gigix.thoughtworkers.org/2014/8/11/book-review-to-swallows/</id>
+    <published>2014-08-11T01:34:00.000Z</published>
+    <updated>2015-11-11T07:46:00.000Z</updated>
+    <content type="html"><![CDATA[<p>（本文系《<a href="http://book.douban.com/subject/5379664/" target="_blank" rel="external">浅薄</a>》的书评，发表于《商业价值》“<a href="http://content.businessvalue.com.cn/post/31471.html" target="_blank" rel="external">周末荐书</a>”栏目） </p>
+<p>阿兰•图灵于1936年发表的论文不仅奠定了现代计算机的理论基础，同时也指出了计算机的边界：这个世界上有无穷多的问题是计算机不能解决的。这一发现在哲学层面的意义丝毫不亚于其使用价值，因为它实际上是在论断：人的思想无法被计算机取代。 </p>
+<p><img src="/assets/2014/8/11/WebBrain_main_0229.jpg"></p>
+<p>不过严格说起来，这个论断的成立还需要另一个前提条件，即那些计算机不可计算的问题，人脑是可以解决至少其中一部分的。而尼古拉斯•卡尔在《<a href="http://book.douban.com/subject/5379664/" target="_blank" rel="external">浅薄：互联网如何毒化了我们的大脑</a>》中指出，这个前提条件正在随着计算机和互联网的飞速发展而变得岌岌可危。计算机仍然不能解决那些不可被计算的问题，然而我们自己却在越来越多地使用计算机的过程中逐渐失去人类独有的那部分思想优势。 </p>
+<p>首先必须提到的是日益普遍的注意力涣散。互联网以海量、碎片化信息的方式鼓励注意力的不断跳跃，现代人更是主动迎合这种信息输入的方式，各种快读、速读、碎片化阅读的技巧层出不穷。脑神经科学的研究显示，我们的大脑能以很快的速度调整神经元之间的联接方式，从而使思维获得远超进化论水平的灵活性。现在，在微博、微信、Instagram……持续不断的塑造下，我们的大脑正在调整成一种适应碎片、拒绝长时间聚焦的联接方式。 </p>
+<p>不断跳跃的信息输入本身不是问题，问题出在信息的存储与处理环节。卡尔引用一系列神经科学领域的研究成果讲述一个事实：和计算机的磁性存储介质不同，我们的碳基大脑无法记住所有事。大脑负责短期记忆（也叫工作记忆）和长期记忆的区域是完全不同的，信息需要在工作记忆区停留足够长的时间（大概两三个小时），才会被转到长期记忆区。短期记忆区容量非常有限，而长期记忆区几乎有无限容量。于是，当我们跳跃地、碎片地接受海量信息的输入，各种各样的信息不断地在短期记忆区来来去去，统统都没有进入长期记忆区，结果我们忙忙碌碌一天发现脑子里一片空白什么都没学到。同时扑面而来的信息又让我们感到越来越焦躁，愈发迫不及待地去吸收更多的信息，从而进入一个恶性循环。 </p>
+<p>比起无法存储信息，更糟糕的或许是无法处理信息。老师会说“课上学的知识课后要好好消化”，这个“消化”的隐喻恰如其分地呈现了大脑处理信息的过程：左脑在无意识的状态下处理长期记忆区中的信息，构建出一个思维体系，供右脑在其上进行逻辑思考。缺乏连贯深入的信息获取方式，使得左脑构建的思维体系破碎凌乱，于是对信息的使用也随之变得浅薄。这样的案例俯拾皆是：看着微信朋友圈里几位每天专注转发心灵鸡汤与爱国热血文的亲友，我仿佛看到了用几个关键词搜索推送的RSS频道，于是除了屏蔽朋友圈更新之外也别无他法了。 </p>
+<p>正如布林约尔松和麦卡菲在《<a href="http://book.douban.com/subject/21326266/" target="_blank" rel="external">与机器赛跑</a>》中所说，在一个计算机能力日益强大的时代，人类独特的竞争力在于情感交流与创新。然而适应于时代的、碎片化的信息输入方式不仅会使我们的思想缺乏深度而失去创造性，而且让我们失去深入的主观情感判断，甚至陷入道德相对主义与道德虚无主义。于是我们看到一个自我增强的困境：机器不仅在取代人类用浅薄的思想可以做的那些工作，而且还将更多人的思想变得越来越浅薄。马克思说劳动者异化成劳动的工具，而这一次的异化更可怕之处在于：浅薄的思想无法意识到自身被异化。难道我们真的已经无法抗争了吗？ </p>
+<p>在这本《浅薄》中，卡尔并没有多谈如何与浅薄化的趋势抗争，但抗争的方式已经呼之欲出。重新夺回主动的第一步在于阅读。我们需要学会隔离永不停息的信息大潮，停止浅尝辄止的、信息采集式的阅读，回到书籍时代的深入阅读，通过思考把信息组织到一个完整的框架或体系中，花时间进行这个反思和组织的过程，使信息以及你为它组织的框架能被转入长期记忆，使其孕育出深刻的、创造性的思想。从这个意义上，作为读者的你现在把眼光放在“周末荐书”栏目上，这就是人类拒绝走向浅薄、拒绝被计算机取代的希望所在。 </p>
+<p>（文/熊节，<a href="http://www.thoughtworks.com/social-justice" target="_blank" rel="external">ThoughtWorks</a>咨询师，致力于用IT技术塑造更加公正和美好的社会）</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>（本文系《<a href="http://book.douban.com/subject/5379664/" target="_blank" rel="external">浅薄</a>》的书评，发表于《商业价值》“<a href="http://content.busine]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[书评：与机器赛跑]]></title>
+    <link href="http://gigix.thoughtworkers.org/2014/7/8/race-against-machines/"/>
+    <id>http://gigix.thoughtworkers.org/2014/7/8/race-against-machines/</id>
+    <published>2014-07-08T11:40:00.000Z</published>
+    <updated>2015-11-11T07:46:00.000Z</updated>
+    <content type="html"><![CDATA[<p><em>（本文发表于《商业价值》<a href="http://content.businessvalue.com.cn/post/31312.html" target="_blank" rel="external">2014年7月刊</a>）</em></p><p>住在悉尼市郊的黛茜今年37岁，在一家保险公司的呼叫中心工作。过去10多年里，她的这份工作做得很平稳：每天按时上班，接起顾客打来的电话，不管是询问投保条款还是咨询理赔事宜，她都能对答如流。接起电话，按照烂熟于心的产品手册帮顾客解决问题，听到顾客说“谢谢”然后挂上电话，这份工作让她觉得一切井井有条。所以，她没想到自己会被公司解雇。</p><p>黛茜不是唯一被解雇的员工，她和几十个同时被解雇的呼叫中心的同事所怀有的疑问也绝非罕见：当经济形势已经从前几年的不景气中逐渐恢复，自己的雇主还宣布斥资数亿澳元建设IT系统，为什么自己还会失业？</p><p><img src="/assets/2014/7/8/machine.png" alt=""></p><p>美国劳工统计局的一份数据显示，从2008年起，以人均GDP为指标的美国总体经济已经开始从金融危机的阴影中复苏，然而以家庭收入中位数为指标的“普通人收入水平”却仍在一路下滑。事实上，在21世纪的第一个10年，尽管总体经济大势仍然保持上升，美国的普通家庭收入却呈现下降趋势。宏观经济的繁荣没有带来绝大部分普通人生活的改善，如果把眼光放得更远一些，这可能是人类历史上第一次出现这样奇特的景象。</p><p>究竟是什么造成了这种情况？《<a href="http://book.douban.com/subject/21326266/" target="_blank" rel="external">与机器赛跑</a>》的作者们认为，答案是机器——尤其是计算机——在取代普通人的工作。经济的繁荣不再与高就业率相关，因此普通人享受不到经济发展的成果也就不令人意外了。</p><p>人类与机器的竞赛并非自今日始。据说19世纪有位叫约翰·亨利的铁路工人不服自己的工作被蒸汽机取代，于是要求与蒸汽机比赛往岩石里打桩。结果亨利赢了比赛，却因为心力衰竭丢了性命，从此以后再也没有人尝试跟机器比拼体力。正如《与机器赛跑》的两位作者所说，这是一场人类赢不了的比赛，计算机终将取代大多数现在仍由人类完成的工作，而人类必须学会与计算机协作并发挥自己的特长。</p><p>从这个意义上来说，《与机器赛跑》这个标题译得并不十分贴切，因为作者讲的并不是如何“赛过机器”，而是如何“与机器组队配合赛过其他队伍”。</p><p>两位作者指出，人类的特长在于复杂的、涉及情感的交流，以及复杂的模式匹配和创造性的思维。然而与一些乐观主义者不同，两位作者并不认为人类自然而然地就会具备与计算机协作所需的那些能力——从日常生活中我们就能看到，信息碎片化、深度阅读与思考的失位、电脑和手机对人际交往的侵入……信息技术不仅没有增强、反而在潜移默化地弱化人们进行复杂交流和创造性思维的能力。阴谋论者简直可以就此写一篇科幻小说，谈论觉醒的硅基生命如何逐步奴役人类了。</p><p>在较短时间内让绝大多数普通人具备与机器协作的能力，教育将扮演至关重要的角色，因此两位作者也表达了他们对现行教育体制的忧虑。</p><p>首先，教育必须给人们传授那些非机械化的、非重复性的、涉及情感与创造性的技能，因为只有这些技能才是不可被机器取代、因此在下一个时代仍然有效的。以中国人常引以为豪的数学教育为例，现在学生们从课堂上学到的多是“执行算法”的能力而非“设计算法”的能力，而前者恰好是计算机的长项，后者才是人类可能与计算机展开合作的领域。诸如此类的教育思路与方式若不及时改变，在一两代人之后人类被机器广泛取代绝非危言耸听。</p><p>比起教育的内容与形式，更严峻的挑战是教育的不均衡与不平等。我们正在经历的是一场知识偏向型的产业革命：掌握必要知识与技能的人与机器协作如鱼得水，不具备这些知识与技能的人则连出卖劳动力的机会都被剥夺。教育的不均衡与不平等则会加剧阶级的分裂并使阶级固化——看着城市里的孩子在接受英语电脑人文艺术全面覆盖的素质教育，乡村小学和农民工子弟校却仍在为语文数学课犯愁，这种阶级分裂与阶级固化的迹象已经近在眼前了。</p><p>是以，尽管讲的是美国的事情，尽管看来还有点科幻色彩，这本《与机器赛跑》绝非离我们千里之外的天方夜谭。与机器的赛跑已经全面展开，而这场竞赛究竟会以何种方式落幕，很大程度上将取决于我们这一代人的认识与行动。</p>]]></content>
+    <summary type="html">
+    <![CDATA[<p><em>（本文发表于《商业价值》<a href="http://content.businessvalue.com.cn/post/31312.html" target="_blank" rel="external">2014年7月刊</a>）</em></p><p>住在悉]]>
+    </summary>
+    
+  </entry>
+  
+</feed>

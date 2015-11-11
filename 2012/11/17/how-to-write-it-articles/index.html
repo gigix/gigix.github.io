@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+        如何写（看起来牛逼的）IT文章 | 透明思考
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+    <meta name="author" content="Jeff Xiong">
+    
+    
+    <meta name="description" content="最近在《程序员》杂志发表了一篇文章：敏捷零售，讲零售行业IT的一些新挑战和新动向。文章发出来，似乎反响还不错。其实写这种高观点的文章，我也刚开始尝试。把最近写几篇文章的心得分享出来，欢迎指正。ThoughtWorks的同事们写东西，技术上的硬东西总是很足的，但经常太聚焦于技术，忘了关注目标读者到底想看到什么。要写一篇看起来牛逼的文章，目标读者就要指向IT和业务的结合部：CIO/CTO什么的，这些人">
+    
+
+    <meta name="description" content="最近在《程序员》杂志发表了一篇文章：敏捷零售，讲零售行业IT的一些新挑战和新动向。文章发出来，似乎反响还不错。其实写这种高观点的文章，我也刚开始尝试。把最近写几篇文章的心得分享出来，欢迎指正。ThoughtWorks的同事们写东西，技术上的硬东西总是很足的，但经常太聚焦于技术，忘了关注目标读者到底想看到什么。要写一篇看起来牛逼的文章，目标读者就要指向IT和业务的结合部：CIO/CTO什么的，这些人">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何写（看起来牛逼的）IT文章 | 透明思考">
+<meta property="og:url" content="http://gigix.thoughtworkers.org/2012/11/17/how-to-write-it-articles/index.html">
+<meta property="og:site_name" content="透明思考">
+<meta property="og:description" content="最近在《程序员》杂志发表了一篇文章：敏捷零售，讲零售行业IT的一些新挑战和新动向。文章发出来，似乎反响还不错。其实写这种高观点的文章，我也刚开始尝试。把最近写几篇文章的心得分享出来，欢迎指正。ThoughtWorks的同事们写东西，技术上的硬东西总是很足的，但经常太聚焦于技术，忘了关注目标读者到底想看到什么。要写一篇看起来牛逼的文章，目标读者就要指向IT和业务的结合部：CIO/CTO什么的，这些人">
+<meta property="og:image" content="http://gigix.thoughtworkers.org/assets/2012/11/15/small_writing.jpg">
+<meta property="og:image" content="http://farm9.staticflickr.com/8208/8191942805_a42520b692.jpg">
+<meta property="og:updated_time" content="2015-11-11T07:46:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="如何写（看起来牛逼的）IT文章 | 透明思考">
+<meta name="twitter:description" content="最近在《程序员》杂志发表了一篇文章：敏捷零售，讲零售行业IT的一些新挑战和新动向。文章发出来，似乎反响还不错。其实写这种高观点的文章，我也刚开始尝试。把最近写几篇文章的心得分享出来，欢迎指正。ThoughtWorks的同事们写东西，技术上的硬东西总是很足的，但经常太聚焦于技术，忘了关注目标读者到底想看到什么。要写一篇看起来牛逼的文章，目标读者就要指向IT和业务的结合部：CIO/CTO什么的，这些人">
+
+    
+    <link rel="alternate" href="/atom.xml" title="透明思考" type="application/atom+xml">
+    
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css" type="text/css">
+
+    <script src="/js/jquery.min.js"></script>
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+<header class="panel-cover panel-cover--collapsed">
+
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">透明思考</a></h1>
+
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">
+          Transparent Thoughts
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">Blog</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+------------------------------ -->
+
+<nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+
+  <!-- Github -->
+  <li class="navigation__item">
+    <a href="https://github.com/gigix" title="Gigix on GitHub" target="_blank">
+      <i class='icon icon-social-github'></i>
+      <span class="label">GitHub</span>
+    </a>
+  </li>
+
+  </ul>
+</nav>
+
+          <script>
+    function doSearch() {
+        var keyword = $('#keyword').val();
+        if (keyword.trim() === '') {
+            window.location.href = 'http://gigix.thoughtworkers.org/#blog';
+        } else {
+            window.open('http://www.google.com/search?q=site:gigix.thoughtworkers.org+' + keyword);
+        }
+    }
+</script>
+
+<div class="search">
+    <input id="keyword" type="text"/>
+    <input type="button" value="Search" class="btn" onclick="doSearch()"/>
+</div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+    <header class="post-header">
+
+        
+        <div class="post-meta">
+            <time datetime="11月 17 2012"
+                  class="post-meta__date date">11月 17 2012</time>
+            &#8226;
+
+        <span class="post-meta__tags tags">
+
+            <font class="categories">
+                
+            </font>
+            
+
+        </span>
+        </div>
+        
+
+        <h1 class="post-title">如何写（看起来牛逼的）IT文章</h1>
+    </header>
+
+    <section class="post">
+        <p>最近在《程序员》杂志发表了一篇文章：<a href="http://www.programmer.com.cn/14108/" target="_blank" rel="external">敏捷零售</a>，讲零售行业IT的一些新挑战和新动向。文章发出来，似乎反响还不错。其实写这种高观点的文章，我也刚开始尝试。把最近写几篇文章的心得分享出来，欢迎指正。</p><p><img src="http://gigix.thoughtworkers.org/assets/2012/11/15/small_writing.jpg" alt=""></p><p><strong>Thought</strong>Works的同事们写东西，技术上的硬东西总是很足的，但经常太聚焦于技术，忘了关注目标读者到底想看到什么。要写一篇看起来牛逼的文章，目标读者就要指向IT和业务的结合部：CIO/CTO什么的，这些人感兴趣的东西，最终会成为技术工作者关注的东西。那么这些位于结合部的读者，什么信息会触动他们呢？答案是：来自业务世界的压力与变化。当来自IT之外的压力迫使IT做出改变时，就是IT从业者最需要帮助时。</p><p>你要问了：可是我对这些行业也不熟悉，我怎么知道他们的业务压力是什么呢？这就是关键点（也是让文章看起来牛逼的点）所在：当你从大趋势、宏观经济的角度来看行业，其实很多行业的IT没有那么多所谓的“行业特色”，因为软件就是软件，软件有它自己的规律。比如现在的大趋势是什么？我在过去一年中演讲和写作几个不同的主题，首先讲到的都是同一个大趋势：消费互联网。智能手机让消费者随时在线，于是所有企业都有了立即联接消费者的可能性，于是所有企业都需要直面消费者的数字渠道。拿着这个趋势扫一圈，通信、金融、旅游、房地产、制造业、教育、医疗……都在给他们各自的IT提同样的挑战，是不是？所以文章的第一部分你知道该怎么写了：讲宏观趋势，以及宏观趋势在行业里投射出的现象。</p><p>抓到了宏观趋势，接下来就该分析宏观趋势对行业提出的要求——顾客想要的，就是CEO想给的，也就是CIO/CTO被逼着做的。现在这个世界越来越明显地朝着精益的方向去了，顾客想要的，发挥点想象力，无非都是：更便捷的服务、更低廉的价格、更愉悦的体验、更丰富的信息……所以文章的第二部分就可以讲讲，在宏观趋势的影响下，顾客想要IT给他们提供哪些以前没有的东西。（这个时候作为技术宅的你如果每天看的新闻还算有点品位的话，应该已经感到驾轻就熟了吧。）</p><p>下一部分的子标题永远都可以叫做“IT正在成为……的阻力”，不管你谈论的是哪个行业。啊啊，这是技术宅最喜欢写的部分：挑毛病。IT的毛病实在太多了，对应着前面分析的“顾客想要的”，一条一条来挑，为什么现在的IT不能满足。比如说顾客想要更个性化的体验，现在的IT能力就没法知道顾客到底是什么样的脾气怎么给他个性化？诸如此类。这部分技术宅应该很有把握写出来让读者如芒在背吧。</p><p>再然后就是解决方案了，“技术上的硬东西”到这个时候才粉墨登场。这个时候拿着解决方案，我们就不再是空口喊“持续交付就是好啊就是好啊就是好”，而是对着前面一部分列的毛病，一条条讲怎么解决这些挑战了。“你那IT团队都已经成为阻力了还不好好听我给你开药方”什么的，这才是专业技术人士应该有的范儿啊。</p><p>简单总结：宏观趋势 = 顾客的诉求 = IT的短板 = 解决方案。再加一个虎头一个豹尾，一篇看起来牛逼的文章就搞定。</p><p><em>P.S. 下面是我构思《敏捷零售》这篇文章时第一个版本的大纲，供各位参考。</em></p><p><a href="http://www.flickr.com/photos/gigix/8191942805/" title="Retail Agility by Gigix, on Flickr" target="_blank" rel="external"><img src="http://farm9.staticflickr.com/8208/8191942805_a42520b692.jpg" width="500" height="118" alt="Retail Agility"></a></p>
+    </section>
+
+    <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style_32x32" style="height: 40px">
+    <a class="jiathis_button_tsina"></a>
+    <a class="jiathis_button_weixin"></a>
+    <a class="jiathis_button_douban"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis"
+       target="_blank"></a>
+</div>
+<script type="text/javascript">
+    var jiathis_config = {
+        summary: "",
+        shortUrl: false,
+        hideMore: false
+    }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code_mini/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+    
+</article>
+
+
+            <footer class="footer">
+    <span class="footer__copyright">&copy;
+        2012
+        Transparent Thoughts. All rights reserved.</span>
+</footer>
+        </div>
+    </div>
+
+    <!-- The main JavaScript file for Casper -->
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    <script src="/js/jquery.imagesloaded.min.js"></script>
+    <script src="/js/gallery.js"></script>
+    <script src="/js/jquery.githubRepoWidget.min.js"></script>
+    <script type="text/javascript"
+            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> 
+      MathJax.Hub.Config({ 
+        tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+    }); 
+
+    </script>
+
+    <!--kill ie6 -->
+    <!--[if IE 6]>
+    <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+    <![endif]-->
+
+    <!--  google analytics -->
+    <script>
+        // add your google analytics code here
+    </script>
+
+    <!-- totop -->
+    <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">
+        <a title="back to top"><img style="width:30px;height:30px;" src="/images/totop.png"/></a>
+    </div>
+    <script>
+        (function ($) {
+            var upperLimit = 100;
+            var scrollElem = $('#totop');
+            var scrollSpeed = 500;
+            scrollElem.hide();
+            $(window).scroll(function () {
+                var scrollTop = $(document).scrollTop();
+                if (scrollTop > upperLimit) {
+                    $(scrollElem).stop().fadeTo(300, 1); // fade back in
+                } else {
+                    $(scrollElem).stop().fadeTo(300, 0); // fade out
+                }
+            });
+            $(scrollElem).click(function () {
+                $('html, body').animate({scrollTop: 0}, scrollSpeed);
+                return false;
+            });
+        })(jQuery);
+    </script>
+
+    <!-- fancybox -->
+    
+    <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+    <script src="/fancybox/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript">
+        (function ($) {
+            $('.fancybox').fancybox();
+        })(jQuery);
+    </script>
+    
+
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-113927-4', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <!-- CNZZ Analytics -->
+    <script src="http://s4.cnzz.com/z_stat.php?id=1255092465&web_id=1255092465" language="JavaScript"></script>
+
+</body>
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+        Chef学习手记之贰：基本套餐 | 透明思考
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+    <meta name="author" content="Jeff Xiong">
+    
+    
+    <meta name="description" content="现在我要配置一台体面的Rails服务器。也许我会用它来跑1.HourFor.me。要配置一台Rails服务器，首先要有一台服务器。于是我到EC2搞了一台服务器。EC2之于DevOps就像SourceForge之于轻量级J2EE：它让你有机会去尝试那些原来只有在超级大企业里才会出现的东西。你可以在自己家里、在业余时间积累经验，而且不花多少钱。我装了一台Fedora8的机器。在学习手记之壹里我说需要有">
+    
+
+    <meta name="description" content="现在我要配置一台体面的Rails服务器。也许我会用它来跑1.HourFor.me。要配置一台Rails服务器，首先要有一台服务器。于是我到EC2搞了一台服务器。EC2之于DevOps就像SourceForge之于轻量级J2EE：它让你有机会去尝试那些原来只有在超级大企业里才会出现的东西。你可以在自己家里、在业余时间积累经验，而且不花多少钱。我装了一台Fedora8的机器。在学习手记之壹里我说需要有">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Chef学习手记之贰：基本套餐 | 透明思考">
+<meta property="og:url" content="http://gigix.thoughtworkers.org/2011/2/20/chef-2-rails-server/index.html">
+<meta property="og:site_name" content="透明思考">
+<meta property="og:description" content="现在我要配置一台体面的Rails服务器。也许我会用它来跑1.HourFor.me。要配置一台Rails服务器，首先要有一台服务器。于是我到EC2搞了一台服务器。EC2之于DevOps就像SourceForge之于轻量级J2EE：它让你有机会去尝试那些原来只有在超级大企业里才会出现的东西。你可以在自己家里、在业余时间积累经验，而且不花多少钱。我装了一台Fedora8的机器。在学习手记之壹里我说需要有">
+<meta property="og:image" content="http://gigix.thoughtworkers.org/assets/2011/2/20/cakes_1.jpg">
+<meta property="og:updated_time" content="2015-11-11T07:46:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chef学习手记之贰：基本套餐 | 透明思考">
+<meta name="twitter:description" content="现在我要配置一台体面的Rails服务器。也许我会用它来跑1.HourFor.me。要配置一台Rails服务器，首先要有一台服务器。于是我到EC2搞了一台服务器。EC2之于DevOps就像SourceForge之于轻量级J2EE：它让你有机会去尝试那些原来只有在超级大企业里才会出现的东西。你可以在自己家里、在业余时间积累经验，而且不花多少钱。我装了一台Fedora8的机器。在学习手记之壹里我说需要有">
+
+    
+    <link rel="alternate" href="/atom.xml" title="透明思考" type="application/atom+xml">
+    
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css" type="text/css">
+
+    <script src="/js/jquery.min.js"></script>
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+<header class="panel-cover panel-cover--collapsed">
+
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">透明思考</a></h1>
+
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">
+          Transparent Thoughts
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">Blog</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+------------------------------ -->
+
+<nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+
+  <!-- Github -->
+  <li class="navigation__item">
+    <a href="https://github.com/gigix" title="Gigix on GitHub" target="_blank">
+      <i class='icon icon-social-github'></i>
+      <span class="label">GitHub</span>
+    </a>
+  </li>
+
+  </ul>
+</nav>
+
+          <script>
+    function doSearch() {
+        var keyword = $('#keyword').val();
+        if (keyword.trim() === '') {
+            window.location.href = 'http://gigix.thoughtworkers.org/#blog';
+        } else {
+            window.open('http://www.google.com/search?q=site:gigix.thoughtworkers.org+' + keyword);
+        }
+    }
+</script>
+
+<div class="search">
+    <input id="keyword" type="text"/>
+    <input type="button" value="Search" class="btn" onclick="doSearch()"/>
+</div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+    <header class="post-header">
+
+        
+        <div class="post-meta">
+            <time datetime="2月 20 2011"
+                  class="post-meta__date date">2月 20 2011</time>
+            &#8226;
+
+        <span class="post-meta__tags tags">
+
+            <font class="categories">
+                
+            </font>
+            
+
+        </span>
+        </div>
+        
+
+        <h1 class="post-title">Chef学习手记之贰：基本套餐</h1>
+    </header>
+
+    <section class="post">
+        <p>现在我要配置一台体面的Rails服务器。也许我会用它来跑<a href="http://1.hourfor.me" target="_blank" rel="external">1.HourFor.me</a>。</p><p>要配置一台Rails服务器，首先要有一台服务器。于是我到<a href="http://aws.amazon.com/ec2/" target="_blank" rel="external"><span class="caps">EC2</span></a>搞了一台服务器。EC2之于DevOps就像SourceForge之于轻量级J2EE：它让你有机会去尝试那些原来只有在超级大企业里才会出现的东西。你可以在自己家里、在业余时间积累经验，而且不花多少钱。我装了一台Fedora8的机器。</p><p>在<a href="http://gigix.thoughtworkers.org/2011/2/19/chef-1">学习手记之壹</a>里我说需要有一个Chef服务器。其实Chef有三种运行的方式：你自己装Chef服务器；压根不要Chef服务器（叫<a href="http://wiki.opscode.com/display/chef/Chef+Solo" target="_blank" rel="external">Chef Solo</a>）；或者用OpsCode做你的Chef服务器。第三种方式蛮好，又不用自己多架台服务器，又可以在世界任何地方共享我的大餐。所以我就要这样做。</p><p><img src="http://gigix.thoughtworkers.org/assets/2011/2/20/cakes_1.jpg" width="300px"></p><p>首先要在OpsCode注册，并创建一个组织（organization）。这部分蛮简单，照着网站的指示一步步做就行了。我创建了一个叫“thoughtworkers”的组织。创建组织的时候小心，有免费的plan可以用的。我现在还不需要收费plan那么强的功能。</p><p>紧跟着要搞定开发环境。我要在自己的机器上建一个<a href="http://wiki.opscode.com/display/chef/Chef+Repository" target="_blank" rel="external">Chef Repository</a>，配置与Chef服务器连接的身份认证信息。基本上，按照<a href="http://wiki.opscode.com/display/chef/Quick+Start#QuickStart-SettingUpTheUserEnvironment" target="_blank" rel="external">这个文档</a>来操作就可以了。</p><p>接下来要在EC2那台Fedora机器上安装Chef客户端。这也蛮简单，也有<a href="http://wiki.opscode.com/display/chef/Installation+with+RubyGems" target="_blank" rel="external">一个文档</a>。其实关键就是要把RubyGems升级到1.3.7以上，然后就可以“gem installchef”啦。装好之后执行一下“chef-client”，应该会报错，需要从本地环境拷贝/etc/chef下面的client.rb和validation.pem去Fedora机器上。</p><p>现在可以写程序咯～在ChefRepository下面的roles目录里建一个base.json文件。先不管是Rails服务器还是Django服务器，我的体面服务器必须满足一些基本条件，比如有GCC啦，有Git啦，之类的。所以我在base.json里这样描述我的体面服务器：</p><pre>{“name”: “base”,”default_attributes”: {“chef”: {“server_url”: “<a href="https://api.opscode.com/organizations/thoughtworkers&quot;,&quot;cache_path" target="_blank" rel="external">https://api.opscode.com/organizations/thoughtworkers&quot;,&quot;cache_path</a>“: “/var/chef/cache”,”backup_path”: “/var/chef/backup”,”validation_client_name”: “thoughtworkers-validator”,”run_path”: “/var/chef”}},”json_class”: “Chef::Role”,”run_list”: [“recipe[build-essential::default]”,”recipe[openssl::default]”,”recipe[chef::client]”,”recipe[chef::delete_validation]”,”recipe[git::default]”],”description”: “Basic Server”,”chef_type”: “role”,”override_attributes”: {}}</pre><p>然后涅…那台Fedora机器咋知道它自己应该有“base”这个角色呢？当然答案是它不知道。我得告诉它。<a href="http://wiki.opscode.com/display/chef/Knife" target="_blank" rel="external">Knife</a>是Chef的便利命令行工具。比如说，可以列出所有可管的节点（必须在Chef Repository目录下）：</p><pre>$ knife node list# 下面是输出回显[“ip-10-130-9-17.ap-southeast-1.compute.internal”,”jeffxiong3650”]</pre><p>有两台机器。下面这个是我自己的笔记本电脑，上面那个名字很长的就是在EC2的Fedora。我要让它知道，自己有“base”这个角色要扮演：</p><pre>$ knife node run_list add \ip-10-130-9-17.ap-southeast-1.compute.internal “role[base]”# 下面是输出回显{“run_list”: [“role[base]”]}</pre><p>好乖～现在ssh登录到Fedora上去，执行一把“chef-client”…体面的服务器就这样装好啦～试试git，没问题的说～嗯嗯，当然这只是第一步。接下来要配置好体面的Rails服务器才行呢。</p><p><em>（未完待续）</em></p>
+    </section>
+
+    <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style_32x32" style="height: 40px">
+    <a class="jiathis_button_tsina"></a>
+    <a class="jiathis_button_weixin"></a>
+    <a class="jiathis_button_douban"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis"
+       target="_blank"></a>
+</div>
+<script type="text/javascript">
+    var jiathis_config = {
+        summary: "",
+        shortUrl: false,
+        hideMore: false
+    }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code_mini/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+    
+</article>
+
+
+            <footer class="footer">
+    <span class="footer__copyright">&copy;
+        2011
+        Transparent Thoughts. All rights reserved.</span>
+</footer>
+        </div>
+    </div>
+
+    <!-- The main JavaScript file for Casper -->
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    <script src="/js/jquery.imagesloaded.min.js"></script>
+    <script src="/js/gallery.js"></script>
+    <script src="/js/jquery.githubRepoWidget.min.js"></script>
+    <script type="text/javascript"
+            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> 
+      MathJax.Hub.Config({ 
+        tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+    }); 
+
+    </script>
+
+    <!--kill ie6 -->
+    <!--[if IE 6]>
+    <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+    <![endif]-->
+
+    <!--  google analytics -->
+    <script>
+        // add your google analytics code here
+    </script>
+
+    <!-- totop -->
+    <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">
+        <a title="back to top"><img style="width:30px;height:30px;" src="/images/totop.png"/></a>
+    </div>
+    <script>
+        (function ($) {
+            var upperLimit = 100;
+            var scrollElem = $('#totop');
+            var scrollSpeed = 500;
+            scrollElem.hide();
+            $(window).scroll(function () {
+                var scrollTop = $(document).scrollTop();
+                if (scrollTop > upperLimit) {
+                    $(scrollElem).stop().fadeTo(300, 1); // fade back in
+                } else {
+                    $(scrollElem).stop().fadeTo(300, 0); // fade out
+                }
+            });
+            $(scrollElem).click(function () {
+                $('html, body').animate({scrollTop: 0}, scrollSpeed);
+                return false;
+            });
+        })(jQuery);
+    </script>
+
+    <!-- fancybox -->
+    
+    <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+    <script src="/fancybox/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript">
+        (function ($) {
+            $('.fancybox').fancybox();
+        })(jQuery);
+    </script>
+    
+
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-113927-4', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <!-- CNZZ Analytics -->
+    <script src="http://s4.cnzz.com/z_stat.php?id=1255092465&web_id=1255092465" language="JavaScript"></script>
+
+</body>
+</html>

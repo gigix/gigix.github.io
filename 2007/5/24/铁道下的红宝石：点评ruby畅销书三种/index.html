@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+        铁道下的红宝石：点评Ruby畅销书三种 | 透明思考
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+    <meta name="author" content="Jeff Xiong">
+    
+    
+    <meta name="description" content="对于Ruby这种语言，很多人都和我一样，是因为一个突然风靡全球的、号称能够极大提升web应用开发效率的、名叫Rails的web框架而顺带了解到的。在为Rails的神奇魔力所折服的同时，我们也常常心生疑惑：这种强大的力量究竟来自何方？如果换成Java、C#或是别的什么语言，一个web框架能否同样高效？除了这多少有些“虚”的思考之外，我们还常常在各大论坛上看到“应该如何学习Ruby”这样的问题——Ra">
+    
+
+    <meta name="description" content="对于Ruby这种语言，很多人都和我一样，是因为一个突然风靡全球的、号称能够极大提升web应用开发效率的、名叫Rails的web框架而顺带了解到的。在为Rails的神奇魔力所折服的同时，我们也常常心生疑惑：这种强大的力量究竟来自何方？如果换成Java、C#或是别的什么语言，一个web框架能否同样高效？除了这多少有些“虚”的思考之外，我们还常常在各大论坛上看到“应该如何学习Ruby”这样的问题——Ra">
+<meta property="og:type" content="article">
+<meta property="og:title" content="铁道下的红宝石：点评Ruby畅销书三种 | 透明思考">
+<meta property="og:url" content="http://gigix.thoughtworkers.org/2007/5/24/铁道下的红宝石：点评ruby畅销书三种/index.html">
+<meta property="og:site_name" content="透明思考">
+<meta property="og:description" content="对于Ruby这种语言，很多人都和我一样，是因为一个突然风靡全球的、号称能够极大提升web应用开发效率的、名叫Rails的web框架而顺带了解到的。在为Rails的神奇魔力所折服的同时，我们也常常心生疑惑：这种强大的力量究竟来自何方？如果换成Java、C#或是别的什么语言，一个web框架能否同样高效？除了这多少有些“虚”的思考之外，我们还常常在各大论坛上看到“应该如何学习Ruby”这样的问题——Ra">
+<meta property="og:updated_time" content="2015-11-11T07:46:01.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="铁道下的红宝石：点评Ruby畅销书三种 | 透明思考">
+<meta name="twitter:description" content="对于Ruby这种语言，很多人都和我一样，是因为一个突然风靡全球的、号称能够极大提升web应用开发效率的、名叫Rails的web框架而顺带了解到的。在为Rails的神奇魔力所折服的同时，我们也常常心生疑惑：这种强大的力量究竟来自何方？如果换成Java、C#或是别的什么语言，一个web框架能否同样高效？除了这多少有些“虚”的思考之外，我们还常常在各大论坛上看到“应该如何学习Ruby”这样的问题——Ra">
+
+    
+    <link rel="alternate" href="/atom.xml" title="透明思考" type="application/atom+xml">
+    
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css" type="text/css">
+
+    <script src="/js/jquery.min.js"></script>
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+<header class="panel-cover panel-cover--collapsed">
+
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">透明思考</a></h1>
+
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">
+          Transparent Thoughts
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">Blog</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+------------------------------ -->
+
+<nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+
+  <!-- Github -->
+  <li class="navigation__item">
+    <a href="https://github.com/gigix" title="Gigix on GitHub" target="_blank">
+      <i class='icon icon-social-github'></i>
+      <span class="label">GitHub</span>
+    </a>
+  </li>
+
+  </ul>
+</nav>
+
+          <script>
+    function doSearch() {
+        var keyword = $('#keyword').val();
+        if (keyword.trim() === '') {
+            window.location.href = 'http://gigix.thoughtworkers.org/#blog';
+        } else {
+            window.open('http://www.google.com/search?q=site:gigix.thoughtworkers.org+' + keyword);
+        }
+    }
+</script>
+
+<div class="search">
+    <input id="keyword" type="text"/>
+    <input type="button" value="Search" class="btn" onclick="doSearch()"/>
+</div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+    <header class="post-header">
+
+        
+        <div class="post-meta">
+            <time datetime="5月 24 2007"
+                  class="post-meta__date date">5月 24 2007</time>
+            &#8226;
+
+        <span class="post-meta__tags tags">
+
+            <font class="categories">
+                
+            </font>
+            
+
+        </span>
+        </div>
+        
+
+        <h1 class="post-title">铁道下的红宝石：点评Ruby畅销书三种</h1>
+    </header>
+
+    <section class="post">
+        <p><font face="DejaVu Sans"><font color="#000000"><font size="2">对于</font></font></font><font color="#000000"><font size="2">Ruby</font></font><font face="DejaVu Sans"><font color="#000000"><font size="2">这种语言，很多人都和我一样，是因为一个突然风靡全球的、号称能够极大提升</font></font></font><font color="#000000"><font size="2">web</font></font><font face="DejaVu Sans"><font color="#000000"><font size="2">应用开发效率的、名叫</font></font></font><font color="#000000"><font size="2">Rails</font></font><font face="DejaVu Sans"><font color="#000000"><font size="2">的</font></font></font><font color="#000000"><font size="2">web</font></font><font face="DejaVu Sans"><font color="#000000"><font size="2">框架而顺带了解到的。在为</font></font></font><font color="#000000"><font size="2">Rails</font></font><font face="DejaVu Sans"><font color="#000000"><font size="2">的神奇魔力所折服的同时，我们也常常心生疑惑：这种强大的力量究竟来自何方？如果换成</font></font></font><font color="#000000"><font size="2">Java</font></font><font face="DejaVu Sans"><font color="#000000"><font size="2">、</font></font></font><font color="#000000"><font size="2">C#</font></font><font face="DejaVu Sans"><font color="#000000"><font size="2">或是别的什么语言，一个</font></font></font><font color="#000000"><font size="2">web</font></font><font face="DejaVu Sans"><font color="#000000"><font size="2">框架能否同样高效？除了这多少有些“虚”的思考之外，我们还常常在各大论坛上看到“应该如何学习</font></font></font><font color="#000000"><font size="2">Ruby”</font></font><font face="DejaVu Sans"><font color="#000000"><font size="2">这样的问题——</font></font></font><font color="#000000"><font size="2">Rails</font></font><font face="DejaVu Sans"><font color="#000000"><font size="2">尽管方便易用，但要真正穷其千里目，仍须在</font></font></font><font color="#000000"><font size="2">Ruby</font></font><font face="DejaVu Sans"><font color="#000000"><font size="2">语言这里更上一层楼才行。</font></font></font></p><p><font face="DejaVu Sans"><font color="#000000"><font size="2">好在书中自有黄金屋。不论是要深入探索</font></font></font><font color="#000000"><font size="2">Ruby</font></font><font face="DejaVu Sans"><font color="#000000"><font size="2">语言的奥妙之处，还是只想在工作中遇到问题时查找参考，都有好书可以提供帮助。在</font></font></font><font color="#000000"><font size="2">Amazon</font></font><font face="DejaVu Sans"><font color="#000000"><font size="2">网站上，抛开专讲</font></font></font><font color="#000000"><font size="2">Rails</font></font><font face="DejaVu Sans"><font color="#000000"><font size="2">框架的</font></font></font><font color="#000000"><font size="2">Agile Web Development with Rails</font></font><font face="DejaVu Sans"><font color="#000000"><font size="2">之外，销量排名前三位的</font></font></font><font color="#000000"><font size="2">Ruby</font></font><font face="DejaVu Sans"><font color="#000000"><font size="2">图书分别是</font></font></font><font color="#000000"><font size="2">Programming Ruby</font></font><font face="DejaVu Sans"><font color="#000000"><font size="2">（第二版）、</font></font></font><font color="#000000"><font size="2">Ruby Cookbook</font></font><font face="DejaVu Sans"><font color="#000000"><font size="2">和</font></font></font><font color="#000000"><font size="2">The Ruby Way</font></font><font face="DejaVu Sans"><font color="#000000"><font size="2">（第二版）。</font></font></font></p><h1 class="western"><font face="Bitstream Vera Sans"><font color="#000000"><font size="3"><b>镐头书：</b></font></font></font><font color="#000000"><font face="Bitstream Vera Sans, serif"><font size="3"><b>Programming Ruby</b></font></font></font><font face="Bitstream Vera Sans"><font color="#000000"><font size="3"><b>（第二版）</b></font></font></font></h1><p><font face="DejaVu Sans"><font color="#000000"><font size="2">由于封面上赫然画着一柄丁字镐，这本</font></font></font><font color="#000000"><font size="2">Programming Ruby</font></font><font face="DejaVu Sans"><font color="#000000"><font size="2">也被</font></font></font><font color="#000000"><font size="2">Ruby</font></font><font face="DejaVu Sans"><font color="#000000"><font size="2">程序员们亲切地昵称为“镐头书”——和历史上大名鼎鼎的“龙书”、“紫皮书”一样，拥有一个独特的昵称本身就证明了这本书的地位。虽然</font></font></font><font color="#000000"><font size="2">Ruby</font></font><font face="DejaVu Sans"><font color="#000000"><font size="2">语言的作者</font></font></font><font color="#000000"><font size="2">Matsumoto</font></font><font face="DejaVu Sans"><font color="#000000"><font size="2">并没有参与撰写此书，但</font></font></font><font color="#000000"><font size="2">Dave Thomas</font></font><font face="DejaVu Sans"><font color="#000000"><font size="2">和</font></font></font><font color="#000000"><font size="2">Andy Hunt</font></font><font face="DejaVu Sans"><font color="#000000"><font size="2">这两位“用本主义程序员”的大名也足以撑起一部经典教材了。</font></font></font></p><p><font color="#000000"><font face="DejaVu Sans"><font size="2"><font color="#000000"><font size="2">所以这本书就是</font></font></font></font><font face="Verdana, sans-serif"><font size="2"><font color="#000000"><font size="2">Ruby</font></font></font></font><font face="DejaVu Sans"><font size="2"><font color="#000000"><font size="2">的经典教材。关于</font></font></font></font><font face="Verdana, sans-serif"><font size="2"><font color="#000000"><font size="2">Ruby</font></font></font></font><font face="DejaVu Sans"><font size="2"><font color="#000000"><font size="2">的基本语法和常用工具，书中第一部分和第二部分做了详细的介绍。第三部分“</font></font></font></font><font face="Verdana, sans-serif"><font size="2"><font color="#000000"><font size="2">Ruby Crystallized”</font></font></font></font><font face="DejaVu Sans"><font size="2"><font color="#000000"><font size="2">更加阐述了</font></font></font></font><font face="Verdana, sans-serif"><font size="2"><font color="#000000"><font size="2">Ruby</font></font></font></font><font face="DejaVu Sans"><font size="2"><font color="#000000"><font size="2">语言的一些细节和设计理念，其中第</font></font></font></font><font face="Verdana, sans-serif"><font size="2"><font color="#000000"><font size="2">23</font></font></font></font><font face="DejaVu Sans"><font size="2"><font color="#000000"><font size="2">章“</font></font></font></font><font face="Verdana, sans-serif"><font size="2"><font color="#000000"><font size="2">Duck Typing”</font></font></font></font><font face="DejaVu Sans"><font size="2"><font color="#000000"><font size="2">是刚从</font></font></font></font><font face="Verdana, sans-serif"><font size="2"><font color="#000000"><font size="2">Java</font></font></font></font><font face="DejaVu Sans"><font size="2"><font color="#000000"><font size="2">或者</font></font></font></font><font face="Verdana, sans-serif"><font size="2"><font color="#000000"><font size="2">.NET</font></font></font></font><font face="DejaVu Sans"><font size="2"><font color="#000000"><font size="2">平台走出来的读者不可错过的，因为对于类型与契约的理解、对于类与类型的理解，正是</font></font></font></font><font face="Verdana, sans-serif"><font size="2"><font color="#000000"><font size="2">Ruby</font></font></font></font><font face="DejaVu Sans"><font size="2"><font color="#000000"><font size="2">这种动态语言与</font></font></font></font><font face="Verdana, sans-serif"><font size="2"><font color="#000000"><font size="2">Java/C#</font></font></font></font><font face="DejaVu Sans"><font size="2"><font color="#000000"><font size="2">等静态语言最大的区别之一。随后的第四部分提供了</font></font></font></font><font face="Verdana, sans-serif"><font size="2"><font color="#000000"><font size="2">Ruby</font></font></font></font><font face="DejaVu Sans"><font size="2"><font color="#000000"><font size="2">基础类库的速查手册。</font></font></font></font></font></p><p><font color="#000000"><font face="DejaVu Sans"><font size="2"><font color="#000000"><font size="2">身为“用本主义程序员”的两位作者并非浪得虚名：这本</font></font></font></font><font face="Verdana, sans-serif"><font size="2"><font color="#000000"><font face="Bitstream Vera Sans, serif"><font size="2">Programming Ruby</font></font></font></font></font><font face="DejaVu Sans"><font size="2"><font color="#000000"><font size="2">虽然不是一本称职的参考手册，却足够帮助一个初学者步入</font></font></font></font><font face="Verdana, sans-serif"><font size="2"><font color="#000000"><font face="Bitstream Vera Sans, serif"><font size="2">Ruby</font></font></font></font></font><font face="DejaVu Sans"><font size="2"><font color="#000000"><font size="2">世界而不致误入歧途，并且能够在很少见的一些情况下——譬如说忘了</font></font></font></font><font face="Verdana, sans-serif"><font size="2"><font color="#000000"><font face="Bitstream Vera Sans, serif"><font size="2">yield</font></font></font></font></font><font face="DejaVu Sans"><font size="2"><font color="#000000"><font size="2">的用法——给有经验的</font></font></font></font><font face="Verdana, sans-serif"><font size="2"><font color="#000000"><font face="Bitstream Vera Sans, serif"><font size="2">Ruby</font></font></font></font></font><font face="DejaVu Sans"><font size="2"><font color="#000000"><font size="2">程序员提供帮助。在我看来，这也就足够奠定它作为经典教材的地位了。</font></font></font></font></font></p><h1 class="western" align="left"><font face="Bitstream Vera Sans"><font color="#000000"><font size="3"><b>不可读，不可不读：</b></font></font></font><font color="#000000"><font face="Bitstream Vera Sans, serif"><font size="3"><b>Ruby Cookbook</b></font></font></font></h1><p><font color="#000000"><font color="#000000">“</font><font face="DejaVu Sans"><font size="2"><font color="#000000"><font size="2">写作这本书是为了帮你节约时间。人们常说‘时间就是金钱’，没错，不过别忘了，时间还是你的生命。我们有限的生命最好是用于创造有趣的新事物，而不是跟自己的错误较劲，或是试图解决那些早已有人解决过的问题。我们花了不少时间来写这本书，只希望它帮助所有读者节约的时间能够值回票价。”</font></font></font></font></font></p><p><font color="#000000"><font face="DejaVu Sans"><font size="2"><font color="#000000"><font size="2">这段话出自</font></font></font></font><font face="Verdana, sans-serif"><font size="2"><font color="#000000"><font face="Bitstream Vera Sans, serif"><font size="2">Lucas Carlson</font></font></font></font></font><font face="DejaVu Sans"><font size="2"><font color="#000000"><font size="2">和</font></font></font></font><font face="Verdana, sans-serif"><font size="2"><font color="#000000"><font face="Bitstream Vera Sans, serif"><font size="2">Leonard Richardson</font></font></font></font></font><font face="DejaVu Sans"><font size="2"><font color="#000000"><font size="2">两位作者为</font></font></font></font><font face="Verdana, sans-serif"><font size="2"><font color="#000000"><font face="Bitstream Vera Sans, serif"><font size="2">Ruby Cookbook</font></font></font></font></font><font face="DejaVu Sans"><font size="2"><font color="#000000"><font size="2">所写的前言。说得没错。人们把太多的时间浪费在实现通用算法、做别人已经做过的事、调试错误和重复劳动上；在想要避免重复劳动时，他们又把太多的时间浪费在搜索、试用和学习别人提供的库上。就像两位作者所说，这本</font></font></font></font><font face="Verdana, sans-serif"><font size="2"><font color="#000000"><font face="Bitstream Vera Sans, serif"><font size="2">Ruby Cookbook</font></font></font></font></font><font face="DejaVu Sans"><font size="2"><font color="#000000"><font size="2">的问世正是为了帮助人们节省这些时间。</font></font></font></font></font></p><p><font color="#000000"><font face="DejaVu Sans"><font size="2"><font color="#000000"><font size="2">而它也毫无疑问能够兑现自己的承诺。这本</font></font></font></font><font face="Verdana, sans-serif"><font size="2"><font color="#000000"><font face="Bitstream Vera Sans, serif"><font size="2">Cookbook</font></font></font></font></font><font face="DejaVu Sans"><font size="2"><font color="#000000"><font size="2">涵盖的内容从字符串处理到数组与</font></font></font></font><font face="Verdana, sans-serif"><font size="2"><font color="#000000"><font face="Bitstream Vera Sans, serif"><font size="2">Hash</font></font></font></font></font><font face="DejaVu Sans"><font size="2"><font color="#000000"><font size="2">的用法、从代码块到元编程、从文件读写到数据库持久化、从互联网服务到分布式</font></font></font></font><font face="Verdana, sans-serif"><font size="2"><font color="#000000"><font face="Bitstream Vera Sans, serif"><font size="2">Ruby</font></font></font></font></font><font face="DejaVu Sans"><font size="2"><font color="#000000"><font size="2">程序设计……简而言之，</font></font></font></font><font face="Verdana, sans-serif"><font size="2"><font color="#000000"><font face="Bitstream Vera Sans, serif"><font size="2">Ruby</font></font></font></font></font><font face="DejaVu Sans"><font size="2"><font color="#000000"><font size="2">程序设计中的各种常见问题在这里都有所提及。除了编程任务之外，这本书还包括了测试、调试、性能优化、打包发布、日常任务自动化等内容。说得夸张一点，也许</font></font></font></font><font face="Verdana, sans-serif"><font size="2"><font color="#000000"><font face="Bitstream Vera Sans, serif"><font size="2">Ruby</font></font></font></font></font><font face="DejaVu Sans"><font size="2"><font color="#000000"><font size="2">程序员们遇到问题时第一个咨询的对象不应该是</font></font></font></font><font face="Verdana, sans-serif"><font size="2"><font color="#000000"><font face="Bitstream Vera Sans, serif"><font size="2">Google</font></font></font></font></font><font face="DejaVu Sans"><font size="2"><font color="#000000"><font size="2">，而是这本</font></font></font></font><font face="Verdana, sans-serif"><font size="2"><font color="#000000"><font face="Bitstream Vera Sans, serif"><font size="2">Ruby Cookbook</font></font></font></font></font><font face="DejaVu Sans"><font size="2"><font color="#000000"><font size="2">。</font></font></font></font></font></p><p><font color="#000000"><font face="DejaVu Sans"><font size="2"><font color="#000000"><font size="2">但——在我个人看来——它有一个致命的缺点：太过厚重。涵盖如此大量的内容，代价就是两位作者把这本书写到了近千页之厚。当然我们并不是没读过厚达千余页的大书，但</font></font></font></font><font face="Verdana, sans-serif"><font size="2"><font color="#000000"><font face="Bitstream Vera Sans, serif"><font size="2">Ruby</font></font></font></font></font><font face="DejaVu Sans"><font size="2"><font color="#000000"><font size="2">毕竟不是</font></font></font></font><font face="Verdana, sans-serif"><font size="2"><font color="#000000"><font face="Bitstream Vera Sans, serif"><font size="2">C++</font></font></font></font></font><font face="DejaVu Sans"><font size="2"><font color="#000000"><font size="2">，如何期望那些满怀激情的</font></font></font></font><font face="Verdana, sans-serif"><font size="2"><font color="#000000"><font face="Bitstream Vera Sans, serif"><font size="2">web 2.0</font></font></font></font></font><font face="DejaVu Sans"><font size="2"><font color="#000000"><font size="2">创业者捧着一本鸿篇巨著正襟危坐孜孜苦学？所以，也许你应该把这本书放在案头，遇到问题时立即翻查，但你很可能不会有兴趣去细细读它。</font></font></font></font></font></p><h1 class="western" align="left"><font face="Bitstream Vera Sans"><font color="#000000"><font size="3"><b>解说</b></font></font></font><font color="#000000"><font face="Bitstream Vera Sans, serif"><font size="3"><b>Ruby</b></font></font></font><font face="Bitstream Vera Sans"><font color="#000000"><font size="3"><b>之道：</b></font></font></font><font color="#000000"><font face="Bitstream Vera Sans, serif"><font size="3"><b>The Ruby Way</b></font></font></font></h1><p><font color="#000000"><font face="DejaVu Sans"><font size="2"><font color="#000000"><font size="2">在</font></font></font></font><font face="Verdana, sans-serif"><font size="2"><font color="#000000"><font face="Bitstream Vera Sans, serif"><font size="2">Rails</font></font></font></font></font><font face="DejaVu Sans"><font size="2"><font color="#000000"><font size="2">变得炙手可热之后，我不止一次地听到这样一种——不无醋意的——论调：只要学习</font></font></font></font><font face="Verdana, sans-serif"><font size="2"><font color="#000000"><font face="Bitstream Vera Sans, serif"><font size="2">Rails</font></font></font></font></font><font face="DejaVu Sans"><font size="2"><font color="#000000"><font size="2">框架的设计思想，用别的语言（譬如</font></font></font></font><font face="Verdana, sans-serif"><font size="2"><font color="#000000"><font face="Bitstream Vera Sans, serif"><font size="2">Java</font></font></font></font></font><font face="DejaVu Sans"><font size="2"><font color="#000000"><font size="2">）也能够做出同样优雅、同样高效的</font></font></font></font><font face="Verdana, sans-serif"><font size="2"><font color="#000000"><font face="Bitstream Vera Sans, serif"><font size="2">web</font></font></font></font></font><font face="DejaVu Sans"><font size="2"><font color="#000000"><font size="2">框架。其实正如维特根斯坦曾说的，语言本身已经为思想划下了界限。选择一种语言远远不止是选择它的语法，还意味着选择其中的模式、惯用法、套路和思维方式。或者说得更玄一点，你不仅要接受它的“器”，更重要的是掌握它的“道”。</font></font></font></font></font></p><p><font face="DejaVu Sans"><font color="#000000"><font size="2">但“道”是很难形容的。“我能够感受到它，但未曾尝试过用语言来解释它。这太难了，即使是用我的母语日语。但</font></font></font><font color="#000000"><font size="2">Hal Fulton</font></font><font face="DejaVu Sans"><font color="#000000"><font size="2">这样做了，且第一次就做得很不错。由于得到了</font></font></font><font color="#000000"><font size="2">Ruby</font></font><font face="DejaVu Sans"><font color="#000000"><font size="2">社区许多人的帮助，他的第二次尝试更出色。”</font></font></font><font color="#000000"><font size="2">Ruby</font></font><font face="DejaVu Sans"><font color="#000000"><font size="2">语言的创造者</font></font></font><font color="#000000"><font size="2">Matsumoto</font></font><font face="DejaVu Sans"><font color="#000000"><font size="2">如是说。从篇章选材来说，</font></font></font><font color="#000000"><font size="2">Fulton</font></font><font face="DejaVu Sans"><font color="#000000"><font size="2">所著的这本</font></font></font><font color="#000000"><font size="2">The Ruby Way</font></font><font face="DejaVu Sans"><font color="#000000"><font size="2">与前面介绍的</font></font></font><font color="#000000"><font size="2">Ruby Cookbook</font></font><font face="DejaVu Sans"><font color="#000000"><font size="2">大同小异：无非是各方面的常见问题及其解决方案。不同之处在于：它不仅讲解如何解决这些问题，还揭示出解决方案背后隐藏着的</font></font></font><font color="#000000"><font size="2">Ruby</font></font><font face="DejaVu Sans"><font color="#000000"><font size="2">的思维方式——</font></font></font><font color="#000000"><font size="2">Ruby</font></font><font face="DejaVu Sans"><font color="#000000"><font size="2">之道。这也让这本书——尽管其厚度并不逊于</font></font></font><font color="#000000"><font size="2">Ruby Cookbook——</font></font><font face="DejaVu Sans"><font color="#000000"><font size="2">有了更多的可读性。</font></font></font></p><p><font face="DejaVu Sans"><font color="#000000"><font size="2">作者把“</font></font></font><font color="#000000"><font size="2">Ruby</font></font><font face="DejaVu Sans"><font color="#000000"><font size="2">之道”分为两部分：</font></font></font><font color="#000000"><font size="2">Ruby</font></font><font face="DejaVu Sans"><font color="#000000"><font size="2">设计的哲学，以及“如何使用</font></font></font><font color="#000000"><font size="2">Ruby”</font></font><font face="DejaVu Sans"><font color="#000000"><font size="2">的哲学。</font></font></font><font color="#000000"><font size="2">Ruby</font></font><font face="DejaVu Sans"><font color="#000000"><font size="2">语言具有某种“无名特质”，其中最大的特点就是“简单”：它让程序员们能够以更简单的方式解决问题。但</font></font></font><font color="#000000"><font size="2">Ruby</font></font><font face="DejaVu Sans"><font color="#000000"><font size="2">并不是一种简单的语言——简直可以说它“相当复杂”。那么，这种复杂的语言是如何让使用者的生活反而变得简单的？了解其中的奥妙，不仅有益于快速掌握</font></font></font><font color="#000000"><font size="2">Ruby</font></font><font face="DejaVu Sans"><font color="#000000"><font size="2">语言，对于读者今后的软件设计思路也不无裨益。带着这个问题来阅读这本</font></font></font><font color="#000000"><font size="2">The Ruby Way</font></font><font face="DejaVu Sans"><font color="#000000"><font size="2">，相信读者能够更好地看出作者的良苦用心。</font></font></font></p><p><font face="DejaVu Sans"><font color="#000000"><font size="2">作为“</font></font></font><font color="#000000"><font size="2">Web 2.0</font></font><font face="DejaVu Sans"><font color="#000000"><font size="2">时代”的产物，这本书的第二版相比第一版也加入了很多新鲜内容，例如测试驱动、开发工具、社区介绍等等。此外</font></font></font><font color="#000000"><font size="2">Rails</font></font><font face="DejaVu Sans"><font color="#000000"><font size="2">的作者</font></font></font><font color="#000000"><font size="2">David Heinemeier Hansson</font></font><font face="DejaVu Sans"><font color="#000000"><font size="2">也指出：本书在阐述元编程，很多</font></font></font><font color="#000000"><font size="2">Rail</font></font><font face="DejaVu Sans"><font color="#000000"><font size="2">理念的灵感都来自本书的第一版，尤其是现为第</font></font></font><font color="#000000"><font size="2">11</font></font><font face="DejaVu Sans"><font color="#000000"><font size="2">章的内容。不过如果你恰好是刚开始接触</font></font></font><font color="#000000"><font size="2">Ruby</font></font><font face="DejaVu Sans"><font color="#000000"><font size="2">，我强烈建议你从第</font></font></font><font color="#000000"><font size="2">14</font></font><font face="DejaVu Sans"><font color="#000000"><font size="2">章“脚本编程与系统管理”读起，因为学习一种编程语言的最佳途径就是从现在开始用它，每天都用。</font></font></font></p><p lang="en-US" align="center"><font color="#000000"><font size="2"><em> </em> *</font></font></p><p><font face="DejaVu Sans"><font color="#000000"><font size="2">诚如</font></font></font><font color="#000000"><font size="2">Martin Fowler</font></font><font face="DejaVu Sans"><font color="#000000"><font size="2">所说，</font></font></font><font color="#000000"><font size="2">Ruby</font></font><font face="DejaVu Sans"><font color="#000000"><font size="2">是一种神奇的语言。不论你是被这种神奇的语言本身所吸引，还是为了赶上</font></font></font><font color="#000000"><font size="2">Rails</font></font><font face="DejaVu Sans"><font color="#000000"><font size="2">的热潮而学习</font></font></font><font color="#000000"><font size="2">Ruby</font></font><font face="DejaVu Sans"><font color="#000000"><font size="2">语言，本文所介绍的三本书应该就能满足你的需要。其实除了</font></font></font><font color="#000000"><font size="2">Rails</font></font><font face="DejaVu Sans"><font color="#000000"><font size="2">之外，</font></font></font><font color="#000000"><font size="2">Ruby</font></font><font face="DejaVu Sans"><font color="#000000"><font size="2">的世界里还有众多的“红宝石”闪烁着迷人的光芒，但愿这几本书能帮你发现更多“铁道下的红宝石”。最后，就祝你阅读愉快、编程愉快吧。</font></font></font></p>
+    </section>
+
+    <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style_32x32" style="height: 40px">
+    <a class="jiathis_button_tsina"></a>
+    <a class="jiathis_button_weixin"></a>
+    <a class="jiathis_button_douban"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis"
+       target="_blank"></a>
+</div>
+<script type="text/javascript">
+    var jiathis_config = {
+        summary: "",
+        shortUrl: false,
+        hideMore: false
+    }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code_mini/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+    
+</article>
+
+
+            <footer class="footer">
+    <span class="footer__copyright">&copy;
+        2007
+        Transparent Thoughts. All rights reserved.</span>
+</footer>
+        </div>
+    </div>
+
+    <!-- The main JavaScript file for Casper -->
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    <script src="/js/jquery.imagesloaded.min.js"></script>
+    <script src="/js/gallery.js"></script>
+    <script src="/js/jquery.githubRepoWidget.min.js"></script>
+    <script type="text/javascript"
+            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> 
+      MathJax.Hub.Config({ 
+        tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+    }); 
+
+    </script>
+
+    <!--kill ie6 -->
+    <!--[if IE 6]>
+    <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+    <![endif]-->
+
+    <!--  google analytics -->
+    <script>
+        // add your google analytics code here
+    </script>
+
+    <!-- totop -->
+    <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">
+        <a title="back to top"><img style="width:30px;height:30px;" src="/images/totop.png"/></a>
+    </div>
+    <script>
+        (function ($) {
+            var upperLimit = 100;
+            var scrollElem = $('#totop');
+            var scrollSpeed = 500;
+            scrollElem.hide();
+            $(window).scroll(function () {
+                var scrollTop = $(document).scrollTop();
+                if (scrollTop > upperLimit) {
+                    $(scrollElem).stop().fadeTo(300, 1); // fade back in
+                } else {
+                    $(scrollElem).stop().fadeTo(300, 0); // fade out
+                }
+            });
+            $(scrollElem).click(function () {
+                $('html, body').animate({scrollTop: 0}, scrollSpeed);
+                return false;
+            });
+        })(jQuery);
+    </script>
+
+    <!-- fancybox -->
+    
+    <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+    <script src="/fancybox/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript">
+        (function ($) {
+            $('.fancybox').fancybox();
+        })(jQuery);
+    </script>
+    
+
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-113927-4', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <!-- CNZZ Analytics -->
+    <script src="http://s4.cnzz.com/z_stat.php?id=1255092465&web_id=1255092465" language="JavaScript"></script>
+
+</body>
+</html>

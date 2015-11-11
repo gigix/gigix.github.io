@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+        page 7 | 透明思考
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+    <meta name="author" content="Jeff Xiong">
+    
+    
+
+    <meta name="description">
+<meta property="og:type" content="website">
+<meta property="og:title" content="page 7 | 透明思考">
+<meta property="og:url" content="http://gigix.thoughtworkers.org/page/7/index.html">
+<meta property="og:site_name" content="透明思考">
+<meta property="og:description">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="page 7 | 透明思考">
+<meta name="twitter:description">
+
+    
+    <link rel="alternate" href="/atom.xml" title="透明思考" type="application/atom+xml">
+    
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css" type="text/css">
+
+    <script src="/js/jquery.min.js"></script>
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+<header class="panel-cover panel-cover--collapsed">
+
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">透明思考</a></h1>
+
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">
+          Transparent Thoughts
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">Blog</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+------------------------------ -->
+
+<nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+
+  <!-- Github -->
+  <li class="navigation__item">
+    <a href="https://github.com/gigix" title="Gigix on GitHub" target="_blank">
+      <i class='icon icon-social-github'></i>
+      <span class="label">GitHub</span>
+    </a>
+  </li>
+
+  </ul>
+</nav>
+
+          <script>
+    function doSearch() {
+        var keyword = $('#keyword').val();
+        if (keyword.trim() === '') {
+            window.location.href = 'http://gigix.thoughtworkers.org/#blog';
+        } else {
+            window.open('http://www.google.com/search?q=site:gigix.thoughtworkers.org+' + keyword);
+        }
+    }
+</script>
+
+<div class="search">
+    <input id="keyword" type="text"/>
+    <input type="button" value="Search" class="btn" onclick="doSearch()"/>
+</div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+
+   <!-- do nothing -->
+
+
+<div class="main-post-list">
+    <ol class="post-list">
+    
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2013/3/8/javaee-best-practices-2/" title="link to 都是为了半夜能提交（二）">都是为了半夜能提交（二）</a></h2>
+
+      <p class="excerpt">
+        <p>项目里会集成外部的web services，怎么测试？当然最不费脑子的做法就是假装它没什么特别，该怎么写测试还怎么写测试。但这么做的结果就是一大堆测试都会真的去调用webservices，并且至少造成这么几个问题：</p><ol><li><strong>测试慢</strong>。带着web services跑测试，测试的速度会降低好几个数量级。</li><li><strong>测试不稳定</strong>。一旦有个service挂掉，你自己的build就会跟着挂掉。</li><li><strong>测试不易重复</strong>。比如有个service是用来创建用户的，你怎么办？每次跑build创建一个新用户？还是创建完马上删掉？如果删除出错怎么办？</li></ol><p>所以这是不行的。</p><p>我们先站在集成点外来看其他程序怎么使用集成点。显然最终我们会把一个web service包装成一个Java方法。比如“创建用户”这个service最终会体现成这样：</p><blockquote>public interface IdentityService {<br>void createUser(Customer customer);<br>…</blockquote><p>那么使用这个service的所有代码都应该通过<a href="http://martinfowler.com/articles/injection.html" target="_blank" rel="external">依赖注入</a>得到实现IdentityService接口的一个对象，因此这些地方的测试可以很简单地注入一个mock的IdentityService对象，不需要依赖真正的webservice。主要需要看的，还是集成点内部的测试。</p><p>集成点内（也就是IdentityService.createUser的实现）实际上有以下几部分逻辑：</p><ol><li><strong>确定服务地址</strong>。不同的服务方法通常位于不同的URL、接受不同的HTTP方法（GET、POST或PUT）。</li><li><strong>参数转换</strong>。把方法参数转换成service需要的参数，可能是（但不限于）XML文档或URL参数。</li><li><strong>执行网络访问</strong>。朝向步骤（1）确定的服务地址，发送步骤（2）得到的参数，拿回一个HTTP应答。</li><li><strong>解析HTTP应答</strong>。HTTP应答通常包含两部分：HTTP状态码（例如“200<span class="caps">SUCCESS</span>”或者“404<span class="caps">NOT FOUND</span>”），以及应答正文（不一定有），有时还会在HTTP头或者Cookie中携带信息。要把这些信息转换成服务方法调用的结果（函数返回值、给参数传入的对象填充值、或者抛出异常）。</li></ol><p>可以看到，真正与外部web services打交道的其实只有步骤（3）而已。并且步骤（3）所需的程序基本上可以简化地描述为：</p><blockquote>public class EndPoint {<br>public Response get(String url);<br>public Response post(String url, String requestBody);<br>public Response put(String url, String requestBody);<br>}</blockquote><p>如此而已。其中Response类包含以下信息：</p><blockquote>class Response {<br>private int statusCode;<br>private String body;</blockquote><p>请注意：从EndPoint的方法签名可以看到，这里的方法与真实的web services的请求/应答格式是<strong>毫无关系</strong>的。它所做的就是朝一个URL发送一个请求、拿回应答。至于请求正文是什么格式、应答正文是什么格式、是XML还是JSON，它<strong>完全不关心</strong>。换句话说，对唯一的这个产生网络访问的类的测试，第一不需要访问真正的web services，第二不需要考虑真正web services的请求/应答协议格式。这个发现对于我们的测试策略非常有价值。</p><p><em>（今天讲了集成点的结构，并着重考察了需要执行网络访问的EndPoint类。下一篇就开始讲测试策略。）</em></p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="3月 8 2013" class="post-list__meta--date date">3月 8 2013</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2013/3/6/javaee-best-practices/" title="link to 都是为了半夜能提交（一）">都是为了半夜能提交（一）</a></h2>
+
+      <p class="excerpt">
+        <p></p><p>这是一个典型的JavaEE项目：SpringMVC，Maven；需要集成三个外部系统。除了我之外，就是两个嫩得不行的小孩。从一开始我就知道，我必须把规矩定好，不然再简单的东西新手们也能把自己玩死。大部分规矩还是老规矩，比如<a href="http://dreamhead.blogbus.com/logs/127864877.html" target="_blank" rel="external">测试覆盖率100%</a>，当然CheckStyle啦什么的就不用说了。</p><p>但是这个项目有个特别的trick：要集成的三个外部系统，有两个一到晚上（澳洲的晚上，北京时间也就6点来钟）就歇菜了。问了客户的人，人家说是他们依赖的某系统固定歇菜周期，具体是怎样还得花工夫去找。总之这个造成的结果就是，过了北京时间6点来钟就不能提交代码了，因为一提交build就会红，因为跟那两个系统集成的测试都会挂。</p><p>虽然说我们build的时间一直就不长（没有超过三分钟），但是我每次看见跑一堆跟依赖系统连接的集成测试就觉得心里不爽；再加上晚上不能提交代码，这就更加不爽了。我白天乱七八糟的破事太多，写会儿代码就会被打断，经常得到了晚上才有大块时间集中干点事，这一家伙晚上不让提交代码，还不把我憋死啊。</p><p>所以我的目标是：我要半夜也能提交代码！</p><p>我是有具体办法的。跟依赖系统连接的集成测试，其实只要每天跑一次就行了，毕竟那些外部系统接口很稳定不会怎么变。把集成测试拿掉之后，所有我自己程序里的逻辑应该不再依赖项目之外的任何东西。这样的测试跑起来又快，又不会因为外部依赖而变得不稳定，那我就可以半夜写代码了~</p><p><em>接下来我要讲的内容：</em></p><ul><li>集成点的测试策略</li><li>没有外部依赖的开发环境</li><li>如何达到100%测试覆盖率</li><li>重构你的代码（和测试代码）</li></ul><p></p>
+
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="3月 6 2013" class="post-list__meta--date date">3月 6 2013</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2013/2/17/four-lessons-from-software-industry/" title="link to 传统行业向软件业学四招">传统行业向软件业学四招</a></h2>
+
+      <p class="excerpt">
+        <p>这是来自McKinsey Quarterly的一篇文章，叫《<a href="http://www.mckinseyquarterly.com/Competing_in_a_digital_world_Four_lessons_from_the_software_industry_3058" target="_blank" rel="external">数字世界里的竞争：跟软件业学四招</a>》，顾名思义，是给传统行业（我好喜欢这个充满优越感的词啊~）的老板们讲：你们这些土人呢，现在进入一个软件主宰的世界了，你们要跟软件业的聪明人们学。学什么呢？多了你们也记不住，先学个四条吧。</p><p><img src="http://gigix.thoughtworkers.org/assets/2013/2/17/teacher_classroom.jpg" alt=""></p><ol><li><strong>从做产品转向做平台</strong>。别老想着做自己的产品，多想想怎么营造生态系统，带上别的玩家一起玩。</li><li><strong>创造新的商业模式</strong>。除了一次过的产品销售，还有什么别的、最好是细水长流的方式收钱？</li><li><strong>加快反馈周期</strong>。怎么加强和用户的联系，怎么在产品中体现对用户偏好的关照？</li><li><strong>打造敏捷组织</strong>。怎么让你的企业变得更扁平、更灵活、更快速？</li></ol><p>这四个点背后是有着一个完整体系的。这里的大背景是制造业的衰落。如麦克卢汉所说，新技术在强化（amplify）一种能力的同时，也会麻木（numb）这种能力。在制造业这里的情况是，IT技术使得制造业前所未有地自动化并且无远弗届地接触到消费者，同时也使制造业（捎带着零售业）的利润率低至极限。产品本身已经没多大盈利空间，更多地成了一个承载服务的载体。所以这是第二条“创造新的商业模式”的由来：靠卖产品本身赚钱的时代已经过去了，连苹果都在考虑低价iPhone，赚钱要靠服务。</p><p>因此就有下一个问题：新的业务模式谁来做？自己去尝试各种可能性、进入各种从前不熟悉的领域、承担各种风险？还是让别人一起来玩？Facebook、Google、苹果都给了好的榜样：在一个平台基础上营造一个生态系统。在一个健康的平台上，众多玩家们能想出更多的点子、进行更多的试错，这是一家企业（不管多大多强）靠自己无法做到的。所以第一条“从做产品转向做平台”实际是在为第二条提供支撑。</p><p>当业务不再是生产一种好卖的产品而是提供一种（或者很多种）贴心的服务，制造业实际上是“软化”了自己的业务。福布斯有篇文章叫《<a href="http://www.forbes.com/sites/techonomy/2011/11/30/now-every-company-is-a-software-company/" target="_blank" rel="external">所有公司都是软件公司</a>》讲的就是这样一个趋势。这种“软化”的业务更难把握消费者的诉求，因为它的差异性不再是刚性需求的满足，而是提供心理上的舒适和愉悦。所以第三条“加快反馈周期”其实是朝向服务模式转型当中提出的要求，是实现第二条所需的实践。</p><p>在加快反馈周期的过程中，组织就会感受到来自自身的阻力，比如跨部门协作不力了，比如层级命令链低效了，比如次品率上升了，等等。这就是精益理论讲的典型的“湖水和岩石”的状况：周期变短了，湖水变浅了，原来隐藏的岩石就统统露出来了。所以为了支持新模式、更快速的验证，这个组织最终会走到精益的路上，它会需要更多的协作和透明度、更多的创新、更多的容忍失败、更多的以人为本。这就是第四条“打造敏捷组织”的由来，它是被商业模式的改变逼出来的。</p><p>看穿了这几个点背后的体系，你就很容易记住它们，遇到需要讲的时候也很容易讲出来。比如最近我们的一个客户，我们在帮他们做的事情，就是创造新的商业模式，让一个房地产企业到互联网上找商机；我们不尝试让这家房地产企业去做所有事，我们帮它打造一个平台；做这个项目所需的反馈周期，会远远快于房地产企业所熟悉的频率，所以我们得教他们；长期来说，这种新的模式、新的节奏，有可能会对这个组织带来更深远的影响。看，我可以把这几个点在一个客户的上下文里串起来，讲一个CEO/CIO能听懂的故事。</p><p>最近刚读完了一本《<a href="http://book.douban.com/subject/4096693/" target="_blank" rel="external">The Shallows</a>》，讲互联网是如何改变我们的大脑。其中有一章是关于记忆：大脑负责短期记忆（也叫工作记忆）和长期记忆的区域是完全不同的，信息需要在工作记忆区停留足够长的时间（大概两三个小时），才会被转到长期记忆区。短期记忆区容量很有限，而长期记忆区几乎就是无限容量。互联网时代我们面临的一个问题就是信息太多，各种各样的信息不断地在短期记忆区来来去去，统统都没有进入长期记忆区，结果我们忙忙碌碌一天发现脑子里一片空白什么都没学到。同时扑面而来的信息又让我们感到越来越焦躁，愈发迫不及待地去吸收更多的信息，从而进入一个恶性循环。</p><p>阅读，这是我们需要学会拿回主动性的一件事。我们需要学会隔离永不停息的信息大潮，停止浅尝辄止的、信息采集式的阅读，回到书籍时代的深入阅读，通过思考把信息组织到一个完整的框架或体系中，花时间进行这个反思和组织的过程，使信息以及你为它组织的框架能被转入长期记忆，这样我们才能真正学到东西。比如这篇麦肯锡的文章，我可以花十分钟看过然后压根记不住它的四个点，也可以花两个小时把它组织成一个体系并为它写一篇博客从而牢记住它。浪费的十分钟和有效的两个小时，究竟哪个更划算呢？</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="2月 17 2013" class="post-list__meta--date date">2月 17 2013</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2013/1/17/read-some-science-fictions/" title="link to 大家都来读点科幻小说">大家都来读点科幻小说</a></h2>
+
+      <p class="excerpt">
+        <p><em>科幻小说让我做梦，编程让我梦想成真。</em></p><p>在我读的书里面，科幻小说是占比很大的一个类型。从1996年第一次看到《科幻世界》至今，把自己当做一个严肃的科幻读者已经十好几年了。同时作为IT从业者，我认为读大量的科幻小说对我的职业发展有很大帮助。所以我推荐同行们有空也可以多读一些科幻小说。</p><p><img src="http://gigix.thoughtworkers.org/assets/2013/1/17/2001.jpg" alt=""></p><p>必须考虑到很多人其实没有严肃地读过科幻小说这一个类型，再考虑到书店里经常出现的《<a href="http://book.douban.com/subject/20279665/" target="_blank" rel="external">2001太空漫游</a>》摆在《暮光之城》隔壁并被归为“另类小说”的情况，首先限定一下谈论的范围。科幻小说，有一个<a href="http://zh.wikipedia.org/wiki/%E7%A7%91%E5%B9%BB%E5%B0%8F%E8%AF%B4" target="_blank" rel="external">定义</a>是“描述科学或想象中的科学对人类影响的小说”。我个人的观点是，一个好的科幻小说应该：（1）可以有虚构的东西，但虚构的东西应该符合或至少不违背现有科学技术的基本前提；（2）虚构点越少越好；（3）基于虚构点和现有科学技术的前提展开符合逻辑的想象。这也是为什么我不认为《暮光之城》或者《指环王》属于这一类型：这些幻想小说需要虚构的点太多。</p><p>可以看到，根据我的口味，对科幻小说的限制是比较严格的。然而严格的限制不等于没有想象空间。正如泽拉兹尼在《<a href="http://book.douban.com/subject/3198422/" target="_blank" rel="external">光明王</a>》中所说，技术发展到极致就是魔法。最有意思的是，因为这些想象是沿着很少的、合理的虚构与严格的逻辑来展开的，遂使得这些想象有相当大的可能变成现实。且不用说《<a href="http://book.douban.com/subject/2161692/" target="_blank" rel="external">海底两万里</a>》和《<a href="http://book.douban.com/subject/2039548/" target="_blank" rel="external">从地球到月球</a>》，像《<a href="http://book.douban.com/subject/1772786/" target="_blank" rel="external">真名实姓</a>》和《<a href="http://book.douban.com/subject/3816895/" target="_blank" rel="external">雪崩</a>》这样的小说，不禁让我们浮想联翩：被互联网影响得越来越深入的我们的明天，有什么理由不是这样？</p><p>很自然地，科幻小说的发展与科技的发展有着紧密的关联。随着科技的前沿从IT转向生物科学，生物朋克成为了赛博朋克之后的新风格。也许《寂静的春天》显得有点过时？那么看看《<a href="http://book.douban.com/subject/10763170/" target="_blank" rel="external">发条女孩</a>》吧，想想孟山都可以把人类带去哪里。更有像《<a href="http://book.douban.com/subject/1574993/" target="_blank" rel="external">佐迪亚克</a>》这样的旷世佳作，已经让人看不出究竟是幻想还是现实。读这样的科幻小说，就像在读米克尔的<a href="http://tech.sina.com.cn/i/2012-12-04/12367855752.shtml" target="_blank" rel="external">互联网趋势报告</a>，想象真实的技术如何与真实的世界产生联系，创造出一个如同幻想一般的未来——而且你知道这个未来很可能成为现实。</p><p>更有意思的是，既然人文学科也经常自称“社会科学”，科学幻想当然就不仅局限于自然科学与工程技术，在社会、经济、政治、哲学、宗教等人文领域科幻同样扮演者先知和警钟的角色。《<a href="http://book.douban.com/subject/5299764/" target="_blank" rel="external">1984</a>》引起了所有人的警惕，《<a href="http://book.douban.com/subject/1321789/" target="_blank" rel="external">美丽新世界</a>》却正在悄悄地成为现实。《<a href="http://book.douban.com/subject/7065521/" target="_blank" rel="external">基地</a>》里谢顿的心灵史学，对人类作为一个整体之行为的准确预测，不正是如今大数据技术尝试达到的么？宗教在不同背景下可以有何等不同的理解？读《<a href="http://book.douban.com/subject/3881746/" target="_blank" rel="external">事关良心</a>》吧。超人一般的能力会让人们变成什么样？读《<a href="http://book.douban.com/subject/4027244/" target="_blank" rel="external">玛土撒拉之子</a>》和《<a href="http://book.douban.com/subject/2238100/" target="_blank" rel="external">西班牙乞丐</a>》吧。还想来点更狂野的？未来的人类社会有哪些可能性？《<a href="http://book.douban.com/subject/1292322/" target="_blank" rel="external">群星我的归宿</a>》和《<a href="http://book.douban.com/subject/1146267/" target="_blank" rel="external">深渊上的火</a>》给你大把想象。喜欢或嫌恶，它们让你思考。</p><p>于科幻而言，作者们讲的是他们自己想讲的道理，而科学、幻想只是一个平台、一种工具，把某种张力推至极限，逼迫读者去思考平日的生活中不会思考的问题。《<a href="http://book.douban.com/subject/1140727/" target="_blank" rel="external">安德的游戏</a>》谈的其实是办公室政治，《<a href="http://book.douban.com/subject/6885709/" target="_blank" rel="external">未来闪影</a>》谈的是平凡个人对未来的憧憬，《<a href="http://book.douban.com/subject/1187842/" target="_blank" rel="external">你一生的故事</a>》更是谈论人生的杰作。从这个角度来说，《<a href="http://book.douban.com/subject/2567698/" target="_blank" rel="external">三体</a>》其实是个比较没劲的故事：就算讲到了宇宙末日，刘慈欣心里住着的，还是文革和叶文洁。</p><p>当然也有纯粹的“科学”幻想。不是这些作者没有道理想讲，只是他们选择的主题是如此纯净的智力挑战，使得道理本身反而显得不那么重要——诚如康德所言，只有两件事令我们愈是深思便愈觉敬畏：头顶的星空与心中的道德律。头顶的星空揭示给读者看，心中的道德律留给读者自己去净化。《<a href="http://book.douban.com/subject/1140726/" target="_blank" rel="external">计算中的上帝</a>》讲到：宇宙本身的存在，才是最大的奇迹，四种基本力的比例只要稍有偏差，整个宇宙都不会存在。这才是彰显神迹的方式。读了这样的作品，你会发现：认为神会祝福或者诅咒世人这样的想法，简直就是在渎神。还有《<a href="http://book.douban.com/subject/3530171/" target="_blank" rel="external">神奇的二维国</a>》，谁还会关心它包含的道理是什么呢？想象力本身就已足够。</p><p>我们所在的时代，技术牵着人类的鼻子高速发展，变化快得让我们需要相当大胆的想象力才能跟上这个世界。工作、生活、娱乐、三观、道德、信仰……都在受到前所未有的冲击。读点科幻小说，至少在我看来，是可以提高我们适应这个世界的能力的。</p><p>至少的至少，就算到了世界末日，我们还有《<a href="http://book.douban.com/subject/1394364/" target="_blank" rel="external">银河系漫游指南</a>》呢。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="1月 17 2013" class="post-list__meta--date date">1月 17 2013</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2013/1/9/brave-new-world/" title="link to 美丽新世界">美丽新世界</a></h2>
+
+      <p class="excerpt">
+        <p><em>让人们不能思考的，究竟是《<a href="http://book.douban.com/subject/1082387/" target="_blank" rel="external">一九八四</a>》，还是《<a href="http://book.douban.com/subject/1082387/" target="_blank" rel="external">美丽新世界</a>》？</em></p><p><img src="http://gigix.thoughtworkers.org/assets/2013/1/9/fantasy-beautiful-world-background-198218.jpg" alt=""></p><p>最近看了两部电影，《<a href="http://movie.douban.com/subject/6768838/" target="_blank" rel="external">上帝保佑美国</a>》和《<a href="http://movie.douban.com/subject/1292222/" target="_blank" rel="external">出租车司机</a>》。三十多年的时间跨度，故事主线却极其相似：一个退伍老兵，过着普通人生活，满眼看到都是“当代”的丑恶，终于难以抑制心中的正义感，于是给自己选定一个被迫害、需要被拯救的可怜人，拿起枪崩掉了坏人。《上帝保佑美国》中，男主买枪的桥段，口若悬河的推销员卖完枪以后再推销一把毒品，分明就是在向《出租车司机》致敬。</p><p>然而时代背景的烙印使这两部戏、两位大叔走向了截然不同的方向。德尼诺大叔痛恨的是纽约街头的渣滓，流氓、妓女、毒品贩子、同性恋，想要拯救的是卖淫女，他还会跟坐在出租车后座、正在竞选的参议员说“不管谁当了总统都应该清洗这些街道”；默里大叔却没有这些正人君子都能同仇敌忾的靶子，他痛恨的是低俗的综艺节目、毒舌的主持人、炫富的小姑娘，他只能跟同事抱怨并且承受同事们不解的眼光，或是躺在床上用优雅严谨的句子咒骂邻居家的傻逼。德尼诺大叔尽管没文化、生活一团糟，总让人觉得他有希望；而默里大叔有文化、干着体面的白领工作，却让人感到全然无助，看不到出路。这种基调到结局达到了高潮：德尼诺大叔误打误撞成了英雄，卖淫女跟着父母回家上学，他仰慕的女神再次向他示好；默里大叔举着枪质问所有冷血的看客，他想拯救的弱智儿童却说“我喜欢被他们嘲笑”，失去了拯救对象的大叔只好一枪崩了这个傻逼然后任由警察把自己也干掉。</p><p>这是我们这个时代的悲剧。和七十年代相比，我们这个时代已经失去了辨别善恶美丑的能力。我们没有观点、没有信仰，我们只要娱乐。</p><p>本文开头的那个问题，不是我提出来的，是《<a href="http://book.douban.com/subject/1062193/" target="_blank" rel="external">娱乐至死</a>》提出的一个核心问题。只要你认真想想（当然，“认真想想”本身就是我们这个时代越来越多的人所不具备的一种能力），你就会发现：《一九八四》其实越来越不可能发生了。我们被压制言论自由了吗？我们被压制新闻自由了吗？那为什么大家都在肆无忌惮地批评执政党？为什么南周新年致辞所有人都看过了？《一九八四》的不可能发生，跟执政党的意愿无关，它就是客观不可能。然而《美丽新世界》是客观可能的。人们不再谈论理想以及一切高尚和宏大的事情不是吗？人们不再进行深入和高度抽象的思考不是吗？人们满脑子里装的就是上班赚钱然后消费不是吗？人们谈到爱情时想的就是开着直升飞机去郊外打一场高尔夫然后回到精致的公寓里做爱不是吗？就连——任何一个时代里都属于少数的——愤怒者的愤怒，虽然不会真的拿起枪来把坏人干掉，也跟这两部电影一样：愤怒的目标不再是黑暗、丑恶、肮脏、犯罪……而是没有思想，没有准则，娱乐至死。</p><p>《一九八四》不会来了。而《美丽新世界》已经来了。</p><p>看看我们的“知识工作者”们吧。实验室的负责人说：“具体细节通向品德与幸福，而了解全局只是必不可少的邪恶。”然后他们谈论化学、谈论物理、谈论基因、谈论波坎诺夫斯基程序、谈论科学与工程，他们就是不谈论目的和意义，不仅因为目的和意义需要抽象思考，更因为目的和意义与消费和娱乐无关。用专业术语把目的和意义边缘化，“知识工作者”们就可以<a href="http://gigix.thoughtworkers.org/2012/12/12/social-responsibility-of-professionals">心安理得地杀人</a>然后下班，去消费。如果驾驶无人机杀人这个例子让你觉得太遥远而无法与自己联系起来，那么《<a href="http://book.douban.com/subject/2350407/" target="_blank" rel="external">寂静的春天</a>》又如何呢？操作复杂有机物碳链上的氯原子，得到一种新的有机物，然后“知识工作者”们就可以下班，去消费。我们的社会已然是这样运转了。</p><p>而且我们的社会很可能必须这样运转。正如麦克卢汉所说，<a href="http://book.douban.com/subject/4096693/" target="_blank" rel="external">媒体塑造人</a>，数字媒体已经让我们的大脑失去了专注的能力、进行复杂思维活动的能力。有个小朋友跟我说，劳教制度取消了。我问他，什么是劳教，跟坐牢有什么不一样？他哑口无言。这就是现实。我们的大脑已经被数字媒体塑造成开放然而浅薄的状态。我们接受信息而不思考，观点和简单联系胜于逻辑与结构。而这种结构的大脑所能进行的知识工作，是简单的交流、简单的模式匹配，是可以<a href="http://book.douban.com/subject/10472584/" target="_blank" rel="external">被机器取代</a>的。当工作的意义其实只剩下让工作者感到自己仍然有事做，“目的和意义”又从何谈起？我们当然只能把工作的意义解释为“消费和娱乐”。</p><p>所以，这是一个完整的循环：我们工作是为了消费，我们消费是为了娱乐。娱乐使我们快乐。我们没有被强迫，我们不需要被强迫。这就是幸福，我们自己选择的幸福。</p><p>所以，欢呼吧，为了《美丽新世界》。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="1月 9 2013" class="post-list__meta--date date">1月 9 2013</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2013/1/6/race-against-the-machine/" title="link to 人与机器的终极竞赛">人与机器的终极竞赛</a></h2>
+
+      <p class="excerpt">
+        <p>在圣诞假期的旅行中读完了《<a href="http://book.douban.com/subject/10472584/" target="_blank" rel="external">Race Against the Machine</a>》这本书。坐在斯里兰卡的群山与瀑布之间读着这样一本书，给我很多触动，一直想写的“程序员救世界”的主题也渐渐清晰起来。先把读书笔记快速记录下来，回头再继续整理。</p><p><img src="http://img3.douban.com/lpic/s8527677.jpg" alt=""></p><p>经济危机唤起了人们的注意，但真正值得注意的不是经济危机本身，而是结构性失业：尽管经济已经开始回升，就业却一路下滑。同样一路下滑的是以家庭收入中位数为指标的普通人收入。把角度放得更大一点，21世纪的第一个十年实际上是战后第一个普通人收入没有得到提升的十年。现在不是经济危机不危机的问题，而是普通人的工作被机器抢走了。</p><p><img src="http://gigix.thoughtworkers.org/assets/2013/1/6/Screen_Shot_2013-01-06_at_9.26.49_AM.png" width="420px"></p><p>美国的人口在过去十年间增加了3000万，但就业机会几乎没有增加，于是就业率从2000年的64%跌至不到58%。如前所述，这次的失业是结构性的。造成失业的原因不是增加裁员，而是缺乏雇佣。整个工业时代一以贯之的雇佣与GDP的正相关性，从此一去不复返了。</p><p>在这场技术造成的结构性失业中，我们可以看到三组“胜利者 vs. 失败者”的对比：（1）高技术工人 vs. 低技术工人；（2）超级明星 vs. 平凡大众；（3）资本 vs.劳动力。而且这三组胜利者并非互斥：其中一方面的成功者有更大几率在另外两方面也取得成功。于是财富更多地向少数人聚拢。</p><p>新技术一方面可以自动化重复性劳动（例如机器人、数控机床、数字化仓储控制），使低技术工人失业；另一方面又增加交流、联想和创造的能力（例如数据可视化、数据分析、高速通讯、快速原型），提升高技术工人的价值。这场技术革命是一边倒地有利于高技能人才的，因此被称为“技能偏向的技术变革”。尽管各国都在强调教育，但对技能的供给远远跟不上需求。</p><p>有趣的是，受伤害最大的不是最低技术的纯物理服务者（例如餐厅服务员），而是中低技术水平的知识/技术工作者（例如银行柜员、电话客服）。<a href="http://zh.wikipedia.org/wiki/%E8%8E%AB%E6%8B%89%E7%B6%AD%E5%85%8B%E6%82%96%E8%AB%96" target="_blank" rel="external">莫拉维克悖论</a>指出，逻辑推理只需要很少的计算能力。这也就使得这些基本能够以符合逻辑的流程来定义的工作更容易被机器所取代；反而是一些在人类看来简单的事情，例如在复杂地形上行走、识别人脸、天马行空地闲聊，是机器很难做到的。</p><p>但所谓“只有人能做的事”这个疆域在不断地受到挑战。Google的汽车自动行驶一万英里无事故；IBM的Watson参加百科知识答题秀赢过了所有人；eDiscovery取代了律师的众多日常工作；医生的诊断也正在被机器取代。我们可以看到一些事情是机器<strong>更难</strong>做到的：（1）复杂的模式匹配；（2）复杂的交流。但是没有任何证据表明机器<strong>不能</strong>做到这些事。</p><p>19世纪末流传一个<a href="http://en.wikipedia.org/wiki/John_Henry_(folklore)" target="_blank" rel="external">John Henry的故事</a>：这位铁路工人和蒸汽机比赛往岩石里打桩，他赢了比赛但赔上了性命。从此以后再也没有人和蒸汽机比赛体力，人们清楚地认识到：理智的做法不是跟机器竞赛，而是和机器组队一起工作，去和别的队伍竞赛。如今对于计算机也是一样。例如下国际象棋。人对计算机的比赛已经不再进行，因为大家都知道没有人可以下赢计算机。现在的比赛都是人和机器的任意组队。</p><p>鲜为人知的，现在最强的国际象棋棋手不是某台计算机（当然更不是某个人），而是一支两个业余棋手与三台计算机的队伍。有趣的是，很强的职业棋手和计算机组队并没有获胜。因为传统意义上棋手的“强”，有很大部分是可以被计算机取代的。组队的实力关键不在于人类棋手的计算能力，而在于人类棋手与计算机的配合。同样的模式出现在很多领域：医学、法律、财务、零售、制造、甚至科学探索。人类的价值不是体现在<strong>和机器面对面竞赛</strong>，而是体现在<strong>与机器搭档竞赛</strong>，使用那些机器所不擅长的技能：复杂的模式匹配，复杂的交流，创新。</p><p>创新来自于对以往创新的组合与重组。了解的人和思想越多，产生新点子的可能性就越大。因为创新是一种组合与重组，所以创新的可能性是指数性的。这意味着两件重要的事：第一，我们不需要担心创新被用尽；第二，“从所有可能性中发现有价值的点子”这件事是<a href="http://en.wikipedia.org/wiki/NP_(complexity)" target="_blank" rel="external">NP不可解的</a>，也就是计算机从本质上不擅长的。</p><p>教育也需要相应的改变。记忆力、计算能力不再是最重要的，更为重要的是想象力、创造力、艺术。标准的教师解说可以让学生自学，一对一的辅导（复杂的交流）和创造性的想法才是需要在课堂上做的事。“软技能”（优美的写作、艺术、沟通）不再是可选项，它们是唯一可以在新的组队中让人类体现价值的技能。</p><p>通过再分配来解决结构性失业和普通人收入下降是不可行的。直接的原因是没有任何一个国家能负担对人力资源的浪费。深层次的原因是对人之存在意义的尊重：即使是《<a href="http://book.douban.com/subject/1321789/" target="_blank" rel="external">美丽新世界</a>》的敌托邦，也需要营造一种人们在工作的假象，而不是赤裸裸地把可以被机器取代的人们当宠物养起来。教育的变革不仅有经济上的意味，它是未来人类社会形态的基础。</p><p>所以，尽管有这么一个略显浮夸的标题，这场竞赛其实不是人对机器的竞赛，而是人类自己的竞赛，是人类自我解放与技术发展速度之间的竞赛。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="1月 6 2013" class="post-list__meta--date date">1月 6 2013</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2012/12/31/wishes-in-2013/" title="link to 为2013年许愿">为2013年许愿</a></h2>
+
+      <p class="excerpt">
+        <p>去年有几个<a href="http://gigix.thoughtworkers.org/2012/1/2/wishes-in-2012">淳朴的愿望</a>，虽然淳朴也不是那么确定是不是真的做到。今年最终是<a href="http://gigix.thoughtworkers.org/2012/12/22/reading-in-2012">读完了65本书</a>，学会了做一些以前不会的工作。至于算不算有长性，有没有战胜选择障碍，其实还是不确定。</p><p>2013年，读书什么的已经不需要说了，有几件相当明确的事想做：</p><p>壹。学会蝶泳。其实这个意味着要健身，要增加腰腹和上肢力量，要去掉赘肉。</p><p>贰。成都办公室已经到了<a href="http://gigix.thoughtworkers.org/2011/11/9/chengdu">二年成邑</a>的阶段。第一年我们把50多人聚在一起，第二年我们要有些拿得出手的产出，要让成都办公室成为一个牛逼的ThoughtWorks办公室。</p><p>叁。要去到没有去过的地方，做没有做过的事，生活要有所改变。</p><p>这就是明年想做的事了。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="12月 31 2012" class="post-list__meta--date date">12月 31 2012</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2012/12/22/reading-in-2012/" title="link to 2012阅读记录">2012阅读记录</a></h2>
+
+      <p class="excerpt">
+        <p></p><p>在2012年，我共读过63本书，其中五星好书21本。5月最勤快，读了8本。平均 5.65天读一本书。（嗯，我觉得这个叫“<a href="http://t.cn/zj0GOS4" target="_blank" rel="external">阅读DNA</a>”的东西做得不错。）</p><p><img src="http://gigix.thoughtworkers.org/assets/2012/12/22/Screen_shot_2012-12-22_at_1.02.29_PM.png" alt=""></p><p>这些，就是今年读过的书了。手上还有一本<a href="http://book.douban.com/subject/6559997/" target="_blank" rel="external">Biopunk</a>在读，总之，已经无关大局了吧。</p><p>简单做了个分类。今年读的书里面，IT技术类书籍的比例显著下降，只有5本是与IT技术直接相关的。读得最多的，是管理/企业/经济/政治这些领域，加到一起有29本。科学和科幻也有18本，嗯，这是为了保持想象力……英文书读了14本，读英文的速度还是慢，来年要继续加强练习。而且今年读的书，和前几年相比，格调有所下降，缺乏读友的互相监督果然会有问题，来年也要注意改善。</p><p><img src="http://gigix.thoughtworkers.org/assets/2012/12/22/Screen_shot_2012-12-22_at_1.55.49_PM.png" alt=""></p><p>总之，大概可以说，这一年也没有浪费时间。来年继续加油。</p><p>今年读的五星好书大概列一下……</p><ul><li><a href="http://book.douban.com/subject/6915733/" target="_blank" rel="external"><strong>What Matters Now</strong></a>Hamel, Gary / 2012-2 / $ 26.95 –发人深省的佳作。百年历史的管理学，到了该被彻底颠覆的时候了。</li></ul><ul><li><a href="http://book.douban.com/subject/11600043/" target="_blank" rel="external"><strong>当人类决战机器人：海伯利安</strong></a>(美)丹·西蒙斯 / 潘振华 / 江苏文艺出版社 / 2012-9 / 29.90元 –终于看到了！瞬间被震撼！后三卷赶快出啊！</li></ul><ul><li><a href="http://book.douban.com/subject/2311321/" target="_blank" rel="external"><strong>The New Rulers of the World</strong></a>John Pilger / Verso / 2003-4 /<span class="caps">USD 14</span>.95 –很精彩也很深刻地揭露了英美帝国主义的丑恶嘴脸。最后一章关于澳大利亚的有点突兀。</li></ul><ul><li><a href="http://book.douban.com/subject/1867064/" target="_blank" rel="external"><strong>八百万种死法</strong></a>[美] 劳伦斯·布洛克 / 潘源 / 新星出版社 / 2006-9 / 29.00元 –人是会死的、孤独的、无关紧要的。</li></ul><ul><li><a href="http://book.douban.com/subject/1252183/" target="_blank" rel="external"><strong>毛泽东选集 第二卷</strong></a>毛泽东 / 人民出版社 / 2003-7 / 48.00元 –关于文化，关于青年，关于组织，都很精辟。</li></ul><ul><li><a href="http://book.douban.com/subject/1028268/" target="_blank" rel="external"><strong>正义论</strong></a>[美] 约翰·罗尔斯 / 何怀宏 / 中国社会科学出版社 / 2001-6 / 32.00元</li></ul><ul><li><a href="http://book.douban.com/subject/10785583/" target="_blank" rel="external"><strong>思考，快与慢</strong></a>丹尼尔·卡尼曼 / 胡晓姣 / 中信出版社 / 2012-7 / 69.00元 –单凭附录这两篇文章就值5个星。</li></ul><ul><li><a href="http://book.douban.com/subject/3528045/" target="_blank" rel="external"><strong>富国的伪善</strong></a>张夏准 / 严荣 / 社会科学文献出版社 / 2009-1 / 39.00元</li></ul><ul><li><a href="http://book.douban.com/subject/6854525/" target="_blank" rel="external"><strong>黑天鹅</strong></a>纳西姆·尼古拉斯·塔勒布 / 万丹 / 中信出版社 / 2011-10 / 49.00元 –深刻而且尖刻。深思而且实用。诚实而且雄辩。</li></ul><ul><li><a href="http://book.douban.com/subject/10484712/" target="_blank" rel="external"><strong>驱动力</strong></a>[美] 丹尼尔•平克 / 龚怡屏 / 中国人民大学出版社 / 2012-2 / 42.00元 –一切能被自动化的工作都将被自动化，需要人从事的都是有创造性的工作。胡萝卜加大棒的激励对于创造性的工作有害。认识到这一基本点，才可能有效地经营21世纪的企业。</li></ul><ul><li><a href="http://book.douban.com/subject/1138353/" target="_blank" rel="external"><strong>统计学的世界</strong></a>David S. Moore / 郑惟厚 / 中信出版社 / 2003-11-1 / 79.00 –对基本概念以及常见错误解释得很清楚。</li></ul><ul><li><a href="http://book.douban.com/subject/6435564/" target="_blank" rel="external"><strong>资本主义的真相</strong></a>张夏准 / 孙建中 / 新华 / 2011-6 / 38.00元 –关于政治与经济的关系，关于教育的神话，关于道德，关于创业精神，都讲得很现实。</li></ul><ul><li><a href="http://book.douban.com/subject/1454393/" target="_blank" rel="external"><strong>21世纪的管理挑战</strong></a>[美] 彼得.德鲁克 / 机械工业出版社 / 2006-01-01 / 28.00元</li></ul><ul><li><a href="http://book.douban.com/subject/3816895/" target="_blank" rel="external"><strong>雪崩</strong></a>（美）斯蒂芬森 / 郭泽 / 四川科学技术出版社 / 2009年 / 38.00元 –神经学，语言学，秘米，病毒，编程。甚至顺便还有热闹的打斗。完美。</li></ul><ul><li><a href="http://book.douban.com/subject/1336330/" target="_blank" rel="external"><strong>冰与火之歌</strong></a>[美] 乔治·R. R. 马丁 / 谭光磊 / 重庆出版社 / 2005-5 / 68.00元 –华丽得哑口无言，只能膜拜。</li></ul><ul><li><a href="http://book.douban.com/subject/5375620/" target="_blank" rel="external"><strong>失控</strong></a>[美] 凯文·凯利 / 东西文库 / 新星出版社 / 2010-12 / 88.00元 –生命的活力就是在失控边缘的不断创造。</li></ul><ul><li><a href="http://book.douban.com/subject/6779576/" target="_blank" rel="external"><strong>The Lean Startup</strong></a>Eric Ries / Crown Business / 2011-9-13 /<span class="caps">USD 26</span>.00 –Validated learning. Small batch and pull. Andon and 5 whys. It’s the boring stuff thatmattersthemost.</li></ul><ul><li><a href="http://book.douban.com/subject/1939949/" target="_blank" rel="external"><strong>The World’s Newest Profession</strong></a>Christopher D. McKenna / Cambridge University Press / 2006-06-30 /<span class="caps">USD 30</span>.00–专业，不仅需要专业的技能和专业的形象，还需要严格的行业自律和监管。非常精彩的行业史。</li></ul><ul><li><a href="http://book.douban.com/subject/1977840/" target="_blank" rel="external"><strong>房间里最精明的人</strong></a>（美）贝萨尼·麦克莱恩 / 中国社会科学出版社 / 2007-2 / 42.00元 –经济不能无视人性，企业不能只看利润</li></ul><p></p>
+
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="12月 22 2012" class="post-list__meta--date date">12月 22 2012</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2012/12/12/social-responsibility-of-professionals/" title="link to 专业分工与社会责任">专业分工与社会责任</a></h2>
+
+      <p class="excerpt">
+        <p>前两个月在电影院看了<a href="http://movie.douban.com/subject/3001077/" target="_blank" rel="external">谍影重重4</a>。给我留下最深印象的，有点意思，是一段专业技术人员的对白：</p><blockquote>A: There you are. There’s the signal.<p>B: Signal is hot, solo, signal is up and live.</p><p>A: It’s about an hour, it’s mine.</p><p>B: Copy solo. Strong signal.</p><p>A: What’s our timeframe here?</p><p>B: 15 minutes plus or minus.</p></blockquote><p>如果你没看过这部电影，不妨猜一猜，这两位是什么身份、谈论的是什么内容。（即使你看过也可以猜一猜，因为你未必会留意到这段。）</p><p><img src="http://gigix.thoughtworkers.org/assets/2012/12/12/drone.jpg" alt=""></p><p>猜到了吗？答案是“无人机”。这两位是无人机驾驶员。他们谈论的，是操控一架装载了现代化武器的无人机，去杀死两个活生生的人。它让我感到震撼的点在于，这两位驾驶员就像在玩游戏一样对待这整件事：他们谈论的对象是“信号”，而不是“人”，不是他们的同类。他们无须面对同类被杀时的惨状，只要在雷达上捕捉到“信号”，轻轻按下按钮，游戏结束。于是，专业技术，以及高度专业技术化的语言，让整件事变成了一个游戏、一次技术性操作，而不再是残酷的杀戮。下手杀人者可以轻松地避开良心的谴责，因为整件事是如此冷冰冰的技术操作，他们的眼前没有火、没有血。</p><p>而且这不是电影的虚构场景。远远不是。看看<a href="http://en.wikipedia.org/wiki/Drone_attacks_in_Pakistan" target="_blank" rel="external">无人机在巴基斯坦</a>，看看<a href="http://www.presstv.ir/detail/2012/12/10/277335/us-drones-killing-civilians-in-afghanistan/" target="_blank" rel="external">无人机在阿富汗</a>。就是2012年，当人们在为一块无人居住的礁石打得头破血流时，无人机在阿富汗杀死了两千平民，其中大部分是妇女和儿童。操控这些无人机的，就是用同样的专业术语对话、玩同样的高科技游戏的专业技术人员——也许除了他们从游戏中获得的成就感更大，因为需要处理的“信号”更多。</p><p>这是一个非常危险的趋势。专业技术人员可以用科技的、中立的、不具情感的语言使自己所做的事情去目的化，从而营造一种“我只是在做一项技术工作”的假象，至于这项工作究竟造成了什么，是杀人还是救人，是让世界变得更好还是更糟还是根本无关紧要，那都跟我没关系，我只是在做工程/技术/研究。同一部电影里，女主角把自己的工作描述为“行为设计”、“神经元设计”，说“我只是在做科学研究”。实际上那是什么？用药物控制人的思想。赤裸裸的法西斯主义。用精细的分工、用巧妙的语言、用科技的外壳把自己所做的事和它造成的结果、它的道德意味相隔离，于是人类就可以肆无忌惮地做一切恶事。这是一种可怕的情景。</p><p>而且这不是一种非常罕见的情景。即使只是每天坐在办公室里写代码的我们，可曾问过自己：在所有的对象、异常、模式⋯⋯背后，我们做的软件是谁在用、创造了什么价值？我们做的软件是不是根本对世界没任何影响？甚或让世界变得更糟糕了？我们可以很容易地为自己找到借口：我一个人的力量太渺小；我知道的信息太少；我不做也会有别人做⋯⋯但是归根到底我们需要回答这样一个问题：我把人生中最好的时光用来每天做的这件事，除了可以让我生存之外，还有什么意义？</p><p>这个问题，实际上，之于企业经营者的意义远大于之于员工本人。因为正如《<a href="http://book.douban.com/subject/10484712/" target="_blank" rel="external">驱动力</a>》所说，知识工作者发挥创造性的前提条件是被激励，而知识工作者被激励的因素是（1）Purpose；（2）Mastery和（3）Autonomy。让员工从事对社会有益的工作、让这些工作帮助到社会上需要被帮助的弱势群体、确保企业所做的事能实在地让世界变得更好、并且确保员工知道这一切的意义，这是一个企业获得创新能力的唯一方式。</p><p>至少这是驱动更多企业做有社会责任感的事情的一种动力。至少这是令人欣慰的。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="12月 12 2012" class="post-list__meta--date date">12月 12 2012</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2012/12/1/how-to-grow-newbies/" title="link to 全能毕业生是怎样炼成的">全能毕业生是怎样炼成的</a></h2>
+
+      <p class="excerpt">
+        <p>两个90后的大四学生，跟远在澳洲的同事协作开发了<a href="http://www.iocelots.com" target="_blank" rel="external">一个网站</a>，用的是自己没用过的Ruby on Rails。然后又参与一个澳洲项目的前期方案，现在正在给另一个客户做方案规划。这两个小伙子，到今天入职<strong>Thought</strong>Works还不到一个月。我想分享的，是我从他们的成长中学到的经验。</p><p><img src="http://gigix.thoughtworkers.org/assets/2012/12/1/320children20sunset.jpg" alt=""></p><p>首先，在我看来，年轻人的成长中最重要的是机会。从一开始就给他们创造机会去接触各种各样不同的事，让他们了解项目周期的各个阶段，他们就会对“整件事”理解得更清晰，也更明白自己所做的事是如何为“整件事”提供意义。在这4个星期里，这两个年轻人和澳洲同事打电话了解需求、写用户故事、测试驱动、设计界面、结对编程、解决所有技术问题、做测试、部署上线、找客户验收、给整个办公室做演示⋯⋯除了Ocelots，他们还参与另一个澳洲项目启动的电话会议，给另一个项目做售前方案。从接触客户直到交付，他们把所有环节都经历了一遍。现在不管看到项目的哪个阶段，他们都不会一片茫然。</p><p>当然，给他们机会是一回事，让他们能从中有所收获是另一回事。年轻人需要收获的有两件事：（1）顺利完成任务的成就感；（2）学会新的能力，可以做以前不会做的事。而我们在培养新人的时候常常走进两个极端。有时直接把一个任务丢给新人去完成，搞得新人手足无措，完不成任务的时候自信心受到严重打击。有时我们又手把手地跟新人紧密结对，结果新人坐在旁边看得很顺，却没有亲身体会到其中的困难所在，下次面对同样的任务还是不知道该怎么入手。</p><p>带新人的时候需要把事情想得更细。其实每个任务，不管是跟客户开会还是做一个全新的功能，都会有两部分活动：10%有挑战性的活动，以及90%纯粹工作量的活动。有挑战性的10%，年轻人需要学会新的知识和技能才能胜任；剩下的90%，年轻人现有的知识和技能已经可以胜任，只需要知道怎么做、要做到什么程度，就可以去完成。对于有挑战性的10%，导师不能自己大包大揽，关键是要教给年轻人分析问题找到思路的方法；对于工作量的90%，导师也不能完全放手不管，关键是要让年轻人养成高效、目标导向、重视细节的职业态度。</p><p>我采用的方法是这样：第一次做某件事，我先讲我的思路，然后和年轻人结对一起做，当然其中尽量给他们拿键盘，但并不强求。第二次做，我先带着年轻人一起画脑图，分析做这件事有哪些步骤、需要重视哪些点、如何验收，把任务细分到15～30分钟的粒度，然后让年轻人去做，完成一个任务（也就是15～30分钟后）我来验收。第三次做，我就要求他们自己画脑图、分任务，我看着他们画脑图，尽量不说话，并且要求他们每次完成一个任务自己来找我验收。这个阶段我都会坐在他们身边，所以我随时都知道他们在做什么。第四次以后，我就会减少一天之中的介入，更多地通过检视故事墙和代码走查来关注他们的进度和质量。这个阶段（目前正在这个阶段）他们已经可以自己管理自己每天的工作，我改为坐到旁边一张桌子，背对着他们，使他们不依赖我的存在、需要时又能马上找到我。</p><p>这个过程中反馈很重要。年轻人（尤其本科生）就是一张白纸，所以需要用前5次做一件事的过程让他们养成好习惯，这也是我一开始要坐在他们身边的原因：我可以听到他们在说什么，看到他们在做什么，一旦发现有不好的实践（比如讨论不聚焦，写代码没有先写测试，抓着个鼠标在IDE里面点来点去⋯⋯）马上就骂过去——不打不骂是祸害，这个真的是至理。细节上多骂，工作的进度必然会好，于是正面的反馈也会自然随之而来。这么一来，一段时间以后你就会听到年轻人自己在喊“先写测试”，嗯，我甚感欣慰。</p><p>最后吐槽一下：我发现新同事的工作经验越多，反而越不敢尝试之前没做过的事。研究生比本科生拘谨，有工作经验的人比毕业生更拘谨。大概是脑子里被流程、分工、角色之类的bullshit给灌输了太多，经验越多的人越容易想“这个我不能做”、“那个我不会做”，越容易把自己局限在一个小框框里不见全局。反倒是本科生没有框框，他也不知道自己该做什么不该做什么，只要教他，他就会做。看着两个90后大四学生给客户写方案，很多经验丰富的同事真的要向他们学习。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="12月 1 2012" class="post-list__meta--date date">12月 1 2012</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+  </ol>
+
+  <hr class="post-list__divider " />
+
+<nav class="pagination" role="navigation">
+    
+    	
+          <a class="newer-posts pagination__newer btn btn-small btn-tertiary" href="/page/6/">&larr; Newer Posts</a>
+        
+    
+
+    <span class="pagination__page-number">Page 7 of 51</span>
+    
+    
+        <a class="older-posts pagination__older btn btn-small btn-tertiary" href="/page/8/">Older Posts &rarr;</a>
+    
+</nav>
+
+
+</div>
+            <footer class="footer">
+    <span class="footer__copyright">&copy;
+        2015
+        Transparent Thoughts. All rights reserved.</span>
+</footer>
+        </div>
+    </div>
+
+    <!-- The main JavaScript file for Casper -->
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    <script src="/js/jquery.imagesloaded.min.js"></script>
+    <script src="/js/gallery.js"></script>
+    <script src="/js/jquery.githubRepoWidget.min.js"></script>
+    <script type="text/javascript"
+            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> 
+      MathJax.Hub.Config({ 
+        tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+    }); 
+
+    </script>
+
+    <!--kill ie6 -->
+    <!--[if IE 6]>
+    <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+    <![endif]-->
+
+    <!--  google analytics -->
+    <script>
+        // add your google analytics code here
+    </script>
+
+    <!-- totop -->
+    <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">
+        <a title="back to top"><img style="width:30px;height:30px;" src="/images/totop.png"/></a>
+    </div>
+    <script>
+        (function ($) {
+            var upperLimit = 100;
+            var scrollElem = $('#totop');
+            var scrollSpeed = 500;
+            scrollElem.hide();
+            $(window).scroll(function () {
+                var scrollTop = $(document).scrollTop();
+                if (scrollTop > upperLimit) {
+                    $(scrollElem).stop().fadeTo(300, 1); // fade back in
+                } else {
+                    $(scrollElem).stop().fadeTo(300, 0); // fade out
+                }
+            });
+            $(scrollElem).click(function () {
+                $('html, body').animate({scrollTop: 0}, scrollSpeed);
+                return false;
+            });
+        })(jQuery);
+    </script>
+
+    <!-- fancybox -->
+    
+    <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+    <script src="/fancybox/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript">
+        (function ($) {
+            $('.fancybox').fancybox();
+        })(jQuery);
+    </script>
+    
+
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-113927-4', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <!-- CNZZ Analytics -->
+    <script src="http://s4.cnzz.com/z_stat.php?id=1255092465&web_id=1255092465" language="JavaScript"></script>
+
+</body>
+</html>
