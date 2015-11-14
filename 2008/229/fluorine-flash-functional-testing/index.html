@@ -7,7 +7,7 @@
     
 
     <title>
-        MySQL掉线咯 | 透明思考
+        Fluorine- Flash Functional Testing | 透明思考
     </title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -15,19 +15,21 @@
     <meta name="author" content="Jeff Xiong">
     
     
-    <meta name="description" content="一个后台操作算得太久，然后再想跟MySQL说说话的时候，就发现那个server已经偷偷的跑掉了。MySQL的超时可以用SQL查到：mysql show variables;看interactive_timeout和wait_timeout这两项。缺省是28800（秒），我们的服务器上设成了600。所以，一个长循环跑了11分钟之后，数据库连接已经被关掉了，因为中间没有和数据库打交道。（多长的循环可以">
+    <meta name="description" content="先贴两个图如果有感觉的话，就来帮忙推动一下Fluorine吧。">
     
 
-    <meta name="description" content="一个后台操作算得太久，然后再想跟MySQL说说话的时候，就发现那个server已经偷偷的跑掉了。MySQL的超时可以用SQL查到：mysql show variables;看interactive_timeout和wait_timeout这两项。缺省是28800（秒），我们的服务器上设成了600。所以，一个长循环跑了11分钟之后，数据库连接已经被关掉了，因为中间没有和数据库打交道。（多长的循环可以">
+    <meta name="description" content="先贴两个图如果有感觉的话，就来帮忙推动一下Fluorine吧。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MySQL掉线咯 | 透明思考">
-<meta property="og:url" content="http://gigix.thoughtworkers.org/2008/7/26/mysql-timeout/index.html">
+<meta property="og:title" content="Fluorine- Flash Functional Testing | 透明思考">
+<meta property="og:url" content="http://gigix.thoughtworkers.org/2008/2/29/fluorine-flash-functional-testing/index.html">
 <meta property="og:site_name" content="透明思考">
-<meta property="og:description" content="一个后台操作算得太久，然后再想跟MySQL说说话的时候，就发现那个server已经偷偷的跑掉了。MySQL的超时可以用SQL查到：mysql show variables;看interactive_timeout和wait_timeout这两项。缺省是28800（秒），我们的服务器上设成了600。所以，一个长循环跑了11分钟之后，数据库连接已经被关掉了，因为中间没有和数据库打交道。（多长的循环可以">
+<meta property="og:description" content="先贴两个图如果有感觉的话，就来帮忙推动一下Fluorine吧。">
+<meta property="og:image" content="http://lh3.google.com/gigix1980/R8g4nrX8m3I/AAAAAAAACuI/SNckZk65Nrg/s400/fluorine-1.PNG">
+<meta property="og:image" content="http://lh4.google.com/gigix1980/R8g4n7X8m4I/AAAAAAAACuQ/FNrtlvZqGwc/s400/fluorine-2.PNG">
 <meta property="og:updated_time" content="2015-11-11T07:46:00.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MySQL掉线咯 | 透明思考">
-<meta name="twitter:description" content="一个后台操作算得太久，然后再想跟MySQL说说话的时候，就发现那个server已经偷偷的跑掉了。MySQL的超时可以用SQL查到：mysql show variables;看interactive_timeout和wait_timeout这两项。缺省是28800（秒），我们的服务器上设成了600。所以，一个长循环跑了11分钟之后，数据库连接已经被关掉了，因为中间没有和数据库打交道。（多长的循环可以">
+<meta name="twitter:title" content="Fluorine- Flash Functional Testing | 透明思考">
+<meta name="twitter:description" content="先贴两个图如果有感觉的话，就来帮忙推动一下Fluorine吧。">
 
     
     <link rel="alternate" href="/atom.xml" title="透明思考" type="application/atom+xml">
@@ -176,8 +178,8 @@ classes that you can use:
 
         
         <div class="post-meta">
-            <time datetime="7月 26 2008"
-                  class="post-meta__date date">7月 26 2008</time>
+            <time datetime="2月 29 2008"
+                  class="post-meta__date date">2月 29 2008</time>
             &#8226;
 
         <span class="post-meta__tags tags">
@@ -191,11 +193,11 @@ classes that you can use:
         </div>
         
 
-        <h1 class="post-title">MySQL掉线咯</h1>
+        <h1 class="post-title">Fluorine- Flash Functional Testing</h1>
     </header>
 
     <section class="post">
-        <p>一个后台操作算得太久，然后再想跟MySQL说说话的时候，就发现<a href="http://dev.mysql.com/doc/refman/5.0/en/gone-away.html" target="_blank" rel="external">那个server已经偷偷的跑掉了</a>。</p><p>MySQL的超时可以用SQL查到：</p><pre>mysql show variables;</pre><p>看interactive_timeout和wait_timeout这两项。缺省是28800（秒），我们的服务器上设成了600。所以，一个长循环跑了11分钟之后，数据库连接已经被关掉了，因为中间没有和数据库打交道。</p><p>（多长的循环可以跑10分钟？我看到的大概是8000多和20000多的两个数组做了一下select…）</p><p>这些变量可以在/etc/my.cnf里面设置的。</p><p>Rails应用可以把ActiveRecord::Base.verification_timeout设为一个小于数据库连接超时的值（比如500）这样Rails就会帮你每过500秒PING一下数据库这样连接就不会断掉了。</p><p>（唔…10分钟会让很多东西超时，比如Apache…）</p><p>然则我们的操作是Rails之外的一个stand-alone进程，Rails也不管帮忙它，所以要在循环的过程中时不时的PING一下数据库：</p><pre>ActiveRecord::Base.connection.verify!(0)</pre><p>于是就可以了。</p>
+        <p>先贴两个图</p><p><a href="http://picasaweb.google.com/gigix1980/Fluorine/photo#5172446426344233842" target="_blank" rel="external"><img src="http://lh3.google.com/gigix1980/R8g4nrX8m3I/AAAAAAAACuI/SNckZk65Nrg/s400/fluorine-1.PNG"></a></p><p><a href="http://picasaweb.google.com/gigix1980/Fluorine/photo#5172446430639201154" target="_blank" rel="external"><img src="http://lh4.google.com/gigix1980/R8g4n7X8m4I/AAAAAAAACuQ/FNrtlvZqGwc/s400/fluorine-2.PNG"></a></p><p>如果有感觉的话，就来帮忙推动一下<a href="http://code.google.com/p/fluorine-flex/" target="_blank">Fluorine</a>吧。</p>
     </section>
 
     <!-- JiaThis Button BEGIN -->
