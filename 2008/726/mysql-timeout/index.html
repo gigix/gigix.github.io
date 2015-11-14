@@ -7,7 +7,7 @@
     
 
     <title>
-        历史，蓝天，碧水 | 透明思考
+        MySQL掉线咯 | 透明思考
     </title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -15,21 +15,19 @@
     <meta name="author" content="Jeff Xiong">
     
     
-    <meta name="description" content="昨天，去了鸡鸣驿。几百年的老驿站，还有大话西游里吻别的城楼。印象深的，却是蓝蓝的天，低低的云。似乎从没在北京见过的。曾经繁华的驿站，黄沙吹过，阳光清朗亮眼。偶遇的驴友去了别处，和他们道别后到了官厅水库。有点小越野的乡间路上开车很有感觉。水边好风景，在一大片向日葵边发呆，连照片也不想拍了。">
+    <meta name="description" content="一个后台操作算得太久，然后再想跟MySQL说说话的时候，就发现那个server已经偷偷的跑掉了。MySQL的超时可以用SQL查到：mysql show variables;看interactive_timeout和wait_timeout这两项。缺省是28800（秒），我们的服务器上设成了600。所以，一个长循环跑了11分钟之后，数据库连接已经被关掉了，因为中间没有和数据库打交道。（多长的循环可以">
     
 
-    <meta name="description" content="昨天，去了鸡鸣驿。几百年的老驿站，还有大话西游里吻别的城楼。印象深的，却是蓝蓝的天，低低的云。似乎从没在北京见过的。曾经繁华的驿站，黄沙吹过，阳光清朗亮眼。偶遇的驴友去了别处，和他们道别后到了官厅水库。有点小越野的乡间路上开车很有感觉。水边好风景，在一大片向日葵边发呆，连照片也不想拍了。">
+    <meta name="description" content="一个后台操作算得太久，然后再想跟MySQL说说话的时候，就发现那个server已经偷偷的跑掉了。MySQL的超时可以用SQL查到：mysql show variables;看interactive_timeout和wait_timeout这两项。缺省是28800（秒），我们的服务器上设成了600。所以，一个长循环跑了11分钟之后，数据库连接已经被关掉了，因为中间没有和数据库打交道。（多长的循环可以">
 <meta property="og:type" content="article">
-<meta property="og:title" content="历史，蓝天，碧水 | 透明思考">
-<meta property="og:url" content="http://gigix.thoughtworkers.org/2008/8/24/history-and-blue-sky/index.html">
+<meta property="og:title" content="MySQL掉线咯 | 透明思考">
+<meta property="og:url" content="http://gigix.thoughtworkers.org/2008/7/26/mysql-timeout/index.html">
 <meta property="og:site_name" content="透明思考">
-<meta property="og:description" content="昨天，去了鸡鸣驿。几百年的老驿站，还有大话西游里吻别的城楼。印象深的，却是蓝蓝的天，低低的云。似乎从没在北京见过的。曾经繁华的驿站，黄沙吹过，阳光清朗亮眼。偶遇的驴友去了别处，和他们道别后到了官厅水库。有点小越野的乡间路上开车很有感觉。水边好风景，在一大片向日葵边发呆，连照片也不想拍了。">
-<meta property="og:image" content="http://lh6.ggpht.com/gigix1980/SLAePLQh3hI/AAAAAAAADU4/ierG9wlJjw4/s400/DSCF1719.JPG">
-<meta property="og:image" content="http://lh5.ggpht.com/gigix1980/SLAkVh1uC2I/AAAAAAAADVQ/oNhmntedNwM/s400/DSCF1724.JPG">
+<meta property="og:description" content="一个后台操作算得太久，然后再想跟MySQL说说话的时候，就发现那个server已经偷偷的跑掉了。MySQL的超时可以用SQL查到：mysql show variables;看interactive_timeout和wait_timeout这两项。缺省是28800（秒），我们的服务器上设成了600。所以，一个长循环跑了11分钟之后，数据库连接已经被关掉了，因为中间没有和数据库打交道。（多长的循环可以">
 <meta property="og:updated_time" content="2015-11-11T07:46:00.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="历史，蓝天，碧水 | 透明思考">
-<meta name="twitter:description" content="昨天，去了鸡鸣驿。几百年的老驿站，还有大话西游里吻别的城楼。印象深的，却是蓝蓝的天，低低的云。似乎从没在北京见过的。曾经繁华的驿站，黄沙吹过，阳光清朗亮眼。偶遇的驴友去了别处，和他们道别后到了官厅水库。有点小越野的乡间路上开车很有感觉。水边好风景，在一大片向日葵边发呆，连照片也不想拍了。">
+<meta name="twitter:title" content="MySQL掉线咯 | 透明思考">
+<meta name="twitter:description" content="一个后台操作算得太久，然后再想跟MySQL说说话的时候，就发现那个server已经偷偷的跑掉了。MySQL的超时可以用SQL查到：mysql show variables;看interactive_timeout和wait_timeout这两项。缺省是28800（秒），我们的服务器上设成了600。所以，一个长循环跑了11分钟之后，数据库连接已经被关掉了，因为中间没有和数据库打交道。（多长的循环可以">
 
     
     <link rel="alternate" href="/atom.xml" title="透明思考" type="application/atom+xml">
@@ -178,8 +176,8 @@ classes that you can use:
 
         
         <div class="post-meta">
-            <time datetime="8月 24 2008"
-                  class="post-meta__date date">8月 24 2008</time>
+            <time datetime="7月 26 2008"
+                  class="post-meta__date date">7月 26 2008</time>
             &#8226;
 
         <span class="post-meta__tags tags">
@@ -193,11 +191,11 @@ classes that you can use:
         </div>
         
 
-        <h1 class="post-title">历史，蓝天，碧水</h1>
+        <h1 class="post-title">MySQL掉线咯</h1>
     </header>
 
     <section class="post">
-        <p>昨天，去了<a href="http://bj.sina.com.cn/art/2005-07-29/102181326.shtml" target="_blank" rel="external">鸡鸣驿</a>。几百年的老驿站，还有大话西游里吻别的城楼。</p><p><a href="http://picasaweb.google.com/gigix1980/NjMCmF/photo#5237719612700876306" target="_blank" rel="external"><img src="http://lh6.ggpht.com/gigix1980/SLAePLQh3hI/AAAAAAAADU4/ierG9wlJjw4/s400/DSCF1719.JPG"></a></p><p>印象深的，却是蓝蓝的天，低低的云。似乎从没在北京见过的。曾经繁华的驿站，黄沙吹过，阳光清朗亮眼。</p><p><a href="http://picasaweb.google.com/gigix1980/NjMCmF/photo#5237726318911425378" target="_blank" rel="external"><img src="http://lh5.ggpht.com/gigix1980/SLAkVh1uC2I/AAAAAAAADVQ/oNhmntedNwM/s400/DSCF1724.JPG"></a></p><p>偶遇的驴友去了别处，和他们道别后到了<a href="http://www.diginon.com/article.asp?id=121" target="_blank" rel="external">官厅水库</a>。有点小越野的乡间路上开车很有感觉。</p><p>水边好风景，在一大片向日葵边发呆，连照片也不想拍了。</p>
+        <p>一个后台操作算得太久，然后再想跟MySQL说说话的时候，就发现<a href="http://dev.mysql.com/doc/refman/5.0/en/gone-away.html" target="_blank" rel="external">那个server已经偷偷的跑掉了</a>。</p><p>MySQL的超时可以用SQL查到：</p><pre>mysql show variables;</pre><p>看interactive_timeout和wait_timeout这两项。缺省是28800（秒），我们的服务器上设成了600。所以，一个长循环跑了11分钟之后，数据库连接已经被关掉了，因为中间没有和数据库打交道。</p><p>（多长的循环可以跑10分钟？我看到的大概是8000多和20000多的两个数组做了一下select…）</p><p>这些变量可以在/etc/my.cnf里面设置的。</p><p>Rails应用可以把ActiveRecord::Base.verification_timeout设为一个小于数据库连接超时的值（比如500）这样Rails就会帮你每过500秒PING一下数据库这样连接就不会断掉了。</p><p>（唔…10分钟会让很多东西超时，比如Apache…）</p><p>然则我们的操作是Rails之外的一个stand-alone进程，Rails也不管帮忙它，所以要在循环的过程中时不时的PING一下数据库：</p><pre>ActiveRecord::Base.connection.verify!(0)</pre><p>于是就可以了。</p>
     </section>
 
     <!-- JiaThis Button BEGIN -->
