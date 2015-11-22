@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Transparent Thoughts]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://gigix.thoughtworkers.org/"/>
-  <updated>2015-11-11T14:24:21.000Z</updated>
+  <updated>2015-11-22T01:41:04.000Z</updated>
   <id>http://gigix.thoughtworkers.org/</id>
   
   <author>
@@ -13,6 +13,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[共享经济到底是个什么鬼？]]></title>
+    <link href="http://gigix.thoughtworkers.org/2015/11/22/myth-of-share-economy/"/>
+    <id>http://gigix.thoughtworkers.org/2015/11/22/myth-of-share-economy/</id>
+    <published>2015-11-22T11:31:00.000Z</published>
+    <updated>2015-11-22T01:41:04.000Z</updated>
+    <content type="html"><![CDATA[<p><em>（本文同时发表于<a href="http://groundbreaking.cn/shehui/guoji/4498.html" target="_blank" rel="external">破土网</a>）</em></p>
+<p>据互联网创业专家的<a href="http://toutiao.com/a6192684396577751298/" target="_blank" rel="external">分析</a>，“互联网＋”把各行各业生意都开上了互联网，O2O（Online to Offline）把线上和线下整合起来。这两件事打通了业务上网的渠道，而在这个渠道上要挣钱，就要靠共享经济了。专家说，共享经济能优化资源配置，把原本闲置的资源出租利用，从而创造出一块新的市场。比如汽车，原来一辆家用轿车就上班下班通勤用，利用率不到20%；如果能借助互联网之力把白白放在停车场里的私家车共享利用起来，岂不是好事一件？</p>
+<p>可偏偏就是这共享经济的急先锋、共享租车业务的鼻祖Uber，在世界各地背了<a href="https://en.wikipedia.org/wiki/Legal_status_of_Uber&#39;s_service" target="_blank" rel="external">上百桩诉案</a>，在德国、西班牙、法国、英国等多个国家遭到抗议，两名高官还曾于今年6月在法国<a href="http://fortune.com/2015/06/29/uber-executives-arrested/" target="_blank" rel="external">被捕</a>。另一家共享经济的楷模、专事共享租房业务的Airbnb也曾在<a href="http://www.nydailynews.com/new-york/de-blasio-administration-files-lawsuit-apartments-operating-hotels-sites-liairbnb-article-1.1977461" target="_blank" rel="external">纽约</a>和<a href="http://www.huffingtonpost.com/2014/04/29/airbnb-laws-san-francisco_n_5235820.html" target="_blank" rel="external">旧金山</a>遭遇法律挑战。于是我们不禁要好奇：这共享经济到底是个什么鬼？为何明明听起来很美，却会遭到如此多的反对？</p>
+<p><img src="/assets/2015/11/22/share-economy.jpg"></p>
+<p>其实借助互联网把分散的资源集中起来提供服务，这想法并不新鲜。近的有<a href="https://en.wikipedia.org/wiki/Long_tail" target="_blank" rel="external">长尾理论</a>，说技术可以把大量分散的需求和供给匹配成可行的生意；再回想得远一点，比尔盖茨早在1995年的《未来之路》中就提到了“<a href="https://en.wikipedia.org/wiki/Disintermediation" target="_blank" rel="external">去中介化</a>”的概念：互联网可以把“中间人”（分销渠道）去掉，让生产者和消费者直接联结，降低总体成本，从而使生产者的收益有可能增加、消费者的支出有可能减少。</p>
+<p>Wikipedia的文字中，这两个“有可能”（“may”）颇可玩味。互联网的确能消解传统“中间人”的市场控制力，然而这被消解的力量是否就会让利给生产者和消费者，那又是另一回事。仍以租车为例，Uber模式一方面引入大量兼职司机压低全职司机的收入，另一方面把自己变成了比以前的出租车公司更具垄断力的平台——Uber（以及其他模仿者）要求司机只能使用自己的网络平台，这时他们倒是不把“共享”挂在嘴边了。司机一方议价力削弱，而公司一方垄断力日增，那么司机又怎会得到那只是“有可能”的收益增加呢？</p>
+<p>事实也确是如此：据笔者在美国几个大城市的观察，Uber司机大部分是非洲裔，有少许亚裔和阿拉伯裔，从未见过像Uber广告中的白人中产阶级司机，司机的收入也只堪温饱，比起传统的出租车司机尚自不如。国内的情况也相去不远，随着各家叫车平台补贴逐月减少，滴滴快车的服务水平已经向从前的黑车看齐，神州专车的司机也开始抱怨收入不佳。资本逐利的本性决定了，互联网公司“去中介化”的目的是为了建立垄断力更强的“<a href="http://www.jamieparfitt.com/blog/2014/5/4/disintermediation-reintermediation-and-cybermediation" target="_blank" rel="external">赛博中介</a>”。想着互联网公司消解了传统行业的“中间人”就会让利给消费者和劳动者？这也未免想得太乐观了一点。</p>
+<p>照资本的本性，一旦有了更强力的垄断地位，何止不会让利，还要寻求更多的利润呢。我们回头来看看Airbnb和Uber的诉案，究竟告的是什么缘由。纽约市政府起诉Airbnb，因为他们的房源有相当部分来自于不按照规定缴纳税费的非法酒店；旧金山市政府也立法要求Airbnb缴纳酒店税。Uber最近<a href="http://www.npr.org/2015/09/02/436820824/california-court-grants-uber-drivers-class-action-status" target="_blank" rel="external">在加州被起诉</a>的主要争论点则在于“司机是不是Uber的雇员”。Uber宣称自己只是“平台”，司机则是平台上的“合作伙伴”；而司机一方则认为Uber无疑是司机的雇主，该公司将从事工作所必须的开销都转嫁给了司机——这个“从事工作所必须的开销”，当然不仅是养车、加油和买新衣服，更重要的是医疗、教育、养老等社会保障。这些“共享经济”互联网企业都有一个共同的卖点：“轻资产”。确实，做着跟别人一样的生意，却不用像别人一样承担对员工、对社会的责任，这岂能不盈利、岂能不受全球资本青睐呢？至于谁应该来为市政建设、人民福利买单，不好意思，那可就不是<a href="http://www.48hills.org/2014/07/10/ubers-tax-avoidance-strategy-costs-government-millions/" target="_blank" rel="external">注册在避税天堂</a>的互联网公司们要考虑的啦。</p>
+<p>创造赛博垄断－压榨劳动者－逃避社会责任。这套赚钱逻辑，中国的互联网创业者们看国外大鳄们玩过了以后，才发现是如此好用。于是转眼之间，外卖O2O开始“<a href="http://36kr.com/p/5037825.html" target="_blank" rel="external">全民开店</a>”了，美容O2O开始“<a href="http://www.helijia.com/index.html" target="_blank" rel="external">解放天下手艺人</a>”了——至于这些据说不再依靠组织、不用阿谀上司、不必忍受压榨，实现了财务、时间、心灵三大自由的手艺人，他们的五险一金该由谁来交，互联网公司当然会说自己只是个平台而不是雇主啦。</p>
+<p>所以，现在各位看官能搞明白“共享经济”到底是个什么鬼了吧？说简单也简单，无非就是资本借助互联网掀翻原来的中间渠道，建立互联网上的强大垄断，让劳动者更加没有选择、没有组织，从而施行更残酷的剥削。如果政府要来监管盘问这家企业本应承担的社会责任去了哪里，共享经济先锋们便会一边拿出“自由”的大旗抵挡，一边趁监管法规尚未成型<a href="http://wallstreetcn.com/node/224360" target="_blank" rel="external">捞个时间差</a>。看明白了这个关节，笔者不禁暗想：这不是80年代刚改革开放那会儿的“倒爷”们早就玩儿得熟透的把戏么，又何须这么多高科技的幌子呢？</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><em>（本文同时发表于<a href="http://groundbreaking.cn/shehui/guoji/4498.html" target="_blank" rel="external">破土网</a>）</em></p>
+<p>据互联网创业专家的<a hre]]>
+    </summary>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[胜任力挑战及应对：现有研究]]></title>
@@ -503,19 +527,6 @@
 ]]></content>
     <summary type="html">
     <![CDATA[<p>（本文系《<a href="http://book.douban.com/subject/5379664/" target="_blank" rel="external">浅薄</a>》的书评，发表于《商业价值》“<a href="http://content.busine]]>
-    </summary>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[书评：与机器赛跑]]></title>
-    <link href="http://gigix.thoughtworkers.org/2014/7/8/race-against-machines/"/>
-    <id>http://gigix.thoughtworkers.org/2014/7/8/race-against-machines/</id>
-    <published>2014-07-08T11:40:00.000Z</published>
-    <updated>2015-11-11T07:46:00.000Z</updated>
-    <content type="html"><![CDATA[<p><em>（本文发表于《商业价值》<a href="http://content.businessvalue.com.cn/post/31312.html" target="_blank" rel="external">2014年7月刊</a>）</em></p><p>住在悉尼市郊的黛茜今年37岁，在一家保险公司的呼叫中心工作。过去10多年里，她的这份工作做得很平稳：每天按时上班，接起顾客打来的电话，不管是询问投保条款还是咨询理赔事宜，她都能对答如流。接起电话，按照烂熟于心的产品手册帮顾客解决问题，听到顾客说“谢谢”然后挂上电话，这份工作让她觉得一切井井有条。所以，她没想到自己会被公司解雇。</p><p>黛茜不是唯一被解雇的员工，她和几十个同时被解雇的呼叫中心的同事所怀有的疑问也绝非罕见：当经济形势已经从前几年的不景气中逐渐恢复，自己的雇主还宣布斥资数亿澳元建设IT系统，为什么自己还会失业？</p><p><img src="/assets/2014/7/8/machine.png" alt=""></p><p>美国劳工统计局的一份数据显示，从2008年起，以人均GDP为指标的美国总体经济已经开始从金融危机的阴影中复苏，然而以家庭收入中位数为指标的“普通人收入水平”却仍在一路下滑。事实上，在21世纪的第一个10年，尽管总体经济大势仍然保持上升，美国的普通家庭收入却呈现下降趋势。宏观经济的繁荣没有带来绝大部分普通人生活的改善，如果把眼光放得更远一些，这可能是人类历史上第一次出现这样奇特的景象。</p><p>究竟是什么造成了这种情况？《<a href="http://book.douban.com/subject/21326266/" target="_blank" rel="external">与机器赛跑</a>》的作者们认为，答案是机器——尤其是计算机——在取代普通人的工作。经济的繁荣不再与高就业率相关，因此普通人享受不到经济发展的成果也就不令人意外了。</p><p>人类与机器的竞赛并非自今日始。据说19世纪有位叫约翰·亨利的铁路工人不服自己的工作被蒸汽机取代，于是要求与蒸汽机比赛往岩石里打桩。结果亨利赢了比赛，却因为心力衰竭丢了性命，从此以后再也没有人尝试跟机器比拼体力。正如《与机器赛跑》的两位作者所说，这是一场人类赢不了的比赛，计算机终将取代大多数现在仍由人类完成的工作，而人类必须学会与计算机协作并发挥自己的特长。</p><p>从这个意义上来说，《与机器赛跑》这个标题译得并不十分贴切，因为作者讲的并不是如何“赛过机器”，而是如何“与机器组队配合赛过其他队伍”。</p><p>两位作者指出，人类的特长在于复杂的、涉及情感的交流，以及复杂的模式匹配和创造性的思维。然而与一些乐观主义者不同，两位作者并不认为人类自然而然地就会具备与计算机协作所需的那些能力——从日常生活中我们就能看到，信息碎片化、深度阅读与思考的失位、电脑和手机对人际交往的侵入……信息技术不仅没有增强、反而在潜移默化地弱化人们进行复杂交流和创造性思维的能力。阴谋论者简直可以就此写一篇科幻小说，谈论觉醒的硅基生命如何逐步奴役人类了。</p><p>在较短时间内让绝大多数普通人具备与机器协作的能力，教育将扮演至关重要的角色，因此两位作者也表达了他们对现行教育体制的忧虑。</p><p>首先，教育必须给人们传授那些非机械化的、非重复性的、涉及情感与创造性的技能，因为只有这些技能才是不可被机器取代、因此在下一个时代仍然有效的。以中国人常引以为豪的数学教育为例，现在学生们从课堂上学到的多是“执行算法”的能力而非“设计算法”的能力，而前者恰好是计算机的长项，后者才是人类可能与计算机展开合作的领域。诸如此类的教育思路与方式若不及时改变，在一两代人之后人类被机器广泛取代绝非危言耸听。</p><p>比起教育的内容与形式，更严峻的挑战是教育的不均衡与不平等。我们正在经历的是一场知识偏向型的产业革命：掌握必要知识与技能的人与机器协作如鱼得水，不具备这些知识与技能的人则连出卖劳动力的机会都被剥夺。教育的不均衡与不平等则会加剧阶级的分裂并使阶级固化——看着城市里的孩子在接受英语电脑人文艺术全面覆盖的素质教育，乡村小学和农民工子弟校却仍在为语文数学课犯愁，这种阶级分裂与阶级固化的迹象已经近在眼前了。</p><p>是以，尽管讲的是美国的事情，尽管看来还有点科幻色彩，这本《与机器赛跑》绝非离我们千里之外的天方夜谭。与机器的赛跑已经全面展开，而这场竞赛究竟会以何种方式落幕，很大程度上将取决于我们这一代人的认识与行动。</p>]]></content>
-    <summary type="html">
-    <![CDATA[<p><em>（本文发表于《商业价值》<a href="http://content.businessvalue.com.cn/post/31312.html" target="_blank" rel="external">2014年7月刊</a>）</em></p><p>住在悉]]>
     </summary>
     
   </entry>
