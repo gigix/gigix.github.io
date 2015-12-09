@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Transparent Thoughts]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://gigix.thoughtworkers.org/"/>
-  <updated>2015-11-22T01:41:04.000Z</updated>
+  <updated>2015-12-09T05:18:31.000Z</updated>
   <id>http://gigix.thoughtworkers.org/</id>
   
   <author>
@@ -15,11 +15,41 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[小数据：理论和架构]]></title>
+    <link href="http://gigix.thoughtworkers.org/2015/12/7/small-data-theory-architecture/"/>
+    <id>http://gigix.thoughtworkers.org/2015/12/7/small-data-theory-architecture/</id>
+    <published>2015-12-07T11:31:00.000Z</published>
+    <updated>2015-12-09T05:18:31.000Z</updated>
+    <content type="html"><![CDATA[<p>大数据是当下最热门的IT主题之一。据<a href="http://www.mckinsey.com/insights/business_technology/big_data_the_next_frontier_for_innovation" target="_blank" rel="external">麦肯锡的分析</a>，大数据能使信息更透明、能让决策者获得更精确翔实的绩效信息、能针对客户群体提供更准确的定制、能提升组织决策能力、能帮助开发下一代产品和服务。新时代里与互联网联结的组织不论大小，都需要这些能力。</p>
+<p>然而与此同时，大数据的“大”并非适用于所有组织。Gartner认为，<a href="http://www.forbes.com/sites/gartnergroup/2013/03/27/gartners-big-data-definition-consists-of-three-parts-not-to-be-confused-with-three-vs/" target="_blank" rel="external">大数据具有“3V”的特征</a>：多样性（Variety），数据来自多种不同来源、具有多种不同形态；速度（Velocity），数据形态和呈现形式的变化快且频繁；量级（Volume），数据量非常巨大。然而对于众多的中小型企业及非营利组织而言，这三个特征有两个未必适用。很多中小型组织只有为数不多的几个IT系统，数据都保存在为数不多的几个关系型数据库中，数据量不超过数百万条记录。只有变化速度快这一特征，对于中小型组织仍然适用。从这个意义上，这些中小型组织需要的是一个“小数据”解决方案：</p>
+<blockquote>
+<p><strong>小数据：聚焦中小型组织和新兴业务，在数据量较小、数据来源较简单的情况下，提供非常灵活、非常简便易用、使用过程中对IT技能要求非常低的数据分析和商业智能，为应对多变且未知的外部环境提供决策支持。</strong></p>
+</blockquote>
+<p>传统上，很多小数据场景的分析和商业智能需求以“报表”的形式呈现在IT项目中：在开发<a href="https://en.wikipedia.org/wiki/Online_transaction_processing" target="_blank" rel="external">OLTP</a>系统的项目中列出一组报表需求，由交付OLTP系统的团队以直接SQL查询的形式实现报表。这种做法贴合了数据量小、数据来源简单的特征，但损失了灵活性，报表的定制和修改需要技术人员介入，因此又无法满足对速度的要求。为了赢得灵活性，小数据分析也同样需要首先建模<a href="https://en.wikipedia.org/wiki/OLAP_cube" target="_blank" rel="external">OLAP Cube</a>，然后通过不同维度的切片和钻取进行分析。</p>
+<p>什么是Cube？按照<a href="http://book.douban.com/subject/26301966/" target="_blank" rel="external">维度建模方法</a>，数据可以分为“事实”和“维度”两类。事实数据代表“发生了什么事”，维度数据则从各个角度描述这件事。如果以电商为例，事实数据是“销售记录”（卖了一个东西），常见的维度数据可能包括“产品”（卖的是什么）、“门店”（在哪里卖的）、“时间”（什么时候卖的）、“售货员”（谁卖的）、“顾客”（卖给了谁）等等。不难想象，事实数据表将只有一个主键、一个值、以及一大堆外键指向各个维度表；维度表也可能有外键再指向更多的描述性的子维度表（例如“产品”有外键指向“类别”）。于是我们就会得到一个<a href="https://en.wikipedia.org/wiki/Star_schema" target="_blank" rel="external">星型表结构</a>（或叫<a href="https://en.wikipedia.org/wiki/Snowflake_schema" target="_blank" rel="external">雪花型表结构</a>）。</p>
+<p><img src="/assets/2015/12/7/Star-schema-example.png"></p>
+<p>星型表结构的优势在于，分析操作会变得非常简单：你关心哪些信息，就直接用JOIN子句把这些维度表关联进来；只要在JOIN子句里指定WHERE条件，就可以快速缩减结果集。在星型表结构里，一个事实会被若干个维度修饰，因此可以把整个数据集想象成一个立方体（或<a href="https://en.wikipedia.org/wiki/Hypercube" target="_blank" rel="external">超立方体</a>，当维度多于三个时）。例如当只考虑“产品”、“城市”、“时间”这三个维度时，“销售记录”的数据集就可以被建模为一个立方体。</p>
+<p><img src="/assets/2015/12/7/OLAP_Cube.svg"></p>
+<p>随后就可以在这个立方体上对数据进行各种分析。例如你可以锁定“城市”这一维度，从而得到“某城市各种产品历史销售报表”——“锁定某一维度取值”这一操作也叫“切片”（slice），因为它在这个例子中产生的效果就是从三维的立方体中切出一个二维的数据平面。同样的，我们也可以从“产品”维度切片，从而得到“某产品各市历史销售报表”。当维度具有“分级汇聚”的特性时，我们还可以进行“钻取”（drill）操作，例如当“地区”维度分为“市”和“省”两级时，我们就可以在“地区”维度上进行钻取：首先从产品维度切片得到“某产品各省历史销售报表”，然后选择一个省下钻得到“某产品在某省内各市历史销售报表”。</p>
+<blockquote>
+<p><strong>小数据系统设计原则1：建模一个Cube，就可以快速实现一系列分析操作（及对应的报表）。小数据系统应该支持简便且易于修改的Cube建模。</strong></p>
+</blockquote>
+<p>基于这个设计原则，我们可以大概推知小数据系统的架构：首先，根据指定的Cube描述信息，把业务数据建模成Cube；然后，通过RESTful API对Cube进行切片、钻取和聚合等操作，并取回二维平面表或透视表形式的结果集；最后，根据指定的报表定义信息，把结果集渲染成报表。</p>
+<p><img src="/assets/2015/12/7/architecture.jpg"></p>
+<p>从上图不难看出，在这个架构中，必须由用户（不论是开发者或最终用户）提供的信息只有三项：（1）Cube的描述；（2）数据分析操作对应的URL；（3）呈现分析结果的报表定义。并且第三项信息（即报表定义）与具体业务是完全解耦的，因此理应可以用分别的开源软件组合形成轻量级的小数据解决方案。在下一篇文章中，我将具体介绍一个基于开源软件的小数据解决方案实现。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>大数据是当下最热门的IT主题之一。据<a href="http://www.mckinsey.com/insights/business_technology/big_data_the_next_frontier_for_innovation" target="_blank]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[共享经济到底是个什么鬼？]]></title>
     <link href="http://gigix.thoughtworkers.org/2015/11/22/myth-of-share-economy/"/>
     <id>http://gigix.thoughtworkers.org/2015/11/22/myth-of-share-economy/</id>
     <published>2015-11-22T11:31:00.000Z</published>
-    <updated>2015-11-22T01:41:04.000Z</updated>
+    <updated>2015-11-22T01:41:18.000Z</updated>
     <content type="html"><![CDATA[<p><em>（本文同时发表于<a href="http://groundbreaking.cn/shehui/guoji/4498.html" target="_blank" rel="external">破土网</a>）</em></p>
 <p>据互联网创业专家的<a href="http://toutiao.com/a6192684396577751298/" target="_blank" rel="external">分析</a>，“互联网＋”把各行各业生意都开上了互联网，O2O（Online to Offline）把线上和线下整合起来。这两件事打通了业务上网的渠道，而在这个渠道上要挣钱，就要靠共享经济了。专家说，共享经济能优化资源配置，把原本闲置的资源出租利用，从而创造出一块新的市场。比如汽车，原来一辆家用轿车就上班下班通勤用，利用率不到20%；如果能借助互联网之力把白白放在停车场里的私家车共享利用起来，岂不是好事一件？</p>
 <p>可偏偏就是这共享经济的急先锋、共享租车业务的鼻祖Uber，在世界各地背了<a href="https://en.wikipedia.org/wiki/Legal_status_of_Uber&#39;s_service" target="_blank" rel="external">上百桩诉案</a>，在德国、西班牙、法国、英国等多个国家遭到抗议，两名高官还曾于今年6月在法国<a href="http://fortune.com/2015/06/29/uber-executives-arrested/" target="_blank" rel="external">被捕</a>。另一家共享经济的楷模、专事共享租房业务的Airbnb也曾在<a href="http://www.nydailynews.com/new-york/de-blasio-administration-files-lawsuit-apartments-operating-hotels-sites-liairbnb-article-1.1977461" target="_blank" rel="external">纽约</a>和<a href="http://www.huffingtonpost.com/2014/04/29/airbnb-laws-san-francisco_n_5235820.html" target="_blank" rel="external">旧金山</a>遭遇法律挑战。于是我们不禁要好奇：这共享经济到底是个什么鬼？为何明明听起来很美，却会遭到如此多的反对？</p>
@@ -504,29 +534,6 @@
 ]]></content>
     <summary type="html">
     <![CDATA[<p>为乡村医疗工作者、乡村教师以及其他类似的深入边远基层的工作者设计IT系统时，数据采集、上报和分析是一类常见的需求。比如说，各个村的村医统计新生儿人数，或者各个村的教师统计学龄儿童人数，然后由村到乡、由乡到县、再到市省乃至全国逐级上报；某个中央机构（政府或者NGO）可以获得全]]>
-    </summary>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[浅薄：通向被机器取代之路]]></title>
-    <link href="http://gigix.thoughtworkers.org/2014/8/11/book-review-to-swallows/"/>
-    <id>http://gigix.thoughtworkers.org/2014/8/11/book-review-to-swallows/</id>
-    <published>2014-08-11T01:34:00.000Z</published>
-    <updated>2015-11-11T07:46:00.000Z</updated>
-    <content type="html"><![CDATA[<p>（本文系《<a href="http://book.douban.com/subject/5379664/" target="_blank" rel="external">浅薄</a>》的书评，发表于《商业价值》“<a href="http://content.businessvalue.com.cn/post/31471.html" target="_blank" rel="external">周末荐书</a>”栏目） </p>
-<p>阿兰•图灵于1936年发表的论文不仅奠定了现代计算机的理论基础，同时也指出了计算机的边界：这个世界上有无穷多的问题是计算机不能解决的。这一发现在哲学层面的意义丝毫不亚于其使用价值，因为它实际上是在论断：人的思想无法被计算机取代。 </p>
-<p><img src="/assets/2014/8/11/WebBrain_main_0229.jpg"></p>
-<p>不过严格说起来，这个论断的成立还需要另一个前提条件，即那些计算机不可计算的问题，人脑是可以解决至少其中一部分的。而尼古拉斯•卡尔在《<a href="http://book.douban.com/subject/5379664/" target="_blank" rel="external">浅薄：互联网如何毒化了我们的大脑</a>》中指出，这个前提条件正在随着计算机和互联网的飞速发展而变得岌岌可危。计算机仍然不能解决那些不可被计算的问题，然而我们自己却在越来越多地使用计算机的过程中逐渐失去人类独有的那部分思想优势。 </p>
-<p>首先必须提到的是日益普遍的注意力涣散。互联网以海量、碎片化信息的方式鼓励注意力的不断跳跃，现代人更是主动迎合这种信息输入的方式，各种快读、速读、碎片化阅读的技巧层出不穷。脑神经科学的研究显示，我们的大脑能以很快的速度调整神经元之间的联接方式，从而使思维获得远超进化论水平的灵活性。现在，在微博、微信、Instagram……持续不断的塑造下，我们的大脑正在调整成一种适应碎片、拒绝长时间聚焦的联接方式。 </p>
-<p>不断跳跃的信息输入本身不是问题，问题出在信息的存储与处理环节。卡尔引用一系列神经科学领域的研究成果讲述一个事实：和计算机的磁性存储介质不同，我们的碳基大脑无法记住所有事。大脑负责短期记忆（也叫工作记忆）和长期记忆的区域是完全不同的，信息需要在工作记忆区停留足够长的时间（大概两三个小时），才会被转到长期记忆区。短期记忆区容量非常有限，而长期记忆区几乎有无限容量。于是，当我们跳跃地、碎片地接受海量信息的输入，各种各样的信息不断地在短期记忆区来来去去，统统都没有进入长期记忆区，结果我们忙忙碌碌一天发现脑子里一片空白什么都没学到。同时扑面而来的信息又让我们感到越来越焦躁，愈发迫不及待地去吸收更多的信息，从而进入一个恶性循环。 </p>
-<p>比起无法存储信息，更糟糕的或许是无法处理信息。老师会说“课上学的知识课后要好好消化”，这个“消化”的隐喻恰如其分地呈现了大脑处理信息的过程：左脑在无意识的状态下处理长期记忆区中的信息，构建出一个思维体系，供右脑在其上进行逻辑思考。缺乏连贯深入的信息获取方式，使得左脑构建的思维体系破碎凌乱，于是对信息的使用也随之变得浅薄。这样的案例俯拾皆是：看着微信朋友圈里几位每天专注转发心灵鸡汤与爱国热血文的亲友，我仿佛看到了用几个关键词搜索推送的RSS频道，于是除了屏蔽朋友圈更新之外也别无他法了。 </p>
-<p>正如布林约尔松和麦卡菲在《<a href="http://book.douban.com/subject/21326266/" target="_blank" rel="external">与机器赛跑</a>》中所说，在一个计算机能力日益强大的时代，人类独特的竞争力在于情感交流与创新。然而适应于时代的、碎片化的信息输入方式不仅会使我们的思想缺乏深度而失去创造性，而且让我们失去深入的主观情感判断，甚至陷入道德相对主义与道德虚无主义。于是我们看到一个自我增强的困境：机器不仅在取代人类用浅薄的思想可以做的那些工作，而且还将更多人的思想变得越来越浅薄。马克思说劳动者异化成劳动的工具，而这一次的异化更可怕之处在于：浅薄的思想无法意识到自身被异化。难道我们真的已经无法抗争了吗？ </p>
-<p>在这本《浅薄》中，卡尔并没有多谈如何与浅薄化的趋势抗争，但抗争的方式已经呼之欲出。重新夺回主动的第一步在于阅读。我们需要学会隔离永不停息的信息大潮，停止浅尝辄止的、信息采集式的阅读，回到书籍时代的深入阅读，通过思考把信息组织到一个完整的框架或体系中，花时间进行这个反思和组织的过程，使信息以及你为它组织的框架能被转入长期记忆，使其孕育出深刻的、创造性的思想。从这个意义上，作为读者的你现在把眼光放在“周末荐书”栏目上，这就是人类拒绝走向浅薄、拒绝被计算机取代的希望所在。 </p>
-<p>（文/熊节，<a href="http://www.thoughtworks.com/social-justice" target="_blank" rel="external">ThoughtWorks</a>咨询师，致力于用IT技术塑造更加公正和美好的社会）</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>（本文系《<a href="http://book.douban.com/subject/5379664/" target="_blank" rel="external">浅薄</a>》的书评，发表于《商业价值》“<a href="http://content.busine]]>
     </summary>
     
   </entry>
