@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://gigix.thoughtworkers.org/2015/12/16/small-data-steps-interfaces/</loc>
+    <lastmod>2015-12-19T07:16:55.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://gigix.thoughtworkers.org/2015/12/7/small-data-theory-architecture/</loc>
     <lastmod>2015-12-09T05:18:31.000Z</lastmod>
   </url>
@@ -137,7 +142,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2007/6/9/%E8%BF%99%E6%98%AF%E6%88%91%E4%BB%AC%E7%9A%84%E7%BA%AA%E5%BF%B5%E6%97%A5/</loc>
+    <loc>http://gigix.thoughtworkers.org/2007/7/14/%E6%95%8F%E6%8D%B7%E5%B7%A5%E4%BD%9C%EF%BC%8C%E6%95%8F%E6%8D%B7%E7%94%9F%E6%B4%BB%EF%BC%8C%E6%95%8F%E6%8D%B7%E4%B8%AD%E5%9B%BD/</loc>
     <lastmod>2015-11-11T07:46:01.000Z</lastmod>
   </url>
   
@@ -252,6 +257,16 @@
   </url>
   
   <url>
+    <loc>http://gigix.thoughtworkers.org/2007/6/9/%E8%BF%99%E6%98%AF%E6%88%91%E4%BB%AC%E7%9A%84%E7%BA%AA%E5%BF%B5%E6%97%A5/</loc>
+    <lastmod>2015-11-11T07:46:01.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2007/5/24/%E9%93%81%E9%81%93%E4%B8%8B%E7%9A%84%E7%BA%A2%E5%AE%9D%E7%9F%B3%EF%BC%9A%E7%82%B9%E8%AF%84ruby%E7%95%85%E9%94%80%E4%B9%A6%E4%B8%89%E7%A7%8D/</loc>
+    <lastmod>2015-11-11T07:46:01.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://gigix.thoughtworkers.org/2007/4/7/%E8%BF%88%E5%90%91%E6%95%8F%E6%8D%B7%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AD%A5/</loc>
     <lastmod>2015-11-11T07:46:01.000Z</lastmod>
   </url>
@@ -262,32 +277,17 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2007/5/24/%E9%93%81%E9%81%93%E4%B8%8B%E7%9A%84%E7%BA%A2%E5%AE%9D%E7%9F%B3%EF%BC%9A%E7%82%B9%E8%AF%84ruby%E7%95%85%E9%94%80%E4%B9%A6%E4%B8%89%E7%A7%8D/</loc>
-    <lastmod>2015-11-11T07:46:01.000Z</lastmod>
-  </url>
-  
-  <url>
     <loc>http://gigix.thoughtworkers.org/2007/7/9/%E8%B5%84%E6%9C%AC%E6%B2%A1%E6%9C%89%E4%B8%BB%E4%B9%89%EF%BC%8C%E6%95%8F%E6%8D%B7%E4%B9%9F%E4%B8%80%E6%A0%B7/</loc>
     <lastmod>2015-11-11T07:46:01.000Z</lastmod>
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2007/7/14/%E6%95%8F%E6%8D%B7%E5%B7%A5%E4%BD%9C%EF%BC%8C%E6%95%8F%E6%8D%B7%E7%94%9F%E6%B4%BB%EF%BC%8C%E6%95%8F%E6%8D%B7%E4%B8%AD%E5%9B%BD/</loc>
-    <lastmod>2015-11-11T07:46:01.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2012/5/28/world-is-not-so-flat/</loc>
+    <loc>http://gigix.thoughtworkers.org/2008/9/28/jason-williams/</loc>
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
   </url>
   
   <url>
     <loc>http://gigix.thoughtworkers.org/2008/7/19/words-from-dragon-lance/</loc>
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2012/12/31/wishes-in-2013/</loc>
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
   </url>
   
@@ -677,7 +677,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2011/5/16/1-hour-for-me-4th-month/</loc>
+    <loc>http://gigix.thoughtworkers.org/2012/5/28/world-is-not-so-flat/</loc>
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
   </url>
   
@@ -1117,7 +1117,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2008/8/2/you-break-it-you-fix-it/</loc>
+    <loc>http://gigix.thoughtworkers.org/2008/6/17/xguo-on-lean/</loc>
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
   </url>
   
@@ -1147,7 +1147,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2012/11/10/you-are-not-alone/</loc>
+    <loc>http://gigix.thoughtworkers.org/2010/6/13/xiaoxiong/</loc>
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
   </url>
   
@@ -1267,12 +1267,12 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2008/5/6/yet-another-certification/</loc>
+    <loc>http://gigix.thoughtworkers.org/2011/9/19/macs-in-xian-office/</loc>
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2009/6/8/love-me-or-hate-me/</loc>
+    <loc>http://gigix.thoughtworkers.org/2008/5/6/yet-another-certification/</loc>
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
   </url>
   
@@ -1312,7 +1312,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2010/6/13/xiaoxiong/</loc>
+    <loc>http://gigix.thoughtworkers.org/2012/11/10/you-are-not-alone/</loc>
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
   </url>
   
@@ -1412,7 +1412,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2008/9/28/jason-williams/</loc>
+    <loc>http://gigix.thoughtworkers.org/2012/12/31/wishes-in-2013/</loc>
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
   </url>
   
@@ -1942,7 +1942,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2008/6/17/xguo-on-lean/</loc>
+    <loc>http://gigix.thoughtworkers.org/2008/8/2/you-break-it-you-fix-it/</loc>
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
   </url>
   
@@ -2532,7 +2532,12 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2011/9/19/macs-in-xian-office/</loc>
+    <loc>http://gigix.thoughtworkers.org/2011/5/16/1-hour-for-me-4th-month/</loc>
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2009/6/8/love-me-or-hate-me/</loc>
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
   </url>
   

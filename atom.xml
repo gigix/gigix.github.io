@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Transparent Thoughts]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://gigix.thoughtworkers.org/"/>
-  <updated>2015-12-09T05:18:31.000Z</updated>
+  <updated>2015-12-19T07:16:55.000Z</updated>
   <id>http://gigix.thoughtworkers.org/</id>
   
   <author>
@@ -13,6 +13,64 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[小数据：环节和接口]]></title>
+    <link href="http://gigix.thoughtworkers.org/2015/12/16/small-data-steps-interfaces/"/>
+    <id>http://gigix.thoughtworkers.org/2015/12/16/small-data-steps-interfaces/</id>
+    <published>2015-12-16T11:31:00.000Z</published>
+    <updated>2015-12-19T07:16:55.000Z</updated>
+    <content type="html"><![CDATA[<p><em>（续前文：<a href="/2015/12/7/small-data-theory-architecture/">小数据：理论和架构</a>）</em></p>
+<p>从前文的架构图中可以看到，针对“小数据”的OLAP应用可以分为三个环节：</p>
+<ol>
+<li><strong>Cube建模</strong>。将数据从OLTP数据库中抽取到OLAP Cube中。</li>
+<li><strong>分析</strong>。针对OLAP Cube进行切片、钻取等操作，获得需要的结果集。</li>
+<li><strong>呈现</strong>。将结果集呈现为直观的报表形式。</li>
+</ol>
+<p>在建模Cube的时候，需要用户提供的信息是Cube本身星型结构的描述，以及星型结构中各项信息与OLTP数据库中表和字段的映射关系。具体而言，这里必需的信息包括：</p>
+<ul>
+<li>Cube的标识符</li>
+<li>Cube对哪些数据项量值（measure）<ul>
+<li>如果涉及聚合值(aggregate)，采用何种算法聚合</li>
+</ul>
+</li>
+<li>Cube有哪些维度（dimension）<ul>
+<li>其中某些维度可能有层级（hierarchy）关系</li>
+</ul>
+</li>
+<li>Cube的量值项和维度项如何与OLTP数据库中的表和字段映射（mapping）<ul>
+<li>其中通常会涉及多表的关联（join）</li>
+</ul>
+</li>
+</ul>
+<p>由于分析操作仅以RESTful API的形式提供服务，因此用户在进行分析操作时需要提供的信息就是一个URL，在其中描述分析操作的详情，包括下列信息：</p>
+<ul>
+<li>对哪个Cube进行分析</li>
+<li>呈现所有事实（fact）还是聚合（aggregate）结果</li>
+<li>对哪些维度进行切片(cut)</li>
+<li>对哪些维度进行下钻（drilldown）</li>
+</ul>
+<p>从分析环节得到的数据应该是一张平面的二维表（flat table）或与之等价的其它形式（例如JSON）。在报表呈现环节，用户就只需要描述如何将二维表渲染成报表。必需的信息大致包括：</p>
+<ul>
+<li>采用何种报表形式（折线图、柱状图、饼图……）</li>
+<li>如何使用二维表中的各列数据，以柱状图为例：<ul>
+<li>使用哪一列作为横坐标的取值</li>
+<li>使用哪一列作为纵坐标的取值</li>
+<li>使用哪一列分组或堆叠</li>
+<li>如果允许下钻，使用哪一列（或几列）下钻</li>
+</ul>
+</li>
+</ul>
+<p>以上列表未必完备，但已经能覆盖大多数小数据场景的OLAP需求。不论采用何种技术实现，小数据分析系统应该尽力约束用户（不论开发者还是最终用户）需要输入的信息量，尽量使其只需输入（不论通过编程还是图形界面操作）上述列表中的必需信息项，从而降低系统建设和使用的难度。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><em>（续前文：<a href="/2015/12/7/small-data-theory-architecture/">小数据：理论和架构</a>）</em></p>
+<p>从前文的架构图中可以看到，针对“小数据”的OLAP应用可以分为三个环节：</p>
+<ol>
+<l]]>
+    </summary>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[小数据：理论和架构]]></title>
@@ -508,32 +566,6 @@
 ]]></content>
     <summary type="html">
     <![CDATA[<p>_（《<a href="http://book.douban.com/subject/6392071/" target="_blank" rel="external">Mountains Beyond Mountains</a>》讲的是<a href="http://en.]]>
-    </summary>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[DHIS2：穷人的大数据]]></title>
-    <link href="http://gigix.thoughtworkers.org/2014/8/17/dhis2-intro/"/>
-    <id>http://gigix.thoughtworkers.org/2014/8/17/dhis2-intro/</id>
-    <published>2014-08-17T01:30:00.000Z</published>
-    <updated>2015-11-11T07:46:00.000Z</updated>
-    <content type="html"><![CDATA[<p>为乡村医疗工作者、乡村教师以及其他类似的深入边远基层的工作者设计IT系统时，数据采集、上报和分析是一类常见的需求。比如说，各个村的村医统计新生儿人数，或者各个村的教师统计学龄儿童人数，然后由村到乡、由乡到县、再到市省乃至全国逐级上报；某个中央机构（政府或者NGO）可以获得全国的分析报表，可以从各个维度分析，可以深入某个行政区域查看具体情况，等等。</p>
-<p><img src="/assets/2014/8/17/dhis2-cloud.png"></p>
-<p><a href="https://www.dhis2.org/" target="_blank" rel="external">DHIS2</a>正是为这种情景设计的软件工具。虽然名字来自“地区医疗信息系统”（District Health Information System），但DHIS2不仅是一个医疗信息系统，而是一个通用的数据采集、上报、分析和可视化平台。这个开源的软件平台在设计之初就针对低资源地区、基层工作者的特点，目前在<a href="https://www.dhis2.org/deployments" target="_blank" rel="external">46个国家</a>（大多是贫穷国家）部署应用，堪称“穷人的大数据”。</p>
-<p>DHIS2有几个最大的亮点：</p>
-<ol>
-<li><p><strong>丰富灵活的数据模型。</strong><br>DHIS2有一个灵活而且通用的数据模型，这个数据模型的核心是基于<a href="https://www.dhis2.org/doc/snapshot/en/user/html/ch04.html" target="_blank" rel="external">数据元素</a>的采集。当管理员把需要采集的数据元素配置到一个<a href="https://www.dhis2.org/doc/snapshot/en/user/html/ch05.html" target="_blank" rel="external">数据集</a>中，这个数据集就会呈现为一张表单，用户就可以用这张表单采集不同时间、不同<a href="https://www.dhis2.org/doc/snapshot/en/user/html/ch03.html" target="_blank" rel="external">组织机构</a>的数据。在这个简洁的核心之上，管理员可以给数据元素设定若干不同的维度，从而获得丰富的信息供分析之用。</p>
-</li>
-<li><p><strong>完全RESTful的数据上报接口。</strong><br>DHIS2提供完全RESTful的<a href="https://www.dhis2.org/doc/snapshot/en/user/html/ch32.html" target="_blank" rel="external">数据查询/提交接口</a>，从而使前端采集数据的软件不必依赖DHIS2。比如说，你可以开发自己的移动应用，允许用户在没有网络的情况下进行日常操作，有网络联接时自动将数据同步到DHIS2服务器。由克林顿基金会资助，<a href="https://github.com/chailmis/chailmis-android" target="_blank" rel="external">尼日利亚的医疗物流管理系统</a>就是这么做的。</p>
-</li>
-<li><p><strong>多样的数据分析和呈现方式。</strong><br>DHIS2提供了基于<a href="https://www.dhis2.org/doc/snapshot/en/user/html/ch16.html" target="_blank" rel="external">转向表</a>的分析支持，让数据管理员可以很轻松地定义各个不同维度的分析。支持各种不同形式的报表当然就不在话下了，都可以在<a href="https://www.dhis2.org/doc/snapshot/en/user/html/ch17.html" target="_blank" rel="external">可视化的报表定义工具</a>中定义，而且还有准备好的<a href="https://www.dhis2.org/doc/snapshot/en/user/html/ch18.html" target="_blank" rel="external">地理信息支持</a>。如果自带的报表呈现形式还不够好，同样可以通过RESTful API得到报表背后的数据，然后自己做呈现。</p>
-</li>
-</ol>
-<p>根据与<a href="http://www.clintonhealthaccess.org/" target="_blank" rel="external">克林顿基金会</a>、<a href="http://www.msf.org/" target="_blank" rel="external">无国界医生</a>等组织合作项目的经验，DHIS2很好地满足了基层采集数据、逐级汇总上报、统计分析、决策支持等常见的数据需求，并且很好地平衡了简单性和灵活性，使得低成本开发高质量的国家级数据管理系统成为可能。</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>为乡村医疗工作者、乡村教师以及其他类似的深入边远基层的工作者设计IT系统时，数据采集、上报和分析是一类常见的需求。比如说，各个村的村医统计新生儿人数，或者各个村的教师统计学龄儿童人数，然后由村到乡、由乡到县、再到市省乃至全国逐级上报；某个中央机构（政府或者NGO）可以获得全]]>
     </summary>
     
   </entry>

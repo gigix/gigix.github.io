@@ -177,6 +177,43 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2014/8/17/dhis2-intro/" title="link to DHIS2：穷人的大数据">DHIS2：穷人的大数据</a></h2>
+
+      <p class="excerpt">
+        <p>为乡村医疗工作者、乡村教师以及其他类似的深入边远基层的工作者设计IT系统时，数据采集、上报和分析是一类常见的需求。比如说，各个村的村医统计新生儿人数，或者各个村的教师统计学龄儿童人数，然后由村到乡、由乡到县、再到市省乃至全国逐级上报；某个中央机构（政府或者NGO）可以获得全国的分析报表，可以从各个维度分析，可以深入某个行政区域查看具体情况，等等。</p>
+<p><img src="/assets/2014/8/17/dhis2-cloud.png"></p>
+<p><a href="https://www.dhis2.org/" target="_blank" rel="external">DHIS2</a>正是为这种情景设计的软件工具。虽然名字来自“地区医疗信息系统”（District Health Information System），但DHIS2不仅是一个医疗信息系统，而是一个通用的数据采集、上报、分析和可视化平台。这个开源的软件平台在设计之初就针对低资源地区、基层工作者的特点，目前在<a href="https://www.dhis2.org/deployments" target="_blank" rel="external">46个国家</a>（大多是贫穷国家）部署应用，堪称“穷人的大数据”。</p>
+<p>DHIS2有几个最大的亮点：</p>
+<ol>
+<li><p><strong>丰富灵活的数据模型。</strong><br>DHIS2有一个灵活而且通用的数据模型，这个数据模型的核心是基于<a href="https://www.dhis2.org/doc/snapshot/en/user/html/ch04.html" target="_blank" rel="external">数据元素</a>的采集。当管理员把需要采集的数据元素配置到一个<a href="https://www.dhis2.org/doc/snapshot/en/user/html/ch05.html" target="_blank" rel="external">数据集</a>中，这个数据集就会呈现为一张表单，用户就可以用这张表单采集不同时间、不同<a href="https://www.dhis2.org/doc/snapshot/en/user/html/ch03.html" target="_blank" rel="external">组织机构</a>的数据。在这个简洁的核心之上，管理员可以给数据元素设定若干不同的维度，从而获得丰富的信息供分析之用。</p>
+</li>
+<li><p><strong>完全RESTful的数据上报接口。</strong><br>DHIS2提供完全RESTful的<a href="https://www.dhis2.org/doc/snapshot/en/user/html/ch32.html" target="_blank" rel="external">数据查询/提交接口</a>，从而使前端采集数据的软件不必依赖DHIS2。比如说，你可以开发自己的移动应用，允许用户在没有网络的情况下进行日常操作，有网络联接时自动将数据同步到DHIS2服务器。由克林顿基金会资助，<a href="https://github.com/chailmis/chailmis-android" target="_blank" rel="external">尼日利亚的医疗物流管理系统</a>就是这么做的。</p>
+</li>
+<li><p><strong>多样的数据分析和呈现方式。</strong><br>DHIS2提供了基于<a href="https://www.dhis2.org/doc/snapshot/en/user/html/ch16.html" target="_blank" rel="external">转向表</a>的分析支持，让数据管理员可以很轻松地定义各个不同维度的分析。支持各种不同形式的报表当然就不在话下了，都可以在<a href="https://www.dhis2.org/doc/snapshot/en/user/html/ch17.html" target="_blank" rel="external">可视化的报表定义工具</a>中定义，而且还有准备好的<a href="https://www.dhis2.org/doc/snapshot/en/user/html/ch18.html" target="_blank" rel="external">地理信息支持</a>。如果自带的报表呈现形式还不够好，同样可以通过RESTful API得到报表背后的数据，然后自己做呈现。</p>
+</li>
+</ol>
+<p>根据与<a href="http://www.clintonhealthaccess.org/" target="_blank" rel="external">克林顿基金会</a>、<a href="http://www.msf.org/" target="_blank" rel="external">无国界医生</a>等组织合作项目的经验，DHIS2很好地满足了基层采集数据、逐级汇总上报、统计分析、决策支持等常见的数据需求，并且很好地平衡了简单性和灵活性，使得低成本开发高质量的国家级数据管理系统成为可能。</p>
+
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="8月 17 2014" class="post-list__meta--date date">8月 17 2014</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2014/8/11/book-review-to-swallows/" title="link to 浅薄：通向被机器取代之路">浅薄：通向被机器取代之路</a></h2>
 
       <p class="excerpt">
@@ -389,30 +426,6 @@ classes that you can use:
       <div class="post-list__meta">
 
         <time datetime="1月 16 2014" class="post-list__meta--date date">1月 16 2014</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2014/1/13/how-to-do-architecture-review/" title="link to 遗留系统评审怎么做？">遗留系统评审怎么做？</a></h2>
-
-      <p class="excerpt">
-        <p>有一个需求摆在你面前，有一个现成的软件摆在你面前。你是在现有的软件基础上继续改进实现新需求，还是扔开这个现有软件重新做？就这么简单的一个问题，简直能让人——尤其是像我这种本来就有选择障碍的人——挠破头皮。用现成的软件吧，质量不见得好，扩展不见得容易，说不定做起来就发现步步是陷阱；从头做吧，看着别人做好的东西要重新做总是不甘心，更何况还可能有政治压力，没准儿这个软件正是哪个领导的最爱呢。</p><p><img src="http://gigix.thoughtworkers.org/assets/2013/12/20/difficult_choice_by_areeen.jpg" alt=""></p><p>怎么办？作为一个有选择障碍的体系爱好者，答案自然是：创造一套体系，让体系来给出答案，那么我就不用挠头啦。以下就是我的体系，遗留系统评审我就照着这个套路来。</p><h2>第一步：需求评估</h2><p>脱离需求的上下文就很难讲一个软件好还是不好，因此首先要做的不是评估这个软件本身，而是评估要用它来做什么。首先框定需求的上下文，然后你才能说出为了满足这个需求软件应该具备哪些特质。</p><h2>第二步：功能评估</h2><p>接下来是评估这个软件现有的功能。当初开发这个软件时考虑的需求上下文与你现在要满足的未必一致，但是要充分了解一个软件，你就不能脱离它本身的上下文来讲它的功能。你还得回到它当初设想的需求当中，在那个上下文里来看，这个软件实现了哪些功能。</p><h2>第三步：差距分析</h2><p>这时候才轮到谈现有软件缺少了什么：把已有的功能放到新的需求当中，做个对比，看看已有的功能是否满足新的需求、缺少了什么、偏差了什么。这时候需要把差距一条条列出来，甚至可能需要大致估计如果要弥补这些差距需要多大工作量，因为“继续用现有的软件”始终都会是一个选项。</p><h2>第四步：技术质量评估</h2><p>如果继续用现有的软件是一个选项，那么在这个软件基础上修修改改究竟有多难、多快就严重取决于这个软件的技术质量——如果代码质量一团糟，在上面做修改必然会慢很多。技术质量评估可以有很多常见的度量指标，我比较愿意谈可维护性和可扩展性，影响它们的因素就会有代码可读性、模块设计、接口设计等等。</p><h2>第五步：结论</h2><p>千万不能说“把这个破软件扔了我们从头做吧”——虽然我知道很多时候我们就是想这么说。我们的评估应该是基于事实的，而且至少得有两个选项让客户来做选择：除了“从头做”之外，至少还得有“继续用现有的软件”这个选项存在。从头做一个符合新需求的软件需要多少成本，未来的总体拥有成本是什么趋势；修修改改现有的软件需要多少成本，未来的总体拥有成本又是个什么趋势；两者有什么好处有什么风险。把这些东西列出来，让客户能基于这些事实做一个明智的决定，就是我们做评估的目标了。</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="1月 13 2014" class="post-list__meta--date date">1月 13 2014</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">
