@@ -177,6 +177,30 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2007/12/20/announce-stomperl-0-0-2-message-queuing-and-transaction/" title="link to Announce Stomperl 0.0.2- Message Queuing And Transaction">Announce Stomperl 0.0.2- Message Queuing And Transaction</a></h2>
+
+      <p class="excerpt">
+        <p>Dear all,</p><p>I’m glad to announce that Stomperl 0.0.2 is out. You can now check it out at<a href="http://stomperl.googlecode.com/svn/tags/0.0.2/" target="_blank" rel="external">http://stomperl.googlecode.com/svn/tags/0.0.2/</a>.</p><p>Since the first preview version [<a href="http://gigix.thoughtworkers.org/2007/12/12/announcement-stomperl-0-0-1">http://gigix.thoughtworkers.org/2007/12/12/announcement-stomperl-0-0-1</a>], we’ve made somementionable progress. The most significant one is the support to message queuing. Messagedestinations in Stomperl version 0.0.1 were only allowed to be topics. Now they are allowed to bequeues as well: destination with its name starting with “queue^” would behave as a queue. (Check outthe difference between a topic and a queue from “Enterprise Integration Patterns” [<a href="http://www.enterpriseintegrationpatterns.com/" target="_blank" rel="external">http://www.enterpriseintegrationpatterns.com/</a>].)</p><p>Furthermore, Stomperl 0.0.2 supports transaction: messages in a transaction would be send all-or-not.It also supports ACK and ERROR frames. Actually it supports all commands listed in the protocol sofar. Although we haven’t got any official compatibility test suite yet, I feel it’s fairly safe tosay that Stomperl is a 100% Stomp compatible broker.</p><p>What’s next then? I’d like to do some investigation to other Stomp brokers (as well as clients) anddo some performance benchmarks. Besides that, I suppose there would be some defects andhousecleaning need to be done. Still,any suggestion and feedback would be highly appreciated.</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="12月 20 2007" class="post-list__meta--date date">12月 20 2007</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2007/12/17/story-of-itechtag/" title="link to 讲述iTechTag网站的故事">讲述iTechTag网站的故事</a></h2>
 
       <p class="excerpt">
@@ -378,30 +402,6 @@ classes that you can use:
       <div class="post-list__meta">
 
         <time datetime="11月 19 2007" class="post-list__meta--date date">11月 19 2007</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2007/11/15/root-of-quality/" title="link to 质量之本在哪里">质量之本在哪里</a></h2>
-
-      <p class="excerpt">
-        <p>在CSDN看到朱少民的一篇blog：<a href="http://blog.csdn.net/KerryZhu/archive/2007/11/14/1885584.aspx%20" target="_blank" rel="external">勿忘质量之本</a>（相信作者是把标题写了错别字）。略有感，说说我对QA这件事情的想法。</p><p>在北京理工大学做招聘宣讲的时候，有同学问<a href="http://www.thoughtworks.com.cn" target="_blank" rel="external"><strong>Thought</strong>Works</a>的QA做什么。我们似乎很习惯于把QA和测试等同起来，就是坐在门边那个负责抓出所有bug的人。朱少民的blog里说“测试就是为了发现缺陷”，当然这毫无疑问是对的。但作为QA这个角色，我认为他/她的职责分两半：第一是发现缺陷；第二是确保缺陷被修复，并且修复过的缺陷永不再重现。前者是测试工作，后者是流程工作。作为QA（质量保障或者叫质量分析）的负责人，流程工作至少与测试工作具有同样的重要地位。</p><p>（那天晚上和江焱风一起吃饭，说到质量管理体系的话题。其实ISO9000就很明白了：质量来自过程和管理，而不是来自检验。）</p><p>所以，尽可能地把测试自动化，这实际上是在积累质量管理体系。这事情分为三个环节：（1）发现缺陷；（2）用自动化的测试案例描述缺陷，以测试案例通过为依据验收缺陷修复；（3）频繁运行所有测试案例，确保已经被修复的缺陷永不再进入代码库。而朱少民所说的“为追求测试自动化而忘记发现缺陷之根本”的问题，实际上是一个不存在的伪问题，因为这两件事情分别位于环节（1）和环节（2），彼此正交。朱少民还说“70％缺陷【的发现】还是需要人的智慧和思考”。不是的，100%都得靠人的智慧和思考。你不想发现的缺陷，它是不会被发现的——当然了用户会发现然后暴跳如雷地来找你，那就是另一回事情了。</p><p>总结：QA的工作分为测试、流程制定和流程监督三部分。质量不是靠守门守出来的，而是靠贯穿整个软件生命周期的管理管出来的。敏捷项目为什么容易获得更好的质量？因为它把质量管理落实到每个小时的每件具体事情上，而不是写在纸上。</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="11月 15 2007" class="post-list__meta--date date">11月 15 2007</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">

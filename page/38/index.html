@@ -177,6 +177,30 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2008/6/16/minor-tricks/" title="link to 两个tricks">两个tricks</a></h2>
+
+      <p class="excerpt">
+        <p>今天遇到两个tricky的东西，记下来。</p><p>1. 把十六进制数写到字符串里。</p><code>[0xEF, 0xBB, 0xBF].pack(“C*”)</code><p>（这个是<a href="http://unicode.org/faq/utf_bom.html#BOM" target="_blank" rel="external"><span class="caps">UTF8</span>的BOM</a>，写在文本文件比如CSV的头上就可以让读取的软件比如Excel知道这是UTF8编码的文件。）</p><p>2. IE窗口的滚动条如果鼠标点下去也会触发<a href="http://developer.mozilla.org/en/docs/DOM:element.onclick" target="_blank" rel="external">document.onclick</a>事件，而Firefox就不会。</p><p>（不明白为什么滚动条也可以算作document的一部分。）</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="6月 16 2008" class="post-list__meta--date date">6月 16 2008</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2008/6/13/sns-on-rails-stats/" title="link to 基于Rails的SNS的比较">基于Rails的SNS的比较</a></h2>
 
       <p class="excerpt">
@@ -380,30 +404,6 @@ classes that you can use:
       <div class="post-list__meta">
 
         <time datetime="5月 6 2008" class="post-list__meta--date date">5月 6 2008</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2008/5/5/tw-news/" title="link to 新闻两则">新闻两则</a></h2>
-
-      <p class="excerpt">
-        <p>第一件，<a href="http://www.thoughtworks.com.cn" target="_blank" rel="external"><strong>Thought</strong>Works中国公司</a>被评为<a href="http://blog.csdn.net/programmer_editor/archive/2008/05/05/2392083.aspx" target="_blank" rel="external">2007年度最受程序员欢迎雇主</a>。</p><blockquote>1、聪明(Smart)是第一要素：公司的HR对猎头寻访候选人的最根本要求就是Smart。<strong>Thought</strong>Works是聪明人聚集的地方，即使工作经验再丰富、背景再好，如果不聪明，也不是他们所要的。聪明人在一起才会碰撞火花产生智慧。<p>2、平等沟通：<strong>Thought</strong>Works管理扁平，每位员工都能充分发挥积极性。平等的沟通氛围是难得一求的。没有高管独立办公室就很能说明问题。</p></blockquote><p>另一件是关于几个“聪明人”（嘿嘿…）去年做的事情：<a href="http://rubyforge.org/pipermail/cruisecontrolrb-developers/2008-May/000260.html" target="_blank" rel="external">CruiseControl.rb的下载量达到10,000次</a>。Alexey说：</p><blockquote>Once upon a time (around version 0.1) I said that building CC.rb will be worth the hassle ifitevergetsover 10k downloads. Just an arbitrary big number, yes. But yay! We are there now. :)</blockquote><p><a href="http://rubyforge.org/top/toplist.php?type=downloads" target="_blank" rel="external">最新的数字</a>是10174次下载。看见自己做的东西有人用，感觉也挺不错的。</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="5月 5 2008" class="post-list__meta--date date">5月 5 2008</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">

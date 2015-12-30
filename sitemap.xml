@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://gigix.thoughtworkers.org/2015/12/31/2015-readings/</loc>
+    <lastmod>2015-12-30T15:06:48.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://gigix.thoughtworkers.org/2015/12/16/small-data-steps-interfaces/</loc>
     <lastmod>2015-12-19T07:16:55.000Z</lastmod>
   </url>
@@ -29,11 +34,6 @@
   <url>
     <loc>http://gigix.thoughtworkers.org/2015/11/11/literature-review-competence/</loc>
     <lastmod>2015-11-11T14:24:21.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2007/10/11/%E8%87%AA%E7%BB%84%E7%BB%87%E7%9A%84%E7%BD%91%E6%B8%B8%E9%87%91%E8%9E%8D%E4%BD%93%E7%B3%BB/</loc>
-    <lastmod>2015-11-11T07:46:01.000Z</lastmod>
   </url>
   
   <url>
@@ -277,13 +277,13 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2010/8/5/%E6%95%8F%E6%8D%B7%E4%B8%AD%E5%9B%BD2010%E5%A4%A7%E5%B9%95%E5%B0%86%E5%90%AF%EF%BC%8C%E8%AE%B2%E5%B8%88%E6%8B%9B%E5%8B%9F%E6%AD%A3%E5%9C%A8%E8%BF%9B%E8%A1%8C/</loc>
+    <loc>http://gigix.thoughtworkers.org/2007/10/11/%E8%87%AA%E7%BB%84%E7%BB%87%E7%9A%84%E7%BD%91%E6%B8%B8%E9%87%91%E8%9E%8D%E4%BD%93%E7%B3%BB/</loc>
     <lastmod>2015-11-11T07:46:01.000Z</lastmod>
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2008/7/19/words-from-dragon-lance/</loc>
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    <loc>http://gigix.thoughtworkers.org/2010/8/5/%E6%95%8F%E6%8D%B7%E4%B8%AD%E5%9B%BD2010%E5%A4%A7%E5%B9%95%E5%B0%86%E5%90%AF%EF%BC%8C%E8%AE%B2%E5%B8%88%E6%8B%9B%E5%8B%9F%E6%AD%A3%E5%9C%A8%E8%BF%9B%E8%A1%8C/</loc>
+    <lastmod>2015-11-11T07:46:01.000Z</lastmod>
   </url>
   
   <url>
@@ -2518,6 +2518,11 @@
   
   <url>
     <loc>http://gigix.thoughtworkers.org/2009/8/17/3-faces-of-tech-lead-at-infoq/</loc>
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2008/7/19/words-from-dragon-lance/</loc>
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
   </url>
   

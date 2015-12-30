@@ -177,6 +177,31 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2007/4/28/（不愿被代表的）我们在做开源/" title="link to （不愿被代表的）我们在做开源">（不愿被代表的）我们在做开源</a></h2>
+
+      <p class="excerpt">
+        <p></p><h4><a href="http://www.infoq.com/cn/news/2007/04/ajax-framework-buffalo2" target="_blank" rel="external">轻量级AJAX框架Buffalo2.0:性能提升30%</a></h4><p><a title="Buffalo" href="http://buffalo.sourceforge.net/" target="_blank" rel="external">Buffalo</a>在经历了两年之久的考验后，近日正式发布<a title="2.0版本" href="http://groups.google.com/group/amowa/browse_thread/thread/dac1d69fd88914c6" target="_blank" rel="external">2.0版本</a>。Buffalo是一个J2EE轻量级AJAX框架，也是国内著名的开源项目。它与<a title="DWR" href="http://getahead.org/dwr" target="_blank" rel="external"><span class="caps">DWR</span></a>和<a title="JSON-RPC" href="http://oss.metaparadigm.com/jsonrpc/" target="_blank" rel="external"><span class="caps">JSON</span>-RPC</a>一样，着眼于Web远程调用(Web Remoting)，其简洁而实用的特性一直以来深受开发者喜爱。在国内，对JavaScript技术深入研究的人可谓凤毛麟角，Buffalo的作者<a title="陈金洲" href="http://michael.nona.name/archives/category/amowa/" target="_blank" rel="external">陈金洲</a>(Michael Chen) 就是其中之一。</p><h4><a href="http://www.infoq.com/cn/news/2007/04/interview-xruby-developer" target="_blank" rel="external">采访XRuby开发者</a></h4><p>郑晔说：“XRuby本身起步时，考虑得更多的是乐趣，参与者都是因为乐趣加入其中的。所以，我想说，XRuby的一个很大的优点就是它还年轻，其中有很多可以做的有趣事情。短时间之内，我们不敢奢望有人可以把XRuby用于实际的项目。现阶段，我们只是希望赢得更多的关注，吸引更多的人加入到XRuby的开发中来，这样，可以尽快实现XRuby的目标。”</p><p>还有<a href="http://cruisecontrol.sf.net" target="_blank" rel="external">CruiseControl</a>。<br>还有<a href="http://cruisecontrolrb.thoughtworks.com" target="_blank" rel="external">CruiseControl.rb</a>。<br>还有<a href="http://www.openqa.org/selenium/" target="_blank" rel="external">Selenium</a>。</p><p>我们不是什么“开源人士”，也不愿被谁代表。我们还在做开源。因为我们相信，千里之行积于跬步。</p><p></p>
+
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="4月 28 2007" class="post-list__meta--date date">4月 28 2007</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2007/4/28/知识库｜只言片语｜互联网式写作/" title="link to 知识库｜只言片语｜互联网式写作">知识库｜只言片语｜互联网式写作</a></h2>
 
       <p class="excerpt">
@@ -378,31 +403,6 @@ classes that you can use:
       <div class="post-list__meta">
 
         <time datetime="4月 14 2007" class="post-list__meta--date date">4月 14 2007</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2007/4/11/create-a-yum-repository/" title="link to Create A Yum Repository">Create A Yum Repository</a></h2>
-
-      <p class="excerpt">
-        <p><ol><li><strong>Build your<span class="caps">RPM</span>packages</strong>. Refer to “<a href="http://www.rpm.org/max-rpm/" target="_blank" rel="external">Maximum<span class="caps">RPM</span></a>”. Assume you put your<span class="caps">RPM</span>packages in /path/to/RPMS/i386/*.rpm</li><li><strong>Create a yum repository</strong>.<ul><li>cd /path/to/RPMS/..</li><li><a href="http://linux.duke.edu/projects/metadata/" target="_blank" rel="external">createrepo</a>RPMS</li><li>(Now there should be a /path/to/RPMS/repodata directory.)</li></ul></li><li><strong>Publish your repository</strong>. I wanna publish it via Apache, so I do following:<ul><li>ln -s /path/to/RPMS /var/www/RPMS</li><li>(Browse <a href="http://localhost/RPMS" target="_blank" rel="external">http://localhost/RPMS</a>, there should be “repodata” and “i386”directories.)</li></ul></li><li><strong>Enable your repository in client machine</strong>. Edit<a href="http://www.phy.duke.edu/%7Ergb/General/yum_article/yum_article/node19.html" target="_blank" rel="external">/etc/yum.conf</a>file as following:<pre>[main]cachedir=/var/cache/yumdebuglevel=2logfile=/var/log/yum.log[my-repository]name = My Repositorybaseurl=<a href="http://localhost/RPMSgpgcheck=0" target="_blank" rel="external">http://localhost/RPMSgpgcheck=0</a></pre></li></ol></p><p>Here we go! Invoke “yum list” and you should able to see all<span class="caps">RPM</span>packages you built.</p><p></p>
-
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="4月 11 2007" class="post-list__meta--date date">4月 11 2007</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">
