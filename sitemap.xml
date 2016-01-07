@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://gigix.thoughtworkers.org/2016/1/8/dream-of-startups/</loc>
+    <lastmod>2016-01-07T12:54:28.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://gigix.thoughtworkers.org/2015/12/31/2015-readings/</loc>
     <lastmod>2015-12-30T15:06:48.000Z</lastmod>
   </url>
@@ -34,11 +39,6 @@
   <url>
     <loc>http://gigix.thoughtworkers.org/2015/11/11/literature-review-competence/</loc>
     <lastmod>2015-11-11T14:24:21.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2007/7/6/%E7%BC%96%E7%A8%8B%E9%80%89%E6%8B%A9gem%E5%AE%89%E8%A3%85%E7%89%88%E6%9C%AC/</loc>
-    <lastmod>2015-11-11T07:46:01.000Z</lastmod>
   </url>
   
   <url>
@@ -142,12 +142,12 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2007/6/9/%E8%BF%99%E6%98%AF%E6%88%91%E4%BB%AC%E7%9A%84%E7%BA%AA%E5%BF%B5%E6%97%A5/</loc>
+    <loc>http://gigix.thoughtworkers.org/2010/8/5/%E6%95%8F%E6%8D%B7%E4%B8%AD%E5%9B%BD2010%E5%A4%A7%E5%B9%95%E5%B0%86%E5%90%AF%EF%BC%8C%E8%AE%B2%E5%B8%88%E6%8B%9B%E5%8B%9F%E6%AD%A3%E5%9C%A8%E8%BF%9B%E8%A1%8C/</loc>
     <lastmod>2015-11-11T07:46:01.000Z</lastmod>
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2007/6/18/%E6%8A%84%E4%B9%A6-erlang%E7%9A%84%E6%8E%A5%E5%8F%A3%E5%BA%93/</loc>
+    <loc>http://gigix.thoughtworkers.org/2007/6/9/%E8%BF%99%E6%98%AF%E6%88%91%E4%BB%AC%E7%9A%84%E7%BA%AA%E5%BF%B5%E6%97%A5/</loc>
     <lastmod>2015-11-11T07:46:01.000Z</lastmod>
   </url>
   
@@ -282,13 +282,13 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2010/8/5/%E6%95%8F%E6%8D%B7%E4%B8%AD%E5%9B%BD2010%E5%A4%A7%E5%B9%95%E5%B0%86%E5%90%AF%EF%BC%8C%E8%AE%B2%E5%B8%88%E6%8B%9B%E5%8B%9F%E6%AD%A3%E5%9C%A8%E8%BF%9B%E8%A1%8C/</loc>
+    <loc>http://gigix.thoughtworkers.org/2007/7/6/%E7%BC%96%E7%A8%8B%E9%80%89%E6%8B%A9gem%E5%AE%89%E8%A3%85%E7%89%88%E6%9C%AC/</loc>
     <lastmod>2015-11-11T07:46:01.000Z</lastmod>
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2012/12/31/wishes-in-2013/</loc>
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    <loc>http://gigix.thoughtworkers.org/2007/6/18/%E6%8A%84%E4%B9%A6-erlang%E7%9A%84%E6%8E%A5%E5%8F%A3%E5%BA%93/</loc>
+    <lastmod>2015-11-11T07:46:01.000Z</lastmod>
   </url>
   
   <url>
@@ -1272,12 +1272,12 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2010/6/13/xiaoxiong/</loc>
+    <loc>http://gigix.thoughtworkers.org/2011/9/19/macs-in-xian-office/</loc>
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2009/6/8/love-me-or-hate-me/</loc>
+    <loc>http://gigix.thoughtworkers.org/2010/6/13/xiaoxiong/</loc>
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
   </url>
   
@@ -1917,6 +1917,11 @@
   </url>
   
   <url>
+    <loc>http://gigix.thoughtworkers.org/2012/5/28/world-is-not-so-flat/</loc>
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://gigix.thoughtworkers.org/2009/4/9/drawing-sketches/</loc>
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
   </url>
@@ -1947,7 +1952,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2012/5/28/world-is-not-so-flat/</loc>
+    <loc>http://gigix.thoughtworkers.org/2008/7/19/words-from-dragon-lance/</loc>
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
   </url>
   
@@ -2522,7 +2527,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2008/7/19/words-from-dragon-lance/</loc>
+    <loc>http://gigix.thoughtworkers.org/2012/12/31/wishes-in-2013/</loc>
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
   </url>
   
@@ -2542,7 +2547,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2011/9/19/macs-in-xian-office/</loc>
+    <loc>http://gigix.thoughtworkers.org/2009/6/8/love-me-or-hate-me/</loc>
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
   </url>
   
