@@ -937,7 +937,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #006699; }
+  color: #6CB3D6; }
   a:hover {
     color: green;
     -o-transition: .5s;
@@ -985,7 +985,9 @@ p {
   line-height: 1.7em; }
 
 strong {
-  font-weight: bold; }
+  font-weight: bold; 
+  font-size: larger;
+}
 
 em {
   font-style: italic; }
