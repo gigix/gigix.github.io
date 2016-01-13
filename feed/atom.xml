@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Transparent Thoughts]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://gigix.thoughtworkers.org/"/>
-  <updated>2016-01-07T12:54:28.000Z</updated>
+  <updated>2016-01-13T06:17:33.000Z</updated>
   <id>http://gigix.thoughtworkers.org/</id>
   
   <author>
@@ -13,6 +13,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[IT的战略重要性及人才挑战]]></title>
+    <link href="http://gigix.thoughtworkers.org/2016/1/13/it-talent-trend/"/>
+    <id>http://gigix.thoughtworkers.org/2016/1/13/it-talent-trend/</id>
+    <published>2016-01-13T06:10:00.000Z</published>
+    <updated>2016-01-13T06:17:33.000Z</updated>
+    <content type="html"><![CDATA[<p>IT在过去数十年中一直在企业扮演重要角色。Porter和Heppelmann将过去半个世纪里IT的发展总结为“<a href="https://hbr.org/2014/11/how-smart-connected-products-are-transforming-competition" target="_blank" rel="external">三次浪潮</a>”，这三次技术的浪潮重塑了企业的战略以及企业之间的竞争。经过这三次浪潮的洗礼，IT在组织战略的核心扎根越来越深。本文尝试以文献综述的形式，勾画出IT技术的战略重要性、以及数字化浪潮带来的人才挑战。</p>
+<p><img src="/assets/2016/1/13/talent.jpg"></p>
+<h2 id="三次浪潮">三次浪潮</h2><p>第一次IT浪潮（从1960年代开始）关注如何将价值链中的各项活动<strong>自动化</strong>。Porter和Millar在<a href="https://hbr.org/1985/07/how-information-gives-you-competitive-advantage" target="_blank" rel="external">1985年的文章</a>里把价值链中的活动分为9类，其中5类是主价值链活动：输入物流、操作、输出物流、市场/销售、服务，另外4类是支撑活动：公司基础设施、人力资源管理、技术开发、采购。这9项活动各自都有涉及信息处理的部分，利用IT可以显著提升每项活动中信息处理环节的效能。</p>
+<p>第二次IT浪潮（开始于1980及1990年代）关注价值链各项活动之间的<strong>协作与整合</strong>。正如Porter在<a href="https://hbr.org/2001/03/strategy-and-the-internet/ar/1" target="_blank" rel="external">2001年的文章</a>里所说，当互联网连接越来越便宜、越来越可达，企业就能借助互联网更加精确地接收和响应市场信号。互联网会对行业中5项竞争因素同时产生影响，尤其是会提升买家的议价能力、降低行业进入门槛，从而使竞争变得更为激烈。</p>
+<p>前两次IT浪潮创造了巨大的生产力提升，但这种提升只是现有价值链的改善，而产品/服务本身并未受到很大影响。最近才开始的第三次浪潮则把IT嵌入了产品/服务本身。对现有产品和服务的<strong>数字化</strong>将从根本上改变竞争的地平线。像中国的“<a href="http://english.gov.cn/policies/latest_releases/2015/07/04/content_281475140165588.htm" target="_blank" rel="external">互联网+</a>”这样的国家战略更进一步地推动了这次浪潮。从<a href="http://techcrunch.com/2015/01/04/tencent-webank/" target="_blank" rel="external">银行</a>到<a href="http://www.wsj.com/articles/chinas-didi-kuaidi-gets-license-to-ride-in-shanghai-1444288510" target="_blank" rel="external">出租车</a>，IT正在渗入并颠覆各个行业。</p>
+<h2 id="技术内核">技术内核</h2><p>数字化浪潮的核心有几项重要的技术。<a href="http://www.ibm.com/smarterplanet/us/en/centerforappliedinsights/article/biztechtrends.html" target="_blank" rel="external">IBM的研究</a>列出了4项最重要的技术发展趋势：<strong>大数据及分析</strong>、<strong>云计算</strong>、<strong>移动</strong>、<strong>社交</strong>。这份研究显示，这些技术的早期采用者在加速创新、提升消费者体验、优化决策过程、增进员工效能等方面达成业务目标的可能性比尚未采用这些技术的企业高一个数量级。</p>
+<p>根据<a href="http://harvardmagazine.com/2014/03/why-big-data-is-a-big-deal" target="_blank" rel="external">Shaw的文章</a>，人类社会如今每年制造以ZB为单位的数据量。<a href="http://www.mckinsey.com/insights/business_technology/big_data_the_next_frontier_for_innovation" target="_blank" rel="external">Manyika等人研究</a>了大数据技术在5个不同领域（医疗、公共事务、零售、制造、个人位置信息）的应用，发现愈发频繁和精确的过程数据使得更准确的产品/服务定制成为可能，并改善组织的决策过程。例如在零售业中应用大数据可以将利润率提升60％以上。获得和使用大量过程数据的能力已经成为众多企业竞争与成长的基础。</p>
+<p><a href="http://www.mckinsey.com/insights/high_tech_telecoms_internet/capturing_business_value_with_social_technologies" target="_blank" rel="external">Bughin、Chui和Manyika的文章</a>指出，社交媒体可以创造万亿美元级别的价值，并通过改善协作与沟通将工作人员之间交互的效能提升20％到25%。社交媒体的价值往往通过移动技术得以体现。<a href="http://www.mckinsey.com/insights/business_technology/disruptive_technologies" target="_blank" rel="external">Manyika、Chui和Bughin的另一篇文章</a>估计，到2025年，移动互联网将影响43亿人的生活，对全球经济的影响达到十万亿规模。<a href="http://www.sciencedirect.com/science/article/pii/S0963868705000405" target="_blank" rel="external">Sheng、Nah和Siau的研究</a>提到，移动技术能消除关键信息访问中的时间和空间限制，增强通信、协调、合作及知识交换的能力，从而提升劳动者的灵活性。</p>
+<p>最后但绝非最不重要的，云计算是IT灵活性的基础。Manyika、Chui和Bughin估计，到2025年，云计算的总体经济影响可达数万亿美元。云计算创造价值的主要方式是以云的方式提供服务和应用，以及提升企业IT的效能。</p>
+<h2 id="人才挑战">人才挑战</h2><p>上述促成数字化浪潮的4项最重要的技术发展趋势——大数据及分析、云计算、移动、社交——都需要高级别的IT技能。技术型人才的短缺是全球现象。</p>
+<p>根据<a href="https://hbr.org/2012/10/data-scientist-the-sexiest-job-of-the-21st-century/" target="_blank" rel="external">Davenport和Patil的文章</a>，大数据分析所需的人才——他们称之为“数据科学家”——是“数据黑客、分析师、沟通者和建议者的混合体”。这些数据科学家需要掌握统计知识，对业务有深入理解，而且还必须编程，经常还会用到一些<a href="http://book.douban.com/subject/11549313/" target="_blank" rel="external">相当新的技术</a>（例如Hadoop、Python和D3.js）。<a href="http://www.sas.com/en_us/whitepapers/getting-your-moneys-worth-with-analytics-105724.html" target="_blank" rel="external">SAS和Accenture的研究</a>显示，大多数美国企业计划在短期内升级其数据分析技能，途径可能是提升现有员工的分析技能，或招聘新的分析人才。<a href="http://www.gartner.com/newsroom/id/2207915" target="_blank" rel="external">Gartner预测</a>从2012年到2015年会有440万个与大数据相关的新工作岗位。<a href="https://hbr.org/2012/11/the-big-data-talent-gap-no-pan" target="_blank" rel="external">Barth和Bean的调查数据</a>显示，在如此强烈的需求环境下，66%的企业认为找到和聘用数据科学家“非常困难或不可能”，没有任何受访企业认为“找到所需的技能毫无问题”。</p>
+<p>移动（和社交）应用开发者同样有很高的需求。<a href="http://www.buzzle.com/articles/how-to-become-a-mobile-application-developer.html" target="_blank" rel="external">据信</a>从2010年至2020年间，移动应用开发的岗位总数会增加32%，创造约29万个新工作岗位。开发移动应用需要丰富多样的技术能力，例如面向对象编程语言、Web开发、移动平台特有的API、跨平台移动套装、数据库管理、网络集成、安全等等。<a href="http://www.forbes.com/sites/ayoomojola/2013/07/15/the-shortage-of-developer-talent-is-crushing-mobile/" target="_blank" rel="external">Omojola</a>和<a href="https://www.roberthalf.com/technology/blog/mobile-app-development-hot-skill-and-hard-to-find-candidates" target="_blank" rel="external">Half</a>等人的文章能折射业内普遍的意见：找到具备合适技能的移动开发者并不容易。</p>
+<p>云计算也是一个<a href="http://www.sciencedirect.com/science/article/pii/S0167739X08001957" target="_blank" rel="external">边缘学科</a>，同时需要IT运维和编程的技能。据<a href="https://www.wantedanalytics.com/analysis/posts/hiring-demand-for-cloud-computing-skills-skyrocketing" target="_blank" rel="external">Lombardi引用WANTED Analytics的数据</a>，近几年来，对云计算技能的需求每年都在翻番。根据<a href="http://www.mckinsey.com/insights/business_technology/it_under_pressure_mckinsey_global_survey_results" target="_blank" rel="external">Khan和Sikes的调查</a>，高科技及专业服务业内40%以上的组织感到，在未来12个月里找到所需的云计算及分布式计算技能“很有压力”。</p>
+<p>要言之，上述4项重要的技术趋势都要求坚实的编程技能作为基础，同时还需要适应快速变化的商业和技术环境，要求技术专家同时具备快速学习、顺畅沟通等能力。这种复合技能的要求，使得组织更加难以获得所需的人才。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>IT在过去数十年中一直在企业扮演重要角色。Porter和Heppelmann将过去半个世纪里IT的发展总结为“<a href="https://hbr.org/2014/11/how-smart-connected-products-are-transforming-com]]>
+    </summary>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[互联网创业的幻梦]]></title>
@@ -560,33 +587,6 @@
 ]]></content>
     <summary type="html">
     <![CDATA[<p><a href="http://www.yuedudna.com/users/2298277/book/2014" target="_blank" rel="external">阅读DNA说</a>：“透明2014年共读过59本书，五星好书20本”。不算多。不过，在一边读M]]>
-    </summary>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[丰富多彩的2014年]]></title>
-    <link href="http://gigix.thoughtworkers.org/2014/12/13/end-2014/"/>
-    <id>http://gigix.thoughtworkers.org/2014/12/13/end-2014/</id>
-    <published>2014-12-12T22:00:00.000Z</published>
-    <updated>2015-11-11T07:46:00.000Z</updated>
-    <content type="html"><![CDATA[<p>又是一年过去了。以前每年会许愿，前年许了几个<a href="/2012/12/31/wishes-in-2013/">很朴实的愿望</a>，去年在忙乱的旅行之间完全忘了这茬。现在开完了今年最后一个大会，在即将进入假期的状态下回首这一年，才发现，哇，真是做了很多事啊。</p>
-<p><img src="/assets/2014/12/13/merry_xmas.jpg"></p>
-<p>今年出书了。不是什么正经的主题，一本<a href="http://book.douban.com/subject/26135794/" target="_blank" rel="external">拉杂闲谈的流水账</a>。才三十几岁就写回忆录这样合适吗？不光别人会问，我自己也为这个纠结了好久。不过想来想去，这些故事要是不写下来，一些平凡人做过的平凡事大概就会被历史彻底遗忘了。怀着不管怎样至少为历史留点记录的想法，终于还是把书出了出来。然后惊喜地发现，居然还真有人喜欢这些故事呢。</p>
-<p>今年开始读MBA了。没有文凭这件事，不管怎么嘴硬，它困扰我十多年了。今年终于下定决心要解决这个问题。说起来，下这个决心还是去年<a href="/2014/1/9/kilimanjaro/">登乞力马扎罗</a>的时候。以前也不是没想过读个MBA，每次都是说“好忙啊等忙过这阵儿再说吧”。去年看着乞力马扎罗就想：现在要是不去的话，也许一辈子也去不成了。然后一边登山一边想这事：以后也会一直这么忙吧，那么要是现在不开始读书的话，也许一辈子也不会开始了吧。于是从坦桑尼亚回来，就立即报名、交钱。第一年学过来，成绩平平，每个module都顺利通过。再坚持两年，我也是有文凭的人了。</p>
-<p>今年大半时间都在乌干达，其间做了一些真正对人有用的软件，特别是为抗击埃博拉做了<a href="http://mhero.org/mHero-Liberia/" target="_blank" rel="external">一点贡献</a>。这周在华盛顿参加<a href="http://www.mhealthsummit.org/" target="_blank" rel="external">全球移动医疗峰会</a>，所有人都在谈论这个软件。我跟肖然说，如果我做的软件能挽救哪怕一个人的生命，我觉得比我之前做过的所有项目加起来都更有价值。今年思想变得越来越左倾，越来越想为那些穷苦的人、受压迫的人、被忽视的人做点事。想帮助更多人，随便要我做什么都成。</p>
-<p>今年到目前为止<a href="http://book.douban.com/people/gigix/collect" target="_blank" rel="external">读完了56本书</a>，第57本大概在明天的飞机上就能读完。IT技术相关的书读得越来越少，开始读越来越多的社会科学，特别是那些关于社会的不公正的著作。渐渐地学会了用一个连贯的左翼视角看待世界各处的种种问题，美国的黑人被杀、加沙的轰炸、巴西的占领运动、非洲的困境与抗争，等等。今年遇到了很多同志，增长了斗争的勇气。</p>
-<p>今年把身体练得很好。体重降了十公斤下来，早上能轻松地到纽约中央公园跑个十公里。每天早睡早起，健身上瘾，吃东西有节制。很高兴找到了和自己的身体友好相处的方式。</p>
-<p>明年有什么愿望呢？明年大概希望做几件事：</p>
-<ol>
-<li>在<a href="http://www.thoughtworks.com/global-health" target="_blank" rel="external">全球医疗</a>领域继续深入，折腾出一点动静来。</li>
-<li>在中国让更多的同事参与到用技术推动社会变革中来。</li>
-<li>继续保持和改善跟自己友好相处的状态，身体和心理都是，放松，愉快，不拧巴。</li>
-</ol>
-<p>就是这么简单了。2014年过去了，我想我会一直记得它。</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>又是一年过去了。以前每年会许愿，前年许了几个<a href="/2012/12/31/wishes-in-2013/">很朴实的愿望</a>，去年在忙乱的旅行之间完全忘了这茬。现在开完了今年最后一个大会，在即将进入假期的状态下回首这一年，才发现，哇，真是做了很多事啊。</p]]>
     </summary>
     
   </entry>

@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://gigix.thoughtworkers.org/2016/1/13/it-talent-trend/</loc>
+    <lastmod>2016-01-13T06:17:33.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://gigix.thoughtworkers.org/2016/1/8/dream-of-startups/</loc>
     <lastmod>2016-01-07T12:54:28.000Z</lastmod>
   </url>
@@ -39,11 +44,6 @@
   <url>
     <loc>http://gigix.thoughtworkers.org/2015/11/11/literature-review-competence/</loc>
     <lastmod>2015-11-11T14:24:21.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2007/4/3/%E7%BB%99typo%E8%A3%85%E4%B8%8Arich-editor/</loc>
-    <lastmod>2015-11-11T07:46:01.000Z</lastmod>
   </url>
   
   <url>
@@ -287,13 +287,13 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2007/6/18/%E6%8A%84%E4%B9%A6-erlang%E7%9A%84%E6%8E%A5%E5%8F%A3%E5%BA%93/</loc>
+    <loc>http://gigix.thoughtworkers.org/2007/4/3/%E7%BB%99typo%E8%A3%85%E4%B8%8Arich-editor/</loc>
     <lastmod>2015-11-11T07:46:01.000Z</lastmod>
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2012/1/2/wishes-in-2012/</loc>
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    <loc>http://gigix.thoughtworkers.org/2007/6/18/%E6%8A%84%E4%B9%A6-erlang%E7%9A%84%E6%8E%A5%E5%8F%A3%E5%BA%93/</loc>
+    <lastmod>2015-11-11T07:46:01.000Z</lastmod>
   </url>
   
   <url>
@@ -1447,6 +1447,11 @@
   </url>
   
   <url>
+    <loc>http://gigix.thoughtworkers.org/2012/5/28/world-is-not-so-flat/</loc>
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://gigix.thoughtworkers.org/2007/10/23/is-stackless-python-the-way/</loc>
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
   </url>
@@ -1917,7 +1922,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2012/5/28/world-is-not-so-flat/</loc>
+    <loc>http://gigix.thoughtworkers.org/2008/7/19/words-from-dragon-lance/</loc>
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
   </url>
   
@@ -1952,7 +1957,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2008/7/19/words-from-dragon-lance/</loc>
+    <loc>http://gigix.thoughtworkers.org/2012/12/31/wishes-in-2013/</loc>
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
   </url>
   
@@ -2527,7 +2532,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2012/12/31/wishes-in-2013/</loc>
+    <loc>http://gigix.thoughtworkers.org/2012/1/2/wishes-in-2012/</loc>
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
   </url>
   

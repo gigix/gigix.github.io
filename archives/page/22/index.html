@@ -179,6 +179,30 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2010/9/1/migrating-to-a-decent-scm/" title="link to Migrating To A Decent SCM">Migrating To A Decent SCM</a></h2>
+
+      <p class="excerpt">
+        <p>I know that lots of organizations are still using old-expensive-counterproductive configurationmanagementsystems (ClearCase,<span class="caps">VSS</span>, etc.). I understand the fear that prevents many ofthem frommoving to a decent<span class="caps">SCM</span>(Subversion,<a href="http://mercurial.selenic.com/" target="_blank" rel="external">Mercurial</a>, etc.). I’ll try to tell a story about that kind of migration, which might alleviate thefear.</p><p>A huge company, with 40,000+ software developers, with 10+ years history using ClearCase, wants tomigrate toSubversion, because of<span class="caps">SVN</span>’s encouragement to atomic commit andoptimisticlocking. The movement is still ongoing. Every single pace involves at least one delivery team,normally with100+ programmers in it.</p><p>The movement must be as seamless as possible, because people are pushed to meet their next milestone.For acodebase sized over 4GB, we made the migration in a week:</p><ul><li><strong>Monday</strong><ul><li>Export the existing codebase and check it into<span class="caps">SVN AS</span>-IS—it’stime consuming so you have enough time for following items.</li><li>Send mail to everyone to inform the migration plan, ask them to install<a href="http://tortoisesvn.tigris.org/" target="_blank" rel="external"><span class="caps">SVN</span>client</a>if they haven’t.</li><li>Make sure everyone can access new<span class="caps">SVN</span>repository.</li></ul></li></ul><ul><li><strong>Tuesday</strong><ul><li>Check out the codebase from<span class="caps">SVN</span>and build it, to make sure you are not breaking anything—that’s why youreally shouldmigrate<span class="caps">AFTER</span>you have a decent build script.</li><li>Compose a shell script to synchronize from ClearCase local view to<span class="caps">SVN</span>working copy. Synchronize frequently and build every time.</li></ul></li></ul><ul><li><strong>Wednesday</strong><ul><li>Clean the codebase: legacy repositories often have lots of garbage (temp files, compiledbinaries,etc.) checked in, it’s now a chance to do some clearance, delete and ignore themfrom<span class="caps">SCM</span>. Just don’t break the build.</li><li>Install<a href="http://cruisecontrol.sourceforge.net/" target="_blank" rel="external">continuous integration</a>instance for the codebase in<span class="caps">SVN</span>.</li><li>Synchronize and build frequently. Ask people to fix build if it breaks.</li></ul></li></ul><ul><li><strong>Thursday</strong><ul><li>Send mail to everyone, ask them to commit any modifications by the end of day, and tellthem “there’san<span class="caps">SVN</span>training tomorrow morning”.</li><li>Keep doing clearance. Synchronize and build frequently.</li></ul></li></ul><ul><li><strong>Friday</strong><ul><li>Disable write-access to ClearCase.</li><li>Training: Configuration Management &amp;<span class="caps">SVN</span>. People need tounderstandsome<span class="caps">SCM</span>principles to make a better use of<span class="caps">SVN</span>—at least not tomess up thecodebase with garbage again.</li><li>At the same time, synchronize a last time, build, check in.</li><li>Package your working copy and upload it to a shared directory: it’s much faster tocopy andunzip, than checking out from the repository. Mail everyone about how to get a workingcopy and makefirst commit.</li><li>Publish your CI to the team. It’s now the team’s CI.</li></ul></li></ul><p>That’s it. Now your team is on<span class="caps">SVN</span>.</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="9月 1 2010" class="post-list__meta--date date">9月 1 2010</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2010/8/30/tricks-of-effective-interview/" title="link to 有效访谈的技巧">有效访谈的技巧</a></h2>
 
       <p class="excerpt">
@@ -397,30 +421,6 @@ classes that you can use:
       <hr class="post-list__divider" />
     </li>
     
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2010/6/24/continuous-integration/" title="link to 《持续集成建设》引言">《持续集成建设》引言</a></h2>
-
-      <p class="excerpt">
-        <p><strong>软件开发的最后一英里</strong></p><p>在任何软件开发过程中都有一个重要的部分：通过某种构建（build）流程，将已经编写好的源代码变成可用、能为客户创造价值的软件。尽管知道构建的重要性，但是我们仍然会经常因为构建中的各种问题而惊讶不已。曾有多少次，在所有人都认为“开发已经完成”之后，我们还要经历漫长而痛苦的编译、打包、联调、测试、上线过程？在代码都已经写好之后，我们还曾付出了多少个通宵的代价让软件真正可用？</p><p>编写源代码不是软件开发的全部。从源代码构建出可用的软件，这个过程也被称为“软件开发的最后一英里”：胜利似乎就在眼前，但各种潜藏的危机可能这段短短的路程变得艰难万分。</p><p><strong>持续集成就是构建过程</strong></p><p>构建之所以如此困难，是因为在绝大多数软件组织中，构建过程有以下几个特点：</p><ul><li>它是一个神秘的、不可见的、只（模糊地）存在于少数人大脑中的过程</li><li>它是一个需要人工操作的、耗时费力的、容易出错的过程</li><li>它是一个偶尔为之的、缺乏练习的、充满未知风险的过程</li></ul><p>为了减少“最后一英里”的浪费，让艰险的最后一英里成为坦途，我们需要将构建过程明晰化、自动化、频繁化。持续集成就是一个将构建过程明晰化、自动化、频繁化的实践。通过使用软件工具来实现自动化的构建过程、展示构建结果，原本虚无的构建过程就成为了一个实际存在的、可以重复进行的、可以被有效管理的实体。从这个意义上来说，持续集成就是构建过程本身：只有以持续集成的形式呈现的那部分构建过程，才是确定并可靠的；“最后一英里”中尚未被纳入持续集成的部分，仍然是不确定和有风险的。</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="6月 24 2010" class="post-list__meta--date date">6月 24 2010</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
   </ol>
 
   <hr class="post-list__divider " />
@@ -432,7 +432,7 @@ classes that you can use:
         
     
 
-    <span class="pagination__page-number">Page 22 of 51</span>
+    <span class="pagination__page-number">Page 22 of 52</span>
     
     
         <a class="older-posts pagination__older btn btn-small btn-tertiary" href="/archives/page/23/">Older Posts &rarr;</a>

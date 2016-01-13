@@ -177,6 +177,30 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2007/10/23/is-stackless-python-the-way/" title="link to Is Stackless Python THE Way?">Is Stackless Python THE Way?</a></h2>
+
+      <p class="excerpt">
+        <p>Code with<a href="http://www.stackless.com/" target="_blank" rel="external">Stackless Python</a></p><pre><code>## pingpong_stackless.py#import stacklessping_channel = stackless.channel()pong_channel = stackless.channel()def ping():while ping_channel.receive(): #blocks hereprint “PING”pong_channel.send(“from ping”)def pong():while pong_channel.receive():print “PONG”ping_channel.send(“from pong”)stackless.tasklet(ping)()stackless.tasklet(pong)()# we need to ‘prime’ the game by sending a start message# if not, both tasklets will blockstackless.tasklet(ping_channel.send)(‘startup’)stackless.run()</code></pre><p>And it runs…forever.</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="10月 23 2007" class="post-list__meta--date date">10月 23 2007</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2007/10/21/break-out-a-method-object-from-a-monster-method/" title="link to Break Out a Method Object (From a Monster Method)">Break Out a Method Object (From a Monster Method)</a></h2>
 
       <p class="excerpt">
@@ -392,30 +416,6 @@ classes that you can use:
       <hr class="post-list__divider" />
     </li>
     
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2007/10/9/inflation-in-games/" title="link to 天地不仁，通货在膨胀">天地不仁，通货在膨胀</a></h2>
-
-      <p class="excerpt">
-        <p>云风写了一个“<a href="http://blog.codingnow.com/2007/10/mmo.html#more" target="_blank" rel="external">网络游戏的技术基础</a>”，作为对我说的“<a href="http://gigix.thoughtworkers.org/2007/10/3/money-and-game">技术派路线</a>”的回复。当然毫无疑问技术最终是一切制度得以实施的保障。“技术上能做的，也是首先要做的，是建立一些可以被实现且简洁的基本规则出来。它的首要目标不是对现实模拟的拟真度，而是可实现性”——从云风这句话可以产生很多联想，譬如说，天地不仁，以万物为刍狗。</p><p>《<a href="http://www.douban.com/subject/1140726/" target="_blank" rel="external">计算中的上帝</a>》有些东西会让人对神祗很感恩，比如说电磁力和引力之间的平衡只要偏差10的负40次方，这个宇宙就不会有任何碳基生命存在。但感恩的同时也会隐隐的有些遗憾：如果采用了另一组规则，这个世界会是什么样子？很多大手笔的科幻小说和YY小说和穿越文以“改变简单规则的后果”为题材，可见这种遗憾心态之存在的普遍性。</p><p>真实世界里没有的机会可以在网络游戏里出现——我上大学的时候写过一句话：科幻让我做梦，编程让我梦想成真。而相比电磁力强度之类比较难想象并且造成的后果太过剧烈的调整，对经济规则的调整更具现实意义。比如说一个滥发金元券的社会是什么样子？我大一的时候就知道了，而且有趣的部分是这样的社会能养出一批崇尚清谈的有闲特权阶层。如果上帝真在天上看这个世界的话，我觉得他未必会认为这样的世界就不好。再比如说我老爸每天玩联众台球，他并不在意自己的分数有多少，为什么，因为这个世界的价值体系不同。</p><p>但另一方面，如果打算把现实世界的价值体系代入游戏世界，这事情就变得有意思了。比如某同学在云风的blog上回复的“打怪掉东西，卖东西赚钱……打怪不要掉钱”，明眼人一看就知道这个行不通：掉东西跟掉钱是同一回事，玩家自会找到这个游戏世界的一般等价物。另一个貌似有道理的回复“游戏世界加以通过一定手段，固定消耗玩家通过买卖东西得到的金钱（回收央行放出的货币），避免通货膨胀”同样行不通：且不说央行有没有这个动力去避免通货膨胀，首先从技术上他就做不到，因为他根本没有依据来判断是否正在发生通货膨胀。</p><p>（云风可能会说，借助精妙的技术可以做到完美监控货币发行。这事情中国政府干过，失败了，所以云风要干难度也必然不小。）</p><p>所以如果要代入现实的资本主义价值体系，解决通货膨胀的办法简单并且唯一：虚拟货币与人民币锚定，游戏央行确保虚拟货币能以汇率兑换成人民币，那游戏的通胀就决然不会超过CPI。这才正经是以万物为刍狗。用精妙技术调节，那是大道废有仁义智慧出有大伪。当然从游戏的角度来说，资本主义价值体系是不是合适这本身就是非常值得讨论的一个问题，比如说暴雪似乎就不这么认为。</p><p>（故事到这才刚开始。昨天我太太无意中说了句：“这腾讯俨然就是个地下钱庄啊。”哎，正中要害。虚拟货币和人民币一锚定，拥有几千万玩家的网游运营商不就成了金融机构？不过既然支付宝都能扶正，这个问题至少在技术上是能解决的，虽然难度非常的不小。）</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="10月 9 2007" class="post-list__meta--date date">10月 9 2007</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
   </ol>
 
   <hr class="post-list__divider " />
@@ -427,7 +427,7 @@ classes that you can use:
         
     
 
-    <span class="pagination__page-number">Page 43 of 51</span>
+    <span class="pagination__page-number">Page 43 of 52</span>
     
     
         <a class="older-posts pagination__older btn btn-small btn-tertiary" href="/page/44/">Older Posts &rarr;</a>
