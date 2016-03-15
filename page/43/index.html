@@ -177,6 +177,30 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2007/10/23/is-concurrent-ruby-better/" title="link to Is Concurrent Ruby Better?">Is Concurrent Ruby Better?</a></h2>
+
+      <p class="excerpt">
+        <p>Code with<a href="http://rubyforge.org/projects/concurrent/" target="_blank" rel="external">The Omnibus Concurrency Library</a></p><pre><code>require ‘concurrent/actors’include Concurrent::ActorsMessage = Struct.new :ping, :pongping_thread = Actor.spawn doloop doActor.receive do |f|f.when Message do |m|puts “PING”sleep(1)m.pong  Message.new(m.ping, m.pong)endendendendpong_thread = Actor.spawn doloop doActor.receive do |f|f.when Message do |m|puts “PONG”sleep(1)m.ping  Message.new(m.ping, m.pong)endendendendping_thread  Message.new(ping_thread, pong_thread)while(true)puts(“WAITING…”)sleep(5)end</code></pre><p>Also, it runs…forever.</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="10月 23 2007" class="post-list__meta--date date">10月 23 2007</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2007/10/23/is-stackless-python-the-way/" title="link to Is Stackless Python THE Way?">Is Stackless Python THE Way?</a></h2>
 
       <p class="excerpt">
@@ -374,30 +398,6 @@ classes that you can use:
 
       <p class="excerpt">
         <p>恶魔看了我那篇<a href="http://gigix.thoughtworkers.org/2007/10/3/money-and-game">从游戏看货币</a>以后找我随便聊了几句：</p><blockquote><p>TrustNo1: 事实上，它应该做的是维护一个玩家自由发行货币的制度。就是玩家可以自行发行自己的货币。我发行我的trustno1元，你发行你的gigix元。</p><p>Gigix: 等会，你这个还是说不过去。比如说大家在游戏里发行金本位货币，那作为游戏运营商你还是得把游戏黄金和现实人民币锚定，不然问题还是一样。</p><p>TrustNo1: 锚定不锚定是玩家自己的事情。也就是一个虚拟货币和实物的交易平台。你愿意锚定黄金可以，你要愿意锚定你家的草纸也没问题，反正到最后锚定不了的自然关张歇业。</p><p>Gigix: 于是商业银行就浮现了。央行就在商业银行的博弈中浮现了。游戏运营商就创世了。</p><p>TrustNo1:类似央行的组织，未必就是运营商，极为可能的是行会。运营商会沦为打手。事实上我觉得游戏本身就不因该有钱币掉落的机制，货币应该产生于玩家之间的借贷。事实上运营上可以利用网络的优势提供信贷保证和追债，也就是说在网游里，小额的贷款的风险也是比较低的。</p></blockquote><p>最有意思的是，这个设想离现实并不太远，因为它只需要两个前提条件。首先是一个虚拟物品和现实货币的交易平台，这样玩家就可以把自己认可的一般等价物（或者说穿了，虚拟货币）与人民币锚定。比如说恶魔发行T1元，他可以保证说：只要有人在这个平台上以1RMB兑10个T1元的汇率出售T1元，他就一定全额买入，这样他就绕过了游戏运营商，建立了自己的信用货币体系。而这个交易平台已经存在了，那就是<a href="http://www.goodhope.com.cn" target="_blank" rel="external">Goodhope好望角</a>——我还参与这个平台的开发了呢。</p><p>有了交易平台以后，下一个问题就是货币本身了。用作货币的一般等价物其获得成本应该极其低廉，同时又具备不可伪造性，这样才能充分降低交易成本以获得足够的流动性。网络游戏在这个时候体现出了与真实世界最大的区别：真实世界有无穷多的物品，一张白纸、一个贝壳、一片树叶……都可以成为信用货币的载体；而游戏世界里所有的物品都是受控的，你没办法随手抓一张白纸来写一份借据，除非游戏设计允许你这样做。所以前面说的玩家自组织的金融体系，其实只缺这一个条件：玩家自由创造物品。</p><p>想象这样一个情景：一个玩家可以到杂货铺花一个金币购买一千张白纸，然后把每张白纸裁成十六份，然后用一个小法术在每个小纸片上写上“100T1元”。如果游戏允许玩家做这样的事，游戏本身不断贬值的阿兹台克金币就会失去其虚拟货币的地位，我们就会看到整个金融行业的进化史。这会是真的吗？</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="10月 11 2007" class="post-list__meta--date date">10月 11 2007</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2007/10/11/自组织的网游金融体系/" title="link to 自组织的网游金融体系">自组织的网游金融体系</a></h2>
-
-      <p class="excerpt">
-        <p>恶魔看了我那篇<a href="http://gigix.thoughtworkers.org/2007/10/3/money-and-game">从游戏看货币</a>以后找我随便聊了几句</p>
       </p>
 
       <div class="post-list__meta">
