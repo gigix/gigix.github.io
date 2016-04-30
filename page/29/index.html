@@ -177,6 +177,30 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2009/7/17/move-to-multi-threaded-rails/" title="link to Move To Multi-threaded Rails">Move To Multi-threaded Rails</a></h2>
+
+      <p class="excerpt">
+        <p>When doing performance in local box, we found that requests are waiting to be processed due to Railsissingle-threaded by default. We changed the configuration to enable multi-threaded mode as describedin this blogentry:</p><p><a href="http://m.onkey.org/2008/10/23/thread-safety-for-your-rails" target="_blank" rel="external">Thread safety for your Rails</a></p><p>(also refer to<a href="http://guides.rubyonrails.org/2_2_release_notes.html#thread-safety" target="_blank" rel="external">Rails 2.2 releasenotes</a>)</p><p>The most important change was to eager-load /lib directory, and thus move libraries for test out ofit.</p><blockquote>config.threadsafe! also disables automatic loading by ActiveSupport::Dependencies.Alternatively, youcan just add lib/ directory to eager load paths. The following inside production.rb will do that :<pre>config.eager_load_paths  “#{RAILS_ROOT}/lib”</pre></blockquote><p>We had some rough tests to ensure the functionality is not broken. Multi-threaded mode also mightrequire morememory than single-threaded mode. Still keep testing.</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="7月 17 2009" class="post-list__meta--date date">7月 17 2009</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2009/7/15/three-faces-of-tech-lead/" title="link to Tech Lead的三重人格">Tech Lead的三重人格</a></h2>
 
       <p class="excerpt">
@@ -380,30 +404,6 @@ classes that you can use:
       <div class="post-list__meta">
 
         <time datetime="6月 8 2009" class="post-list__meta--date date">6月 8 2009</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2009/6/2/again-and-again/" title="link to 每年的那几天">每年的那几天</a></h2>
-
-      <p class="excerpt">
-        <p>又来了。</p><p>好吧，Flickr我已经不大用了，Twitter…虽然让我生活很闷…</p><p>但WorldPay也干掉可算怎么回事涅？</p><p>害我们的build一下午就没绿过。嗯，这是个好例子，告诉我们，Testability Driven Design是很重要的。</p><p>娘希匹。</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="6月 2 2009" class="post-list__meta--date date">6月 2 2009</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">

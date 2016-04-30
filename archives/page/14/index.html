@@ -179,6 +179,30 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2011/10/11/c-mon-it-s-turing-machine-part-1/" title="link to C&#39;mon, It&#39;s Turing Machine! (Part 1)">C&#39;mon, It&#39;s Turing Machine! (Part 1)</a></h2>
+
+      <p class="excerpt">
+        <p>Spent about 10 hours, I wrote my first program with<a href="http://www.clojure.org/" target="_blank" rel="external">Clojure</a>: an implementation of<a href="http://en.wikipedia.org/wiki/Turing_machine" target="_blank" rel="external">Turing Machine</a>as described in Alan Turing’s famous paper ”<a href="http://l3d.cs.colorado.edu/~ctg/classes/lib/canon/turing-compnum.pdf" target="_blank" rel="external">On ComputableNumbers, With AnApplication To The Entscheidungsproblem</a>”.</p><p><em>(Note: Charles Petzold’s book<a href="http://book.douban.com/subject/2330016/" target="_blank" rel="external">The Annotated Turing</a>is a good point to understand Turing’s paper.)</em></p><p><img src="http://gigix.thoughtworkers.org/assets/2011/10/11/turing_macine.gif" alt=""></p><h2>Get Started</h2><p>First of all, you need clone the codebase from GitHub:</p><blockquote>$ git clone git://github.com/gigix/turing_machine.git</blockquote><p>In order to build it, you also need install<a href="http://github.com/technomancy/leiningen" target="_blank" rel="external">Leiningen</a>—whichis pretty easy on my MacBook Pro with MacPorts:</p><blockquote>$ sudo port install leiningen</blockquote><p>Now you can build the codebase and see if everything works:</p><blockquote>$ cd turing_machine/clojure &amp;&amp; ./build.sh</blockquote><p>You should see<code>turing_machine-1.0.0-SNAPSHOT-standalone.jar</code>being packaged, as well as a “tape” being printed as following:</p><blockquote>(0 | 1 | 0 | 1 | 0 | 1 | 0 | 1 | 0 | 1)</blockquote><p>That’s the binary form of rational number 1/3 (0.010101…). You just executed a TuringMachine whichcalculates 1/3 and prints the result to a tape—actually we only calculate and display thestarting 10squares of the tape, because it’s simply impossible to finish the calculation, because it’sinfinite.</p><h2>Calculate An Irrational Number</h2><p>There’s another machine lays in<code>machines/an_irrational_number.machine</code>, whichcalculates anirrational number with following form:</p><blockquote>0.01011011101111011111…</blockquote><p>You can run this machine with following instruction—the algorithm is more complicated, so youhave to runmore steps to see a reasonable shape:</p><blockquote>$ java -jar turing_machine-1.0.0-SNAPSHOT-standalone.jarmachines/an_irrational_number.machine 1000</blockquote><p>The starting part of the tape looks like following:</p><p><img src="http://gigix.thoughtworkers.org/assets/2011/10/12/irrational_number.png" width="450px"></p><p>And here’s the “source code” (formal name should be “m-configurations”,in which“m” stands for “machine”) of this machine, which I will explain in moredetail in nextsection:</p><p><img src="http://gigix.thoughtworkers.org/assets/2011/10/12/source_of_irrational_number_1.png" alt=""></p><p><em>(To be continued…)</em></p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="10月 11 2011" class="post-list__meta--date date">10月 11 2011</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2011/10/6/my-open-source-projects/" title="link to 晒晒我的开源项目们">晒晒我的开源项目们</a></h2>
 
       <p class="excerpt">
@@ -380,30 +404,6 @@ classes that you can use:
       <div class="post-list__meta">
 
         <time datetime="8月 22 2011" class="post-list__meta--date date">8月 22 2011</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2011/8/20/progress-oriented-management/" title="link to 面向进展的管理">面向进展的管理</a></h2>
-
-      <p class="excerpt">
-        <p><em>（商业读书会第十期的题目：<a href="http://hbr.org/2011/05/the-power-of-small-wins/ar/1" target="_blank" rel="external">The Power of Small Wins |<span class="caps">HBR</span></a>）</em></p><p>简单地说，内在的工作状态可以显著影响工作表现，对于知识工作者尤其如此。不那么广为人知的是，影响内在工作状态（也就是员工的心理状态）的最重要的因素，不是很多管理者以为的激励方式尤其是物质激励——这个话题可以单独再开一篇——而是（1）在有意义的工作上（2）取得进展。这个基于大量研究得出的结论实在是管理者的一大福音。</p><p><img src="http://gigix.thoughtworkers.org/assets/2011/8/20/eisenhower-dday.jpg" alt=""><br><em><small>（图片来源：<a href="http://useucom.wordpress.com/2010/06/03/d-days-legacies-live-today/" target="_blank" rel="external">美军欧洲军事指挥部博客</a>）</small></em></p><p><strong>员工需要在有意义的工作上取得进展</strong>。这个简单的叙述背后有一些重要的意味。首先，它意味着员工与管理者与老板不必是对立的，因为在有意义的工作上取得进展是所有人都期望的事。其次，它意味着——再一次地——阳光是最好的消毒剂，因为只有信息透明才能让员工明白琐碎的日常工作蕴含的意义，<a href="http://article.yeeyan.org/view/208397/213239" target="_blank" rel="external">没有只让干部知晓的数据</a>是简单而有效的鼓励方式。最后但绝非最不重要，它意味着管理者必须——就像德鲁克早已预言过的——做出一些改变。</p><p>文章里给出了一份很好的检查列表：作为一个领导者或者管理者，你是否在<strong>催化</strong>和<strong>滋养</strong>一支团队，而非<strong>抑制</strong>和<strong>毒害</strong>它。说起来真的很简单：你只要让团队了解目标，给他们搞定资源和约束，尊重和信任他们的专业能力，必要时给他们支持，和他们一起回顾进展和教训，他们就会自己把事情搞定。然而问题是，为什么那么多的领导者仍然使用一些有害的管理方式，尽管已经有充分的证据表明这些管理方式会直接损害知识工作者的绩效：</p><ul><li>过大的目标以至于挑战超出团队的能力。</li><li>缺乏目标以至于团队看不到工作的意义。</li><li>缺乏管理和支持以至于团队受困于各种障碍。</li><li>微观管理以至于团队毫无自主性。</li></ul><p>更有趣的是，这些看似彼此矛盾的表述经常同时出现在同一个团队。</p><p>我这样评价<a href="http://www.infoq.com/cn/presentations/scs-are-you-afraid-of-meeting-clients" target="_blank" rel="external">一位从事软件研发管理的朋友</a>：“我认识的研发领导中最走进现场、最理解客户疾苦、最善于打造团队的之一。”HBR这篇文章讲的是打造团队，为了有效地<strong>催化</strong>和<strong>滋养</strong>团队，领导者就必须了解客户、了解现场。了解客户，才真正明白自己的产品如何帮助同样水深火热（而不是传说中青面獠牙）的使用者；了解现场，才真正知道什么时候应该伸手什么时候应该放手。所以，还是向大野耐一致敬：管理的学问不是关于管理，而是关于在现场感受炮火。</p><p>作为反例，拒绝走进现场的领导者永远都弄不清应该管（或者不管）到什么程度。当你看见需求分析师和项目经理开了一个又一个的会来讨论“需求文档应该细化到什么程度”，你就知道自己正在看见一组远离现场的领导者，并且可以想象他们所领导的团队正在因为不知道工作的意义和微观管理而缺乏动力。最糟糕的是，人是可以培养的，而且不止一个可能的方向：如果你认为程序员不会考虑架构设计，如果你认为程序员不会考虑工作的意义，他们就真的不会考虑。然后你就得到一支缺乏动力因此低效的团队。</p><p>把人当机器的管理者是在人为降低员工绩效。老板们应该记住这个推论。</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="8月 20 2011" class="post-list__meta--date date">8月 20 2011</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">
