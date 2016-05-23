@@ -177,6 +177,30 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2007/12/7/stomperl-stomp-with-erlang/" title="link to Stomperl- Stomp with Erlang">Stomperl- Stomp with Erlang</a></h2>
+
+      <p class="excerpt">
+        <p><a href="http://code.google.com/p/stomperl/" target="_blank" rel="external">Stomperl</a>is an attempt to build something not-so-that-non-trivial (in this case, a<a href="http://stomp.codehaus.org/" target="_blank" rel="external">Stomp</a>server) with<a href="http://erlang.org/" target="_blank" rel="external">Erlang</a>. To kick it off, I stole the server architecturefrom<a href="http://www.trapexit.org/Building_a_Non-blocking_TCP_server_using_OTP_principles" target="_blank" rel="external">here</a>and<a href="http://d.hatena.ne.jp/cooldaemon/20071024/1193193093" target="_blank" rel="external">here</a>. Currently it doesn’teven support the full<a href="http://stomp.codehaus.org/Protocol" target="_blank" rel="external">protocol</a>: only CONNECT,SUBSCRIBE and SEND commands are supported. But anyway, it’s moving forward and I’m learning from it.</p><p>To make it run:</p><ol><li><code>make test</code>, which hopefully succeeds.</li><li><code>make start</code>, then you’ll get an Erlang console.</li><li>In the Erlang console,<code>tcp_server_sup:start_server().</code></li><li>In another shell console,<code>make acceptance</code>, which hopefully succeeds.</li></ol><p>I created an extremely simple acceptance test with<a href="http://www.germane-software.com/software/Java/Gozirra/" target="_blank" rel="external">Gozirra</a>.</p><p>What’s the<a href="http://stomperl.googlecode.com/svn/trunk/TODO" target="_blank" rel="external">next</a>? Well, I suppose I’llimplement the full protocol, and fix some defects. As a newbie to Erlang, I made and am makingstupid mistakes. Welcome to be stupid together with me.</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="12月 7 2007" class="post-list__meta--date date">12月 7 2007</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2007/11/30/oracle-mix-powered-by-jruby-on-rails/" title="link to Oracle Mix, Powered by JRuby on Rails">Oracle Mix, Powered by JRuby on Rails</a></h2>
 
       <p class="excerpt">
@@ -378,30 +402,6 @@ classes that you can use:
       <div class="post-list__meta">
 
         <time datetime="10月 30 2007" class="post-list__meta--date date">10月 30 2007</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2007/10/28/highlights-of-wpf/" title="link to Highlights of WPF">Highlights of WPF</a></h2>
-
-      <p class="excerpt">
-        <p>(From the book<a href="http://www.amazon.com/Windows-Presentation-Foundation-Unleashed-WPF/dp/0672328917" target="_blank" rel="external">WindowsPresentation Foundation Unleashed</a>)</p><p><strong>Broad integration</strong></p><p><strong>Resolution independence</strong></p><p><strong>Hardware acceleration</strong></p><p><strong>Declarative programming</strong></p><p><strong>Rich composition and customization</strong></p><p><strong>Easy deployment</strong></p><p>In short,<span class="caps">WPF</span>aims to combine the best attributes of systems such as DirectX (3D andhardware acceleration), Windows Forms (developer productivity), Adobe Flash (powerfulanimation support), and<span class="caps">HTML</span>(declarative markup and easy deployment).</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="10月 28 2007" class="post-list__meta--date date">10月 28 2007</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">

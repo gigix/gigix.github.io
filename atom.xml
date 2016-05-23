@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Transparent Thoughts]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://gigix.thoughtworkers.org/"/>
-  <updated>2016-04-30T06:50:39.000Z</updated>
+  <updated>2016-05-23T14:59:07.000Z</updated>
   <id>http://gigix.thoughtworkers.org/</id>
   
   <author>
@@ -13,6 +13,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[领导力发展方法：行动学习]]></title>
+    <link href="http://gigix.thoughtworkers.org/2016/5/24/action-learning/"/>
+    <id>http://gigix.thoughtworkers.org/2016/5/24/action-learning/</id>
+    <published>2016-05-24T11:31:00.000Z</published>
+    <updated>2016-05-23T14:59:07.000Z</updated>
+    <content type="html"><![CDATA[<p>Ericsson等人在那篇<a href="http://psycnet.apa.org/index.cfm?fa=search.displayRecord&amp;uid=1993-40718-001" target="_blank" rel="external">著名的论文</a>中介绍了刻意练习在专家技能的获取过程中的重要性。他们这样谈到在受试者提升绩效的过程中起作用的因素：</p>
+<blockquote>
+<p>最重要的因素是受试者的动机及投入的努力。除此之外，任务的设计必须考虑到学习者既有的知识，以学习者能在接受简单的指示之后能正确理解为宜。学习者需要得到及时的、有信息量的反馈，以便了解他们的表现。学习者需要不断重复相同或相似的任务。</p>
+</blockquote>
+<p>科尔文在《<a href="https://book.douban.com/subject/4010185/" target="_blank" rel="external">哪来的天才</a>》中指出了刻意练习的几个特征：第一，它是为了提高绩效而被设计出来的；第二，它可以重复很多次；第三，对结果的反馈是可持续得到的。（以及，第四，它是非常费神的；第五，它并没有多少乐趣。）由这几个特征可以看到尝试用刻意练习方法发展领导力的困难。因为需要使用领导力的场景是罕见的，甚至在领导者的日常工作中也并不常见；并且使用领导力往往带来较大的影响和风险。所以，在发展高潜力领导者时，一个挑战就是难以给他们创造适于他们提升绩效的、可以重复进行的练习。很多组织会采用<a href="https://book.douban.com/subject/1237464/" target="_blank" rel="external">工匠体系</a>中“师父带徒弟”的方式来培养领导者，这种方式解决了“快速得到反馈”的要求，但仍然不能解决“缺乏练习机会”的困难。</p>
+<p>为了给高潜力领导者创造更多练习使用领导力的机会，我们引入了<a href="https://en.wikipedia.org/wiki/Action_learning" target="_blank" rel="external">行动学习</a>这个方法。在一轮行动学习的6个月中，一组学员会被分配一个重要、关键、且复杂的真实问题，然后把自己放在企业领导者的视角上来分析这个问题，提出解决方案，并推动解决方案落地实施。通过这个过程，学员会有三重收获：解决问题，个人领导力发展，以及团队领导力发展。我们的导师把它称为“一鱼三吃”。</p>
+<p><img src="/assets/2016/5/24/3-targets.png"></p>
+<p>对于现代企业中的领导者而言，有几种基本的品质至关重要。首先是<a href="https://hbr.org/2014/07/expressing-your-vulnerability-makes-you-stronger" target="_blank" rel="external">Vulnerability</a>：敢于暴露自己的弱点，反而会使自己成为更强大的领导者。其次是<a href="https://hbr.org/2015/01/what-resilience-means-and-why-it-matters" target="_blank" rel="external">Resilience</a>：重要的不是避免挫折，而是如何<a href="https://hbr.org/2010/01/how-to-bounce-back-from-adversity" target="_blank" rel="external">从挫折中反弹</a>。以及，<a href="https://hbr.org/2015/06/improve-your-ability-to-learn" target="_blank" rel="external">Learning Agility</a>：如何保持灵活性、从错误中获得成长、并面对各种不同的挑战。通过行动学习中反复的练习和高密度的反馈，学员们得以有针对性地提高自己的领导品质、以及具体的关键领导力。</p>
+<p><img src="/assets/2016/5/24/critical-leaderships.png"></p>
+<p>在未来6个月的行动学习中，学习小组会遇到各种各样的挑战。行动学习小组的导师、sponsor（由公司的资深领导者担任）和整个公司的管理团队都是这些未来领导者可以调用的资源。在压力与挑战面前，他们会走得多远，我们拭目以待。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Ericsson等人在那篇<a href="http://psycnet.apa.org/index.cfm?fa=search.displayRecord&amp;uid=1993-40718-001" target="_blank" rel="external">著名的]]>
+    </summary>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[警惕分享经济的暗面]]></title>
@@ -544,33 +567,6 @@
 ]]></content>
     <summary type="html">
     <![CDATA[<p>2013年，我发表了《<a href="http://www.infoq.com/cn/articles/learn-thinking-shape-innovative-organization" target="_blank" rel="external">用精益思想塑造]]>
-    </summary>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[扩展创新：缺失的中间环节]]></title>
-    <link href="http://gigix.thoughtworkers.org/2015/1/15/innovations-missing-middle/"/>
-    <id>http://gigix.thoughtworkers.org/2015/1/15/innovations-missing-middle/</id>
-    <published>2015-01-15T10:31:00.000Z</published>
-    <updated>2015-11-11T07:46:00.000Z</updated>
-    <content type="html"><![CDATA[<p>在社会领域，创新是一个热门话题。众多的NGO和社会企业乐于谈论如何用创新的技术、产品和模式解决社会问题。然而层出不穷的创新也带来了新的挑战。以乌干达为例，这个东非国家有三千七百万人口，却一度有数百个由各种NGO主导的医疗IT创新试点项目在全国各地开展。大量的创新试点给基层的社区医疗工作者造成了一定的困扰，更给政府的监管与协调造成困难。“如果创新一直停留在一个村庄、一个社区的规模，不能延伸到更广的范围，不能应用于更大的人群，这样的创新对全面改善我们国家的医疗卫生条件就毫无意义。”一位乌干达卫生部的官员这样说道。</p>
-<p><img src="/assets/2015/1/15/thousand-flowers.png"></p>
-<p>为什么在试点项目中取得良好效果的创新却每每难于扩展到更大规模？因为创新的扩展并非“把试点做大”或者“把试点复制到其他地方”这么简单。在试点阶段，为了快速学习、快速验证，创新者通常对环境、问题和解决方案做了简化。比如说，试点项目往往在一个相对单纯的环境中进行，隔离了很多现实的复杂问题；试点阶段的解决方案更多是一个最小可接受产品（MVP），而非充分考虑各种复杂性的成熟产品；在试点阶段，创新者往往投入高水平的团队进行实施，而这个水平的人力资源在扩展到大规模时是非常奢侈的；对于试点阶段遇到的各种艰难险阻，初始团队往往靠自己的热情加以克服，然而要求所有实施团队都有同样的热情则很困难。如果不能完善这些简化，小规模试点中取得成功的创新就会在扩展到大规模时遭遇困境。</p>
-<p>当我们谈论创新的扩展时，这里有四种可能的扩展方式：</p>
-<ol>
-<li><strong>更长的时间</strong>。当试点阶段的高水平团队撤离之后，创新方案是否能由本地的、相对能力较低的团队可持续地运营下去？</li>
-<li><strong>更完善的方案</strong>。随着对环境、对人群的了解加深，创新者能否设计出更完善、更复杂的方案？方案的变更能否有效落地？</li>
-<li><strong>更多的用户</strong>。当覆盖的人群变大，创新方案是否能支撑更大的体量？如何能尽早获知潜在的承载能力风险？</li>
-<li><strong>不同的环境</strong>。适用于一个地区、一个国家、一种语言……的创新方案能否应用于其他环境？</li>
-</ol>
-<p>可以看到，前两种扩展方式使一个创新方案由“试点方案”发展成为一个可持续的方案，后两种扩展方式则把一个可持续的方案延展到更大覆盖范围。这两个阶段又被称为“向上扩展”（scale up）和“向外扩展”（scale out）。它们弥补了由“创新”和“试点”到“可复制的方案”之间缺失的中间地带。</p>
-<p><img src="/assets/2015/1/15/innovation-lifecycle.png"></p>
-<p>在接下来的文章里（如果我能战胜拖延症写出接下来的文章的话），我将介绍在医疗IT领域，技术如何支持创新以上述四种方式扩展。</p>
-<p><em>（本文得益于我的同事Dan McClure和Ian Gray的文章<a href="http://www.cap-tb.org/resources/scaling-innovation%E2%80%99s-missing-middle" target="_blank" rel="external">Scaling: Innovation’s Missing Middle</a>。）</em></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>在社会领域，创新是一个热门话题。众多的NGO和社会企业乐于谈论如何用创新的技术、产品和模式解决社会问题。然而层出不穷的创新也带来了新的挑战。以乌干达为例，这个东非国家有三千七百万人口，却一度有数百个由各种NGO主导的医疗IT创新试点项目在全国各地开展。大量的创新试点给基层的]]>
     </summary>
     
   </entry>
