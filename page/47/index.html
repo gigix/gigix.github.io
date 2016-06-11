@@ -177,6 +177,30 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2007/7/12/也许我不是“软件开发者”/" title="link to 也许我不是“软件开发者”">也许我不是“软件开发者”</a></h2>
+
+      <p class="excerpt">
+        <p><span class="caps">CSDN</span>：<a href="http://news.csdn.net/n/20070712/106352.html" target="_blank" rel="external">全世界软件开发者致管理者的一封公开信</a></p><p>“本文原作者作为一名软件开发者，感同身受着与管理者之间的矛盾和冲突，于是以书信的方式、代表全世界的软件开发者向软件管理者们发出他们的心声。”</p><p>但是，文中的观点、作出的承诺、对管理者们提出的要求，我并不完全同意。</p><p>重点在于，没有人征询过我的同意。似乎我的朋友、我的同事也没有被征询过同意。我一直以为自己是软件开发者。不过也许这是个误会，因为在我毫不知情的情况下，就有人在代表“全世界软件开发者”在发布公开信了。</p><p>所以，我非常明确并且强烈的态度是：这封公开信没有代表“全世界软件开发者”的权力，因为我——作为一个软件开发者——拒绝被它的作者代表。</p><p>或者，我要说，我不是软件开发者——如果作为软件开发者就必须被这种自以为是的人代表的话。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="7月 12 2007" class="post-list__meta--date date">7月 12 2007</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2007/7/9/资本没有主义，敏捷也一样/" title="link to 资本没有主义，敏捷也一样">资本没有主义，敏捷也一样</a></h2>
 
       <p class="excerpt">
@@ -374,30 +398,6 @@ classes that you can use:
       <p class="excerpt">
         <p></p><p>正统版的</p><img alt="正统版" src="http://www.dearbook.com/Author/images/xiongjie.jpg"><p>灵异版的</p><img alt="灵异版" src="http://www.infoq.com/styles/cn/i/team/Jeff.gif"><p>南方公园版的</p><img alt="南方公园版" src="http://gigix.javaeye.com/upload/user/logo/2838/a43d1bc6-aa07-4faf-b6b1-4e2ca99a1dac.bmp"><p></p>
 
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="6月 28 2007" class="post-list__meta--date date">6月 28 2007</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2007/6/28/svlogd-runit-s-service-logging-daemon/" title="link to svlogd- runit&#39;s service logging daemon">svlogd- runit&#39;s service logging daemon</a></h2>
-
-      <p class="excerpt">
-        <p>After install<a href="http://smarden.org/runit/" target="_blank" rel="external">runit</a>, you’ll get /usr/bin/svlogd in yoursystem, which is runit’s service logging daemon. Although there’s a<a href="http://smarden.org/runit/svlogd.8.html" target="_blank" rel="external">manual</a>, it took me a while to figure ourhow to use it …</p><p>(BTW, runit package in Ubuntu Feisty official repository is<a href="https://bugs.launchpad.net/ubuntu/+source/runit/+bug/74135" target="_blank" rel="external">broken</a>…)</p><p>svlogd accepts input from its<span class="caps">STDIN</span>and write it to log files. For example you can do following:</p><pre>ls / | svlogd -v ./log</pre><p>There will be a “log/current” file, which includes the output of “ls /”.</p><p>To<a href="http://smarden.org/runit/faq.html#createlog" target="_blank" rel="external">log a runit’s service</a>,you need create a “log” subdirectory within the service directory,thenrun svlogd in the subdirectory. Given I have a “mongrel_3002”service, I’ll create following stuff:</p><pre>/var/service/mongrel_3002/log/var/service/mongrel_3002/log/run</pre><p>Put following script in “log/run”, and make it executable:</p><pre>#!/bin/shexec svlogd -tt /path/to/log # /path/to/log must be writable</pre><p><a href="http://mongrel.rubyforge.org/" target="_blank" rel="external">Mongrel</a>(in non-daemon mode, i.e. without “-d” option) makes it morecomplicated: it outputs log to log file of itself (such as”#{RAILS_ROOT}/log/production.log”), or outputs log to<span class="caps">STDERR</span>if thelog file is not writable. In order to collect Mongrel’s log withsvlogd, I first make “production.log” not writable, then redirect<span class="caps">STDERR</span>to<span class="caps">STDOUT</span>in Mongrel starting script:</p><pre>gigix@gigix-laptop:~$ cat /var/service/mongrel_3002/run#!/bin/sh/usr/bin/mongrel_rails -c /path/to/rails/app -C /path/to/mongrel/config 2&amp;1</pre><p>Dirty, but it works …            </p>
       </p>
 
       <div class="post-list__meta">
