@@ -202,7 +202,7 @@ classes that you can use:
     
     <li class="post">
 
-      <h2 class="post-list__post-title post-title"><a href="/2007/5/19/转载-rubyworks入门指南/" title="link to (转载)RubyWorks入门指南">(转载)RubyWorks入门指南</a></h2>
+      <h2 class="post-list__post-title post-title"><a href="/2007/5/20/转载-rubyworks入门指南/" title="link to (转载)RubyWorks入门指南">(转载)RubyWorks入门指南</a></h2>
 
       <p class="excerpt">
         <p></p><p>（抄袭<a href="http://lightyror.thegiive.net/" target="_blank" rel="external">Giive Chen</a>的<a href="http://lightyror.thegiive.net/2007/05/rubyworks-001-release.html" target="_blank" rel="external">RubyWorks 0.0.1Release</a>，感谢Giive的帮助<sup>_</sup>）</p><p>如果你覺得安裝所有的 Ruby on Rails 相關套件，並且將 Production Server系統設定好是一件很麻煩的事情嗎？或許你可以試試看<a href="http://rubyworks.rubyforge.org/" target="_blank" rel="external">RubyWorks</a>。</p><p>RubyWorks是一個在 Red Hat Enterprise 或是 CentOS 上面的套件組合，他會幫你把所有 Production 環境下面的相關的Ruby on Rails 套件跟 Server 套件一次安裝完成，並且提供一個馬上可以跑的 defulat configfile，也就是說各位公司的技術長們不需要花時間去看那麼多 Production 設定方式，你已經有一個很堪用的 ProductionRuby on Rails Server了。</p><p>So，你還有理由不玩 Ruby on Rails嗎？</p><p>我們看看怎麼安裝 RubyWorks，因為我沒有 Red Hat Enterprise Server，所以我只 Test CentOS。</p><p><strong>前置作業</strong></p><p>RubyWorks 因為好像還沒進去 yum 資料庫，所以我們還是得必須告訴 yum 哪裡有 RubyWorks 的 Package，如果已經進去yum repo了，就好像不需要這個動作了。</p><p>如果你像我一樣，是個不求甚解，只求可以 Work 的人，就這樣打就好了。</p><blockquote>wget <a href="http://rubyworks.rubyforge.org/public_key.txt" target="_blank" rel="external">http://rubyworks.rubyforge.org/public_key.txt</a><div class="code">sudo rpm—import public_key.txt<br><div class="code">wget <a href="http://rubyworks.rubyforge.org/RubyWorks.repo" target="_blank" rel="external">http://rubyworks.rubyforge.org/RubyWorks.repo</a></div><div class="code">cp RubyWorks.repo /etc/yum.repos.d/<br><br></div></div></blockquote><div class="code"><div class="code"><strong><span class="caps">YUM</span>安裝 Ruby Works</strong><br>直接用 gem 安裝<br><blockquote>yum install rubyworks</blockquote><strong>然後…..裝好了。</strong><br><br></div>請連線到 <a href="http://localhost:3001/" target="_blank" rel="external">http://localhost:3001/</a> 的地方，你一定會看到一個很熟悉的畫面。是的，Ruby on Rails已經跑起來了，還是用 Haproxy 幫你跑的。不過這裡要講的是，因為他的取向不是 development server，而是production server，所以他並不會安裝 Rails 的 gem package，而是直接將 rails 放在<em>/usr/rails/vender/rails</em>裡面。<br><br><strong>Rubyworks 安裝表</strong><br><br>RubyWorks 一共會幫你安裝<br><ul><li><strong>ruby</strong></li><li><strong>ruby-devel</strong></li><li><strong>rubygems</strong></li><li><strong>haproxy</strong></li><li><strong>monit</strong></li><li>mongrel</li><li><strong>rubyworks</strong></li></ul>並且幫你設定好 HAProxy ，跑在 3001 Port，Mongrel 跑在 3002~3005 Port，monit 跑在 2812 port。<br><br><strong>Rubyworks 詳細位置表</strong><br><br>詳細的安裝位置是在<br><ol><li><code>/usr/bin/ruby/</code>：Ruby 所在地</li><li><code>/usr/lib/ruby/</code>：Ruby libraries</li><li><code>/usr/lib/ruby/1.8/</code>：Ruby standard library</li><li><code>/usr/lib/ruby/gems/1.8/gems/</code>：所有安裝的 Ruby gems Package</li><li><code>/usr/bin/monit</code>：monit 執行檔</li><li><code>/etc/init.d/monit</code>：monit的啟動 script，所有的 server 都會在 monit啟動的時候，也順便幫你啟動好了（Mongrel，Haproxy）</li><li><code>/usr/bin/haproxy</code>：HAProxy 執行檔</li><li><code>/usr/bin/mongrel_rails</code>：Mongrel</li><li><code>/etc/rails/</code>：configuration files</li><li><code>/var/rails/</code>：所有 Deamon 的 .pid files</li><li><code>/usr/rails/</code>：Rails app code 所在地。</li><li><code>/var/log/monit.log</code>：Monit 的 log</li><li><code>/var/log/haproxy.log</code>：HAProxy log</li><li><code>/usr/rails/log/</code>：Mongrels and Rails 的 log</li></ol></div><b>延伸閱讀</b><ul><li><a href="http://rubyworks.rubyforge.org/" target="_blank" rel="external">RubyWorks 網頁</a></li><li><a href="../../articles/2007/05/16/rubyworks-initial-release">RubyWorks 0.0.1 Released</a></li></ul><p></p>
@@ -211,7 +211,7 @@ classes that you can use:
 
       <div class="post-list__meta">
 
-        <time datetime="5月 19 2007" class="post-list__meta--date date">5月 19 2007</time> &#8226; 
+        <time datetime="5月 20 2007" class="post-list__meta--date date">5月 20 2007</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">
@@ -275,7 +275,7 @@ classes that you can use:
     
     <li class="post">
 
-      <h2 class="post-list__post-title post-title"><a href="/2007/5/15/rubyworks-0-0-1-released/" title="link to RubyWorks 0.0.1 Released">RubyWorks 0.0.1 Released</a></h2>
+      <h2 class="post-list__post-title post-title"><a href="/2007/5/16/rubyworks-0-0-1-released/" title="link to RubyWorks 0.0.1 Released">RubyWorks 0.0.1 Released</a></h2>
 
       <p class="excerpt">
         <p><a href="http://rubyworks.rubyforge.org/" target="_blank" rel="external">RubyWorks</a>production stack is a collection of open-source software required to host a<a href="http://www.rubyonrails.org" target="_blank" rel="external">RubyOnRails</a>application on a RedHat Enterprise Linux 4 or CentOS 4 server.</p><p>Once you point your package manager (up2date or yum) to RubyWorks repository and install thepackage, you have all the necessary pieces preconfigured and ready to go. Moreover, there is askeleton Rails application up and running on the server. It’s as close as we could get toone-click production deployment with Rails.</p><p>前一阵的冲锋有了成果。在即将开幕的<a href="http://conferences.oreillynet.com/rails/" target="_blank" rel="external">RailsConf 2007</a>上，所有人都将看到我们的RubyWorks。</p><p>正如<a href="http://gigix.thoughtworkers.org/articles/2007/04/20/ruby-on-rails-is-enterprise-ready">我以前说过的</a>，Ruby和Rails已经做好了准备走向企业。在众多怀疑的部署问题（性能、伸缩性、可靠性、可管理性……）上，一个<a href="http://gigix.thoughtworkers.org/articles/2007/04/24/deploy-rails-app-with-haproxy-and-mongrel">经过实践检验的部署方案</a>已经存在，事实证明它完全能够应付所谓“企业级”的要求——不论你如何定义“企业级”这个词，因为这个部署方案各方面的能力已经证明了它自己。</p><p>唯一的问题是，<a href="http://haproxy.1wt.eu/" target="_blank" rel="external">HAProxy</a>、<a href="http://www.tildeslash.com/monit/" target="_blank" rel="external">Monit</a>、<a href="http://mongrel.rubyforge.org/" target="_blank" rel="external">Mongrel</a>的配置即令不是困难的，至少也不是易如反掌的。RubyWorks的出现正是为了解决这个问题。我们提供一个“高性能”“企业级”（如果你喜欢这些大词的话）Rails部署环境所需的所有软件，以及可以立刻投入使用的缺省配置，再加上一个示例应用。所有这些都以RPM的形式发布，用yum或者up2date就可以直接安装。如果你正在开发Rails应用并且你的部署环境是Redhat/Fedora/CentOS，那么恭喜你了，因为……</p><p>高性能的Rails部署应用服务器，现在只需一分钟就可以获得。</p>
@@ -283,7 +283,7 @@ classes that you can use:
 
       <div class="post-list__meta">
 
-        <time datetime="5月 15 2007" class="post-list__meta--date date">5月 15 2007</time> &#8226; 
+        <time datetime="5月 16 2007" class="post-list__meta--date date">5月 16 2007</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">

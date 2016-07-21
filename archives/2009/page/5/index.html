@@ -349,7 +349,7 @@ classes that you can use:
     
     <li class="post">
 
-      <h2 class="post-list__post-title post-title"><a href="/2009/4/2/last-week-of-march/" title="link to 三月的最后一周">三月的最后一周</a></h2>
+      <h2 class="post-list__post-title post-title"><a href="/2009/4/3/last-week-of-march/" title="link to 三月的最后一周">三月的最后一周</a></h2>
 
       <p class="excerpt">
         <p><strong>一、书托</strong></p><p>《卓有成效的程序员》说穿了就四个词：快-专注-自动化-规范</p><p>立即做你想做的事-不被其他事打断-重复的事不做-做完的事不再去解释</p><p>然后，历史系博士也开始读这本书啦</p><p>还有还有，亲眼见到刘慈欣和姚海军。不赞同漫画比小说更适合展现科幻内容的说法。</p><p>小姬说，做书托我们也要做最好的。</p><p><strong>二、工作</strong></p><p><span class="caps">TDD</span>: Testability Driven Design. What you can’t test easily kills youeventually.</p><p>Iteration I, with nothing completed :</p><p>小郭说，听说你们进展不错啊。</p><p>都素浮云，浮云～～</p><p>不到真正成功就不会放心。于是真正成功了也不会开心。处女座真的很无趣吧。</p><p><strong>三、唱歌</strong></p><p>小龙龙说，3月31日晚上在电话里唱哥哥的歌唱了一个小时；小胡说，太骚了。</p><p>4月1日唱哥哥的歌，豆瓣上来的只有小强一个人，然则，这哥们唱歌真的，太猛了～～</p><pre>梦到内河风继续吹倩女幽魂深情相拥当爱已成往事一辈子失去了你我的心里只有你没有她…</pre><p>万晓利很扭捏的唱吱吱嘎嘎的床。这一切没有想象的那么糟。</p><p><strong>四、无害</strong></p><p>都以为我很坏 / 都以为我不实在 / 都以为我的心里 / 没有一点爱</p><p>所以我变得很虚伪 / 到处在找机会 / 谁要是爱上我 / 我就让谁倒霉</p><p>谁规定的？</p><p>不想再趟这浑水。只想安静的呆在某个地方。</p><p>谁规定的？</p>
@@ -357,7 +357,7 @@ classes that you can use:
 
       <div class="post-list__meta">
 
-        <time datetime="4月 2 2009" class="post-list__meta--date date">4月 2 2009</time> &#8226; 
+        <time datetime="4月 3 2009" class="post-list__meta--date date">4月 3 2009</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">
@@ -397,7 +397,7 @@ classes that you can use:
     
     <li class="post">
 
-      <h2 class="post-list__post-title post-title"><a href="/2009/3/24/jruby-ldap-over-ssl/" title="link to JRuby/LDAP over SSL">JRuby/LDAP over SSL</a></h2>
+      <h2 class="post-list__post-title post-title"><a href="/2009/3/25/jruby-ldap-over-ssl/" title="link to JRuby/LDAP over SSL">JRuby/LDAP over SSL</a></h2>
 
       <p class="excerpt">
         <p></p><p>Integrating ActiveDirectory with JRuby on Rails. Blocked by<span class="caps">SSL</span>issue. (Actually not AD but<span class="caps">ADAM</span>. Check<a href="http://blogs.msdn.com/cjacks/archive/2005/11/15/493122.aspx" target="_blank" rel="external">how to configure<span class="caps">ADAM</span>for<span class="caps">SSL</span>on Windows XP without a certificate server</a>)</p><blockquote>Jeff: Here we have a question about JRuby/LDAP: how to establish SSLConn to ActiveDirectory,given wehave got the certificate file (xxx.cer)?<p>Ola: Very good question. At the moment I don’t have the answer – and I’m notsure it’spossible. Have you considered using net/ldap instead? It’s pure Ruby and very nice.</p></blockquote><pre><del>(╯﹏╰)</del></pre><p>And then I figured it out. What we need is (1) import the certificate to a keystore, and (2) specifythe location ofkeystore to JRuby.</p><pre># command linekeytool -keystore “./cacerts” -import -file Authority.cer# JRubyjava.lang.System::setProperty(“javax.net.ssl.trustStore”, “/path/to/cacerts”);</pre><p>And…that’s it. Now we can connect to<span class="caps">ADAM</span>over<span class="caps">SSL</span>.</p><pre>conn = LDAP::SSLConn.new(host=LDAP_HOST, port=636)</pre><p></p>
@@ -406,7 +406,7 @@ classes that you can use:
 
       <div class="post-list__meta">
 
-        <time datetime="3月 24 2009" class="post-list__meta--date date">3月 24 2009</time> &#8226; 
+        <time datetime="3月 25 2009" class="post-list__meta--date date">3月 25 2009</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">

@@ -177,7 +177,7 @@ classes that you can use:
     
     <li class="post">
 
-      <h2 class="post-list__post-title post-title"><a href="/2009/3/24/jruby-ldap-over-ssl/" title="link to JRuby/LDAP over SSL">JRuby/LDAP over SSL</a></h2>
+      <h2 class="post-list__post-title post-title"><a href="/2009/3/25/jruby-ldap-over-ssl/" title="link to JRuby/LDAP over SSL">JRuby/LDAP over SSL</a></h2>
 
       <p class="excerpt">
         <p></p><p>Integrating ActiveDirectory with JRuby on Rails. Blocked by<span class="caps">SSL</span>issue. (Actually not AD but<span class="caps">ADAM</span>. Check<a href="http://blogs.msdn.com/cjacks/archive/2005/11/15/493122.aspx" target="_blank" rel="external">how to configure<span class="caps">ADAM</span>for<span class="caps">SSL</span>on Windows XP without a certificate server</a>)</p><blockquote>Jeff: Here we have a question about JRuby/LDAP: how to establish SSLConn to ActiveDirectory,given wehave got the certificate file (xxx.cer)?<p>Ola: Very good question. At the moment I don’t have the answer – and I’m notsure it’spossible. Have you considered using net/ldap instead? It’s pure Ruby and very nice.</p></blockquote><pre><del>(╯﹏╰)</del></pre><p>And then I figured it out. What we need is (1) import the certificate to a keystore, and (2) specifythe location ofkeystore to JRuby.</p><pre># command linekeytool -keystore “./cacerts” -import -file Authority.cer# JRubyjava.lang.System::setProperty(“javax.net.ssl.trustStore”, “/path/to/cacerts”);</pre><p>And…that’s it. Now we can connect to<span class="caps">ADAM</span>over<span class="caps">SSL</span>.</p><pre>conn = LDAP::SSLConn.new(host=LDAP_HOST, port=636)</pre><p></p>
@@ -186,7 +186,7 @@ classes that you can use:
 
       <div class="post-list__meta">
 
-        <time datetime="3月 24 2009" class="post-list__meta--date date">3月 24 2009</time> &#8226; 
+        <time datetime="3月 25 2009" class="post-list__meta--date date">3月 25 2009</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">
@@ -202,7 +202,7 @@ classes that you can use:
     
     <li class="post">
 
-      <h2 class="post-list__post-title post-title"><a href="/2009/3/19/interesting-review-to-productive-programmer/" title="link to 新手·高手·卓有成效的程序员">新手·高手·卓有成效的程序员</a></h2>
+      <h2 class="post-list__post-title post-title"><a href="/2009/3/20/interesting-review-to-productive-programmer/" title="link to 新手·高手·卓有成效的程序员">新手·高手·卓有成效的程序员</a></h2>
 
       <p class="excerpt">
         <p><a href="http://www.china-pub.com/STATIC07/0903/jsj_class_090313.asp" target="_blank" rel="external">China-pub的推荐页面</a>把<a href="http://www.china-pub.com/192175" target="_blank" rel="external">这本书</a>夸成了“影响全球程序员的经典之作”、“航标灯塔般的经典名著”、“脍炙人口的传世之作”…唔，不过，又加上了这么一句：</p><blockquote>如果您是一名刚踏入编程开发领域的新手，我们幸庆你可以阅读到《卓有成效的程序员》，因为它可以告诉你作为一名优秀的程序员你应该具备的思考模式和优秀习惯。</blockquote><p>与此同时，PHPChina的cnkiller写了一个<a href="http://www.phpchina.com/bbs/thread-107731-1-1.html" target="_blank" rel="external">很有意思的书评</a></p><blockquote>我是你《卓有成效的程序员》的一个读者。在这里，我非常的想和你说一下，你是我的敌人，我要像你挑战，你接受吗？<p>曾经，无论是从那个方面，我在别人的眼中是一个计算机高手，我错了，我从一开始就错，我如果不是一开始就这么认为，我现在就不会这么低落，如果我不低落，我就不会错了……（什么？你听不懂？那你得去看看我国的《武林外传》，就知道我在说什么了）</p><p>看过你的书之后，才知道什么是正真的高手，而我，就从高手的夷为菜鸟。</p></blockquote><p>周伟明的推荐语也令人感动</p><blockquote>程序员总有学不完的东西，许多看过我写的“程序员的十层楼”的人觉得自己仍然是“菜鸟”。同样，当我看到Neal的这本书时，发现自己十几年的程序员生涯仍然是一个低效的程序员，书中介绍的许多提高效率的工具和方法以前没有用过或没有用好。要是在“菜鸟”或“大虾”阶段就能看到这样一本好书多好啊！</blockquote><p>第一，我喜欢的书别人也喜欢，很美好。第二，如果所有程序员都像这本书里所说的那样工作，这世界该多美好。</p>
@@ -210,7 +210,7 @@ classes that you can use:
 
       <div class="post-list__meta">
 
-        <time datetime="3月 19 2009" class="post-list__meta--date date">3月 19 2009</time> &#8226; 
+        <time datetime="3月 20 2009" class="post-list__meta--date date">3月 20 2009</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">
@@ -275,7 +275,7 @@ classes that you can use:
     
     <li class="post">
 
-      <h2 class="post-list__post-title post-title"><a href="/2009/3/15/productive-programmer/" title="link to 懒于行，是故勤于思">懒于行，是故勤于思</a></h2>
+      <h2 class="post-list__post-title post-title"><a href="/2009/3/16/productive-programmer/" title="link to 懒于行，是故勤于思">懒于行，是故勤于思</a></h2>
 
       <p class="excerpt">
         <p>首先感谢李剑为这本<a href="http://www.china-pub.com/192175" target="_blank" rel="external">《卓有成效的程序员》</a>所做的<a href="http://www.infoq.com/cn/news/2009/03/productive-programmer" target="_blank" rel="external">推荐序</a>。</p><blockquote>如果你想做一个真正的懒人<p>就请继续读完这本书</p><p>因为这本书是天堂</p></blockquote><p>很显然要想做一个行动上的懒人，要让计算机拼命的跑而自己有点空闲抽根烟，需要花很多心思。不然，很容易就会变成Neal Ford说的，人们忙忙碌碌干些重复劳动，计算机扎堆闲聊嘲笑这些勤快人。</p><p>计算机应该用于执行重复劳动。而人，尤其是程序员，应该保持对重复劳动的敏感与不妥协。每个网址输入相同的“www.domain.com”是重复吗？每次循环写同样的for…each是重复吗？每个项目copy同样的一堆配置文件是重复吗？每天打开资源管理器进入同一个目录是重复吗？</p><p>所以，很大程度上，程序员的高效与否，与这种对重复的敏感与不妥协程度，有着必然的关联。如同强迫症一般，发现一切隐藏着的重复劳动（或者说，浪费），势必除之──自动化之──而后快。这不仅仅是生产效率的问题，更是自我完善的过程。</p><p>（BTW，一切把程序员与建筑工地上搬砖的工人做类比的人都应该被拖出去挖坑埋掉。软件的一切价值就在于消除重复劳动。软件领域中一切能够被自动化的工作一定会被自动化。连这一点都看不出来还妄谈软件的人应该被强制收声。）</p><p>偷懒是一项需要很多思考来完成的任务。很不幸（或者幸运）程序员是被认为应该为这个社会做这些思考的人。这就是这本书存在的原因。</p>
@@ -283,7 +283,7 @@ classes that you can use:
 
       <div class="post-list__meta">
 
-        <time datetime="3月 15 2009" class="post-list__meta--date date">3月 15 2009</time> &#8226; 
+        <time datetime="3月 16 2009" class="post-list__meta--date date">3月 16 2009</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">
