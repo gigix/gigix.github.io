@@ -177,7 +177,31 @@ classes that you can use:
     
     <li class="post">
 
-      <h2 class="post-list__post-title post-title"><a href="/2007/5/16/rubyworks-0-0-1-released/" title="link to RubyWorks 0.0.1 Released">RubyWorks 0.0.1 Released</a></h2>
+      <h2 class="post-list__post-title post-title"><a href="/2007/5/18/rails部署：反向代理优于fastcgi/" title="link to Rails部署：反向代理优于FastCGI">Rails部署：反向代理优于FastCGI</a></h2>
+
+      <p class="excerpt">
+        <p><a href="http://rubyworks.rubyforge.org" target="_blank" rel="external">RubyWorks</a>采用了基于反向代理和Mongrel的部署方案：HAProxy把请求代理给不同的Mongrel实例。在<a href="http://www.infoq.com/cn/news/2007/05/rubyworks" target="_blank" rel="external">InfoQ中文站的报道</a>中写道：</p><p>“RubyWorks项目领导人<a href="mailto:alexey.verkhovsky@gmail.com" target="_blank" rel="external">Alexey Verkhovsky</a>也认为，只有在对节约内存使用非常重视的情况下（例如虚拟共享主机），FastCGI才有其价值；而在普通的企业应用中，可靠性和可管理性重于节约内存，这也是RubyWorks选择基于反向代理和Mongrel的部署方案的原因。”</p><p>在《<a href="http://www.china-pub.com/computers/common/info.asp?id=30058" target="_blank" rel="external">Agile Web Development withRails</a>》的第一版中所推荐的部署方案是基于FastCGI的，而第二版则改为推荐基于反向代理的部署方案。James Duncan Davidson在书中写道：</p><p>“ 简而言之，FastCGI确实是一枚火箭，但有时会因为各种奇怪的原因而爆炸在发射台上。使用代理让Rails应用直接与HTTP对话，这是整个社群的发展方向。”</p><p>即使在<a href="http://www.dreamhost.com" target="_blank" rel="external">DreamHost</a>这样的shared host上，FastCGI也给人们带来了<a href="http://nubyonrails.com/articles/2005/11/16/yet-another-chapter-in-the-fcgi-saga" target="_blank" rel="external">种种困扰</a>，这也是Mongrel（以及相应的，反向代理的部署方案）流行的原因。另一个Rails服务器<a href="http://swiftiply.swiftcore.org/index.html" target="_blank" rel="external">Swiftiply</a>号称比Mongrel更高性能，不过伸缩性方面都是线性的。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="5月 18 2007" class="post-list__meta--date date">5月 18 2007</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2007/5/15/rubyworks-0-0-1-released/" title="link to RubyWorks 0.0.1 Released">RubyWorks 0.0.1 Released</a></h2>
 
       <p class="excerpt">
         <p><a href="http://rubyworks.rubyforge.org/" target="_blank" rel="external">RubyWorks</a>production stack is a collection of open-source software required to host a<a href="http://www.rubyonrails.org" target="_blank" rel="external">RubyOnRails</a>application on a RedHat Enterprise Linux 4 or CentOS 4 server.</p><p>Once you point your package manager (up2date or yum) to RubyWorks repository and install thepackage, you have all the necessary pieces preconfigured and ready to go. Moreover, there is askeleton Rails application up and running on the server. It’s as close as we could get toone-click production deployment with Rails.</p><p>前一阵的冲锋有了成果。在即将开幕的<a href="http://conferences.oreillynet.com/rails/" target="_blank" rel="external">RailsConf 2007</a>上，所有人都将看到我们的RubyWorks。</p><p>正如<a href="http://gigix.thoughtworkers.org/articles/2007/04/20/ruby-on-rails-is-enterprise-ready">我以前说过的</a>，Ruby和Rails已经做好了准备走向企业。在众多怀疑的部署问题（性能、伸缩性、可靠性、可管理性……）上，一个<a href="http://gigix.thoughtworkers.org/articles/2007/04/24/deploy-rails-app-with-haproxy-and-mongrel">经过实践检验的部署方案</a>已经存在，事实证明它完全能够应付所谓“企业级”的要求——不论你如何定义“企业级”这个词，因为这个部署方案各方面的能力已经证明了它自己。</p><p>唯一的问题是，<a href="http://haproxy.1wt.eu/" target="_blank" rel="external">HAProxy</a>、<a href="http://www.tildeslash.com/monit/" target="_blank" rel="external">Monit</a>、<a href="http://mongrel.rubyforge.org/" target="_blank" rel="external">Mongrel</a>的配置即令不是困难的，至少也不是易如反掌的。RubyWorks的出现正是为了解决这个问题。我们提供一个“高性能”“企业级”（如果你喜欢这些大词的话）Rails部署环境所需的所有软件，以及可以立刻投入使用的缺省配置，再加上一个示例应用。所有这些都以RPM的形式发布，用yum或者up2date就可以直接安装。如果你正在开发Rails应用并且你的部署环境是Redhat/Fedora/CentOS，那么恭喜你了，因为……</p><p>高性能的Rails部署应用服务器，现在只需一分钟就可以获得。</p>
@@ -185,7 +209,7 @@ classes that you can use:
 
       <div class="post-list__meta">
 
-        <time datetime="5月 16 2007" class="post-list__meta--date date">5月 16 2007</time> &#8226; 
+        <time datetime="5月 15 2007" class="post-list__meta--date date">5月 15 2007</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">
@@ -379,30 +403,6 @@ classes that you can use:
       <div class="post-list__meta">
 
         <time datetime="4月 27 2007" class="post-list__meta--date date">4月 27 2007</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2007/4/24/haproxy-mongrel-rails/" title="link to HAProxy - Mongrel - Rails">HAProxy - Mongrel - Rails</a></h2>
-
-      <p class="excerpt">
-        <p>这是一个高性能、高伸缩性的<a href="http://www.rubyonrails.org" target="_blank" rel="external">Rails</a>部署方案。有一组<a href="http://blog.kovyrin.net/2006/08/22/high-performance-rails-nginx-lighttpd-mongrel/" target="_blank" rel="external">性能数据</a>可供参考。</p><p>首先接收到HTTP请求的是<a href="http://haproxy.1wt.eu/" target="_blank" rel="external">HAProxy</a>。HAProxy会把请求反向代理给其后的多个<a href="http://mongrel.rubyforge.org/" target="_blank" rel="external">Mongrel</a>实例。每个Mongrel实例同一时间只处理一个请求。只要Rails应用本身贯彻<a href="http://zefhemel.com/archives/2004/09/01/the-share-nothing-architecture" target="_blank" rel="external">无共享架构</a>，就可以直接通过增加服务器和改变HAProxy配置得到线性的性能提升。另外可以用<a href="http://www.tildeslash.com/monit/" target="_blank" rel="external">Monit</a>来管理Mongrel实例的开启和关闭，并且在异常状况发生时及时采取措施。这样一来，企业级超复杂所暗含的性能、伸缩性、可管理性等等要求都满足了。</p><p>“HAProxy is a free,<strong><em>very</em></strong>fast and reliable solution offering<a href="http://en.wikipedia.org/wiki/High_availability" target="_blank" rel="external">high availability</a>,<a href="http://en.wikipedia.org/wiki/Load_balancer" target="_blank" rel="external">load balancing</a>, andproxying for<span class="caps">TCP</span>and<span class="caps">HTTP</span>-based applications.”<br>“Mongrel is a fast<span class="caps">HTTP</span>library and server for Ruby that is intended for hostingRuby web applications of any kind using plain<span class="caps">HTTP</span>rather than FastCGI or<span class="caps">SCGI</span>.”<br>“monit is a utility for managing andmonitoring,processes, files, directories and devices on a<span class="caps">UNIX</span>system.”</p><p>（今天下午和George讨论的主题：我们已经听厌了“企业级”这样的大帽子。我们需要做的是弄明白所谓“企业级”究竟代表什么，然后把解决方案拿出来。基本上——如果真的喜欢“企业级”的话——这就是所谓的“企业级Rails”了。）</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="4月 24 2007" class="post-list__meta--date date">4月 24 2007</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">

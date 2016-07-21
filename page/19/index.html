@@ -177,6 +177,30 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2011/3/2/chef-3-first-cookbook/" title="link to Chef学习手记之叁：红宝石菜谱">Chef学习手记之叁：红宝石菜谱</a></h2>
+
+      <p class="excerpt">
+        <p>有了一台<a href="http://gigix.thoughtworkers.org/2011/2/20/chef-2-rails-server">基本的服务器</a>，现在我就要在上面配置Rails服务器。当然这件事已经有人干过了，但我不想用别人的菜谱，再怎么说我也是<a href="http://rubyworks.rubyforge.org" target="_blank" rel="external">RubyWorks</a>的开发者…</p><p>（还有，我觉得Fedora还是不如Ubuntu好用，所以我偷偷把EC2的机器换成了Ubuntu 10.04。）</p><p><img src="http://gigix.thoughtworkers.org/assets/2011/3/2/ruby-chef.jpg" width="300px"></p><p>新建一个菜谱真容易，用knife一下子就搞定了：</p><pre>$ knife cookbook create my_rails_gig</pre><p>菜谱放在 #{chef-repo}/cookbooks/my_rails_gig 下面。首先要看的是 recipes/default.rb，缺省菜色的做法就写在里面。在我开始做自己的配置之前，我得先保证Apache和<a href="http://www.modrails.com/" target="_blank" rel="external">Passenger</a>都配好了。</p><pre># default.rbinclude_recipe “passenger_apache2::mod_rails”</pre><p>然后涅，我要用“railsapp”这个用户来部署Rails应用──不可以用root来跑服务。所以我得确保有这个用户（以及它独占的一个组）。</p><pre># default.rbgroup ‘rails’ dogroup_name ‘rails’action :createenduser ‘railsapp’ dousername ‘railsapp’action :createend</pre><p>接下来，按照我们RubyWorks的传统，Rails应用应该部署在 /var/rails 目录下面。所以要确保有这个目录。</p><pre># default.rbdeploy_to = ‘/var/rails’directory deploy<em>to doowner “railsapp”group “rails”mode “0755”action :createend</em></pre><p>现在是最挑战的部分：配置Passenger…但是只要是像我一样经验丰富的Rails服务器管理员，这个也小菜一碟<sup></sup><a href="http://cookbooks.opscode.com/cookbooks/apache2" target="_blank" rel="external">Apache2那本菜谱</a>讲了怎么在Apache里做web_app，你只要调用就行：</p><pre># default.rbweb_app ‘rails_app’ dotemplate “rails_app.conf.erb”docroot “#{deploy_to}/current/public”server_name “#{MY_COOL_HOSTNAME}”rails_env ‘production’end</pre><p>唯一的trick就是<a href="http://gigix.thoughtworkers.org/assets/2011/3/2/rails_app.conf.erb">rails_app.conf.erb</a>这个template：我需要把它放在 templates/default 目录下（规则和Rails有点像）。别的么…就再没啥啦～～（不信就<a href="http://gigix.thoughtworkers.org/assets/2011/3/2/default.rb">看代码</a>）噢对了，别忘了在这台机器的角色里加上新的菜色：</p><pre>“run_list”: [“recipe[passenger_apache2::mod_rails]”,”recipe[my_rails_gig]”],</pre><p>噢也～菜谱写完开始做菜～先把菜谱上传到服务器：</p><pre>$ knife cookbook upload my_rails_gig</pre><p>再跑到我的服务器上执行一下 chef-client …这就好了。用 railsapp 用户到 /var/rails/current 下面建一个应用（为什么要“current”？问<a href="https://github.com/capistrano/capistrano/wiki/" target="_blank" rel="external">Capistrano</a>）。浏览器访问80端口，看后台日志，Rails已经开始工作了。</p><p>嗯，虽说写自己的菜谱挺好玩的，不过<a href="http://cookbooks.opscode.com/cookbooks/application" target="_blank" rel="external">这个菜谱</a>很值得学习──其实很多菜谱都值得学习，所以…</p><p><em>（未完待续）</em></p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="3月 2 2011" class="post-list__meta--date date">3月 2 2011</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2011/2/28/show-off-too/" title="link to Show-off Too">Show-off Too</a></h2>
 
       <p class="excerpt">
@@ -322,7 +346,7 @@ classes that you can use:
     
     <li class="post">
 
-      <h2 class="post-list__post-title post-title"><a href="/2011/2/14/2-years/" title="link to 与ThoughtWorks中国首席观察员共勉">与ThoughtWorks中国首席观察员共勉</a></h2>
+      <h2 class="post-list__post-title post-title"><a href="/2011/2/13/2-years/" title="link to 与ThoughtWorks中国首席观察员共勉">与ThoughtWorks中国首席观察员共勉</a></h2>
 
       <p class="excerpt">
         <p>（这个头衔不是我信口胡诌的。虽说老板说这话也不是在正式场合，不过君无戏言嘛。再加上<a href="http://losersclub1958.thoughtworkers.org/" target="_blank" rel="external">小风同学</a>承诺要为<a href="http://www.thoughtworks.com.cn" target="_blank" rel="external">ThoughtWorks中国</a>著史来着，于是这个“首席观察员”也就算名正而言顺吧。）</p><p><img src="http://gigix.thoughtworkers.org/assets/2011/2/14/DSC_3061_adjusted_cutted.jpg" width="180px"></p><p>小风同学是目前为止唯一一个拥有“ThoughtWorkers.org”子域名博客的非TW员工。</p><p>小风同学对我们那“很有名但我不能说反正你知道我是在说谁”的客户的了解程度胜过我们很多同事。</p><p>小风同学对老板同学头脑发热时的决定第一时间提出批评。并且多次指出我个人的方向性原则性问题。</p><p>小风同学开创性地把迭代和看板引入了历史学界。尽管迄今为止没看到多少成果。</p><p>更重要的，是一起看过的那些电影那些话剧那些书，一起走过的那些山那些水那些路，一起拍过的那些照片。在小风同学的帮助下，我认为我在一定程度上脱离了低级趣味，并且在一定程度上培养了“和谐”的性情。</p><p>值此相识两周年之际，谨向首席观察员小风同学致以崇高的敬意和诚挚的谢意。并愿与小风同学携手努力，共同开创更加美好的未来。</p><p>与小风同学共勉。</p>
@@ -330,7 +354,7 @@ classes that you can use:
 
       <div class="post-list__meta">
 
-        <time datetime="2月 14 2011" class="post-list__meta--date date">2月 14 2011</time> &#8226; 
+        <time datetime="2月 13 2011" class="post-list__meta--date date">2月 13 2011</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">
@@ -379,31 +403,6 @@ classes that you can use:
       <div class="post-list__meta">
 
         <time datetime="1月 30 2011" class="post-list__meta--date date">1月 30 2011</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2011/1/28/what-s-wrong-with-multi-tasking/" title="link to What&#39;s Wrong With Multi-tasking?">What&#39;s Wrong With Multi-tasking?</a></h2>
-
-      <p class="excerpt">
-        <p><img src="http://gigix.thoughtworkers.org/assets/2011/1/28/Picture_6.png" width="490px"></p>
-
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="1月 28 2011" class="post-list__meta--date date">1月 28 2011</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">

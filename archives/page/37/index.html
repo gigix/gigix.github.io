@@ -179,6 +179,30 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2008/8/5/analogy-on-ajax-and-concurrency/" title="link to 昨天的AJAX就是今天的并发编程">昨天的AJAX就是今天的并发编程</a></h2>
+
+      <p class="excerpt">
+        <p>（From<a href="http://www.amazon.com/Productive-Programmer-Neal-Ford/sim/0596519788/2?ie=UTF8&amp;pf=book" target="_blank" rel="external">TheProductive Programmer</a>）</p><p>顶多就在五年前，我们炮制的那些丑陋得简直就像把命令行窗口直接塞进浏览器的web应用还能让用户满意。可是Google那些讨厌的程序员毁了这一切：他们发布了GoogleMaps和Gmail，更要紧的是他们让用户明白web应用不一定要那么糟烂的，于是我们只好跟着开发更好的web应用。现在并发编程的情况也是一样：我们这些程序员现在还可以幸福地对严重的线程问题视而不见，但一定会有人站出来，让人们看到某种新发明的威力，然后我们又得亦步亦趋地跟上去。我们的计算机有强大的运算能力，而我们却没有能力写出那样的代码来充分利用它们，这对矛盾正在日益凸显。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="8月 5 2008" class="post-list__meta--date date">8月 5 2008</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2008/8/3/automate-it/" title="link to 做简单重复的事是在浪费注意力">做简单重复的事是在浪费注意力</a></h2>
 
       <p class="excerpt">
@@ -203,7 +227,7 @@ classes that you can use:
     
     <li class="post">
 
-      <h2 class="post-list__post-title post-title"><a href="/2008/8/2/you-break-it-you-fix-it/" title="link to You Break It, You Fix It">You Break It, You Fix It</a></h2>
+      <h2 class="post-list__post-title post-title"><a href="/2008/8/1/you-break-it-you-fix-it/" title="link to You Break It, You Fix It">You Break It, You Fix It</a></h2>
 
       <p class="excerpt">
         <p>(From<a href="http://www.amazon.com/Build-Master-Microsofts-Configuration-Addison-Wesley/dp/0321332059" target="_blank" rel="external">TheBuildMaster</a>)</p><p>This leads to one of the most important rules in the build lab:<strong>The build team never fixes build breaks, regardless of how trivial the break is.</strong>That’s the developer’s responsibility. We took this a step further: The developer whobreaksthebuild has to go to his development machine, check out the file, fix it, and then go through all thecheck-inprocess steps again.</p><p><strong>Build Breaks Always Have the Highest Priority for Everyone</strong></p><p>This rule means that if you are a developer and you can fix the build break, and the developer whobrokethebuild cannot be found, you should fix it immediately. Afterward, send an e-mail to the developer andthebuildteam explaining what you did to fix the build, and remind your co-worker that he owes you a favor.</p>
@@ -211,7 +235,7 @@ classes that you can use:
 
       <div class="post-list__meta">
 
-        <time datetime="8月 2 2008" class="post-list__meta--date date">8月 2 2008</time> &#8226; 
+        <time datetime="8月 1 2008" class="post-list__meta--date date">8月 1 2008</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">
@@ -381,30 +405,6 @@ classes that you can use:
       <div class="post-list__meta">
 
         <time datetime="7月 19 2008" class="post-list__meta--date date">7月 19 2008</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2008/7/14/about-industrial-language/" title="link to 工业界是时候严肃认真了">工业界是时候严肃认真了</a></h2>
-
-      <p class="excerpt">
-        <p>偶像切尔斯基：<a href="http://blog.csdn.net/chelsea/archive/2008/07/13/2646431.aspx" target="_blank" rel="external">敏捷质疑:<span class="caps">TDD</span></a></p><blockquote>我认为工业界是时候严肃认真的考虑测试环境了, 最好在语言中内建对测试的支持, 一些为产品环境设计的语言特性, 应该在测试环境中关闭, 而在产品环境中生效. 其实之前很多编译器都支持Release 和Debug 两种环境, 也是从代码质量的方面考虑的. 现在毫无疑问证实单元测试比 Debug 更有效, 是时候与时俱进增加对 Test 的支持而逐渐罢黜对 Debug 的支持.</blockquote><p>不过我认为工业界是时候严肃认真的考虑的不是内建对测试的支持而是对类型推导的重视。要让程序不出错，一大堆和更大的一堆错误侦测机制都解决不了这个问题，你应该写不会出错的程序。当然debugger本身就是一个鸡肋，在exceptionstack trace帮不了你的情况下，debugger也帮不了你。</p><p>（写出像<a href="http://www.erlang.org/" target="_blank" rel="external">Erlang</a>那样不会出错的程序吧。写出像<a href="http://haskell.org/" target="_blank" rel="external">Haskell</a>那样不会出错的程序吧。）</p><p>尤其是在并行计算的时代。当然就算不考虑并行计算，类型体系是能让程序不出错的严肃认真的办法。写得快并且具有类型推导的语言是应该被严肃认真的考虑的。</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="7月 14 2008" class="post-list__meta--date date">7月 14 2008</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">

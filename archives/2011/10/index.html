@@ -178,7 +178,7 @@ classes that you can use:
     
     <li class="post">
 
-      <h2 class="post-list__post-title post-title"><a href="/2011/10/23/nasa-talking-cloud/" title="link to 听NASA讲云计算有感">听NASA讲云计算有感</a></h2>
+      <h2 class="post-list__post-title post-title"><a href="/2011/10/22/nasa-talking-cloud/" title="link to 听NASA讲云计算有感">听NASA讲云计算有感</a></h2>
 
       <p class="excerpt">
         <p>QCon杭州最后一天，<a href="http://www.qconhangzhou.com/Speaker.aspx?Id=82" target="_blank" rel="external">来自NASA的一个哥们</a>扮演了关于云计算的流言终结者，通过展示NASA对云计算的使用来说明：云计算已经是越来越多的企业越来越不可忽视的IT战略方向。</p><p><em>（人家NASA从组织使命开始就非常洋⋯⋯这哥们所属的部门，它的使命是“登上太阳系内所有的行星”⋯⋯这完全就把那些唯利是图的企业给比到不知道哪里去了呀⋯⋯）</em></p><p><img src="http://gigix.thoughtworkers.org/assets/2011/10/23/nasa_cloud.jpg" alt=""></p><p>第一个流言：“云计算不安全”。这里的亮点在于：大部分企业对IT资产的安全管理其实是非常不足的。比如说操作系统的安全补丁，所有的计算机都及时打上了吗？一个合理构建的云工作环境，可以把这些要求（例如必装软件、例如防火墙配置、例如操作系统补丁）自动化地落实到所有机器上，从而使安全政策即时、有效地得以实施。所以，一个合理构建的云环境比传统的企业IT环境更安全。</p><p>第二个流言：“云计算不可靠”。首先，作为专业的高可靠性机房提供商，亚马逊的机房肯定比你的更可靠——亚马逊机房当机，这一事件只能表明你自己的机房有更高的可能性当机，而不能表明你的机房不会当机。并且在使用公有云的情况下，你可以做到多区域冗余灾备，这是私有机房做不到的。所以，没错，公有云并非100%可靠，但一定比你自己的机房可靠。</p>第三个流言：“云计算只适用于初创企业”。实际上，越大的公司，IT资产的浪费越严重，因此从使用公有云上获益越多。我从演讲里总结了关于IT资产的几大浪费：<ul><li><strong>预先采购机器就是浪费</strong>。计算机价格受摩尔定律影响，贬值非常快，为了两年后的需求采购机器就等于把价格的70%直接扔进水里。</li><li><strong>拥有机器就是浪费</strong>。自己采购、自己管理的计算机， 计算资源的真实使用率非常低，但仍然占用空间、电力、降温等等资源。</li><li><strong>因为硬件资源的约束而限制生产力，是最大的浪费</strong>。比如说，因为没有那么多机器而不能并行计算，而导致科学家等待好几个小时，对人的浪费是最严重的浪费。</li></ul><p>所以NASA的CIO有句话说得很好：应该把所有硬件采购的界面都变成云服务开通的界面。不使用云计算，就是在每天浪费钱。</p>
@@ -186,7 +186,7 @@ classes that you can use:
 
       <div class="post-list__meta">
 
-        <time datetime="10月 23 2011" class="post-list__meta--date date">10月 23 2011</time> &#8226; 
+        <time datetime="10月 22 2011" class="post-list__meta--date date">10月 22 2011</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">
@@ -226,7 +226,7 @@ classes that you can use:
     
     <li class="post">
 
-      <h2 class="post-list__post-title post-title"><a href="/2011/10/17/c-mon-it-s-turing-machine-part-2/" title="link to C&#39;mon, It&#39;s Turing Machine! (Part 2)">C&#39;mon, It&#39;s Turing Machine! (Part 2)</a></h2>
+      <h2 class="post-list__post-title post-title"><a href="/2011/10/16/c-mon-it-s-turing-machine-part-2/" title="link to C&#39;mon, It&#39;s Turing Machine! (Part 2)">C&#39;mon, It&#39;s Turing Machine! (Part 2)</a></h2>
 
       <p class="excerpt">
         <p><em>(Following<a href="http://gigix.thoughtworkers.org/2011/10/11/c-mon-it-s-turing-machine-part-1">the 1stpart</a>)</em></p><p><img src="http://gigix.thoughtworkers.org/assets/2011/10/17/typing.jpg" alt=""></p><h2>Write Your Own Machine</h2><p>File<code>machines/an_irrational_number.machine</code>includes all the fundamental elements to create your own Turing Machine.</p><ul><li>The lines start with semicolons are comments.</li><li>Non-comment non-empty lines are m-configurations, each of them consists of 4 columns (separatedby verticallines), which in turn are:<ul><li>Name of current m-configuration.</li><li>The symbol read from current square of the tape—m-configurations with same namecould behavedifferently while reading different symbols.</li><li>Operations, separated by commas. Valid operations are:<ul><li>P{x}: Write {x} to current square of the tape.</li><li>E: Erase any symbol in current square.</li><li>L/R: move the cursor one square left/right.</li></ul></li><li>Next m-configuration—what should be done after current m-configuration?</li></ul></li></ul><p>Now, try to write your own machine, and run it!</p><h2>What’s Next?</h2><p><a href="http://en.wikipedia.org/wiki/Universal_turing_machine" target="_blank" rel="external">Universal Turing Machine</a>, of course. (What else otherwise?)</p><p>(It requires reading Chapter 7 and 9 of<a href="http://book.douban.com/subject/2330016/" target="_blank" rel="external">The Annotated Turing</a>. Although I haven’t started yet, I can feel it’s not an easy task. Any contributionwould be highlyappreciated.)</p><p>Meanwhile, I started building a web UI running Turing Machines with<a href="http://github.com/weavejester/compojure" target="_blank" rel="external">Compojure</a>. Take a look at<code>web</code>folder. You can trial it with:</p><blockquote>$ lein ring server</blockquote><p>It also makes sense to tidy it up and make it more interactive.</p><p>I also want to build an iOS application…but that’s another story.</p><p>You might want to try something more interesting, e.g. to write a general Turing Machine to determineany givenTuring Machine would halt or not; to solve the<a href="http://en.wikipedia.org/wiki/Entscheidungsproblem" target="_blank" rel="external">Entscheidungsproblem</a>; etc.</p><p>Anyway, enjoy :D</p>
@@ -234,7 +234,7 @@ classes that you can use:
 
       <div class="post-list__meta">
 
-        <time datetime="10月 17 2011" class="post-list__meta--date date">10月 17 2011</time> &#8226; 
+        <time datetime="10月 16 2011" class="post-list__meta--date date">10月 16 2011</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">
@@ -298,7 +298,7 @@ classes that you can use:
     
     <li class="post">
 
-      <h2 class="post-list__post-title post-title"><a href="/2011/10/6/my-open-source-projects/" title="link to 晒晒我的开源项目们">晒晒我的开源项目们</a></h2>
+      <h2 class="post-list__post-title post-title"><a href="/2011/10/5/my-open-source-projects/" title="link to 晒晒我的开源项目们">晒晒我的开源项目们</a></h2>
 
       <p class="excerpt">
         <p>在等“bundle install”的时候闲着没事，打开<a href="http://github.com/gigix" target="_blank" rel="external">我的Github</a>，发现还有那么一些东西值得分享一下的。</p><p><img src="http://gigix.thoughtworkers.org/assets/2011/10/6/programming.png" alt=""></p><p><a href="http://github.com/gigix/beergame" target="_blank" rel="external"><strong>啤酒游戏</strong></a>：《<a href="http://book.douban.com/subject/4051739/" target="_blank" rel="external">第五项修炼</a>》里讲的啤酒游戏。多人协作游戏，适合培训时候用。培训详情请联系<a href="http://www.iamxiaodao.com/" target="_blank" rel="external">小刀</a>。</p><p><a href="http://github.com/gigix/Evolution-of-Cooperation" target="_blank" rel="external"><strong>合作的进化</strong></a>：这就是《<a href="http://book.douban.com/subject/2259198/" target="_blank" rel="external">合作的进化</a>》那本书里讲的生存竞赛游戏。可以自己写新的策略放进来，看看重复囚徒困境中的最佳策略是如何被选择出来的。</p><p><a href="http://github.com/gigix/jungling" target="_blank" rel="external"><strong>Jungling</strong></a>：作为技术人员的TWer到客户现场启动一个新项目时需要注意哪些事？带上iPad和Jungling，你的丛林冒险手册就有了。</p><p><a href="http://github.com/gigix/ohfy" target="_blank" rel="external"><strong>每天一小时</strong></a>：<a href="http://1.hourfor.me" target="_blank" rel="external">1.HourFor.Me</a>的源代码。每天一小时，每月就能做成一件事。欢迎贡献，如果从代码里发现了漏洞，还望高抬贵手请勿攻击。</p><p><a href="http://github.com/gigix/trss" target="_blank" rel="external"><strong><span class="caps">TRSS</span></strong></a>：<a href="http://trss.thoughtworkers.org" target="_blank" rel="external"><span class="caps">TRSS</span></a>的源代码。 把RSS同步到新浪微博（因为新浪自己的同步功能貌似不工作了）。后面还可以有很多发展，例如同步到各种微博之类的。同样，欢迎贡献代码，多谢请勿攻击。</p><p><a href="http://github.com/gigix/jquery.image-preview" target="_blank" rel="external"><strong>jquery.image-preview</strong></a>：一个比较体面的图片预览插件，实现就像Google Images那样的<a href="http://gigix.thoughtworkers.org/jquery.image-preview/sample.html">效果</a>：鼠标悬停在小图片上，小图片就会放大预览。主要的难点是当小图片位于页面边缘时，预览也要出现在合适的位置。</p><p><a href="http://github.com/gigix/turing_machine" target="_blank" rel="external"><strong>图灵机</strong></a>：这两天开始写的，照着<a href="http://book.douban.com/subject/2330016/" target="_blank" rel="external">图灵的论文</a>，用<a href="http://clojure.org/" target="_blank" rel="external">Clojure</a>实现一个原模原样的图灵机。后面也许还想在iOS上实现一个有图形界面的。</p><p>发现我的开源项目们有个共通的问题：虎头蛇尾。每个点子都没有耐性深挖下去。想写代码练手的年轻同事们可以找我啊，我这里要干的活很多的⋯⋯</p>
@@ -306,7 +306,7 @@ classes that you can use:
 
       <div class="post-list__meta">
 
-        <time datetime="10月 6 2011" class="post-list__meta--date date">10月 6 2011</time> &#8226; 
+        <time datetime="10月 5 2011" class="post-list__meta--date date">10月 5 2011</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">

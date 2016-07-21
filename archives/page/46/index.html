@@ -179,6 +179,30 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2007/8/17/jrubyworks-j2ee-on-rails/" title="link to JRubyWorks- J2EE on Rails">JRubyWorks- J2EE on Rails</a></h2>
+
+      <p class="excerpt">
+        <p>(NOTE: JRubyWorks keeps moving forward and this article may not be up to date.)</p><p>How to run your<a href="http://www.rubyonrails.org/" target="_blank" rel="external">Rails</a>application with<span class="caps">J2EE</span>web servers (such as<a href="http://www.mortbay.org/" target="_blank" rel="external">Jetty</a>and<a href="http://tomcat.apache.org/" target="_blank" rel="external">Tomcat</a>)? Here’s a solution:</p><p>1. Set<span class="caps">JRUBY</span>_HOME environment variable properly.</p><pre>export JRUBY_HOME=/usr/lib/jruby</pre><p>2. Install<a href="http://jruby-extras.rubyforge.org/ActiveRecord-JDBC/" target="_blank" rel="external">ActiveRecord-JDBC</a>.</p><pre>jruby -S gem install ActiveRecord-JDBC -y</pre><p>3. Install<a href="http://rubyforge.org/projects/jrubyworks" target="_blank" rel="external">JRubyWorks</a>plugin.</p><pre>script/plugin install \<a href="http://jrubyworks.rubyforge.org/svn/trunk/jrubyworks/" target="_blank" rel="external">http://jrubyworks.rubyforge.org/svn/trunk/jrubyworks/</a></pre><p>4. Configure your Rails application as<a href="http://www.developer.com/db/article.php/10920_3691716_3" target="_blank" rel="external">this article</a>. JRubyWorksplugin includes<a href="http://dev.mysql.com/downloads/connector/j/5.0.html" target="_blank" rel="external">mysql-connector</a>by default. If you use database other than<a href="http://dev.mysql.com/" target="_blank" rel="external">MySQL</a>, you can putcorresponding<span class="caps">JDBC</span>driver in<em>${RAILS_ROOT}/lib/java</em>directory and JRubyWorks will take care of it conventionally.</p><p>5. Run your application and try it at<a href="http://localhost:8080/" target="_blank" rel="external">http://localhost:8080</a>. Alsoyou can find a<a href="http://java.sun.com/j2ee/tutorial/1_3-fcs/doc/WebComponents3.html" target="_blank" rel="external"><span class="caps">WAR</span></a>file of your application in<em>${RAILS_ROOT}/war</em>directory. You can deploy it to other<span class="caps">J2EE</span>web servers.</p><pre>jruby -S rake retty</pre><p>JRubyWorks is based on<a href="http://www.headius.com/jrubywiki/index.php/Rails_Integration" target="_blank" rel="external">JRuby Rails Integration</a>and hope to make the integration easier. It’squite immature so far, apparently. Your<a href="http://rubyforge.org/mailman/listinfo/jrubyworks-discuss" target="_blank" rel="external">feedback</a>and contribution will be very helpful and highly appreciated.</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="8月 17 2007" class="post-list__meta--date date">8月 17 2007</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2007/8/12/如何对private方法进行单元测试/" title="link to 如何对private方法进行单元测试">如何对private方法进行单元测试</a></h2>
 
       <p class="excerpt">
@@ -227,7 +251,7 @@ classes that you can use:
     
     <li class="post">
 
-      <h2 class="post-list__post-title post-title"><a href="/2007/8/4/滇西古镇，疑似江南/" title="link to 滇西古镇，疑似江南">滇西古镇，疑似江南</a></h2>
+      <h2 class="post-list__post-title post-title"><a href="/2007/8/3/滇西古镇，疑似江南/" title="link to 滇西古镇，疑似江南">滇西古镇，疑似江南</a></h2>
 
       <p class="excerpt">
         <p><a href="http://picasaweb.google.com/gigix1980/LcbOEK/photo#5094743870562774754" target="_blank" rel="external"><img src="http://lh5.google.com/gigix1980/RrQqjqJ-LuI/AAAAAAAAA40/lmiid5h6pQY/s400/P1010167.JPG" border="0"></a></p>
@@ -235,7 +259,7 @@ classes that you can use:
 
       <div class="post-list__meta">
 
-        <time datetime="8月 4 2007" class="post-list__meta--date date">8月 4 2007</time> &#8226; 
+        <time datetime="8月 3 2007" class="post-list__meta--date date">8月 3 2007</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">
@@ -381,30 +405,6 @@ classes that you can use:
       <div class="post-list__meta">
 
         <time datetime="7月 19 2007" class="post-list__meta--date date">7月 19 2007</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2007/7/14/敏捷工作，敏捷生活，敏捷中国/" title="link to 敏捷工作，敏捷生活，敏捷中国">敏捷工作，敏捷生活，敏捷中国</a></h2>
-
-      <p class="excerpt">
-        <p>这是在<a href="http://subject.csdn.net/agilechina/" target="_blank" rel="external">第二届“敏捷中国”软件技术大会</a>听了<a href="http://blog.csdn.net/myan" target="_blank" rel="external">孟岩</a>演讲之后的感想，也是我在构思的一个讲稿。</p><p>敏捷早已不仅仅是一件软件开发的事，它是<a href="http://www.douban.com/subject/1867642/" target="_blank" rel="external">世界变平</a>以后的必然产物。在一个平坦的、被互联网连接的、遵循同一游戏规则的世界里，说得严重一点，每个企业、每个人都面临来自全球的竞争。你要凭什么赢得这场竞争？</p><p>永远记住一个等式：profit = revenue – cost</p><p>在一个全球化竞争的市场上，价格必定是趋同的，你只能控制成本。有更低的成本，你可以用更低的价格卖出同样的产品（或服务，下同），或者用同样的价格卖出更多（或更好）的产品，从而赢得更大的市场份额；你也可以用同样的价格卖出同样的产品，从而赢得更高的margin——两者的结果都是，更好的profitability。于是问题变成了：如果没有压倒性的技术优势，靠什么降低成本？</p><p>最近我MSN的名字是“むだ!”。这就是答案。（むだ，無馱，muda，waste，浪费）</p><p>什么样的浪费？譬如说，用不上的预先准备，过高的风险规避成本，做出来却没有用的工作，不流动的价值。消除浪费，不仅仅是软件项目的事。就连工作方式，就连生活态度，也是一样。孟岩说到“Life2.0”的时候，自嘲是在扯淡，不过我知道他不是扯淡，因为我自己的生活已经比以前敏捷了很多很多。</p><p>Chad在<a href="http://news.csdn.net/n/20070714/106395.html" target="_blank" rel="external">演讲</a>的时候说，中国是令人激动、充满希望的地方。我相信是的，因为我今天看到了<a href="http://www.agilechina.net" target="_blank" rel="external">敏捷中国</a>的曙光。</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="7月 14 2007" class="post-list__meta--date date">7月 14 2007</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">
