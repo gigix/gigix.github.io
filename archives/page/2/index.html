@@ -179,6 +179,47 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2015/12/7/small-data-theory-architecture/" title="link to 小数据：理论和架构">小数据：理论和架构</a></h2>
+
+      <p class="excerpt">
+        <p>大数据是当下最热门的IT主题之一。据<a href="http://www.mckinsey.com/insights/business_technology/big_data_the_next_frontier_for_innovation" target="_blank" rel="external">麦肯锡的分析</a>，大数据能使信息更透明、能让决策者获得更精确翔实的绩效信息、能针对客户群体提供更准确的定制、能提升组织决策能力、能帮助开发下一代产品和服务。新时代里与互联网联结的组织不论大小，都需要这些能力。</p>
+<p>然而与此同时，大数据的“大”并非适用于所有组织。Gartner认为，<a href="http://www.forbes.com/sites/gartnergroup/2013/03/27/gartners-big-data-definition-consists-of-three-parts-not-to-be-confused-with-three-vs/" target="_blank" rel="external">大数据具有“3V”的特征</a>：多样性（Variety），数据来自多种不同来源、具有多种不同形态；速度（Velocity），数据形态和呈现形式的变化快且频繁；量级（Volume），数据量非常巨大。然而对于众多的中小型企业及非营利组织而言，这三个特征有两个未必适用。很多中小型组织只有为数不多的几个IT系统，数据都保存在为数不多的几个关系型数据库中，数据量不超过数百万条记录。只有变化速度快这一特征，对于中小型组织仍然适用。从这个意义上，这些中小型组织需要的是一个“小数据”解决方案：</p>
+<blockquote>
+<p><strong>小数据：聚焦中小型组织和新兴业务，在数据量较小、数据来源较简单的情况下，提供非常灵活、非常简便易用、使用过程中对IT技能要求非常低的数据分析和商业智能，为应对多变且未知的外部环境提供决策支持。</strong></p>
+</blockquote>
+<p>传统上，很多小数据场景的分析和商业智能需求以“报表”的形式呈现在IT项目中：在开发<a href="https://en.wikipedia.org/wiki/Online_transaction_processing" target="_blank" rel="external">OLTP</a>系统的项目中列出一组报表需求，由交付OLTP系统的团队以直接SQL查询的形式实现报表。这种做法贴合了数据量小、数据来源简单的特征，但损失了灵活性，报表的定制和修改需要技术人员介入，因此又无法满足对速度的要求。为了赢得灵活性，小数据分析也同样需要首先建模<a href="https://en.wikipedia.org/wiki/OLAP_cube" target="_blank" rel="external">OLAP Cube</a>，然后通过不同维度的切片和钻取进行分析。</p>
+<p>什么是Cube？按照<a href="http://book.douban.com/subject/26301966/" target="_blank" rel="external">维度建模方法</a>，数据可以分为“事实”和“维度”两类。事实数据代表“发生了什么事”，维度数据则从各个角度描述这件事。如果以电商为例，事实数据是“销售记录”（卖了一个东西），常见的维度数据可能包括“产品”（卖的是什么）、“门店”（在哪里卖的）、“时间”（什么时候卖的）、“售货员”（谁卖的）、“顾客”（卖给了谁）等等。不难想象，事实数据表将只有一个主键、一个值、以及一大堆外键指向各个维度表；维度表也可能有外键再指向更多的描述性的子维度表（例如“产品”有外键指向“类别”）。于是我们就会得到一个<a href="https://en.wikipedia.org/wiki/Star_schema" target="_blank" rel="external">星型表结构</a>（或叫<a href="https://en.wikipedia.org/wiki/Snowflake_schema" target="_blank" rel="external">雪花型表结构</a>）。</p>
+<p><img src="/assets/2015/12/7/Star-schema-example.png"></p>
+<p>星型表结构的优势在于，分析操作会变得非常简单：你关心哪些信息，就直接用JOIN子句把这些维度表关联进来；只要在JOIN子句里指定WHERE条件，就可以快速缩减结果集。在星型表结构里，一个事实会被若干个维度修饰，因此可以把整个数据集想象成一个立方体（或<a href="https://en.wikipedia.org/wiki/Hypercube" target="_blank" rel="external">超立方体</a>，当维度多于三个时）。例如当只考虑“产品”、“城市”、“时间”这三个维度时，“销售记录”的数据集就可以被建模为一个立方体。</p>
+<p><img src="/assets/2015/12/7/OLAP_Cube.svg"></p>
+<p>随后就可以在这个立方体上对数据进行各种分析。例如你可以锁定“城市”这一维度，从而得到“某城市各种产品历史销售报表”——“锁定某一维度取值”这一操作也叫“切片”（slice），因为它在这个例子中产生的效果就是从三维的立方体中切出一个二维的数据平面。同样的，我们也可以从“产品”维度切片，从而得到“某产品各市历史销售报表”。当维度具有“分级汇聚”的特性时，我们还可以进行“钻取”（drill）操作，例如当“地区”维度分为“市”和“省”两级时，我们就可以在“地区”维度上进行钻取：首先从产品维度切片得到“某产品各省历史销售报表”，然后选择一个省下钻得到“某产品在某省内各市历史销售报表”。</p>
+<blockquote>
+<p><strong>小数据系统设计原则1：建模一个Cube，就可以快速实现一系列分析操作（及对应的报表）。小数据系统应该支持简便且易于修改的Cube建模。</strong></p>
+</blockquote>
+<p>基于这个设计原则，我们可以大概推知小数据系统的架构：首先，根据指定的Cube描述信息，把业务数据建模成Cube；然后，通过RESTful API对Cube进行切片、钻取和聚合等操作，并取回二维平面表或透视表形式的结果集；最后，根据指定的报表定义信息，把结果集渲染成报表。</p>
+<p><img src="/assets/2015/12/7/architecture.jpg"></p>
+<p>从上图不难看出，在这个架构中，必须由用户（不论是开发者或最终用户）提供的信息只有三项：（1）Cube的描述；（2）数据分析操作对应的URL；（3）呈现分析结果的报表定义。并且第三项信息（即报表定义）与具体业务是完全解耦的，因此理应可以用分别的开源软件组合形成轻量级的小数据解决方案。在下一篇文章中，我将具体介绍一个基于开源软件的小数据解决方案实现。</p>
+
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="12月 7 2015" class="post-list__meta--date date">12月 7 2015</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2015/11/22/myth-of-share-economy/" title="link to 共享经济到底是个什么鬼？">共享经济到底是个什么鬼？</a></h2>
 
       <p class="excerpt">
@@ -482,38 +523,6 @@ classes that you can use:
       <div class="post-list__meta">
 
         <time datetime="5月 16 2015" class="post-list__meta--date date">5月 16 2015</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2015/5/7/acquire-and-retain-technical-talents/" title="link to 如何得到并留住高级技术人才">如何得到并留住高级技术人才</a></h2>
-
-      <p class="excerpt">
-        <p>在一篇<a href="http://www.mckinsey.com/insights/business_technology/winning_the_battle_for_technology_talent" target="_blank" rel="external">麦肯锡的文章</a>中作者提到一位CIO，他急需几个资深的架构师——甚至都不敢奢求“优秀的”架构师——来应对日新月异的技术创新。高级技术人才日益成为企业生存与发展必备的战略性资源。这些抢手的人才不仅不易获得，也不易留住。来自怡安翰威特的一篇<a href="http://tcmchina.aon.com/TCM/2014_Aon_Hewitt_Quarterly_Watch_Q4_Report.pdf" target="_blank" rel="external">研究报告</a>显示，2014年中国高科技员工离职率高达30.5%，其中四分之三是主动离职。<a href="http://www.ingentaconnect.com/content/iri/rtm/2001/00000044/00000003/art00006" target="_blank" rel="external">Kochanski和Ledford的研究</a>则指出，损失一名技术人才的成本可以高达6倍于损失一名管理人员。于是我们可以看到两个关于高级技术人才的重要挑战：如何获得这些人才，以及如何留住他们。</p>
-<p><img src="/assets/2015/5/6/Strategic-HR.jpg"></p>
-<h3 id="如何获得高级技术人才">如何获得高级技术人才</h3><p>获得高级技术人才的第一个渠道是对外招聘。除了传统的招聘渠道之外，<a href="https://books.google.co.uk/books?hl=en&amp;lr=&amp;id=Hfy2zoCLxUAC&amp;oi=fnd&amp;pg=PA131&amp;dq=Research+on+Internet+recruiting+and+testing:+Current+status+and+future+directions&amp;ots=aBCwdOJWnr&amp;sig=avzStoLv18pZD5KZS8pUEKda5dQ#v=onepage&amp;q&amp;f=false" target="_blank" rel="external">Lievens和Harris的文章</a>介绍了通过互联网招聘的一些渠道。尤为值得一提的是社交网络在招聘中扮演越来越重要的角色。一篇发表在IEEE《软件》杂志的<a href="http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=6336698" target="_blank" rel="external">文章</a>指出，GitHub、LinkedIn等新生的在线社交网络使招聘者能更容易地寻找、接触和评估高级技术人才。企业需要用有效的宣传信息去吸引这些人才。<a href="http://mbastory.tistory.com/attachment/ck58.pdf" target="_blank" rel="external">麦肯锡的一篇文章</a>讲到，针对现代人才的宣传信息需要同时传达出实在的、可度量的价值和抽象的、不易度量的价值，并通过有效的渠道来传达。另外，招聘的流程也很重要。<a href="http://www.cipd.co.uk/hr-resources/survey-reports/resourcing-talent-planning-2012.aspx" target="_blank" rel="external">CIPD的调查</a>显示，冗长的面试流程会使更多应聘者放弃职位。如何优化招聘流程使之兼顾质量与效率，这是招聘团队需要解决的一个重要问题。</p>
-<p>另一个获得高级技术人才的渠道是从企业内部培养。<a href="http://www.researchgate.net/publication/232517646_The_spiritual_dimension_of_the_learning_organisation" target="_blank" rel="external">Hawkins的文章</a>指出，学习型组织会促使员工持续学习和自我转变，并将自发的学习行动与组织的战略相结合。基于活跃的学习氛围，下一个任务是准确、高效、公平地识别出潜在的领导者。《<a href="http://book.douban.com/subject/2802242/" target="_blank" rel="external">培养领导者</a>》提出了一套识别潜在领导者的机制，综合考虑背景、经验、绩效、技能、适应力、多样性等多方面因素。培养人才的方式有很多种，例如培训、指导、短期体验、任务分配等都可以是培养人才的方式。高级管理者必须直接对潜力员工的培养负责，不是期望一个放诸四海而皆准的“领导力培养计划”，而是要针对每个员工的特点定制适合她的领导力培养计划。</p>
-<p>这个领域有很多新事物新现象，需要按照精益创业的方法，不断尝试、不断度量、不断学习。发表在HBR的<a href="https://hbr.org/2010/10/competing-on-talent-analytics/ar/1" target="_blank" rel="external">一篇文章</a>给出了六个对人力资源部门有用的数据分析：人力资本事实，人力资本投资分析，人才价值模型，人力资源管理分析，人员预测，人才供应链。</p>
-<h3 id="如何留住高级技术人才">如何留住高级技术人才</h3><p>留住高级技术人才的第一要素是薪酬奖励体系。激励机制的设置需要平衡各种因素，并与组织战略相一致。举例来说，完全不与绩效挂钩的薪酬体系可能使员工失去斗志；然而<a href="http://connection.ebscohost.com/c/articles/91712844/are-pay-for-performance-systems-missing-mark" target="_blank" rel="external">Bukovinsky的文章</a>指出，与绩效强挂钩的激励机制可能导致员工过度重视个人绩效目标而损害企业整体目标。再比如，年轻而技术出众的“明星”需要得到重视，同时又不能使其他员工感到受轻视。</p>
-<p>除了薪酬之外，留住高级技术人才的另一个重要因素是个人发展，尤其是技能的发展。<a href="http://www.sciencedirect.com/science/article/pii/S1072751507000683" target="_blank" rel="external">Aggarwal等人的文章</a>提出了一个系统化的技术性技能培训和评估框架，其中把技术能力建设分为五个步骤：知识学习；实作任务分解；实验环境训练；真实环境训练；独立操作。很多人和组织在能力建设时仅仅聚焦“知识学习”这一个步骤，以致知识没有有效地转化为技能和——个人的或组织的——竞争力。因此高级管理者在为潜在领导者设置领导力培养计划时，需要以多种能力培养方式覆盖能力建设的各个步骤。</p>
-<p>超出激励与个人发展的范畴，<a href="http://amj.aom.org/content/33/4/692.short" target="_blank" rel="external">Kahn的文章</a>指出，当员工与组织建立情感上的连接、自我认知为组织的主人翁，他们会表现出更高的绩效、并且更不容易离职。建立这种情感连接和归属感的方式可以有多种，例如一个组织对专业技术有特别的重视和行业领导力，或一个组织有特别的社会责任感，都可以使之区别于其他组织，并有助于员工建立情感连接和归属感。</p>
-
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="5月 7 2015" class="post-list__meta--date date">5月 7 2015</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">
