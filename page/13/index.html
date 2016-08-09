@@ -177,6 +177,30 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2011/12/21/chengdu-open-party/" title="link to 成都OpenParty第一波：围炉映雪">成都OpenParty第一波：围炉映雪</a></h2>
+
+      <p class="excerpt">
+        <p><em>白居易《问刘十九》：绿蚁新醅酒，红泥小火炉。晚来天欲雪，能饮一杯无？</em></p><p>蜀中最冷的时节，寒风也挡不住我们交流的热情。第一次成都OpenParty活动“围炉映雪”将于2012年1月7日举行。欢迎大家相遇在OpenParty，分享精彩话题！</p><h3>活动时间</h3><p>2012年1月7日（周六），13:30~17:30</p><h3>活动地点</h3><p>奇诺咖啡餐厅（<a href="http://www.dianping.com/shop/4187056" target="_blank" rel="external">http://www.dianping.com/shop/4187056</a>，天府软件园A9）</p><h3>参与群体</h3>我们欢迎以下朋友参加：<ul><li>程序员、架构师</li><li>业务分析师、用户体验设计师</li><li>敏捷实践者、咨询师</li><li>开源技术传道者、移动市场管理者、项目经理、风险投资人、社团组织者</li><li>IT、软件、互联网、媒体、咨询、出版等行业从业人员</li><li>旅游爱好者</li><li>以及一切愿意与大家分享知识、并且愿意从别人那里获取知识的朋友</li></ul><h3>招募话题</h3><p>OpenParty采用“非会议”（Unconference）形式，所有讨论话题都是由参与者自发提出。有话题分享或发起讨论意愿的朋友可以在活动开始之前将PPT或者话题、讨论简介发送给组织者（ staffatchengdu-open-party.org ）。</p><p>如果你的分享过程需要用到白板和投影仪之外的设备，也请提前告知组织者。</p><h3>更多信息</h3><p>请加入成都OpenParty的邮件列表（<a href="http://groups.google.com/group/openpartycd?hl=zh-CN" target="_blank" rel="external">http://groups.google.com/group/openpartycd</a>）</p><p>或者联系组织者（ staff at chengdu-open-party.org ）</p><p>围炉映雪，把酒言欢。成都OpenParty第一波，期待你的到来！</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="12月 21 2011" class="post-list__meta--date date">12月 21 2011</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2011/12/12/decent-story-wall/" title="link to 如何布置体面的故事墙">如何布置体面的故事墙</a></h2>
 
       <p class="excerpt">
@@ -373,30 +397,6 @@ classes that you can use:
 
       <p class="excerpt">
         <p>周六一起开会的时候，徐昊说起这样一种开发方式：当我拿到需求，如果我一行代码都不写就交给测试人员去测，测出一个bug我再写一段代码来fix它。我说：真正的测试驱动开发啊。徐昊说：这叫Bug驱动开发。</p><p><img src="http://gigix.thoughtworkers.org/assets/2011/11/4/ReddishRussianBug.jpg" alt=""></p><p>我当时以为他说笑呢。直到今天突然我弄明白了他说的什么意思。然后我就发现自己有多笨。</p><p>首先，Bug驱动开发是一种需求分解的方法。当无能的BA拿着一个一句话需求说“这个需求就是这么大没办法再分得更小了”，请使用Bug驱动开发，测试人员说出来的第一个bug就是一个story：它必定相当独立，它必定有价值，它必定比原来的整个大需求要小，并且它必定可测试。</p><p>然后我很激动地给徐昊发了个短信，然后他告诉我，其实这个方法的学名叫<a href="http://www.infoq.com/cn/news/2009/05/feature-injection-comics" target="_blank" rel="external">Feature Injection</a>，是价值拉动思想的具现化。然后我又发现原来这篇新闻是我的sponsee翻译的⋯⋯为自己的笨和无知挠墙⋯⋯</p><p>显然，为了真正做到Bug驱动开发，我们需要快速、可重复的反馈机制，也就是说：持续集成，自动化测试。这是拉动出来的改善需求。</p><p>顺便我今天又想到了一个检验交付流程的度量指标：往代码里随便乱改一行，改变系统的行为但是不破坏编译，提交它。好了，现在系统里有一个bug，你需要多长时间才能把它抓出来？我把这个度量指标叫做“Bug寿命”（BugLifeTime，BLT）——感谢<a href="http://www.linkedin.com/profile/view?id=35014759" target="_blank" rel="external">Praveen</a>对这个名字的贡献。</p><p>一个理想的交付流程，BLT应该无限趋近0：第一，你应该不能提交这样的代码，因为本地构建会抓住这个bug；第二，提交后持续集成应该会抓住这个bug，并且持续集成的反馈越快越好。</p><p>以“<strong><span class="caps">BLT</span>趋于0</strong>”作为目标进行改善，第一你有清晰的方向，第二你可以很容易地度量改善的效果，第三这个目标是如此简单而又如此困难以至于你永远找不到理由停止改善。这就是Bug驱动改善，一个相当有效的改善活动。</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="11月 3 2011" class="post-list__meta--date date">11月 3 2011</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2011/11/3/growth-of-lean-manager-1/" title="link to 精益管理者的成长（一）">精益管理者的成长（一）</a></h2>
-
-      <p class="excerpt">
-        <p><em>（读《<a href="http://book.douban.com/subject/5248908/" target="_blank" rel="external">金矿II</a>》的一些快速笔记。）</em></p>首先，你得问自己两个关键的问题：<ul><li>我们的产品或者服务能自始至终满足客户的需求吗？</li><li>工人能解决自身的问题，并持续地保持下去吗？</li></ul><p>丰田生产方式的三大模块：支柱之一，自働化；支柱之二，JIT；两个支柱都是为了一个目标：所有人参与改善。标准化工作和改善就像一枚硬币的两面。安灯系统，还有JIT灯，都不过是一些技术而已，它们最根本的目的是理清基本的生产问题。这些工具对解决实际问题的作用，就好比用望远镜来阻止流星雨，用显微镜来消除病毒一样。工具的作用无非就是，严谨地把“正常”操作中的问题凸显突出。</p><p>现场观察是一门管理技术，这门技术分为四个部分：第一，假设进行验证，培养判断能力；第二，在就解决方案展开争论之前，让人们对问题本身达成共识；第三，在实施过程中定期进行检查；第四，通过让员工参与进来，赋予他们更多的权力。</p><p>可视管理的建立需要回答四个关键问题：（1）是否每个人都能看到这里现在是正常还是不正常？（2）是否每个人都能看到自己应该采用的标准方法？（3）是否每个人都能看到在这里工作的工人明确他们的主要问题是什么？（4）是否每个人都能看到他在做什么？</p><p>管理工厂交杂着救火和改善的情况。通常，工厂总经理花80%的时间四处救火，花20%的时间改善。而真正的窍门是颠倒这个比例。如果你花了大部分精力致力于改善，你会有越来越少的火灾需要救，而且火还会越来越少。</p><p><em>To be continued…</em></p>
       </p>
 
       <div class="post-list__meta">

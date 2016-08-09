@@ -177,6 +177,31 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2007/5/20/转载-rubyworks入门指南/" title="link to (转载)RubyWorks入门指南">(转载)RubyWorks入门指南</a></h2>
+
+      <p class="excerpt">
+        <p></p><p>（抄袭<a href="http://lightyror.thegiive.net/" target="_blank" rel="external">Giive Chen</a>的<a href="http://lightyror.thegiive.net/2007/05/rubyworks-001-release.html" target="_blank" rel="external">RubyWorks 0.0.1Release</a>，感谢Giive的帮助<sup>_</sup>）</p><p>如果你覺得安裝所有的 Ruby on Rails 相關套件，並且將 Production Server系統設定好是一件很麻煩的事情嗎？或許你可以試試看<a href="http://rubyworks.rubyforge.org/" target="_blank" rel="external">RubyWorks</a>。</p><p>RubyWorks是一個在 Red Hat Enterprise 或是 CentOS 上面的套件組合，他會幫你把所有 Production 環境下面的相關的Ruby on Rails 套件跟 Server 套件一次安裝完成，並且提供一個馬上可以跑的 defulat configfile，也就是說各位公司的技術長們不需要花時間去看那麼多 Production 設定方式，你已經有一個很堪用的 ProductionRuby on Rails Server了。</p><p>So，你還有理由不玩 Ruby on Rails嗎？</p><p>我們看看怎麼安裝 RubyWorks，因為我沒有 Red Hat Enterprise Server，所以我只 Test CentOS。</p><p><strong>前置作業</strong></p><p>RubyWorks 因為好像還沒進去 yum 資料庫，所以我們還是得必須告訴 yum 哪裡有 RubyWorks 的 Package，如果已經進去yum repo了，就好像不需要這個動作了。</p><p>如果你像我一樣，是個不求甚解，只求可以 Work 的人，就這樣打就好了。</p><blockquote>wget <a href="http://rubyworks.rubyforge.org/public_key.txt" target="_blank" rel="external">http://rubyworks.rubyforge.org/public_key.txt</a><div class="code">sudo rpm—import public_key.txt<br><div class="code">wget <a href="http://rubyworks.rubyforge.org/RubyWorks.repo" target="_blank" rel="external">http://rubyworks.rubyforge.org/RubyWorks.repo</a></div><div class="code">cp RubyWorks.repo /etc/yum.repos.d/<br><br></div></div></blockquote><div class="code"><div class="code"><strong><span class="caps">YUM</span>安裝 Ruby Works</strong><br>直接用 gem 安裝<br><blockquote>yum install rubyworks</blockquote><strong>然後…..裝好了。</strong><br><br></div>請連線到 <a href="http://localhost:3001/" target="_blank" rel="external">http://localhost:3001/</a> 的地方，你一定會看到一個很熟悉的畫面。是的，Ruby on Rails已經跑起來了，還是用 Haproxy 幫你跑的。不過這裡要講的是，因為他的取向不是 development server，而是production server，所以他並不會安裝 Rails 的 gem package，而是直接將 rails 放在<em>/usr/rails/vender/rails</em>裡面。<br><br><strong>Rubyworks 安裝表</strong><br><br>RubyWorks 一共會幫你安裝<br><ul><li><strong>ruby</strong></li><li><strong>ruby-devel</strong></li><li><strong>rubygems</strong></li><li><strong>haproxy</strong></li><li><strong>monit</strong></li><li>mongrel</li><li><strong>rubyworks</strong></li></ul>並且幫你設定好 HAProxy ，跑在 3001 Port，Mongrel 跑在 3002~3005 Port，monit 跑在 2812 port。<br><br><strong>Rubyworks 詳細位置表</strong><br><br>詳細的安裝位置是在<br><ol><li><code>/usr/bin/ruby/</code>：Ruby 所在地</li><li><code>/usr/lib/ruby/</code>：Ruby libraries</li><li><code>/usr/lib/ruby/1.8/</code>：Ruby standard library</li><li><code>/usr/lib/ruby/gems/1.8/gems/</code>：所有安裝的 Ruby gems Package</li><li><code>/usr/bin/monit</code>：monit 執行檔</li><li><code>/etc/init.d/monit</code>：monit的啟動 script，所有的 server 都會在 monit啟動的時候，也順便幫你啟動好了（Mongrel，Haproxy）</li><li><code>/usr/bin/haproxy</code>：HAProxy 執行檔</li><li><code>/usr/bin/mongrel_rails</code>：Mongrel</li><li><code>/etc/rails/</code>：configuration files</li><li><code>/var/rails/</code>：所有 Deamon 的 .pid files</li><li><code>/usr/rails/</code>：Rails app code 所在地。</li><li><code>/var/log/monit.log</code>：Monit 的 log</li><li><code>/var/log/haproxy.log</code>：HAProxy log</li><li><code>/usr/rails/log/</code>：Mongrels and Rails 的 log</li></ol></div><b>延伸閱讀</b><ul><li><a href="http://rubyworks.rubyforge.org/" target="_blank" rel="external">RubyWorks 網頁</a></li><li><a href="../../articles/2007/05/16/rubyworks-initial-release">RubyWorks 0.0.1 Released</a></li></ul><p></p>
+
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="5月 20 2007" class="post-list__meta--date date">5月 20 2007</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2007/5/19/不用说（或者随便怎么说）/" title="link to 不用说（或者随便怎么说）">不用说（或者随便怎么说）</a></h2>
 
       <p class="excerpt">
@@ -374,30 +399,6 @@ classes that you can use:
       <p class="excerpt">
         <p></p><h4><a href="http://www.infoq.com/cn/news/2007/04/ajax-framework-buffalo2" target="_blank" rel="external">轻量级AJAX框架Buffalo2.0:性能提升30%</a></h4><p><a title="Buffalo" href="http://buffalo.sourceforge.net/" target="_blank" rel="external">Buffalo</a>在经历了两年之久的考验后，近日正式发布<a title="2.0版本" href="http://groups.google.com/group/amowa/browse_thread/thread/dac1d69fd88914c6" target="_blank" rel="external">2.0版本</a>。Buffalo是一个J2EE轻量级AJAX框架，也是国内著名的开源项目。它与<a title="DWR" href="http://getahead.org/dwr" target="_blank" rel="external"><span class="caps">DWR</span></a>和<a title="JSON-RPC" href="http://oss.metaparadigm.com/jsonrpc/" target="_blank" rel="external"><span class="caps">JSON</span>-RPC</a>一样，着眼于Web远程调用(Web Remoting)，其简洁而实用的特性一直以来深受开发者喜爱。在国内，对JavaScript技术深入研究的人可谓凤毛麟角，Buffalo的作者<a title="陈金洲" href="http://michael.nona.name/archives/category/amowa/" target="_blank" rel="external">陈金洲</a>(Michael Chen) 就是其中之一。</p><h4><a href="http://www.infoq.com/cn/news/2007/04/interview-xruby-developer" target="_blank" rel="external">采访XRuby开发者</a></h4><p>郑晔说：“XRuby本身起步时，考虑得更多的是乐趣，参与者都是因为乐趣加入其中的。所以，我想说，XRuby的一个很大的优点就是它还年轻，其中有很多可以做的有趣事情。短时间之内，我们不敢奢望有人可以把XRuby用于实际的项目。现阶段，我们只是希望赢得更多的关注，吸引更多的人加入到XRuby的开发中来，这样，可以尽快实现XRuby的目标。”</p><p>还有<a href="http://cruisecontrol.sf.net" target="_blank" rel="external">CruiseControl</a>。<br>还有<a href="http://cruisecontrolrb.thoughtworks.com" target="_blank" rel="external">CruiseControl.rb</a>。<br>还有<a href="http://www.openqa.org/selenium/" target="_blank" rel="external">Selenium</a>。</p><p>我们不是什么“开源人士”，也不愿被谁代表。我们还在做开源。因为我们相信，千里之行积于跬步。</p><p></p>
 
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="4月 28 2007" class="post-list__meta--date date">4月 28 2007</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2007/4/28/知识库｜只言片语｜互联网式写作/" title="link to 知识库｜只言片语｜互联网式写作">知识库｜只言片语｜互联网式写作</a></h2>
-
-      <p class="excerpt">
-        <p><a href="http://chinaonrails.com" target="_blank" rel="external">ChinaonRails</a>果然与众不同：别的地方发帖子攒积分，这里<a href="http://chinaonrails.com/topic/view/54.html" target="_blank" rel="external">发帖和回帖要付出积分</a>的。</p><p>认真想了一下这个事情。望勤说是要<a href="http://groups.google.com/group/RORBeijing/browse_thread/thread/a7391f26f6bbfde1?hl=zh-CN" target="_blank" rel="external">建立活的Rails知识库</a>。既然是知识库，和论坛本就不同，更鼓励贡献知识而不是参与讨论。只要把有趣的东西给出来，看的人自然会有收获，不需要更多讨论——至少我猜望勤是这么想的。而且按照积分规则，字数越多需要付出积分越多，所以<a href="http://chinaonrails.com/u/bd7lx" target="_blank" rel="external">王大力</a>发的都是只言片语，简单两句话加上链接。无疑这是被规则所鼓励的风格。</p><p>只管说，不管解释。<br>只言片语。</p><p>不啻是<a href="http://culture.163.com/edit/010309/010309_47423.html" target="_blank" rel="external">麦克卢汉</a>的风格。问问麦克卢汉的风格从哪里来，他说来自<a href="http://www.google.com/url?sa=t&amp;ct=res&amp;cd=1&amp;url=http%3A%2F%2Fzh.wikipedia.org%2Fwiki%2F%25E8%25A9%25B9%25E5%25A7%2586%25E6%2596%25AF%25C2%25B7%25E4%25B9%2594%25E4%25BC%258A%25E6%2596%25AF&amp;ei=9iwzRpWqBYeKsALjjaDrAg&amp;usg=AFrqEzcqjfPNe-zdppB5WkAS-maErObfmw&amp;sig2=wfWl51wUH41u3cpgzZblhw" target="_blank" rel="external">詹姆斯·乔伊斯</a>。乔伊斯的文字素以信息量巨大、链接丰富、难以解读而著称。《<a href="http://www.yifan.net/yihe/novels/foreign/youli/youli.html" target="_blank" rel="external">尤利西斯</a>》如此，更不用说《<a href="http://bk.baidu.com/view/811925.htm" target="_blank" rel="external">芬尼根的守灵</a>》。最近时常在想，也许乔伊斯的文字原本就不是为印刷时代而写的。放在超文本的互联网上，《尤利西斯》是否能逃脱“晦涩难懂”的评语？在互联网的写作中，链接就是内容。<a href="http://www.infoq.com/cn/news/2007/04/rails-is-enterprise-ready" target="_blank" rel="external">拼凑链接</a>的写作，反而比精心堆砌的文字更有意义。）</p><p>（所以顺便请求互联网上的<a href="http://news.csdn.net/n/20070428/103474.html" target="_blank" rel="external">剽窃者</a>们，在照搬<a href="http://www.infoq.com/cn/articles/SOA-Agile-Friends-Or-Foes" target="_blank" rel="external">别人文字</a>时至少真正做到“照搬”。链接不那么重要吗？也许，当文字被印在纸张上时。但在互联网的写作中，链接就是内容。）</p>
       </p>
 
       <div class="post-list__meta">
