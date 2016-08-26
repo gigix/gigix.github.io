@@ -179,6 +179,30 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2010/6/16/who-needs-distributed-transaction/" title="link to 谁需要分布式事务？">谁需要分布式事务？</a></h2>
+
+      <p class="excerpt">
+        <p>有个项目，用<a href="http://tuscany.apache.org/" target="_blank" rel="external">Tuscany</a>实现了<a href="http://www.osoa.org/pages/viewpage.action?pageId=46" target="_blank" rel="external"><span class="caps">SCA</span></a>。然后呢，服务与服务之间会互相调用。然后呢，因为你不知道被调用的下一个服务被部署在什么地方，所以就需要分布式事务。一切多么的合理。</p><p>Bullshit.</p><p><a href="http://www.drdobbs.com/184414966" target="_blank" rel="external">Martin Fowler说</a>，分布式对象设计第一原则：不要分布你的对象。如何利用多个进程？集群，而非分布。</p><p>因为很显然，如果应用程序本身是<a href="http://en.wikipedia.org/wiki/Shared_nothing_architecture" target="_blank" rel="external">无状态的</a>，分布式对象基本上无法带来任何集群不能提供的好处：性能，吞吐量，都不可能在涉及跨进程调用的情况下超过进程内调用。唯一可能的好处是，能够把应用程序分成小块，分别部署在不同的机器上。</p><p>是的，这就是这个项目需要分布式对象（以及，分布式事务）的真正原因。当然，不是因为一台服务器不能负载整个应用程序，而是因为一个邪恶的原因：把功能模块与服务器硬件绑定。你已经买了功能A，还想要功能B吗？请购买功能B──和它所在的整个服务器。不管你的访问量是否大到需要一台真正的服务器，我们粗制滥造的程序会把它的性能都用尽的。</p><p>是的，再一次地，一个企业级超复杂技术的漂亮广告词被扯开之后，归根结底就是一个制造浪费从而制造需求的邪恶玩意。Fxxx<span class="caps">IBM</span>。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="6月 16 2010" class="post-list__meta--date date">6月 16 2010</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2010/6/13/xiaoxiong/" title="link to 一只土贼">一只土贼</a></h2>
 
       <p class="excerpt">
@@ -381,30 +405,6 @@ classes that you can use:
       <div class="post-list__meta">
 
         <time datetime="4月 27 2010" class="post-list__meta--date date">4月 27 2010</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2010/4/25/back-from-qcon/" title="link to 去了QCon，又回来了">去了QCon，又回来了</a></h2>
-
-      <p class="excerpt">
-        <p>去QCon做了个演讲，把<a href="http://book.douban.com/subject/3313363/" target="_blank" rel="external">演说之禅</a>里学到的东西试用了一把。据说，效果还不错。</p><p>每次讲真实的故事，就会觉得，讲得有劲，似乎别人听得也有劲。</p><p>问我，在研究什么呢？没有在研究什么。研究人算是研究吗？<a href="http://book.douban.com/subject/2776967/" target="_blank" rel="external">Fearless Change</a>是个挺好的典范。</p><p>与人斗其乐无穷，也有术与道之分。一件件实践着的时候，常常归纳模式，确保原则没有变。那就不会误入歧途了吧。</p><p>又回到实践的战场了。进取中的常自反省，很好。</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="4月 25 2010" class="post-list__meta--date date">4月 25 2010</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">

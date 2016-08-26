@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Transparent Thoughts]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://gigix.thoughtworkers.org/"/>
-  <updated>2016-08-09T03:28:05.000Z</updated>
+  <updated>2016-08-26T03:42:06.000Z</updated>
   <id>http://gigix.thoughtworkers.org/</id>
   
   <author>
@@ -15,10 +15,85 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[用技术治病救人，你来不来？]]></title>
+    <link href="http://gigix.thoughtworkers.org/2016/8/26/bahmni-hiring/"/>
+    <id>http://gigix.thoughtworkers.org/2016/8/26/bahmni-hiring/</id>
+    <published>2016-08-26T05:01:00.000Z</published>
+    <updated>2016-08-26T03:42:06.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="太长不读">太长不读</h2><p>如果你想见识非洲、亚洲和拉丁美洲众多发展中国家的丰富与苦难，如果你痛恨这个世界有太多不公，如果你希望用IT技术挽救贫苦人民的生命，如果你有兴趣成为开源软件社区的领导者，如果你想做一个有影响力的软件产品，也许你应该考虑加入Bahmni产品团队，与我们一起用技术治病救人。</p>
+<p>你可以<a href="http://www.lagou.com/jobs/2286715.html" target="_blank" rel="external">在线投递简历</a>，或直接与我联系：JXiong at ThoughtWorks dot com</p>
+<p><img src="/assets/8/26/surgery.jpg"></p>
+<h2 id="背景">背景</h2><p>ThoughtWorks是一家跨国软件设计与定制领袖企业，下属的<a href="https://www.thoughtworks.com/cn/global-health" target="_blank" rel="external">ThoughtWorks Global Health</a>部门一直致力于推进全球医疗发展。我们积极投身于改善低资源地区的医疗质量，提高医疗服务覆盖率。通过提供技术解决方案、工具、咨询及开源软件的专业知识，我们为亚洲、非洲及拉丁美洲贫穷国家的医疗工作者提供支持，帮助他们为最贫困的人群提供高质量的医疗服务，并帮助这些国家的政府进行医疗体系的全局优化。</p>
+<p><a href="http://www.bahmni.org/" target="_blank" rel="external">Bahmni</a>是ThoughtWorks Global Health的拳头产品。这个开源的医院信息化系统（HIS）可以部署在全世界最贫困地区的医院，帮助那里的医生提高工作效率、减少诊疗错误、优化医疗决策、完善数据汇报。迄今为止，Bahmni已经在印度、孟加拉、尼泊尔、塞拉利昂等国的多家乡村医院实施，获得了极佳的反响。</p>
+<p>作为ThoughtWorks全球医疗战略布局的重要环节，我们计划在中国建立一支Bahmni产品研发团队。这支团队将与分布在世界各地的全球医疗团队紧密协作，为Bahmni的实施和产品演进做出关键贡献。我们的目标是十年内在全球5000家最贫困地区的医院实施Bahmni系统，提升全世界最贫困人群的医疗服务水平。</p>
+<p>为此，我们将招聘Bahmni产品研发团队的三个核心角色：产品经理，软件架构师和实施经理。</p>
+<h2 id="产品经理">产品经理</h2><h3 id="职位要求">职位要求</h3><ul>
+<li>具备医疗信息化行业工作经验，有较丰富的行业知识积累</li>
+<li>熟悉医疗行业主流业务流程及相关IT系统</li>
+<li>有从事EMR/CIS/HIS相关工作经验者优先</li>
+<li>良好的产品分析总结归纳能力，熟悉产品运营；   </li>
+<li>具有较强的语言表达沟通能力，具备良好客户沟通和管理能力</li>
+<li>具有团队精神，较强的组织协调能力，性格稳重扎实</li>
+<li>习惯分布式团队协作，英语书面及口头沟通能力佳者优先</li>
+<li>熟悉敏捷需求管理及项目管理流程者优先</li>
+</ul>
+<h3 id="工作内容">工作内容</h3><ul>
+<li>理解并分析贫穷地区医院需求，协调客户关系，保障医疗信息化项目实施</li>
+<li>综合分析客户需求，把控医疗信息化产品规划方向</li>
+<li>与分布在全球多个国家的医疗信息化产品团队协作，共同保障产品研发及演进</li>
+<li>协调位于中国的产品交付和实施团队，负责需求传递及成果验收</li>
+<li>代表公司参加国内及国际各类行业相关会议，发表演讲及文章</li>
+</ul>
+<h2 id="软件架构师">软件架构师</h2><h3 id="职位要求-1">职位要求</h3><ul>
+<li>4年以上开发经验，2年以上团队技术主导者经验</li>
+<li>有设计、规划、实现复杂业务系统的工作经验</li>
+<li>Java基础扎实，精通常用主流基础框架</li>
+<li>熟悉Web系统的设计和部署</li>
+<li>有较强的分析设计能力、方案整合能力和解决问题能力</li>
+<li>良好的团队合作精神，自我驱动，勤奋好学</li>
+<li>具有医疗信息化行业工作经验者优先</li>
+<li>习惯分布式团队协作，英语书面及口头沟通能力佳者优先</li>
+<li>具有开源项目工作经历者优先</li>
+<li>熟悉敏捷软件开发流程和实践者优先</li>
+</ul>
+<h3 id="工作内容-1">工作内容</h3><ul>
+<li>理解贫穷地区医院需求，制订技术方案，保障医疗信息化项目实施</li>
+<li>与产品经理紧密协作，把控医疗信息化产品技术架构方向</li>
+<li>与分布在全球多个国家的医疗信息化产品团队协作，共同保障产品研发及演进</li>
+<li>领导位于中国的产品交付和实施团队，形成高效、高质量交付</li>
+<li>与世界各地的开源社区领袖协作，共同构建全球医疗IT生态系统</li>
+<li>代表公司参加国内及国际各类行业相关会议，发表演讲及文章</li>
+</ul>
+<h2 id="实施经理">实施经理</h2><h3 id="职位要求-2">职位要求</h3><ul>
+<li>4年以上实施经验，2年以上领导实施团队经验</li>
+<li>熟悉LINUX操作系统及相关的服务和排错方法</li>
+<li>熟悉网络相关的基础知识</li>
+<li>Java基础扎实，了解常用主流基础框架</li>
+<li>具有较好的软件理解和应用能力，能够清晰的向客户传达软件使用方法，进行用户使用培训和指导</li>
+<li>有较强的责任心和自我驱动能力，良好的团队合作精神，勤奋好学</li>
+<li>习惯分布式团队协作，英语书面及口头沟通能力佳者优先</li>
+<li>具有EMR、HIS实施经验者或具有医疗信息化行业工作经验者优先</li>
+</ul>
+<h3 id="工作内容-2">工作内容</h3><ul>
+<li>管理和发展产品实施团队；</li>
+<li>负责客户项目的软件产品和相关设备的配置、部署及相关技术实施工作；</li>
+<li>实施过程中用户培训、需求调研、系统测试等工作；</li>
+<li>负责项目实施技术文档、运维资料的编写与归档；</li>
+<li>配合销售人员进行必要的业务交流、客户资源调研、售前方案编写等售前工作；</li>
+<li>与世界各地的开源社区领袖协作，共同构建全球医疗IT生态系统</li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="太长不读">太长不读</h2><p>如果你想见识非洲、亚洲和拉丁美洲众多发展中国家的丰富与苦难，如果你痛恨这个世界有太多不公，如果你希望用IT技术挽救贫苦人民的生命，如果你有兴趣成为开源软件社区的领导者，如果你想做一个有影响力的软件产品，也许你应该考虑加入Bahm]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[微服务与康威定律]]></title>
     <link href="http://gigix.thoughtworkers.org/2016/8/9/micro-services-conways-law/"/>
     <id>http://gigix.thoughtworkers.org/2016/8/9/micro-services-conways-law/</id>
-    <published>2016-08-09T07:31:00.000Z</published>
+    <published>2016-08-09T05:01:00.000Z</published>
     <updated>2016-08-09T03:28:05.000Z</updated>
     <content type="html"><![CDATA[<p><em>（本文是对《<a href="https://book.douban.com/subject/25881698/" target="_blank" rel="external">Building Microservices</a>》一书第10章的摘录）</em></p>
 <h2 id="康威定律">康威定律</h2><p>Melvin Conway于1968年发表的论文《<a href="http://www.melconway.com/Home/pdf/committees.pdf" target="_blank" rel="external">How Do Committees Invent</a>》指出：系统设计的结构必定复制设计该系统的组织的沟通结构。这一论断被称为“康威定律”。在《<a href="http://hbs.me/2aNCbIY" target="_blank" rel="external">Exploring the Duality Between Product and Organizational Architectures</a>》一文中，作者发现紧密耦合的组织（例如典型的商业产品公司，所有员工在同一地点工作，具有高度一致的愿景与目标）开发的软件倾向于较少模块化，而松散耦合的组织（例如分布式的开源社区）开发的软件则倾向于更加模块化、耦合较少。</p>
@@ -47,7 +122,7 @@
     <title><![CDATA[机器学习：概述]]></title>
     <link href="http://gigix.thoughtworkers.org/2016/8/4/machine-learning-introductions/"/>
     <id>http://gigix.thoughtworkers.org/2016/8/4/machine-learning-introductions/</id>
-    <published>2016-08-04T14:00:00.000Z</published>
+    <published>2016-08-04T11:30:00.000Z</published>
     <updated>2016-08-04T11:22:33.000Z</updated>
     <content type="html"><![CDATA[<p>本文摘录了一组关于机器学习的介绍文章，帮助非技术性的读者快速了解机器学习的目的、原理和用途。</p>
 <p><img src="/assets/2016/8/4/ml.jpg"></p>
@@ -92,7 +167,7 @@
     <title><![CDATA[深蓝与AlphaGo的对比]]></title>
     <link href="http://gigix.thoughtworkers.org/2016/7/21/comparing-deep-blue-alphago/"/>
     <id>http://gigix.thoughtworkers.org/2016/7/21/comparing-deep-blue-alphago/</id>
-    <published>2016-07-21T07:31:00.000Z</published>
+    <published>2016-07-21T05:01:00.000Z</published>
     <updated>2016-07-21T04:10:37.000Z</updated>
     <content type="html"><![CDATA[<p>20年前，深蓝与卡斯帕罗夫的对弈使人工智能进入大众视野；20年后，AlphaGo对李世乭的压倒性胜利再次使人工智能成为热议焦点。同样是战胜了棋类世界冠军，两代人工智能最重要的差别在于：深蓝仍然是专注于国际象棋的、以暴力穷举为基础的特定用途人工智能，而AlphaGo是几乎没有特定领域知识的、基于机器学习的、高度通用的人工智能。这一区别决定了深蓝只是一个象征性的里程碑，而AlphaGo则更具实用意义。</p>
 <p><img src="/assets/2016/7/21/AI.png"></p>
@@ -129,7 +204,7 @@
     <title><![CDATA[程序员统治的黑暗世界]]></title>
     <link href="http://gigix.thoughtworkers.org/2016/6/11/evil-technology/"/>
     <id>http://gigix.thoughtworkers.org/2016/6/11/evil-technology/</id>
-    <published>2016-06-11T13:01:00.000Z</published>
+    <published>2016-06-11T10:31:00.000Z</published>
     <updated>2016-06-11T11:01:35.000Z</updated>
     <content type="html"><![CDATA[<p><em>（本文系笔者在2016年<a href="https://www.ted.com/tedx/events/17545" target="_blank" rel="external">TEDxTencent</a>的演讲稿。同名文章首发于<a href="https://mp.weixin.qq.com/s?__biz=MjM5MjMwODcxNg==&amp;mid=2650101691&amp;idx=1&amp;sn=fb7a95c98b1c763564bb0aa071b82cdc&amp;scene=1&amp;srcid=0611f31tcVhslOUVMdXVxPDA&amp;key=f5c31ae61525f82e573253815a390cd62a8de74fb7f61350b606adab5fb08b990bf7ecb1a92f396bda58290a74c3ff33&amp;ascene=0&amp;uin=NDMyMzYyNzM1" target="_blank" rel="external">破土网</a>。）</em></p>
 <p>当我第一次学编程的时候，那个十四岁的少年曾经有一个梦想：未来有一天，我能用我编写的软件统治世界。现在，随着IT技术、尤其是互联网技术的飞速发展，“软件统治世界”已经由不着边际的幻想变成了触手可及的未来可能性。对于这个软件与网络构建的新世界，人类曾经充满美好的构想。John Perry Barlow在1996年的EFF论坛发布的《<a href="https://www.eff.org/cyberspace-independence" target="_blank" rel="external">网络社会独立宣言</a>》中这样说道：“我们正在创造一个世界：在那里，所有的人都可加入，不存在因种族、经济实力、武力或出生地点造成的特权或偏见。”我们曾经满心希望，数字化技术将消泯物理世界的隔阂与不公，给我们带来一个天下大同的美好未来。</p>
@@ -161,7 +236,7 @@
     <title><![CDATA[领导力发展方法：行动学习]]></title>
     <link href="http://gigix.thoughtworkers.org/2016/5/24/action-learning/"/>
     <id>http://gigix.thoughtworkers.org/2016/5/24/action-learning/</id>
-    <published>2016-05-24T14:01:00.000Z</published>
+    <published>2016-05-24T11:31:00.000Z</published>
     <updated>2016-05-23T14:59:10.000Z</updated>
     <content type="html"><![CDATA[<p>Ericsson等人在那篇<a href="http://psycnet.apa.org/index.cfm?fa=search.displayRecord&amp;uid=1993-40718-001" target="_blank" rel="external">著名的论文</a>中介绍了刻意练习在专家技能的获取过程中的重要性。他们这样谈到在受试者提升绩效的过程中起作用的因素：</p>
 <blockquote>
@@ -184,7 +259,7 @@
     <title><![CDATA[警惕分享经济的暗面]]></title>
     <link href="http://gigix.thoughtworkers.org/2016/4/30/dark-side-of-sharing-economy/"/>
     <id>http://gigix.thoughtworkers.org/2016/4/30/dark-side-of-sharing-economy/</id>
-    <published>2016-04-30T10:01:00.000Z</published>
+    <published>2016-04-30T07:31:00.000Z</published>
     <updated>2016-04-30T06:50:39.000Z</updated>
     <content type="html"><![CDATA[<p>（本文精简版以“<a href="http://jingjiribao.cn/m/jsp/m-readReort_details.jsp?id=3489" target="_blank" rel="external">发展分享经济 需防范潜在风险</a>”为题发表于《经济日报》，全文以“<a href="http://groundbreaking.cn/shehui/guoji/7308.html" target="_blank" rel="external">不谈“分担“的分享经济是耍流氓</a>”为题首发于破土网。）</p>
 <p>分享经济（Sharing Economy）是时下方兴未艾的新经济形态。据国家信息中心信息化研究部和中国互联网协会分享经济工作委员会发布的<a href="http://www.sic.gov.cn/News/86/6011.htm" target="_blank" rel="external">报告</a>，2015年我国分享经济市场规模约1.95万亿元，分享经济提供服务者约5000万，保守估计参与分享经济的活动总人数超5亿。而且预计未来五年我国分享经济增长年均速度将在40%左右，到2020年市场规模或将占我国GDP的10%以上。通过去除市场中介、将服务提供者与消费者<a href="https://hbr.org/2015/01/the-sharing-economy-isnt-about-sharing-at-all" target="_blank" rel="external">直接联结</a>，分享经济使消费者享受到更便宜、更便捷的服务，从而创造巨大的市场空间。除了经济效益以外，分享经济还能通过提升资源利用率而创造显著的社会效益，例如分享租车公司Liftshare就称其服务<a href="http://www.theguardian.com/media-network/media-network-blog/2014/jun/05/sharing-economy-critics-airbnb-uber" target="_blank" rel="external">每年能减排二氧化碳11万吨</a>。</p>
@@ -208,7 +283,7 @@
     <title><![CDATA[关于人工智能的三个误解]]></title>
     <link href="http://gigix.thoughtworkers.org/2016/3/15/myths-on-ai/"/>
     <id>http://gigix.thoughtworkers.org/2016/3/15/myths-on-ai/</id>
-    <published>2016-03-15T08:40:00.000Z</published>
+    <published>2016-03-15T06:10:00.000Z</published>
     <updated>2016-03-15T03:51:14.000Z</updated>
     <content type="html"><![CDATA[<p><em>(本文首发于<a href="http://groundbreaking.cn/shehui/guoji/6691.html" target="_blank" rel="external">破土网</a>)</em></p>
 <p>刚刚过去的一个星期，围棋受到了前所未有的关注。韩国棋手李世乭与Google的人工智能AlphaGo的五番棋进展到了第四局，广大棋迷乃至全人类经历了由妄自尊大、到灰心丧气、到正视自我、再到重燃希望的大起大落。夸张一点，甚至可以说有了人工智能这面镜子才让人类照出了完整的自我。</p>
@@ -247,7 +322,7 @@
     <title><![CDATA[IT的战略重要性及人才挑战]]></title>
     <link href="http://gigix.thoughtworkers.org/2016/1/13/it-talent-trend/"/>
     <id>http://gigix.thoughtworkers.org/2016/1/13/it-talent-trend/</id>
-    <published>2016-01-13T08:40:00.000Z</published>
+    <published>2016-01-13T06:10:00.000Z</published>
     <updated>2016-01-13T06:17:33.000Z</updated>
     <content type="html"><![CDATA[<p>IT在过去数十年中一直在企业扮演重要角色。Porter和Heppelmann将过去半个世纪里IT的发展总结为“<a href="https://hbr.org/2014/11/how-smart-connected-products-are-transforming-competition" target="_blank" rel="external">三次浪潮</a>”，这三次技术的浪潮重塑了企业的战略以及企业之间的竞争。经过这三次浪潮的洗礼，IT在组织战略的核心扎根越来越深。本文尝试以文献综述的形式，勾画出IT技术的战略重要性、以及数字化浪潮带来的人才挑战。</p>
 <p><img src="/assets/2016/1/13/talent.jpg"></p>
@@ -274,7 +349,7 @@
     <title><![CDATA[互联网创业的幻梦]]></title>
     <link href="http://gigix.thoughtworkers.org/2016/1/8/dream-of-startups/"/>
     <id>http://gigix.thoughtworkers.org/2016/1/8/dream-of-startups/</id>
-    <published>2016-01-08T07:31:00.000Z</published>
+    <published>2016-01-08T05:01:00.000Z</published>
     <updated>2016-07-21T04:07:45.000Z</updated>
     <content type="html"><![CDATA[<p><em>（本文同时发表于<a href="http://groundbreaking.cn/shehui/guoji/5549.html" target="_blank" rel="external">破土网</a>）</em></p>
 <p>越来越冷的市场环境终于全面波及了互联网创业者们。汽车类O2O一片<a href="http://www.eeo.com.cn/2015/1106/280930.shtml" target="_blank" rel="external">哀鸿遍野</a>，P2P网贷集体<a href="http://economy.gmw.cn/2015-12/28/content_18269746.htm" target="_blank" rel="external">关门跑路</a>，手机游戏倒闭<a href="http://www.gamelook.com.cn/2015/12/236627" target="_blank" rel="external">状况惨烈</a>。但即便在这样的行情世道，笔者的一位朋友仍然满腔热情地准备开始互联网创业。“万一做成了呢？”可能每个创业者都怀抱着这样一个——即便渺茫的——希望。可是，这个“万一”，这个即便渺茫的有朝一日大富大贵甚至开创出下一个互联网商业帝国的可能性，它真的存在吗？</p>
@@ -301,7 +376,7 @@
     <title><![CDATA[2015年五星好书推荐]]></title>
     <link href="http://gigix.thoughtworkers.org/2015/12/31/2015-readings/"/>
     <id>http://gigix.thoughtworkers.org/2015/12/31/2015-readings/</id>
-    <published>2015-12-31T07:31:00.000Z</published>
+    <published>2015-12-31T05:01:00.000Z</published>
     <updated>2016-07-21T04:08:02.000Z</updated>
     <content type="html"><![CDATA[<p>2015年又结束了。这个年末有件特别让人沮丧的事：<a href="http://www.yuedudna.com/" target="_blank" rel="external">阅读DNA</a>竟然关站了。于是我的年度读书回顾帖只好完全靠自己写。略能令我不那么沮丧的是，<a href="http://book.douban.com/people/gigix/collect" target="_blank" rel="external">今年总共读了63本书</a>，其中五星好书17本。两年前读的书是<a href="/2014/1/5/books-in-2013/">为了理解</a>，今年所读的书，仍然是在尝试理解几个不同的世界。</p>
 <p><img src="/assets/2015/12/31/body_reading.jpg"></p>
@@ -343,7 +418,7 @@
     <title><![CDATA[小数据：环节和接口]]></title>
     <link href="http://gigix.thoughtworkers.org/2015/12/16/small-data-steps-interfaces/"/>
     <id>http://gigix.thoughtworkers.org/2015/12/16/small-data-steps-interfaces/</id>
-    <published>2015-12-16T14:01:00.000Z</published>
+    <published>2015-12-16T11:31:00.000Z</published>
     <updated>2015-12-19T07:16:55.000Z</updated>
     <content type="html"><![CDATA[<p><em>（续前文：<a href="/2015/12/7/small-data-theory-architecture/">小数据：理论和架构</a>）</em></p>
 <p>从前文的架构图中可以看到，针对“小数据”的OLAP应用可以分为三个环节：</p>
@@ -401,7 +476,7 @@
     <title><![CDATA[小数据：理论和架构]]></title>
     <link href="http://gigix.thoughtworkers.org/2015/12/7/small-data-theory-architecture/"/>
     <id>http://gigix.thoughtworkers.org/2015/12/7/small-data-theory-architecture/</id>
-    <published>2015-12-07T14:01:00.000Z</published>
+    <published>2015-12-07T11:31:00.000Z</published>
     <updated>2015-12-09T05:18:31.000Z</updated>
     <content type="html"><![CDATA[<p>大数据是当下最热门的IT主题之一。据<a href="http://www.mckinsey.com/insights/business_technology/big_data_the_next_frontier_for_innovation" target="_blank" rel="external">麦肯锡的分析</a>，大数据能使信息更透明、能让决策者获得更精确翔实的绩效信息、能针对客户群体提供更准确的定制、能提升组织决策能力、能帮助开发下一代产品和服务。新时代里与互联网联结的组织不论大小，都需要这些能力。</p>
 <p>然而与此同时，大数据的“大”并非适用于所有组织。Gartner认为，<a href="http://www.forbes.com/sites/gartnergroup/2013/03/27/gartners-big-data-definition-consists-of-three-parts-not-to-be-confused-with-three-vs/" target="_blank" rel="external">大数据具有“3V”的特征</a>：多样性（Variety），数据来自多种不同来源、具有多种不同形态；速度（Velocity），数据形态和呈现形式的变化快且频繁；量级（Volume），数据量非常巨大。然而对于众多的中小型企业及非营利组织而言，这三个特征有两个未必适用。很多中小型组织只有为数不多的几个IT系统，数据都保存在为数不多的几个关系型数据库中，数据量不超过数百万条记录。只有变化速度快这一特征，对于中小型组织仍然适用。从这个意义上，这些中小型组织需要的是一个“小数据”解决方案：</p>
@@ -431,7 +506,7 @@
     <title><![CDATA[共享经济到底是个什么鬼？]]></title>
     <link href="http://gigix.thoughtworkers.org/2015/11/22/myth-of-share-economy/"/>
     <id>http://gigix.thoughtworkers.org/2015/11/22/myth-of-share-economy/</id>
-    <published>2015-11-22T14:01:00.000Z</published>
+    <published>2015-11-22T11:31:00.000Z</published>
     <updated>2015-11-22T01:41:18.000Z</updated>
     <content type="html"><![CDATA[<p><em>（本文同时发表于<a href="http://groundbreaking.cn/shehui/guoji/4498.html" target="_blank" rel="external">破土网</a>）</em></p>
 <p>据互联网创业专家的<a href="http://toutiao.com/a6192684396577751298/" target="_blank" rel="external">分析</a>，“互联网＋”把各行各业生意都开上了互联网，O2O（Online to Offline）把线上和线下整合起来。这两件事打通了业务上网的渠道，而在这个渠道上要挣钱，就要靠共享经济了。专家说，共享经济能优化资源配置，把原本闲置的资源出租利用，从而创造出一块新的市场。比如汽车，原来一辆家用轿车就上班下班通勤用，利用率不到20%；如果能借助互联网之力把白白放在停车场里的私家车共享利用起来，岂不是好事一件？</p>
@@ -455,7 +530,7 @@
     <title><![CDATA[胜任力挑战及应对：现有研究]]></title>
     <link href="http://gigix.thoughtworkers.org/2015/11/11/literature-review-competence/"/>
     <id>http://gigix.thoughtworkers.org/2015/11/11/literature-review-competence/</id>
-    <published>2015-11-11T13:00:00.000Z</published>
+    <published>2015-11-11T10:30:00.000Z</published>
     <updated>2015-11-11T14:24:21.000Z</updated>
     <content type="html"><![CDATA[<p>为了充分理解当今普遍存在的技术胜任力紧缺的问题并为之找到解决办法，需要关注三个方面已有的研究。首先，技术尤其是IT技术造成对高技术劳动者的大量需求，是造成全球技术胜任力紧缺的根本原因。随后，传统的人力资源职能无力于管理高技能工作所需的无形的胜任力，因此人力资源管理的理论与实践需要围绕新型胜任力做出改变。最后，刻意练习理论可以系统地改善专业技能的获得，从而使“建设无形胜任力”的过程变得有形、可控。</p>
 <p><img src="/assets/2015/11/11/competence.jpg"></p>
@@ -482,7 +557,7 @@
     <title><![CDATA[无人驾驶汽车意味着什么]]></title>
     <link href="http://gigix.thoughtworkers.org/2015/8/28/driverless-cars/"/>
     <id>http://gigix.thoughtworkers.org/2015/8/28/driverless-cars/</id>
-    <published>2015-08-28T10:34:00.000Z</published>
+    <published>2015-08-28T08:04:00.000Z</published>
     <updated>2015-11-11T07:46:00.000Z</updated>
     <content type="html"><![CDATA[<p>把车载GPS、定速巡航、<a href="http://auto.sina.com.cn/video/2013-07-29/160462724679.html" target="_blank" rel="external">自动泊车</a>、<a href="http://auto.sina.com.cn/video/2014-03-24/141363657029.html" target="_blank" rel="external">防碰撞主动刹车</a>、<a href="http://v.youku.com/v_show/id_XMTA2OTA4MTA4.html" target="_blank" rel="external">车道偏离报警</a>这几样技术放在一起，实际上一辆可以无人驾驶的汽车在技术上就已经成熟了。几个月前纽约市已经与Google达成一个协议，<a href="http://inhabitat.com/nyc/google-signs-agreement-with-nyc-mayor-to-replace-nyc-taxis-with-driverless-google-cabs/#ixzz2g7ZE4pUa&amp;i" target="_blank" rel="external">从2016年起引入无人驾驶的出租车</a>。然而技术的成熟与投入实用远不是变革的终点，恰恰相反，这只是一场更为深远的变革的起点。</p>
 <p><img src="/assets/2015/8/28/Volvo-Driverless-car1.jpg"></p>
@@ -509,7 +584,7 @@
     <title><![CDATA[公益IT的精益之路]]></title>
     <link href="http://gigix.thoughtworkers.org/2015/8/17/ngo-digital-ecosystem/"/>
     <id>http://gigix.thoughtworkers.org/2015/8/17/ngo-digital-ecosystem/</id>
-    <published>2015-08-17T10:34:00.000Z</published>
+    <published>2015-08-17T08:04:00.000Z</published>
     <updated>2015-11-14T04:13:20.000Z</updated>
     <content type="html"><![CDATA[<p><em>（本文发表于《中华读书报》2015年8月12日号）</em></p>
 <p>不止一位在公益机构工作的朋友对我说：现在大家都在谈数字化、谈“互联网+”，我们机构也想用互联网思维武装自己，你看我们是不是应该开发一个某某某系统……听他们畅想自己的数字化宏图，在这场对话中扮演“IT专家”角色的笔者往往却只能泼冷水地说：开发系统太贵了。笔者在一篇题为《<a href="http://gigix.thoughtworkers.org/2015/6/3/how-expensive-developing-software/">开发软件有多贵</a>》的文章里曾粗略估计，自行建设并拥有一个普通IT系统的成本可以轻易地达到上百万人民币。这个级别的开销对于普通的公益机构来说，无疑是难以承受的。</p>
@@ -532,7 +607,7 @@
     <title><![CDATA[被信息塑造的新工人阶级]]></title>
     <link href="http://gigix.thoughtworkers.org/2015/6/24/digital-labour-class/"/>
     <id>http://gigix.thoughtworkers.org/2015/6/24/digital-labour-class/</id>
-    <published>2015-06-24T14:01:00.000Z</published>
+    <published>2015-06-24T11:31:00.000Z</published>
     <updated>2015-11-14T04:12:33.000Z</updated>
     <content type="html"><![CDATA[<p><em>（本文发表于《中华读书报》2015年6月17日号）</em></p>
 <p>当你看见十多个年轻小伙子围坐在一张长条型电脑桌上，各自神情专注地紧盯着自己面前的屏幕，一边快速地敲击着各自的键盘与鼠标，还不时互相呼喊，你会认为他们在干什么？玩游戏？没错。但又不止于此。他们可能受雇于一个“工头”，每天在后者提供的电脑上玩网络游戏超过十小时，将游戏中获得的装备和宝物交给工头变卖并从后者那里领到一份工资。尽管不为任何现实中的职业认证或劳动保障机构认可，这些被称为“游戏矿工”的职业游戏玩家确实是在劳动并撑起一个<a href="http://www.seed.manchester.ac.uk/subjects/idpm/research/publications/wp/di/di-wp32/" target="_blank" rel="external">每年交易额超过十亿美金、年增长超过20%</a>的市场。他们是信息时代塑造的新工人阶级成员。</p>
@@ -554,7 +629,7 @@
     <title><![CDATA[同情心的贩卖]]></title>
     <link href="http://gigix.thoughtworkers.org/2015/6/19/selling-sympathy/"/>
     <id>http://gigix.thoughtworkers.org/2015/6/19/selling-sympathy/</id>
-    <published>2015-06-19T14:01:00.000Z</published>
+    <published>2015-06-19T11:31:00.000Z</published>
     <updated>2015-11-11T07:46:00.000Z</updated>
     <content type="html"><![CDATA[<p><em>（本文同时发表于<a href="http://groundbreaking.cn/shehui/guonei/1746.html" target="_blank" rel="external">破土网</a>）</em></p>
 <p>毫无征兆地，微信朋友圈里突然流行开一条消息，内容是：“建议国家改变贩卖儿童的法律条款拐卖儿童判死刑！买孩子的判无期！”第二天，<a href="http://www.guancha.cn/FaZhi/2015_06_18_323776.shtml" target="_blank" rel="external">观察网一篇文章</a>便引用微信公众号“移动互联网”的观点，指这条朋友圈其实是某婚恋网站进行的互联网营销，并估算一天的营销 可以为该婚恋网站获得2.5万名注册用户，同时给此条朋友圈消息的作者带来12.5万元收入。</p>
@@ -579,7 +654,7 @@
     <title><![CDATA[金数据，让无声者发声]]></title>
     <link href="http://gigix.thoughtworkers.org/2015/6/9/golden-data-for-activism/"/>
     <id>http://gigix.thoughtworkers.org/2015/6/9/golden-data-for-activism/</id>
-    <published>2015-06-09T14:01:00.000Z</published>
+    <published>2015-06-09T11:31:00.000Z</published>
     <updated>2015-11-11T07:46:00.000Z</updated>
     <content type="html"><![CDATA[<p>格雷厄姆·默多克在他的文章《<a href="http://book.douban.com/subject/1704310/" target="_blank" rel="external">疆域与十字路口</a>》中说到，除了获得信息与知识之外，公民还应该有权准确而公正地表达自己的意见。然而让社会底层的“无声者”发声，在很多时候是一件困难、成本高昂、甚至有风险的事。互联网技术改变了这一切。随着智能手机的普及，像<a href="https://jinshuju.net/" target="_blank" rel="external">金数据</a>这样的工具可以被用于帮助更多公民发出自己的声音。</p>
 <p><img src="/assets/2015/6/9/jinshuju.png"></p>
@@ -599,29 +674,6 @@
 ]]></content>
     <summary type="html">
     <![CDATA[<p>格雷厄姆·默多克在他的文章《<a href="http://book.douban.com/subject/1704310/" target="_blank" rel="external">疆域与十字路口</a>》中说到，除了获得信息与知识之外，公民还应该有权准确而公正地表]]>
-    </summary>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[开发软件有多贵]]></title>
-    <link href="http://gigix.thoughtworkers.org/2015/6/3/how-expensive-developing-software/"/>
-    <id>http://gigix.thoughtworkers.org/2015/6/3/how-expensive-developing-software/</id>
-    <published>2015-06-03T14:01:00.000Z</published>
-    <updated>2015-11-11T07:46:00.000Z</updated>
-    <content type="html"><![CDATA[<p>有个朋友的朋友想做一个公益的事。因为出资的都是教育水平较高的精英人士，所以对项目的监控透明度要求比较高。于是这个朋友的朋友就想了，信息时代嘛，IT工具不是可以促进交流提升效率么？于是他对我说：我们想做个app，可以干这个这个这个……</p>
-<p>我打断他说，别着急，做软件很贵的，你不一定玩得起。</p>
-<p><img src="/assets/2015/6/3/GoldCoins.jpg"></p>
-<p>做个软件究竟有多贵？我们可以做一个非常粗略的估算。市场上定制开发软件的人工成本按一人月20,000人民币来算，平均每人天1,000人民币。根据《<a href="http://book.douban.com/subject/2348918/" target="_blank" rel="external">软件估算</a>》提供的经验数据，随软件复杂度变化，在整个交付项目期间，平均每个程序员每天产出的代码量在2行到200行之间。如果以平均每天产出100行代码来算，则编写每行代码的成本是10元钱。</p>
-<p>把软件写出来只是第一步。软件要放在某个环境上去运行的。服务器端的软件要部署在可靠的服务器上，要有可靠的网络连接。客户端的软件（比如一个app）要安装在使用者的电脑或手机上。软件要维护要升级要管理要排错的。有了一个软件，有了一台服务器，就得有掌握这个技能的人来管理它的。根据Oracle引用<a href="http://www.oracle.com/technetwork/cn/community/developer-day/2-oracle-em-1708282-zhs.pdf" target="_blank" rel="external">Enterprise Management Associates的数据</a>，60%~70%的IT预算耗费在运营和维护上。于是我们可以大致估算到，加上运营和维护成本，一行代码的成本就会达到30元。</p>
-<p>那么一个app会有多少行代码呢？当然也随复杂度不同会有很大变化，只能举两个例子作为参考。<a href="https://github.com/rapidftr/RapidFTR" target="_blank" rel="external">RapidFTR</a>是一个用于“家庭跟踪和团聚”的Android应用。当战争、地震、海啸等灾害发生时，国际援助团队可以用这个应用来寻找失散的儿童。这个软件大约有34,000行代码。另一个Android应用是<a href="http://www.clintonhealthaccess.org/" target="_blank" rel="external">克林顿健康倡议</a>给非洲国家开发的<a href="https://github.com/chailmis/chailmis-android" target="_blank" rel="external">基层医疗物流管理软件</a>，乡村医生可以用这个工具来管理他们的药品库存。这个软件的代码超过46,000行。换句话说，这两个目标很单纯、功能并不复杂的Android应用，拥有它们的成本都在百万人民币以上。</p>
-<p>而且上面估算的还只是软件本身的开发、运营和维护成本。在IT的基础上调整组织机构、优化工作流程、创造高质量内容、市场传播推广……那需要的人财物力就更加难以估计了。更不用说，移动互联网本身是一个充满变化与创新的领域，犯错与试错是家常便饭。所以你看，想开发一个新软件，这是多么贵的事。</p>
-<p>软件这么贵，是不是没钱的组织、尤其公益组织就注定享受不到科技带来的强大能力了？不是。其实有大量的软件工具已经存在，它们非常成熟，它们经过了无数用户的检验、能很好地完成它们想要完成的任务，而且它们非常便宜甚至免费。要做个网站吗？<a href="http://blog.ghost.org/" target="_blank" rel="external">Ghost</a>或者<a href="https://wordpress.org/" target="_blank" rel="external">WordPress</a>都可以。要点对点的传播？微信和QQ是蛮不错的工具。想收集很多人的观点和意见？<a href="https://jinshuju.net/" target="_blank" rel="external">金数据</a>就是干这个的。发邮件期刊？可以考虑<a href="http://mailchimp.com/" target="_blank" rel="external">MailChimp</a>。需要客户关系管理（CRM）？其实一个设计合理的Excel表单就可以做得很好。</p>
-<p>所以，一个机构想要用IT技术提升能力，首先需要的是互联网思维，是设计能力。首先理解自己的目标用户，理解用户的整个体验，理解体验之中的困难与挑战，然后选择适当的工具来应对这些困难与挑战。当你把问题细化到一个具体的设计挑战，往往就能找到现成的工具来解决它。至于开发一个新软件这种又贵又费神的事情，还是能不做就不做吧。</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>有个朋友的朋友想做一个公益的事。因为出资的都是教育水平较高的精英人士，所以对项目的监控透明度要求比较高。于是这个朋友的朋友就想了，信息时代嘛，IT工具不是可以促进交流提升效率么？于是他对我说：我们想做个app，可以干这个这个这个……</p>
-<p>我打断他说，别着急，做软件]]>
     </summary>
     
   </entry>

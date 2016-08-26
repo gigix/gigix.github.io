@@ -177,6 +177,30 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2008/8/14/the-good-ship-vasa/" title="link to 大船瓦沙">大船瓦沙</a></h2>
+
+      <p class="excerpt">
+        <p>（From<a href="http://www.amazon.com/Productive-Programmer-Neal-Ford/sim/0596519788/2?ie=UTF8&amp;pf=book" target="_blank" rel="external">TheProductive Programmer</a>）</p><p>1625年，瑞典国王古斯塔夫二世·阿道夫打算建造有史以来最棒的战舰。他雇了最好的造船工匠，专门种植了一片最刚硬的橡树林，都为了建造大船瓦沙。国王不断提出各种要求，希望把船建得更宏伟壮丽，到处都加上华美的装饰。有那么一天，他甚至决定在船上配备两套甲板炮，这是当时世界上绝无仅有的。他的船会是海上的霸王。而且由于迫在眉睫的外交问题，他还希望大船瓦沙能尽快造好。当然了，工匠们一开始的设计只有一套甲板炮，不过既然国王提出了要求，自然就得再加一套。由于太赶时间，工匠们来不及做“摇晃测试”──让一群水手从船的一边快跑到另一边，船在这种情况下不应该摇晃得太厉害（换句话说，没有头重脚轻）。结果，它的处女航只有几个小时，然后就沉入了海底：在给它加上所有华丽“特性”的同时，国王和工匠也让这条船变得根本无法航行。大船瓦沙在北海的海底长眠了几百年，直到20世纪初才被打捞出来，陈列在博物馆里。</p><p>一个有趣的问题：到底是谁导致了瓦沙的沉没？是国王，因为他要求了太多的特性？还是工匠，因为他们只顾着满足国王的要求，没有大声说出自己的担忧？看看你正身处其中的项目吧：你是不是正在建造又一艘瓦沙？</p><p>只做当下需要的。一开始这会很难，但最终你会得到一个更好的代码库。如果不引入不必要的复杂度，在修改或是重构时就不用对抗这些复杂度。程序员应该谨记：熵会杀死软件，所以，如无必要，勿增特性。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="8月 14 2008" class="post-list__meta--date date">8月 14 2008</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2008/8/7/tips-from-an-old-test-manager/" title="link to Tips from an Old Test Manager">Tips from an Old Test Manager</a></h2>
 
       <p class="excerpt">
@@ -380,30 +404,6 @@ classes that you can use:
       <div class="post-list__meta">
 
         <time datetime="7月 27 2008" class="post-list__meta--date date">7月 27 2008</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2008/7/26/mysql-timeout/" title="link to MySQL掉线咯">MySQL掉线咯</a></h2>
-
-      <p class="excerpt">
-        <p>一个后台操作算得太久，然后再想跟MySQL说说话的时候，就发现<a href="http://dev.mysql.com/doc/refman/5.0/en/gone-away.html" target="_blank" rel="external">那个server已经偷偷的跑掉了</a>。</p><p>MySQL的超时可以用SQL查到：</p><pre>mysql show variables;</pre><p>看interactive_timeout和wait_timeout这两项。缺省是28800（秒），我们的服务器上设成了600。所以，一个长循环跑了11分钟之后，数据库连接已经被关掉了，因为中间没有和数据库打交道。</p><p>（多长的循环可以跑10分钟？我看到的大概是8000多和20000多的两个数组做了一下select…）</p><p>这些变量可以在/etc/my.cnf里面设置的。</p><p>Rails应用可以把ActiveRecord::Base.verification_timeout设为一个小于数据库连接超时的值（比如500）这样Rails就会帮你每过500秒PING一下数据库这样连接就不会断掉了。</p><p>（唔…10分钟会让很多东西超时，比如Apache…）</p><p>然则我们的操作是Rails之外的一个stand-alone进程，Rails也不管帮忙它，所以要在循环的过程中时不时的PING一下数据库：</p><pre>ActiveRecord::Base.connection.verify!(0)</pre><p>于是就可以了。</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="7月 26 2008" class="post-list__meta--date date">7月 26 2008</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">

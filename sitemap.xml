@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://gigix.thoughtworkers.org/2016/8/26/bahmni-hiring/</loc>
+    <lastmod>2016-08-26T03:42:06.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://gigix.thoughtworkers.org/2016/8/9/micro-services-conways-law/</loc>
     <lastmod>2016-08-09T03:28:05.000Z</lastmod>
   </url>
@@ -89,11 +94,6 @@
   <url>
     <loc>http://gigix.thoughtworkers.org/2015/11/11/literature-review-competence/</loc>
     <lastmod>2015-11-11T14:24:21.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2007/6/3/%E6%B2%A6%E8%90%BD%EF%BD%9C%E5%A0%95%E8%90%BD%EF%BD%9C%E5%A4%B1%E8%90%BD/</loc>
-    <lastmod>2015-11-11T07:46:01.000Z</lastmod>
   </url>
   
   <url>
@@ -337,13 +337,13 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2007/9/12/%E5%AF%B9%E5%86%B2%E5%9F%BA%E9%87%91%E9%82%A3%E4%BA%9B%E4%BA%8B/</loc>
+    <loc>http://gigix.thoughtworkers.org/2007/6/3/%E6%B2%A6%E8%90%BD%EF%BD%9C%E5%A0%95%E8%90%BD%EF%BD%9C%E5%A4%B1%E8%90%BD/</loc>
     <lastmod>2015-11-11T07:46:01.000Z</lastmod>
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2010/5/15/what-to-do-and-where-to-stop/</loc>
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    <loc>http://gigix.thoughtworkers.org/2007/9/12/%E5%AF%B9%E5%86%B2%E5%9F%BA%E9%87%91%E9%82%A3%E4%BA%9B%E4%BA%8B/</loc>
+    <lastmod>2015-11-11T07:46:01.000Z</lastmod>
   </url>
   
   <url>
@@ -2357,6 +2357,11 @@
   </url>
   
   <url>
+    <loc>http://gigix.thoughtworkers.org/2011/4/17/why-is-100-test-coverage-easier-to-achieve/</loc>
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://gigix.thoughtworkers.org/2009/1/15/bad-road/</loc>
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
   </url>
@@ -2512,7 +2517,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2011/4/17/why-is-100-test-coverage-easier-to-achieve/</loc>
+    <loc>http://gigix.thoughtworkers.org/2010/6/16/who-needs-distributed-transaction/</loc>
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
   </url>
   
@@ -2567,7 +2572,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2010/6/16/who-needs-distributed-transaction/</loc>
+    <loc>http://gigix.thoughtworkers.org/2010/5/15/what-to-do-and-where-to-stop/</loc>
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
   </url>
   

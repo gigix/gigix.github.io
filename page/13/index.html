@@ -177,6 +177,30 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2011/12/26/open-party-on-dreamhost/" title="link to 在DreamHost安装OpenParty手记">在DreamHost安装OpenParty手记</a></h2>
+
+      <p class="excerpt">
+        <p>自从开始帮忙组织<a href="http://groups.google.com/d/forum/openpartycd" target="_blank" rel="external">成都的OpenParty</a>以来，每天抽一点时间做OpenParty成都的网站。感谢<a href="http://www.diamondtin.com/" target="_blank" rel="external">Tin</a>和<a href="http://cleverpig.name/dan/" target="_blank" rel="external">cleverpig</a>的大力支持，今天终于把<a href="http://www.chengdu-open-party.org/" target="_blank" rel="external">OpenParty成都</a>网站给弄起来了。</p><p><img src="http://gigix.thoughtworkers.org/assets/2011/12/26/Chengdu_Jinli_Street_Night_by_AllenHwong.jpg" alt=""></p><p>首先把<a href="https://github.com/openparty/openparty" target="_blank" rel="external">OpenParty的Django应用</a>给fork出来到<a href="https://github.com/gigix/openparty" target="_blank" rel="external">一个新的repository</a>。没多少需要修改的，只是页面稍做调整，改改文字。</p><p>DreamHost有<a href="http://wiki.dreamhost.com/Django" target="_blank" rel="external">一篇文章</a>讲如何安装Django的。需要照着它做一遍，生成Passenger配置。但是这样弄完以后肯定是跑不起来的，因为所有的依赖包都没有装，而且因为没有root权限所以系统缺省的easy_install也不能安装任何东西。所以，这个配置弄好以后先放着，还得装个自己的Python。</p><p>有个哥们写了一篇博客讲<a href="http://andrew.io/weblog/2010/02/installing-python-2-6-virtualenv-and-virtualenvwrapper-on-dreamhost/" target="_blank" rel="external">如何在DreamHost安装virtualenv</a>。也是照着做就行了。装好<a href="http://pypi.python.org/pypi/virtualenv" target="_blank" rel="external">virtualenv</a>以后直接就可以用<a href="http://www.pip-installer.org/en/latest/index.html" target="_blank" rel="external">pip</a>安装依赖包了。</p><p>接下来就是修改passenger_wsgi.py里的配置了。有两个需要修改的内容：第一是需要用virtualenv装的Python；第二是DreamHost缺省生成的配置有问题，没有引入应用程序的路径。直接把我的passenger_wsgi.py贴上来：</p><pre>import sys, osINTERP = path_to_python_in_virtualenvif sys.executable != INTERP: os.execl(INTERP, INTERP, *sys.argv)project_path = path_to_applicationdjango_path = path_to_django_in_virtualenvsys.path.append(os.getcwd())sys.path.insert(1, project_path)sys.path.insert(1, django_path)sys.path.insert(1, os.path.join(project_path, “apps”))sys.path.insert(1, os.path.join(project_path, “vendor”))os.environ[‘DJANGO_SETTINGS_MODULE’] = “ChengduOpenParty.settings”import django.core.handlers.wsgiapplication = django.core.handlers.wsgi.WSGIHandler()</pre><p>然后就是配数据库啦同步数据库啦这些常规操作了。然后<a href="http://www.chengdu-open-party.org/" target="_blank" rel="external">OpenParty成都的网站</a>就美美的跑起来啦～四川地区的技术爱好者们，欢迎来分享！</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="12月 26 2011" class="post-list__meta--date date">12月 26 2011</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2011/12/21/chengdu-open-party/" title="link to 成都OpenParty第一波：围炉映雪">成都OpenParty第一波：围炉映雪</a></h2>
 
       <p class="excerpt">
@@ -378,30 +402,6 @@ classes that you can use:
       <div class="post-list__meta">
 
         <time datetime="11月 4 2011" class="post-list__meta--date date">11月 4 2011</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2011/11/3/bug-driven-development/" title="link to Bug Driven Development">Bug Driven Development</a></h2>
-
-      <p class="excerpt">
-        <p>周六一起开会的时候，徐昊说起这样一种开发方式：当我拿到需求，如果我一行代码都不写就交给测试人员去测，测出一个bug我再写一段代码来fix它。我说：真正的测试驱动开发啊。徐昊说：这叫Bug驱动开发。</p><p><img src="http://gigix.thoughtworkers.org/assets/2011/11/4/ReddishRussianBug.jpg" alt=""></p><p>我当时以为他说笑呢。直到今天突然我弄明白了他说的什么意思。然后我就发现自己有多笨。</p><p>首先，Bug驱动开发是一种需求分解的方法。当无能的BA拿着一个一句话需求说“这个需求就是这么大没办法再分得更小了”，请使用Bug驱动开发，测试人员说出来的第一个bug就是一个story：它必定相当独立，它必定有价值，它必定比原来的整个大需求要小，并且它必定可测试。</p><p>然后我很激动地给徐昊发了个短信，然后他告诉我，其实这个方法的学名叫<a href="http://www.infoq.com/cn/news/2009/05/feature-injection-comics" target="_blank" rel="external">Feature Injection</a>，是价值拉动思想的具现化。然后我又发现原来这篇新闻是我的sponsee翻译的⋯⋯为自己的笨和无知挠墙⋯⋯</p><p>显然，为了真正做到Bug驱动开发，我们需要快速、可重复的反馈机制，也就是说：持续集成，自动化测试。这是拉动出来的改善需求。</p><p>顺便我今天又想到了一个检验交付流程的度量指标：往代码里随便乱改一行，改变系统的行为但是不破坏编译，提交它。好了，现在系统里有一个bug，你需要多长时间才能把它抓出来？我把这个度量指标叫做“Bug寿命”（BugLifeTime，BLT）——感谢<a href="http://www.linkedin.com/profile/view?id=35014759" target="_blank" rel="external">Praveen</a>对这个名字的贡献。</p><p>一个理想的交付流程，BLT应该无限趋近0：第一，你应该不能提交这样的代码，因为本地构建会抓住这个bug；第二，提交后持续集成应该会抓住这个bug，并且持续集成的反馈越快越好。</p><p>以“<strong><span class="caps">BLT</span>趋于0</strong>”作为目标进行改善，第一你有清晰的方向，第二你可以很容易地度量改善的效果，第三这个目标是如此简单而又如此困难以至于你永远找不到理由停止改善。这就是Bug驱动改善，一个相当有效的改善活动。</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="11月 3 2011" class="post-list__meta--date date">11月 3 2011</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">

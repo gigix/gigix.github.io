@@ -177,6 +177,31 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2008/9/23/replace-long-calculation-with-asynch/" title="link to 重构模式：用异步计算替代长计算">重构模式：用异步计算替代长计算</a></h2>
+
+      <p class="excerpt">
+        <p></p><h2>问题</h2><p>当一个JavaScript计算进程耗时太长，浏览器会弹出警告框，不仅烦人而且一不小心就会点错导致后面的程序不被执行。</p><p>很多这类长计算是由于操作大数组造成的。虽然每个元素的处理耗时很少，当数组有几百上千个元素时整个计算时间就会长到超时。由于数组元素数不确定，对单一元素操作调优仍然不能根本解决问题。</p><h2>办法</h2><p>把长计算拆解成多个异步的短计算。</p><p>即使计算所需的总时间并不缩短，将阻塞的长计算拆解成异步的短计算至少带来响应性的提升：在计算进行的同时用户还可以做其他操作，而不是眼看着整个浏览器失去响应。</p><p>在拆解的基础上可以改进任务分发机制以提升整体计算时间。</p><h2>步骤</h2><ul><li>重构原来的长计算<ul><li>把整个长计算抽取到一个方法中</li><li>重构该方法使之呈现以下结构：</li></ul></li></ul><pre>function longCalculation() {before();var items = getItems();items.each(handleSingleItem);after();}</pre><ul><li>把循环重构为递归<ul><li>把“操作数组中所有元素”的逻辑抽取到一个递归调用的方法，使之呈现以下结构：</li></ul></li></ul><pre>function handleItems(items, cur) {if(cur == items.length - 1) {after();return;}var item = items[cur];handleSingleItem(item);handleItems(items, cur + 1);}function longCalculation() {before();var items = getItems();handleItems(items, 0);}</pre><ul><li>把针对每个元素的操作变成一个异步的计算进程──这一步很简单，只要在调用handleItems方法时始终加上delay就行。</li></ul><p>以上。应该很容易写出一个类似于library的玩意来封装这个模式。太容易了以至于我不想写。</p><p></p>
+
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="9月 23 2008" class="post-list__meta--date date">9月 23 2008</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2008/9/19/starwood-footprint/" title="link to Starwood Footprint">Starwood Footprint</a></h2>
 
       <p class="excerpt">
@@ -378,30 +403,6 @@ classes that you can use:
       <div class="post-list__meta">
 
         <time datetime="8月 24 2008" class="post-list__meta--date date">8月 24 2008</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2008/8/14/the-good-ship-vasa/" title="link to 大船瓦沙">大船瓦沙</a></h2>
-
-      <p class="excerpt">
-        <p>（From<a href="http://www.amazon.com/Productive-Programmer-Neal-Ford/sim/0596519788/2?ie=UTF8&amp;pf=book" target="_blank" rel="external">TheProductive Programmer</a>）</p><p>1625年，瑞典国王古斯塔夫二世·阿道夫打算建造有史以来最棒的战舰。他雇了最好的造船工匠，专门种植了一片最刚硬的橡树林，都为了建造大船瓦沙。国王不断提出各种要求，希望把船建得更宏伟壮丽，到处都加上华美的装饰。有那么一天，他甚至决定在船上配备两套甲板炮，这是当时世界上绝无仅有的。他的船会是海上的霸王。而且由于迫在眉睫的外交问题，他还希望大船瓦沙能尽快造好。当然了，工匠们一开始的设计只有一套甲板炮，不过既然国王提出了要求，自然就得再加一套。由于太赶时间，工匠们来不及做“摇晃测试”──让一群水手从船的一边快跑到另一边，船在这种情况下不应该摇晃得太厉害（换句话说，没有头重脚轻）。结果，它的处女航只有几个小时，然后就沉入了海底：在给它加上所有华丽“特性”的同时，国王和工匠也让这条船变得根本无法航行。大船瓦沙在北海的海底长眠了几百年，直到20世纪初才被打捞出来，陈列在博物馆里。</p><p>一个有趣的问题：到底是谁导致了瓦沙的沉没？是国王，因为他要求了太多的特性？还是工匠，因为他们只顾着满足国王的要求，没有大声说出自己的担忧？看看你正身处其中的项目吧：你是不是正在建造又一艘瓦沙？</p><p>只做当下需要的。一开始这会很难，但最终你会得到一个更好的代码库。如果不引入不必要的复杂度，在修改或是重构时就不用对抗这些复杂度。程序员应该谨记：熵会杀死软件，所以，如无必要，勿增特性。</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="8月 14 2008" class="post-list__meta--date date">8月 14 2008</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">
