@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Transparent Thoughts]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://gigix.thoughtworkers.org/"/>
-  <updated>2016-12-10T19:21:35.000Z</updated>
+  <updated>2016-09-07T03:32:36.000Z</updated>
   <id>http://gigix.thoughtworkers.org/</id>
   
   <author>
@@ -15,39 +15,10 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[半个世纪前的大数据时代]]></title>
-    <link href="http://gigix.thoughtworkers.org/2016/12/10/cybersyn-1/"/>
-    <id>http://gigix.thoughtworkers.org/2016/12/10/cybersyn-1/</id>
-    <published>2016-12-10T13:01:00.000Z</published>
-    <updated>2016-12-10T19:21:35.000Z</updated>
-    <content type="html"><![CDATA[<p>马云在最近的<a href="http://www.yicai.com/news/5162510.html" target="_blank" rel="external">一次公开演讲</a>中谈到市场经济与计划经济的比较：“我们过去的一百多年来一直觉得市场经济非常之好，我个人看法未来三十年会发生很大的变化，计划经济将会越来越大。为什么？因为数据的获取，我们对一个国家市场这只无形的手有可能被我们发现。”这听起来是一个相当大胆、甚至有科幻感的设想：如果能用深入基层的信息终端采集生产和消费数据，用全国连通的网络汇总经济数据，用数据分析软件识别和预测经济异常波动，在国家经济尺度上实时统筹和调整计划，那么近百年来计划经济面临的最大挑战“<a href="https://en.wikipedia.org/wiki/Economic_calculation_problem" target="_blank" rel="external">经济计算问题</a>”有可能得到彻底解决，从而使计划经济有可能成为一种可行的、甚至更优于市场经济的方案。然而更显科幻的是，早在近半个世纪前的1970年代初期，在南美的智利，这样一个意在掌控全国经济的“大数据”系统已经被设计并实现出来了。</p>
-<p>＊    ＊    ＊</p>
-<p>故事从1970年开始。在这一年的智利大选中，萨尔瓦多·阿连德被选为总统，并立即开始推行被称为“智利社会主义之路”的规划。在一系列的改革政策中，最为重要的是对大型企业（包括智利经济支柱的铜矿业）的国有化。这一改革进程很快遭遇了困难，原因不是企业主抗拒国有化，而是国有化进行得太顺利，政府很快发现自己没有足够的人才来对新生的国有企业进行整体调控。面对挑战，阿连德产生了一个大胆的构想：如果仅靠人不足以有效管理国家尺度的经济，再加上技术的支持如何？</p>
-<p>阿连德看中的技术是控制论。1948年，控制论这门学科的创始人诺伯特·维纳将其定义为“<a href="https://book.douban.com/subject/3805815/" target="_blank" rel="external">关于动物和机器中控制和通信的科学</a>”。在二战中，控制论的理论与技术被用于研发防空火控系统——人手操作的高射炮很难准确命中敌方战机，而维纳设计的计算机系统则可以采集敌机飞行的数据、并实时预测敌机的飞行路线、进而自动操作高射炮击中敌机。维纳事后总结，这项研究的核心在于“预测未来”：“预测一个消息的未来，就是用某种算符去运算这个消息的过去……最优预测问题的解决仅仅取决于要加以预测的时间序列的统计性质”。这门新兴学科让阿连德看到了希望：如果控制论可以用于实现防空火控系统这样实时的、复杂的、涉及大量人为因素（驾驶战机的都是由经验丰富且绝对不想被击落的飞行员）的自动化系统，它是否能被用于其他实时的、复杂的、涉及大量人为因素的领域——比如说，经济计划？</p>
-<p>在寻找合适的技术领导者的过程中，阿连德的政治乌托邦愿景也吸引了英国控制论学者斯塔福·比尔的兴趣。尽管美国政府对“社会主义”这个字眼<a href="https://book.douban.com/subject/2441402/" target="_blank" rel="external">极度紧张</a>，不惜以各种政治、经济手段扼杀阿连德的改革政策，阿连德所构想的其实是介于美苏两个超级大国、两种意识形态之间的“第三条路线”，一种既能全面提升智利经济和人民生活水平、又不损害智利保持四十年的民主自由氛围的两全方案。1971年，比尔和阿连德政府开始了合作，在这个政治乌托邦愿景之上又加上了一个科技乌托邦的愿景：构建一个计算机系统来实施调控国家经济——在互联网普及之前二十年。</p>
-<p>以维纳为代表的控制论学者经常用人体作为类比。例如维纳这样谈论一个基本的控制论系统：“为了能对外界产生有效的动作，重要的不仅是我们必须具有良好的效应器，而且必须把效应器的动作情况恰当地回报给中枢神经系统，而这些报告的内容必须适当地和其他来自感官的信息组合起来，以便对效应器产生一个适当的调节输出。”比尔则对这一结构进一步深化，提出了“<a href="https://en.wikipedia.org/wiki/Viable_system_model" target="_blank" rel="external">可生存系统模型</a>”的概念。在这一模型中，组成一个系统的各个部件被分为5级子系统：系统1到系统3分别负责感知、信息传导、以及监控和协作的功能，系统4和系统5则负责常规运作层面之上的、有目的的管理和治理职能。比尔用生理学的类比来解释这个模型（如下图），并认为同样的模型也适用于企业和国家经济。</p>
-<p><img src="http://7xpvay.com1.z0.glb.clouddn.com/d04bd630-b32d-11e6-96cf-69a982993485" alt=""></p>
-<p>比尔的另一个理论基础是他在1970年的一次主题演讲中提出的“<a href="https://book.douban.com/subject/26922062/" target="_blank" rel="external">自由机器</a>”理论。所谓自由机器，是这样一种社会-科技系统：它以网络的形式运行，而非层级结构；其中作为行动基础的是信息，而非权力；各个领域的专家知识和实时的信息反馈驱动决策，从而消除官僚体制存在的必要性。比尔甚至构想了在政府机构中这样的自由机器如何实现：它应该是一系列的操作室，每个操作室中实时接收和呈现来自各个子系统的信息，操作室中的各领域专家则基于这些信息提出猜想、并运行模拟程序来验证这些猜想，由猜想汇集而成的决策再从操作室实时传递到国民经济第一线。</p>
-<p>基于可生存系统模型和自由机器理论，比尔的团队向阿连德政府提出了一个系统设计的方案。在他们建议的系统中，国有企业和政府之间会新建起数字化通信的渠道，用于传输实时的生产数据；这些数据随后被送进统计软件程序，用于预测工厂的生产效能，从而使政府能够提前识别和应对异常情况；系统中还包含一个计算机实现的经济模拟器，让政策制订者能够在真正实施他们的经济措施前先在模型中测试；最后，他们还提议建设一个充满未来感的操作室，让政策制订者们能够聚集在其中，快速掌握国民经济运行的状态，并在数据的支持下快速做出决策。</p>
-<p>只有当我们从资料图片中看到这个操作室，我们才能直观地感受到比尔所说的“未来感”是什么意思。这个建成于1972年的操作室看上去就像《星际迷航》里“企业号”的舰桥，其中大量塑料与玻璃纤维材质的使用、环绕四周的显示屏、座椅扶手上简洁的操作按钮，都与这个项目的愿景一样，充满了不真实感，就像一部科幻电影。</p>
-<p><img src="http://7xpvay.com1.z0.glb.clouddn.com/ec8ebcd0-b3ec-11e6-96cf-69a982993485" alt=""></p>
-<p>只是，这不是科幻电影，而是历史上真实存在过的一个IT系统。新生的社会主义智利政府和来自英国的科学家冀望基于这个系统平衡个体自由与自上而下的控制：既保持个人的主观能动性，又使个体为组织（企业或国家）的整体利益共同奋斗、乃至作出必要的牺牲。在智利之外，很多进步人士相信智利能通过经济上的改革探索出一条政治上和意识形态上的“第三条路”，甚至成为冷战的一条出路。阿连德和比尔的IT系统会走向何方，历史在静静注视。</p>
-<p>＊    ＊    ＊</p>
-<p>站在近半个世纪之后回望这段尘封的历史，我会感到一阵莫名的激动。今天IT技术飞速发展，然而我们看见的却是技术日益被掌握在极少数人手里、并被用于为这部分人牟利。技术发展越是日新月异，这道鸿沟就越是触目惊心。难道IT技术的发展就注定伴随着不平等的加剧？难道<a href="http://gigix.thoughtworkers.org/2016/6/11/evil-technology/">程序员统治的黑暗世界</a>是无可避免的唯一未来？这一前景让作为技术工作者的我感到灰心。而阿连德与比尔、一个智利人与一个英国人、一个政治家与一个科学家、一个政治乌托邦梦想与一个科技乌托邦梦想的交汇处，这段几乎已被遗忘的历史让我们重新看到希望：为技术赋予政治和社会的正面意义、用技术创造更公正的世界，思考这个问题的不是只有我们。</p>
-<p>如果今天的一位IT架构师来设计这个名为“Cybersyn”的系统，也许他会参考IBM的<a href="https://www.ibm.com/developerworks/community/files/basic/anonymous/api/library/087482e3-c559-4919-9af1-61564eb247a3/document/b4720f97-63a1-46bb-904b-b8151c295925/media" target="_blank" rel="external">商业技术趋势研究</a>提出一个方案，其中个人移动设备和物联网设备被用于在工厂采集实时的生产数据，数据通过互联网汇集到位于云端的数据库，用大数据和机器学习技术对数据进行加工、分析和预测，并借助社交网络创造政府、企业与工人和谐共处的社会与经济环境。</p>
-<p>尽管互联网和手机的时代还有几十年才会到来，比尔提出的方案却与现代的架构方案如出一辙。于是我们不禁要好奇：他所领导的这支团队会如何构建连接厂矿与中央政府的网络，又会用什么技术来实现数据分析与预测功能？当比尔宣称Cybersyn会同时兼顾国家经济运行效率与个人的民主和自由，什么技术能让他掌握全国民众的情绪涨落？在下一篇文章中，我将深入探索Cybersyn系统的设计与实现，敬请期待。</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>马云在最近的<a href="http://www.yicai.com/news/5162510.html" target="_blank" rel="external">一次公开演讲</a>中谈到市场经济与计划经济的比较：“我们过去的一百多年来一直觉得市场经济非常之好，我]]>
-    </summary>
-    
-  </entry>
-  
-  <entry>
     <title><![CDATA[喧闹的资本盛宴与无力的慈善]]></title>
     <link href="http://gigix.thoughtworkers.org/2016/9/7/powerless-charity/"/>
     <id>http://gigix.thoughtworkers.org/2016/9/7/powerless-charity/</id>
-    <published>2016-09-07T12:01:00.000Z</published>
+    <published>2016-09-07T05:01:00.000Z</published>
     <updated>2016-09-07T03:32:36.000Z</updated>
     <content type="html"><![CDATA[<p><em>（本文是作者于去年9月应破土网之邀而作的时评。一年时间过去，破土网已不知所踪，腾讯公益日照样红红火火，故此旧文重发，以资记念。）</em></p>
 <p><img src="/assets/2016/9/7/charity.jpg"></p>
@@ -72,7 +43,7 @@
     <title><![CDATA[用技术治病救人，你来不来？]]></title>
     <link href="http://gigix.thoughtworkers.org/2016/8/26/bahmni-hiring/"/>
     <id>http://gigix.thoughtworkers.org/2016/8/26/bahmni-hiring/</id>
-    <published>2016-08-26T12:01:00.000Z</published>
+    <published>2016-08-26T05:01:00.000Z</published>
     <updated>2016-08-26T03:45:58.000Z</updated>
     <content type="html"><![CDATA[<h2 id="太长不读">太长不读</h2><p>如果你想见识非洲、亚洲和拉丁美洲众多发展中国家的丰富与苦难，如果你痛恨这个世界有太多不公，如果你希望用IT技术挽救贫苦人民的生命，如果你有兴趣成为开源软件社区的领导者，如果你想做一个有影响力的软件产品，也许你应该考虑加入Bahmni产品团队，与我们一起用技术治病救人。</p>
 <p>你可以<a href="http://www.lagou.com/jobs/2286715.html" target="_blank" rel="external">在线投递简历</a>，或直接与我联系：JXiong at ThoughtWorks dot com</p>
@@ -147,7 +118,7 @@
     <title><![CDATA[微服务与康威定律]]></title>
     <link href="http://gigix.thoughtworkers.org/2016/8/9/micro-services-conways-law/"/>
     <id>http://gigix.thoughtworkers.org/2016/8/9/micro-services-conways-law/</id>
-    <published>2016-08-09T12:01:00.000Z</published>
+    <published>2016-08-09T05:01:00.000Z</published>
     <updated>2016-08-09T03:28:05.000Z</updated>
     <content type="html"><![CDATA[<p><em>（本文是对《<a href="https://book.douban.com/subject/25881698/" target="_blank" rel="external">Building Microservices</a>》一书第10章的摘录）</em></p>
 <h2 id="康威定律">康威定律</h2><p>Melvin Conway于1968年发表的论文《<a href="http://www.melconway.com/Home/pdf/committees.pdf" target="_blank" rel="external">How Do Committees Invent</a>》指出：系统设计的结构必定复制设计该系统的组织的沟通结构。这一论断被称为“康威定律”。在《<a href="http://hbs.me/2aNCbIY" target="_blank" rel="external">Exploring the Duality Between Product and Organizational Architectures</a>》一文中，作者发现紧密耦合的组织（例如典型的商业产品公司，所有员工在同一地点工作，具有高度一致的愿景与目标）开发的软件倾向于较少模块化，而松散耦合的组织（例如分布式的开源社区）开发的软件则倾向于更加模块化、耦合较少。</p>
@@ -176,7 +147,7 @@
     <title><![CDATA[机器学习：概述]]></title>
     <link href="http://gigix.thoughtworkers.org/2016/8/4/machine-learning-introductions/"/>
     <id>http://gigix.thoughtworkers.org/2016/8/4/machine-learning-introductions/</id>
-    <published>2016-08-04T18:30:00.000Z</published>
+    <published>2016-08-04T11:30:00.000Z</published>
     <updated>2016-08-04T11:22:33.000Z</updated>
     <content type="html"><![CDATA[<p>本文摘录了一组关于机器学习的介绍文章，帮助非技术性的读者快速了解机器学习的目的、原理和用途。</p>
 <p><img src="/assets/2016/8/4/ml.jpg"></p>
@@ -221,7 +192,7 @@
     <title><![CDATA[深蓝与AlphaGo的对比]]></title>
     <link href="http://gigix.thoughtworkers.org/2016/7/21/comparing-deep-blue-alphago/"/>
     <id>http://gigix.thoughtworkers.org/2016/7/21/comparing-deep-blue-alphago/</id>
-    <published>2016-07-21T12:01:00.000Z</published>
+    <published>2016-07-21T05:01:00.000Z</published>
     <updated>2016-07-21T04:10:37.000Z</updated>
     <content type="html"><![CDATA[<p>20年前，深蓝与卡斯帕罗夫的对弈使人工智能进入大众视野；20年后，AlphaGo对李世乭的压倒性胜利再次使人工智能成为热议焦点。同样是战胜了棋类世界冠军，两代人工智能最重要的差别在于：深蓝仍然是专注于国际象棋的、以暴力穷举为基础的特定用途人工智能，而AlphaGo是几乎没有特定领域知识的、基于机器学习的、高度通用的人工智能。这一区别决定了深蓝只是一个象征性的里程碑，而AlphaGo则更具实用意义。</p>
 <p><img src="/assets/2016/7/21/AI.png"></p>
@@ -258,7 +229,7 @@
     <title><![CDATA[程序员统治的黑暗世界]]></title>
     <link href="http://gigix.thoughtworkers.org/2016/6/11/evil-technology/"/>
     <id>http://gigix.thoughtworkers.org/2016/6/11/evil-technology/</id>
-    <published>2016-06-11T17:31:00.000Z</published>
+    <published>2016-06-11T10:31:00.000Z</published>
     <updated>2016-06-11T11:01:35.000Z</updated>
     <content type="html"><![CDATA[<p><em>（本文系笔者在2016年<a href="https://www.ted.com/tedx/events/17545" target="_blank" rel="external">TEDxTencent</a>的演讲稿。同名文章首发于<a href="https://mp.weixin.qq.com/s?__biz=MjM5MjMwODcxNg==&amp;mid=2650101691&amp;idx=1&amp;sn=fb7a95c98b1c763564bb0aa071b82cdc&amp;scene=1&amp;srcid=0611f31tcVhslOUVMdXVxPDA&amp;key=f5c31ae61525f82e573253815a390cd62a8de74fb7f61350b606adab5fb08b990bf7ecb1a92f396bda58290a74c3ff33&amp;ascene=0&amp;uin=NDMyMzYyNzM1" target="_blank" rel="external">破土网</a>。）</em></p>
 <p>当我第一次学编程的时候，那个十四岁的少年曾经有一个梦想：未来有一天，我能用我编写的软件统治世界。现在，随着IT技术、尤其是互联网技术的飞速发展，“软件统治世界”已经由不着边际的幻想变成了触手可及的未来可能性。对于这个软件与网络构建的新世界，人类曾经充满美好的构想。John Perry Barlow在1996年的EFF论坛发布的《<a href="https://www.eff.org/cyberspace-independence" target="_blank" rel="external">网络社会独立宣言</a>》中这样说道：“我们正在创造一个世界：在那里，所有的人都可加入，不存在因种族、经济实力、武力或出生地点造成的特权或偏见。”我们曾经满心希望，数字化技术将消泯物理世界的隔阂与不公，给我们带来一个天下大同的美好未来。</p>
@@ -290,7 +261,7 @@
     <title><![CDATA[领导力发展方法：行动学习]]></title>
     <link href="http://gigix.thoughtworkers.org/2016/5/24/action-learning/"/>
     <id>http://gigix.thoughtworkers.org/2016/5/24/action-learning/</id>
-    <published>2016-05-24T18:31:00.000Z</published>
+    <published>2016-05-24T11:31:00.000Z</published>
     <updated>2016-05-23T14:59:10.000Z</updated>
     <content type="html"><![CDATA[<p>Ericsson等人在那篇<a href="http://psycnet.apa.org/index.cfm?fa=search.displayRecord&amp;uid=1993-40718-001" target="_blank" rel="external">著名的论文</a>中介绍了刻意练习在专家技能的获取过程中的重要性。他们这样谈到在受试者提升绩效的过程中起作用的因素：</p>
 <blockquote>
@@ -313,7 +284,7 @@
     <title><![CDATA[警惕分享经济的暗面]]></title>
     <link href="http://gigix.thoughtworkers.org/2016/4/30/dark-side-of-sharing-economy/"/>
     <id>http://gigix.thoughtworkers.org/2016/4/30/dark-side-of-sharing-economy/</id>
-    <published>2016-04-30T14:31:00.000Z</published>
+    <published>2016-04-30T07:31:00.000Z</published>
     <updated>2016-04-30T06:50:39.000Z</updated>
     <content type="html"><![CDATA[<p>（本文精简版以“<a href="http://jingjiribao.cn/m/jsp/m-readReort_details.jsp?id=3489" target="_blank" rel="external">发展分享经济 需防范潜在风险</a>”为题发表于《经济日报》，全文以“<a href="http://groundbreaking.cn/shehui/guoji/7308.html" target="_blank" rel="external">不谈“分担“的分享经济是耍流氓</a>”为题首发于破土网。）</p>
 <p>分享经济（Sharing Economy）是时下方兴未艾的新经济形态。据国家信息中心信息化研究部和中国互联网协会分享经济工作委员会发布的<a href="http://www.sic.gov.cn/News/86/6011.htm" target="_blank" rel="external">报告</a>，2015年我国分享经济市场规模约1.95万亿元，分享经济提供服务者约5000万，保守估计参与分享经济的活动总人数超5亿。而且预计未来五年我国分享经济增长年均速度将在40%左右，到2020年市场规模或将占我国GDP的10%以上。通过去除市场中介、将服务提供者与消费者<a href="https://hbr.org/2015/01/the-sharing-economy-isnt-about-sharing-at-all" target="_blank" rel="external">直接联结</a>，分享经济使消费者享受到更便宜、更便捷的服务，从而创造巨大的市场空间。除了经济效益以外，分享经济还能通过提升资源利用率而创造显著的社会效益，例如分享租车公司Liftshare就称其服务<a href="http://www.theguardian.com/media-network/media-network-blog/2014/jun/05/sharing-economy-critics-airbnb-uber" target="_blank" rel="external">每年能减排二氧化碳11万吨</a>。</p>
@@ -337,7 +308,7 @@
     <title><![CDATA[关于人工智能的三个误解]]></title>
     <link href="http://gigix.thoughtworkers.org/2016/3/15/myths-on-ai/"/>
     <id>http://gigix.thoughtworkers.org/2016/3/15/myths-on-ai/</id>
-    <published>2016-03-15T14:10:00.000Z</published>
+    <published>2016-03-15T06:10:00.000Z</published>
     <updated>2016-03-15T03:51:14.000Z</updated>
     <content type="html"><![CDATA[<p><em>(本文首发于<a href="http://groundbreaking.cn/shehui/guoji/6691.html" target="_blank" rel="external">破土网</a>)</em></p>
 <p>刚刚过去的一个星期，围棋受到了前所未有的关注。韩国棋手李世乭与Google的人工智能AlphaGo的五番棋进展到了第四局，广大棋迷乃至全人类经历了由妄自尊大、到灰心丧气、到正视自我、再到重燃希望的大起大落。夸张一点，甚至可以说有了人工智能这面镜子才让人类照出了完整的自我。</p>
@@ -376,7 +347,7 @@
     <title><![CDATA[IT的战略重要性及人才挑战]]></title>
     <link href="http://gigix.thoughtworkers.org/2016/1/13/it-talent-trend/"/>
     <id>http://gigix.thoughtworkers.org/2016/1/13/it-talent-trend/</id>
-    <published>2016-01-13T14:10:00.000Z</published>
+    <published>2016-01-13T06:10:00.000Z</published>
     <updated>2016-01-13T06:17:33.000Z</updated>
     <content type="html"><![CDATA[<p>IT在过去数十年中一直在企业扮演重要角色。Porter和Heppelmann将过去半个世纪里IT的发展总结为“<a href="https://hbr.org/2014/11/how-smart-connected-products-are-transforming-competition" target="_blank" rel="external">三次浪潮</a>”，这三次技术的浪潮重塑了企业的战略以及企业之间的竞争。经过这三次浪潮的洗礼，IT在组织战略的核心扎根越来越深。本文尝试以文献综述的形式，勾画出IT技术的战略重要性、以及数字化浪潮带来的人才挑战。</p>
 <p><img src="/assets/2016/1/13/talent.jpg"></p>
@@ -403,7 +374,7 @@
     <title><![CDATA[互联网创业的幻梦]]></title>
     <link href="http://gigix.thoughtworkers.org/2016/1/8/dream-of-startups/"/>
     <id>http://gigix.thoughtworkers.org/2016/1/8/dream-of-startups/</id>
-    <published>2016-01-08T13:01:00.000Z</published>
+    <published>2016-01-08T05:01:00.000Z</published>
     <updated>2016-07-21T04:07:45.000Z</updated>
     <content type="html"><![CDATA[<p><em>（本文同时发表于<a href="http://groundbreaking.cn/shehui/guoji/5549.html" target="_blank" rel="external">破土网</a>）</em></p>
 <p>越来越冷的市场环境终于全面波及了互联网创业者们。汽车类O2O一片<a href="http://www.eeo.com.cn/2015/1106/280930.shtml" target="_blank" rel="external">哀鸿遍野</a>，P2P网贷集体<a href="http://economy.gmw.cn/2015-12/28/content_18269746.htm" target="_blank" rel="external">关门跑路</a>，手机游戏倒闭<a href="http://www.gamelook.com.cn/2015/12/236627" target="_blank" rel="external">状况惨烈</a>。但即便在这样的行情世道，笔者的一位朋友仍然满腔热情地准备开始互联网创业。“万一做成了呢？”可能每个创业者都怀抱着这样一个——即便渺茫的——希望。可是，这个“万一”，这个即便渺茫的有朝一日大富大贵甚至开创出下一个互联网商业帝国的可能性，它真的存在吗？</p>
@@ -430,7 +401,7 @@
     <title><![CDATA[2015年五星好书推荐]]></title>
     <link href="http://gigix.thoughtworkers.org/2015/12/31/2015-readings/"/>
     <id>http://gigix.thoughtworkers.org/2015/12/31/2015-readings/</id>
-    <published>2015-12-31T13:01:00.000Z</published>
+    <published>2015-12-31T05:01:00.000Z</published>
     <updated>2016-07-21T04:08:02.000Z</updated>
     <content type="html"><![CDATA[<p>2015年又结束了。这个年末有件特别让人沮丧的事：<a href="http://www.yuedudna.com/" target="_blank" rel="external">阅读DNA</a>竟然关站了。于是我的年度读书回顾帖只好完全靠自己写。略能令我不那么沮丧的是，<a href="http://book.douban.com/people/gigix/collect" target="_blank" rel="external">今年总共读了63本书</a>，其中五星好书17本。两年前读的书是<a href="/2014/1/5/books-in-2013/">为了理解</a>，今年所读的书，仍然是在尝试理解几个不同的世界。</p>
 <p><img src="/assets/2015/12/31/body_reading.jpg"></p>
@@ -472,7 +443,7 @@
     <title><![CDATA[小数据：环节和接口]]></title>
     <link href="http://gigix.thoughtworkers.org/2015/12/16/small-data-steps-interfaces/"/>
     <id>http://gigix.thoughtworkers.org/2015/12/16/small-data-steps-interfaces/</id>
-    <published>2015-12-16T19:31:00.000Z</published>
+    <published>2015-12-16T11:31:00.000Z</published>
     <updated>2015-12-19T07:16:55.000Z</updated>
     <content type="html"><![CDATA[<p><em>（续前文：<a href="/2015/12/7/small-data-theory-architecture/">小数据：理论和架构</a>）</em></p>
 <p>从前文的架构图中可以看到，针对“小数据”的OLAP应用可以分为三个环节：</p>
@@ -530,7 +501,7 @@
     <title><![CDATA[小数据：理论和架构]]></title>
     <link href="http://gigix.thoughtworkers.org/2015/12/7/small-data-theory-architecture/"/>
     <id>http://gigix.thoughtworkers.org/2015/12/7/small-data-theory-architecture/</id>
-    <published>2015-12-07T19:31:00.000Z</published>
+    <published>2015-12-07T11:31:00.000Z</published>
     <updated>2015-12-09T05:18:31.000Z</updated>
     <content type="html"><![CDATA[<p>大数据是当下最热门的IT主题之一。据<a href="http://www.mckinsey.com/insights/business_technology/big_data_the_next_frontier_for_innovation" target="_blank" rel="external">麦肯锡的分析</a>，大数据能使信息更透明、能让决策者获得更精确翔实的绩效信息、能针对客户群体提供更准确的定制、能提升组织决策能力、能帮助开发下一代产品和服务。新时代里与互联网联结的组织不论大小，都需要这些能力。</p>
 <p>然而与此同时，大数据的“大”并非适用于所有组织。Gartner认为，<a href="http://www.forbes.com/sites/gartnergroup/2013/03/27/gartners-big-data-definition-consists-of-three-parts-not-to-be-confused-with-three-vs/" target="_blank" rel="external">大数据具有“3V”的特征</a>：多样性（Variety），数据来自多种不同来源、具有多种不同形态；速度（Velocity），数据形态和呈现形式的变化快且频繁；量级（Volume），数据量非常巨大。然而对于众多的中小型企业及非营利组织而言，这三个特征有两个未必适用。很多中小型组织只有为数不多的几个IT系统，数据都保存在为数不多的几个关系型数据库中，数据量不超过数百万条记录。只有变化速度快这一特征，对于中小型组织仍然适用。从这个意义上，这些中小型组织需要的是一个“小数据”解决方案：</p>
@@ -560,7 +531,7 @@
     <title><![CDATA[共享经济到底是个什么鬼？]]></title>
     <link href="http://gigix.thoughtworkers.org/2015/11/22/myth-of-share-economy/"/>
     <id>http://gigix.thoughtworkers.org/2015/11/22/myth-of-share-economy/</id>
-    <published>2015-11-22T19:31:00.000Z</published>
+    <published>2015-11-22T11:31:00.000Z</published>
     <updated>2015-11-22T01:41:18.000Z</updated>
     <content type="html"><![CDATA[<p><em>（本文同时发表于<a href="http://groundbreaking.cn/shehui/guoji/4498.html" target="_blank" rel="external">破土网</a>）</em></p>
 <p>据互联网创业专家的<a href="http://toutiao.com/a6192684396577751298/" target="_blank" rel="external">分析</a>，“互联网＋”把各行各业生意都开上了互联网，O2O（Online to Offline）把线上和线下整合起来。这两件事打通了业务上网的渠道，而在这个渠道上要挣钱，就要靠共享经济了。专家说，共享经济能优化资源配置，把原本闲置的资源出租利用，从而创造出一块新的市场。比如汽车，原来一辆家用轿车就上班下班通勤用，利用率不到20%；如果能借助互联网之力把白白放在停车场里的私家车共享利用起来，岂不是好事一件？</p>
@@ -584,7 +555,7 @@
     <title><![CDATA[胜任力挑战及应对：现有研究]]></title>
     <link href="http://gigix.thoughtworkers.org/2015/11/11/literature-review-competence/"/>
     <id>http://gigix.thoughtworkers.org/2015/11/11/literature-review-competence/</id>
-    <published>2015-11-11T18:30:00.000Z</published>
+    <published>2015-11-11T10:30:00.000Z</published>
     <updated>2015-11-11T14:24:21.000Z</updated>
     <content type="html"><![CDATA[<p>为了充分理解当今普遍存在的技术胜任力紧缺的问题并为之找到解决办法，需要关注三个方面已有的研究。首先，技术尤其是IT技术造成对高技术劳动者的大量需求，是造成全球技术胜任力紧缺的根本原因。随后，传统的人力资源职能无力于管理高技能工作所需的无形的胜任力，因此人力资源管理的理论与实践需要围绕新型胜任力做出改变。最后，刻意练习理论可以系统地改善专业技能的获得，从而使“建设无形胜任力”的过程变得有形、可控。</p>
 <p><img src="/assets/2015/11/11/competence.jpg"></p>
@@ -611,7 +582,7 @@
     <title><![CDATA[无人驾驶汽车意味着什么]]></title>
     <link href="http://gigix.thoughtworkers.org/2015/8/28/driverless-cars/"/>
     <id>http://gigix.thoughtworkers.org/2015/8/28/driverless-cars/</id>
-    <published>2015-08-28T15:04:00.000Z</published>
+    <published>2015-08-28T08:04:00.000Z</published>
     <updated>2015-11-11T07:46:00.000Z</updated>
     <content type="html"><![CDATA[<p>把车载GPS、定速巡航、<a href="http://auto.sina.com.cn/video/2013-07-29/160462724679.html" target="_blank" rel="external">自动泊车</a>、<a href="http://auto.sina.com.cn/video/2014-03-24/141363657029.html" target="_blank" rel="external">防碰撞主动刹车</a>、<a href="http://v.youku.com/v_show/id_XMTA2OTA4MTA4.html" target="_blank" rel="external">车道偏离报警</a>这几样技术放在一起，实际上一辆可以无人驾驶的汽车在技术上就已经成熟了。几个月前纽约市已经与Google达成一个协议，<a href="http://inhabitat.com/nyc/google-signs-agreement-with-nyc-mayor-to-replace-nyc-taxis-with-driverless-google-cabs/#ixzz2g7ZE4pUa&amp;i" target="_blank" rel="external">从2016年起引入无人驾驶的出租车</a>。然而技术的成熟与投入实用远不是变革的终点，恰恰相反，这只是一场更为深远的变革的起点。</p>
 <p><img src="/assets/2015/8/28/Volvo-Driverless-car1.jpg"></p>
@@ -638,7 +609,7 @@
     <title><![CDATA[公益IT的精益之路]]></title>
     <link href="http://gigix.thoughtworkers.org/2015/8/17/ngo-digital-ecosystem/"/>
     <id>http://gigix.thoughtworkers.org/2015/8/17/ngo-digital-ecosystem/</id>
-    <published>2015-08-17T15:04:00.000Z</published>
+    <published>2015-08-17T08:04:00.000Z</published>
     <updated>2015-11-14T04:13:20.000Z</updated>
     <content type="html"><![CDATA[<p><em>（本文发表于《中华读书报》2015年8月12日号）</em></p>
 <p>不止一位在公益机构工作的朋友对我说：现在大家都在谈数字化、谈“互联网+”，我们机构也想用互联网思维武装自己，你看我们是不是应该开发一个某某某系统……听他们畅想自己的数字化宏图，在这场对话中扮演“IT专家”角色的笔者往往却只能泼冷水地说：开发系统太贵了。笔者在一篇题为《<a href="http://gigix.thoughtworkers.org/2015/6/3/how-expensive-developing-software/">开发软件有多贵</a>》的文章里曾粗略估计，自行建设并拥有一个普通IT系统的成本可以轻易地达到上百万人民币。这个级别的开销对于普通的公益机构来说，无疑是难以承受的。</p>
@@ -661,7 +632,7 @@
     <title><![CDATA[被信息塑造的新工人阶级]]></title>
     <link href="http://gigix.thoughtworkers.org/2015/6/24/digital-labour-class/"/>
     <id>http://gigix.thoughtworkers.org/2015/6/24/digital-labour-class/</id>
-    <published>2015-06-24T18:31:00.000Z</published>
+    <published>2015-06-24T11:31:00.000Z</published>
     <updated>2015-11-14T04:12:33.000Z</updated>
     <content type="html"><![CDATA[<p><em>（本文发表于《中华读书报》2015年6月17日号）</em></p>
 <p>当你看见十多个年轻小伙子围坐在一张长条型电脑桌上，各自神情专注地紧盯着自己面前的屏幕，一边快速地敲击着各自的键盘与鼠标，还不时互相呼喊，你会认为他们在干什么？玩游戏？没错。但又不止于此。他们可能受雇于一个“工头”，每天在后者提供的电脑上玩网络游戏超过十小时，将游戏中获得的装备和宝物交给工头变卖并从后者那里领到一份工资。尽管不为任何现实中的职业认证或劳动保障机构认可，这些被称为“游戏矿工”的职业游戏玩家确实是在劳动并撑起一个<a href="http://www.seed.manchester.ac.uk/subjects/idpm/research/publications/wp/di/di-wp32/" target="_blank" rel="external">每年交易额超过十亿美金、年增长超过20%</a>的市场。他们是信息时代塑造的新工人阶级成员。</p>
@@ -675,6 +646,31 @@
     <summary type="html">
     <![CDATA[<p><em>（本文发表于《中华读书报》2015年6月17日号）</em></p>
 <p>当你看见十多个年轻小伙子围坐在一张长条型电脑桌上，各自神情专注地紧盯着自己面前的屏幕，一边快速地敲击着各自的键盘与鼠标，还不时互相呼喊，你会认为他们在干什么？玩游戏？没错。但又不止于此。他们]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[同情心的贩卖]]></title>
+    <link href="http://gigix.thoughtworkers.org/2015/6/19/selling-sympathy/"/>
+    <id>http://gigix.thoughtworkers.org/2015/6/19/selling-sympathy/</id>
+    <published>2015-06-19T11:31:00.000Z</published>
+    <updated>2015-11-11T07:46:00.000Z</updated>
+    <content type="html"><![CDATA[<p><em>（本文同时发表于<a href="http://groundbreaking.cn/shehui/guonei/1746.html" target="_blank" rel="external">破土网</a>）</em></p>
+<p>毫无征兆地，微信朋友圈里突然流行开一条消息，内容是：“建议国家改变贩卖儿童的法律条款拐卖儿童判死刑！买孩子的判无期！”第二天，<a href="http://www.guancha.cn/FaZhi/2015_06_18_323776.shtml" target="_blank" rel="external">观察网一篇文章</a>便引用微信公众号“移动互联网”的观点，指这条朋友圈其实是某婚恋网站进行的互联网营销，并估算一天的营销 可以为该婚恋网站获得2.5万名注册用户，同时给此条朋友圈消息的作者带来12.5万元收入。</p>
+<p><img src="/assets/2015/6/19/money.jpg"></p>
+<p>正如笔者在《<a href="http://gigix.thoughtworkers.org/2015/5/16/review-of-digital-labour/">数字时代的劳动与剥削</a>》一文中所说，以微信为代表的“社交软件”其设计目的就是为了吸引用户上瘾，从而使企业能够打包销售用户的时间和注意力。这次朋友圈营销事件正好给了我们一个契机，来近看大众的同情心是如何被资本利用并打包贩卖的。</p>
+<p>齐泽克在《<a href="http://book.douban.com/subject/10544787/" target="_blank" rel="external">暴力</a>》中指出，中产阶级知识分子由于其丰富的信息渠道以及优渥的生活条件，经常会产生对贫穷者、被损害者的同情及对社会不公的道德愤怒。然而资本主义进化出了一种能力，不仅使其自身免疫于这种道德愤怒的攻击，甚而能从同情与愤怒本身营利。</p>
+<blockquote>“在这个国家每六秒就有一个女人被强奸”及“在你阅读这段文字的过程中，十个儿童将死于饥饿”，这只是其中两个例子。隐藏在这一切之下的，是一种道德愤怒的伪批判情结。几年前星巴克（Starbucks）正是利用了这种伪紧迫感：当时星巴克在每家店门口贴了一张宣传海报指出该公司拨出部分连锁店利润援助危地马拉——它们的咖啡豆来源地——的儿童健康计划。意思是说你每喝一杯它的咖啡，就救活一名儿童的性命。</blockquote>
+
+<p>这种“伪紧迫感”之所以有效，恰好反映出中产阶级知识分子——正是该婚恋网站的目标顾客群——对社会问题的关注是抽离的、抽象的。对于众多都市白领而言，底层人群的悲惨境遇只是一个抽象概念，无论是被拐卖的儿童，还是自杀的留守儿童，对于他们而言只是无差别地唤起一种模糊的同情与愤怒，以及随之而来的、迫切想要将这种模糊的同情与愤怒宣泄出去的伪紧迫感。居住在钢筋水泥森林、工作在玻璃办公室里，都市白领们似乎已经没有什么具体的事需要去同情和愤怒，只需定期宣泄内心积累的“愤怒定额”，然后就可以继续安稳于自己每天的工作与生活了。</p>
+<p>紧接着，资本家们帮中产阶级找到了宣泄这种抽离、抽象的同情与愤怒的途径：消费。中产阶级本来会对消费至上的社会形态、对社会的不公感到有负罪感，资本家却趁机贩卖“赎罪券”，宣称只要多付一元钱（或者五分钟时间，或者你的个人信息），消费者就不必再有任何负罪感，仿佛世间的不公就会自动消泯。当然我们知道，不公与苦难不会自动消泯，消费者多付的一元钱（或者时间，或者个人信息）只是增加了资本家的财富。通过贩卖苦难与不公、同情与愤怒，资本主义、消费主义的体系得以运转得愈发顺滑，资本家的财富得以加速积累，无怪乎齐泽克在电影《<a href="http://movie.douban.com/subject/11613507/" target="_blank" rel="external">变态者意识形态指南</a>》中辛辣地将星巴克的营销手段称为“消费主义的最高形态”。</p>
+<p>媒体也适时地加入这场消费同情心的盛宴。据说某知名社交网站的编辑部门每当有灾难事件发生时便一片欢呼，无疑是已将苦难与同情的打包贩卖做得驾轻就熟。在这条传播与营销的流水线上，中产阶级的同情心、负罪感与愤怒被纯熟地物化、被唤起、被打包销售、然后迅速平复以待下一轮的生产。至于真正承受苦难的那些人，他们只是耗尽其“新闻价值”然后被弃如敝屐，至于他们的境况是否因为中产阶级每天宣泄的“愤怒定额”而有所改善，又何曾是资本家关心的问题？</p>
+<p>既然认识到这种消费苦难与同情的资本主义逻辑本质的伪善，中产阶级知识分子可以做些什么来对抗？首先，我们需要反抗资本主义营销机器制造的伪紧迫感。我们需要承认：社会问题之所以根深蒂固，就说明它们通常没有一个简单的解决办法。我们需要摈弃自私的、以消解内心负罪感为目标的急切而浅薄的“行动”。我们需要保持内心的愤怒，将其转化为持续学习的动力，通过学习去理解错综复杂的社会问题背后的逻辑。最后也是最重要的，我们需要走出都市白领的玻璃办公室，走进工农群众，走进那些贫困者、被剥削者、被损害者、无声者，与他们紧密团结在一起。惟其如此，知识分子才有可能真正改变社会的不公。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><em>（本文同时发表于<a href="http://groundbreaking.cn/shehui/guonei/1746.html" target="_blank" rel="external">破土网</a>）</em></p>
+<p>毫无征兆地，微信朋友圈里突然]]>
     </summary>
     
   </entry>
