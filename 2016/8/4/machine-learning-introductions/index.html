@@ -39,6 +39,7 @@
 <meta name="twitter:description" content="本文摘录了一组关于机器学习的介绍文章，帮助非技术性的读者快速了解机器学习的目的、原理和用途。
 
 为什么要机器学习？机器学习有望解决传统企业软件解决方案的很多问题。首先，在传统企业软件中，数据的质量受限于人类的输入。然而现实是，大部分销售不喜欢更新CRM系统中的数据，真正的销售数据只存在于若干电话会议与数字表格中。同时，传统的企业系统大多构建于关系型数据库上，而关系型数据库并不善于表现信息的时间轴视">
+<meta name="twitter:image" content="http://gigix.thoughtworkers.org/assets/2016/8/4/ml.jpg">
 
     
     <link rel="alternate" href="/atom.xml" title="透明思考" type="application/atom+xml">
@@ -46,7 +47,7 @@
     
     <link rel="icon" type="image/x-icon" href="/favicon.png">
     
-    <link rel="stylesheet" href="/css/uno.css" type="text/css">
+    <link rel="stylesheet" href="/css/uno.css">
 
     <script src="/js/jquery.min.js"></script>
 
@@ -208,16 +209,16 @@ classes that you can use:
     <section class="post">
         <p>本文摘录了一组关于机器学习的介绍文章，帮助非技术性的读者快速了解机器学习的目的、原理和用途。</p>
 <p><img src="/assets/2016/8/4/ml.jpg"></p>
-<h2 id="为什么要机器学习？">为什么要机器学习？</h2><p>机器学习有望解决传统企业软件解决方案的很多问题。首先，在传统企业软件中，数据的质量受限于人类的输入。然而现实是，大部分销售不喜欢更新CRM系统中的数据，真正的销售数据只存在于若干电话会议与数字表格中。同时，传统的企业系统大多构建于关系型数据库上，而关系型数据库并不善于表现信息的时间轴视图，因此大多数企业需要依赖于庞大的数据仓库来不断接收来自企业系统的数据转储。使用这种方法，业务人员必须等待几周甚至几个月才能从数据团队得到有用的洞见。最后，传统的企业系统依赖于成千上万人定的规则，而这些规则是静态的，在业务发展的过程中会逐渐失效。</p>
+<h2 id="为什么要机器学习？"><a href="#为什么要机器学习？" class="headerlink" title="为什么要机器学习？"></a>为什么要机器学习？</h2><p>机器学习有望解决传统企业软件解决方案的很多问题。首先，在传统企业软件中，数据的质量受限于人类的输入。然而现实是，大部分销售不喜欢更新CRM系统中的数据，真正的销售数据只存在于若干电话会议与数字表格中。同时，传统的企业系统大多构建于关系型数据库上，而关系型数据库并不善于表现信息的时间轴视图，因此大多数企业需要依赖于庞大的数据仓库来不断接收来自企业系统的数据转储。使用这种方法，业务人员必须等待几周甚至几个月才能从数据团队得到有用的洞见。最后，传统的企业系统依赖于成千上万人定的规则，而这些规则是静态的，在业务发展的过程中会逐渐失效。</p>
 <p><em>（来源：Crunch Network | <a href="https://techcrunch.com/2015/07/27/the-next-wave-of-enterprise-software-powered-by-machine-learning/" target="_blank" rel="external">The Next Wave Of Enterprise Software Powered By Machine Learning</a>）</em></p>
 <p>机器学习的发展可以分作三个阶段：机器学习1.0是“描述”（description），2.0是“预测”（prediction），3.0是“对策”（prescription）。今天的CxO们大约不用太操心“描述”阶段，大多数企业已经拥有对应的IT系统。眼下他们迫切需要拥抱“预测”阶段。今天的科技不仅能让业务人员查看历史数据，而且能预测未来的行为和结果。</p>
 <p><em>(来源：McKinsey | <a href="http://www.mckinsey.com/industries/high-tech/our-insights/an-executives-guide-to-machine-learning" target="_blank" rel="external">An executive’s guide to machine learning</a>)</em></p>
-<h2 id="机器学习如何工作？">机器学习如何工作？</h2><p>简单说，机器学习是一类自我改进的算法。计算机从一个模型开始，用试错法反复训练这个模型，然后就可以做出预测，例如预测某一笔金融交易有多大风险。以侦测信用卡欺诈的机器学习算法为例，首先要用大量真实持卡人的交易记录来训练这个模型，并根据历史记录对模型调优。接下来，信用卡交易就会实时地流过这个算法模型，算法模型则对每条交易记录生成一个概率数据，代表该笔交易涉及欺诈的可能性（例如97%）。如果欺诈侦测系统被配置为阻止欺诈概率95%以上的交易，那么这个评估值就会引发POS机拒收这张信用卡。</p>
+<h2 id="机器学习如何工作？"><a href="#机器学习如何工作？" class="headerlink" title="机器学习如何工作？"></a>机器学习如何工作？</h2><p>简单说，机器学习是一类自我改进的算法。计算机从一个模型开始，用试错法反复训练这个模型，然后就可以做出预测，例如预测某一笔金融交易有多大风险。以侦测信用卡欺诈的机器学习算法为例，首先要用大量真实持卡人的交易记录来训练这个模型，并根据历史记录对模型调优。接下来，信用卡交易就会实时地流过这个算法模型，算法模型则对每条交易记录生成一个概率数据，代表该笔交易涉及欺诈的可能性（例如97%）。如果欺诈侦测系统被配置为阻止欺诈概率95%以上的交易，那么这个评估值就会引发POS机拒收这张信用卡。</p>
 <p>在判断交易是否欺诈时，机器学习算法会考虑很多因素：商家的可信度、持卡人的购买行为、时间、地点、IP地址等等。数据点越多，预测就会越准确。人类不可能在几分之一秒内评估几千个数据点，只有自动化的算法能让实时的欺诈侦测成为可能。</p>
 <p><em>（来源：The Conversation | <a href="https://theconversation.com/machine-learning-and-big-data-know-it-wasnt-you-who-just-swiped-your-credit-card-48561" target="_blank" rel="external">Machine learning and big data know it wasn’t you who just swiped your credit card</a>）</em></p>
 <p>机器学习与传统的数据统计有一个重要的区别：使用机器学习时，我们并不关心因果性（causality）。我们可能并不关心什么变化造成什么结果，而是聚焦于预测：只要有一个模型能在当前环境下给出准确的判断就行。可以参考我们如何使用天气预报：天气预报并不告诉我们降雨的原理，只告诉我们下雨的概率，我们参照这个概率判断是否应该带伞出门。机器学习也是一样：个性化推荐就是对人们偏好的预测，尽管并不知道人们为什么喜欢这些东西，但这种预测是有用的。习惯了这个思维方式以后，机器学习的价值就会显而易见。</p>
 <p><em>（来源：HBR | <a href="https://hbr.org/2015/07/what-every-manager-should-know-about-machine-learning" target="_blank" rel="external">What Every Manager Should Know About Machine Learning</a>）</em></p>
-<h2 id="机器学习用来干嘛？">机器学习用来干嘛？</h2><p><img src="/assets/2016/8/4/tata.png"><br><em>（来源：Tata Consultancy Services | <a href="http://www.tcs.com/SiteCollectionDocuments/White%20Papers/Machine-Learning-Analytics-in-Manufacturing-0714-1.pdf" target="_blank" rel="external">Using Big Data for Machine Learning Analytics in Manufacturing</a>）</em></p>
+<h2 id="机器学习用来干嘛？"><a href="#机器学习用来干嘛？" class="headerlink" title="机器学习用来干嘛？"></a>机器学习用来干嘛？</h2><p><img src="/assets/2016/8/4/tata.png"><br><em>（来源：Tata Consultancy Services | <a href="http://www.tcs.com/SiteCollectionDocuments/White%20Papers/Machine-Learning-Analytics-in-Manufacturing-0714-1.pdf" target="_blank" rel="external">Using Big Data for Machine Learning Analytics in Manufacturing</a>）</em></p>
 <p>在银行里应用机器学习技术提供个性化服务：</p>
 <ul>
 <li>基于顾客的信用卡/银行卡使用模式给出推荐；</li>
