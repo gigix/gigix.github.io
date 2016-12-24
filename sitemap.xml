@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://gigix.thoughtworkers.org/2016/12/24/cybersyn-1/</loc>
+    <lastmod>2016-12-24T09:33:33.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://gigix.thoughtworkers.org/2016/9/7/powerless-charity/</loc>
     <lastmod>2016-09-07T03:32:36.000Z</lastmod>
   </url>
@@ -99,11 +104,6 @@
   <url>
     <loc>http://gigix.thoughtworkers.org/2015/11/11/literature-review-competence/</loc>
     <lastmod>2015-11-11T14:24:21.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2007/4/15/%E6%AD%AA%E7%90%86%E6%96%9C%E8%AF%B4%EF%BC%9A%E6%94%BE%E5%BC%83%E7%9A%84%E6%89%8D%E6%98%AF%E6%8B%A5%E6%9C%89%E7%9A%84/</loc>
-    <lastmod>2015-11-11T07:46:01.000Z</lastmod>
   </url>
   
   <url>
@@ -347,13 +347,13 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2007/8/12/%E5%A6%82%E4%BD%95%E5%AF%B9private%E6%96%B9%E6%B3%95%E8%BF%9B%E8%A1%8C%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/</loc>
+    <loc>http://gigix.thoughtworkers.org/2007/4/15/%E6%AD%AA%E7%90%86%E6%96%9C%E8%AF%B4%EF%BC%9A%E6%94%BE%E5%BC%83%E7%9A%84%E6%89%8D%E6%98%AF%E6%8B%A5%E6%9C%89%E7%9A%84/</loc>
     <lastmod>2015-11-11T07:46:01.000Z</lastmod>
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2008/6/7/what-is-project-manager/</loc>
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    <loc>http://gigix.thoughtworkers.org/2007/8/12/%E5%A6%82%E4%BD%95%E5%AF%B9private%E6%96%B9%E6%B3%95%E8%BF%9B%E8%A1%8C%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/</loc>
+    <lastmod>2015-11-11T07:46:01.000Z</lastmod>
   </url>
   
   <url>
@@ -2047,6 +2047,11 @@
   </url>
   
   <url>
+    <loc>http://gigix.thoughtworkers.org/2008/9/19/why-not-start-with-ci/</loc>
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://gigix.thoughtworkers.org/2009/2/6/cute-animal/</loc>
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
   </url>
@@ -2122,7 +2127,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2008/9/19/why-not-start-with-ci/</loc>
+    <loc>http://gigix.thoughtworkers.org/2011/4/17/why-is-100-test-coverage-easier-to-achieve/</loc>
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
   </url>
   
@@ -2287,7 +2292,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2011/4/17/why-is-100-test-coverage-easier-to-achieve/</loc>
+    <loc>http://gigix.thoughtworkers.org/2010/6/16/who-needs-distributed-transaction/</loc>
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
   </url>
   
@@ -2362,7 +2367,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2010/6/16/who-needs-distributed-transaction/</loc>
+    <loc>http://gigix.thoughtworkers.org/2010/5/15/what-to-do-and-where-to-stop/</loc>
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
   </url>
   
@@ -2522,7 +2527,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2010/5/15/what-to-do-and-where-to-stop/</loc>
+    <loc>http://gigix.thoughtworkers.org/2011/1/28/what-s-wrong-with-multi-tasking/</loc>
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
   </url>
   
@@ -2577,7 +2582,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2011/1/28/what-s-wrong-with-multi-tasking/</loc>
+    <loc>http://gigix.thoughtworkers.org/2008/6/7/what-is-project-manager/</loc>
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
   </url>
   
