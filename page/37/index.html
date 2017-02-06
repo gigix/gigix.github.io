@@ -174,6 +174,30 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2008/9/6/browser-in-im-client/" title="link to 螺狮壳里做道场">螺狮壳里做道场</a></h2>
+
+      <p class="excerpt">
+        <p>以前闲得没事的时候想过在MSN上做插件，结论是那玩意它就不是正常人能玩的。</p><p><a href="http://www.igniterealtime.org/projects/spark/index.jsp" target="_blank" rel="external">Spark</a>是一个开源的IM客户端，并且据说特别适合企事业单位办公用…其实就是对插件支持比较好的意思吧。插件都是用Swing来写的，API也很简单。做一个JFrame往里一扔就搞定了。</p><p>（还有<a href="http://www.igniterealtime.org/projects/openfire/" target="_blank" rel="external">Openfire</a>也是他们家做的。配置简单使用方便，不错不错的说…）</p><p>自己跟自己聊天几分钟以后决定做一个浏览器嵌在Spark里面这样就可以一边聊天一边看网页（唔唔，很有追求）。<a href="https://jdic.dev.java.net/" target="_blank" rel="external"><span class="caps">JDIC</span></a>它对Mac<span class="caps">OS X</span>支持就有问题，搞了两小时还是不行，于是换方向。<a href="http://lobobrowser.org/" target="_blank" rel="external">Lobo</a>是纯Java的浏览器然则对JavaScript的支持只有这种程度的浏览器它是没办法实用的。<a href="http://jrex.mozdev.org/" target="_blank" rel="external">JRex</a>貌似从05年以后就没有更新鸟。至于<a href="http://www.mozilla.org/projects/embedding/" target="_blank" rel="external">Gecko Embedding</a>…这个，未免太高科技了吧…</p><p>于是最终来到了<a href="http://sourceforge.net/projects/mozswing" target="_blank" rel="external">MozSwing</a>。稍微花了一点时间配置，它还是效果粉不错的亚～～这里有个<a href="http://jnlp.concord.org/dev/mozswing/mozswing.jnlp" target="_blank" rel="external">WebStart</a>可以试用一下，还有<a href="http://blog.limewire.org/?p=303" target="_blank" rel="external">一篇blog</a>介绍怎么玩，来自<a href="http://www.limewire.com/" target="_blank" rel="external">LimeWire</a>的作者，显然他们也借用了一把，呵呵。</p><p>其实粉简单，总共就三句话：</p><pre>MozillaPanel mozilla = new MozillaPanel();someSwingContainer.add(mozilla);mozilla.load(“<a href="http://limewire.com" target="_blank" rel="external">http://limewire.com</a>“);</pre><p>下一个目标，把Groovy给搞进来玩玩。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="9月 6 2008" class="post-list__meta--date date">9月 6 2008</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2008/9/6/autumn-photos/" title="link to 原来，好照片都是P出来的">原来，好照片都是P出来的</a></h2>
 
       <p class="excerpt">
@@ -389,30 +413,6 @@ classes that you can use:
       <hr class="post-list__divider" />
     </li>
     
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2008/8/2/you-break-it-you-fix-it/" title="link to You Break It, You Fix It">You Break It, You Fix It</a></h2>
-
-      <p class="excerpt">
-        <p>(From<a href="http://www.amazon.com/Build-Master-Microsofts-Configuration-Addison-Wesley/dp/0321332059" target="_blank" rel="external">TheBuildMaster</a>)</p><p>This leads to one of the most important rules in the build lab:<strong>The build team never fixes build breaks, regardless of how trivial the break is.</strong>That’s the developer’s responsibility. We took this a step further: The developer whobreaksthebuild has to go to his development machine, check out the file, fix it, and then go through all thecheck-inprocess steps again.</p><p><strong>Build Breaks Always Have the Highest Priority for Everyone</strong></p><p>This rule means that if you are a developer and you can fix the build break, and the developer whobrokethebuild cannot be found, you should fix it immediately. Afterward, send an e-mail to the developer andthebuildteam explaining what you did to fix the build, and remind your co-worker that he owes you a favor.</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="8月 2 2008" class="post-list__meta--date date">8月 2 2008</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
   </ol>
 
   <hr class="post-list__divider " />
@@ -435,7 +435,7 @@ classes that you can use:
 </div>
             <footer class="footer">
     <span class="footer__copyright">&copy;
-        2016
+        2017
         Transparent Thoughts. All rights reserved.</span>
 </footer>
         </div>

@@ -179,6 +179,31 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2013/3/6/javaee-best-practices/" title="link to 都是为了半夜能提交（一）">都是为了半夜能提交（一）</a></h2>
+
+      <p class="excerpt">
+        <p></p><p>这是一个典型的JavaEE项目：SpringMVC，Maven；需要集成三个外部系统。除了我之外，就是两个嫩得不行的小孩。从一开始我就知道，我必须把规矩定好，不然再简单的东西新手们也能把自己玩死。大部分规矩还是老规矩，比如<a href="http://dreamhead.blogbus.com/logs/127864877.html" target="_blank" rel="external">测试覆盖率100%</a>，当然CheckStyle啦什么的就不用说了。</p><p>但是这个项目有个特别的trick：要集成的三个外部系统，有两个一到晚上（澳洲的晚上，北京时间也就6点来钟）就歇菜了。问了客户的人，人家说是他们依赖的某系统固定歇菜周期，具体是怎样还得花工夫去找。总之这个造成的结果就是，过了北京时间6点来钟就不能提交代码了，因为一提交build就会红，因为跟那两个系统集成的测试都会挂。</p><p>虽然说我们build的时间一直就不长（没有超过三分钟），但是我每次看见跑一堆跟依赖系统连接的集成测试就觉得心里不爽；再加上晚上不能提交代码，这就更加不爽了。我白天乱七八糟的破事太多，写会儿代码就会被打断，经常得到了晚上才有大块时间集中干点事，这一家伙晚上不让提交代码，还不把我憋死啊。</p><p>所以我的目标是：我要半夜也能提交代码！</p><p>我是有具体办法的。跟依赖系统连接的集成测试，其实只要每天跑一次就行了，毕竟那些外部系统接口很稳定不会怎么变。把集成测试拿掉之后，所有我自己程序里的逻辑应该不再依赖项目之外的任何东西。这样的测试跑起来又快，又不会因为外部依赖而变得不稳定，那我就可以半夜写代码了~</p><p><em>接下来我要讲的内容：</em></p><ul><li>集成点的测试策略</li><li>没有外部依赖的开发环境</li><li>如何达到100%测试覆盖率</li><li>重构你的代码（和测试代码）</li></ul><p></p>
+
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="3月 6 2013" class="post-list__meta--date date">3月 6 2013</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2013/2/17/four-lessons-from-software-industry/" title="link to 传统行业向软件业学四招">传统行业向软件业学四招</a></h2>
 
       <p class="excerpt">
@@ -395,30 +420,6 @@ classes that you can use:
       <hr class="post-list__divider" />
     </li>
     
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2012/11/17/how-to-write-it-articles/" title="link to 如何写（看起来牛逼的）IT文章">如何写（看起来牛逼的）IT文章</a></h2>
-
-      <p class="excerpt">
-        <p>最近在《程序员》杂志发表了一篇文章：<a href="http://www.programmer.com.cn/14108/" target="_blank" rel="external">敏捷零售</a>，讲零售行业IT的一些新挑战和新动向。文章发出来，似乎反响还不错。其实写这种高观点的文章，我也刚开始尝试。把最近写几篇文章的心得分享出来，欢迎指正。</p><p><img src="http://gigix.thoughtworkers.org/assets/2012/11/15/small_writing.jpg" alt=""></p><p><strong>Thought</strong>Works的同事们写东西，技术上的硬东西总是很足的，但经常太聚焦于技术，忘了关注目标读者到底想看到什么。要写一篇看起来牛逼的文章，目标读者就要指向IT和业务的结合部：CIO/CTO什么的，这些人感兴趣的东西，最终会成为技术工作者关注的东西。那么这些位于结合部的读者，什么信息会触动他们呢？答案是：来自业务世界的压力与变化。当来自IT之外的压力迫使IT做出改变时，就是IT从业者最需要帮助时。</p><p>你要问了：可是我对这些行业也不熟悉，我怎么知道他们的业务压力是什么呢？这就是关键点（也是让文章看起来牛逼的点）所在：当你从大趋势、宏观经济的角度来看行业，其实很多行业的IT没有那么多所谓的“行业特色”，因为软件就是软件，软件有它自己的规律。比如现在的大趋势是什么？我在过去一年中演讲和写作几个不同的主题，首先讲到的都是同一个大趋势：消费互联网。智能手机让消费者随时在线，于是所有企业都有了立即联接消费者的可能性，于是所有企业都需要直面消费者的数字渠道。拿着这个趋势扫一圈，通信、金融、旅游、房地产、制造业、教育、医疗……都在给他们各自的IT提同样的挑战，是不是？所以文章的第一部分你知道该怎么写了：讲宏观趋势，以及宏观趋势在行业里投射出的现象。</p><p>抓到了宏观趋势，接下来就该分析宏观趋势对行业提出的要求——顾客想要的，就是CEO想给的，也就是CIO/CTO被逼着做的。现在这个世界越来越明显地朝着精益的方向去了，顾客想要的，发挥点想象力，无非都是：更便捷的服务、更低廉的价格、更愉悦的体验、更丰富的信息……所以文章的第二部分就可以讲讲，在宏观趋势的影响下，顾客想要IT给他们提供哪些以前没有的东西。（这个时候作为技术宅的你如果每天看的新闻还算有点品位的话，应该已经感到驾轻就熟了吧。）</p><p>下一部分的子标题永远都可以叫做“IT正在成为……的阻力”，不管你谈论的是哪个行业。啊啊，这是技术宅最喜欢写的部分：挑毛病。IT的毛病实在太多了，对应着前面分析的“顾客想要的”，一条一条来挑，为什么现在的IT不能满足。比如说顾客想要更个性化的体验，现在的IT能力就没法知道顾客到底是什么样的脾气怎么给他个性化？诸如此类。这部分技术宅应该很有把握写出来让读者如芒在背吧。</p><p>再然后就是解决方案了，“技术上的硬东西”到这个时候才粉墨登场。这个时候拿着解决方案，我们就不再是空口喊“持续交付就是好啊就是好啊就是好”，而是对着前面一部分列的毛病，一条条讲怎么解决这些挑战了。“你那IT团队都已经成为阻力了还不好好听我给你开药方”什么的，这才是专业技术人士应该有的范儿啊。</p><p>简单总结：宏观趋势 = 顾客的诉求 = IT的短板 = 解决方案。再加一个虎头一个豹尾，一篇看起来牛逼的文章就搞定。</p><p><em>P.S. 下面是我构思《敏捷零售》这篇文章时第一个版本的大纲，供各位参考。</em></p><p><a href="http://www.flickr.com/photos/gigix/8191942805/" title="Retail Agility by Gigix, on Flickr" target="_blank" rel="external"><img src="http://farm9.staticflickr.com/8208/8191942805_a42520b692.jpg" width="500" height="118" alt="Retail Agility"></a></p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="11月 17 2012" class="post-list__meta--date date">11月 17 2012</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
   </ol>
 
   <hr class="post-list__divider " />
@@ -441,7 +442,7 @@ classes that you can use:
 </div>
             <footer class="footer">
     <span class="footer__copyright">&copy;
-        2016
+        2017
         Transparent Thoughts. All rights reserved.</span>
 </footer>
         </div>

@@ -174,6 +174,30 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2008/12/24/rhythm-of-code-jam/" title="link to 快速冲锋步">快速冲锋步</a></h2>
+
+      <p class="excerpt">
+        <p>快速冲锋也有节奏。把节奏记下来，下次可以改进。这就是泰勒在伯利恒钢铁公司做过的事。</p><ol><li>愿景（1小时）：我要做个东西，要快。也许应该试试用Rails做？因为它很快。似乎没有特别的原因阻碍用Rails？是的，没有。</li><li>空谈（1小时）：它好像是个什么东西。它看起来有点像Mephisto吗？呃，Mephisto是什么？你看，我用Mephisto做了我的blog和AgileChina的网站。不错，看起来有点像。</li><li>部署（3小时）：给我服务器，我把Mephisto架起来。没问题，连域名都给你。<ol><li>Rails 2.2在Windows上不好使，因为MySQL gem的原因，也许应该装Ruby version而非win32 version</li><li><a href="http://www.javaeye.com/topic/43290" target="_blank" rel="external">在Windows平台使用Apache2.2和Mongrel运行Ruby onRails</a></li></ol></li><li>原型+反馈（3小时）：现在你可以添加内容了。管理后台和我想的不一样。我们可以定制Mephisto。定制是一堆破事，重做也是一堆破事。你让我想想。</li><li>抛弃（30分钟）：现在我基本上知道你要什么了。我决定重做。</li><li>堆砌（2小时）：插件，generator。我知道所有的convention。没有测试。我要看到第一个页面，让我可以部署它。<ol><li>第一个model不是User，而是核心概念</li><li>第一组数据写进fixture，直接load到产品系统</li><li>第一个migration叫做release_1，不允许回滚</li><li>第一个build脚本就用上svn.rake</li><li>用TODO文件来管理storys/defects/unknowns</li></ol></li><li>再次部署（30分钟）：尝试过Mephisto，现在我知道该怎么部署了。</li><li>反馈+小步前进（6小时）：好像可以发布内容了，酷。用户权限我是这样设想的。能不能这样简化？以后我们可以这样去改变。可以，我们可以先控制邀请。<ol><li>给build脚本加上stats：我允许现在测试覆盖率低，但从现在开始它必须一直提高</li><li>每次代码修改开始加上测试，因为我开始记不清每个细节了</li><li>没有Selenium</li><li>每个story完成后立即部署</li></ol></li><li>发布+反馈（1小时）：告诉我一个帐号。quentin和admin都可以。我添加了一些东西，有些更多的想法。TMD…我本来没打算发布的。看在你费劲的份上，就算我发布了吧，现在开始不再清数据库。<ol><li>新的migrations：每个migration只做一件事，每个migration都可以rollback。</li></ol></li><li>继续小步前进（6小时）：SMTP server帮我搞搞好。80端口给我。我收到邮件了。80端口腾出来以后我再改Apache配置，共计需要删掉4字符。<ol><li>界面的手工验证开始变多</li><li>复杂的业务逻辑出现，借用了上一个项目的经验，还是出了一点tricky的错误，耗时30分钟</li></ol></li></ol><p>从周六开始，共计5天业余时间，或换算成3个工作日。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="12月 24 2008" class="post-list__meta--date date">12月 24 2008</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2008/12/24/deploy-early/" title="link to 最后一公里总是比你想象的长">最后一公里总是比你想象的长</a></h2>
 
       <p class="excerpt">
@@ -390,30 +414,6 @@ classes that you can use:
       <hr class="post-list__divider" />
     </li>
     
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2008/10/14/prefer-keyboard-than-mouse/" title="link to 首选键盘而非鼠标">首选键盘而非鼠标</a></h2>
-
-      <p class="excerpt">
-        <p>（摘自<a href="http://oreilly.com/catalog/9780596519780/" target="_blank" rel="external">The Productive Programmer</a>）</p><p>开发人员实质上是特殊的数据录入职员。我们输入计算机的数据不是来自外界资源，而是来自于我们的大脑。但是数据录入操作员的教训仍能使我们产生共鸣。根据他们所能输入的信息量来收费的数据录入工人知道，使用鼠标会以数量级程度降低他们的速度。开发人员可以从中学到重要的一课。</p><p>VI和Emacs都支持一个非常重要的加速器：永远不要将你的双手从字符按键上移开。即使是下移到键盘上的箭头按键都会使你慢下来，因为你必须再次回到主排键来输入字符。真正有用的编辑器会使你的手保持在最佳位置，同时进行输入和导航。</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="10月 14 2008" class="post-list__meta--date date">10月 14 2008</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
   </ol>
 
   <hr class="post-list__divider " />
@@ -436,7 +436,7 @@ classes that you can use:
 </div>
             <footer class="footer">
     <span class="footer__copyright">&copy;
-        2016
+        2017
         Transparent Thoughts. All rights reserved.</span>
 </footer>
         </div>
