@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gigix.thoughtworkers.org/"/>
-  <updated>2017-03-26T10:12:59.000Z</updated>
+  <updated>2017-03-26T13:27:32.000Z</updated>
   <id>http://gigix.thoughtworkers.org/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>智能技术的伦理风险：研究框架</title>
+    <title>Cybersyn的系统架构</title>
     <link href="http://gigix.thoughtworkers.org/2017/3/27/cybersyn-architecture/"/>
     <id>http://gigix.thoughtworkers.org/2017/3/27/cybersyn-architecture/</id>
     <published>2017-03-27T05:01:00.000Z</published>
-    <updated>2017-03-26T10:12:59.000Z</updated>
+    <updated>2017-03-26T13:27:32.000Z</updated>
     
     <content type="html"><![CDATA[<p><em>前文《<a href="http://gigix.thoughtworkers.org/2016/12/24/cybersyn-1/">半个世纪前的大数据时代</a>》讲到，1970年代初，英国的控制论学者斯塔福·比尔应阿连德总统之邀，远赴智利去开发一套用于管理国有经济的大数据IT系统。本文将介绍这套远远超前于时代的系统是如何在当时的技术条件下架构和建设起来的。</em></p>
 <p><img src="/assets/2017/3/27/title.jpeg"></p>
