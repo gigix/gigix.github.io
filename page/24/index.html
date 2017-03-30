@@ -174,6 +174,30 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2010/7/14/i-am-not-doraameng/" title="link to 不做小叮当">不做小叮当</a></h2>
+
+      <p class="excerpt">
+        <p>ZD亲热地搂着我的肩膀说：“还是你有本事啊，这次才看到你的能力有多强。”我苦笑着说：“我的英名早晚要毁在你手上。”</p><p>他是我的客户，也是老乡，而且常常配合很默契。</p><p>第一次，二百多人的团队分散在两个城市五个办公地点。ZD对我说，那个产品，发货量巨大，是整个公司最赚钱的部门，客户遍布全球，要是把它搞定了，意义重大。（当时ZB在旁边热情澎湃，被我俩联手泼了一盆冷水。那是我第一次发现，和ZD配合有不需准备的默契。）我沉吟良久，说它真的风险太大，我真的不敢做。但最后我还是去了，因为一个不能让ZD知道的理由。</p><p>第二次，一支孤零零的团队正在被一个巨兽客户折磨得要死要活。ZD对我说，这次能让客户感受到我们的变化，要是把它搞定了，意义重大。我又沉吟良久，说它真的真的风险太大，我真的真的不敢做。但最后我还是去了，又是因为一个不能让ZD知道的理由。</p><p>我跟他说，其实只是运气好。他笑笑，不信，或者说是装着不信。</p><p>小熊说，每个问题解决者都有多拉A梦情结，而康夫每次痛扁技安之后灿烂的笑容便是对小叮当最好的褒奖，是他继续从口袋里掏出法宝的源动力。我不得不承认，挑战一下自己并且挑战成功（不论这成功的原因是什么）的感觉是很爽的。我想ZD一定也知道我的爽感，所以他笑而不语。</p><p>所以，尽管真的很想亲眼看到这个大雪球轰然滚下的最后一刻，尽管真的很嫉妒<a href="http://yizhituzei.blogbus.com/" target="_blank" rel="external">小熊的博客</a>比我写得更有料并且更有文采，还是应该抽身了。让自己沉浸在小叮当帮助康夫破涕为笑的愉悦之中，这不是我想要的。</p><p>何况，ZD你懂的，我不能等到英名真的毁在你手上的那一天。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="7月 14 2010" class="post-list__meta--date date">7月 14 2010</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2010/7/12/innovation/" title="link to 出新意于法度之中">出新意于法度之中</a></h2>
 
       <p class="excerpt">
@@ -377,30 +401,6 @@ classes that you can use:
       <div class="post-list__meta">
 
         <time datetime="6月 12 2010" class="post-list__meta--date date">6月 12 2010</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2010/6/7/how-to-config-distributed-cruise-control/" title="link to 配置分布式的CruiseControl">配置分布式的CruiseControl</a></h2>
-
-      <p class="excerpt">
-        <p><a href="http://localhost:8080/documentation/distributed/index.html" target="_blank" rel="external">这个文档</a>描述得不是很清楚，因此记录一遍。首先需要同时下载<a href="http://sourceforge.net/projects/cruisecontrol/files/CruiseControl/2.8.3/cruisecontrol-src-2.8.3.zip/download" target="_blank" rel="external">src发布包</a>和<a href="http://sourceforge.net/projects/cruisecontrol/files/CruiseControl/2.8.3/cruisecontrol-bin-2.8.3.zip/download" target="_blank" rel="external">bin发布包</a>。</p>解开src发布包，在其中build distributed插件，然后把contrib目录copy到bin发布包解压后的目录：<blockquote><pre>cd $CC_SRC/contrib/distributedantcd $CC_BINcp -r $CC_SRC/contrib ./contrib</pre></blockquote>修改$CC_BIN/cruisecontrol.sh，在其中包含distributed插件的classpath：<blockquote><pre>… …CCDIST=$CCDIR/contrib/distributedCCDIST_BUILDER=$CCDIST/dist/builder/CCDIST_CORE=$CCDIST/dist/core/CCDIST_JINICORE=$CCDIST/jini-core/CCDIST_JINILIBDL=$CCDIST/jini-lib-dl/jsk-dl.jarCCDIST_CONF=$CCDIST/confEXEC=”$JAVA_HOME/bin/java $CC_OPTS -Djavax.management.builder.initial=mx4j.server.MX4JMBeanServerBuilder -Djava.security.policy=$CCDIST_CONF/insecure.policy -Dcc.library.dir=$LIBDIR -Djetty.logs=$JETTY_LOGS -jar \$LAUNCHER -lib $JAVA_HOME/lib/tools.jar -lib $CCDIST_BUILDER:$CCDIST_CORE:$CCDIST_JINICORE:$CCDIST_JINILIBDL:$CCDIST_CONF \$@ -jmxport 8000 -webport 8080 -rmiport 1099”echo $EXEC$EXEC &amp;echo $!  cc.pid</pre></blockquote>在$CC_BIN/config.xml中指定需要分布的工程：<blockquote><pre>plugin name=”distributed”classname=”net.sourceforge.cruisecontrol.builders.DistributedMasterBuilder”/… …distributedant antscript=”/usr/bin/ant”antworkingdir=”/path/to/my/project” //distributed</pre></blockquote>打开Lookup server：<blockquote><pre>cd $CC_BIN/contrib/distributed/dist/lookupant</pre></blockquote><p>然后，把cc_agent.zip拷到Agent机器上，修改conf/agent.properties配置，ant启动，就好了。</p><p>（郁闷地搞了一下午的心得是：不要尝试在Windows上做任何严肃的开发工作。Stupid Windows.）</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="6月 7 2010" class="post-list__meta--date date">6月 7 2010</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+        云时代的研发环境长什么样？ | 透明思考
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+    <meta name="author" content="Jeff Xiong">
+    
+    
+    <meta name="description" content="云计算正在毫无疑问地成为企业IT的主流。据麦肯锡调查，六成以上的企业计划在两年内将某种形式的云作为主要IT平台。在国内银行业，中国银行业信息科技“十三五”发展规划监管指导意见中明确提出：到2020年，国内银行业面向互联网场景的重要信息系统应全部迁移至云计算架构平台，其他系统迁移比例不低于60%。其他行业也有同样的趋势。信息系统云化的大背景给软件系统的研发流程带来了什么挑战，作为软件研发组织的领导者">
+    
+
+    <meta name="description" content="云计算正在毫无疑问地成为企业IT的主流。据麦肯锡调查，六成以上的企业计划在两年内将某种形式的云作为主要IT平台。在国内银行业，中国银行业信息科技“十三五”发展规划监管指导意见中明确提出：到2020年，国内银行业面向互联网场景的重要信息系统应全部迁移至云计算架构平台，其他系统迁移比例不低于60%。其他行业也有同样的趋势。信息系统云化的大背景给软件系统的研发流程带来了什么挑战，作为软件研发组织的领导者">
+<meta property="og:type" content="article">
+<meta property="og:title" content="云时代的研发环境长什么样？ | 透明思考">
+<meta property="og:url" content="http://gigix.thoughtworkers.org/2017/3/31/stack-management/index.html">
+<meta property="og:site_name" content="透明思考">
+<meta property="og:description" content="云计算正在毫无疑问地成为企业IT的主流。据麦肯锡调查，六成以上的企业计划在两年内将某种形式的云作为主要IT平台。在国内银行业，中国银行业信息科技“十三五”发展规划监管指导意见中明确提出：到2020年，国内银行业面向互联网场景的重要信息系统应全部迁移至云计算架构平台，其他系统迁移比例不低于60%。其他行业也有同样的趋势。信息系统云化的大背景给软件系统的研发流程带来了什么挑战，作为软件研发组织的领导者">
+<meta property="og:image" content="http://gigix.thoughtworkers.org/assets/2017/3/31/cloud_challenge.png">
+<meta property="og:updated_time" content="2017-03-30T15:29:41.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="云时代的研发环境长什么样？ | 透明思考">
+<meta name="twitter:description" content="云计算正在毫无疑问地成为企业IT的主流。据麦肯锡调查，六成以上的企业计划在两年内将某种形式的云作为主要IT平台。在国内银行业，中国银行业信息科技“十三五”发展规划监管指导意见中明确提出：到2020年，国内银行业面向互联网场景的重要信息系统应全部迁移至云计算架构平台，其他系统迁移比例不低于60%。其他行业也有同样的趋势。信息系统云化的大背景给软件系统的研发流程带来了什么挑战，作为软件研发组织的领导者">
+<meta name="twitter:image" content="http://gigix.thoughtworkers.org/assets/2017/3/31/cloud_challenge.png">
+
+    
+    <link rel="alternate" href="/atom.xml" title="透明思考" type="application/atom+xml">
+    
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+
+    <script src="/js/jquery.min.js"></script>
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+<header class="panel-cover panel-cover--collapsed">
+
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">透明思考</a></h1>
+
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">
+          Transparent Thoughts
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">Blog</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+------------------------------ -->
+
+<nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+
+  <!-- Github -->
+  <li class="navigation__item">
+    <a href="https://github.com/gigix" title="Gigix on GitHub" target="_blank">
+      <i class='icon icon-social-github'></i>
+      <span class="label">GitHub</span>
+    </a>
+  </li>
+
+  </ul>
+</nav>
+
+          <script>
+    function doSearch() {
+        var keyword = $('#keyword').val();
+        if (keyword.trim() === '') {
+            window.location.href = 'http://gigix.thoughtworkers.org/#blog';
+        } else {
+            window.open('http://www.google.com/search?q=site:gigix.thoughtworkers.org+' + keyword);
+        }
+    }
+</script>
+
+<div class="search">
+    <input id="keyword" type="text"/>
+    <input type="button" value="Search" class="btn" onclick="doSearch()"/>
+</div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+    <header class="post-header">
+
+        
+        <div class="post-meta">
+            <time datetime="3月 31 2017"
+                  class="post-meta__date date">3月 31 2017</time>
+            &#8226;
+
+        <span class="post-meta__tags tags">
+
+            <font class="categories">
+                
+            </font>
+            
+
+        </span>
+        </div>
+        
+
+        <h1 class="post-title">云时代的研发环境长什么样？</h1>
+    </header>
+
+    <section class="post">
+        <p>云计算正在毫无疑问地成为企业IT的主流。据<a href="http://www.mckinsey.com/industries/high-tech/our-insights/it-as-a-service-from-build-to-consume" target="_blank" rel="external">麦肯锡调查</a>，六成以上的企业计划在两年内将某种形式的云作为主要IT平台。在国内银行业，<a href="http://www.cbrc.gov.cn/chinese/home/docView/1940BD4B2D7740CC90F4FE4C6B3CD316.html" target="_blank" rel="external">中国银行业信息科技“十三五”发展规划监管指导意见</a>中明确提出：到2020年，国内银行业面向互联网场景的重要信息系统应全部迁移至云计算架构平台，其他系统迁移比例不低于60%。其他行业也有同样的趋势。信息系统云化的大背景给软件系统的研发流程带来了什么挑战，作为软件研发组织的领导者应该如何应对这些挑战？这是本文试图回答的问题。</p>
+<p><img src="/assets/2017/3/31/cloud_challenge.png"></p>
+<p>首先，有必要回顾云计算给企业IT带来的收益。<a href="https://www.ibm.com/cloud-computing/learn-more/benefits-of-cloud-computing/" target="_blank" rel="external">IBM认为</a>云计算有三大优势：</p>
+<ol>
+<li>更灵活。用户可以根据需要，“弹性地”获得IT服务。</li>
+<li>更高效。减少IT团队管理和维护底层基础设施的工作量，IT服务可以更快推向市场。</li>
+<li>战略价值。通过灵活组合现有IT资产与新兴数字渠道，支撑企业业务创新。</li>
+</ol>
+<blockquote>
+<p><strong>云计算与虚拟化的区别</strong></p>
+<p>有很多企业已经采用了虚拟化技术：将企业的计算资源（服务器、存储等）集中管理，以虚拟机的形式分配给使用者。<a href="http://www.businessnewsdaily.com/5791-virtualization-vs-cloud-computing.html" target="_blank" rel="external">虚拟化与云计算的区别</a>在于：虚拟化是指“用软件管理硬件资源”，而云计算是指以虚拟化方式管理硬件资源之后能够对外提供的服务。</p>
+<p>除去这个概念上的差异，我们注意到一些企业在谈论“虚拟化”的时候，背后隐含着一个自动化程度不高的、需要人工参与的虚拟机申请和开通的流程。在这样的流程下，获得一台虚拟主机需要的时间通常以天计。因此，虚拟机的使用者倾向于预先申请虚拟主机并长期占用。在这种情况下，“虚拟化”往往意味着缺乏弹性（elasticity）的计算资源分配——尽管虚拟化技术本身并不妨碍弹性。</p>
+</blockquote>
+<p>可以看出，为了兑现云计算的三大优势，企业IT系统必须云化：软件的形态由从前需要在本地安装的软件包，转变为透过网络在线使用的服务，让使用者随时能够获得；原来体型巨大的单体（monolithic）应用，需要转变为细粒度的服务，从而支持灵活的组合与复用。</p>
+<p>原来习惯了开发本地安装的软件包和/或巨大的单体应用的研发团队，现在要转为开发云化的软件服务，这个转变并非总是无痛的。首先，研发交付物的形态应该是对云环境友好的。从前研发交付物通常是以软件包的形式提供给用户或是运维团队，例如平台特定的JAR、WAR、EGG等软件包，或是RPM、DEB、MSI等操作系统特定的软件包。软件包是一种对云环境不友好的交付形式，因为它没有包含软件运行的环境。例如一个软件需要用到PostgreSQL数据库和monit作为监控工具，平台特定的软件包无法确保这些软件依赖的存在；某些操作系统特定的软件包可以描述软件依赖，但也无法确保依赖软件被正确地配置。过去一段时间里，自动化的配置工具（例如Chef/Puppet/Ansible）被用于解决运行时环境的问题。而在今天的技术背景下，理想的研发交付物应该是容器镜像（很可能是一组彼此连接的容器镜像），可以在云上直接运行。</p>
+<p>对研发交付物的要求随即会影响到研发过程。为了在研发流程的出口得到服务化友好的交付物，最好是在整个开发过程中一直使用与生产环境近似的环境。例如开发人员应该使用全套环境随时验证，自动化测试和手工测试都基于全套环境开展。在这种情况下，环境的设置、管理、更新不可能由每个开发人员和测试人员自己进行，所以环境的管理更新必定是集中进行的，环境的设置必定是自动化的。而且，如果环境固定分配、长期使用，对计算资源的占用可能很大，所以环境应该是云化的、弹性的、按需获得的。</p>
+<p>云计算的大背景还会影响研发实践。为了降低搭建研发环境的技术难度，云化的研发环境应该内建研发工具链（包含开发工具、质量保障工具、持续集成/持续交付工具、DevOps工具、项目管理工具等）。为了规范团队研发质量水平，良好的研发实践（例如代码静态检查、自动化测试等）和流程要求应该固化在工具的日常操作中。理想的情况下，研发团队应该只聚焦关注业务功能开发。开发工具的组合、生产环境的配置、持续集成和持续交付流水线的搭建等工作都应该被标准化和自动化。</p>
+<p>综上所述，在云计算的大背景下，IT组织需要将更多的软件应用部署在云上。云化的IT系统对软件研发的交付物、研发过程、研发实践都提出了新的要求。我们认为：现代IT组织应该从研发环节开始，以原生支持云计算的方式提供、管理和维护研发环境，从而在研发过程中利用云环境的弹性，确保研发交付物对云环境友好，并把优秀的研发实践和流程要求内嵌到研发环境之中。IT组织可以通过以下方式管理其研发环境：</p>
+<ul>
+<li>将标准的研发环境封装为虚拟化、云化的技术栈，由技术专家管理维护；</li>
+<li>核心业务价值与技术支撑解耦，工程师专注于业务系统的开发；</li>
+<li>自动化研发流程，降低研发管理成本。</li>
+</ul>
+<p>在下一篇文章里，我将介绍如何具体实现技术栈的云化管理，把研发技术栈以PaaS的形式提供给开发人员。</p>
+
+    </section>
+
+    <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style_32x32" style="height: 40px">
+    <a class="jiathis_button_tsina"></a>
+    <a class="jiathis_button_weixin"></a>
+    <a class="jiathis_button_douban"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis"
+       target="_blank"></a>
+</div>
+<script type="text/javascript">
+    var jiathis_config = {
+        summary: "",
+        shortUrl: false,
+        hideMore: false
+    }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code_mini/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+    
+</article>
+
+
+            <footer class="footer">
+    <span class="footer__copyright">&copy;
+        2017
+        Transparent Thoughts. All rights reserved.</span>
+</footer>
+        </div>
+    </div>
+
+    <!-- The main JavaScript file for Casper -->
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    <script src="/js/jquery.imagesloaded.min.js"></script>
+    <script src="/js/gallery.js"></script>
+    <script src="/js/jquery.githubRepoWidget.min.js"></script>
+    <script type="text/javascript"
+            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> 
+      MathJax.Hub.Config({ 
+        tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+    }); 
+
+    </script>
+
+    <!--kill ie6 -->
+    <!--[if IE 6]>
+    <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+    <![endif]-->
+
+    <!--  google analytics -->
+    <script>
+        // add your google analytics code here
+    </script>
+
+    <!-- totop -->
+    <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">
+        <a title="back to top"><img style="width:30px;height:30px;" src="/images/totop.png"/></a>
+    </div>
+    <script>
+        (function ($) {
+            var upperLimit = 100;
+            var scrollElem = $('#totop');
+            var scrollSpeed = 500;
+            scrollElem.hide();
+            $(window).scroll(function () {
+                var scrollTop = $(document).scrollTop();
+                if (scrollTop > upperLimit) {
+                    $(scrollElem).stop().fadeTo(300, 1); // fade back in
+                } else {
+                    $(scrollElem).stop().fadeTo(300, 0); // fade out
+                }
+            });
+            $(scrollElem).click(function () {
+                $('html, body').animate({scrollTop: 0}, scrollSpeed);
+                return false;
+            });
+        })(jQuery);
+    </script>
+
+    <!-- fancybox -->
+    
+    <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+    <script src="/fancybox/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript">
+        (function ($) {
+            $('.fancybox').fancybox();
+        })(jQuery);
+    </script>
+    
+
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-113927-4', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <!-- CNZZ Analytics -->
+    <script src="http://s4.cnzz.com/z_stat.php?id=1255092465&web_id=1255092465" language="JavaScript"></script>
+
+</body>
+</html>

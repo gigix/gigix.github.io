@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gigix.thoughtworkers.org/"/>
-  <updated>2017-03-26T13:27:32.000Z</updated>
+  <updated>2017-03-30T15:29:41.000Z</updated>
   <id>http://gigix.thoughtworkers.org/</id>
   
   <author>
@@ -14,6 +14,48 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>云时代的研发环境长什么样？</title>
+    <link href="http://gigix.thoughtworkers.org/2017/3/31/stack-management/"/>
+    <id>http://gigix.thoughtworkers.org/2017/3/31/stack-management/</id>
+    <published>2017-03-31T05:01:00.000Z</published>
+    <updated>2017-03-30T15:29:41.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>云计算正在毫无疑问地成为企业IT的主流。据<a href="http://www.mckinsey.com/industries/high-tech/our-insights/it-as-a-service-from-build-to-consume" target="_blank" rel="external">麦肯锡调查</a>，六成以上的企业计划在两年内将某种形式的云作为主要IT平台。在国内银行业，<a href="http://www.cbrc.gov.cn/chinese/home/docView/1940BD4B2D7740CC90F4FE4C6B3CD316.html" target="_blank" rel="external">中国银行业信息科技“十三五”发展规划监管指导意见</a>中明确提出：到2020年，国内银行业面向互联网场景的重要信息系统应全部迁移至云计算架构平台，其他系统迁移比例不低于60%。其他行业也有同样的趋势。信息系统云化的大背景给软件系统的研发流程带来了什么挑战，作为软件研发组织的领导者应该如何应对这些挑战？这是本文试图回答的问题。</p>
+<p><img src="/assets/2017/3/31/cloud_challenge.png"></p>
+<p>首先，有必要回顾云计算给企业IT带来的收益。<a href="https://www.ibm.com/cloud-computing/learn-more/benefits-of-cloud-computing/" target="_blank" rel="external">IBM认为</a>云计算有三大优势：</p>
+<ol>
+<li>更灵活。用户可以根据需要，“弹性地”获得IT服务。</li>
+<li>更高效。减少IT团队管理和维护底层基础设施的工作量，IT服务可以更快推向市场。</li>
+<li>战略价值。通过灵活组合现有IT资产与新兴数字渠道，支撑企业业务创新。</li>
+</ol>
+<blockquote>
+<p><strong>云计算与虚拟化的区别</strong></p>
+<p>有很多企业已经采用了虚拟化技术：将企业的计算资源（服务器、存储等）集中管理，以虚拟机的形式分配给使用者。<a href="http://www.businessnewsdaily.com/5791-virtualization-vs-cloud-computing.html" target="_blank" rel="external">虚拟化与云计算的区别</a>在于：虚拟化是指“用软件管理硬件资源”，而云计算是指以虚拟化方式管理硬件资源之后能够对外提供的服务。</p>
+<p>除去这个概念上的差异，我们注意到一些企业在谈论“虚拟化”的时候，背后隐含着一个自动化程度不高的、需要人工参与的虚拟机申请和开通的流程。在这样的流程下，获得一台虚拟主机需要的时间通常以天计。因此，虚拟机的使用者倾向于预先申请虚拟主机并长期占用。在这种情况下，“虚拟化”往往意味着缺乏弹性（elasticity）的计算资源分配——尽管虚拟化技术本身并不妨碍弹性。</p>
+</blockquote>
+<p>可以看出，为了兑现云计算的三大优势，企业IT系统必须云化：软件的形态由从前需要在本地安装的软件包，转变为透过网络在线使用的服务，让使用者随时能够获得；原来体型巨大的单体（monolithic）应用，需要转变为细粒度的服务，从而支持灵活的组合与复用。</p>
+<p>原来习惯了开发本地安装的软件包和/或巨大的单体应用的研发团队，现在要转为开发云化的软件服务，这个转变并非总是无痛的。首先，研发交付物的形态应该是对云环境友好的。从前研发交付物通常是以软件包的形式提供给用户或是运维团队，例如平台特定的JAR、WAR、EGG等软件包，或是RPM、DEB、MSI等操作系统特定的软件包。软件包是一种对云环境不友好的交付形式，因为它没有包含软件运行的环境。例如一个软件需要用到PostgreSQL数据库和monit作为监控工具，平台特定的软件包无法确保这些软件依赖的存在；某些操作系统特定的软件包可以描述软件依赖，但也无法确保依赖软件被正确地配置。过去一段时间里，自动化的配置工具（例如Chef/Puppet/Ansible）被用于解决运行时环境的问题。而在今天的技术背景下，理想的研发交付物应该是容器镜像（很可能是一组彼此连接的容器镜像），可以在云上直接运行。</p>
+<p>对研发交付物的要求随即会影响到研发过程。为了在研发流程的出口得到服务化友好的交付物，最好是在整个开发过程中一直使用与生产环境近似的环境。例如开发人员应该使用全套环境随时验证，自动化测试和手工测试都基于全套环境开展。在这种情况下，环境的设置、管理、更新不可能由每个开发人员和测试人员自己进行，所以环境的管理更新必定是集中进行的，环境的设置必定是自动化的。而且，如果环境固定分配、长期使用，对计算资源的占用可能很大，所以环境应该是云化的、弹性的、按需获得的。</p>
+<p>云计算的大背景还会影响研发实践。为了降低搭建研发环境的技术难度，云化的研发环境应该内建研发工具链（包含开发工具、质量保障工具、持续集成/持续交付工具、DevOps工具、项目管理工具等）。为了规范团队研发质量水平，良好的研发实践（例如代码静态检查、自动化测试等）和流程要求应该固化在工具的日常操作中。理想的情况下，研发团队应该只聚焦关注业务功能开发。开发工具的组合、生产环境的配置、持续集成和持续交付流水线的搭建等工作都应该被标准化和自动化。</p>
+<p>综上所述，在云计算的大背景下，IT组织需要将更多的软件应用部署在云上。云化的IT系统对软件研发的交付物、研发过程、研发实践都提出了新的要求。我们认为：现代IT组织应该从研发环节开始，以原生支持云计算的方式提供、管理和维护研发环境，从而在研发过程中利用云环境的弹性，确保研发交付物对云环境友好，并把优秀的研发实践和流程要求内嵌到研发环境之中。IT组织可以通过以下方式管理其研发环境：</p>
+<ul>
+<li>将标准的研发环境封装为虚拟化、云化的技术栈，由技术专家管理维护；</li>
+<li>核心业务价值与技术支撑解耦，工程师专注于业务系统的开发；</li>
+<li>自动化研发流程，降低研发管理成本。</li>
+</ul>
+<p>在下一篇文章里，我将介绍如何具体实现技术栈的云化管理，把研发技术栈以PaaS的形式提供给开发人员。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;云计算正在毫无疑问地成为企业IT的主流。据&lt;a href=&quot;http://www.mckinsey.com/industries/high-tech/our-insights/it-as-a-service-from-build-to-consume&quot; target=&quot;_b
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Cybersyn的系统架构</title>
@@ -826,35 +868,6 @@
     <summary type="html">
     
       &lt;p&gt;大数据是当下最热门的IT主题之一。据&lt;a href=&quot;http://www.mckinsey.com/insights/business_technology/big_data_the_next_frontier_for_innovation&quot; target=&quot;_blank
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>共享经济到底是个什么鬼？</title>
-    <link href="http://gigix.thoughtworkers.org/2015/11/22/myth-of-share-economy/"/>
-    <id>http://gigix.thoughtworkers.org/2015/11/22/myth-of-share-economy/</id>
-    <published>2015-11-22T11:31:00.000Z</published>
-    <updated>2015-11-22T01:41:18.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><em>（本文同时发表于<a href="http://groundbreaking.cn/shehui/guoji/4498.html" target="_blank" rel="external">破土网</a>）</em></p>
-<p>据互联网创业专家的<a href="http://toutiao.com/a6192684396577751298/" target="_blank" rel="external">分析</a>，“互联网＋”把各行各业生意都开上了互联网，O2O（Online to Offline）把线上和线下整合起来。这两件事打通了业务上网的渠道，而在这个渠道上要挣钱，就要靠共享经济了。专家说，共享经济能优化资源配置，把原本闲置的资源出租利用，从而创造出一块新的市场。比如汽车，原来一辆家用轿车就上班下班通勤用，利用率不到20%；如果能借助互联网之力把白白放在停车场里的私家车共享利用起来，岂不是好事一件？</p>
-<p>可偏偏就是这共享经济的急先锋、共享租车业务的鼻祖Uber，在世界各地背了<a href="https://en.wikipedia.org/wiki/Legal_status_of_Uber&#39;s_service" target="_blank" rel="external">上百桩诉案</a>，在德国、西班牙、法国、英国等多个国家遭到抗议，两名高官还曾于今年6月在法国<a href="http://fortune.com/2015/06/29/uber-executives-arrested/" target="_blank" rel="external">被捕</a>。另一家共享经济的楷模、专事共享租房业务的Airbnb也曾在<a href="http://www.nydailynews.com/new-york/de-blasio-administration-files-lawsuit-apartments-operating-hotels-sites-liairbnb-article-1.1977461" target="_blank" rel="external">纽约</a>和<a href="http://www.huffingtonpost.com/2014/04/29/airbnb-laws-san-francisco_n_5235820.html" target="_blank" rel="external">旧金山</a>遭遇法律挑战。于是我们不禁要好奇：这共享经济到底是个什么鬼？为何明明听起来很美，却会遭到如此多的反对？</p>
-<p><img src="/assets/2015/11/22/share-economy.jpg"></p>
-<p>其实借助互联网把分散的资源集中起来提供服务，这想法并不新鲜。近的有<a href="https://en.wikipedia.org/wiki/Long_tail" target="_blank" rel="external">长尾理论</a>，说技术可以把大量分散的需求和供给匹配成可行的生意；再回想得远一点，比尔盖茨早在1995年的《未来之路》中就提到了“<a href="https://en.wikipedia.org/wiki/Disintermediation" target="_blank" rel="external">去中介化</a>”的概念：互联网可以把“中间人”（分销渠道）去掉，让生产者和消费者直接联结，降低总体成本，从而使生产者的收益有可能增加、消费者的支出有可能减少。</p>
-<p>Wikipedia的文字中，这两个“有可能”（“may”）颇可玩味。互联网的确能消解传统“中间人”的市场控制力，然而这被消解的力量是否就会让利给生产者和消费者，那又是另一回事。仍以租车为例，Uber模式一方面引入大量兼职司机压低全职司机的收入，另一方面把自己变成了比以前的出租车公司更具垄断力的平台——Uber（以及其他模仿者）要求司机只能使用自己的网络平台，这时他们倒是不把“共享”挂在嘴边了。司机一方议价力削弱，而公司一方垄断力日增，那么司机又怎会得到那只是“有可能”的收益增加呢？</p>
-<p>事实也确是如此：据笔者在美国几个大城市的观察，Uber司机大部分是非洲裔，有少许亚裔和阿拉伯裔，从未见过像Uber广告中的白人中产阶级司机，司机的收入也只堪温饱，比起传统的出租车司机尚自不如。国内的情况也相去不远，随着各家叫车平台补贴逐月减少，滴滴快车的服务水平已经向从前的黑车看齐，神州专车的司机也开始抱怨收入不佳。资本逐利的本性决定了，互联网公司“去中介化”的目的是为了建立垄断力更强的“<a href="http://www.jamieparfitt.com/blog/2014/5/4/disintermediation-reintermediation-and-cybermediation" target="_blank" rel="external">赛博中介</a>”。想着互联网公司消解了传统行业的“中间人”就会让利给消费者和劳动者？这也未免想得太乐观了一点。</p>
-<p>照资本的本性，一旦有了更强力的垄断地位，何止不会让利，还要寻求更多的利润呢。我们回头来看看Airbnb和Uber的诉案，究竟告的是什么缘由。纽约市政府起诉Airbnb，因为他们的房源有相当部分来自于不按照规定缴纳税费的非法酒店；旧金山市政府也立法要求Airbnb缴纳酒店税。Uber最近<a href="http://www.npr.org/2015/09/02/436820824/california-court-grants-uber-drivers-class-action-status" target="_blank" rel="external">在加州被起诉</a>的主要争论点则在于“司机是不是Uber的雇员”。Uber宣称自己只是“平台”，司机则是平台上的“合作伙伴”；而司机一方则认为Uber无疑是司机的雇主，该公司将从事工作所必须的开销都转嫁给了司机——这个“从事工作所必须的开销”，当然不仅是养车、加油和买新衣服，更重要的是医疗、教育、养老等社会保障。这些“共享经济”互联网企业都有一个共同的卖点：“轻资产”。确实，做着跟别人一样的生意，却不用像别人一样承担对员工、对社会的责任，这岂能不盈利、岂能不受全球资本青睐呢？至于谁应该来为市政建设、人民福利买单，不好意思，那可就不是<a href="http://www.48hills.org/2014/07/10/ubers-tax-avoidance-strategy-costs-government-millions/" target="_blank" rel="external">注册在避税天堂</a>的互联网公司们要考虑的啦。</p>
-<p>创造赛博垄断－压榨劳动者－逃避社会责任。这套赚钱逻辑，中国的互联网创业者们看国外大鳄们玩过了以后，才发现是如此好用。于是转眼之间，外卖O2O开始“<a href="http://36kr.com/p/5037825.html" target="_blank" rel="external">全民开店</a>”了，美容O2O开始“<a href="http://www.helijia.com/index.html" target="_blank" rel="external">解放天下手艺人</a>”了——至于这些据说不再依靠组织、不用阿谀上司、不必忍受压榨，实现了财务、时间、心灵三大自由的手艺人，他们的五险一金该由谁来交，互联网公司当然会说自己只是个平台而不是雇主啦。</p>
-<p>所以，现在各位看官能搞明白“共享经济”到底是个什么鬼了吧？说简单也简单，无非就是资本借助互联网掀翻原来的中间渠道，建立互联网上的强大垄断，让劳动者更加没有选择、没有组织，从而施行更残酷的剥削。如果政府要来监管盘问这家企业本应承担的社会责任去了哪里，共享经济先锋们便会一边拿出“自由”的大旗抵挡，一边趁监管法规尚未成型<a href="http://wallstreetcn.com/node/224360" target="_blank" rel="external">捞个时间差</a>。看明白了这个关节，笔者不禁暗想：这不是80年代刚改革开放那会儿的“倒爷”们早就玩儿得熟透的把戏么，又何须这么多高科技的幌子呢？</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;em&gt;（本文同时发表于&lt;a href=&quot;http://groundbreaking.cn/shehui/guoji/4498.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;破土网&lt;/a&gt;）&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;据互联网创业专家的&lt;a hre
     
     </summary>
     
