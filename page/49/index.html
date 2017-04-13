@@ -174,6 +174,30 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2007/7/1/敏捷｜精益｜中庸之道/" title="link to 敏捷｜精益｜中庸之道">敏捷｜精益｜中庸之道</a></h2>
+
+      <p class="excerpt">
+        <p>这是加入<a href="http://www.thoughtworks.com.cn/" target="_blank" rel="external"><strong>Thought</strong>Works</a>之后，我学到的重要一课：用敏捷的方式、精益的计算和中庸的思想，来克服自己曾经有的很多偏执。特别要感谢<a href="http://www.thoughtworks.com.cn/who-we-are/leadership-profiles/xiao-guo.html" target="_blank" rel="external">郭晓</a>和Michael Robinson的言传身教。</p><p>用一个实例来说明。在<a href="http://www.javaeye.com/topic/94867?page=1" target="_blank" rel="external">JavaEye的一个讨论</a>中，作者说：“项目的设计阶段，把数据库扔在一边……在设计的时候不再是优先设计数据库的结构。而是先用一个空壳来做代替，完成业务逻辑的设计，业务逻辑稳定下后……设计数据库，然后优化数据库”。反对的声音说：“对于一个需要长期维护、持续添加新功能的系统，没有好的数据库设计，最终这个应用只能是一团糟，直到无法维护。”</p><p>似乎两边都很有道理。因为，确实两边都很有道理。</p><p>现在来模仿郭晓经常摆的一个手势：把两手张开，两只手就代表两个极端——右手是“完全以数据库设计来驱动软件设计”，左手是“完全以面向对象设计来驱动数据库设计”。而所有实际存在的策略，通常都是在两只手——两个极端——中间的某个位置。可能以前靠右一点，对数据库的规范比较重视；现在靠左一点，对领域模型比较重视。但可取的、经济的、实用的策略，通常不会是在某个极端：需要同时考虑两个方面，才能得到最好的效果。</p><p>中庸之道常常有效的深层原因是边际效用递减律：对一个方面的东西重视到一定程度以后，再加入更多的重视，收到的边际效用递减；同样的重视度放到另一个方面上，能够收到更大的边际效用。让每一分投入收到最大的回报，尽可能地消除浪费，这是精益的追求。而技术偏执，例如“<a href="http://www.jdon.com/artichect/dbover.htm" target="_blank" rel="external">面向对象终结数据库</a>”或者“J2EE优于.NET”（以及它们的相反版本），容易让人忽视对边际效用的衡量而造成浪费——找不到投资回报率最高的解决方案。</p><p>敏捷也是一样。敏捷所追求的不是“简单”，而是“价值最大化”——消除浪费，精益。所以，尽管存在种种的<a href="http://www.zhangxun.com/showdoc.aspx?sname=WhatIsAgile" target="_blank" rel="external">误读</a>，对<a href="http://agilemanifesto.org/" target="_blank" rel="external">敏捷宣言</a>的正确解读应该是：在过去的数十年里，人们已经对右边的东西（过程、工具、文档、合同、计划）投入了足够多的重视，以致于再对它们投入更多的重视所能产生的边际效用已经相当低；同时人们对左边的东西（个人、交流、可工作的软件、客户协作、响应变化）投入的重视是不足的，在这里投入精力所能产生的边际效用更高。</p><p>为了获得更高的单位成本投入产出比，中庸之道往往是必须的选择。另一方面，对杠杆两端的价值进行比较通常是毫无意义的，因为不管缺了哪一端，你能得到的都将非常之少——如果不是一无所获的话。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="7月 1 2007" class="post-list__meta--date date">7月 1 2007</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2007/6/28/我的logo图片/" title="link to 我的LOGO图片">我的LOGO图片</a></h2>
 
       <p class="excerpt">
@@ -376,30 +400,6 @@ classes that you can use:
       <div class="post-list__meta">
 
         <time datetime="6月 14 2007" class="post-list__meta--date date">6月 14 2007</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2007/6/10/erlang-exercise-ring-benchmark/" title="link to Erlang Exercise- Ring Benchmark">Erlang Exercise- Ring Benchmark</a></h2>
-
-      <p class="excerpt">
-        <p>Ring benchmark：创建N个进程，把它们组合成环状；把一条消息在环上传递M圈，这样总共有N*M次消息传递。对于不同的N和M值，记录所需的时间。</p><pre>+ erl -noshell -s ring benchmark 3000 1000 -s init stopBenchmark starting: ring with 3000 nodes, send message around 1000 timesBenchmark doneTime=750000 (827000) microseconds</pre><p>第二问：用你熟悉的其他语言编写类似的程序，比较结果。</p><p>首先，0.8秒完成三百万次进程间消息传递，这足以说明问题。其次（也更重要的），我很怀疑自己是否能用别的语言写出同样功能的程序——Erlang的程序共计41行。</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="6月 10 2007" class="post-list__meta--date date">6月 10 2007</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">

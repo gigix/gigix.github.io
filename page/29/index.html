@@ -174,6 +174,31 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2009/10/12/object-calisthenics/" title="link to 对象健身操：九诫">对象健身操：九诫</a></h2>
+
+      <p class="excerpt">
+        <p><ol><li>方法只使用一级缩进。</li><li>拒绝使用else关键字。</li><li>封装所有的原生类型和字符串。</li><li>一行代码只有一个“.”运算符。</li><li>不要使用缩写。</li><li>任何类的长度不能超过五十行。</li><li>任何类中的实例变量不能超过两个。</li><li>任何包含容器的类不能再包含其他的成员变量。</li><li>不使用任何Getter/Setter/Property。</li></ol></p><p>阻碍我们写出好代码的，首先是根本不知道代码能写多好。</p><p></p>
+
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="10月 12 2009" class="post-list__meta--date date">10月 12 2009</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2009/10/4/framework-of-structural-communication/" title="link to 结构化沟通框架">结构化沟通框架</a></h2>
 
       <p class="excerpt">
@@ -378,31 +403,6 @@ classes that you can use:
       <div class="post-list__meta">
 
         <time datetime="8月 17 2009" class="post-list__meta--date date">8月 17 2009</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2009/8/12/activerecord-changed-include-behavior/" title="link to ActiveRecord Changed -include Behavior?">ActiveRecord Changed -include Behavior?</a></h2>
-
-      <p class="excerpt">
-        <p>Just figured out that ActiveRecord 2.2 generates<span class="caps">SQL</span>for<pre>Company.find(:all, :include = :people)</pre>as something like<pre>SELECT <em> FROM companySELECT person.</em> FROM person WHERE person.id in (…)</pre>In 2.1.x, it used to generate<span class="caps">SQL</span>as something like<pre>SELECT * FROM company LEFT OUTER JOIN person ON person.company_id = company.id</pre></p><p>It seems for the sake of performance…the current statements return smaller data set. However,it couldgenerate a very long<span class="caps">SQL</span>statement if you have lots of ‘people’ in this case, and thus spend longer to parse andexecute.</p><p>And…WHEN did this change happen? I’m wondering…</p><p></p>
-
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="8月 12 2009" class="post-list__meta--date date">8月 12 2009</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">

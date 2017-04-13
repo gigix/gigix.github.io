@@ -174,6 +174,31 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2007/9/25/do-not-program-defensively/" title="link to Do not program &quot;defensively&quot;">Do not program &quot;defensively&quot;</a></h2>
+
+      <p class="excerpt">
+        <p></p><p>(From<a href="http://www.erlang.se/doc/programming_rules.shtml" target="_blank" rel="external">Erlang Programming Rules</a>)</p><p>A defensive program is one where the programmer does not “trust” the input data to thepart of the system they are programming. In general one should not test input data to functions forcorrectness. Most of the code in the system should be written with the assumption that the inputdata to the function in question is correct. Only a small part of the code should actually performany checking of the data. This is usually done when data “enters” the system for thefirst time, once data has been checked as it enters the system it should thereafter be assumedcorrect.</p>Example:<pre><code>%% Args: Option is all|normalget_server_usage_info(Option, AsciiPid) -Pid = list_to_pid(AsciiPid),case Option ofall - get_all_info(Pid);normal - get_normal_info(Pid)end.</code></pre>The function will crash if Option neither normal nor all, and it should do that. The caller isresponsible for supplying correct input.<p></p>
+
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="9月 25 2007" class="post-list__meta--date date">9月 25 2007</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2007/9/24/look-big-do-small/" title="link to 琐碎的伟大">琐碎的伟大</a></h2>
 
       <p class="excerpt">
@@ -376,30 +401,6 @@ classes that you can use:
       <div class="post-list__meta">
 
         <time datetime="8月 23 2007" class="post-list__meta--date date">8月 23 2007</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2007/8/17/itechtag-重建软件开发者的声望/" title="link to iTechTag- 重建软件开发者的声望">iTechTag- 重建软件开发者的声望</a></h2>
-
-      <p class="excerpt">
-        <p>我的blog右边栏里多出了一个mashup的小框：<a href="http://www.itechtag.com/people/view/5" target="_blank" rel="external">我的技能云</a>。提供者是<a href="http://www.itechtag.com/" target="_blank" rel="external">iTechTag</a>。iTechTag出自我的一个点子，被<a href="http://www.1sters.com/" target="_blank" rel="external">1sters!</a>变成了现实。iTechTag到底是什么？抄一段“网站介绍”。</p><p>＊＊＊＊＊＊＊＊</p><p>作为软件开发者，我们从一个又一个的项目中得到了什么？除了学到新的知识、得到应有的薪酬与职位，我们还积累了良好的声望：我们生产有用的软件，我们又快又好地完成工作，我们用自己的专业技能为客户创造了巨大的价值。作为一个软件开发者，我们无时无刻不在为此骄傲。</p><p>但声望给我们带来了多少利益？还有谁记得你几年前完成的那些“不可能的任务”？还有谁记得你通宵加班为项目做出的贡献？还有谁记得客户和领导曾给你的赞扬？我们的声望还没来得及给我们带来回报，就匆匆地销声匿迹了。</p><p><strong>我们的声望被严重低估了。</strong></p><p>我们创建“技能云”就是为了重建软件开发者的声望。我们希望记录下自己辛勤工作的成果，并与他人分享我们的骄傲。我们希望让别人知道我们掌握什么技能、参与过什么项目、帮助过什么客户、做出过什么贡献。我们希望让自己、让同事、让朋友、让所有关注我们的人有机会了解：我们是多么优秀的软件开发者。</p><p>＊＊＊＊＊＊＊＊</p><p>记录自己做过的项目，在自己的blog里放上<a href="http://www.itechtag.com/widget/index" target="_blank" rel="external">“我的技能云”</a>，让所有看到你blog的人都知道你有多么了不起。这就是我的——iTechTag的——想法。</p><p>（关于1sters!团队，请看InfoQ中文站的报道：<a href="http://www.infoq.com/cn/news/2007/08/rails-professional-services" target="_blank" rel="external">梦想上铁道</a>。）</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="8月 17 2007" class="post-list__meta--date date">8月 17 2007</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">
