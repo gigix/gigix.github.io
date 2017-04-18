@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gigix.thoughtworkers.org/"/>
-  <updated>2017-04-18T13:53:22.000Z</updated>
+  <updated>2017-04-18T13:58:42.000Z</updated>
   <id>http://gigix.thoughtworkers.org/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://gigix.thoughtworkers.org/2017/4/19/walmart-digitization/"/>
     <id>http://gigix.thoughtworkers.org/2017/4/19/walmart-digitization/</id>
     <published>2017-04-19T05:01:00.000Z</published>
-    <updated>2017-04-18T13:53:22.000Z</updated>
+    <updated>2017-04-18T13:58:42.000Z</updated>
     
     <content type="html"><![CDATA[<p>尽管2009年就已上线了电商平台Marketplace，但直到2011年，沃尔玛在数字化领域也不能算成功者。当时他们的电商网站只有相当基本的功能，用户体验不算方便，搜索不太好用，也不能与店面或供应链无缝对接。之前的几年，沃尔玛的电商收入跟其他零售商（例如西尔斯、梅西）一样缓慢线性增长。正因为如此，当沃尔玛的电商收入在2011年至2014年的三年间增长150%、从年销量49亿美元增长到122亿美元、超过史泰博（Staples）成为亚马逊和苹果之后美国第三大在线零售商时，这一变化才更令人好奇。</p>
 <p><img src="/assets/2017/4/19/wal-mart.jpg"></p>
@@ -68,6 +68,16 @@
 <li>沃尔玛的电商平台支持多种客户触点（电脑、移动）。Walmart.com在美国的流量超过一半来自移动设备，Walmart Pay应用部署到4600多家门店。</li>
 <li>使用大数据（购买行为、搜索历史等）个性化顾客的交互体验。个性化搜索引擎Polaris提升了20%在线销售转化率。</li>
 <li>WMX支持单一顾客视图，形成对顾客的全面理解。</li>
+</ul>
+<h2 id="参考材料"><a href="#参考材料" class="headerlink" title="参考材料"></a>参考材料</h2><ul>
+<li><a href="https://www.applicoinc.com/blog/walmart-jet-digital-transformation/" target="_blank" rel="external">电商平台的介绍</a></li>
+<li><a href="https://rctom.hbs.org/submission/digitization-at-walmart/" target="_blank" rel="external">业务数字化整体介绍</a></li>
+<li><a href="https://www.capgemini-consulting.com/resource-file-access/resource/pdf/walmart_pov_15_7_2015.pdf" target="_blank" rel="external">另一篇业务数字化整体介绍</a></li>
+<li><a href="https://risnews.com/walmart-boosts-efficiency-digital-media-platform" target="_blank" rel="external">关于WMX的报道</a></li>
+<li><a href="grumomedia.com/walmart-exchange-wmx/">介绍WMX的视频</a></li>
+<li><a href="https://digit.hbs.org/submission/walmart-exchange-using-data-to-go-from-retail-to-media/" target="_blank" rel="external">WMX的分析</a></li>
+<li><a href="https://www.youtube.com/watch?v=SPGCdziXlHU" target="_blank" rel="external">关于微服务架构转型的演讲</a></li>
+<li><a href="https://techcrunch.com/2016/01/26/walmart-launches-oneops-an-open-source-cloud-and-application-lifecycle-management-platform/" target="_blank" rel="external">关于收购OneOps的报道</a></li>
 </ul>
 ]]></content>
     
