@@ -179,6 +179,30 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2010/8/11/done-done/" title="link to 把事情做完">把事情做完</a></h2>
+
+      <p class="excerpt">
+        <p>跟<a href="http://www.tuohuang.info/" target="_blank" rel="external">一个小朋友</a>结对。拿在手上的是一张叫做“高级搜索”的故事。小朋友说，功能已经做好了，今天的目标是给它加上<a href="http://watin.sourceforge.net/" target="_blank" rel="external">WatiN</a>的功能测试。</p><p>于是打开页面，搜索一把，呃…高级搜索的四个条件输入框，有两个填错了东西。小朋友不好意思地说，后台的逻辑都做好了，HTML还差一点点。因为昨天晚上要聚餐，所以就留下了。</p><p>改好HTML，再试一试，呃…正好是刚才没弄好的两个条件输入框，如果组合起来使用就会出错，啥也搜不出来了。仔细往里面一看，原来这两个条件的组合是比较奇妙滴…需要修改整个搜索算法，还需要自己实现一个“集合的交集”（stupidC#…）总而言之，用了大半天时间，才把“高级搜索”真正做完…咻～可以开始写测试了。</p><p>记得某人曾经告诉我，H司某产品的代码，有40%是在大家都以为“差不多做完了”的连调测试阶段写进去的。（给小朋友讲这个故事，似乎小朋友不是很有感觉，sigh～～）</p><p>所以，做一件事就做完，做到可以给客户验收的程度，然后再开始下一件事。自以为90%完成的东西，通常还需要再花一倍时间才能真正做完。（昨天<a href="http://www.iamhukai.com/" target="_blank" rel="external">胡凯</a>再次验证了这一理论的正确性。）</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="8月 11 2010" class="post-list__meta--date date">8月 11 2010</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2010/8/5/敏捷中国2010大幕将启，讲师招募正在进行/" title="link to 敏捷中国2010大幕将启，讲师招募正在进行">敏捷中国2010大幕将启，讲师招募正在进行</a></h2>
 
       <p class="excerpt">
@@ -383,30 +407,6 @@ classes that you can use:
       <div class="post-list__meta">
 
         <time datetime="6月 18 2010" class="post-list__meta--date date">6月 18 2010</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2010/6/16/who-needs-distributed-transaction/" title="link to 谁需要分布式事务？">谁需要分布式事务？</a></h2>
-
-      <p class="excerpt">
-        <p>有个项目，用<a href="http://tuscany.apache.org/" target="_blank" rel="external">Tuscany</a>实现了<a href="http://www.osoa.org/pages/viewpage.action?pageId=46" target="_blank" rel="external"><span class="caps">SCA</span></a>。然后呢，服务与服务之间会互相调用。然后呢，因为你不知道被调用的下一个服务被部署在什么地方，所以就需要分布式事务。一切多么的合理。</p><p>Bullshit.</p><p><a href="http://www.drdobbs.com/184414966" target="_blank" rel="external">Martin Fowler说</a>，分布式对象设计第一原则：不要分布你的对象。如何利用多个进程？集群，而非分布。</p><p>因为很显然，如果应用程序本身是<a href="http://en.wikipedia.org/wiki/Shared_nothing_architecture" target="_blank" rel="external">无状态的</a>，分布式对象基本上无法带来任何集群不能提供的好处：性能，吞吐量，都不可能在涉及跨进程调用的情况下超过进程内调用。唯一可能的好处是，能够把应用程序分成小块，分别部署在不同的机器上。</p><p>是的，这就是这个项目需要分布式对象（以及，分布式事务）的真正原因。当然，不是因为一台服务器不能负载整个应用程序，而是因为一个邪恶的原因：把功能模块与服务器硬件绑定。你已经买了功能A，还想要功能B吗？请购买功能B──和它所在的整个服务器。不管你的访问量是否大到需要一台真正的服务器，我们粗制滥造的程序会把它的性能都用尽的。</p><p>是的，再一次地，一个企业级超复杂技术的漂亮广告词被扯开之后，归根结底就是一个制造浪费从而制造需求的邪恶玩意。Fxxx<span class="caps">IBM</span>。</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="6月 16 2010" class="post-list__meta--date date">6月 16 2010</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">
