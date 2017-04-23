@@ -215,7 +215,7 @@ classes that you can use:
 <li>如何借助端到端的埋点、数据采集、分析和可视化，把用户行为反馈到业务。</li>
 </ol>
 </blockquote>
-<p>以运维视角优先切入时，技术栈的建设就自然地偏向运维工具。在支持计算资源弹性分配的IaaS层（例如基于<a href="http://scaleworks.cn/" target="_blank" rel="external">ScaleWorks</a>的私有云）之上，将自动化配置管理工具（例如Chef、Puppet、Ansible）及其他常用的运维工具打包在应用运行时中，运维人员可以随时从技术栈管理的PaaS服务中获得完整且配置好的应用运行时，再从通过了验证门的发布候选镜像中选择一个版本放入应用运行时，即可快速完成应用的部署上线。生产环境的配置以代码形式记录，可以由技术能力较强的DevOps团队专门维护，从而省去了大多数运维人员手动管理运行时环境的工作量与风险。</p>
+<p>以运维视角优先切入时，技术栈的建设就自然地偏向运维工具。在支持计算资源弹性分配的IaaS层（例如基于<a href="http://scaleworks.cn/" target="_blank" rel="external">ScaleWorks</a>的私有云）之上，将自动化配置管理工具（例如Chef、Puppet、Ansible）及其他常用的运维工具打包在应用运行时中，运维人员可以随时从技术栈管理的PaaS服务中获得完整且配置好的应用运行时，再从通过了测试验证（可能是手工验证）的发布候选镜像中选择一个版本放入应用运行时，即可快速完成应用的部署上线。生产环境的配置以代码形式记录，可以由技术能力较强的DevOps团队专门维护，从而省去了大多数运维人员手动管理运行时环境的工作量与风险。</p>
 <p>在应用运行时环境中，可以根据软件系统的特征预先配置好日志工具（例如ELK、Splunk）和服务指标监控工具（例如Collectd），使开发团队无需额外工作就能获得丰富有用的生产环境信息。一些水平更高的团队会在应用运行时环境中设置更智能化的运维功能（例如基于Hystrix的服务熔断机制），使运维更具响应力。</p>
 <p>应用运行时环境中还可以植入端到端<a href="https://martinfowler.com/bliki/SyntheticMonitoring.html" target="_blank" rel="external">综合语义监控</a>所需的工具设置，从而支持对业务场景埋点和分析，甚至是结合<a href="http://blog.christianposta.com/deploy/blue-green-deployments-a-b-testing-and-canary-releases/" target="_blank" rel="external">流量路由技术</a>进行受控实验，用数据为业务决策提供支撑。业务有了缩短反馈周期的诉求，运维有了快速响应变化的能力，两端夹击可以倒逼研发环节提升响应力、缩短交付周期，这也是研发组织变革的一个套路。</p>
 <p><img src="/assets/2017/4/22/op-impl.png"></p>
