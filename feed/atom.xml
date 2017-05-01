@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gigix.thoughtworkers.org/"/>
-  <updated>2017-04-25T02:53:32.000Z</updated>
+  <updated>2017-05-01T14:31:33.000Z</updated>
   <id>http://gigix.thoughtworkers.org/</id>
   
   <author>
@@ -14,6 +14,57 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>技术栈管理与云时代的持续集成</title>
+    <link href="http://gigix.thoughtworkers.org/2017/5/2/stack-management-and-tech-radar/"/>
+    <id>http://gigix.thoughtworkers.org/2017/5/2/stack-management-and-tech-radar/</id>
+    <published>2017-05-02T05:04:00.000Z</published>
+    <updated>2017-05-01T14:31:33.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>在刚刚发布的<a href="https://assets.thoughtworks.com/assets/technology-radar-vol-16-cn.pdf" target="_blank" rel="external">第16期技术雷达</a>中，我们看到ThoughtWorks在“技术”象限里旗帜鲜明地列举了几项与持续集成相关的反模式。这些存在多年的实践和现象被放在了“暂缓”一环中，意味着ThoughtWorks正式向我们的客户指出：如果你的组织仍在这样实施持续集成，我们认为你应该考虑改变了。那么，这些被批评的点背后映射出哪些问题，基于技术栈管理的云时代研发环境又能带来什么新的思路？我们一起来深入分析。</p>
+<p><a href="http://www.bagevent.com/event/405803" target="_blank" rel="external"><img src="/assets/2017/5/2/tech-radar-card.png"></a></p>
+<h2 id="持续集成的反模式"><a href="#持续集成的反模式" class="headerlink" title="持续集成的反模式"></a>持续集成的反模式</h2><p>最需要被点名批评的现象莫过于“<a href="https://www.thoughtworks.com/radar/techniques/ci-theatre" target="_blank" rel="external">持续集成剧场</a>”了：</p>
+<blockquote>
+<p>很多开发者只是简单的搭建了持续集成服务器就以为在做“持续集成”，但他们实际上会遗失持续集成的关键优点而导致失败。常见的失败模式包括：虽然在一个共享的主分支上运行持续集成，但是代码提交不频繁，所以集成并没有真正的“持续”。以及在一个测试覆盖率不足，甚至是长期状态为红的情况下进行构建；或者在功能分支上运行持续集成，这会导致持续隔离。</p>
+</blockquote>
+<p>简而言之，这些团队并没有真正体会到持续集成的好处，而是为了完成上级的任务而演一场“我们在持续集成”的戏——这也正是这个反模式的名字由来。过去十年中，我们在众多刚开始实施持续集成的企业见过这一幕。领导认识到持续集成的好处，但是推行成了个大问题：推轻了，下面团队不愿动，技术问题解决不了；推重了，下面团队来个上有政策下有对策，领导想看什么就给你演什么——持续集成剧场就此落成。比如说你见过一个表面看起来一直是绿色但是背后连编译都不敢跑的持续集成吗？我见过。真是一场好戏。</p>
+<p>为了解决持续集成演戏的问题，一些规模较大的企业开始建设持续集成中心。想法很符合直觉：既然团队自己做持续集成有技术困难、还有可能变成演戏，那么我就组建一支团队专门帮他们一个个把持续集成跑通、帮他们管理持续集成服务器，持续集成的运行和统计数据都在这个中央团队手里，下面的团队总没办法演戏了吧？于是，他们又遭遇了第二个持续集成反模式：“<a href="https://www.thoughtworks.com/radar/techniques/a-single-ci-instance-for-all-teams" target="_blank" rel="external">所有团队共用一个持续集成实例</a>”。</p>
+<blockquote>
+<p>那些必须使用中心化持续集成服务器的交付团队，常常依赖中心的团队去完成小的配置任务，或者在共享的基础设置和工具中排查问题，这给他们在进度上带来长时间的滞后。</p>
+</blockquote>
+<p>这次是<a href="https://en.wikipedia.org/wiki/Conway%27s_law" target="_blank" rel="external">康威定律</a>带来的困难：如果每个团队使用的技术栈配置不同、技术栈配置和管理的职责仍然在每个团队中，那么技术栈演进与持续集成的演进就难免出现节拍不一致。于是管理着持续集成中心的中央团队开始疲于奔命，帮一个个项目团队修持续集成，而项目团队还感到没有得到足够的支持。</p>
+<p>第三个反模式是“<a href="https://www.thoughtworks.com/radar/techniques/enterprise-wide-integration-test-environments" target="_blank" rel="external">企业级集成测试环境</a>”，这也是很多组织建设持续集成中心的初衷之一：由于能执行完整端到端测试的环境稀缺，各个团队的集成测试无论如何也必须在一个瓶颈处统一调度，所以中心化管理持续集成也就顺理成章。然而，</p>
+<blockquote>
+<p>这些企业集成测试环境通常称为 SIT 或预生产环境）是当下持续交付常见的瓶颈。环境本身很脆弱而且维护成本很高，而这些环境通常存在一些需要由单独的环境管理团队手动配置的组件。在预生产环境的测试给出的反馈慢且不可靠，而且会重复测试那些在隔离的组件上已经测过的功能。</p>
+</blockquote>
+<h2 id="云时代的新思考"><a href="#云时代的新思考" class="headerlink" title="云时代的新思考"></a>云时代的新思考</h2><p>技术雷达中批评的这些持续集成的反模式，是过去的时代背景造就的。尤其是以下几点约束条件，造成了今天我们看到的持续集成的形态（以及长久以来存在的挑战）：</p>
+<ol>
+<li><strong>计算资源短缺</strong>。这个约束条件决定了完整的、与生产环境相似的、能执行端到端验证的环境必定是稀缺品，因此一个组织中多个团队的集成必定会受限于某个瓶颈，或是企业级集成测试环境、或是持续集成中心。</li>
+<li><strong>计算环境没有弹性</strong>。不仅硬件资源短缺，而且环境的开通、配置和管理很麻烦，所以团队会调整自己的技术实践去适应已有的环境，而这个调整的动作主要由团队内的技术领导者来执行。其结果是即便多个团队开发的软件在技术栈上非常相似，他们的持续集成实践也可能相当不同，在技术能力不足的团队就会变成持续集成剧场。</li>
+<li><strong>版本控制工具的局限性</strong>。Subversion（以及其他更早的版本控制工具）在pre-commit阶段通过服务器端回调钩子很难——如果不是完全不可能的话——得到完整的“提交后版本”，因此svn的pre-commit钩子基本只能用于检查提交信息是否符合规范，完整的验证则必须在代码已经合入代码库之后才能——在一台独立的“持续集成服务器”上——进行，而此时如果构建失败就会阻塞整个团队的工作。这也导致更多的团队倾向于放松持续集成的要求、甚至沦落成持续集成剧场。</li>
+</ol>
+<p>而这几个约束条件在今天的时代背景下已经不复存在：计算资源仍然不能说极大丰富，但企业应用开发所需的x86架构计算资源在云环境下已经不再短缺；在IaaS的基础上，技术栈管理的PaaS提供了计算环境的弹性，使用相同技术栈的多个团队可以轻易地获得完全一样的环境，因此团队也可以采用标准的技术实践，而不必为了将就手边的环境而调整实践。而git对svn的全面取代尤为值得玩味：由于可以在pre-commit阶段直接获得完整的待提交快照、并在这个版本基础上执行测试，不符合持续集成要求的代码将直接被拒绝提交——而不是在提交后才把问题暴露出来。于是，以下两个要素的结合：</p>
+<ol>
+<li>每个开发人员（以及自动构建jia都可以在PaaS云上获得完整的技术栈运行时环境；以及，</li>
+<li>pre-commit阶段可以对待提交的代码进行完整的构建</li>
+</ol>
+<p>将带来两个重要的影响。首先，持续集成不再需要一个“服务器”。从它发展的早期开始，持续集成这个概念就一直与各种“持续集成服务器”软件工具紧密关联：从早期的CruiseControl、Bamboo到后来的Jenkins、GoCD，以及云上提供服务的TravisCI、SnapCI，持续集成中的“集成”这个动作一直发生在代码已经提交之后、发生在一个团队共有的服务器上。而现在，持续集成可以在代码提交之前发生、在一个从PaaS云上弹性生成的环境中发生。</p>
+<p>这个技术性的改变带来的组织性改变将有着重要的意义：保证持续集成通过将会彻底变成每个开发人员自己的责任，没有折扣可打，没有其他地方可以推卸责任——现在构建不通过不会阻碍其他人提交代码了，只有这个开发人员自己不能提交代码。由此，持续集成将由一项团队实践变成一项个人实践、由一项有较大妥协空间的实践变成一项强制性的实践。正如IntelliJ之类现代IDE把“通过编译”这项要求变成了程序员感知不到的、而又不可妥协的质量要求，技术栈管理PaaS平台将把持续集成也变成程序员感知不到的、而又不可妥协的质量要求。</p>
+<blockquote>
+<p>持续集成是如此重要，以至于我们不应该把它交给程序员自己去做。</p>
+</blockquote>
+<p>在这样的一个研发环境下，每个开发人员从写下第一行代码开始就必须遵循组织的质量规范，能够被提交到团队代码库的代码都是通过了验证流程、符合质量要求的。<a href="/2011/9/9/development-as-delivery/">6年前当我构想这样一个研发环境</a>，我觉得它更像是一个遥远的梦想。然而今天，支持这样研发环境的<a href="/2017/4/14/stack-management-implementation/">技术栈管理PaaS平台</a>已经被实现出来了。你需要的就是在你的研发云上实施它。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在刚刚发布的&lt;a href=&quot;https://assets.thoughtworks.com/assets/technology-radar-vol-16-cn.pdf&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;第16期技术雷达&lt;/a&gt;中，我们看到Th
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>什么是数字平台战略</title>
@@ -904,38 +955,6 @@
     
       &lt;p&gt;&lt;em&gt;(本文首发于&lt;a href=&quot;http://groundbreaking.cn/shehui/guoji/6691.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;破土网&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;刚刚过去的一个星期，围棋受到了前所
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>IT的战略重要性及人才挑战</title>
-    <link href="http://gigix.thoughtworkers.org/2016/1/13/it-talent-trend/"/>
-    <id>http://gigix.thoughtworkers.org/2016/1/13/it-talent-trend/</id>
-    <published>2016-01-13T06:10:00.000Z</published>
-    <updated>2016-01-13T06:17:33.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>IT在过去数十年中一直在企业扮演重要角色。Porter和Heppelmann将过去半个世纪里IT的发展总结为“<a href="https://hbr.org/2014/11/how-smart-connected-products-are-transforming-competition" target="_blank" rel="external">三次浪潮</a>”，这三次技术的浪潮重塑了企业的战略以及企业之间的竞争。经过这三次浪潮的洗礼，IT在组织战略的核心扎根越来越深。本文尝试以文献综述的形式，勾画出IT技术的战略重要性、以及数字化浪潮带来的人才挑战。</p>
-<p><img src="/assets/2016/1/13/talent.jpg"></p>
-<h2 id="三次浪潮"><a href="#三次浪潮" class="headerlink" title="三次浪潮"></a>三次浪潮</h2><p>第一次IT浪潮（从1960年代开始）关注如何将价值链中的各项活动<strong>自动化</strong>。Porter和Millar在<a href="https://hbr.org/1985/07/how-information-gives-you-competitive-advantage" target="_blank" rel="external">1985年的文章</a>里把价值链中的活动分为9类，其中5类是主价值链活动：输入物流、操作、输出物流、市场/销售、服务，另外4类是支撑活动：公司基础设施、人力资源管理、技术开发、采购。这9项活动各自都有涉及信息处理的部分，利用IT可以显著提升每项活动中信息处理环节的效能。</p>
-<p>第二次IT浪潮（开始于1980及1990年代）关注价值链各项活动之间的<strong>协作与整合</strong>。正如Porter在<a href="https://hbr.org/2001/03/strategy-and-the-internet/ar/1" target="_blank" rel="external">2001年的文章</a>里所说，当互联网连接越来越便宜、越来越可达，企业就能借助互联网更加精确地接收和响应市场信号。互联网会对行业中5项竞争因素同时产生影响，尤其是会提升买家的议价能力、降低行业进入门槛，从而使竞争变得更为激烈。</p>
-<p>前两次IT浪潮创造了巨大的生产力提升，但这种提升只是现有价值链的改善，而产品/服务本身并未受到很大影响。最近才开始的第三次浪潮则把IT嵌入了产品/服务本身。对现有产品和服务的<strong>数字化</strong>将从根本上改变竞争的地平线。像中国的“<a href="http://english.gov.cn/policies/latest_releases/2015/07/04/content_281475140165588.htm" target="_blank" rel="external">互联网+</a>”这样的国家战略更进一步地推动了这次浪潮。从<a href="http://techcrunch.com/2015/01/04/tencent-webank/" target="_blank" rel="external">银行</a>到<a href="http://www.wsj.com/articles/chinas-didi-kuaidi-gets-license-to-ride-in-shanghai-1444288510" target="_blank" rel="external">出租车</a>，IT正在渗入并颠覆各个行业。</p>
-<h2 id="技术内核"><a href="#技术内核" class="headerlink" title="技术内核"></a>技术内核</h2><p>数字化浪潮的核心有几项重要的技术。<a href="http://www.ibm.com/smarterplanet/us/en/centerforappliedinsights/article/biztechtrends.html" target="_blank" rel="external">IBM的研究</a>列出了4项最重要的技术发展趋势：<strong>大数据及分析</strong>、<strong>云计算</strong>、<strong>移动</strong>、<strong>社交</strong>。这份研究显示，这些技术的早期采用者在加速创新、提升消费者体验、优化决策过程、增进员工效能等方面达成业务目标的可能性比尚未采用这些技术的企业高一个数量级。</p>
-<p>根据<a href="http://harvardmagazine.com/2014/03/why-big-data-is-a-big-deal" target="_blank" rel="external">Shaw的文章</a>，人类社会如今每年制造以ZB为单位的数据量。<a href="http://www.mckinsey.com/insights/business_technology/big_data_the_next_frontier_for_innovation" target="_blank" rel="external">Manyika等人研究</a>了大数据技术在5个不同领域（医疗、公共事务、零售、制造、个人位置信息）的应用，发现愈发频繁和精确的过程数据使得更准确的产品/服务定制成为可能，并改善组织的决策过程。例如在零售业中应用大数据可以将利润率提升60％以上。获得和使用大量过程数据的能力已经成为众多企业竞争与成长的基础。</p>
-<p><a href="http://www.mckinsey.com/insights/high_tech_telecoms_internet/capturing_business_value_with_social_technologies" target="_blank" rel="external">Bughin、Chui和Manyika的文章</a>指出，社交媒体可以创造万亿美元级别的价值，并通过改善协作与沟通将工作人员之间交互的效能提升20％到25%。社交媒体的价值往往通过移动技术得以体现。<a href="http://www.mckinsey.com/insights/business_technology/disruptive_technologies" target="_blank" rel="external">Manyika、Chui和Bughin的另一篇文章</a>估计，到2025年，移动互联网将影响43亿人的生活，对全球经济的影响达到十万亿规模。<a href="http://www.sciencedirect.com/science/article/pii/S0963868705000405" target="_blank" rel="external">Sheng、Nah和Siau的研究</a>提到，移动技术能消除关键信息访问中的时间和空间限制，增强通信、协调、合作及知识交换的能力，从而提升劳动者的灵活性。</p>
-<p>最后但绝非最不重要的，云计算是IT灵活性的基础。Manyika、Chui和Bughin估计，到2025年，云计算的总体经济影响可达数万亿美元。云计算创造价值的主要方式是以云的方式提供服务和应用，以及提升企业IT的效能。</p>
-<h2 id="人才挑战"><a href="#人才挑战" class="headerlink" title="人才挑战"></a>人才挑战</h2><p>上述促成数字化浪潮的4项最重要的技术发展趋势——大数据及分析、云计算、移动、社交——都需要高级别的IT技能。技术型人才的短缺是全球现象。</p>
-<p>根据<a href="https://hbr.org/2012/10/data-scientist-the-sexiest-job-of-the-21st-century/" target="_blank" rel="external">Davenport和Patil的文章</a>，大数据分析所需的人才——他们称之为“数据科学家”——是“数据黑客、分析师、沟通者和建议者的混合体”。这些数据科学家需要掌握统计知识，对业务有深入理解，而且还必须编程，经常还会用到一些<a href="http://book.douban.com/subject/11549313/" target="_blank" rel="external">相当新的技术</a>（例如Hadoop、Python和D3.js）。<a href="http://www.sas.com/en_us/whitepapers/getting-your-moneys-worth-with-analytics-105724.html" target="_blank" rel="external">SAS和Accenture的研究</a>显示，大多数美国企业计划在短期内升级其数据分析技能，途径可能是提升现有员工的分析技能，或招聘新的分析人才。<a href="http://www.gartner.com/newsroom/id/2207915" target="_blank" rel="external">Gartner预测</a>从2012年到2015年会有440万个与大数据相关的新工作岗位。<a href="https://hbr.org/2012/11/the-big-data-talent-gap-no-pan" target="_blank" rel="external">Barth和Bean的调查数据</a>显示，在如此强烈的需求环境下，66%的企业认为找到和聘用数据科学家“非常困难或不可能”，没有任何受访企业认为“找到所需的技能毫无问题”。</p>
-<p>移动（和社交）应用开发者同样有很高的需求。<a href="http://www.buzzle.com/articles/how-to-become-a-mobile-application-developer.html" target="_blank" rel="external">据信</a>从2010年至2020年间，移动应用开发的岗位总数会增加32%，创造约29万个新工作岗位。开发移动应用需要丰富多样的技术能力，例如面向对象编程语言、Web开发、移动平台特有的API、跨平台移动套装、数据库管理、网络集成、安全等等。<a href="http://www.forbes.com/sites/ayoomojola/2013/07/15/the-shortage-of-developer-talent-is-crushing-mobile/" target="_blank" rel="external">Omojola</a>和<a href="https://www.roberthalf.com/technology/blog/mobile-app-development-hot-skill-and-hard-to-find-candidates" target="_blank" rel="external">Half</a>等人的文章能折射业内普遍的意见：找到具备合适技能的移动开发者并不容易。</p>
-<p>云计算也是一个<a href="http://www.sciencedirect.com/science/article/pii/S0167739X08001957" target="_blank" rel="external">边缘学科</a>，同时需要IT运维和编程的技能。据<a href="https://www.wantedanalytics.com/analysis/posts/hiring-demand-for-cloud-computing-skills-skyrocketing" target="_blank" rel="external">Lombardi引用WANTED Analytics的数据</a>，近几年来，对云计算技能的需求每年都在翻番。根据<a href="http://www.mckinsey.com/insights/business_technology/it_under_pressure_mckinsey_global_survey_results" target="_blank" rel="external">Khan和Sikes的调查</a>，高科技及专业服务业内40%以上的组织感到，在未来12个月里找到所需的云计算及分布式计算技能“很有压力”。</p>
-<p>要言之，上述4项重要的技术趋势都要求坚实的编程技能作为基础，同时还需要适应快速变化的商业和技术环境，要求技术专家同时具备快速学习、顺畅沟通等能力。这种复合技能的要求，使得组织更加难以获得所需的人才。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;IT在过去数十年中一直在企业扮演重要角色。Porter和Heppelmann将过去半个世纪里IT的发展总结为“&lt;a href=&quot;https://hbr.org/2014/11/how-smart-connected-products-are-transforming-com
     
     </summary>
     
