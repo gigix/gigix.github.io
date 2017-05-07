@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gigix.thoughtworkers.org/"/>
-  <updated>2017-05-07T02:35:15.000Z</updated>
+  <updated>2017-05-07T02:43:59.000Z</updated>
   <id>http://gigix.thoughtworkers.org/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>数字化企业需要什么交付基础设施</title>
+    <title>数字化企业的交付基础设施</title>
     <link href="http://gigix.thoughtworkers.org/2017/5/7/dps-delivery-infrastructure/"/>
     <id>http://gigix.thoughtworkers.org/2017/5/7/dps-delivery-infrastructure/</id>
     <published>2017-05-07T05:04:00.000Z</published>
-    <updated>2017-05-07T02:35:15.000Z</updated>
+    <updated>2017-05-07T02:43:59.000Z</updated>
     
     <content type="html"><![CDATA[<p>在<a href="/2017/4/25/ditigal-platform-strategy-intro/">前文</a>中我们说到，传统企业在逐步建设自己的数字平台过程中，需要抓住交付基础设施、API和架构治理、数据自服务、创新实验基础设施和监控体系、用户触点技术这五个支柱。那么，当我们谈“交付基础设施”，我们究竟在谈什么？怎样的交付基础设施能加速数字化项目的交付？</p>
 <p><img src="/assets/2017/5/7/infra.jpg"></p>
