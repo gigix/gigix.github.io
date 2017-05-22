@@ -198,6 +198,9 @@ classes that you can use:
         <p>［以下内容来自一封私人邮件］</p><p>从最容易实践的技术层面上，我推荐你依序做以下事情：</p><p>0. 源代码配置管理（CVS或者SVN，很可能你们已经有了）。</p><p>1. 严格的签入／签出管理制度：做任何任务之前必须checkout/update到最新版本，完成任务之后必须立即checkin到代码库。</p><p>2.自动化构建：用Ant/Maven/NAnt/Rake/Make……编写项目构建脚本，并把构建脚本也checkin到代码库。自动化构建的目标：在一台新的机器（安装了一些基本的平台例如Java）上checkout完整的源代码之后，能够用一条命令完成编译、链接、打包、部署等所有步骤，得到一个可工作的软件。</p><p>3. 持续集成：安装持续集成服务器（推荐<a href="http://cruisecontrolrb.thoughtworks.com/" target="_blank" rel="external">CruiseControl.rb</a>），让它监视你的项目，在每次checkin发生之后立即执行自动化构建脚本，确保项目能够完整构建。如果构建失败，所有工作必须停止，修复之后才能继续checkout/checkin。</p><p>4. 加入测试：在发现bug时，首先编写测试来重现这个bug；修复bug之后应该保证测试通过。把测试代码也放进代码库，并在构建脚本中执行所有测试。此时你的持续集成环境应该也开始执行测试。</p><p>5. 测试驱动：开始实现任何新功能之前，首先编写测试来描述自己要做的事情，然后编写代码让测试通过。</p><p>如果你能够成功做到以上5个（或者说，6个）步骤，你就迈出了成功的第一步，软件的质量会有效提升，响应需求变化的能力也会有效提升。那时我们可以继续探讨以后的步骤。</p>
     </section>
 
+    <section class="author">
+<p>（本文作者熊节是ThoughtWorks的总监咨询师）</p>
+</section>
     <!-- JiaThis Button BEGIN -->
 <div class="jiathis_style_32x32" style="height: 40px">
     <a class="jiathis_button_tsina"></a>
@@ -218,7 +221,7 @@ classes that you can use:
     
 </article>
 
-
+			
             <footer class="footer">
     <span class="footer__copyright">&copy;
         2007
@@ -246,11 +249,6 @@ classes that you can use:
     <!--[if IE 6]>
     <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
     <![endif]-->
-
-    <!--  google analytics -->
-    <script>
-        // add your google analytics code here
-    </script>
 
     <!-- totop -->
     <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">

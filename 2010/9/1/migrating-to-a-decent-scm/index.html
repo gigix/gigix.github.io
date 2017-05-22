@@ -198,6 +198,9 @@ classes that you can use:
         <p>I know that lots of organizations are still using old-expensive-counterproductive configurationmanagementsystems (ClearCase,<span class="caps">VSS</span>, etc.). I understand the fear that prevents many ofthem frommoving to a decent<span class="caps">SCM</span>(Subversion,<a href="http://mercurial.selenic.com/" target="_blank" rel="external">Mercurial</a>, etc.). I’ll try to tell a story about that kind of migration, which might alleviate thefear.</p><p>A huge company, with 40,000+ software developers, with 10+ years history using ClearCase, wants tomigrate toSubversion, because of<span class="caps">SVN</span>’s encouragement to atomic commit andoptimisticlocking. The movement is still ongoing. Every single pace involves at least one delivery team,normally with100+ programmers in it.</p><p>The movement must be as seamless as possible, because people are pushed to meet their next milestone.For acodebase sized over 4GB, we made the migration in a week:</p><ul><li><strong>Monday</strong><ul><li>Export the existing codebase and check it into<span class="caps">SVN AS</span>-IS—it’stime consuming so you have enough time for following items.</li><li>Send mail to everyone to inform the migration plan, ask them to install<a href="http://tortoisesvn.tigris.org/" target="_blank" rel="external"><span class="caps">SVN</span>client</a>if they haven’t.</li><li>Make sure everyone can access new<span class="caps">SVN</span>repository.</li></ul></li></ul><ul><li><strong>Tuesday</strong><ul><li>Check out the codebase from<span class="caps">SVN</span>and build it, to make sure you are not breaking anything—that’s why youreally shouldmigrate<span class="caps">AFTER</span>you have a decent build script.</li><li>Compose a shell script to synchronize from ClearCase local view to<span class="caps">SVN</span>working copy. Synchronize frequently and build every time.</li></ul></li></ul><ul><li><strong>Wednesday</strong><ul><li>Clean the codebase: legacy repositories often have lots of garbage (temp files, compiledbinaries,etc.) checked in, it’s now a chance to do some clearance, delete and ignore themfrom<span class="caps">SCM</span>. Just don’t break the build.</li><li>Install<a href="http://cruisecontrol.sourceforge.net/" target="_blank" rel="external">continuous integration</a>instance for the codebase in<span class="caps">SVN</span>.</li><li>Synchronize and build frequently. Ask people to fix build if it breaks.</li></ul></li></ul><ul><li><strong>Thursday</strong><ul><li>Send mail to everyone, ask them to commit any modifications by the end of day, and tellthem “there’san<span class="caps">SVN</span>training tomorrow morning”.</li><li>Keep doing clearance. Synchronize and build frequently.</li></ul></li></ul><ul><li><strong>Friday</strong><ul><li>Disable write-access to ClearCase.</li><li>Training: Configuration Management &amp;<span class="caps">SVN</span>. People need tounderstandsome<span class="caps">SCM</span>principles to make a better use of<span class="caps">SVN</span>—at least not tomess up thecodebase with garbage again.</li><li>At the same time, synchronize a last time, build, check in.</li><li>Package your working copy and upload it to a shared directory: it’s much faster tocopy andunzip, than checking out from the repository. Mail everyone about how to get a workingcopy and makefirst commit.</li><li>Publish your CI to the team. It’s now the team’s CI.</li></ul></li></ul><p>That’s it. Now your team is on<span class="caps">SVN</span>.</p>
     </section>
 
+    <section class="author">
+<p>（本文作者熊节是ThoughtWorks的总监咨询师）</p>
+</section>
     <!-- JiaThis Button BEGIN -->
 <div class="jiathis_style_32x32" style="height: 40px">
     <a class="jiathis_button_tsina"></a>
@@ -218,7 +221,7 @@ classes that you can use:
     
 </article>
 
-
+			
             <footer class="footer">
     <span class="footer__copyright">&copy;
         2010
@@ -246,11 +249,6 @@ classes that you can use:
     <!--[if IE 6]>
     <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
     <![endif]-->
-
-    <!--  google analytics -->
-    <script>
-        // add your google analytics code here
-    </script>
 
     <!-- totop -->
     <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">

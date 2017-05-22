@@ -198,6 +198,9 @@ classes that you can use:
         <p>【2006年】来到班加罗尔，我的包里带着一本《计算机程序的构造和解释》，也就是传说中的SICP。这本书是MIT（麻省理工学院）的6.001课程、电子工程与计算机科学系本科第一门编程课的教材，MIT网站上还有教学视频公开着。这本使用LISP作为教学语言的教材在MIT被使用了超过二十年，甚至在1984年成书之前就已经被该系教师用于教学，直到2008年才宣告退休，且继续被无数黑客顶礼膜拜。</p><p>可别小看了这本MIT的编程入门教材。看看目录你就会发现，这本书不一般：</p><pre>第1章 构造过程抽象1.1 程序设计的基本元素1.2 过程与它们所产生的计算1.3 用高阶函数做抽象第2章 构造数据现象2.1 数据抽象导引2.2 层次性数据和闭包性质2.3 符号数据2.4 抽象数据的多重表示2.5 带有通用型操作的系统第3章 模块化、对象和状态3.1 赋值和局部状态3.2 求值的环境模型3.3 用变动数据做模拟3.4 并发：时间是一个本质问题3.5 流第4章 元语言抽象4.1 元循环求值器4.2 Scheme的变形——惰性求值4.3 Scheme的变形——非确定性计算4.4 逻辑程序设计第5章 寄存器机器里的计算5.1 寄存器机器的设计5.2 一个寄存器机器模拟器5.3 存储分配和废料收集5.4 显式控制的求值器5.5 编译</pre><p>每个小节的标题看起来已经有点高级了吧？其中的内容比标题所透露出来的还要高级。比如第二章，一上来讲的就是“什么是整数”：在只有函数（准确说，只有lambda运算）的情况下，如何定义“0”，如何定义加法，从而得到一个完整的整数系统。再比如第三章，它讲的是“什么是时间”。当“整数”、“时间”这样的基本概念都需要被重新定义，这本书对读者世界观的颠覆性可想而知。</p><p>如果说这些内容有点过于抽象、过于远离现实的话，书中关于列表和高阶函数的内容则会改变一个程序员看待很多编程任务的方式——主要是看待列表（list）操作的方式。众所周知，LISP是“LIStProcessing”的缩写，也就是说“操作链表（linkedlist）”乃是LISP的题中应有之义。从最原始的递归函数调用开始，SICP归纳出一组基本的列表操作（求长度、添加元素、排序、反转等），然后是几个最常用的列表计算：map、filter、accumulate。这几个概念是如此简洁清晰，实现又是如此简单，一旦进入了脑子里就再也无法忘记。比如map操作，SICP的描述是：</p><blockquote>…to apply some transformation to each element in a list and generate the list of results.</blockquote><p>也就是说，你手上有一个列表，你要对这个列表里的每个元素通过“某种方式”进行转换，从而得到一个等长的列表，前后两个列表中的元素根据“某种方式”一一对应。这就是列表的映射（map）操作。于是对于所有“从一个列表映射到另一个等长列表”的操作，你就再也不会去写for循环。例如“列出一组用户的年龄并由大到小排序”这个需求，你就会这样写（Ruby代码）：</p><blockquote># users是一个列表<p>users.map{|user| user.age}.sort.reverse</p></blockquote><p>显然这比每处理一次users列表就写一次for循环要漂亮太多了。有了这样的概念在脑子里，我才开始愈发清晰地意识到：针对列表的for循环，在大多数情况下也是一种重复代码。后来Google的Java基础库Guava提供了列表的transform操作（也就是map操作，只是换了个名字）和filter操作，使这些发轫于LISP的列表操作终于被广大Java程序员所了解。</p><p>有趣之处在于，像“抽象出基本的列表操作”这样的想法，即使是经验丰富的程序员，没有通过读书或者别人的讲解获得这个概念之前，是很难通过自己的实践和思考总结出来的；而一旦获得了这个概念，又会觉得它如此符合直觉以至于不这样思考才是奇怪的。在厦门的好望角项目里，我自己实现了map操作和accumulate操作，用来处理程序中的列表。Andy看了这段代码的第一反应是“Err…it’sclever…”我们知道，“clever”其实不是什么褒义词。后来我又在一个超过20年经验的老程序员身上看到过类似的反应，尽管这次用Guava写出来的代码更加好看。没有获得“天启”之前，我们就是根本看不到这种“高阶的”重复代码的存在。如果说在我学习编程的整个过程中有那么一本书是不可替代、不可能靠自己的勤学苦练弥补起来的，那就是这本SICP。所以我现在也总是向所有有志于从事软件开发工作的人推荐这本书——未必急在一时，但早晚得读。</p>
     </section>
 
+    <section class="author">
+<p>（本文作者熊节是ThoughtWorks的总监咨询师）</p>
+</section>
     <!-- JiaThis Button BEGIN -->
 <div class="jiathis_style_32x32" style="height: 40px">
     <a class="jiathis_button_tsina"></a>
@@ -218,7 +221,7 @@ classes that you can use:
     
 </article>
 
-
+			
             <footer class="footer">
     <span class="footer__copyright">&copy;
         2013
@@ -246,11 +249,6 @@ classes that you can use:
     <!--[if IE 6]>
     <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
     <![endif]-->
-
-    <!--  google analytics -->
-    <script>
-        // add your google analytics code here
-    </script>
 
     <!-- totop -->
     <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">

@@ -198,6 +198,9 @@ classes that you can use:
         <p>Code with<a href="http://rubyforge.org/projects/concurrent/" target="_blank" rel="external">The Omnibus Concurrency Library</a></p><pre><code>require ‘concurrent/actors’include Concurrent::ActorsMessage = Struct.new :ping, :pongping_thread = Actor.spawn doloop doActor.receive do |f|f.when Message do |m|puts “PING”sleep(1)m.pong  Message.new(m.ping, m.pong)endendendendpong_thread = Actor.spawn doloop doActor.receive do |f|f.when Message do |m|puts “PONG”sleep(1)m.ping  Message.new(m.ping, m.pong)endendendendping_thread  Message.new(ping_thread, pong_thread)while(true)puts(“WAITING…”)sleep(5)end</code></pre><p>Also, it runs…forever.</p>
     </section>
 
+    <section class="author">
+<p>（本文作者熊节是ThoughtWorks的总监咨询师）</p>
+</section>
     <!-- JiaThis Button BEGIN -->
 <div class="jiathis_style_32x32" style="height: 40px">
     <a class="jiathis_button_tsina"></a>
@@ -218,7 +221,7 @@ classes that you can use:
     
 </article>
 
-
+			
             <footer class="footer">
     <span class="footer__copyright">&copy;
         2007
@@ -246,11 +249,6 @@ classes that you can use:
     <!--[if IE 6]>
     <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
     <![endif]-->
-
-    <!--  google analytics -->
-    <script>
-        // add your google analytics code here
-    </script>
 
     <!-- totop -->
     <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">

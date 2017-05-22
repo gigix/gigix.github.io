@@ -198,6 +198,9 @@ classes that you can use:
         <p>快速冲锋也有节奏。把节奏记下来，下次可以改进。这就是泰勒在伯利恒钢铁公司做过的事。</p><ol><li>愿景（1小时）：我要做个东西，要快。也许应该试试用Rails做？因为它很快。似乎没有特别的原因阻碍用Rails？是的，没有。</li><li>空谈（1小时）：它好像是个什么东西。它看起来有点像Mephisto吗？呃，Mephisto是什么？你看，我用Mephisto做了我的blog和AgileChina的网站。不错，看起来有点像。</li><li>部署（3小时）：给我服务器，我把Mephisto架起来。没问题，连域名都给你。<ol><li>Rails 2.2在Windows上不好使，因为MySQL gem的原因，也许应该装Ruby version而非win32 version</li><li><a href="http://www.javaeye.com/topic/43290" target="_blank" rel="external">在Windows平台使用Apache2.2和Mongrel运行Ruby onRails</a></li></ol></li><li>原型+反馈（3小时）：现在你可以添加内容了。管理后台和我想的不一样。我们可以定制Mephisto。定制是一堆破事，重做也是一堆破事。你让我想想。</li><li>抛弃（30分钟）：现在我基本上知道你要什么了。我决定重做。</li><li>堆砌（2小时）：插件，generator。我知道所有的convention。没有测试。我要看到第一个页面，让我可以部署它。<ol><li>第一个model不是User，而是核心概念</li><li>第一组数据写进fixture，直接load到产品系统</li><li>第一个migration叫做release_1，不允许回滚</li><li>第一个build脚本就用上svn.rake</li><li>用TODO文件来管理storys/defects/unknowns</li></ol></li><li>再次部署（30分钟）：尝试过Mephisto，现在我知道该怎么部署了。</li><li>反馈+小步前进（6小时）：好像可以发布内容了，酷。用户权限我是这样设想的。能不能这样简化？以后我们可以这样去改变。可以，我们可以先控制邀请。<ol><li>给build脚本加上stats：我允许现在测试覆盖率低，但从现在开始它必须一直提高</li><li>每次代码修改开始加上测试，因为我开始记不清每个细节了</li><li>没有Selenium</li><li>每个story完成后立即部署</li></ol></li><li>发布+反馈（1小时）：告诉我一个帐号。quentin和admin都可以。我添加了一些东西，有些更多的想法。TMD…我本来没打算发布的。看在你费劲的份上，就算我发布了吧，现在开始不再清数据库。<ol><li>新的migrations：每个migration只做一件事，每个migration都可以rollback。</li></ol></li><li>继续小步前进（6小时）：SMTP server帮我搞搞好。80端口给我。我收到邮件了。80端口腾出来以后我再改Apache配置，共计需要删掉4字符。<ol><li>界面的手工验证开始变多</li><li>复杂的业务逻辑出现，借用了上一个项目的经验，还是出了一点tricky的错误，耗时30分钟</li></ol></li></ol><p>从周六开始，共计5天业余时间，或换算成3个工作日。</p>
     </section>
 
+    <section class="author">
+<p>（本文作者熊节是ThoughtWorks的总监咨询师）</p>
+</section>
     <!-- JiaThis Button BEGIN -->
 <div class="jiathis_style_32x32" style="height: 40px">
     <a class="jiathis_button_tsina"></a>
@@ -218,7 +221,7 @@ classes that you can use:
     
 </article>
 
-
+			
             <footer class="footer">
     <span class="footer__copyright">&copy;
         2008
@@ -246,11 +249,6 @@ classes that you can use:
     <!--[if IE 6]>
     <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
     <![endif]-->
-
-    <!--  google analytics -->
-    <script>
-        // add your google analytics code here
-    </script>
 
     <!-- totop -->
     <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">

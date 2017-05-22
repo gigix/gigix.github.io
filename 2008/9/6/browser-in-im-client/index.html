@@ -198,6 +198,9 @@ classes that you can use:
         <p>以前闲得没事的时候想过在MSN上做插件，结论是那玩意它就不是正常人能玩的。</p><p><a href="http://www.igniterealtime.org/projects/spark/index.jsp" target="_blank" rel="external">Spark</a>是一个开源的IM客户端，并且据说特别适合企事业单位办公用…其实就是对插件支持比较好的意思吧。插件都是用Swing来写的，API也很简单。做一个JFrame往里一扔就搞定了。</p><p>（还有<a href="http://www.igniterealtime.org/projects/openfire/" target="_blank" rel="external">Openfire</a>也是他们家做的。配置简单使用方便，不错不错的说…）</p><p>自己跟自己聊天几分钟以后决定做一个浏览器嵌在Spark里面这样就可以一边聊天一边看网页（唔唔，很有追求）。<a href="https://jdic.dev.java.net/" target="_blank" rel="external"><span class="caps">JDIC</span></a>它对Mac<span class="caps">OS X</span>支持就有问题，搞了两小时还是不行，于是换方向。<a href="http://lobobrowser.org/" target="_blank" rel="external">Lobo</a>是纯Java的浏览器然则对JavaScript的支持只有这种程度的浏览器它是没办法实用的。<a href="http://jrex.mozdev.org/" target="_blank" rel="external">JRex</a>貌似从05年以后就没有更新鸟。至于<a href="http://www.mozilla.org/projects/embedding/" target="_blank" rel="external">Gecko Embedding</a>…这个，未免太高科技了吧…</p><p>于是最终来到了<a href="http://sourceforge.net/projects/mozswing" target="_blank" rel="external">MozSwing</a>。稍微花了一点时间配置，它还是效果粉不错的亚～～这里有个<a href="http://jnlp.concord.org/dev/mozswing/mozswing.jnlp" target="_blank" rel="external">WebStart</a>可以试用一下，还有<a href="http://blog.limewire.org/?p=303" target="_blank" rel="external">一篇blog</a>介绍怎么玩，来自<a href="http://www.limewire.com/" target="_blank" rel="external">LimeWire</a>的作者，显然他们也借用了一把，呵呵。</p><p>其实粉简单，总共就三句话：</p><pre>MozillaPanel mozilla = new MozillaPanel();someSwingContainer.add(mozilla);mozilla.load(“<a href="http://limewire.com" target="_blank" rel="external">http://limewire.com</a>“);</pre><p>下一个目标，把Groovy给搞进来玩玩。</p>
     </section>
 
+    <section class="author">
+<p>（本文作者熊节是ThoughtWorks的总监咨询师）</p>
+</section>
     <!-- JiaThis Button BEGIN -->
 <div class="jiathis_style_32x32" style="height: 40px">
     <a class="jiathis_button_tsina"></a>
@@ -218,7 +221,7 @@ classes that you can use:
     
 </article>
 
-
+			
             <footer class="footer">
     <span class="footer__copyright">&copy;
         2008
@@ -246,11 +249,6 @@ classes that you can use:
     <!--[if IE 6]>
     <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
     <![endif]-->
-
-    <!--  google analytics -->
-    <script>
-        // add your google analytics code here
-    </script>
 
     <!-- totop -->
     <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">

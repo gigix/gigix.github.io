@@ -198,6 +198,9 @@ classes that you can use:
         <p>做工具需要知道界限。一个好的工具，应该只做一件事并把它做好，是为高内聚；应该以最容易、信息量最少的方式与其他工具集成，是为低耦合。这些道理，<a href="http://book.douban.com/subject/1467587/" target="_blank" rel="external">Eric Raymond</a>早就说过了，不应该再重复。</p><p>（跑题：GUI迷恋者的盲点在于，他们没有意识到鼠标点击是一个蕴含了多大信息量的操作。在1024×768的屏幕上找到一个48×48的图元然后向右拖拽530像素。啧啧。不懂得文本和命令行的重要性的人不配做工具。）</p><p>持续集成工具应该做的事就是让集成能够被“持续”起来。“集成什么”和“怎么集成”是软件开发者自己的事。测试工具应该做的事就是帮助编写和运行测试用例。“测试什么”和“怎么测试”是软件开发者自己的事。这就是一个明确并且信息量最小化的边界。</p><p>而坏的工具则总是尝试越界。通过把软件的集成过程本身纳入持续集成工具会让软件被集成得更好吗？不会。只会让软件开发者更加不了解自己的集成。通过把软件的测试过程本身纳入测试工具会让软件被测试得更好吗？不会。只会让软件开发者更加不了解自己的测试。其结果是，拥有现场信息和能力、应该关注这些事情的人不去关注，只管盲目堆代码而不管得到什么软件；没有能力关注这些事情的人被不断求助──他们也没有真正去关注，因为他们没有能力。</p><p>简而言之，试图用越界的工具大包大揽软件的质量保证，其结果是没人关注软件的质量。</p><p>推论是，自制轮子的工具本质是邪恶的。自制轮子的人没有办法像开源社区那样拒绝越界的非法要求。他们只能迫于上下两方面的压力把不该自己做的事纳入自己的产品中，并因此陷入不断为别人的事提供支撑而没有时间做好该做的事的泥沼。这种邪恶本质是内生的：不仅因为这些工具一定会越界，而且因为这些工具会被强加于人。因此自制轮子的工具永远不如开源工具。</p><p>（我知道我的客户会有一些人看我的博客。对了，这就是写给你们看的。你们知道我在说什么。）</p>
     </section>
 
+    <section class="author">
+<p>（本文作者熊节是ThoughtWorks的总监咨询师）</p>
+</section>
     <!-- JiaThis Button BEGIN -->
 <div class="jiathis_style_32x32" style="height: 40px">
     <a class="jiathis_button_tsina"></a>
@@ -218,7 +221,7 @@ classes that you can use:
     
 </article>
 
-
+			
             <footer class="footer">
     <span class="footer__copyright">&copy;
         2010
@@ -246,11 +249,6 @@ classes that you can use:
     <!--[if IE 6]>
     <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
     <![endif]-->
-
-    <!--  google analytics -->
-    <script>
-        // add your google analytics code here
-    </script>
 
     <!-- totop -->
     <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">

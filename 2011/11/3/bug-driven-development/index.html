@@ -200,6 +200,9 @@ classes that you can use:
         <p>周六一起开会的时候，徐昊说起这样一种开发方式：当我拿到需求，如果我一行代码都不写就交给测试人员去测，测出一个bug我再写一段代码来fix它。我说：真正的测试驱动开发啊。徐昊说：这叫Bug驱动开发。</p><p><img src="http://gigix.thoughtworkers.org/assets/2011/11/4/ReddishRussianBug.jpg" alt=""></p><p>我当时以为他说笑呢。直到今天突然我弄明白了他说的什么意思。然后我就发现自己有多笨。</p><p>首先，Bug驱动开发是一种需求分解的方法。当无能的BA拿着一个一句话需求说“这个需求就是这么大没办法再分得更小了”，请使用Bug驱动开发，测试人员说出来的第一个bug就是一个story：它必定相当独立，它必定有价值，它必定比原来的整个大需求要小，并且它必定可测试。</p><p>然后我很激动地给徐昊发了个短信，然后他告诉我，其实这个方法的学名叫<a href="http://www.infoq.com/cn/news/2009/05/feature-injection-comics" target="_blank" rel="external">Feature Injection</a>，是价值拉动思想的具现化。然后我又发现原来这篇新闻是我的sponsee翻译的⋯⋯为自己的笨和无知挠墙⋯⋯</p><p>显然，为了真正做到Bug驱动开发，我们需要快速、可重复的反馈机制，也就是说：持续集成，自动化测试。这是拉动出来的改善需求。</p><p>顺便我今天又想到了一个检验交付流程的度量指标：往代码里随便乱改一行，改变系统的行为但是不破坏编译，提交它。好了，现在系统里有一个bug，你需要多长时间才能把它抓出来？我把这个度量指标叫做“Bug寿命”（BugLifeTime，BLT）——感谢<a href="http://www.linkedin.com/profile/view?id=35014759" target="_blank" rel="external">Praveen</a>对这个名字的贡献。</p><p>一个理想的交付流程，BLT应该无限趋近0：第一，你应该不能提交这样的代码，因为本地构建会抓住这个bug；第二，提交后持续集成应该会抓住这个bug，并且持续集成的反馈越快越好。</p><p>以“<strong><span class="caps">BLT</span>趋于0</strong>”作为目标进行改善，第一你有清晰的方向，第二你可以很容易地度量改善的效果，第三这个目标是如此简单而又如此困难以至于你永远找不到理由停止改善。这就是Bug驱动改善，一个相当有效的改善活动。</p>
     </section>
 
+    <section class="author">
+<p>（本文作者熊节是ThoughtWorks的总监咨询师）</p>
+</section>
     <!-- JiaThis Button BEGIN -->
 <div class="jiathis_style_32x32" style="height: 40px">
     <a class="jiathis_button_tsina"></a>
@@ -220,7 +223,7 @@ classes that you can use:
     
 </article>
 
-
+			
             <footer class="footer">
     <span class="footer__copyright">&copy;
         2011
@@ -248,11 +251,6 @@ classes that you can use:
     <!--[if IE 6]>
     <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
     <![endif]-->
-
-    <!--  google analytics -->
-    <script>
-        // add your google analytics code here
-    </script>
 
     <!-- totop -->
     <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">

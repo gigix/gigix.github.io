@@ -198,6 +198,9 @@ classes that you can use:
         <p>原文：<a href="http://delivery.acm.org/10.1145/1300000/1292522/p1-wiger.pdf?key1=1292522&amp;key2=5178891911&amp;coll=ACM&amp;dl=ACM&amp;CFID=15151515&amp;CFTOKEN=6184618" target="_blank" rel="external">Extended Process Registry for Erlang</a></p><p>中译：<a href="http://erlang-china.org/WordPress/wp-content/uploads/2007/11/p1-wiger-cn.pdf" target="_blank" rel="external"><strong>扩展Erlang的进程注册表</strong></a></p><p>内建的进程注册表早已被实践证明是Erlang语言中一项极其有用的特性。它使得开发者能够很轻松地提供具名服务 （named services）：用户无需知道服务进程的进程标识符（processidentifier，PID）即可使用这些服务。</p><p>但目前的进程注册表也有其局限性：进程的名字必须是atom（不支持有结构的数据），每个进程只能用一个名字注册，并且缺乏有效的搜索和遍历机制。</p><p>在Ericsson下属的IMSGateways的产品开发中，我们经常需要维护一张映射表，以便根据各种属性找到负责处理调用的进程。我们从中发现了一个通用的模式（一种索引表），并由此开始开发一个扩展的进程注册表。</p><p>一开始这个想法并没有立即体现出价值，甚至看不出在实用中提供了多大的便利。但随着开发的进行，程序设计者们越来越多地使用这个扩展的进程注册表，并因此显著减少了代码量、提高了实现一致性。此外，扩展的进程注册表还提供了一种强大的调试机制，能够在数万个进程中进行有效的调试。</p><p>本文介绍了这种扩展的进程注册表，并对其进行检讨，从而提出一种新的实现方式，使之更具一致性、效率更高、并且支持全局命名空间。</p><p>全文见<a href="http://erlang-china.org/wiki/erlang-doc" target="_blank" rel="external">Erlang文档计划</a></p>
     </section>
 
+    <section class="author">
+<p>（本文作者熊节是ThoughtWorks的总监咨询师）</p>
+</section>
     <!-- JiaThis Button BEGIN -->
 <div class="jiathis_style_32x32" style="height: 40px">
     <a class="jiathis_button_tsina"></a>
@@ -218,7 +221,7 @@ classes that you can use:
     
 </article>
 
-
+			
             <footer class="footer">
     <span class="footer__copyright">&copy;
         2007
@@ -246,11 +249,6 @@ classes that you can use:
     <!--[if IE 6]>
     <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
     <![endif]-->
-
-    <!--  google analytics -->
-    <script>
-        // add your google analytics code here
-    </script>
 
     <!-- totop -->
     <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">

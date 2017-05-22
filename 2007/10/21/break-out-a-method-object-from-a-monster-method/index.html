@@ -198,6 +198,9 @@ classes that you can use:
         <p>(From the book<a href="http://www.amazon.com/Working-Effectively-Legacy-Robert-Martin/dp/0131177052" target="_blank" rel="external">WorkingEffectively with Legacy Code</a>)</p><p><b>Sensing variables</b>are very powerful tools in our arsenal, but sometimes you notice that you already have variablesthat would be ideal for sensing but that are local to the method. If they were instance variables,you could sense through them after a method runs. You can turn local variables into instancevariables, but, in many cases, that can be confusing. The state that you put there will be commononly to the monster method and the methods that you extract from it. Although it will bereinitialized every time the monster method is called, it can be hard to understand what thevariables will hold if you want to call methods that you’ve extracted independently.</p><p>One alternative is<b>Break Out Method Object (330)</b>. This technique was first described by WardCunningham, and it epitomizes the idea of an invented abstraction. When you break out a methodobject, you create a class whose only responsibility is to do the work of your monster method. Theparameters of the method become parameters to a constructor on the new class, and the code of themonster method can go into a method named<i>run</i>or<i>execute</i>on the new class. When the code has been moved to the new class, we’re in a great position torefactor. We can turn the temporary variables in the method into instance variables and sensethrough them as we break down the method.</p><p>Breaking out a method object is a pretty drastic move, but unlike introducing a sensing variable, thevariables that you are using are needed for production. This allows you to build up tests that youcan keep. See<b>Break Out Method Object (330)</b>for a detailed example.</p>
     </section>
 
+    <section class="author">
+<p>（本文作者熊节是ThoughtWorks的总监咨询师）</p>
+</section>
     <!-- JiaThis Button BEGIN -->
 <div class="jiathis_style_32x32" style="height: 40px">
     <a class="jiathis_button_tsina"></a>
@@ -218,7 +221,7 @@ classes that you can use:
     
 </article>
 
-
+			
             <footer class="footer">
     <span class="footer__copyright">&copy;
         2007
@@ -246,11 +249,6 @@ classes that you can use:
     <!--[if IE 6]>
     <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
     <![endif]-->
-
-    <!--  google analytics -->
-    <script>
-        // add your google analytics code here
-    </script>
 
     <!-- totop -->
     <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">

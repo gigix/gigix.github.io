@@ -198,6 +198,9 @@ classes that you can use:
         <p><a href="http://localhost:8080/documentation/distributed/index.html" target="_blank" rel="external">这个文档</a>描述得不是很清楚，因此记录一遍。首先需要同时下载<a href="http://sourceforge.net/projects/cruisecontrol/files/CruiseControl/2.8.3/cruisecontrol-src-2.8.3.zip/download" target="_blank" rel="external">src发布包</a>和<a href="http://sourceforge.net/projects/cruisecontrol/files/CruiseControl/2.8.3/cruisecontrol-bin-2.8.3.zip/download" target="_blank" rel="external">bin发布包</a>。</p>解开src发布包，在其中build distributed插件，然后把contrib目录copy到bin发布包解压后的目录：<blockquote><pre>cd $CC_SRC/contrib/distributedantcd $CC_BINcp -r $CC_SRC/contrib ./contrib</pre></blockquote>修改$CC_BIN/cruisecontrol.sh，在其中包含distributed插件的classpath：<blockquote><pre>… …CCDIST=$CCDIR/contrib/distributedCCDIST_BUILDER=$CCDIST/dist/builder/CCDIST_CORE=$CCDIST/dist/core/CCDIST_JINICORE=$CCDIST/jini-core/CCDIST_JINILIBDL=$CCDIST/jini-lib-dl/jsk-dl.jarCCDIST_CONF=$CCDIST/confEXEC=”$JAVA_HOME/bin/java $CC_OPTS -Djavax.management.builder.initial=mx4j.server.MX4JMBeanServerBuilder -Djava.security.policy=$CCDIST_CONF/insecure.policy -Dcc.library.dir=$LIBDIR -Djetty.logs=$JETTY_LOGS -jar \$LAUNCHER -lib $JAVA_HOME/lib/tools.jar -lib $CCDIST_BUILDER:$CCDIST_CORE:$CCDIST_JINICORE:$CCDIST_JINILIBDL:$CCDIST_CONF \$@ -jmxport 8000 -webport 8080 -rmiport 1099”echo $EXEC$EXEC &amp;echo $!  cc.pid</pre></blockquote>在$CC_BIN/config.xml中指定需要分布的工程：<blockquote><pre>plugin name=”distributed”classname=”net.sourceforge.cruisecontrol.builders.DistributedMasterBuilder”/… …distributedant antscript=”/usr/bin/ant”antworkingdir=”/path/to/my/project” //distributed</pre></blockquote>打开Lookup server：<blockquote><pre>cd $CC_BIN/contrib/distributed/dist/lookupant</pre></blockquote><p>然后，把cc_agent.zip拷到Agent机器上，修改conf/agent.properties配置，ant启动，就好了。</p><p>（郁闷地搞了一下午的心得是：不要尝试在Windows上做任何严肃的开发工作。Stupid Windows.）</p>
     </section>
 
+    <section class="author">
+<p>（本文作者熊节是ThoughtWorks的总监咨询师）</p>
+</section>
     <!-- JiaThis Button BEGIN -->
 <div class="jiathis_style_32x32" style="height: 40px">
     <a class="jiathis_button_tsina"></a>
@@ -218,7 +221,7 @@ classes that you can use:
     
 </article>
 
-
+			
             <footer class="footer">
     <span class="footer__copyright">&copy;
         2010
@@ -246,11 +249,6 @@ classes that you can use:
     <!--[if IE 6]>
     <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
     <![endif]-->
-
-    <!--  google analytics -->
-    <script>
-        // add your google analytics code here
-    </script>
 
     <!-- totop -->
     <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">

@@ -198,6 +198,9 @@ classes that you can use:
         <p>一个后台操作算得太久，然后再想跟MySQL说说话的时候，就发现<a href="http://dev.mysql.com/doc/refman/5.0/en/gone-away.html" target="_blank" rel="external">那个server已经偷偷的跑掉了</a>。</p><p>MySQL的超时可以用SQL查到：</p><pre>mysql show variables;</pre><p>看interactive_timeout和wait_timeout这两项。缺省是28800（秒），我们的服务器上设成了600。所以，一个长循环跑了11分钟之后，数据库连接已经被关掉了，因为中间没有和数据库打交道。</p><p>（多长的循环可以跑10分钟？我看到的大概是8000多和20000多的两个数组做了一下select…）</p><p>这些变量可以在/etc/my.cnf里面设置的。</p><p>Rails应用可以把ActiveRecord::Base.verification_timeout设为一个小于数据库连接超时的值（比如500）这样Rails就会帮你每过500秒PING一下数据库这样连接就不会断掉了。</p><p>（唔…10分钟会让很多东西超时，比如Apache…）</p><p>然则我们的操作是Rails之外的一个stand-alone进程，Rails也不管帮忙它，所以要在循环的过程中时不时的PING一下数据库：</p><pre>ActiveRecord::Base.connection.verify!(0)</pre><p>于是就可以了。</p>
     </section>
 
+    <section class="author">
+<p>（本文作者熊节是ThoughtWorks的总监咨询师）</p>
+</section>
     <!-- JiaThis Button BEGIN -->
 <div class="jiathis_style_32x32" style="height: 40px">
     <a class="jiathis_button_tsina"></a>
@@ -218,7 +221,7 @@ classes that you can use:
     
 </article>
 
-
+			
             <footer class="footer">
     <span class="footer__copyright">&copy;
         2008
@@ -246,11 +249,6 @@ classes that you can use:
     <!--[if IE 6]>
     <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
     <![endif]-->
-
-    <!--  google analytics -->
-    <script>
-        // add your google analytics code here
-    </script>
 
     <!-- totop -->
     <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">

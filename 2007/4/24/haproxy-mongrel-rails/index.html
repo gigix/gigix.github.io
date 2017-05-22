@@ -198,6 +198,9 @@ classes that you can use:
         <p>这是一个高性能、高伸缩性的<a href="http://www.rubyonrails.org" target="_blank" rel="external">Rails</a>部署方案。有一组<a href="http://blog.kovyrin.net/2006/08/22/high-performance-rails-nginx-lighttpd-mongrel/" target="_blank" rel="external">性能数据</a>可供参考。</p><p>首先接收到HTTP请求的是<a href="http://haproxy.1wt.eu/" target="_blank" rel="external">HAProxy</a>。HAProxy会把请求反向代理给其后的多个<a href="http://mongrel.rubyforge.org/" target="_blank" rel="external">Mongrel</a>实例。每个Mongrel实例同一时间只处理一个请求。只要Rails应用本身贯彻<a href="http://zefhemel.com/archives/2004/09/01/the-share-nothing-architecture" target="_blank" rel="external">无共享架构</a>，就可以直接通过增加服务器和改变HAProxy配置得到线性的性能提升。另外可以用<a href="http://www.tildeslash.com/monit/" target="_blank" rel="external">Monit</a>来管理Mongrel实例的开启和关闭，并且在异常状况发生时及时采取措施。这样一来，企业级超复杂所暗含的性能、伸缩性、可管理性等等要求都满足了。</p><p>“HAProxy is a free,<strong><em>very</em></strong>fast and reliable solution offering<a href="http://en.wikipedia.org/wiki/High_availability" target="_blank" rel="external">high availability</a>,<a href="http://en.wikipedia.org/wiki/Load_balancer" target="_blank" rel="external">load balancing</a>, andproxying for<span class="caps">TCP</span>and<span class="caps">HTTP</span>-based applications.”<br>“Mongrel is a fast<span class="caps">HTTP</span>library and server for Ruby that is intended for hostingRuby web applications of any kind using plain<span class="caps">HTTP</span>rather than FastCGI or<span class="caps">SCGI</span>.”<br>“monit is a utility for managing andmonitoring,processes, files, directories and devices on a<span class="caps">UNIX</span>system.”</p><p>（今天下午和George讨论的主题：我们已经听厌了“企业级”这样的大帽子。我们需要做的是弄明白所谓“企业级”究竟代表什么，然后把解决方案拿出来。基本上——如果真的喜欢“企业级”的话——这就是所谓的“企业级Rails”了。）</p>
     </section>
 
+    <section class="author">
+<p>（本文作者熊节是ThoughtWorks的总监咨询师）</p>
+</section>
     <!-- JiaThis Button BEGIN -->
 <div class="jiathis_style_32x32" style="height: 40px">
     <a class="jiathis_button_tsina"></a>
@@ -218,7 +221,7 @@ classes that you can use:
     
 </article>
 
-
+			
             <footer class="footer">
     <span class="footer__copyright">&copy;
         2007
@@ -246,11 +249,6 @@ classes that you can use:
     <!--[if IE 6]>
     <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
     <![endif]-->
-
-    <!--  google analytics -->
-    <script>
-        // add your google analytics code here
-    </script>
 
     <!-- totop -->
     <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">

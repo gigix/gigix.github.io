@@ -198,6 +198,9 @@ classes that you can use:
         <p><strong>RubyWorks Production Stack:</strong><a href="http://rubyworks.rubyforge.org/" target="_blank" rel="external">http://rubyworks.rubyforge.org/</a></p><p>RubyWorks production stack is a collection of open-source software required to host a<a href="http://www.rubyonrails.org" target="_blank" rel="external">RubyOnRails</a>application on a Linux server. Supported Linux variants include RedHat Enterprise Linux 4 (both i386and x64 versions), CentOS 4 (both i386 and x64 versions), Debian 4 (Etch)and Ubuntu 7 (Feisty Fawn).</p><p>RubyWorks ProductionStack的特点是提供了方便的服务管理、强大的服务监控和可靠的多应用服务器负载均衡。此外，以RPM包/DEB包的形式发布，同时支持RedHat和Debian也是我们的一大优势。</p><p><strong>deprec:</strong><a href="http://www.deprec.org/" target="_blank" rel="external">http://www.deprec.org/</a></p><p>Deprec is a collection of automated recipes, written in Ruby, for settingup production ready Ruby on Rails servers. This includes everything fromcreating admin accounts and setting up your ssh keys to compiling and installingthe packages required to get a Rails application running on a freshly installedUbuntu 6.06.1<span class="caps">LTS</span>server.</p><p>平心而论deprec确实做得很不错。基于<a href="http://capify.org/" target="_blank" rel="external">Capistrano</a>来搭建远端的部署服务器，这个想法很巧妙，也让部署环境和Capistrano的结合更紧密。主要的缺点有两个：（1）要求部署环境安装GCC（build-essential），因为所有的gem都是在本地buildnative extension的；（2）目前为止只支持Ubuntu。</p><p><strong>LinRails:</strong><a href="http://linrails.thembid.com/" target="_blank" rel="external">http://linrails.thembid.com/</a></p><p>While developing<a href="http://www.thembid.com/" target="_blank" rel="external">ThemBid.com</a>using<a href="http://www.symfony-project.com/" target="_blank" rel="external">Symfony</a>, our developers used<a href="http://www.apachefriends.org/en/xampp.html" target="_blank" rel="external"><span class="caps">XAMPP</span></a>to standardize development environments and have something easy to install. When we started using<a href="http://www.rubyonrails.org/" target="_blank" rel="external">Ruby on Rails</a>, we could not find something similarfor Linux so LinRails was started.</p><p>从这段简介来看，LinRails认为他们在做一个Rails的开发环境，事实上他们打包的东西也确实更像是一个开发环境。同时，LinRails也只在Ubuntu上测试过。</p><p><strong>Rails Machine:</strong><a href="http://www.railsmachine.com/" target="_blank" rel="external">http://www.railsmachine.com/</a></p><p>Rails Machine provides software, services and support for commercial<a href="http://rubyonrails.com/" target="_blank" rel="external">Ruby on Rails</a>application deployments. Our primary customers are professional Ruby onRails developers that need simple and high quality solutions fordeploying their applications either in a hosted environment or internalcorporate environment.</p><p>我印象里Rails Machine是率先引入虚拟化技术（我喜欢这种大词）的stack：之所以叫“machine”，因为他们发布的stack整个是一个<a href="http://www.cl.cam.ac.uk/research/srg/netos/xen/index.html" target="_blank" rel="external">Xen</a>虚拟机，里面装着CentOS和Rails服务器所需的一切东西。这就是它的特点（优点＋缺点）所在。RailsMachine是商业软件，同时也提供<a href="http://www.railsmachine.com/hosting" target="_blank" rel="external">hosting服务</a>。</p><p><strong>FiveRuns RM-Install:</strong><a href="http://www.fiveruns.com/products/rm/install" target="_blank" rel="external">http://www.fiveruns.com/products/rm/install</a></p><p>RM-Install is a free, multi-platform, full-tested and enterprise-ready Rails stack that enables youto instantly begin developing and deploying your great Rails applications without the worry ofinstalling or maintaining the various integrated software components.</p><p>这个产品也不是开源的（尽管是免费的）。不过最困扰的还是：目前压根看不到它是什么样子。FiveRuns最吸引我的是<a href="http://www.fiveruns.com/products/rm/manage" target="_blank" rel="external">RM-Manage</a>产品，点一下“SystemBrowser”那里的图片，这样奢华的服务管理界面确实值得卖一定价钱。</p><p><strong>Engine Yard:</strong><a href="http://www.engineyard.com/" target="_blank" rel="external">http://www.engineyard.com/</a></p><p>We handle deployment and operations, so you can focus on yourapplication and your business. Smoothly scale from 1 user to 1 million.</p><p>Engine Yard就完全是shared host了，吸引我注意到它的是一篇“<a href="http://brainspl.at/xen_and_the_art_of_rails_deployment.pdf" target="_blank" rel="external">Xen And The Art of RailsDeployment</a>”的演讲稿，以及那华丽的<a href="http://www.engineyard.com/assets/2007/5/2/cluster_layers_big.jpg" target="_blank" rel="external">24层架构图</a>。也许他们是不会把自己的deployment stack卖出来的——当然更不用说开源出来了。</p>
     </section>
 
+    <section class="author">
+<p>（本文作者熊节是ThoughtWorks的总监咨询师）</p>
+</section>
     <!-- JiaThis Button BEGIN -->
 <div class="jiathis_style_32x32" style="height: 40px">
     <a class="jiathis_button_tsina"></a>
@@ -218,7 +221,7 @@ classes that you can use:
     
 </article>
 
-
+			
             <footer class="footer">
     <span class="footer__copyright">&copy;
         2007
@@ -246,11 +249,6 @@ classes that you can use:
     <!--[if IE 6]>
     <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
     <![endif]-->
-
-    <!--  google analytics -->
-    <script>
-        // add your google analytics code here
-    </script>
 
     <!-- totop -->
     <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">

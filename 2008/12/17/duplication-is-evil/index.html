@@ -198,6 +198,9 @@ classes that you can use:
         <p>就算不说所有的软件问题都是因为信息重复造成的，至少很多问题确实是因为重复造成的。</p><p><a href="http://www.javaeye.com/topic/295106" target="_blank" rel="external">源文件里有字符串就不是好程序？</a></p><p>是什么带来了痛苦？是信息的分布吗？</p><pre>String title = “Blog”;</pre>和<pre>String title = “博客”;</pre>有什么重要的区别？<p>一个字符串字面量包含了两重信息：（1）字符串的内容；（2）字符串的编码方式。这两个字符串的区别在于，前者的编码方式是缺省的ASCII而后者带有额外的编码方式信息（例如UTF8或者GBK）。</p><p>所以真正的问题是<strong>信息重复</strong>，关于“如何编码字符串”的信息被重复了。</p><p>重复信息是邪恶的，信息应该在并且只在一处被表述。</p>
     </section>
 
+    <section class="author">
+<p>（本文作者熊节是ThoughtWorks的总监咨询师）</p>
+</section>
     <!-- JiaThis Button BEGIN -->
 <div class="jiathis_style_32x32" style="height: 40px">
     <a class="jiathis_button_tsina"></a>
@@ -218,7 +221,7 @@ classes that you can use:
     
 </article>
 
-
+			
             <footer class="footer">
     <span class="footer__copyright">&copy;
         2008
@@ -246,11 +249,6 @@ classes that you can use:
     <!--[if IE 6]>
     <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
     <![endif]-->
-
-    <!--  google analytics -->
-    <script>
-        // add your google analytics code here
-    </script>
 
     <!-- totop -->
     <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">

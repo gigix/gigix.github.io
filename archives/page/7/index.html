@@ -179,6 +179,36 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2013/11/16/new-era-of-data-collecting/" title="link to 数据采集的新时代">数据采集的新时代</a></h2>
+
+      <p class="excerpt">
+        <p>中午帮同事订餐，大家都想吃点什么？周末搞个团队建设，大家想去哪里玩？买保险，要提供个人信息。进医院，要先挂个号。</p><p>这几件事有什么共通之处？答案是，它们本质上都是在做数据采集。如果把这些收集信息的过程放到电脑上做，可能会用个Excel表格；如果要做个软件来处理这些事，大概最主要的界面就是一张表单（form），有文本框啦单选按钮啦多选按钮啦下拉列表啦之类的，最后还有个“提交”或者“完成”之类的按钮。</p><p><img src="http://gigix.thoughtworkers.org/assets/2013/11/16/appsforms2.jpg" width="420px"></p><p>这些表单比乍一看的要复杂。比如说，你会希望表单有校验，明显不合法的数据最好就不要填进去了。再比如说，表单会有条件判断在里面，例如男性就不用问是否怀孕女性就不用问是否做过结扎。当然了，表单还应该长得好看，而且最好在电脑上和手机上都好看。更不用说还有一些并非HTML直接支持但颇为常见的数据类型，比如地点经纬度，比如照片。</p><p>你还在用HTML一个字段一个字段实现表单吗？你的开发工作量还和表单长度成正比吗？那弱爆了好吗？</p><p><a href="https://jinshuju.net/" target="_blank" rel="external">金数据</a>是一个在线创建和管理表单、收集数据的工具。不用多废话介绍它，网站上一看就知道了。有趣的部分在于，金数据提供了<a href="http://developer.jinshuju.net/" target="_blank" rel="external"><span class="caps">JSON</span>格式的API</a>，你可以把放在金数据上的表单拿给别人去填，收到新数据的时候通过这个API推送给你自己的服务器程序。觉得金数据的表单还不够好？或者压根儿不想让金数据知道你采集了哪些数据？你还可以把表单定义抓下来，自己写程序解释这个JSON定义，得到完全自己控制的表单——听起来有点麻烦，但至少有意思，总好过一个字段一个字段写HTML。</p><p><img src="http://gigix.thoughtworkers.org/assets/2013/11/16/Screen_Shot_2013-11-16_at_6.14.58_PM.png" alt=""></p><p>如果解释金数据的JSON格式表单定义确实有点麻烦（或者技术挑战），这儿还有个更简单一点的解决方案。<a href="https://enketo.org/" target="_blank" rel="external">Enketo</a>也是一个在线设计表单和手机数据的工具，不过不像金数据，Enketo更多像是一个帮助软件开发者的工具：你可以用Excel设计表单，然后把Excel格式的表单定义上传到<a href="https://formhub.org/" target="_blank" rel="external">FormHub</a>（Enketo的一个部署），然后就可以让用户在线填表；更妙的是当你把表单定义下载过来，Enketo还提供了开源的<a href="https://github.com/MartijnR/enketo-core" target="_blank" rel="external">Javascript Library</a>帮你显示和操作表单——所以就不用操心“自己写程序解释表单定义”什么的啦，毕竟要实现那些常见的表单功能并不是件很容易的事。</p><p>如果感兴趣怎么使用Enketo来做你自己的表单，我做了一个<a href="https://github.com/gigix/shivaganda" target="_blank" rel="external">简单的Demo</a>来演示。</p>
+
+<pre>$ git clone https://github.com/gigix/shivaganda.git
+$ cd shivaganda/village-enketo$ npm install$ bin/server.js
+</pre>
+
+<p>然后就可以去 <a href="http://localhost:8002" target="_blank" rel="external">http://localhost:8002</a> 看这个表单了。代码非常简单，40行HTML加100行Javascript而已，表单就搞定啦，而且做成手机应用也完全没问题。点“提交”按钮的话，你得到的是一个XML格式的数据包，所以程序员就只管处理数据就好啦。</p><p><img src="http://gigix.thoughtworkers.org/assets/2013/11/16/enketo.png" width="420px"></p><p>还是那话：你还在一个字段一个字段拿HTML写表单吗？那弱爆了好吗？……可是这真的还在很多我所知道的项目里发生呢。特别是来自发达国家（尤其是南太平洋发达国家，嗯，你懂的）的项目，客户似乎对于花这点工夫也不在意，毕竟一个项目上线就能赚很多钱回来嘛。但是在，比如说，UNICEF在非洲的项目里，我们没钱啊，我们资源非常受限啊，我们舍不得把程序员宝贵的时间拿去复制粘贴HTML表单字段啊，所以我们就得想破脑袋找这些法子，让程序员做必须做的事，可以自动化的全都自动化。其结果呢，就是项目做得很有意思，每段程序写下去都是有创造性的——没创造性的那些都被自动化了。</p><p>所以呢，穷人的孩子早当家，穷人的项目更好玩 :D</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="11月 16 2013" class="post-list__meta--date date">11月 16 2013</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2013/11/9/health-it-for-low-income-countries/" title="link to 穷人的医疗信息化">穷人的医疗信息化</a></h2>
 
       <p class="excerpt">
@@ -393,30 +423,6 @@ classes that you can use:
       <hr class="post-list__divider" />
     </li>
     
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2013/9/2/about-freedom/" title="link to 自由的重量">自由的重量</a></h2>
-
-      <p class="excerpt">
-        <p>有这样一些人，生活似乎对他们特别不公平，世界似乎对他们特别残酷。因为某些原因老板低估他，因为某些原因同事排挤他，因为某些原因社会歧视他……要是有机会，他会向你倾诉这个世界、这个世界上的其他人给他带来了多少苦难。</p><p>总之，造成这些苦难的，不是他自己。</p><p><img src="http://gigix.thoughtworkers.org/assets/2013/9/2/freedom_s2.jpg" width="400px"></p><p>《<a href="http://book.douban.com/subject/1934456/" target="_blank" rel="external">爱的行刑者</a>》讲到给人带来深层次而无法回避的痛苦的四种因素。第一，人是会死的；第二，人是自由的……等等，这里有两个问题：人真的是自由的吗？如果是，自由怎么会成为一种痛苦的根源？</p><p>我们会提出这样的问题仅仅因为我们在谈到“自由”这个词的时候经常忽视它的重量——人可以自由地做事，同时要为自己所做的事承担责任。从这个意义上来说，人确实是自由的，你可以自由地选择做或不做任何事，只不过要接受一切的后果。你可以打人，不过有可能被打回来；你可以抢劫，不过有可能蹲几十年监狱；你可以从楼上跳下去，不过有可能会死。当意识到后果本身就是选择的一部分，自由就开始变得沉重。</p><p>甚至沉重得难以承受。有人在彭萦的微信公众账号“<a href="http://chuansong.me/n/154935" target="_blank" rel="external">改变自己</a>”上提了这样一个问题：“彭萦老师您又是如何做到一两天就看完一本书的呢？我每天也就地铁上看，差不多两周一本，感觉已经快不了了。”彭萦很残忍地回答：“如何做到看书比你多？唯一的方法就是——我看书花的时间比你多。”其实何止读书，类似的事太多了。为什么他晋级涨薪我原地踏步？为什么她琴棋书画茶我油盐酱醋茶？为什么他八块腹肌我一块腹油？为什么她长袖善舞我不约而同？大部分时候，世界没有对我们特别不公平，只是我们已经自由地选择了做（或不做）某些事，正在承受后果而已。</p><p>人是自由的，自由地行动，并承受行动的后果，这个规律基本上不会变的。如果想要改变结果，还是从改变自己开始吧。</p><p>（广告时间：如果需要一点动力来改变自己，请关注微信公众账号“改变自己”或“wechanger”。）</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="9月 2 2013" class="post-list__meta--date date">9月 2 2013</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
   </ol>
 
   <hr class="post-list__divider " />
@@ -436,7 +442,7 @@ classes that you can use:
 </nav>
 
 
-</div>
+</div>			
             <footer class="footer">
     <span class="footer__copyright">&copy;
         2017
@@ -464,11 +470,6 @@ classes that you can use:
     <!--[if IE 6]>
     <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
     <![endif]-->
-
-    <!--  google analytics -->
-    <script>
-        // add your google analytics code here
-    </script>
 
     <!-- totop -->
     <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">

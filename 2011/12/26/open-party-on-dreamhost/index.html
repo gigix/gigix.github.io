@@ -200,6 +200,9 @@ classes that you can use:
         <p>自从开始帮忙组织<a href="http://groups.google.com/d/forum/openpartycd" target="_blank" rel="external">成都的OpenParty</a>以来，每天抽一点时间做OpenParty成都的网站。感谢<a href="http://www.diamondtin.com/" target="_blank" rel="external">Tin</a>和<a href="http://cleverpig.name/dan/" target="_blank" rel="external">cleverpig</a>的大力支持，今天终于把<a href="http://www.chengdu-open-party.org/" target="_blank" rel="external">OpenParty成都</a>网站给弄起来了。</p><p><img src="http://gigix.thoughtworkers.org/assets/2011/12/26/Chengdu_Jinli_Street_Night_by_AllenHwong.jpg" alt=""></p><p>首先把<a href="https://github.com/openparty/openparty" target="_blank" rel="external">OpenParty的Django应用</a>给fork出来到<a href="https://github.com/gigix/openparty" target="_blank" rel="external">一个新的repository</a>。没多少需要修改的，只是页面稍做调整，改改文字。</p><p>DreamHost有<a href="http://wiki.dreamhost.com/Django" target="_blank" rel="external">一篇文章</a>讲如何安装Django的。需要照着它做一遍，生成Passenger配置。但是这样弄完以后肯定是跑不起来的，因为所有的依赖包都没有装，而且因为没有root权限所以系统缺省的easy_install也不能安装任何东西。所以，这个配置弄好以后先放着，还得装个自己的Python。</p><p>有个哥们写了一篇博客讲<a href="http://andrew.io/weblog/2010/02/installing-python-2-6-virtualenv-and-virtualenvwrapper-on-dreamhost/" target="_blank" rel="external">如何在DreamHost安装virtualenv</a>。也是照着做就行了。装好<a href="http://pypi.python.org/pypi/virtualenv" target="_blank" rel="external">virtualenv</a>以后直接就可以用<a href="http://www.pip-installer.org/en/latest/index.html" target="_blank" rel="external">pip</a>安装依赖包了。</p><p>接下来就是修改passenger_wsgi.py里的配置了。有两个需要修改的内容：第一是需要用virtualenv装的Python；第二是DreamHost缺省生成的配置有问题，没有引入应用程序的路径。直接把我的passenger_wsgi.py贴上来：</p><pre>import sys, osINTERP = path_to_python_in_virtualenvif sys.executable != INTERP: os.execl(INTERP, INTERP, *sys.argv)project_path = path_to_applicationdjango_path = path_to_django_in_virtualenvsys.path.append(os.getcwd())sys.path.insert(1, project_path)sys.path.insert(1, django_path)sys.path.insert(1, os.path.join(project_path, “apps”))sys.path.insert(1, os.path.join(project_path, “vendor”))os.environ[‘DJANGO_SETTINGS_MODULE’] = “ChengduOpenParty.settings”import django.core.handlers.wsgiapplication = django.core.handlers.wsgi.WSGIHandler()</pre><p>然后就是配数据库啦同步数据库啦这些常规操作了。然后<a href="http://www.chengdu-open-party.org/" target="_blank" rel="external">OpenParty成都的网站</a>就美美的跑起来啦～四川地区的技术爱好者们，欢迎来分享！</p>
     </section>
 
+    <section class="author">
+<p>（本文作者熊节是ThoughtWorks的总监咨询师）</p>
+</section>
     <!-- JiaThis Button BEGIN -->
 <div class="jiathis_style_32x32" style="height: 40px">
     <a class="jiathis_button_tsina"></a>
@@ -220,7 +223,7 @@ classes that you can use:
     
 </article>
 
-
+			
             <footer class="footer">
     <span class="footer__copyright">&copy;
         2011
@@ -248,11 +251,6 @@ classes that you can use:
     <!--[if IE 6]>
     <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
     <![endif]-->
-
-    <!--  google analytics -->
-    <script>
-        // add your google analytics code here
-    </script>
 
     <!-- totop -->
     <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">

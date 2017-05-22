@@ -179,6 +179,30 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2008/8/1/fallacy-about-google/" title="link to 装象你好歹也插根葱">装象你好歹也插根葱</a></h2>
+
+      <p class="excerpt">
+        <p><a href="http://blog.csdn.net/zkyliufeng/archive/2008/07/24/2706504.aspx" target="_blank" rel="external">揭开Google暴利秘密的数学公式</a></p><blockquote>这个数学公式所表达的意思就是Google的总价值等于它抓取的网页蕴含的总价值减去它的运营成本，VG可以看作Google占有的互联网信息剩余价值。</blockquote><p>张五常看见这玩意能被气死。佛里曼半辈子讲交易成本，这帮伪经济学家们还是无视之。价值是会因为交易成本而消散的呀，同志。</p><p>葱都懒得插一根，翘着个猪拱嘴就愣充象，这玩意他不光是能力问题，他还是个态度问题。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="8月 1 2008" class="post-list__meta--date date">8月 1 2008</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2008/7/28/microsoft-s-build-lab/" title="link to Microsoft&#39;s Build Lab">Microsoft&#39;s Build Lab</a></h2>
 
       <p class="excerpt">
@@ -395,30 +419,6 @@ classes that you can use:
       <hr class="post-list__divider" />
     </li>
     
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2008/7/2/long-running-javascript/" title="link to JavaScript跑太久…">JavaScript跑太久…</a></h2>
-
-      <p class="excerpt">
-        <p>IE就瞎菜了…傻了吧唧的蹦出来问“好像浏览器上有个操作死菜了，咱把它干翻吧？”烦人还是小事，十有九个人会点“Yes”，然后就真干翻了…</p><p>（根本原因是IE6/7不支持XPath，于是只好遍历DOM来找东西，which is非常慢啊…从一个500K+的DOM里找到一堆东西，Firefox只要几十毫秒，IE6要用到1秒…）</p><p>（试了一下<a href="http://docs.jquery.com/Selectors" target="_blank" rel="external">JQuery的CSS selector</a>，搞了个折中，IE6和Firefox都一百多毫秒，然则还是不够…几组查询下来IE还是瞎菜了…）</p><p>于是用空间换时间，在page上建索引。然则还是不行，因为最耗时的操作不止这一个…</p><p>于是把耗时的操作摘出来，原本都在onload里做的事情放在DOM loading的过程中，变成几百个小块来做。最耗时的两个操作，组装过滤列表和查询，用setTimeout变成异步的。</p><p>（这个时候很得意的问<a href="http://dreamhead.blogbus.com" target="_blank" rel="external">郑晔</a>：“阻塞操作太长怎么办？”得到答案：“搞成异步的。”）</p><p>然后一边唱着“牛x闪闪放光芒”，一边就发现break了另一处的功能…这个组件是被很多地方以很多方式重用的…</p><p>紧接着伤心地发现这块JavaScript已经非常混乱而难以理解了…重构迫切需要中…多想用JavaScript搞出如同Erlang一般优雅的并行计算序列啊…</p><p>（为什么每次感到很牛x的时候总会紧跟着很失落的发现有一大堆破事搞不定呢…这就是程序员的宿命吧…）</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="7月 2 2008" class="post-list__meta--date date">7月 2 2008</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
   </ol>
 
   <hr class="post-list__divider " />
@@ -438,7 +438,7 @@ classes that you can use:
 </nav>
 
 
-</div>
+</div>			
             <footer class="footer">
     <span class="footer__copyright">&copy;
         2017
@@ -466,11 +466,6 @@ classes that you can use:
     <!--[if IE 6]>
     <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
     <![endif]-->
-
-    <!--  google analytics -->
-    <script>
-        // add your google analytics code here
-    </script>
 
     <!-- totop -->
     <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">

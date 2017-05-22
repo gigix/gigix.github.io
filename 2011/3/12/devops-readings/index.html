@@ -198,6 +198,9 @@ classes that you can use:
         <p><strong>壹、穷人的EC2自动快照</strong></p><p>用两个简单的shell脚本加一个crontab就能每周（如果你愿意的话，每天也可以）备份EC2的机器。今天在Ubuntu上玩各种东西把环境玩复杂化以后，发现这个脚本蛮有用。</p><p>话说，实在没有什么理由，不到EC2搞台机器放自己的博客兼作翻墙梯啊…</p><p><strong>贰、挪亚，不是方舟</strong></p><p>这位John Vincent同志写了<a href="http://lusislog.blogspot.com/2011/03/ad-hoc-configuration-coordination-and.html" target="_blank" rel="external">一篇博客</a>论述…嗯，为什么有Chef和Puppet还不够。</p><p>Chef和Puppet管理有计划的变更，但你经常会做无计划的<a href="http://dev2ops.org/blog/2011/2/16/peanut-butter-in-my-chocolate-convergence-vs-ad-hoc-control.html" target="_blank" rel="external">偶发变更</a>，而且你不太希望每次变更重启都得重启服务。所以，Vincent桑说，你需要…</p><blockquote>Distributed coordination, dynamically reconfigurable code, elasticity and environment-awareapplications.</blockquote><p>然则，看完<a href="https://github.com/lusis/noah" target="_blank" rel="external">Noah的README</a>就知道了。这就是RESTful的RMI…好吧，正确的思想永远都用得上，而且RESTful总比RMI要好那么一点点。</p><p><strong>叁、飞禽走兽们</strong></p><p><a href="http://www.nagios.org/" target="_blank" rel="external">Nagios</a>是老牌的监控工具，十多年历史了。</p><p><a href="http://hadoop.apache.org/" target="_blank" rel="external">Hadoop</a>这里好玩的东西不少，<a href="http://hadoop.apache.org/hdfs/" target="_blank" rel="external">分布式文件系统</a>，<a href="http://hadoop.apache.org/mapreduce/" target="_blank" rel="external">MapReduce</a>，还有<a href="http://zookeeper.apache.org/" target="_blank" rel="external">重新发明轮子的ZooKeeper</a>。</p><p><a href="http://www.sinatrarb.com/" target="_blank" rel="external">Sinatra</a>，快速做一个web server，不需要Rails那么庞大，比WEBrick容易写。</p><p><a href="http://redis.io/" target="_blank" rel="external">Redis</a>，又一个key-value store。加上<a href="http://ohm.keyvalue.org/" target="_blank" rel="external">Ohm</a>，好了，NoSQL的对象持久化。</p><p>看一遍<a href="https://github.com/lusis/Noah/wiki/Example-Use-Cases" target="_blank" rel="external">Noah的使用场景</a>，感到运维们鸭梨很大。</p><p>（还有一本<a href="http://goo.gl/oVgbx" target="_blank" rel="external">Hadoop的书</a>可我今天看不着…等明天翻墙再说吧。）</p><p><strong>肆、来点音乐</strong></p><p><a href="http://mad.emotionull.com/" title="MAD" target="_blank" rel="external">Music as Data</a>is a live programming language/environment based on Processing.org written in Clojure. It’ssomething likeSuperCollider or Chuck but aims to be easier to hack/experiment live.</p><p>我喜欢他的网站。简约而不简单。</p>
     </section>
 
+    <section class="author">
+<p>（本文作者熊节是ThoughtWorks的总监咨询师）</p>
+</section>
     <!-- JiaThis Button BEGIN -->
 <div class="jiathis_style_32x32" style="height: 40px">
     <a class="jiathis_button_tsina"></a>
@@ -218,7 +221,7 @@ classes that you can use:
     
 </article>
 
-
+			
             <footer class="footer">
     <span class="footer__copyright">&copy;
         2011
@@ -246,11 +249,6 @@ classes that you can use:
     <!--[if IE 6]>
     <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
     <![endif]-->
-
-    <!--  google analytics -->
-    <script>
-        // add your google analytics code here
-    </script>
 
     <!-- totop -->
     <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">

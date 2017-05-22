@@ -198,6 +198,9 @@ classes that you can use:
         <p>Some say that “it’s little valuable to achieve test coverage over 80%” (or 60% insome cases).From the perspective of quality assurance, maybe it’s true. However, from a lean perspective,100% testcoverage could be even easier to achieve than 80% (and much easier than 60%). Sounds weird? I’llexplain.</p><p>The most common argument against “100% coverage” is “<em>Do we really need testtrivial methodssuch as getter/setter?</em>” But it’s a bad question. What really matters is not “<em>do we really need<strong>test</strong>them</em>”, but “<em>do we really need<strong>write</strong>them</em>”. I saw programmers wrote (or even generated) getter/setters without test just because doingso is cheap.But these small pieces of code are waste: not only because you need maintain them, but also becausethey(potentially) break design principles such as<a href="http://en.wikipedia.org/wiki/Law_of_Demeter" target="_blank" rel="external">Law of Demeter</a>. Creating trivial methods without test-driven is over production. It’s<a href="http://en.wikipedia.org/wiki/Muda_%28Japanese_term%29" target="_blank" rel="external"><span class="caps">MUDA</span></a>.</p><p>And the tolerance of code-without-test causes<a href="http://en.wikipedia.org/wiki/Mura_%28Japanese_term%29" target="_blank" rel="external"><span class="caps">MURA</span></a>(meaning irregular, uneven or inconsistent). Lower the bar of test coverage to 80% (or even 60%),and you’llend up to solve code-without-test in a bigger batch. It requires more consideration and effort everytime youdoing it, and this effort is not split into every story (or even better, every commit) evenly. You’llneeda concentrated hour (or worse, half day) to write tests for code committed a few days ago.</p><p>And as we all know,<span class="caps">MUDA</span>and<span class="caps">MURA</span>causes<a href="http://en.wikipedia.org/wiki/Muri_%28Japanese_term%29" target="_blank" rel="external"><span class="caps">MURI</span></a>(overburden, unreasonableness or absurdity). When it comes to the last day before your release andsuddenly testcoverage drops under the bar, how possible can you get a concentrated hour to fix it? Isn’t itannoying tobe requested writing some test to fix broken<a href="http://en.wikipedia.org/wiki/Continuous_integration" target="_blank" rel="external">continuous integration</a>when you are ready to pack your laptop and go home at 6PM? Are you going to do some serious codereview beforetyping in yet another non-sense test case and commit it?</p><p>Allowing<span class="caps">MUDA</span>to accumulate causes<span class="caps">MURA</span>. MURA plus delivery pressure causes<span class="caps">MURI</span>. MURI stops you from improving code quality and causes more<span class="caps">MUDA</span>. Thelower the bar, the worse the case. You can break the chain by eliminating every piece ofcode-without-testcontinuously. Test-driven every piece of code.</p><p>Bottom line: although it might be little valuable to tighter test coverage restriction from 80% to100% from aquality assurance point of view, doing so makes your life easier (instead of harder). So, why notdoing it?</p>
     </section>
 
+    <section class="author">
+<p>（本文作者熊节是ThoughtWorks的总监咨询师）</p>
+</section>
     <!-- JiaThis Button BEGIN -->
 <div class="jiathis_style_32x32" style="height: 40px">
     <a class="jiathis_button_tsina"></a>
@@ -218,7 +221,7 @@ classes that you can use:
     
 </article>
 
-
+			
             <footer class="footer">
     <span class="footer__copyright">&copy;
         2011
@@ -246,11 +249,6 @@ classes that you can use:
     <!--[if IE 6]>
     <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
     <![endif]-->
-
-    <!--  google analytics -->
-    <script>
-        // add your google analytics code here
-    </script>
 
     <!-- totop -->
     <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">

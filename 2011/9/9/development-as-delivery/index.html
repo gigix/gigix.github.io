@@ -200,6 +200,9 @@ classes that you can use:
         <p>这几天跟Simore在车上聊研发云和<a href="http://continuous-delivery.thoughtworks.com/" target="_blank" rel="external">持续交付</a>，聊来聊去就聊出了一个新概念：开发即交付——Development As Delivery，缩写DAD，也就是“爹式开发”。</p><p><em><strong>免责声明</strong>：爹式开发绝大部分理念和实践是基于持续交付的。我们发明这个概念主要是为了搞笑。</em></p><p><img src="http://gigix.thoughtworkers.org/assets/2011/9/9/dad.jpg" width="320px"></p><p>在持续集成的场景下，每当程序员提交代码，就会触发一次完整的构建（包括编译、静态检查、部署、自动测试等），确保软件系统可用并且符合质量要求。但持续集成之后的软件往往仍然没有针对真实环境进行验证，没有考虑投入真实环境使用的各种问题，因此“符合质量要求”与“达到可发布水平”之间还有明显的距离，我们称之为<a href="http://book.douban.com/subject/4031959/" target="_blank" rel="external">软件交付的最后一英里</a>。</p><p>为了解决这最后一英里的问题，我们有了持续交付。持续交付的核心是<a href="http://blog.csdn.net/tony1130/article/details/5996420" target="_blank" rel="external">构建流水线</a>：流水线越靠后的阶段，验证越接近真实环境。当一个发布候选版本最终通过正规的发布过程被部署在非常类似生产环境的UAT或者staging环境上然后执行了大量的自动化功能测试，我们就可以说：这个发布候选版本已经为交付做好了准备。</p><p>然而，问题是，我们为什么需要等到提交代码<strong>之后</strong>才做这一切？为什么不在提交代码<strong>之前</strong>就确认我刚编写的代码已经达到了交付要求，然后每个人都提交绝对高质量的代码？</p><p>其中一个重要的原因是历史相关的：我们已经太习惯于测试环境（尤其是与生产环境相仿的测试环境）的匮乏了。因为这样的环境是昂贵而不易获得的，所以我们要让它成为整个团队共享的资源；因为要让它被整个团队共享，所以我们要降低它的使用频率，所以要把它放在构建流水线的最后一环。</p><p>但研发云将改变现状。测试环境将不再昂贵：它可能仍然需要5台服务器，但由于每个环境的使用率只有10%，所以整体来说它没有那么贵。并且它也不再难以获得：云计算平台方便的开通（provision）加上自动配置工具例如Chef方便的配置（configuration），让我们只要一条命令加三十秒等待就能得到一套接近生产环境的测试环境。</p><p>于是我们的观念将发生一个根本性的转变。从前当我们讲“开发环境”，我们讲的所有东西都是基于“每个人一台电脑”这个假设。但这个假设不是必要的。我们每个人都可以有<strong>一整套生产环境</strong>来做开发。你仍然做单元测试，你仍然降低耦合，但此刻你不再与生产环境隔离——你随时身处在生产环境中，你随时可以看到刚写的代码在生产环境中如何工作，并且你写的所有代码将通过生产级别的验证<strong>之后</strong>才提交。</p><p>这时候我们已经不必再强调“持续交付”，因为我们的<strong>开发就是交付</strong>（Development As Delivery，DAD）。这就是“爹式开发”。</p><p>当然它不会那么容易就实现。一切使你无法做到爹式开发的障碍，我们都称之为“坑爹”。所以，在一个践行爹式开发的团队中，我们的口号就是“不坑爹”。</p><p><em><strong>附录</strong>：由于爹式开发要求每个程序员充分了解生产环境，因此会极大地促进<a href="http://www.infoq.com/cn/articles/thoughtworks-anthology-xj-devops-business-agile" target="_blank" rel="external">DevOps</a>在团队中的推广。最终，爹式开发会造就一种新的、具备开发和运维全面技能的人才，他们会把开发和运维工作全部搞定。这些人开展运维工作的方式，称为“多技能运维模型”（Multi-skillOperationModel），缩写MOM，简称“妈式运维”。</em></p>
     </section>
 
+    <section class="author">
+<p>（本文作者熊节是ThoughtWorks的总监咨询师）</p>
+</section>
     <!-- JiaThis Button BEGIN -->
 <div class="jiathis_style_32x32" style="height: 40px">
     <a class="jiathis_button_tsina"></a>
@@ -220,7 +223,7 @@ classes that you can use:
     
 </article>
 
-
+			
             <footer class="footer">
     <span class="footer__copyright">&copy;
         2011
@@ -248,11 +251,6 @@ classes that you can use:
     <!--[if IE 6]>
     <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
     <![endif]-->
-
-    <!--  google analytics -->
-    <script>
-        // add your google analytics code here
-    </script>
 
     <!-- totop -->
     <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">

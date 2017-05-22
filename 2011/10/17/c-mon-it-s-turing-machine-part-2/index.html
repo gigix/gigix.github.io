@@ -200,6 +200,9 @@ classes that you can use:
         <p><em>(Following<a href="http://gigix.thoughtworkers.org/2011/10/11/c-mon-it-s-turing-machine-part-1">the 1stpart</a>)</em></p><p><img src="http://gigix.thoughtworkers.org/assets/2011/10/17/typing.jpg" alt=""></p><h2>Write Your Own Machine</h2><p>File<code>machines/an_irrational_number.machine</code>includes all the fundamental elements to create your own Turing Machine.</p><ul><li>The lines start with semicolons are comments.</li><li>Non-comment non-empty lines are m-configurations, each of them consists of 4 columns (separatedby verticallines), which in turn are:<ul><li>Name of current m-configuration.</li><li>The symbol read from current square of the tape—m-configurations with same namecould behavedifferently while reading different symbols.</li><li>Operations, separated by commas. Valid operations are:<ul><li>P{x}: Write {x} to current square of the tape.</li><li>E: Erase any symbol in current square.</li><li>L/R: move the cursor one square left/right.</li></ul></li><li>Next m-configuration—what should be done after current m-configuration?</li></ul></li></ul><p>Now, try to write your own machine, and run it!</p><h2>What’s Next?</h2><p><a href="http://en.wikipedia.org/wiki/Universal_turing_machine" target="_blank" rel="external">Universal Turing Machine</a>, of course. (What else otherwise?)</p><p>(It requires reading Chapter 7 and 9 of<a href="http://book.douban.com/subject/2330016/" target="_blank" rel="external">The Annotated Turing</a>. Although I haven’t started yet, I can feel it’s not an easy task. Any contributionwould be highlyappreciated.)</p><p>Meanwhile, I started building a web UI running Turing Machines with<a href="http://github.com/weavejester/compojure" target="_blank" rel="external">Compojure</a>. Take a look at<code>web</code>folder. You can trial it with:</p><blockquote>$ lein ring server</blockquote><p>It also makes sense to tidy it up and make it more interactive.</p><p>I also want to build an iOS application…but that’s another story.</p><p>You might want to try something more interesting, e.g. to write a general Turing Machine to determineany givenTuring Machine would halt or not; to solve the<a href="http://en.wikipedia.org/wiki/Entscheidungsproblem" target="_blank" rel="external">Entscheidungsproblem</a>; etc.</p><p>Anyway, enjoy :D</p>
     </section>
 
+    <section class="author">
+<p>（本文作者熊节是ThoughtWorks的总监咨询师）</p>
+</section>
     <!-- JiaThis Button BEGIN -->
 <div class="jiathis_style_32x32" style="height: 40px">
     <a class="jiathis_button_tsina"></a>
@@ -220,7 +223,7 @@ classes that you can use:
     
 </article>
 
-
+			
             <footer class="footer">
     <span class="footer__copyright">&copy;
         2011
@@ -248,11 +251,6 @@ classes that you can use:
     <!--[if IE 6]>
     <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
     <![endif]-->
-
-    <!--  google analytics -->
-    <script>
-        // add your google analytics code here
-    </script>
 
     <!-- totop -->
     <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">

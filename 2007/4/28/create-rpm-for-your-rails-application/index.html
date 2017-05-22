@@ -198,6 +198,9 @@ classes that you can use:
         <p>Now you can create<a href="http://www.rpm.org/" target="_blank" rel="external"><span class="caps">RPM</span></a>package for your<a href="http://www.rubyonrails.org/" target="_blank" rel="external">Rails</a>application fairly easily. Here are the instructions:</p><ol><li>Install and config<a href="http://www.rpm.org/max-rpm-snapshot/rpmbuild.8.html" target="_blank" rel="external">rpmbuild</a>.(You may wanna read an<a href="http://genetikayos.com/code/repos/rpm-tutorial/trunk/rpm-tutorial.html" target="_blank" rel="external"><span class="caps">RPM</span>Tutorial</a>.)</li><li>Install rpmpackager plugin:<br><pre>ruby script/plugin install \<a href="http://rubyworks.googlecode.com/svn/trunk/rpmpackager/" target="_blank" rel="external">http://rubyworks.googlecode.com/svn/trunk/rpmpackager/</a></pre></li><li>Config rpmpackager plugin. Edit vendor/plugins/rpmpackager/config.yml as following:<br><pre>configuration:# name of your applicationapp_name: rubyworks-dogfooddescription: This is dogfood of RubyWorks.license: Apacheversion: 1.2.1release: 1# RPM dependencies. separated with commasdependencies: openssl, mysql gt;= 5.0# gem dependencies and installation indecies# 0 for gems don’t need selectiongems:redcloth: 0rcov: 1</pre></li><li>Create<span class="caps">RPM</span>package:<ul><li>rake rpm_package</li><li>(By default the generated<span class="caps">RPM</span>will install your application to ”/usr/local/lib/rails-apps/#{app_name}”.)</li></ul></li></ol><p>That’s it. Package your application and throw it to deployment : </p>
     </section>
 
+    <section class="author">
+<p>（本文作者熊节是ThoughtWorks的总监咨询师）</p>
+</section>
     <!-- JiaThis Button BEGIN -->
 <div class="jiathis_style_32x32" style="height: 40px">
     <a class="jiathis_button_tsina"></a>
@@ -218,7 +221,7 @@ classes that you can use:
     
 </article>
 
-
+			
             <footer class="footer">
     <span class="footer__copyright">&copy;
         2007
@@ -246,11 +249,6 @@ classes that you can use:
     <!--[if IE 6]>
     <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
     <![endif]-->
-
-    <!--  google analytics -->
-    <script>
-        // add your google analytics code here
-    </script>
 
     <!-- totop -->
     <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">

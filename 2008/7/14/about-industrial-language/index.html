@@ -198,6 +198,9 @@ classes that you can use:
         <p>偶像切尔斯基：<a href="http://blog.csdn.net/chelsea/archive/2008/07/13/2646431.aspx" target="_blank" rel="external">敏捷质疑:<span class="caps">TDD</span></a></p><blockquote>我认为工业界是时候严肃认真的考虑测试环境了, 最好在语言中内建对测试的支持, 一些为产品环境设计的语言特性, 应该在测试环境中关闭, 而在产品环境中生效. 其实之前很多编译器都支持Release 和Debug 两种环境, 也是从代码质量的方面考虑的. 现在毫无疑问证实单元测试比 Debug 更有效, 是时候与时俱进增加对 Test 的支持而逐渐罢黜对 Debug 的支持.</blockquote><p>不过我认为工业界是时候严肃认真的考虑的不是内建对测试的支持而是对类型推导的重视。要让程序不出错，一大堆和更大的一堆错误侦测机制都解决不了这个问题，你应该写不会出错的程序。当然debugger本身就是一个鸡肋，在exceptionstack trace帮不了你的情况下，debugger也帮不了你。</p><p>（写出像<a href="http://www.erlang.org/" target="_blank" rel="external">Erlang</a>那样不会出错的程序吧。写出像<a href="http://haskell.org/" target="_blank" rel="external">Haskell</a>那样不会出错的程序吧。）</p><p>尤其是在并行计算的时代。当然就算不考虑并行计算，类型体系是能让程序不出错的严肃认真的办法。写得快并且具有类型推导的语言是应该被严肃认真的考虑的。</p>
     </section>
 
+    <section class="author">
+<p>（本文作者熊节是ThoughtWorks的总监咨询师）</p>
+</section>
     <!-- JiaThis Button BEGIN -->
 <div class="jiathis_style_32x32" style="height: 40px">
     <a class="jiathis_button_tsina"></a>
@@ -218,7 +221,7 @@ classes that you can use:
     
 </article>
 
-
+			
             <footer class="footer">
     <span class="footer__copyright">&copy;
         2008
@@ -246,11 +249,6 @@ classes that you can use:
     <!--[if IE 6]>
     <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
     <![endif]-->
-
-    <!--  google analytics -->
-    <script>
-        // add your google analytics code here
-    </script>
 
     <!-- totop -->
     <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">

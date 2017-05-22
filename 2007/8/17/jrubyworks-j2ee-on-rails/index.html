@@ -198,6 +198,9 @@ classes that you can use:
         <p>(NOTE: JRubyWorks keeps moving forward and this article may not be up to date.)</p><p>How to run your<a href="http://www.rubyonrails.org/" target="_blank" rel="external">Rails</a>application with<span class="caps">J2EE</span>web servers (such as<a href="http://www.mortbay.org/" target="_blank" rel="external">Jetty</a>and<a href="http://tomcat.apache.org/" target="_blank" rel="external">Tomcat</a>)? Here’s a solution:</p><p>1. Set<span class="caps">JRUBY</span>_HOME environment variable properly.</p><pre>export JRUBY_HOME=/usr/lib/jruby</pre><p>2. Install<a href="http://jruby-extras.rubyforge.org/ActiveRecord-JDBC/" target="_blank" rel="external">ActiveRecord-JDBC</a>.</p><pre>jruby -S gem install ActiveRecord-JDBC -y</pre><p>3. Install<a href="http://rubyforge.org/projects/jrubyworks" target="_blank" rel="external">JRubyWorks</a>plugin.</p><pre>script/plugin install \<a href="http://jrubyworks.rubyforge.org/svn/trunk/jrubyworks/" target="_blank" rel="external">http://jrubyworks.rubyforge.org/svn/trunk/jrubyworks/</a></pre><p>4. Configure your Rails application as<a href="http://www.developer.com/db/article.php/10920_3691716_3" target="_blank" rel="external">this article</a>. JRubyWorksplugin includes<a href="http://dev.mysql.com/downloads/connector/j/5.0.html" target="_blank" rel="external">mysql-connector</a>by default. If you use database other than<a href="http://dev.mysql.com/" target="_blank" rel="external">MySQL</a>, you can putcorresponding<span class="caps">JDBC</span>driver in<em>${RAILS_ROOT}/lib/java</em>directory and JRubyWorks will take care of it conventionally.</p><p>5. Run your application and try it at<a href="http://localhost:8080/" target="_blank" rel="external">http://localhost:8080</a>. Alsoyou can find a<a href="http://java.sun.com/j2ee/tutorial/1_3-fcs/doc/WebComponents3.html" target="_blank" rel="external"><span class="caps">WAR</span></a>file of your application in<em>${RAILS_ROOT}/war</em>directory. You can deploy it to other<span class="caps">J2EE</span>web servers.</p><pre>jruby -S rake retty</pre><p>JRubyWorks is based on<a href="http://www.headius.com/jrubywiki/index.php/Rails_Integration" target="_blank" rel="external">JRuby Rails Integration</a>and hope to make the integration easier. It’squite immature so far, apparently. Your<a href="http://rubyforge.org/mailman/listinfo/jrubyworks-discuss" target="_blank" rel="external">feedback</a>and contribution will be very helpful and highly appreciated.</p>
     </section>
 
+    <section class="author">
+<p>（本文作者熊节是ThoughtWorks的总监咨询师）</p>
+</section>
     <!-- JiaThis Button BEGIN -->
 <div class="jiathis_style_32x32" style="height: 40px">
     <a class="jiathis_button_tsina"></a>
@@ -218,7 +221,7 @@ classes that you can use:
     
 </article>
 
-
+			
             <footer class="footer">
     <span class="footer__copyright">&copy;
         2007
@@ -246,11 +249,6 @@ classes that you can use:
     <!--[if IE 6]>
     <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
     <![endif]-->
-
-    <!--  google analytics -->
-    <script>
-        // add your google analytics code here
-    </script>
 
     <!-- totop -->
     <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">

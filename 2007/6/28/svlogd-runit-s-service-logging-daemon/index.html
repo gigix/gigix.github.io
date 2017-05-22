@@ -198,6 +198,9 @@ classes that you can use:
         <p>After install<a href="http://smarden.org/runit/" target="_blank" rel="external">runit</a>, you’ll get /usr/bin/svlogd in yoursystem, which is runit’s service logging daemon. Although there’s a<a href="http://smarden.org/runit/svlogd.8.html" target="_blank" rel="external">manual</a>, it took me a while to figure ourhow to use it …</p><p>(BTW, runit package in Ubuntu Feisty official repository is<a href="https://bugs.launchpad.net/ubuntu/+source/runit/+bug/74135" target="_blank" rel="external">broken</a>…)</p><p>svlogd accepts input from its<span class="caps">STDIN</span>and write it to log files. For example you can do following:</p><pre>ls / | svlogd -v ./log</pre><p>There will be a “log/current” file, which includes the output of “ls /”.</p><p>To<a href="http://smarden.org/runit/faq.html#createlog" target="_blank" rel="external">log a runit’s service</a>,you need create a “log” subdirectory within the service directory,thenrun svlogd in the subdirectory. Given I have a “mongrel_3002”service, I’ll create following stuff:</p><pre>/var/service/mongrel_3002/log/var/service/mongrel_3002/log/run</pre><p>Put following script in “log/run”, and make it executable:</p><pre>#!/bin/shexec svlogd -tt /path/to/log # /path/to/log must be writable</pre><p><a href="http://mongrel.rubyforge.org/" target="_blank" rel="external">Mongrel</a>(in non-daemon mode, i.e. without “-d” option) makes it morecomplicated: it outputs log to log file of itself (such as”#{RAILS_ROOT}/log/production.log”), or outputs log to<span class="caps">STDERR</span>if thelog file is not writable. In order to collect Mongrel’s log withsvlogd, I first make “production.log” not writable, then redirect<span class="caps">STDERR</span>to<span class="caps">STDOUT</span>in Mongrel starting script:</p><pre>gigix@gigix-laptop:~$ cat /var/service/mongrel_3002/run#!/bin/sh/usr/bin/mongrel_rails -c /path/to/rails/app -C /path/to/mongrel/config 2&amp;1</pre><p>Dirty, but it works …            </p>
     </section>
 
+    <section class="author">
+<p>（本文作者熊节是ThoughtWorks的总监咨询师）</p>
+</section>
     <!-- JiaThis Button BEGIN -->
 <div class="jiathis_style_32x32" style="height: 40px">
     <a class="jiathis_button_tsina"></a>
@@ -218,7 +221,7 @@ classes that you can use:
     
 </article>
 
-
+			
             <footer class="footer">
     <span class="footer__copyright">&copy;
         2007
@@ -246,11 +249,6 @@ classes that you can use:
     <!--[if IE 6]>
     <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
     <![endif]-->
-
-    <!--  google analytics -->
-    <script>
-        // add your google analytics code here
-    </script>
 
     <!-- totop -->
     <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">

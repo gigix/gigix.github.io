@@ -202,6 +202,9 @@ classes that you can use:
         <p>Spent about 10 hours, I wrote my first program with<a href="http://www.clojure.org/" target="_blank" rel="external">Clojure</a>: an implementation of<a href="http://en.wikipedia.org/wiki/Turing_machine" target="_blank" rel="external">Turing Machine</a>as described in Alan Turing’s famous paper ”<a href="http://l3d.cs.colorado.edu/~ctg/classes/lib/canon/turing-compnum.pdf" target="_blank" rel="external">On ComputableNumbers, With AnApplication To The Entscheidungsproblem</a>”.</p><p><em>(Note: Charles Petzold’s book<a href="http://book.douban.com/subject/2330016/" target="_blank" rel="external">The Annotated Turing</a>is a good point to understand Turing’s paper.)</em></p><p><img src="http://gigix.thoughtworkers.org/assets/2011/10/11/turing_macine.gif" alt=""></p><h2>Get Started</h2><p>First of all, you need clone the codebase from GitHub:</p><blockquote>$ git clone git://github.com/gigix/turing_machine.git</blockquote><p>In order to build it, you also need install<a href="http://github.com/technomancy/leiningen" target="_blank" rel="external">Leiningen</a>—whichis pretty easy on my MacBook Pro with MacPorts:</p><blockquote>$ sudo port install leiningen</blockquote><p>Now you can build the codebase and see if everything works:</p><blockquote>$ cd turing_machine/clojure &amp;&amp; ./build.sh</blockquote><p>You should see<code>turing_machine-1.0.0-SNAPSHOT-standalone.jar</code>being packaged, as well as a “tape” being printed as following:</p><blockquote>(0 | 1 | 0 | 1 | 0 | 1 | 0 | 1 | 0 | 1)</blockquote><p>That’s the binary form of rational number 1/3 (0.010101…). You just executed a TuringMachine whichcalculates 1/3 and prints the result to a tape—actually we only calculate and display thestarting 10squares of the tape, because it’s simply impossible to finish the calculation, because it’sinfinite.</p><h2>Calculate An Irrational Number</h2><p>There’s another machine lays in<code>machines/an_irrational_number.machine</code>, whichcalculates anirrational number with following form:</p><blockquote>0.01011011101111011111…</blockquote><p>You can run this machine with following instruction—the algorithm is more complicated, so youhave to runmore steps to see a reasonable shape:</p><blockquote>$ java -jar turing_machine-1.0.0-SNAPSHOT-standalone.jarmachines/an_irrational_number.machine 1000</blockquote><p>The starting part of the tape looks like following:</p><p><img src="http://gigix.thoughtworkers.org/assets/2011/10/12/irrational_number.png" width="450px"></p><p>And here’s the “source code” (formal name should be “m-configurations”,in which“m” stands for “machine”) of this machine, which I will explain in moredetail in nextsection:</p><p><img src="http://gigix.thoughtworkers.org/assets/2011/10/12/source_of_irrational_number_1.png" alt=""></p><p><em>(To be continued…)</em></p>
     </section>
 
+    <section class="author">
+<p>（本文作者熊节是ThoughtWorks的总监咨询师）</p>
+</section>
     <!-- JiaThis Button BEGIN -->
 <div class="jiathis_style_32x32" style="height: 40px">
     <a class="jiathis_button_tsina"></a>
@@ -222,7 +225,7 @@ classes that you can use:
     
 </article>
 
-
+			
             <footer class="footer">
     <span class="footer__copyright">&copy;
         2011
@@ -250,11 +253,6 @@ classes that you can use:
     <!--[if IE 6]>
     <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
     <![endif]-->
-
-    <!--  google analytics -->
-    <script>
-        // add your google analytics code here
-    </script>
 
     <!-- totop -->
     <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">

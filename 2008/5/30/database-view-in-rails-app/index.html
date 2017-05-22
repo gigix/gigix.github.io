@@ -198,6 +198,9 @@ classes that you can use:
         <p>第一次在Rails应用里用到了<a href="http://dev.mysql.com/tech-resources/articles/mysql-views.html" target="_blank" rel="external">MySQL 5的视图</a>，留个纪念。</p><p>Rails创建大概50,000个ActiveRecord对象就会很慢（大概50~60秒，在我的双核Mac Mini上），为了对付一个报表，就搞了一个视图。整体时间从70秒降到7秒。</p><p>Rails预先定义的rake任务中有db:test:prepare（里面调用db:test:clone_structure），但这个任务只把development库的所有表复制到test，不会复制视图，所以要自己在Rakefile里准备test库。</p><p>以上。</p>
     </section>
 
+    <section class="author">
+<p>（本文作者熊节是ThoughtWorks的总监咨询师）</p>
+</section>
     <!-- JiaThis Button BEGIN -->
 <div class="jiathis_style_32x32" style="height: 40px">
     <a class="jiathis_button_tsina"></a>
@@ -218,7 +221,7 @@ classes that you can use:
     
 </article>
 
-
+			
             <footer class="footer">
     <span class="footer__copyright">&copy;
         2008
@@ -246,11 +249,6 @@ classes that you can use:
     <!--[if IE 6]>
     <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
     <![endif]-->
-
-    <!--  google analytics -->
-    <script>
-        // add your google analytics code here
-    </script>
 
     <!-- totop -->
     <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">

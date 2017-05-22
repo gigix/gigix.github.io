@@ -198,6 +198,9 @@ classes that you can use:
         <p>（有很多人很多次问过我这个问题。以下是标准答案。）</p><p>问：如何对私有方法进行单元测试？</p><p>答：重点在于，你不应该有任何方法是从一开始设计出来就是private的，因为你的每段程序都应该在单元测试的驱动之下产生，而测试是不可能驱动出来一个private方法的。那么private方法从哪里来？只能从重构而来。所以答案是：private方法是不需要测试的，因为它是重构的产物，而重构是不改变程序可观察之行为的。既然行为不改变，测试自然也不需要有任何改变，所以不需要针对private方法建立任何新的测试。</p><p>问：但是，如果private方法确实出现问题了怎么办？如果确实希望用测试来弄清一个private方法里面到底发生了什么，该怎么办？</p><p>答：如果一个private方法复杂到你不能一眼看清它，那它就太复杂了，你应该把它重构成为一个独立的class，然后针对这个class来建立单元测试。</p>
     </section>
 
+    <section class="author">
+<p>（本文作者熊节是ThoughtWorks的总监咨询师）</p>
+</section>
     <!-- JiaThis Button BEGIN -->
 <div class="jiathis_style_32x32" style="height: 40px">
     <a class="jiathis_button_tsina"></a>
@@ -218,7 +221,7 @@ classes that you can use:
     
 </article>
 
-
+			
             <footer class="footer">
     <span class="footer__copyright">&copy;
         2007
@@ -246,11 +249,6 @@ classes that you can use:
     <!--[if IE 6]>
     <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
     <![endif]-->
-
-    <!--  google analytics -->
-    <script>
-        // add your google analytics code here
-    </script>
 
     <!-- totop -->
     <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">

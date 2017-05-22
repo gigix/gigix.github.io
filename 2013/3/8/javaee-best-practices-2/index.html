@@ -198,6 +198,9 @@ classes that you can use:
         <p>项目里会集成外部的web services，怎么测试？当然最不费脑子的做法就是假装它没什么特别，该怎么写测试还怎么写测试。但这么做的结果就是一大堆测试都会真的去调用webservices，并且至少造成这么几个问题：</p><ol><li><strong>测试慢</strong>。带着web services跑测试，测试的速度会降低好几个数量级。</li><li><strong>测试不稳定</strong>。一旦有个service挂掉，你自己的build就会跟着挂掉。</li><li><strong>测试不易重复</strong>。比如有个service是用来创建用户的，你怎么办？每次跑build创建一个新用户？还是创建完马上删掉？如果删除出错怎么办？</li></ol><p>所以这是不行的。</p><p>我们先站在集成点外来看其他程序怎么使用集成点。显然最终我们会把一个web service包装成一个Java方法。比如“创建用户”这个service最终会体现成这样：</p><blockquote>public interface IdentityService {<br>void createUser(Customer customer);<br>…</blockquote><p>那么使用这个service的所有代码都应该通过<a href="http://martinfowler.com/articles/injection.html" target="_blank" rel="external">依赖注入</a>得到实现IdentityService接口的一个对象，因此这些地方的测试可以很简单地注入一个mock的IdentityService对象，不需要依赖真正的webservice。主要需要看的，还是集成点内部的测试。</p><p>集成点内（也就是IdentityService.createUser的实现）实际上有以下几部分逻辑：</p><ol><li><strong>确定服务地址</strong>。不同的服务方法通常位于不同的URL、接受不同的HTTP方法（GET、POST或PUT）。</li><li><strong>参数转换</strong>。把方法参数转换成service需要的参数，可能是（但不限于）XML文档或URL参数。</li><li><strong>执行网络访问</strong>。朝向步骤（1）确定的服务地址，发送步骤（2）得到的参数，拿回一个HTTP应答。</li><li><strong>解析HTTP应答</strong>。HTTP应答通常包含两部分：HTTP状态码（例如“200<span class="caps">SUCCESS</span>”或者“404<span class="caps">NOT FOUND</span>”），以及应答正文（不一定有），有时还会在HTTP头或者Cookie中携带信息。要把这些信息转换成服务方法调用的结果（函数返回值、给参数传入的对象填充值、或者抛出异常）。</li></ol><p>可以看到，真正与外部web services打交道的其实只有步骤（3）而已。并且步骤（3）所需的程序基本上可以简化地描述为：</p><blockquote>public class EndPoint {<br>public Response get(String url);<br>public Response post(String url, String requestBody);<br>public Response put(String url, String requestBody);<br>}</blockquote><p>如此而已。其中Response类包含以下信息：</p><blockquote>class Response {<br>private int statusCode;<br>private String body;</blockquote><p>请注意：从EndPoint的方法签名可以看到，这里的方法与真实的web services的请求/应答格式是<strong>毫无关系</strong>的。它所做的就是朝一个URL发送一个请求、拿回应答。至于请求正文是什么格式、应答正文是什么格式、是XML还是JSON，它<strong>完全不关心</strong>。换句话说，对唯一的这个产生网络访问的类的测试，第一不需要访问真正的web services，第二不需要考虑真正web services的请求/应答协议格式。这个发现对于我们的测试策略非常有价值。</p><p><em>（今天讲了集成点的结构，并着重考察了需要执行网络访问的EndPoint类。下一篇就开始讲测试策略。）</em></p>
     </section>
 
+    <section class="author">
+<p>（本文作者熊节是ThoughtWorks的总监咨询师）</p>
+</section>
     <!-- JiaThis Button BEGIN -->
 <div class="jiathis_style_32x32" style="height: 40px">
     <a class="jiathis_button_tsina"></a>
@@ -218,7 +221,7 @@ classes that you can use:
     
 </article>
 
-
+			
             <footer class="footer">
     <span class="footer__copyright">&copy;
         2013
@@ -246,11 +249,6 @@ classes that you can use:
     <!--[if IE 6]>
     <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
     <![endif]-->
-
-    <!--  google analytics -->
-    <script>
-        // add your google analytics code here
-    </script>
 
     <!-- totop -->
     <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">

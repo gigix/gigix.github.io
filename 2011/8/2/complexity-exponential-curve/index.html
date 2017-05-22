@@ -203,6 +203,9 @@ classes that you can use:
         <p>想象我正在往一个已有的代码库中添加新的功能。假如我一次只添加一个小修改，这个小修改是如此简单以至于它只有两种状态——写完代码之后只要看一看，我要么是改对了要么是改错了；如果改错了，我就用另一种方式来修改，后者一定是正确的。</p><p><img src="http://gigix.thoughtworkers.org/assets/2011/8/2/complexity-1.png" alt=""></p><p>如果我一次不是添加一个小修改，而是添加两个，然后把两个修改放在一起来验证。这时可能的状态就有四种：一种正确的，以及三种不同的出错方式。</p><p><img src="http://gigix.thoughtworkers.org/assets/2011/8/2/complexity-2.png" alt=""></p><p>如果我再贪心一点（或者是因为某些客观条件的约束），一次添加三个小修改然后再验证。这时可能的状态就成了八种：一种正确的，以及七种不同的出错方式。</p><p><img src="http://gigix.thoughtworkers.org/assets/2011/8/2/complexity-3.png" width="350px"></p><p>所以这就是复杂度和变量个数之间的关系：C=(V的N次方)，其中C为“复杂度”，V为“单个变量可能的取值个数”，N为“变量个数”。所以复杂度随变量个数的增加而指数上升。所以几个简单的问题可以分别解决、而合并成一个复杂的大问题就根本无法解决，因为整个问题的复杂度不是做加法而是做乘方。</p><p><img src="http://gigix.thoughtworkers.org/assets/2011/8/2/complexity-curve.png" width="350px"></p><p>所以聪明的程序员知道要小步快跑。所以一次只做一件事、做好提交等build通过了再开始下一件。所以要频繁地跟其他人的修改集成。所以不要同时开多个story卡来做。所以不要讲什么“反正这些都是我的工作怎么做都是一样的”。所以不要讲什么“小心翼翼地重构太麻烦了不如一步就改过去多省事”。因为软件开发的工作量不是<strong>要敲多少次键盘</strong>，而是<strong>要处理多少复杂度</strong>。把渐进式的修改变成大步伐的修改，会增加工作量，而不是取巧。</p><p>所以越是痛苦的事越要频繁做直到它不再痛苦。所以要让反馈周期缩短再缩短。不光是为了练习和得到信息，更是为了降低需要处理的问题的复杂度，使普通人也可以处理——从这个意义上来说，再次向所有不采用敏捷方法的程序员致敬，为他们所能处理的超大复杂度。</p>
     </section>
 
+    <section class="author">
+<p>（本文作者熊节是ThoughtWorks的总监咨询师）</p>
+</section>
     <!-- JiaThis Button BEGIN -->
 <div class="jiathis_style_32x32" style="height: 40px">
     <a class="jiathis_button_tsina"></a>
@@ -223,7 +226,7 @@ classes that you can use:
     
 </article>
 
-
+			
             <footer class="footer">
     <span class="footer__copyright">&copy;
         2011
@@ -251,11 +254,6 @@ classes that you can use:
     <!--[if IE 6]>
     <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
     <![endif]-->
-
-    <!--  google analytics -->
-    <script>
-        // add your google analytics code here
-    </script>
 
     <!-- totop -->
     <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">

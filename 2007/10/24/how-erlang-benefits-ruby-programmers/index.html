@@ -198,6 +198,9 @@ classes that you can use:
         <p>（昨天发在<a href="http://groups.google.com/group/ecug/browse_thread/thread/7e78e952aefa8f41" target="_blank" rel="external">ECUG</a>的一个邮件，想了一下，还是放到自己blog上）</p><p>今天上午，尝试用ErlyWeb做一个petstore，最终被击败了。CaoYuan的blog帮了很大忙：<br><a target="_blank" rel="nofollow" href="http://blogtrader.net/page/dcaoyuan/entry/from_rails_to_erlyweb_part2">http://blogtrader.net/page/dcaoyuan/entry/from_rails_to_erlyweb_part2</a></p><p>结论：ErlyWeb在开发便利性方面距离Rails不是一点半点。尤其是view可用的工具太少，有太多东西要从头做起。用来做web前端，不仅有高射炮打蚊子之嫌，而且颇费劲。不靠谱。</p><p>中午写InfoQ的这个报道，其间看了一遍”Py2Erl”那个讲稿，兴趣起来了。<br>InfoQ报道：<a target="_blank" rel="nofollow" href="http://www.infoq.com/cn/news/2007/10/cn-erlounge-ii">http://www.infoq.com/cn/news/2007/10/cn-erlounge-ii</a><br>讲稿：<a target="_blank" rel="nofollow" href="http://www.erlang.org.cn/ecug/071013-erlparty2/071014-py2erl/">http://www.erlang.org.cn/ecug/071013-erlparty2/071014-py2erl/</a></p><p>找到了Stackless Python，写了一段小程序。好玩，靠谱。<br>Stackless Python：<a target="_blank" rel="nofollow" href="http://www.stackless.com/">http://www.stackless.com/</a><br>抄一段小程序：<a target="_blank" rel="nofollow" href="http://gigix.thoughtworkers.org/2007/10/23/is-stackless-python-the-way">http://gigix.thoughtworkers.org/2007/10/23/is-stackless-python-the-way</a><br>有人做了benchmark，差强人意吧<br><a target="_blank" rel="nofollow" href="http://muharem.wordpress.com/2007/07/31/erlang-vs-stackless-python-a-first-benchmark/">http://muharem.wordpress.com/2007/07/31/erlang-vs-stackless-python-a-…</a></p><p>函数式编程，现在已经不成其为卖点了。Erlang最吸引我的是”那种”对并发程序设计的建模方式。从stackless那里看到，原来这个模式叫Actors Model，有年头。<br>C2的解释：<a target="_blank" rel="nofollow" href="http://c2.com/cgi/wiki?ActorsModel">http://c2.com/cgi/wiki?ActorsModel</a><br>这篇文章非常好看：<a target="_blank" rel="nofollow" href="http://www.cypherpunks.to/erights/history/actors/AIM-410.pdf">http://www.cypherpunks.to/erights/history/actors/AIM-410.pdf</a><br>这篇也好看，就是太玄虚了点：<a target="_blank" rel="nofollow" href="http://www.cypherpunks.to/erights/history/actors/AIM-691.pdf">http://www.cypherpunks.to/erights/history/actors/AIM-691.pdf</a></p><p>好吧……Ruby咋样呢？继续人肉搜索……要说Ruby（和/或Python）社区从Erlang那里得到什么，直接转过去是可能性不大滴，主要还是（1）学习人家的先进思想；（2）混合语言编程。Ruby在这方面的努力，包括Ruby-Erlang bridging和自己实现Actors Model。<br>Erlectricity是一个bridge：<a target="_blank" rel="nofollow" href="http://code.google.com/p/erlectricity/">http://code.google.com/p/erlectricity/</a><br>Rebar是另一个bridge，成熟度更低：<a target="_blank" rel="nofollow" href="http://rubyisawesome.com/2007/4/30/calling-erlang-from-ruby-teaser">http://rubyisawesome.com/2007/4/30/calling-erlang-from-ruby-teaser</a><br>Omnibus实现了Actors Model，成熟度也很低：<a target="_blank" rel="nofollow" href="http://groups.google.com/group/ruby-talk-google/browse_frm/thread/ec442079705d168a">http://groups.google.com/group/ruby-talk-google/browse_frm/thread/ec4…</a></p><p>拿着Omnibus玩了一会儿。这个语法写出来就等而下之了。看了看源代码，没有什么奇妙的，只是把Thread封装了一下而已。倒是future的概念，是用native C代码实现的。<br>又搞了一段小程序：<a target="_blank" rel="nofollow" href="http://gigix.thoughtworkers.org/2007/10/23/is-concurrent-ruby-better">http://gigix.thoughtworkers.org/2007/10/23/is-concurrent-ruby-better</a><br>什么是future？<a href="http://www.ps.uni-sb.de/alice/manual/futures.html" target="_blank" rel="external">http://www.ps.uni-sb.de/alice/manual/futures.html</a></p><p>听说Ruby 1.9要加入一个叫做Fiber的东西。这个，把语法糖扔掉以后，和Omnibus基本上同一回事……<br><a target="_blank" rel="nofollow" href="http://www.infoq.com/news/2007/08/ruby-1-9-fibers">http://www.infoq.com/news/2007/08/ruby-1-9-fibers</a></p><p>还有一个围绕着Ruby线程模型的讨论。GIL会对并发编程造成什么影响呢？没认真去想。<br><a target="_blank" rel="nofollow" href="http://www.infoq.com/news/2007/05/ruby-threading-futures">http://www.infoq.com/news/2007/05/ruby-threading-futures</a></p><p>以上。</p><p>–<br>Jeff Xiong<br>Software Journeyman -<a target="_blank" rel="nofollow" href="http://gigix.thoughtworkers.org/">http://gigix.thoughtworkers.org</a><br>Open Source Contributor -<a target="_blank" rel="nofollow" href="http://rubyworks.rubyforge.org/">http://rubyworks.rubyforge.org</a><br>Technical Evangelist -<a target="_blank" rel="nofollow" href="http://www.infoq.com/cn/">http://www.infoq.com/cn/</a></p>
     </section>
 
+    <section class="author">
+<p>（本文作者熊节是ThoughtWorks的总监咨询师）</p>
+</section>
     <!-- JiaThis Button BEGIN -->
 <div class="jiathis_style_32x32" style="height: 40px">
     <a class="jiathis_button_tsina"></a>
@@ -218,7 +221,7 @@ classes that you can use:
     
 </article>
 
-
+			
             <footer class="footer">
     <span class="footer__copyright">&copy;
         2007
@@ -246,11 +249,6 @@ classes that you can use:
     <!--[if IE 6]>
     <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
     <![endif]-->
-
-    <!--  google analytics -->
-    <script>
-        // add your google analytics code here
-    </script>
 
     <!-- totop -->
     <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">

@@ -198,6 +198,9 @@ classes that you can use:
         <p><a href="http://code.google.com/p/stomperl/" target="_blank" rel="external">Stomperl</a>is an attempt to build something not-so-that-non-trivial (in this case, a<a href="http://stomp.codehaus.org/" target="_blank" rel="external">Stomp</a>server) with<a href="http://erlang.org/" target="_blank" rel="external">Erlang</a>. To kick it off, I stole the server architecturefrom<a href="http://www.trapexit.org/Building_a_Non-blocking_TCP_server_using_OTP_principles" target="_blank" rel="external">here</a>and<a href="http://d.hatena.ne.jp/cooldaemon/20071024/1193193093" target="_blank" rel="external">here</a>. Currently it doesn’teven support the full<a href="http://stomp.codehaus.org/Protocol" target="_blank" rel="external">protocol</a>: only CONNECT,SUBSCRIBE and SEND commands are supported. But anyway, it’s moving forward and I’m learning from it.</p><p>To make it run:</p><ol><li><code>make test</code>, which hopefully succeeds.</li><li><code>make start</code>, then you’ll get an Erlang console.</li><li>In the Erlang console,<code>tcp_server_sup:start_server().</code></li><li>In another shell console,<code>make acceptance</code>, which hopefully succeeds.</li></ol><p>I created an extremely simple acceptance test with<a href="http://www.germane-software.com/software/Java/Gozirra/" target="_blank" rel="external">Gozirra</a>.</p><p>What’s the<a href="http://stomperl.googlecode.com/svn/trunk/TODO" target="_blank" rel="external">next</a>? Well, I suppose I’llimplement the full protocol, and fix some defects. As a newbie to Erlang, I made and am makingstupid mistakes. Welcome to be stupid together with me.</p>
     </section>
 
+    <section class="author">
+<p>（本文作者熊节是ThoughtWorks的总监咨询师）</p>
+</section>
     <!-- JiaThis Button BEGIN -->
 <div class="jiathis_style_32x32" style="height: 40px">
     <a class="jiathis_button_tsina"></a>
@@ -218,7 +221,7 @@ classes that you can use:
     
 </article>
 
-
+			
             <footer class="footer">
     <span class="footer__copyright">&copy;
         2007
@@ -246,11 +249,6 @@ classes that you can use:
     <!--[if IE 6]>
     <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
     <![endif]-->
-
-    <!--  google analytics -->
-    <script>
-        // add your google analytics code here
-    </script>
 
     <!-- totop -->
     <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">

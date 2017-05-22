@@ -200,6 +200,9 @@ classes that you can use:
         <p><a href="http://www.opscode.com/chef/" target="_blank" rel="external">Chef</a>据说是<a href="http://zh.wikipedia.org/wiki/DevOps" target="_blank" rel="external">DevOps</a>运动中的一个重要工具。现在我开始学它了。</p><p>首先是几个名词解释：</p><ul><li><strong>Chef</strong>: 大厨。我就是个新手大厨。我想要烹调一桌服务器大餐，也就是一台体面的、可以用来满足某种用途的服务器，比如“一台高性能的Rails服务器”。</li><li><strong>Cookbook</strong>: 菜谱。别人写好的一本书，书上写着一堆相关菜色的做法（比如“家常川菜”）。一些出色的服务器大厨已经写了<a href="http://cookbooks.opscode.com/" target="_blank" rel="external">很多菜谱</a>，这些是我要学习和抄袭的。</li><li><strong>Recipe</strong>：菜谱里的一道菜色（比如“麻婆豆腐”）。服务器大餐里的某一部分该怎么做，都在菜色里写着呢。</li></ul><p>所以，整个故事就是：作为一个服务器大厨（Chef），我想要从现成的很多菜谱（Cookbook）里挑选几道合适的菜色（Recipe），组合成一道大餐（服务器）来款待我的客人。</p><p>（等我的手艺熟练之后我还会写我自己的菜色和菜谱，这就是后面的故事了。）</p><p><img src="http://tucsoncitizen.com/morgue/files/2007/02/l42507-1.jpg" width="300px"></p><p>Chef的主要目标是：把服务器配置变成源代码。这样做的好处有两个：</p><ol><li><strong>自动化</strong>。我可以很轻松地把一台服务器大餐的做法直接照搬到另一台服务器上，于是我就得到了另一台大餐。</li><li><strong>配置管理</strong>。服务器的配置信息可以用SVN或者Git来管理，可以分享，可以多人协作，可以跟踪变化历史。</li></ol><p>Chef使用服务器-客户端模式管理所有需要配置的机器。使用Chef涉及至少三台机器：一台开发机器，我会在上面编写大餐的做法；一台Chef服务器，它会管理所有要配置的机器，给它们下发配置信息；至少一台Chef客户端或“节点”（Node），它就是我要烹调的大餐。</p><p>理论上，只要支持Ruby的操作系统，都可以作为Chef节点来管理。不过<a href="http://en.wikipedia.org/wiki/Comparison_of_open_source_configuration_management_software#Platform_support" target="_blank" rel="external">认真说起来</a>，AIX、HP-UX和Windows不能算真的支持（个人认为这些到了21世纪10年代还没有体面的<a href="http://en.wikipedia.org/wiki/Package_management_system" target="_blank" rel="external">包管理工具</a>的操作系统就应该自己去死）。另外，每个Cookbook对操作系统的支持也可能不同。我大概看了一下，Ubuntu和Debian应该是被支持得比较好的（再次说明一个体面的包管理工具有多重要）。</p><p>概念就是这些了。接下来我要自己动手做一顿服务器大餐。</p><p><em>（未完待续）</em></p>
     </section>
 
+    <section class="author">
+<p>（本文作者熊节是ThoughtWorks的总监咨询师）</p>
+</section>
     <!-- JiaThis Button BEGIN -->
 <div class="jiathis_style_32x32" style="height: 40px">
     <a class="jiathis_button_tsina"></a>
@@ -220,7 +223,7 @@ classes that you can use:
     
 </article>
 
-
+			
             <footer class="footer">
     <span class="footer__copyright">&copy;
         2011
@@ -248,11 +251,6 @@ classes that you can use:
     <!--[if IE 6]>
     <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
     <![endif]-->
-
-    <!--  google analytics -->
-    <script>
-        // add your google analytics code here
-    </script>
 
     <!-- totop -->
     <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">

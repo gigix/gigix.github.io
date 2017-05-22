@@ -200,6 +200,9 @@ classes that you can use:
         <p><em>（以下内容基本都针对经济欠发达国家）</em></p><p>医疗信息交换（Health Information Exchange，<a href="http://en.wikipedia.org/wiki/Health_information_exchange" target="_blank" rel="external"><span class="caps">HIE</span></a>）是在国家范围内共享医疗信息的IT系统。整个HIE不是一个IT系统可以承载的，这个IT生态系统由几大块IT应用组成：参考数据、国家级信息系统、共享医疗记录和前线医疗系统。</p><p><a href="http://gigix.thoughtworkers.org/assets/2013/10/21/Screen_Shot_2013-10-21_at_8.16.55_PM.png" target="_blank"><img src="http://gigix.thoughtworkers.org/assets/2013/10/21/Screen_Shot_2013-10-21_at_8.16.55_PM.png" width="420px"></a></p><p>（以上架构参考了<a href="http://ohie.org/architecture/" target="_blank" rel="external">OpenHIE的架构概念</a>）</p><p>参考数据提供相对静态的信息给其他IT系统作为参考，其中包括（以及主要的开源实现）：</p><ul><li>Location Registry：可以用<a href="http://instedd.org/technologies/resource-map/" target="_blank" rel="external">InSTEDD Resource Map</a>实现</li><li>Medical Terminology Registry：可以用<a href="http://openmrs.org/" target="_blank" rel="external">OpenMRS</a>实现</li><li>Facility Registry：也可以用<a href="http://instedd.org/technologies/resource-map/" target="_blank" rel="external">InSTEDD Resource Map</a>实现</li><li>Provider Registry：可以用<a href="http://www.ihris.org/" target="_blank" rel="external">iHRIS</a>实现</li><li>Master Patient Index：”OpenEMPI”: <a href="http://www.openempi.org/?page_id=7" target="_blank" rel="external">http://www.openempi.org/?page_id=7</a> 就是干这个的</li></ul><p>国家级信息系统跟医疗不直接相关，可以暂时略过。在前线医疗系统这块，首先是面向社区医疗的系统，通常是基于移动技术的IT系统（mHealth），开源的实现有<a href="https://www.rapidsms.org/" target="_blank" rel="external">RapidSMS</a>、<a href="http://www.commcarehq.org/home/" target="_blank" rel="external">CommCare</a>、<a href="http://motechsuite.org/" target="_blank" rel="external"><span class="caps">MOTECH</span></a>等等。接着是用于医院的开源解决方案，包括管理病人信息的OpenMRS、管理医院行政信息的<a href="https://www.openerp.com/" target="_blank" rel="external">OpenERP</a>和管理实验室信息的<a href="http://www.openelis.org/" target="_blank" rel="external">OpenELIS</a>等。</p><p>然后就是最核心的共享医疗记录（Shared HealthRecord，SHR）了。嗯，国家级别的共享医疗记录，到目前为止没有任何一个国家成功实施过。卢旺达号称实施了，其实只连通了7家医院……SHR的关键在于它的数据量会很大，因为它实际上就是覆盖全国人民的所有诊疗信息，所以关系型数据库基本上是不行的、NoSQL基本上是必须的。而卢旺达实施的SHR，是基于OpenMRS做的，究竟数据量大了以后能不能撑住，还有待考察。</p><p><em>（继续学习OpenHIE中，未完待续……）</em></p>
     </section>
 
+    <section class="author">
+<p>（本文作者熊节是ThoughtWorks的总监咨询师）</p>
+</section>
     <!-- JiaThis Button BEGIN -->
 <div class="jiathis_style_32x32" style="height: 40px">
     <a class="jiathis_button_tsina"></a>
@@ -220,7 +223,7 @@ classes that you can use:
     
 </article>
 
-
+			
             <footer class="footer">
     <span class="footer__copyright">&copy;
         2013
@@ -248,11 +251,6 @@ classes that you can use:
     <!--[if IE 6]>
     <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
     <![endif]-->
-
-    <!--  google analytics -->
-    <script>
-        // add your google analytics code here
-    </script>
 
     <!-- totop -->
     <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">
