@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gigix.thoughtworkers.org/"/>
-  <updated>2017-05-22T00:17:09.000Z</updated>
+  <updated>2017-05-22T00:40:11.000Z</updated>
   <id>http://gigix.thoughtworkers.org/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>数字化企业的API生态系统</title>
+    <title>数字化企业的API架构治理</title>
     <link href="http://gigix.thoughtworkers.org/2017/5/22/dps-api-architecture-remediation/"/>
     <id>http://gigix.thoughtworkers.org/2017/5/22/dps-api-architecture-remediation/</id>
     <published>2017-05-22T05:04:00.000Z</published>
-    <updated>2017-05-22T00:17:09.000Z</updated>
+    <updated>2017-05-22T00:40:11.000Z</updated>
     
     <content type="html"><![CDATA[<p>在<a href="/2017/4/25/ditigal-platform-strategy-intro/">前文</a>中我们说到，传统企业在逐步建设自己的数字平台过程中，需要抓住<a href="/2017/5/7/dps-delivery-infrastructure/">交付基础设施</a>、API和架构治理、数据自服务、创新实验基础设施和监控体系、用户触点技术这五个支柱。今天我们就来谈一谈API、架构治理这些听起来非常技术性的概念与企业的数字化战略之间有何关系。</p>
 <p><img src="/assets/2017/5/22/architecture.jpg"></p>
