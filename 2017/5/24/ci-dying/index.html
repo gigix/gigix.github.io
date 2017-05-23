@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+        持续集成将死 | 透明思考
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+    <meta name="author" content="Jeff Xiong">
+    
+    
+    <meta name="description" content="在思考“云时代的研发环境长什么样”这个问题的时候，我逐渐意识到一件很重要的事。2000年首次被提出、在过去十几年中我们习以为常的敏捷核心实践持续集成，很可能正在走到它生命周期的尾声。
+
+让我们来回顾一下Martin Fowler在他那篇著名的文章里如何描述持续集成这个过程：
+
+一旦完成了修改，我就会在自己的计算机上启动一个自动化build。……当我build成功后，我就可以考虑将改动提交到源码仓库">
+    
+
+    <meta name="description" content="在思考“云时代的研发环境长什么样”这个问题的时候，我逐渐意识到一件很重要的事。2000年首次被提出、在过去十几年中我们习以为常的敏捷核心实践持续集成，很可能正在走到它生命周期的尾声。
+
+让我们来回顾一下Martin Fowler在他那篇著名的文章里如何描述持续集成这个过程：
+
+一旦完成了修改，我就会在自己的计算机上启动一个自动化build。……当我build成功后，我就可以考虑将改动提交到源码仓库">
+<meta property="og:type" content="article">
+<meta property="og:title" content="持续集成将死 | 透明思考">
+<meta property="og:url" content="http://gigix.thoughtworkers.org/2017/5/24/ci-dying/index.html">
+<meta property="og:site_name" content="透明思考">
+<meta property="og:description" content="在思考“云时代的研发环境长什么样”这个问题的时候，我逐渐意识到一件很重要的事。2000年首次被提出、在过去十几年中我们习以为常的敏捷核心实践持续集成，很可能正在走到它生命周期的尾声。
+
+让我们来回顾一下Martin Fowler在他那篇著名的文章里如何描述持续集成这个过程：
+
+一旦完成了修改，我就会在自己的计算机上启动一个自动化build。……当我build成功后，我就可以考虑将改动提交到源码仓库">
+<meta property="og:image" content="http://gigix.thoughtworkers.org/assets/2017/5/24/storm.jpg">
+<meta property="og:updated_time" content="2017-05-23T14:11:14.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="持续集成将死 | 透明思考">
+<meta name="twitter:description" content="在思考“云时代的研发环境长什么样”这个问题的时候，我逐渐意识到一件很重要的事。2000年首次被提出、在过去十几年中我们习以为常的敏捷核心实践持续集成，很可能正在走到它生命周期的尾声。
+
+让我们来回顾一下Martin Fowler在他那篇著名的文章里如何描述持续集成这个过程：
+
+一旦完成了修改，我就会在自己的计算机上启动一个自动化build。……当我build成功后，我就可以考虑将改动提交到源码仓库">
+<meta name="twitter:image" content="http://gigix.thoughtworkers.org/assets/2017/5/24/storm.jpg">
+
+    
+    <link rel="alternate" href="/atom.xml" title="透明思考" type="application/atom+xml">
+    
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+
+    <script src="/js/jquery.min.js"></script>
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+<header class="panel-cover panel-cover--collapsed">
+
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">透明思考</a></h1>
+
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">
+          Transparent Thoughts
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">Blog</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+------------------------------ -->
+
+<nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+
+  <!-- Github -->
+  <li class="navigation__item">
+    <a href="https://github.com/gigix" title="Gigix on GitHub" target="_blank">
+      <i class='icon icon-social-github'></i>
+      <span class="label">GitHub</span>
+    </a>
+  </li>
+
+  </ul>
+</nav>
+
+          <script>
+    function doSearch() {
+        var keyword = $('#keyword').val();
+        if (keyword.trim() === '') {
+            window.location.href = 'http://gigix.thoughtworkers.org/#blog';
+        } else {
+            window.open('http://www.google.com/search?q=site:gigix.thoughtworkers.org+' + keyword);
+        }
+    }
+</script>
+
+<div class="search">
+    <input id="keyword" type="text"/>
+    <input type="button" value="Search" class="btn" onclick="doSearch()"/>
+</div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+    <header class="post-header">
+
+        
+        <div class="post-meta">
+            <time datetime="5月 24 2017"
+                  class="post-meta__date date">5月 24 2017</time>
+            &#8226;
+
+        <span class="post-meta__tags tags">
+
+            <font class="categories">
+                
+            </font>
+            
+
+        </span>
+        </div>
+        
+
+        <h1 class="post-title">持续集成将死</h1>
+    </header>
+
+    <section class="post">
+        <p>在思考“<a href="/2017/3/31/stack-management/">云时代的研发环境长什么样</a>”这个问题的时候，我逐渐意识到一件很重要的事。2000年首次被提出、在过去十几年中我们习以为常的敏捷核心实践<a href="https://www.martinfowler.com/articles/continuousIntegration.html" target="_blank" rel="external">持续集成</a>，很可能正在走到它生命周期的尾声。</p>
+<p><img src="/assets/2017/5/24/storm.jpg"></p>
+<p>让我们来回顾一下Martin Fowler在他那篇<a href="http://article.yeeyan.org/view/2251/94882" target="_blank" rel="external">著名的文章</a>里如何描述持续集成这个过程：</p>
+<blockquote>
+<p>一旦完成了修改，我就会在自己的计算机上启动一个自动化build。……当我build成功后，我就可以考虑将改动提交到源码仓库。……然而，提交完代码不表示就完事大吉了。我们<strong>还要做一遍集成build，这次在集成计算机上并要基于mainline的代码</strong>。只有这次build成功了，我的修改才算告一段落。……在持续集成环境里，你必须尽可能快地修复每一个集成 build。好的团队应该每天都有多个成功的 build。错误的 build 可以出现，但必须尽快得到修复。</p>
+</blockquote>
+<p>从上面加粗的文字就能看出，过去的十多年里，在谈及持续集成这个实践时，我们已经预设了这个场景：有一个集中式的<strong>持续集成服务器</strong>在监听代码库的变化，每当有人提交代码时，持续集成服务器会自动取出最新的代码，执行整个构建和测试流程。围绕着这个场景，我们发展出了一整套的<a href="/2010/6/29/ci-discipline/">纪律</a>来保障持续集成少失败、失败的时候能尽快修复。围绕着这个场景，我们发明了CruiseControl、GoCD、SnapCI等一代又一代的持续集成服务器，并在我们所有的项目中使用它们。这个场景在我们的脑海中如此根深蒂固以至于我们不再去询问：为什么需要这样做？</p>
+<p>实际上，我们需要一个集中式的持续集成服务器，这是有历史原因的。2000年代初期的技术时代背景，尤其是以下两个非常具体的约束条件，造成了今天我们看到的持续集成的形态：</p>
+<ol>
+<li><strong>计算资源短缺</strong>。这个约束条件决定了完整的、与生产环境相似的、能执行端到端验证的环境必定是稀缺品。典型的交付团队没有能力给每个成员配备整套环境，只能在他们各自的计算机上模拟一套尽可能接近于生产环境的开发环境。于是开发环境的验证结果不足为信，必须在一个标准的、更接近于生产环境的集成环境上通过验证，才能说软件达到了质量要求。</li>
+<li><strong>版本控制工具的局限性</strong>。Subversion（以及其他更早的版本控制工具）在pre-commit阶段通过服务器端回调钩子很难——如果不是完全不可能的话——得到完整的“提交后版本”，因此svn的pre-commit钩子基本只能用于检查提交信息是否符合规范，完整的验证则必须在代码已经合入代码库之后才能——在一台独立的“持续集成服务器”上——进行。</li>
+</ol>
+<p>云计算彻底改变了第一个约束条件。计算资源仍然不能说极大丰富，但企业应用开发所需的x86架构计算资源在云环境下已经不再短缺，结合各种基础设施自动化和配置自动化的技术，随时、按需提供整套环境已经不是难题。而且使用docker等容器技术开通出来的环境是抛弃型的、不可变更的，因此也就不存在环境不一致、验证结果不可信的问题：每个开发人员都可以从云上拿出一套环境，执行build，其过程与效果都与持续集成服务器的build完全一致。</p>
+<p>而git对svn的全面取代则带来一个细微而深远的影响：由于可以在pre-commit阶段直接获得完整的待提交快照、并在这个版本基础上执行测试，不能通过build的代码将直接被拒绝提交。换句话说，整个“持续集成纪律”尝试解决的问题——有缺陷的代码进入团队的代码仓库从而妨碍其他人不断提交没有缺陷的代码——将不复存在，有缺陷的代码将根本无法进入团队的代码仓库。</p>
+<p>综上所述，这两个要素的结合：</p>
+<ol>
+<li>每个开发人员（以及自动构建建）都可以在PaaS云上获得完整的技术栈运行时环境；以及，</li>
+<li>pre-commit阶段可以对待提交的代码进行完整的构建</li>
+</ol>
+<p>带来的是一个非常重要的影响：持续集成服务器这个东西，我们不再需要了。持续集成的“集成”这个动作，将在代码进入团队代码库<strong>之前</strong>发生。我们有办法（git的pre-commit钩子）确保这次集成发生，也有办法（云化、容器化的环境）确保这次集成是可信的。因此我们不再需要一个持续集成服务器来扮演团队的守门人。集中式的持续集成服务器将退化为团队研发行为的可视化仪表盘：它不再负责管理环境和构建软件，只负责采集所有构建中产生的数据、并以适当的形式展示，作为团队研发过程的可视化呈现。</p>
+<p>当持续集成服务器消亡，一个开发者的典型工作流程可能会是这样：</p>
+<ul>
+<li>从git仓库clone出代码，在自己的电脑上做修改；</li>
+<li>修改完成，从研发PaaS上获得一个运行环境，把刚写好的代码运行起来，用浏览器查看一下效果；</li>
+<li>执行构建，构建脚本自动从研发PaaS上获得一个运行环境，在其中执行编译、打包、代码检查和测试；</li>
+<li>构建通过，提交代码并push，git仓库的pre-commit钩子自动触发一次构建，过程与效果都与刚才手动执行的完全一致；</li>
+<li>如果没有手工执行构建就尝试提交，自动构建会失败，代码无法push到团队的代码仓库中，开发者自己去修复；</li>
+<li>如果自动构建成功，代码提交完成。</li>
+</ul>
+<p>从这个工作流程可以看到，与持续集成服务器同时消亡的，还有持续集成这个概念本身。由于对响应力（responsiveness）的要求是如此之高，现代的IT团队已经不能容忍有缺陷的代码先进入代码库、阻塞整个团队的工作、然后再来修复（甚至不修复、或者还需要说服某些团队成员去及时修复）。持续集成是如此重要，以致于它会变成团队的“空气和水”。它会被嵌入到日常的研发工具当中，成为程序员感知不到、而又不可妥协的质量要求——正如IntelliJ之类现代IDE把“通过编译”这项要求变成了程序员感知不到、而又不可妥协的质量要求。</p>
+<blockquote>
+<p>持续集成对于软件开发是如此重要，以至于不应该把它交给软件开发者自己去做。</p>
+</blockquote>
+<p>这就是为什么我认为持续集成工具、以及这些工具背后的持续集成概念在云计算深入研发之后将会消亡。取代持续集成的，将是更紧密地内嵌质量要求、更充分地利用云计算优势的云原生（Cloud Native）开发方法及支撑工具。</p>
+
+    </section>
+
+    <section class="author">
+<p>（本文作者熊节是ThoughtWorks的总监咨询师）</p>
+</section>
+    <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style_32x32" style="height: 40px">
+    <a class="jiathis_button_tsina"></a>
+    <a class="jiathis_button_weixin"></a>
+    <a class="jiathis_button_douban"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis"
+       target="_blank"></a>
+</div>
+<script type="text/javascript">
+    var jiathis_config = {
+        summary: "",
+        shortUrl: false,
+        hideMore: false
+    }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code_mini/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+    
+</article>
+
+			
+            <footer class="footer">
+    <span class="footer__copyright">&copy;
+        作者保留一切权利，未经许可请勿转载</span>
+    <span class="footer__copyright">&copy;
+        2017
+        Transparent Thoughts. All rights reserved.</span>
+</footer>
+        </div>
+    </div>
+
+    <!-- The main JavaScript file for Casper -->
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    <script src="/js/jquery.imagesloaded.min.js"></script>
+    <script src="/js/gallery.js"></script>
+    <script src="/js/jquery.githubRepoWidget.min.js"></script>
+    <script type="text/javascript"
+            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> 
+      MathJax.Hub.Config({ 
+        tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+    }); 
+
+    </script>
+
+    <!--kill ie6 -->
+    <!--[if IE 6]>
+    <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+    <![endif]-->
+
+    <!-- totop -->
+    <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">
+        <a title="back to top"><img style="width:30px;height:30px;" src="/images/totop.png"/></a>
+    </div>
+    <script>
+        (function ($) {
+            var upperLimit = 100;
+            var scrollElem = $('#totop');
+            var scrollSpeed = 500;
+            scrollElem.hide();
+            $(window).scroll(function () {
+                var scrollTop = $(document).scrollTop();
+                if (scrollTop > upperLimit) {
+                    $(scrollElem).stop().fadeTo(300, 1); // fade back in
+                } else {
+                    $(scrollElem).stop().fadeTo(300, 0); // fade out
+                }
+            });
+            $(scrollElem).click(function () {
+                $('html, body').animate({scrollTop: 0}, scrollSpeed);
+                return false;
+            });
+        })(jQuery);
+    </script>
+
+    <!-- fancybox -->
+    
+    <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+    <script src="/fancybox/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript">
+        (function ($) {
+            $('.fancybox').fancybox();
+        })(jQuery);
+    </script>
+    
+
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-113927-4', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <!-- CNZZ Analytics -->
+    <script src="http://s4.cnzz.com/z_stat.php?id=1255092465&web_id=1255092465" language="JavaScript"></script>
+
+</body>
+</html>

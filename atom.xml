@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gigix.thoughtworkers.org/"/>
-  <updated>2017-05-22T00:40:11.000Z</updated>
+  <updated>2017-05-23T14:11:14.000Z</updated>
   <id>http://gigix.thoughtworkers.org/</id>
   
   <author>
@@ -14,6 +14,58 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>持续集成将死</title>
+    <link href="http://gigix.thoughtworkers.org/2017/5/24/ci-dying/"/>
+    <id>http://gigix.thoughtworkers.org/2017/5/24/ci-dying/</id>
+    <published>2017-05-24T05:04:00.000Z</published>
+    <updated>2017-05-23T14:11:14.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>在思考“<a href="/2017/3/31/stack-management/">云时代的研发环境长什么样</a>”这个问题的时候，我逐渐意识到一件很重要的事。2000年首次被提出、在过去十几年中我们习以为常的敏捷核心实践<a href="https://www.martinfowler.com/articles/continuousIntegration.html" target="_blank" rel="external">持续集成</a>，很可能正在走到它生命周期的尾声。</p>
+<p><img src="/assets/2017/5/24/storm.jpg"></p>
+<p>让我们来回顾一下Martin Fowler在他那篇<a href="http://article.yeeyan.org/view/2251/94882" target="_blank" rel="external">著名的文章</a>里如何描述持续集成这个过程：</p>
+<blockquote>
+<p>一旦完成了修改，我就会在自己的计算机上启动一个自动化build。……当我build成功后，我就可以考虑将改动提交到源码仓库。……然而，提交完代码不表示就完事大吉了。我们<strong>还要做一遍集成build，这次在集成计算机上并要基于mainline的代码</strong>。只有这次build成功了，我的修改才算告一段落。……在持续集成环境里，你必须尽可能快地修复每一个集成 build。好的团队应该每天都有多个成功的 build。错误的 build 可以出现，但必须尽快得到修复。</p>
+</blockquote>
+<p>从上面加粗的文字就能看出，过去的十多年里，在谈及持续集成这个实践时，我们已经预设了这个场景：有一个集中式的<strong>持续集成服务器</strong>在监听代码库的变化，每当有人提交代码时，持续集成服务器会自动取出最新的代码，执行整个构建和测试流程。围绕着这个场景，我们发展出了一整套的<a href="/2010/6/29/ci-discipline/">纪律</a>来保障持续集成少失败、失败的时候能尽快修复。围绕着这个场景，我们发明了CruiseControl、GoCD、SnapCI等一代又一代的持续集成服务器，并在我们所有的项目中使用它们。这个场景在我们的脑海中如此根深蒂固以至于我们不再去询问：为什么需要这样做？</p>
+<p>实际上，我们需要一个集中式的持续集成服务器，这是有历史原因的。2000年代初期的技术时代背景，尤其是以下两个非常具体的约束条件，造成了今天我们看到的持续集成的形态：</p>
+<ol>
+<li><strong>计算资源短缺</strong>。这个约束条件决定了完整的、与生产环境相似的、能执行端到端验证的环境必定是稀缺品。典型的交付团队没有能力给每个成员配备整套环境，只能在他们各自的计算机上模拟一套尽可能接近于生产环境的开发环境。于是开发环境的验证结果不足为信，必须在一个标准的、更接近于生产环境的集成环境上通过验证，才能说软件达到了质量要求。</li>
+<li><strong>版本控制工具的局限性</strong>。Subversion（以及其他更早的版本控制工具）在pre-commit阶段通过服务器端回调钩子很难——如果不是完全不可能的话——得到完整的“提交后版本”，因此svn的pre-commit钩子基本只能用于检查提交信息是否符合规范，完整的验证则必须在代码已经合入代码库之后才能——在一台独立的“持续集成服务器”上——进行。</li>
+</ol>
+<p>云计算彻底改变了第一个约束条件。计算资源仍然不能说极大丰富，但企业应用开发所需的x86架构计算资源在云环境下已经不再短缺，结合各种基础设施自动化和配置自动化的技术，随时、按需提供整套环境已经不是难题。而且使用docker等容器技术开通出来的环境是抛弃型的、不可变更的，因此也就不存在环境不一致、验证结果不可信的问题：每个开发人员都可以从云上拿出一套环境，执行build，其过程与效果都与持续集成服务器的build完全一致。</p>
+<p>而git对svn的全面取代则带来一个细微而深远的影响：由于可以在pre-commit阶段直接获得完整的待提交快照、并在这个版本基础上执行测试，不能通过build的代码将直接被拒绝提交。换句话说，整个“持续集成纪律”尝试解决的问题——有缺陷的代码进入团队的代码仓库从而妨碍其他人不断提交没有缺陷的代码——将不复存在，有缺陷的代码将根本无法进入团队的代码仓库。</p>
+<p>综上所述，这两个要素的结合：</p>
+<ol>
+<li>每个开发人员（以及自动构建建）都可以在PaaS云上获得完整的技术栈运行时环境；以及，</li>
+<li>pre-commit阶段可以对待提交的代码进行完整的构建</li>
+</ol>
+<p>带来的是一个非常重要的影响：持续集成服务器这个东西，我们不再需要了。持续集成的“集成”这个动作，将在代码进入团队代码库<strong>之前</strong>发生。我们有办法（git的pre-commit钩子）确保这次集成发生，也有办法（云化、容器化的环境）确保这次集成是可信的。因此我们不再需要一个持续集成服务器来扮演团队的守门人。集中式的持续集成服务器将退化为团队研发行为的可视化仪表盘：它不再负责管理环境和构建软件，只负责采集所有构建中产生的数据、并以适当的形式展示，作为团队研发过程的可视化呈现。</p>
+<p>当持续集成服务器消亡，一个开发者的典型工作流程可能会是这样：</p>
+<ul>
+<li>从git仓库clone出代码，在自己的电脑上做修改；</li>
+<li>修改完成，从研发PaaS上获得一个运行环境，把刚写好的代码运行起来，用浏览器查看一下效果；</li>
+<li>执行构建，构建脚本自动从研发PaaS上获得一个运行环境，在其中执行编译、打包、代码检查和测试；</li>
+<li>构建通过，提交代码并push，git仓库的pre-commit钩子自动触发一次构建，过程与效果都与刚才手动执行的完全一致；</li>
+<li>如果没有手工执行构建就尝试提交，自动构建会失败，代码无法push到团队的代码仓库中，开发者自己去修复；</li>
+<li>如果自动构建成功，代码提交完成。</li>
+</ul>
+<p>从这个工作流程可以看到，与持续集成服务器同时消亡的，还有持续集成这个概念本身。由于对响应力（responsiveness）的要求是如此之高，现代的IT团队已经不能容忍有缺陷的代码先进入代码库、阻塞整个团队的工作、然后再来修复（甚至不修复、或者还需要说服某些团队成员去及时修复）。持续集成是如此重要，以致于它会变成团队的“空气和水”。它会被嵌入到日常的研发工具当中，成为程序员感知不到、而又不可妥协的质量要求——正如IntelliJ之类现代IDE把“通过编译”这项要求变成了程序员感知不到、而又不可妥协的质量要求。</p>
+<blockquote>
+<p>持续集成对于软件开发是如此重要，以至于不应该把它交给软件开发者自己去做。</p>
+</blockquote>
+<p>这就是为什么我认为持续集成工具、以及这些工具背后的持续集成概念在云计算深入研发之后将会消亡。取代持续集成的，将是更紧密地内嵌质量要求、更充分地利用云计算优势的云原生（Cloud Native）开发方法及支撑工具。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在思考“&lt;a href=&quot;/2017/3/31/stack-management/&quot;&gt;云时代的研发环境长什么样&lt;/a&gt;”这个问题的时候，我逐渐意识到一件很重要的事。2000年首次被提出、在过去十几年中我们习以为常的敏捷核心实践&lt;a href=&quot;https://www.mar
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>数字化企业的API架构治理</title>
@@ -119,7 +171,7 @@
     <link href="http://gigix.thoughtworkers.org/2017/5/2/stack-management-and-tech-radar/"/>
     <id>http://gigix.thoughtworkers.org/2017/5/2/stack-management-and-tech-radar/</id>
     <published>2017-05-02T05:04:00.000Z</published>
-    <updated>2017-05-01T14:31:33.000Z</updated>
+    <updated>2017-05-23T10:36:41.000Z</updated>
     
     <content type="html"><![CDATA[<p>在刚刚发布的<a href="https://assets.thoughtworks.com/assets/technology-radar-vol-16-cn.pdf" target="_blank" rel="external">第16期技术雷达</a>中，我们看到ThoughtWorks在“技术”象限里旗帜鲜明地列举了几项与持续集成相关的反模式。这些存在多年的实践和现象被放在了“暂缓”一环中，意味着ThoughtWorks正式向我们的客户指出：如果你的组织仍在这样实施持续集成，我们认为你应该考虑改变了。那么，这些被批评的点背后映射出哪些问题，基于技术栈管理的云时代研发环境又能带来什么新的思路？我们一起来深入分析。</p>
 <p><a href="http://www.bagevent.com/event/405803" target="_blank" rel="external"><img src="/assets/2017/5/2/tech-radar-card.png"></a></p>
@@ -145,7 +197,7 @@
 </ol>
 <p>而这几个约束条件在今天的时代背景下已经不复存在：计算资源仍然不能说极大丰富，但企业应用开发所需的x86架构计算资源在云环境下已经不再短缺；在IaaS的基础上，技术栈管理的PaaS提供了计算环境的弹性，使用相同技术栈的多个团队可以轻易地获得完全一样的环境，因此团队也可以采用标准的技术实践，而不必为了将就手边的环境而调整实践。而git对svn的全面取代尤为值得玩味：由于可以在pre-commit阶段直接获得完整的待提交快照、并在这个版本基础上执行测试，不符合持续集成要求的代码将直接被拒绝提交——而不是在提交后才把问题暴露出来。于是，以下两个要素的结合：</p>
 <ol>
-<li>每个开发人员（以及自动构建jia都可以在PaaS云上获得完整的技术栈运行时环境；以及，</li>
+<li>每个开发人员（以及自动构建建）都可以在PaaS云上获得完整的技术栈运行时环境；以及，</li>
 <li>pre-commit阶段可以对待提交的代码进行完整的构建</li>
 </ol>
 <p>将带来两个重要的影响。首先，持续集成不再需要一个“服务器”。从它发展的早期开始，持续集成这个概念就一直与各种“持续集成服务器”软件工具紧密关联：从早期的CruiseControl、Bamboo到后来的Jenkins、GoCD，以及云上提供服务的TravisCI、SnapCI，持续集成中的“集成”这个动作一直发生在代码已经提交之后、发生在一个团队共有的服务器上。而现在，持续集成可以在代码提交之前发生、在一个从PaaS云上弹性生成的环境中发生。</p>
@@ -953,34 +1005,6 @@
     <summary type="html">
     
       &lt;p&gt;&lt;em&gt;（本文系笔者在2016年&lt;a href=&quot;https://www.ted.com/tedx/events/17545&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;TEDxTencent&lt;/a&gt;的演讲稿。同名文章首发于&lt;a href=&quot;https:
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>领导力发展方法：行动学习</title>
-    <link href="http://gigix.thoughtworkers.org/2016/5/24/action-learning/"/>
-    <id>http://gigix.thoughtworkers.org/2016/5/24/action-learning/</id>
-    <published>2016-05-24T11:31:00.000Z</published>
-    <updated>2016-05-23T14:59:10.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Ericsson等人在那篇<a href="http://psycnet.apa.org/index.cfm?fa=search.displayRecord&amp;uid=1993-40718-001" target="_blank" rel="external">著名的论文</a>中介绍了刻意练习在专家技能的获取过程中的重要性。他们这样谈到在受试者提升绩效的过程中起作用的因素：</p>
-<blockquote>
-<p>最重要的因素是受试者的动机及投入的努力。除此之外，任务的设计必须考虑到学习者既有的知识，以学习者能在接受简单的指示之后能正确理解为宜。学习者需要得到及时的、有信息量的反馈，以便了解他们的表现。学习者需要不断重复相同或相似的任务。</p>
-</blockquote>
-<p>科尔文在《<a href="https://book.douban.com/subject/4010185/" target="_blank" rel="external">哪来的天才</a>》中指出了刻意练习的几个特征：第一，它是为了提高绩效而被设计出来的；第二，它可以重复很多次；第三，对结果的反馈是可持续得到的。（以及，第四，它是非常费神的；第五，它并没有多少乐趣。）由这几个特征可以看到尝试用刻意练习方法发展领导力的困难。因为需要使用领导力的场景是罕见的，甚至在领导者的日常工作中也并不常见；并且使用领导力往往带来较大的影响和风险。所以，在发展高潜力领导者时，一个挑战就是难以给他们创造适于他们提升绩效的、可以重复进行的练习。很多组织会采用<a href="https://book.douban.com/subject/1237464/" target="_blank" rel="external">工匠体系</a>中“师父带徒弟”的方式来培养领导者，这种方式解决了“快速得到反馈”的要求，但仍然不能解决“缺乏练习机会”的困难。</p>
-<p>为了给高潜力领导者创造更多练习使用领导力的机会，我们引入了<a href="https://en.wikipedia.org/wiki/Action_learning" target="_blank" rel="external">行动学习</a>这个方法。在一轮行动学习的6个月中，一组学员会被分配一个重要、关键、且复杂的真实问题，然后把自己放在企业领导者的视角上来分析这个问题，提出解决方案，并推动解决方案落地实施。通过这个过程，学员会有三重收获：解决问题，个人领导力发展，以及团队领导力发展。我们的导师把它称为“一鱼三吃”。</p>
-<p><img src="/assets/2016/5/24/3-targets.png"></p>
-<p>对于现代企业中的领导者而言，有几种基本的品质至关重要。首先是<a href="https://hbr.org/2014/07/expressing-your-vulnerability-makes-you-stronger" target="_blank" rel="external">Vulnerability</a>：敢于暴露自己的弱点，反而会使自己成为更强大的领导者。其次是<a href="https://hbr.org/2015/01/what-resilience-means-and-why-it-matters" target="_blank" rel="external">Resilience</a>：重要的不是避免挫折，而是如何<a href="https://hbr.org/2010/01/how-to-bounce-back-from-adversity" target="_blank" rel="external">从挫折中反弹</a>。以及，<a href="https://hbr.org/2015/06/improve-your-ability-to-learn" target="_blank" rel="external">Learning Agility</a>：如何保持灵活性、从错误中获得成长、并面对各种不同的挑战。通过行动学习中反复的练习和高密度的反馈，学员们得以有针对性地提高自己的领导品质、以及具体的关键领导力。</p>
-<p><img src="/assets/2016/5/24/critical-leaderships.png"></p>
-<p>在未来6个月的行动学习中，学习小组会遇到各种各样的挑战。行动学习小组的导师、sponsor（由公司的资深领导者担任）和整个公司的管理团队都是这些未来领导者可以调用的资源。在压力与挑战面前，他们会走得多远，我们拭目以待。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Ericsson等人在那篇&lt;a href=&quot;http://psycnet.apa.org/index.cfm?fa=search.displayRecord&amp;amp;uid=1993-40718-001&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;著名的
     
     </summary>
     

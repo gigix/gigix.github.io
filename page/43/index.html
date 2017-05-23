@@ -174,6 +174,30 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2008/1/23/how-to-run-a-refactoring-project/" title="link to How To Run A Refactoring Project">How To Run A Refactoring Project</a></h2>
+
+      <p class="excerpt">
+        <p>(From my chat history with Michael Robinson.)</p><p>(11:16:46 PM) xcqmichael: In your situation, it’s important to understand that there are two ways oflooking at software, the coder way and the business way.<br>(11:17:22 PM) xcqmichael: The codersayssoftware is successful if all the tests pass, the code is well structured, and easy to understandandmaintain.<br>(11:18:01 PM) xcqmichael: The businessman says software is successful if it deliversmorevalue to the business than the business spent to create it.</p><p>(11:19:22 PM) xcqmichael: You separate them in terms of pain points.</p><p>(11:25:00 PM) xcqmichael: point 1:<br>(11:25:53 PM) xcqmichael: Refactoring stories (or othertechnicaldebt stories) are like any other kind of story; they should follow INVEST criteria, they should haveanestimated effort, and they should have a prioritized business value.<br>(11:26:18 PM) xcqmichael:Because, in the end, it all comes down to cost to code vs. value to business.<br>(11:26:28 PM)xcqmichael: point 2:<br>(11:27:12 PM) xcqmichael: Refactoring, by definition, means making changestothe structure or organization of a code base without changing its functional behavior.<br>(11:28:06PM)xcqmichael: When you have a code base that is fragile and has no test coverage, it is very costly torefactor because it is very costly to confirm you have not changed functional behavior.<br>(11:28:12PM) xcqmichael: point 3:<br>(11:28:51 PM) xcqmichael: When the cost of a technical debt story isveryhigh, then the business value must be even higher.<br>(11:29:44 PM) xcqmichael: Consequently, theworsethe code looks to you from a coder point of view, the more you should leave it alone from a businesspoint of view.<br>(11:29:51 PM) xcqmichael: point 4:<br>(11:30:27 PM) xcqmichael: Therefore, whensomeone says, “there’s whole bunch of code needs to be refactored”, probably, none of it should be.</p><p>(11:31:49 PM) xcqmichael: Well, it all comes down to prioritization.<br>(11:32:00 PM) xcqmichael:And aclear sense of the cost/value tradeoffs.</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="1月 23 2008" class="post-list__meta--date date">1月 23 2008</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2008/1/16/amm/" title="link to AMM不是什么">AMM不是什么</a></h2>
 
       <p class="excerpt">
@@ -370,30 +394,6 @@ classes that you can use:
 
       <p class="excerpt">
         <p>从题外话说起：据我亲身经历，很多令人郁结的程序员最大的问题不是不熟悉语言和类库，不是不了解算法，不是不会用工具，而是对程序里的信息流没有概念——弄不清哪些信息应该在什么地方、信息从哪里来、经过怎样的转换、到哪里去。而顺序化编程语言（C、C++、Java、C#……）很大程度上加重了这个毛病：在一些不那么漂亮的代码里经常可以看到被滥用的static方法和变量，说到底还是不恰当的全局变量的延续，说到底还是没弄清楚哪些信息应该在哪些位置出现。</p><p>而Erlang的编程练习对此很有帮助。没有全局变量，变量赋值后就不能改变。于是一些常见的badsmell自然而然地就不会出现了，一些常用的重构手法自然而然地就用不上了。不过呢，这个世界毕竟是有状态的。比如说一个<a href="http://stomp.codehaus.org/" target="_blank" rel="external">Stomp</a>server就需要记住哪个client订阅了哪个频道。于是当你认真思考“什么信息应该在什么地方”这个问题时，Erlang的几种选择就显得很有意思了。</p><p><strong>参数传递</strong>。只有当你认真思考的时候，你才会发现原来很多信息都是很容易得到的。要控制一个函数的行为，最简单也最常用的办法就是改变传递给它的参数。如果这个函数需要一种新的状态，也许那意味着给它增加一个参数。</p><p><a href="http://www.erlang.org/course/advanced.html#dict" target="_blank" rel="external"><strong>进程字典</strong></a>。调用<code>put</code>和<code>get</code>方法可以把信息放入一个“每个进程一个实例”的字典。例如<a href="http://www.erlang.org/doc/man/random.html" target="_blank" rel="external"><code>random</code></a>在字典里放了一个名叫<code>random_seed</code>的变量，用来生成伪随机数。</p><p><a href="http://www.erlang.org/doc/man/ets.html" target="_blank" rel="external"><strong><span class="caps">ETS</span></strong></a>。同样是一张二维表，ETS里的信息是所有进程都能访问的。例如<a href="http://code.google.com/p/stomperl/" target="_blank" rel="external">Stomperl</a>需要记录哪个client订阅哪个mailer进程，显然所有监听socket的进程都需要了解这个订阅信息，才能正确分发消息。于是订阅信息就应该（至少）在ETS里保存。</p><p><a href="http://www.erlang.org/doc/man/dets.html" target="_blank" rel="external"><strong><span class="caps">DETS</span></strong></a>。ETS只在内存中存在，这意味着两件事：第一，程序结束数据就消失；第二，数据只能在一个节点共享。DETS的API和ETS相似，但它是基于文件的，所以持久保存和多节点共享都是题中应有之义。注意，ETS和DETS保存的数据都必须是tuple。</p><p><a href="http://www.erlang.org/doc/apps/mnesia/index.html" target="_blank" rel="external"><strong>Mnesia</strong></a>。这是一个真正的数据库。功能齐备，并且仍然软实时。</p><p>以上四种方式的排列不是随机的。应该首先考虑靠前的手段，如果有明确的理由表明一种手段不能满足需要时才可以考虑比较靠后的手段。这很费脑子，有时让人沮丧。但经过深思熟虑的程序好过不假思索的程序，发现自己犯错好过犯错而不自知。</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="12月 7 2007" class="post-list__meta--date date">12月 7 2007</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2007/12/7/stomperl-stomp-with-erlang/" title="link to Stomperl- Stomp with Erlang">Stomperl- Stomp with Erlang</a></h2>
-
-      <p class="excerpt">
-        <p><a href="http://code.google.com/p/stomperl/" target="_blank" rel="external">Stomperl</a>is an attempt to build something not-so-that-non-trivial (in this case, a<a href="http://stomp.codehaus.org/" target="_blank" rel="external">Stomp</a>server) with<a href="http://erlang.org/" target="_blank" rel="external">Erlang</a>. To kick it off, I stole the server architecturefrom<a href="http://www.trapexit.org/Building_a_Non-blocking_TCP_server_using_OTP_principles" target="_blank" rel="external">here</a>and<a href="http://d.hatena.ne.jp/cooldaemon/20071024/1193193093" target="_blank" rel="external">here</a>. Currently it doesn’teven support the full<a href="http://stomp.codehaus.org/Protocol" target="_blank" rel="external">protocol</a>: only CONNECT,SUBSCRIBE and SEND commands are supported. But anyway, it’s moving forward and I’m learning from it.</p><p>To make it run:</p><ol><li><code>make test</code>, which hopefully succeeds.</li><li><code>make start</code>, then you’ll get an Erlang console.</li><li>In the Erlang console,<code>tcp_server_sup:start_server().</code></li><li>In another shell console,<code>make acceptance</code>, which hopefully succeeds.</li></ol><p>I created an extremely simple acceptance test with<a href="http://www.germane-software.com/software/Java/Gozirra/" target="_blank" rel="external">Gozirra</a>.</p><p>What’s the<a href="http://stomperl.googlecode.com/svn/trunk/TODO" target="_blank" rel="external">next</a>? Well, I suppose I’llimplement the full protocol, and fix some defects. As a newbie to Erlang, I made and am makingstupid mistakes. Welcome to be stupid together with me.</p>
       </p>
 
       <div class="post-list__meta">
