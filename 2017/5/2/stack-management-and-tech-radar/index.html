@@ -25,7 +25,7 @@
 <meta property="og:site_name" content="透明思考">
 <meta property="og:description" content="在刚刚发布的第16期技术雷达中，我们看到ThoughtWorks在“技术”象限里旗帜鲜明地列举了几项与持续集成相关的反模式。这些存在多年的实践和现象被放在了“暂缓”一环中，意味着ThoughtWorks正式向我们的客户指出：如果你的组织仍在这样实施持续集成，我们认为你应该考虑改变了。那么，这些被批评的点背后映射出哪些问题，基于技术栈管理的云时代研发环境又能带来什么新的思路？我们一起来深入分析。">
 <meta property="og:image" content="http://gigix.thoughtworkers.org/assets/2017/5/2/tech-radar-card.png">
-<meta property="og:updated_time" content="2017-05-23T10:36:41.000Z">
+<meta property="og:updated_time" content="2017-05-23T15:59:28.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="技术栈管理与云时代的持续集成 | 透明思考">
 <meta name="twitter:description" content="在刚刚发布的第16期技术雷达中，我们看到ThoughtWorks在“技术”象限里旗帜鲜明地列举了几项与持续集成相关的反模式。这些存在多年的实践和现象被放在了“暂缓”一环中，意味着ThoughtWorks正式向我们的客户指出：如果你的组织仍在这样实施持续集成，我们认为你应该考虑改变了。那么，这些被批评的点背后映射出哪些问题，基于技术栈管理的云时代研发环境又能带来什么新的思路？我们一起来深入分析。">
@@ -221,7 +221,7 @@ classes that you can use:
 </ol>
 <p>而这几个约束条件在今天的时代背景下已经不复存在：计算资源仍然不能说极大丰富，但企业应用开发所需的x86架构计算资源在云环境下已经不再短缺；在IaaS的基础上，技术栈管理的PaaS提供了计算环境的弹性，使用相同技术栈的多个团队可以轻易地获得完全一样的环境，因此团队也可以采用标准的技术实践，而不必为了将就手边的环境而调整实践。而git对svn的全面取代尤为值得玩味：由于可以在pre-commit阶段直接获得完整的待提交快照、并在这个版本基础上执行测试，不符合持续集成要求的代码将直接被拒绝提交——而不是在提交后才把问题暴露出来。于是，以下两个要素的结合：</p>
 <ol>
-<li>每个开发人员（以及自动构建建）都可以在PaaS云上获得完整的技术栈运行时环境；以及，</li>
+<li>每个开发人员（以及自动构建）都可以在PaaS云上获得完整的技术栈运行时环境；以及，</li>
 <li>pre-commit阶段可以对待提交的代码进行完整的构建</li>
 </ol>
 <p>将带来两个重要的影响。首先，持续集成不再需要一个“服务器”。从它发展的早期开始，持续集成这个概念就一直与各种“持续集成服务器”软件工具紧密关联：从早期的CruiseControl、Bamboo到后来的Jenkins、GoCD，以及云上提供服务的TravisCI、SnapCI，持续集成中的“集成”这个动作一直发生在代码已经提交之后、发生在一个团队共有的服务器上。而现在，持续集成可以在代码提交之前发生、在一个从PaaS云上弹性生成的环境中发生。</p>

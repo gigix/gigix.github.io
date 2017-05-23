@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gigix.thoughtworkers.org/"/>
-  <updated>2017-05-23T14:40:58.000Z</updated>
+  <updated>2017-05-23T15:59:22.000Z</updated>
   <id>http://gigix.thoughtworkers.org/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://gigix.thoughtworkers.org/2017/5/24/ci-dying/"/>
     <id>http://gigix.thoughtworkers.org/2017/5/24/ci-dying/</id>
     <published>2017-05-24T05:04:00.000Z</published>
-    <updated>2017-05-23T14:40:58.000Z</updated>
+    <updated>2017-05-23T15:59:22.000Z</updated>
     
     <content type="html"><![CDATA[<p>在思考“<a href="/2017/3/31/stack-management/">云时代的研发环境长什么样</a>”这个问题的时候，我逐渐意识到一件很重要的事。2000年首次被提出、在过去十几年中我们习以为常的敏捷核心实践<a href="https://www.martinfowler.com/articles/continuousIntegration.html" target="_blank" rel="external">持续集成</a>，很可能正在走到它生命周期的尾声。</p>
 <p><img src="/assets/2017/5/24/storm.jpg"></p>
@@ -40,7 +40,7 @@
 <p>而git对svn的全面取代则带来一个细微而深远的影响：由于可以在pre-commit阶段直接获得完整的待提交快照、并在这个版本基础上执行测试，不能通过build的代码将直接被拒绝提交。换句话说，整个“持续集成纪律”尝试解决的问题——有缺陷的代码进入团队的代码仓库从而妨碍其他人不断提交没有缺陷的代码——将不复存在，有缺陷的代码将根本无法进入团队的代码仓库。</p>
 <p>综上所述，这两个要素的结合：</p>
 <ol>
-<li>每个开发人员（以及自动构建建）都可以在PaaS云上获得完整的技术栈运行时环境；以及，</li>
+<li>每个开发人员（以及自动构建）都可以在PaaS云上获得完整的技术栈运行时环境；以及，</li>
 <li>pre-commit阶段可以对待提交的代码进行完整的构建</li>
 </ol>
 <p>带来的是一个非常重要的影响：持续集成服务器这个东西，我们不再需要了。持续集成的“集成”这个动作，将在代码进入团队代码库<strong>之前</strong>发生。我们有办法（git的pre-commit钩子）确保这次集成发生，也有办法（云化、容器化的环境）确保这次集成是可信的。因此我们不再需要一个持续集成服务器来扮演团队的守门人。集中式的持续集成服务器将退化为团队研发行为的可视化仪表盘：它不再负责管理环境和构建软件，只负责采集所有构建中产生的数据、并以适当的形式展示，作为团队研发过程的可视化呈现。</p>
@@ -177,7 +177,7 @@
     <link href="http://gigix.thoughtworkers.org/2017/5/2/stack-management-and-tech-radar/"/>
     <id>http://gigix.thoughtworkers.org/2017/5/2/stack-management-and-tech-radar/</id>
     <published>2017-05-02T05:04:00.000Z</published>
-    <updated>2017-05-23T10:36:41.000Z</updated>
+    <updated>2017-05-23T15:59:28.000Z</updated>
     
     <content type="html"><![CDATA[<p>在刚刚发布的<a href="https://assets.thoughtworks.com/assets/technology-radar-vol-16-cn.pdf" target="_blank" rel="external">第16期技术雷达</a>中，我们看到ThoughtWorks在“技术”象限里旗帜鲜明地列举了几项与持续集成相关的反模式。这些存在多年的实践和现象被放在了“暂缓”一环中，意味着ThoughtWorks正式向我们的客户指出：如果你的组织仍在这样实施持续集成，我们认为你应该考虑改变了。那么，这些被批评的点背后映射出哪些问题，基于技术栈管理的云时代研发环境又能带来什么新的思路？我们一起来深入分析。</p>
 <p><a href="http://www.bagevent.com/event/405803" target="_blank" rel="external"><img src="/assets/2017/5/2/tech-radar-card.png"></a></p>
@@ -203,7 +203,7 @@
 </ol>
 <p>而这几个约束条件在今天的时代背景下已经不复存在：计算资源仍然不能说极大丰富，但企业应用开发所需的x86架构计算资源在云环境下已经不再短缺；在IaaS的基础上，技术栈管理的PaaS提供了计算环境的弹性，使用相同技术栈的多个团队可以轻易地获得完全一样的环境，因此团队也可以采用标准的技术实践，而不必为了将就手边的环境而调整实践。而git对svn的全面取代尤为值得玩味：由于可以在pre-commit阶段直接获得完整的待提交快照、并在这个版本基础上执行测试，不符合持续集成要求的代码将直接被拒绝提交——而不是在提交后才把问题暴露出来。于是，以下两个要素的结合：</p>
 <ol>
-<li>每个开发人员（以及自动构建建）都可以在PaaS云上获得完整的技术栈运行时环境；以及，</li>
+<li>每个开发人员（以及自动构建）都可以在PaaS云上获得完整的技术栈运行时环境；以及，</li>
 <li>pre-commit阶段可以对待提交的代码进行完整的构建</li>
 </ol>
 <p>将带来两个重要的影响。首先，持续集成不再需要一个“服务器”。从它发展的早期开始，持续集成这个概念就一直与各种“持续集成服务器”软件工具紧密关联：从早期的CruiseControl、Bamboo到后来的Jenkins、GoCD，以及云上提供服务的TravisCI、SnapCI，持续集成中的“集成”这个动作一直发生在代码已经提交之后、发生在一个团队共有的服务器上。而现在，持续集成可以在代码提交之前发生、在一个从PaaS云上弹性生成的环境中发生。</p>
