@@ -174,6 +174,30 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2011/10/17/c-mon-it-s-turing-machine-part-2/" title="link to C&#39;mon, It&#39;s Turing Machine! (Part 2)">C&#39;mon, It&#39;s Turing Machine! (Part 2)</a></h2>
+
+      <p class="excerpt">
+        <p><em>(Following<a href="http://gigix.thoughtworkers.org/2011/10/11/c-mon-it-s-turing-machine-part-1">the 1stpart</a>)</em></p><p><img src="http://gigix.thoughtworkers.org/assets/2011/10/17/typing.jpg" alt=""></p><h2>Write Your Own Machine</h2><p>File<code>machines/an_irrational_number.machine</code>includes all the fundamental elements to create your own Turing Machine.</p><ul><li>The lines start with semicolons are comments.</li><li>Non-comment non-empty lines are m-configurations, each of them consists of 4 columns (separatedby verticallines), which in turn are:<ul><li>Name of current m-configuration.</li><li>The symbol read from current square of the tape—m-configurations with same namecould behavedifferently while reading different symbols.</li><li>Operations, separated by commas. Valid operations are:<ul><li>P{x}: Write {x} to current square of the tape.</li><li>E: Erase any symbol in current square.</li><li>L/R: move the cursor one square left/right.</li></ul></li><li>Next m-configuration—what should be done after current m-configuration?</li></ul></li></ul><p>Now, try to write your own machine, and run it!</p><h2>What’s Next?</h2><p><a href="http://en.wikipedia.org/wiki/Universal_turing_machine" target="_blank" rel="external">Universal Turing Machine</a>, of course. (What else otherwise?)</p><p>(It requires reading Chapter 7 and 9 of<a href="http://book.douban.com/subject/2330016/" target="_blank" rel="external">The Annotated Turing</a>. Although I haven’t started yet, I can feel it’s not an easy task. Any contributionwould be highlyappreciated.)</p><p>Meanwhile, I started building a web UI running Turing Machines with<a href="http://github.com/weavejester/compojure" target="_blank" rel="external">Compojure</a>. Take a look at<code>web</code>folder. You can trial it with:</p><blockquote>$ lein ring server</blockquote><p>It also makes sense to tidy it up and make it more interactive.</p><p>I also want to build an iOS application…but that’s another story.</p><p>You might want to try something more interesting, e.g. to write a general Turing Machine to determineany givenTuring Machine would halt or not; to solve the<a href="http://en.wikipedia.org/wiki/Entscheidungsproblem" target="_blank" rel="external">Entscheidungsproblem</a>; etc.</p><p>Anyway, enjoy :D</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="10月 17 2011" class="post-list__meta--date date">10月 17 2011</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2011/10/16/strategy-in-activities/" title="link to 行动中的战略">行动中的战略</a></h2>
 
       <p class="excerpt">
@@ -375,30 +399,6 @@ classes that you can use:
       <div class="post-list__meta">
 
         <time datetime="9月 9 2011" class="post-list__meta--date date">9月 9 2011</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2011/8/31/zte-financial-analysis/" title="link to 练习：中兴通讯的财报分析">练习：中兴通讯的财报分析</a></h2>
-
-      <p class="excerpt">
-        <p>把上课学到的东西拿来练习一下。用中兴上半年的<a href="http://disclosure.szse.cn/m/finalpage/2011-08-31/59901065.PDF" target="_blank" rel="external">财报</a>作为案例，试着做做分析。</p><p><img src="http://gigix.thoughtworkers.org/assets/2011/8/31/Stock-Market-Prices_web_1.jpg" alt=""></p><p><strong>杜邦分析法：净资产收益率=销售净利率(NPM)×资产周转率(AU)×权益乘数(EM)</strong></p><ul><li>销售净利率=净利润/销售收入=836,330/37,336,595≈2.24%</li><li>资产周转率=销售收入/总资产=37,336,595/96,484,827≈38.70%</li><li>权益乘数=总资产/股东权益=96,484,827/24,777,733≈389.40%</li><li>净资产收益率≈3.38%</li></ul><p>去年同期的指标分别是：</p><ul><li>销售净利率=993,288/30,725,420≈3.23%</li><li>资产周转率=30,725,420/84,152,357≈36.51%</li><li>权益乘数=84,152,357/24,961,998≈337.12%</li><li>净资产收益率≈3.98%</li></ul><p>几个分项指标的解读：</p><ol><li><strong>销售净利率显示成本控制能力</strong>。这项指标同比下降约30%，对照“营业成本列示”（附录三，第36项）可见，运营商网络、终端产品、电信软件及服务三大主营业务的成本都显著上升，成本升幅（28%）超过收入（22%）。中国证券报的<a href="http://tech.163.com/11/0812/03/7B7P2PN8000915BE.html" target="_blank" rel="external">解读</a>是为了占领市场而采取积极的价格策略，我认为另一方面的原因是国内成本的显著增加：在营业成本增额的不到60亿当中，“购买商品、接受劳务支付的现金”和“支付给职工以及为职工支付的现金”两项贡献了超过40亿（合并现金流量表）。</li><li><strong>资产周转率显示资产使用效率</strong>。这项指标有小幅提升，与市场环境好转的印象相符。但是在“流动资产”的增额中做出最大贡献的是应收票据、应收账款和存货，内部各个环节的管理、经营效率似乎有点经不起发展的冲击。</li><li><strong>权益乘数显示财务融资能力</strong>。这项指标同比上升15.5%，对照“流动负债”中增加的近百亿短期借款，可以认为中兴正在继续扩展业务，同时也得到了有效的财务支撑。</li></ol><p>综上所述，根据简单的财务报表分析，中兴通讯似乎正在积极扩展业务，并且得到了充分的外部支持。但利润率降低是一个严重的隐患，不论是为了抢占市场还是因为成本控制不力。在国内成本还会继续上升的大背景下，内部挖潜控制成本只能是辅策，调整产品结构、提升市场定位、拓展价值供应，才是长久之计。</p><p>毕竟，就像IBM百年时Economist那篇文章说的：Cisco的前景是可疑的，因为电信设备终归是一个有限的市场。</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="8月 31 2011" class="post-list__meta--date date">8月 31 2011</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">
