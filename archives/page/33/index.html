@@ -179,6 +179,31 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2009/3/25/jruby-ldap-over-ssl/" title="link to JRuby/LDAP over SSL">JRuby/LDAP over SSL</a></h2>
+
+      <p class="excerpt">
+        <p></p><p>Integrating ActiveDirectory with JRuby on Rails. Blocked by<span class="caps">SSL</span>issue. (Actually not AD but<span class="caps">ADAM</span>. Check<a href="http://blogs.msdn.com/cjacks/archive/2005/11/15/493122.aspx" target="_blank" rel="external">how to configure<span class="caps">ADAM</span>for<span class="caps">SSL</span>on Windows XP without a certificate server</a>)</p><blockquote>Jeff: Here we have a question about JRuby/LDAP: how to establish SSLConn to ActiveDirectory,given wehave got the certificate file (xxx.cer)?<p>Ola: Very good question. At the moment I don’t have the answer – and I’m notsure it’spossible. Have you considered using net/ldap instead? It’s pure Ruby and very nice.</p></blockquote><pre><del>(╯﹏╰)</del></pre><p>And then I figured it out. What we need is (1) import the certificate to a keystore, and (2) specifythe location ofkeystore to JRuby.</p><pre># command linekeytool -keystore “./cacerts” -import -file Authority.cer# JRubyjava.lang.System::setProperty(“javax.net.ssl.trustStore”, “/path/to/cacerts”);</pre><p>And…that’s it. Now we can connect to<span class="caps">ADAM</span>over<span class="caps">SSL</span>.</p><pre>conn = LDAP::SSLConn.new(host=LDAP_HOST, port=636)</pre><p></p>
+
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="3月 25 2009" class="post-list__meta--date date">3月 25 2009</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2009/3/20/interesting-review-to-productive-programmer/" title="link to 新手·高手·卓有成效的程序员">新手·高手·卓有成效的程序员</a></h2>
 
       <p class="excerpt">
@@ -381,30 +406,6 @@ classes that you can use:
       <div class="post-list__meta">
 
         <time datetime="3月 3 2009" class="post-list__meta--date date">3月 3 2009</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2009/2/27/doujiang-and-youtiao/" title="link to 豆浆和油条">豆浆和油条</a></h2>
-
-      <p class="excerpt">
-        <p>豆浆和油条，是所有早餐搭配中的特殊者。其卓尔不群的程度，很可能，只有单面煎蛋和培根能望其项背。</p><p>和牛奶不同，豆浆是寡淡的，没有油脂，加上砂糖之后的甜味也显得清而不厚。</p><p>而油条则是略显干瘪无趣的。虽然肚里的空气和酥脆口感教人欣赏，总觉得太枯燥了一点。</p><p>所以，泡MM的“泡”字，不应该像开水泡方便面，应该更像豆浆泡油条。那一泡下去，豆浆和油条便同时实现了自己的人生价值。</p><p>油条的味道变得滋润而充满变化。豆浆就更妙了：两根油条在一碗豆浆里泡过吃掉以后，豆浆就只剩了碗底的一口，端起碗喝下去，满口香甜醇厚。</p><p>要泡在一起，就应该让两者都变得更好。像馄饨与小笼包那样，仅仅是为了在一起而凑合在一起，固然也是一顿不错的早餐。可是…</p><p>所以，每次看到天津人吃煎饼果子把油条夹在煎饼里拍实了一口咬下去，我都会暗自慨叹：</p><p>又是一根无法实现自己人生价值的油条。</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="2月 27 2009" class="post-list__meta--date date">2月 27 2009</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">
