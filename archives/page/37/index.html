@@ -179,6 +179,30 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2008/12/12/shencongwen/" title="link to 读·沈从文">读·沈从文</a></h2>
+
+      <p class="excerpt">
+        <p>因了某人的缘故，连着两天，读了沈从文的《边城》、《凤凰》和半本的《从文自传》。</p><p>最感触的，便是这句话：</p><blockquote>知识同权力相比，我愿意得到智慧，放下权力。我明白人活到社会里应该有许多事情可作，应当为现在的别人去设想，应当如何去思索生活。且应当如何去为大多数人牺牲，为自己一点点理想受苦，不能随便马虎过日子，不能委屈过日子了。</blockquote><p>太多的道理，太少的感觉。所谓左脑作主，便是如此的罢。</p><p>而后半本的自传里，竟然连他自己也说起道理来了。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="12月 12 2008" class="post-list__meta--date date">12月 12 2008</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2008/12/11/recommendations-from-the-build-master/" title="link to Recommendations From The Build Master">Recommendations From The Build Master</a></h2>
 
       <p class="excerpt">
@@ -378,30 +402,6 @@ classes that you can use:
 
       <p class="excerpt">
         <p>受到<a href="http://andyhu1007.spaces.live.com/" target="_blank">Andy</a>的鼓励，也来贴footprint</p><pre>Revision: 4203+———————-+——-+——-+———+———+—–+——-+| Name | Lines | LOC | Classes | Methods | M/C | LOC/M |+———————-+——-+——-+———+———+—–+——-+| Controllers | 1922 | 1600 | 35 | 232 | 6 | 4 || Helpers | 1451 | 1210 | 8 | 206 | 25 | 3 || Models | 4337 | 3555 | 63 | 567 | 9 | 4 || Libraries | 2786 | 2317 | 37 | 233 | 6 | 7 || Model specs | 6689 | 5536 | 1 | 3 | 3 | 1843 || Controller specs | 5216 | 4355 | 0 | 7 | 0 | 620 || Helper specs | 939 | 765 | 0 | 1 | 0 | 763 || Library specs | 2744 | 2262 | 1 | 7 | 7 | 321 |+———————-+——-+——-+———+———+—–+——-+| Total | 26084 | 21600 | 145 | 1256 | 8 | 15 |+———————-+——-+——-+———+———+—–+——-+Code LOC: 8682 Test LOC: 12918 Code to Test Ratio: 1:1.5</pre><p>正如Andy说的，4月到9月，trunk上共计约2400次commit。按照平均4个pair来算，每个pair每天提交6次。</p><p>除去统计失准的rspec部分，功能代码共计8682行，1238个方法，平均每个方法7行。测试代码是功能代码的1.5倍。</p><p>考虑到<a href="http://www.rubyonrails.org" target="_blank" rel="external">Ruby on Rails</a>作为特别擅长开发web应用的框架所具备的强大表现力，以及对重复代码的低容忍，再加上stats所统计的只是Ruby代码（不包括HTML、JavaScript等代码），我毫不怀疑这个系统的复杂度能够等量于很多十万行代码级别的系统。</p><p>而重要的是，这个团队里的每个developer了解系统的每个角落──至少是能够在相当短的时间内通过阅读功能代码和测试来了解。每天6次的提交频率就是明证。</p><p>所以，作为总结，是一个值得骄傲的项目。</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="9月 19 2008" class="post-list__meta--date date">9月 19 2008</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2008/9/19/why-not-start-with-ci/" title="link to 从持续集成开始，你怕啥呢？">从持续集成开始，你怕啥呢？</a></h2>
-
-      <p class="excerpt">
-        <p>鼠标说，很多人认为<a href="http://www.infoq.com/cn/articles/road-of-ic" target="_blank" rel="external">敏捷从持续集成开始</a>，于是就<a href="http://www.zhangxun.com/_templates/tmpl_AddComment.aspx?sname=NewsAID&amp;id=54" target="_blank" rel="external">有人害怕了</a>。</p><p>人家说，你们搞这贸贸然的就持续集成，不行的。</p><blockquote>1、认清真正的敏捷<p>通过学习和调研，认清什么是真正的敏捷。如果一些基本初始概念就错了，那么在后续的推行中必然会差之毫厘、谬之千里，真正的敏捷实施也就无从谈起。</p><p>2、预估推行敏捷的收益</p><p>在确认知道什么是真正敏捷的前提下，对自己团队、组织的现状、问题和薄弱环节进行评估，设定改进目标，并预估敏捷能否解决这些问题，带来潜在的改进。如果成功的把握小于 50%或者现状已经足够好，就不要推行敏捷，何必劳民伤财呢。</p></blockquote><p>有意思啊。弄不清什么是“真正的敏捷”，“现状已经足够好”，就不需要改进了？就不要解决问题了？</p><p>怕啥呢？怕的就是这持续集成它是实打实的东西吧。怕的就是持续集成一上，所有的问题都以测试是红是绿这么截然的方式暴露出来，逼着不得不解决吧。怕的就是持续集成它没有放之四海而皆准的套话可以讲，build脚本得一点点写出来吧。怕的就是没人跟您玩“学习和调研”了吧。怕的就是“真正的敏捷实施”卖不掉了吧。</p><p>作为一个专门帮人解决问题的，我越来越频繁的说，我不在乎敏捷不敏捷。你告诉我，你有什么问题，咱们一起来看看怎么解决。可能一个项目做到最后你还是不搞敏捷，没关系，我解决你的问题提高你的效率就行。</p><p><a href="http://www.thoughtworks.com" target="_blank" rel="external"><strong>Thought</strong>Works</a>是一个做实事的公司，所以我们认为每个项目应该做的第一件事就是让真正的软件开口说话，说出它有什么问题，然后我们来解决问题。难怪有人要怕呢。光顾着解决问题，那学习和调研基本初始概念的事可扔到哪儿去了呢？</p><p>怕是又动了谁的奶酪了吧。</p>
       </p>
 
       <div class="post-list__meta">
