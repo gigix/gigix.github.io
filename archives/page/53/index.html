@@ -179,6 +179,30 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2007/4/28/知识库｜只言片语｜互联网式写作/" title="link to 知识库｜只言片语｜互联网式写作">知识库｜只言片语｜互联网式写作</a></h2>
+
+      <p class="excerpt">
+        <p><a href="http://chinaonrails.com" target="_blank" rel="external">ChinaonRails</a>果然与众不同：别的地方发帖子攒积分，这里<a href="http://chinaonrails.com/topic/view/54.html" target="_blank" rel="external">发帖和回帖要付出积分</a>的。</p><p>认真想了一下这个事情。望勤说是要<a href="http://groups.google.com/group/RORBeijing/browse_thread/thread/a7391f26f6bbfde1?hl=zh-CN" target="_blank" rel="external">建立活的Rails知识库</a>。既然是知识库，和论坛本就不同，更鼓励贡献知识而不是参与讨论。只要把有趣的东西给出来，看的人自然会有收获，不需要更多讨论——至少我猜望勤是这么想的。而且按照积分规则，字数越多需要付出积分越多，所以<a href="http://chinaonrails.com/u/bd7lx" target="_blank" rel="external">王大力</a>发的都是只言片语，简单两句话加上链接。无疑这是被规则所鼓励的风格。</p><p>只管说，不管解释。<br>只言片语。</p><p>不啻是<a href="http://culture.163.com/edit/010309/010309_47423.html" target="_blank" rel="external">麦克卢汉</a>的风格。问问麦克卢汉的风格从哪里来，他说来自<a href="http://www.google.com/url?sa=t&amp;ct=res&amp;cd=1&amp;url=http%3A%2F%2Fzh.wikipedia.org%2Fwiki%2F%25E8%25A9%25B9%25E5%25A7%2586%25E6%2596%25AF%25C2%25B7%25E4%25B9%2594%25E4%25BC%258A%25E6%2596%25AF&amp;ei=9iwzRpWqBYeKsALjjaDrAg&amp;usg=AFrqEzcqjfPNe-zdppB5WkAS-maErObfmw&amp;sig2=wfWl51wUH41u3cpgzZblhw" target="_blank" rel="external">詹姆斯·乔伊斯</a>。乔伊斯的文字素以信息量巨大、链接丰富、难以解读而著称。《<a href="http://www.yifan.net/yihe/novels/foreign/youli/youli.html" target="_blank" rel="external">尤利西斯</a>》如此，更不用说《<a href="http://bk.baidu.com/view/811925.htm" target="_blank" rel="external">芬尼根的守灵</a>》。最近时常在想，也许乔伊斯的文字原本就不是为印刷时代而写的。放在超文本的互联网上，《尤利西斯》是否能逃脱“晦涩难懂”的评语？在互联网的写作中，链接就是内容。<a href="http://www.infoq.com/cn/news/2007/04/rails-is-enterprise-ready" target="_blank" rel="external">拼凑链接</a>的写作，反而比精心堆砌的文字更有意义。）</p><p>（所以顺便请求互联网上的<a href="http://news.csdn.net/n/20070428/103474.html" target="_blank" rel="external">剽窃者</a>们，在照搬<a href="http://www.infoq.com/cn/articles/SOA-Agile-Friends-Or-Foes" target="_blank" rel="external">别人文字</a>时至少真正做到“照搬”。链接不那么重要吗？也许，当文字被印在纸张上时。但在互联网的写作中，链接就是内容。）</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="4月 28 2007" class="post-list__meta--date date">4月 28 2007</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2007/4/27/中国上铁道/" title="link to 中国上铁道">中国上铁道</a></h2>
 
       <p class="excerpt">
@@ -376,30 +400,6 @@ classes that you can use:
       <p class="excerpt">
         <p><ol><li><strong>Build your<span class="caps">RPM</span>packages</strong>. Refer to “<a href="http://www.rpm.org/max-rpm/" target="_blank" rel="external">Maximum<span class="caps">RPM</span></a>”. Assume you put your<span class="caps">RPM</span>packages in /path/to/RPMS/i386/*.rpm</li><li><strong>Create a yum repository</strong>.<ul><li>cd /path/to/RPMS/..</li><li><a href="http://linux.duke.edu/projects/metadata/" target="_blank" rel="external">createrepo</a>RPMS</li><li>(Now there should be a /path/to/RPMS/repodata directory.)</li></ul></li><li><strong>Publish your repository</strong>. I wanna publish it via Apache, so I do following:<ul><li>ln -s /path/to/RPMS /var/www/RPMS</li><li>(Browse <a href="http://localhost/RPMS" target="_blank" rel="external">http://localhost/RPMS</a>, there should be “repodata” and “i386”directories.)</li></ul></li><li><strong>Enable your repository in client machine</strong>. Edit<a href="http://www.phy.duke.edu/%7Ergb/General/yum_article/yum_article/node19.html" target="_blank" rel="external">/etc/yum.conf</a>file as following:<pre>[main]cachedir=/var/cache/yumdebuglevel=2logfile=/var/log/yum.log[my-repository]name = My Repositorybaseurl=<a href="http://localhost/RPMSgpgcheck=0" target="_blank" rel="external">http://localhost/RPMSgpgcheck=0</a></pre></li></ol></p><p>Here we go! Invoke “yum list” and you should able to see all<span class="caps">RPM</span>packages you built.</p><p></p>
 
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="4月 11 2007" class="post-list__meta--date date">4月 11 2007</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2007/4/11/歪理斜说：优秀的都是病态的/" title="link to 歪理斜说：优秀的都是病态的">歪理斜说：优秀的都是病态的</a></h2>
-
-      <p class="excerpt">
-        <p>我有一个理论——好吧，我有很多个理论，其中之一是：一切优秀的，都是病态的。</p><p>实际上这只是同语反复，因为按照定义我们把“与大多数人相同的”称为“正常的”，而出类拔萃的，就像先天不足的一样，是“异常的”，因此是病态的。（<strong>Thought</strong>Works给应试者所写的代码的最高评价就是“exceptional”。）和白痴一样，天才也是病，只不过表现的形式不同。</p><p>就好像，最优秀的企业对于产品质量有病态的偏执。</p><p>就好像，最优秀的团队对于自己的文化和工作方式有强迫症，一旦偏离就会表现出躁狂症状。</p><p>就好像，最优秀的人会坚持自己的习惯和要做的事情，几年不变。</p><p>一切优秀的，都是病态的。就好像我太太说的，“你们公司的人都不太正常。”</p>
       </p>
 
       <div class="post-list__meta">

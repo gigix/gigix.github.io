@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://gigix.thoughtworkers.org/2017/6/23/tech-lead-as-a-service/</loc>
+    
+    <lastmod>2017-06-23T11:25:15.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://gigix.thoughtworkers.org/2017/6/20/book-review-to-goodbye-islaves/</loc>
     
     <lastmod>2017-06-20T10:04:08.000Z</lastmod>
@@ -261,21 +268,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2007/7/12/%E4%B9%9F%E8%AE%B8%E6%88%91%E4%B8%8D%E6%98%AF%E2%80%9C%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E8%80%85%E2%80%9D/</loc>
-    
-    <lastmod>2015-11-11T07:46:01.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2011/8/31/zte-financial-analysis/</loc>
-    
-    <lastmod>2015-11-11T07:46:01.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2007/5/19/%E4%B8%8D%E7%94%A8%E8%AF%B4%EF%BC%88%E6%88%96%E8%80%85%E9%9A%8F%E4%BE%BF%E6%80%8E%E4%B9%88%E8%AF%B4%EF%BC%89/</loc>
+    <loc>http://gigix.thoughtworkers.org/2007/4/9/%E5%87%A0%E7%A7%8D%E5%B8%B8%E8%A7%81%E7%9A%84%E5%8D%9A%E5%BC%88%E5%BD%A2%E5%BC%8F/</loc>
     
     <lastmod>2015-11-11T07:46:01.000Z</lastmod>
     
@@ -303,6 +296,20 @@
   </url>
   
   <url>
+    <loc>http://gigix.thoughtworkers.org/2007/5/19/%E4%B8%8D%E7%94%A8%E8%AF%B4%EF%BC%88%E6%88%96%E8%80%85%E9%9A%8F%E4%BE%BF%E6%80%8E%E4%B9%88%E8%AF%B4%EF%BC%89/</loc>
+    
+    <lastmod>2015-11-11T07:46:01.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2011/8/31/zte-financial-analysis/</loc>
+    
+    <lastmod>2015-11-11T07:46:01.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://gigix.thoughtworkers.org/2007/5/24/%E9%93%81%E9%81%93%E4%B8%8B%E7%9A%84%E7%BA%A2%E5%AE%9D%E7%9F%B3%EF%BC%9A%E7%82%B9%E8%AF%84ruby%E7%95%85%E9%94%80%E4%B9%A6%E4%B8%89%E7%A7%8D/</loc>
     
     <lastmod>2015-11-11T07:46:01.000Z</lastmod>
@@ -310,35 +317,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2007/4/20/%E4%BF%A1%E5%8F%B7%EF%BC%9Aerlang%E6%AD%A3%E5%9C%A8%E9%9D%A0%E8%BF%91%E4%B8%AD/</loc>
-    
-    <lastmod>2015-11-11T07:46:01.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2007/8/11/%E4%BB%8E%E6%88%91%E5%AE%B6%E7%AA%97%E5%8F%A3%E7%9C%8B%E5%A4%9C%E6%99%AF/</loc>
-    
-    <lastmod>2015-11-11T07:46:01.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2007/4/9/%E5%87%A0%E7%A7%8D%E5%B8%B8%E8%A7%81%E7%9A%84%E5%8D%9A%E5%BC%88%E5%BD%A2%E5%BC%8F/</loc>
-    
-    <lastmod>2015-11-11T07:46:01.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2007/6/4/%E5%92%8Crails%E4%B8%80%E8%B5%B7%E6%88%90%E9%95%BF%E2%80%94%E2%80%94awdwr-ii%E8%AF%91%E8%80%85%E5%BA%8F/</loc>
-    
-    <lastmod>2015-11-11T07:46:01.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2007/6/15/%E5%A1%91%E9%80%A0%E6%95%8F%E6%8D%B7%E4%BC%81%E4%B8%9A%EF%BC%9A%E7%AC%AC%E4%BA%8C%E5%B1%8A%E2%80%9C%E6%95%8F%E6%8D%B7%E4%B8%AD%E5%9B%BD%E2%80%9D%E6%8A%80%E6%9C%AF%E5%A4%A7%E4%BC%9A/</loc>
+    <loc>http://gigix.thoughtworkers.org/2007/7/12/%E4%B9%9F%E8%AE%B8%E6%88%91%E4%B8%8D%E6%98%AF%E2%80%9C%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E8%80%85%E2%80%9D/</loc>
     
     <lastmod>2015-11-11T07:46:01.000Z</lastmod>
     
@@ -352,6 +331,20 @@
   </url>
   
   <url>
+    <loc>http://gigix.thoughtworkers.org/2007/8/11/%E4%BB%8E%E6%88%91%E5%AE%B6%E7%AA%97%E5%8F%A3%E7%9C%8B%E5%A4%9C%E6%99%AF/</loc>
+    
+    <lastmod>2015-11-11T07:46:01.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2007/6/4/%E5%92%8Crails%E4%B8%80%E8%B5%B7%E6%88%90%E9%95%BF%E2%80%94%E2%80%94awdwr-ii%E8%AF%91%E8%80%85%E5%BA%8F/</loc>
+    
+    <lastmod>2015-11-11T07:46:01.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://gigix.thoughtworkers.org/2011/3/29/%E5%A4%AA%E9%98%B3%E5%BA%95%E4%B8%8B%E6%B2%A1%E6%9C%89%E6%96%B0%E9%9B%AA/</loc>
     
     <lastmod>2015-11-11T07:46:01.000Z</lastmod>
@@ -359,14 +352,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2007/8/12/%E5%A6%82%E4%BD%95%E5%AF%B9private%E6%96%B9%E6%B3%95%E8%BF%9B%E8%A1%8C%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/</loc>
-    
-    <lastmod>2015-11-11T07:46:01.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2007/9/12/%E5%AF%B9%E5%86%B2%E5%9F%BA%E9%87%91%E9%82%A3%E4%BA%9B%E4%BA%8B/</loc>
+    <loc>http://gigix.thoughtworkers.org/2007/4/20/%E4%BF%A1%E5%8F%B7%EF%BC%9Aerlang%E6%AD%A3%E5%9C%A8%E9%9D%A0%E8%BF%91%E4%B8%AD/</loc>
     
     <lastmod>2015-11-11T07:46:01.000Z</lastmod>
     
@@ -380,14 +366,21 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2007/5/14/%E6%89%80%E8%B0%93%E2%80%9C%E7%A7%91%E5%AD%A6%E7%9A%84%E6%A0%B9%E5%9F%BA%E2%80%9D/</loc>
+    <loc>http://gigix.thoughtworkers.org/2007/6/15/%E5%A1%91%E9%80%A0%E6%95%8F%E6%8D%B7%E4%BC%81%E4%B8%9A%EF%BC%9A%E7%AC%AC%E4%BA%8C%E5%B1%8A%E2%80%9C%E6%95%8F%E6%8D%B7%E4%B8%AD%E5%9B%BD%E2%80%9D%E6%8A%80%E6%9C%AF%E5%A4%A7%E4%BC%9A/</loc>
     
     <lastmod>2015-11-11T07:46:01.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2007/6/28/%E6%88%91%E7%9A%84logo%E5%9B%BE%E7%89%87/</loc>
+    <loc>http://gigix.thoughtworkers.org/2007/9/12/%E5%AF%B9%E5%86%B2%E5%9F%BA%E9%87%91%E9%82%A3%E4%BA%9B%E4%BA%8B/</loc>
+    
+    <lastmod>2015-11-11T07:46:01.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2007/8/12/%E5%A6%82%E4%BD%95%E5%AF%B9private%E6%96%B9%E6%B3%95%E8%BF%9B%E8%A1%8C%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/</loc>
     
     <lastmod>2015-11-11T07:46:01.000Z</lastmod>
     
@@ -401,14 +394,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2007/6/18/%E6%8A%84%E4%B9%A6-erlang%E7%9A%84%E6%8E%A5%E5%8F%A3%E5%BA%93/</loc>
-    
-    <lastmod>2015-11-11T07:46:01.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2007/7/14/%E6%95%8F%E6%8D%B7%E5%B7%A5%E4%BD%9C%EF%BC%8C%E6%95%8F%E6%8D%B7%E7%94%9F%E6%B4%BB%EF%BC%8C%E6%95%8F%E6%8D%B7%E4%B8%AD%E5%9B%BD/</loc>
+    <loc>http://gigix.thoughtworkers.org/2007/6/28/%E6%88%91%E7%9A%84logo%E5%9B%BE%E7%89%87/</loc>
     
     <lastmod>2015-11-11T07:46:01.000Z</lastmod>
     
@@ -422,14 +408,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2007/7/1/%E6%95%8F%E6%8D%B7%EF%BD%9C%E7%B2%BE%E7%9B%8A%EF%BD%9C%E4%B8%AD%E5%BA%B8%E4%B9%8B%E9%81%93/</loc>
-    
-    <lastmod>2015-11-11T07:46:01.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2007/6/25/%E6%95%8F%E6%8D%B7%EF%BD%9C%E8%AE%A4%E8%AF%81%EF%BD%9C%E9%9A%8F%E4%BE%BF%E8%81%94%E6%83%B3/</loc>
+    <loc>http://gigix.thoughtworkers.org/2007/7/14/%E6%95%8F%E6%8D%B7%E5%B7%A5%E4%BD%9C%EF%BC%8C%E6%95%8F%E6%8D%B7%E7%94%9F%E6%B4%BB%EF%BC%8C%E6%95%8F%E6%8D%B7%E4%B8%AD%E5%9B%BD/</loc>
     
     <lastmod>2015-11-11T07:46:01.000Z</lastmod>
     
@@ -443,6 +422,27 @@
   </url>
   
   <url>
+    <loc>http://gigix.thoughtworkers.org/2007/6/25/%E6%95%8F%E6%8D%B7%EF%BD%9C%E8%AE%A4%E8%AF%81%EF%BD%9C%E9%9A%8F%E4%BE%BF%E8%81%94%E6%83%B3/</loc>
+    
+    <lastmod>2015-11-11T07:46:01.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2007/5/14/%E6%89%80%E8%B0%93%E2%80%9C%E7%A7%91%E5%AD%A6%E7%9A%84%E6%A0%B9%E5%9F%BA%E2%80%9D/</loc>
+    
+    <lastmod>2015-11-11T07:46:01.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2007/6/18/%E6%8A%84%E4%B9%A6-erlang%E7%9A%84%E6%8E%A5%E5%8F%A3%E5%BA%93/</loc>
+    
+    <lastmod>2015-11-11T07:46:01.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://gigix.thoughtworkers.org/2007/4/14/%E6%AD%AA%E7%90%86%E6%96%9C%E8%AF%B4%EF%BC%9A%E4%B8%8D%E5%AD%98%E5%9C%A8%E7%9A%84%E4%BD%93%E7%B3%BB/</loc>
     
     <lastmod>2015-11-11T07:46:01.000Z</lastmod>
@@ -450,7 +450,14 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2007/4/11/%E6%AD%AA%E7%90%86%E6%96%9C%E8%AF%B4%EF%BC%9A%E4%BC%98%E7%A7%80%E7%9A%84%E9%83%BD%E6%98%AF%E7%97%85%E6%80%81%E7%9A%84/</loc>
+    <loc>http://gigix.thoughtworkers.org/2007/6/3/%E6%B2%A6%E8%90%BD%EF%BD%9C%E5%A0%95%E8%90%BD%EF%BD%9C%E5%A4%B1%E8%90%BD/</loc>
+    
+    <lastmod>2015-11-11T07:46:01.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2007/7/1/%E6%95%8F%E6%8D%B7%EF%BD%9C%E7%B2%BE%E7%9B%8A%EF%BD%9C%E4%B8%AD%E5%BA%B8%E4%B9%8B%E9%81%93/</loc>
     
     <lastmod>2015-11-11T07:46:01.000Z</lastmod>
     
@@ -471,28 +478,14 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2007/6/3/%E6%B2%A6%E8%90%BD%EF%BD%9C%E5%A0%95%E8%90%BD%EF%BD%9C%E5%A4%B1%E8%90%BD/</loc>
-    
-    <lastmod>2015-11-11T07:46:01.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2007/7/5/%E6%B1%87%E6%80%BB%EF%BC%9A%E4%B8%80%E7%AB%99%E5%BC%8F%E7%9A%84rails%E7%8E%AF%E5%A2%83/</loc>
-    
-    <lastmod>2015-11-11T07:46:01.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2007/8/4/%E6%BB%87%E8%A5%BF%E5%8F%A4%E9%95%87%EF%BC%8C%E7%96%91%E4%BC%BC%E6%B1%9F%E5%8D%97/</loc>
-    
-    <lastmod>2015-11-11T07:46:01.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://gigix.thoughtworkers.org/2007/5/9/%E7%94%98%E8%82%83%E8%A1%8C%EF%BD%9C%E8%BE%B9%E5%A1%9E%E6%80%80%E5%8F%A4/</loc>
+    
+    <lastmod>2015-11-11T07:46:01.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2007/4/11/%E6%AD%AA%E7%90%86%E6%96%9C%E8%AF%B4%EF%BC%9A%E4%BC%98%E7%A7%80%E7%9A%84%E9%83%BD%E6%98%AF%E7%97%85%E6%80%81%E7%9A%84/</loc>
     
     <lastmod>2015-11-11T07:46:01.000Z</lastmod>
     
@@ -506,42 +499,14 @@
   </url>
   
   <url>
+    <loc>http://gigix.thoughtworkers.org/2007/8/4/%E6%BB%87%E8%A5%BF%E5%8F%A4%E9%95%87%EF%BC%8C%E7%96%91%E4%BC%BC%E6%B1%9F%E5%8D%97/</loc>
+    
+    <lastmod>2015-11-11T07:46:01.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://gigix.thoughtworkers.org/2007/7/19/%E7%9C%9F%E5%AE%9E%E7%9A%84%E7%AE%80%E5%8E%86%EF%BC%8C%E7%9C%9F%E5%AE%9E%E7%9A%84%E8%87%AA%E6%88%91/</loc>
-    
-    <lastmod>2015-11-11T07:46:01.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2007/7/26/%E7%9F%A5%E6%98%93%E8%A1%8C%E9%9A%BE/</loc>
-    
-    <lastmod>2015-11-11T07:46:01.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2007/4/3/%E7%AC%AC%E5%85%AB%E5%8F%B7%E5%BD%93%E9%93%BA/</loc>
-    
-    <lastmod>2015-11-11T07:46:01.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2007/7/1/%E7%B2%BE%E7%9B%8A%E8%AE%BE%E8%AE%A1/</loc>
-    
-    <lastmod>2015-11-11T07:46:01.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2007/6/3/%E7%B3%BB%E7%BB%9F%E7%9B%91%E6%8E%A7%E5%B7%A5%E5%85%B7%EF%BC%9Amonit%E5%92%8Crunit%E7%9A%84%E6%AF%94%E8%BE%83/</loc>
-    
-    <lastmod>2015-11-11T07:46:01.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2007/7/6/%E7%BC%96%E7%A8%8B%E9%80%89%E6%8B%A9gem%E5%AE%89%E8%A3%85%E7%89%88%E6%9C%AC/</loc>
     
     <lastmod>2015-11-11T07:46:01.000Z</lastmod>
     
@@ -555,14 +520,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2007/4/6/%E8%8B%B1%E9%9B%84%E6%B1%87%EF%BC%8C%E4%BC%9A%E8%8B%B1%E9%9B%84/</loc>
-    
-    <lastmod>2015-11-11T07:46:01.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2007/7/9/%E8%B5%84%E6%9C%AC%E6%B2%A1%E6%9C%89%E4%B8%BB%E4%B9%89%EF%BC%8C%E6%95%8F%E6%8D%B7%E4%B9%9F%E4%B8%80%E6%A0%B7/</loc>
+    <loc>http://gigix.thoughtworkers.org/2007/7/26/%E7%9F%A5%E6%98%93%E8%A1%8C%E9%9A%BE/</loc>
     
     <lastmod>2015-11-11T07:46:01.000Z</lastmod>
     
@@ -570,6 +528,41 @@
   
   <url>
     <loc>http://gigix.thoughtworkers.org/2007/4/3/%E7%BB%99typo%E8%A3%85%E4%B8%8Arich-editor/</loc>
+    
+    <lastmod>2015-11-11T07:46:01.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2007/7/1/%E7%B2%BE%E7%9B%8A%E8%AE%BE%E8%AE%A1/</loc>
+    
+    <lastmod>2015-11-11T07:46:01.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2007/7/5/%E6%B1%87%E6%80%BB%EF%BC%9A%E4%B8%80%E7%AB%99%E5%BC%8F%E7%9A%84rails%E7%8E%AF%E5%A2%83/</loc>
+    
+    <lastmod>2015-11-11T07:46:01.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2007/7/6/%E7%BC%96%E7%A8%8B%E9%80%89%E6%8B%A9gem%E5%AE%89%E8%A3%85%E7%89%88%E6%9C%AC/</loc>
+    
+    <lastmod>2015-11-11T07:46:01.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2007/10/11/%E8%87%AA%E7%BB%84%E7%BB%87%E7%9A%84%E7%BD%91%E6%B8%B8%E9%87%91%E8%9E%8D%E4%BD%93%E7%B3%BB/</loc>
+    
+    <lastmod>2015-11-11T07:46:01.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2007/7/9/%E8%B5%84%E6%9C%AC%E6%B2%A1%E6%9C%89%E4%B8%BB%E4%B9%89%EF%BC%8C%E6%95%8F%E6%8D%B7%E4%B9%9F%E4%B8%80%E6%A0%B7/</loc>
     
     <lastmod>2015-11-11T07:46:01.000Z</lastmod>
     
@@ -590,7 +583,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2007/4/28/%EF%BC%88%E4%B8%8D%E6%84%BF%E8%A2%AB%E4%BB%A3%E8%A1%A8%E7%9A%84%EF%BC%89%E6%88%91%E4%BB%AC%E5%9C%A8%E5%81%9A%E5%BC%80%E6%BA%90/</loc>
+    <loc>http://gigix.thoughtworkers.org/2007/4/3/%E7%AC%AC%E5%85%AB%E5%8F%B7%E5%BD%93%E9%93%BA/</loc>
     
     <lastmod>2015-11-11T07:46:01.000Z</lastmod>
     
@@ -604,9 +597,37 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2007/10/11/%E8%87%AA%E7%BB%84%E7%BB%87%E7%9A%84%E7%BD%91%E6%B8%B8%E9%87%91%E8%9E%8D%E4%BD%93%E7%B3%BB/</loc>
+    <loc>http://gigix.thoughtworkers.org/2007/4/28/%EF%BC%88%E4%B8%8D%E6%84%BF%E8%A2%AB%E4%BB%A3%E8%A1%A8%E7%9A%84%EF%BC%89%E6%88%91%E4%BB%AC%E5%9C%A8%E5%81%9A%E5%BC%80%E6%BA%90/</loc>
     
     <lastmod>2015-11-11T07:46:01.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2007/4/6/%E8%8B%B1%E9%9B%84%E6%B1%87%EF%BC%8C%E4%BC%9A%E8%8B%B1%E9%9B%84/</loc>
+    
+    <lastmod>2015-11-11T07:46:01.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2007/6/3/%E7%B3%BB%E7%BB%9F%E7%9B%91%E6%8E%A7%E5%B7%A5%E5%85%B7%EF%BC%9Amonit%E5%92%8Crunit%E7%9A%84%E6%AF%94%E8%BE%83/</loc>
+    
+    <lastmod>2015-11-11T07:46:01.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2012/11/13/chengdu-rails-girls/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2011/5/13/chinese-bubble/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
   </url>
   
@@ -618,14 +639,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2011/11/9/chengdu/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2010/4/18/ci-article-v2-translation/</loc>
+    <loc>http://gigix.thoughtworkers.org/2008/7/14/about-industrial-language/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -633,13 +647,6 @@
   
   <url>
     <loc>http://gigix.thoughtworkers.org/2010/3/17/ci-v2-call-for-translator/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2012/10/22/cmt-teamwork/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -660,6 +667,20 @@
   </url>
   
   <url>
+    <loc>http://gigix.thoughtworkers.org/2012/10/22/cmt-teamwork/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2013/8/13/code-jam-in-2008/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://gigix.thoughtworkers.org/2011/4/5/collaborate-with-monitors/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
@@ -667,7 +688,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2009/9/30/5-strategies-of-improvement-implementation/</loc>
+    <loc>http://gigix.thoughtworkers.org/2009/3/3/come-to-melbourne-again/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -695,21 +716,14 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2009/11/1/continuous-cannot-integration/</loc>
+    <loc>http://gigix.thoughtworkers.org/2012/2/13/about-cognitive-bias/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2009/3/3/come-to-melbourne-again/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2008/3/25/TW-interview/</loc>
+    <loc>http://gigix.thoughtworkers.org/2009/10/31/abuse-of-abbreviation-and-lack-of-meaning/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -723,28 +737,14 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2013/9/2/about-freedom/</loc>
+    <loc>http://gigix.thoughtworkers.org/2008/3/25/TW-interview/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2010/6/24/continuous-integration/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2012/2/13/about-cognitive-bias/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2009/11/29/continuous-integration-in-large-scale-teams/</loc>
+    <loc>http://gigix.thoughtworkers.org/2009/11/1/continuous-cannot-integration/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -752,6 +752,13 @@
   
   <url>
     <loc>http://gigix.thoughtworkers.org/2007/6/7/convention-equals-knowledge/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2010/6/24/continuous-integration/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -772,21 +779,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2007/4/28/create-rpm-for-your-rails-application/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://gigix.thoughtworkers.org/2009/6/30/cruise-stages-are-all-green/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2007/4/3/cruisecontrol-rb-1-1-released/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -800,20 +793,6 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2013/8/13/code-jam-in-2008/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2008/7/14/about-industrial-language/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://gigix.thoughtworkers.org/2012/3/8/culture-of-chengdu-office/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
@@ -821,21 +800,42 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2008/5/30/database-view-in-rails-app/</loc>
+    <loc>http://gigix.thoughtworkers.org/2013/9/2/about-freedom/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2011/12/12/decent-story-wall/</loc>
+    <loc>http://gigix.thoughtworkers.org/2011/9/16/activist-investors/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2009/10/31/abuse-of-abbreviation-and-lack-of-meaning/</loc>
+    <loc>http://gigix.thoughtworkers.org/2007/4/28/create-rpm-for-your-rails-application/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2007/4/3/cruisecontrol-rb-1-1-released/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2012/11/27/adaptivity-matters/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2009/8/12/activerecord-changed-include-behavior/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -849,7 +849,14 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2015/5/7/acquire-and-retain-technical-talents/</loc>
+    <loc>http://gigix.thoughtworkers.org/2011/12/12/decent-story-wall/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2008/5/30/database-view-in-rails-app/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -870,7 +877,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2011/2/14/2-years/</loc>
+    <loc>http://gigix.thoughtworkers.org/2011/3/28/devops-at-xian/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -884,7 +891,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2011/3/28/devops-at-xian/</loc>
+    <loc>http://gigix.thoughtworkers.org/2011/3/12/devops-readings/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -898,14 +905,14 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2011/3/12/devops-readings/</loc>
+    <loc>http://gigix.thoughtworkers.org/2011/1/30/devops/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2011/1/30/devops/</loc>
+    <loc>http://gigix.thoughtworkers.org/2009/11/29/continuous-integration-in-large-scale-teams/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -919,7 +926,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2014/3/29/dilemma-of-competence/</loc>
+    <loc>http://gigix.thoughtworkers.org/2010/8/11/done-done/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -933,7 +940,14 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2009/8/12/activerecord-changed-include-behavior/</loc>
+    <loc>http://gigix.thoughtworkers.org/2014/3/29/dilemma-of-competence/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2009/6/2/again-and-again/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -954,7 +968,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2010/8/11/done-done/</loc>
+    <loc>http://gigix.thoughtworkers.org/2008/6/21/agile-huawei/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -968,14 +982,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2011/9/16/activist-investors/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2012/11/27/adaptivity-matters/</loc>
+    <loc>http://gigix.thoughtworkers.org/2012/6/18/drive/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -989,28 +996,28 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2015/8/28/driverless-cars/</loc>
+    <loc>http://gigix.thoughtworkers.org/2011/5/16/1-hour-for-me-4th-month/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2012/6/18/drive/</loc>
+    <loc>http://gigix.thoughtworkers.org/2007/10/9/agile-is-all-about-practice/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2007/5/10/dsl%E4%B8%8D%E8%A6%81%E5%A4%AA%E5%A4%9A/</loc>
+    <loc>http://gigix.thoughtworkers.org/2008/12/17/duplication-is-evil/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2009/10/4/easy-to-know-hard-to-practice/</loc>
+    <loc>http://gigix.thoughtworkers.org/2009/3/18/agile-is-all-about-details/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -1024,7 +1031,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2011/11/4/economics-is-politics/</loc>
+    <loc>http://gigix.thoughtworkers.org/2015/8/28/driverless-cars/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -1038,28 +1045,35 @@
   </url>
   
   <url>
+    <loc>http://gigix.thoughtworkers.org/2011/11/4/economics-is-politics/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2009/10/4/easy-to-know-hard-to-practice/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2007/5/10/dsl%E4%B8%8D%E8%A6%81%E5%A4%AA%E5%A4%9A/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2015/5/7/acquire-and-retain-technical-talents/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://gigix.thoughtworkers.org/2012/10/7/eight-million-ways-to-die/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2009/6/2/again-and-again/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2013/11/29/emr-and-shr-in-low-income-countries/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2014/12/13/end-2014/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -1073,7 +1087,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2008/9/4/enjoy-beautiful-code/</loc>
+    <loc>http://gigix.thoughtworkers.org/2014/12/13/end-2014/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -1094,35 +1108,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2007/6/14/erlang%E7%BB%A7%E7%BB%AD%E5%AD%A6%E4%B9%A0%E4%B8%AD%E2%80%A6%E2%80%A6/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2008/12/17/duplication-is-evil/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2010/12/4/everyone-does-everything/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2010/7/26/Individuals-and-interactions-over-processes-and-tools/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2008/7/3/essentials-of-software-process/</loc>
+    <loc>http://gigix.thoughtworkers.org/2013/11/29/emr-and-shr-in-low-income-countries/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -1136,7 +1122,21 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2012/1/25/everything-is-obvious/</loc>
+    <loc>http://gigix.thoughtworkers.org/2007/6/14/erlang%E7%BB%A7%E7%BB%AD%E5%AD%A6%E4%B9%A0%E4%B8%AD%E2%80%A6%E2%80%A6/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2010/12/4/everyone-does-everything/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2008/9/4/enjoy-beautiful-code/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -1150,7 +1150,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2008/8/1/fallacy-about-google/</loc>
+    <loc>http://gigix.thoughtworkers.org/2012/1/25/everything-is-obvious/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -1164,7 +1164,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2010/4/17/fearless-or-courage/</loc>
+    <loc>http://gigix.thoughtworkers.org/2008/7/3/essentials-of-software-process/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -1178,13 +1178,6 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2009/2/23/fight-with-wall/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://gigix.thoughtworkers.org/2008/2/22/fireworks/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
@@ -1192,35 +1185,28 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2011/11/29/five-charts-that-changed-business/</loc>
+    <loc>http://gigix.thoughtworkers.org/2008/8/1/fallacy-about-google/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2013/4/24/flat-organization/</loc>
+    <loc>http://gigix.thoughtworkers.org/2013/3/27/agile-software-measurement/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2008/2/29/fluorine-flash-functional-testing/</loc>
+    <loc>http://gigix.thoughtworkers.org/2010/4/17/fearless-or-courage/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2013/9/28/follow-good-leaders/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2007/6/26/for%EF%BC%88finance-on-rails%EF%BC%89%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%9A%E9%93%81%E9%81%93%E4%B8%8A%E9%80%89%E5%9F%BA%E9%87%91/</loc>
+    <loc>http://gigix.thoughtworkers.org/2009/2/23/fight-with-wall/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -1234,28 +1220,35 @@
   </url>
   
   <url>
+    <loc>http://gigix.thoughtworkers.org/2008/2/29/fluorine-flash-functional-testing/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2007/6/26/for%EF%BC%88finance-on-rails%EF%BC%89%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%9A%E9%93%81%E9%81%93%E4%B8%8A%E9%80%89%E5%9F%BA%E9%87%91/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2013/4/24/flat-organization/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2013/9/28/follow-good-leaders/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://gigix.thoughtworkers.org/2013/2/17/four-lessons-from-software-industry/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2009/10/4/framework-of-structural-communication/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2009/1/8/from-fenghuang-to-guilin/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2011/7/20/from-nanjing-to-tokyo/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -1269,14 +1262,21 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2010/10/21/gemba/</loc>
+    <loc>http://gigix.thoughtworkers.org/2009/1/8/from-fenghuang-to-guilin/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2011/7/8/gene-of-longevity/</loc>
+    <loc>http://gigix.thoughtworkers.org/2011/11/29/five-charts-that-changed-business/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2009/10/4/framework-of-structural-communication/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -1290,14 +1290,21 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2015/1/7/good-books-in-2014/</loc>
+    <loc>http://gigix.thoughtworkers.org/2015/6/9/golden-data-for-activism/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2015/6/9/golden-data-for-activism/</loc>
+    <loc>http://gigix.thoughtworkers.org/2011/7/8/gene-of-longevity/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2011/7/20/from-nanjing-to-tokyo/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -1318,21 +1325,14 @@
   </url>
   
   <url>
+    <loc>http://gigix.thoughtworkers.org/2010/10/21/gemba/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://gigix.thoughtworkers.org/2009/1/4/goto-dongjiu-with-1kg/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2010/9/3/greed-and-dread/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2011/11/7/growth-of-lean-manager-2/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -1346,14 +1346,21 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2008/10/19/hack-rails-transaction/</loc>
+    <loc>http://gigix.thoughtworkers.org/2011/11/7/growth-of-lean-manager-2/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2009/12/31/happy-new-year/</loc>
+    <loc>http://gigix.thoughtworkers.org/2010/9/3/greed-and-dread/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2008/10/19/hack-rails-transaction/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -1367,28 +1374,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2007/4/24/haproxy-mongrel-rails/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://gigix.thoughtworkers.org/2013/11/3/health-care-issues-in-low-income-countries/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2013/11/9/health-it-for-low-income-countries/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2007/10/28/highlights-of-wpf/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -1402,21 +1388,28 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2011/4/21/historical-view-of-customer-capitalism/</loc>
+    <loc>http://gigix.thoughtworkers.org/2015/1/7/good-books-in-2014/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2008/8/24/history-and-blue-sky/</loc>
+    <loc>http://gigix.thoughtworkers.org/2009/12/31/happy-new-year/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2011/6/20/how-do-i-use-gmail/</loc>
+    <loc>http://gigix.thoughtworkers.org/2013/11/9/health-it-for-low-income-countries/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2007/4/24/haproxy-mongrel-rails/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -1430,14 +1423,14 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2007/10/24/how-erlang-benefits-ruby-programmers/</loc>
+    <loc>http://gigix.thoughtworkers.org/2011/6/20/how-do-i-use-gmail/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2015/6/3/how-expensive-developing-software/</loc>
+    <loc>http://gigix.thoughtworkers.org/2011/4/21/historical-view-of-customer-capitalism/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -1451,6 +1444,13 @@
   </url>
   
   <url>
+    <loc>http://gigix.thoughtworkers.org/2007/10/24/how-erlang-benefits-ruby-programmers/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://gigix.thoughtworkers.org/2010/6/7/how-to-config-distributed-cruise-control/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
@@ -1458,28 +1458,14 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2008/6/21/agile-huawei/</loc>
+    <loc>http://gigix.thoughtworkers.org/2007/10/28/highlights-of-wpf/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2010/5/29/how-to-create-a-test-tool-which-sucks/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2009/3/18/agile-is-all-about-details/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2014/1/13/how-to-do-architecture-review/</loc>
+    <loc>http://gigix.thoughtworkers.org/2015/6/3/how-expensive-developing-software/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -1493,14 +1479,14 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2008/1/23/how-to-run-a-refactoring-project/</loc>
+    <loc>http://gigix.thoughtworkers.org/2014/1/13/how-to-do-architecture-review/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2012/11/17/how-to-write-it-articles/</loc>
+    <loc>http://gigix.thoughtworkers.org/2008/1/23/how-to-run-a-refactoring-project/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -1514,28 +1500,14 @@
   </url>
   
   <url>
+    <loc>http://gigix.thoughtworkers.org/2010/5/29/how-to-create-a-test-tool-which-sucks/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://gigix.thoughtworkers.org/2012/9/7/hr-judgment-under-uncertainty/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2010/11/25/html5-contest/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2013/12/11/huangliang/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2008/7/27/hyperproductivity-and-skip-to-my-lou/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -1549,21 +1521,14 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2007/8/1/i-saw-glacier-today/</loc>
+    <loc>http://gigix.thoughtworkers.org/2013/12/11/huangliang/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2009/8/17/ie6-no-more/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2007/9/1/iTechTag-intro/</loc>
+    <loc>http://gigix.thoughtworkers.org/2010/11/25/html5-contest/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -1577,7 +1542,49 @@
   </url>
   
   <url>
+    <loc>http://gigix.thoughtworkers.org/2008/7/27/hyperproductivity-and-skip-to-my-lou/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2007/8/1/i-saw-glacier-today/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://gigix.thoughtworkers.org/2014/1/16/identity-and-perspective/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2007/9/1/iTechTag-intro/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2009/8/17/ie6-no-more/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2012/11/17/how-to-write-it-articles/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2007/10/9/inflation-in-games/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -1598,7 +1605,21 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2007/10/9/inflation-in-games/</loc>
+    <loc>http://gigix.thoughtworkers.org/2009/3/20/interesting-review-to-productive-programmer/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2007/10/20/infoq-interview-on-itechtag/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2007/10/23/is-stackless-python-the-way/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -1612,7 +1633,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2015/1/15/innovations-missing-middle/</loc>
+    <loc>http://gigix.thoughtworkers.org/2008/1/6/inventing-agile-tool/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -1626,7 +1647,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2009/3/20/interesting-review-to-productive-programmer/</loc>
+    <loc>http://gigix.thoughtworkers.org/2015/1/15/innovations-missing-middle/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -1640,35 +1661,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2008/1/6/inventing-agile-tool/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2007/10/9/agile-is-all-about-practice/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2007/11/6/itechtag-recruiting/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://gigix.thoughtworkers.org/2007/8/17/itechtag-%E9%87%8D%E5%BB%BA%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E8%80%85%E7%9A%84%E5%A3%B0%E6%9C%9B/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2013/5/13/j2ee-10-years-ago/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -1682,7 +1675,14 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2008/9/28/jason-williams/</loc>
+    <loc>http://gigix.thoughtworkers.org/2013/3/8/javaee-best-practices-2/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2007/11/6/itechtag-recruiting/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -1696,7 +1696,28 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2013/3/8/javaee-best-practices-2/</loc>
+    <loc>http://gigix.thoughtworkers.org/2009/3/25/jruby-ldap-over-ssl/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2009/7/5/agilechina-2009-pragmatic-agile/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2007/8/17/jrubyworks-j2ee-on-rails/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2008/9/28/jason-williams/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -1717,56 +1738,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2007/8/17/jrubyworks-j2ee-on-rails/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2009/3/25/jruby-ldap-over-ssl/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2007/10/23/is-stackless-python-the-way/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2010/2/8/agile-metrics-slideshow/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://gigix.thoughtworkers.org/2010/5/22/knowledge-kidnapping/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2014/1/9/kilimanjaro/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2009/1/13/know-yourself/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2007/10/20/infoq-interview-on-itechtag/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -1780,7 +1752,21 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2010/3/12/large-scale-agile-with-toyota-approach/</loc>
+    <loc>http://gigix.thoughtworkers.org/2009/1/13/know-yourself/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2014/1/9/kilimanjaro/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2008/8/24/history-and-blue-sky/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -1794,21 +1780,14 @@
   </url>
   
   <url>
+    <loc>http://gigix.thoughtworkers.org/2013/5/13/j2ee-10-years-ago/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://gigix.thoughtworkers.org/2008/5/12/lead-in-agile-team/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2010/3/4/leadership-over-management/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2009/11/17/lean-book-list/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -1822,14 +1801,14 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2011/1/25/learning-ui-design/</loc>
+    <loc>http://gigix.thoughtworkers.org/2010/3/12/large-scale-agile-with-toyota-approach/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2009/12/11/learning-system-diagram/</loc>
+    <loc>http://gigix.thoughtworkers.org/2010/3/4/leadership-over-management/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -1843,28 +1822,21 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2009/12/10/agile-project-management-practices/</loc>
+    <loc>http://gigix.thoughtworkers.org/2009/12/11/learning-system-diagram/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2013/8/21/live-somewhere-else/</loc>
+    <loc>http://gigix.thoughtworkers.org/2009/11/17/lean-book-list/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2009/8/31/lonely-planet-images/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2009/2/26/losing-fox/</loc>
+    <loc>http://gigix.thoughtworkers.org/2011/6/30/learn-from-success/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -1878,7 +1850,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2011/2/11/1-hourfor-me/</loc>
+    <loc>http://gigix.thoughtworkers.org/2009/8/31/lonely-planet-images/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -1892,21 +1864,28 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2009/1/17/loushanguan/</loc>
+    <loc>http://gigix.thoughtworkers.org/2013/8/21/live-somewhere-else/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2009/6/8/love-me-or-hate-me/</loc>
+    <loc>http://gigix.thoughtworkers.org/2011/1/25/learning-ui-design/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2009/11/13/magic-of-3-people-team/</loc>
+    <loc>http://gigix.thoughtworkers.org/2009/2/26/losing-fox/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2011/2/11/1-hourfor-me/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -1920,7 +1899,28 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2013/3/27/agile-software-measurement/</loc>
+    <loc>http://gigix.thoughtworkers.org/2009/12/10/agile-project-management-practices/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2009/1/17/loushanguan/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2010/9/18/lost-found-enthusiasm/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2009/11/13/magic-of-3-people-team/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -1934,14 +1934,14 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2010/11/4/math-about-multi-functional-team/</loc>
+    <loc>http://gigix.thoughtworkers.org/2010/9/1/migrating-to-a-decent-scm/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2008/7/28/microsoft-s-build-lab/</loc>
+    <loc>http://gigix.thoughtworkers.org/2010/11/4/math-about-multi-functional-team/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -1969,56 +1969,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2010/9/1/migrating-to-a-decent-scm/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2007/10/3/money-and-game/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2008/12/14/mongrel-memory-issue/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2011/10/5/motivating-knowledge-workers/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2009/3/7/mostly-harmless/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2009/7/17/move-to-multi-threaded-rails/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2014/10/5/mountains-beyond-mountains/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2008/6/16/minor-tricks/</loc>
+    <loc>http://gigix.thoughtworkers.org/2009/11/2/all-problems-are-design-problems/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -2032,21 +1983,49 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2013/6/30/my-first-month-in-thoughtworks/</loc>
+    <loc>http://gigix.thoughtworkers.org/2008/6/16/minor-tricks/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2013/7/25/my-expectations-to-grads/</loc>
+    <loc>http://gigix.thoughtworkers.org/2008/7/28/microsoft-s-build-lab/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2013/8/5/my-passion-expectations-to-grads/</loc>
+    <loc>http://gigix.thoughtworkers.org/2008/12/14/mongrel-memory-issue/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2009/3/7/mostly-harmless/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2011/10/5/motivating-knowledge-workers/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2007/10/3/money-and-game/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2009/7/17/move-to-multi-threaded-rails/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -2060,7 +2039,21 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2013/7/27/my-speed-expectations-to-grads/</loc>
+    <loc>http://gigix.thoughtworkers.org/2013/7/25/my-expectations-to-grads/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2014/10/5/mountains-beyond-mountains/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2013/6/30/my-first-month-in-thoughtworks/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -2074,6 +2067,20 @@
   </url>
   
   <url>
+    <loc>http://gigix.thoughtworkers.org/2013/7/27/my-speed-expectations-to-grads/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2013/8/5/my-passion-expectations-to-grads/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://gigix.thoughtworkers.org/2013/7/29/my-thinking-expectations-to-grads/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
@@ -2081,7 +2088,21 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2011/6/30/learn-from-success/</loc>
+    <loc>http://gigix.thoughtworkers.org/2015/3/14/neoliberalism-ideology/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2011/10/23/nasa-talking-cloud/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2009/3/26/neal-ford-to-chinese-readers/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -2095,14 +2116,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2007/6/4/agile-web-development-with-rails-ii%EF%BC%9A%E4%B8%AD%E6%96%87%E7%89%88%E5%87%BA%E7%89%88%E5%9C%A8%E5%8D%B3/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2009/7/5/agilechina-2009-pragmatic-agile/</loc>
+    <loc>http://gigix.thoughtworkers.org/2008/1/16/amm/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -2123,14 +2137,21 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2015/3/14/neoliberalism-ideology/</loc>
+    <loc>http://gigix.thoughtworkers.org/2014/6/14/analyse-an-enterprise-quickly/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2009/3/26/neal-ford-to-chinese-readers/</loc>
+    <loc>http://gigix.thoughtworkers.org/2009/1/1/no-highway/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2008/3/6/announcement-fluorida-0-0-1/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -2144,35 +2165,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2007/10/17/non-tech-issues-of-virtual-money/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://gigix.thoughtworkers.org/2009/10/12/object-calisthenics/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2009/2/2/on-the-road-with-octavia/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2010/7/1/oo-bootcamp-intro/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2009/2/4/octavia/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -2186,7 +2179,35 @@
   </url>
   
   <url>
+    <loc>http://gigix.thoughtworkers.org/2007/10/17/non-tech-issues-of-virtual-money/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2009/2/4/octavia/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2009/2/2/on-the-road-with-octavia/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://gigix.thoughtworkers.org/2011/12/26/open-party-on-dreamhost/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2010/2/25/organizational-pattern-day-care/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -2207,28 +2228,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2010/2/25/organizational-pattern-day-care/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2012/5/3/organization-form/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2010/2/25/organizational-pattern-don-t-interrupt-an-interrupt/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2010/2/26/organizational-pattern-producers-in-the-middle/</loc>
+    <loc>http://gigix.thoughtworkers.org/2010/7/1/oo-bootcamp-intro/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -2242,7 +2242,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2012/7/28/passing-ielts-in-60-days/</loc>
+    <loc>http://gigix.thoughtworkers.org/2012/5/3/organization-form/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -2256,21 +2256,35 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2009/1/10/photos/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2009/1/1/no-highway/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://gigix.thoughtworkers.org/2007/4/19/performance-review%E5%86%8D%E6%AC%A1%E5%BC%80%E5%A7%8B%EF%BC%8C%E4%BB%A5%E5%8F%8A%E7%9B%B8%E5%85%B3%E9%9A%8F%E6%83%B3/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2012/7/28/passing-ielts-in-60-days/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2010/2/26/organizational-pattern-producers-in-the-middle/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2010/2/25/organizational-pattern-don-t-interrupt-an-interrupt/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2009/1/10/photos/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -2284,7 +2298,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2011/10/23/nasa-talking-cloud/</loc>
+    <loc>http://gigix.thoughtworkers.org/2007/12/12/announcement-stomperl-0-0-1/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -2298,35 +2312,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2008/1/16/amm/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://gigix.thoughtworkers.org/2015/1/10/prague/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2008/10/14/prefer-keyboard-than-mouse/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2009/9/19/preface-of-tw-anthology/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2010/12/3/problem-solving-communication-part-1/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -2340,7 +2326,21 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2010/12/9/problem-solving-communication-part-2/</loc>
+    <loc>http://gigix.thoughtworkers.org/2008/10/14/prefer-keyboard-than-mouse/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2011/6/6/power-of-telling-truth/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2009/9/19/preface-of-tw-anthology/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -2354,13 +2354,6 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2009/3/16/productive-programmer/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://gigix.thoughtworkers.org/2011/1/4/problem-solving-communication-part-4/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
@@ -2368,7 +2361,35 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2010/12/3/problem-solving-communication/</loc>
+    <loc>http://gigix.thoughtworkers.org/2010/12/3/problem-solving-communication-part-1/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2010/12/9/problem-solving-communication-part-2/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2009/3/16/productive-programmer/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2009/7/7/program-without-else/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2009/6/12/pragmatic-performance-testing-requirement-gathering/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -2389,21 +2410,14 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2009/7/7/program-without-else/</loc>
+    <loc>http://gigix.thoughtworkers.org/2010/12/3/problem-solving-communication/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2011/8/20/progress-oriented-management/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2008/4/12/python-s-answer-to-ruby-on-rails/</loc>
+    <loc>http://gigix.thoughtworkers.org/2007/10/18/random-comments-on-agile-and-erlang/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -2411,13 +2425,6 @@
   
   <url>
     <loc>http://gigix.thoughtworkers.org/2014/7/8/race-against-machines/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2013/1/6/race-against-the-machine/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -2438,14 +2445,14 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2007/10/18/random-comments-on-agile-and-erlang/</loc>
+    <loc>http://gigix.thoughtworkers.org/2008/4/12/python-s-answer-to-ruby-on-rails/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2007/11/10/random-thoughts/</loc>
+    <loc>http://gigix.thoughtworkers.org/2011/8/20/progress-oriented-management/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -2459,13 +2466,6 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2014/1/18/read-50-books-every-year/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://gigix.thoughtworkers.org/2011/9/20/read-50-books-per-year/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
@@ -2473,14 +2473,21 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2008/2/18/read-implementation-patterns/</loc>
+    <loc>http://gigix.thoughtworkers.org/2013/1/6/race-against-the-machine/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2013/1/17/read-some-science-fictions/</loc>
+    <loc>http://gigix.thoughtworkers.org/2014/1/18/read-50-books-every-year/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2008/2/18/read-implementation-patterns/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -2501,21 +2508,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2011/8/5/reading-business-cases-with-historical-method/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2009/11/2/all-problems-are-design-problems/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2011/6/6/power-of-telling-truth/</loc>
+    <loc>http://gigix.thoughtworkers.org/2007/11/10/random-thoughts/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -2529,6 +2522,13 @@
   </url>
   
   <url>
+    <loc>http://gigix.thoughtworkers.org/2013/1/17/read-some-science-fictions/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://gigix.thoughtworkers.org/2011/5/7/reading-list-about-bubbles/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
@@ -2536,14 +2536,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2014/3/24/readings-about-change/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2010/3/9/readings-on-beach/</loc>
+    <loc>http://gigix.thoughtworkers.org/2011/8/5/reading-business-cases-with-historical-method/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -2564,6 +2557,27 @@
   </url>
   
   <url>
+    <loc>http://gigix.thoughtworkers.org/2014/3/24/readings-about-change/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2008/5/23/refactoring-or-rewrite/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2008/12/17/refactoring-and-behavior-preserving/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://gigix.thoughtworkers.org/2008/12/11/recommendations-from-the-build-master/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
@@ -2578,21 +2592,14 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2008/12/17/refactoring-and-behavior-preserving/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2008/5/23/refactoring-or-rewrite/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://gigix.thoughtworkers.org/2008/2/25/refactoring-project-case-study/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2010/3/9/readings-on-beach/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -2606,21 +2613,28 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2014/10/23/return-not-suicide/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2015/5/16/review-of-digital-labour/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://gigix.thoughtworkers.org/2008/7/6/rewrite-default-task/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2009/9/27/refactoring-and-design-in-a-real-world/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2012/5/8/result-oriented-and-test-driven/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2014/10/23/return-not-suicide/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -2634,7 +2648,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2009/1/14/ride-bike/</loc>
+    <loc>http://gigix.thoughtworkers.org/2015/5/16/review-of-digital-labour/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -2642,6 +2656,20 @@
   
   <url>
     <loc>http://gigix.thoughtworkers.org/2013/10/24/role-of-technologists-in-society/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2007/11/15/root-of-quality/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2009/1/14/ride-bike/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -2662,13 +2690,6 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2007/11/15/root-of-quality/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://gigix.thoughtworkers.org/2007/4/20/ruby-on-rails%E8%B5%B0%E5%90%91%E4%BC%81%E4%B8%9A/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
@@ -2677,13 +2698,6 @@
   
   <url>
     <loc>http://gigix.thoughtworkers.org/2007/5/16/rubyworks-0-0-1-released/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2007/7/26/rubyworks-production-stack-version-1-0-is-coming/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -2704,7 +2718,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2008/4/4/running-refactoring-project-on-a-huge-legacy-system/</loc>
+    <loc>http://gigix.thoughtworkers.org/2008/12/12/shencongwen/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -2718,14 +2732,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2015/6/19/selling-sympathy/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2008/12/12/shencongwen/</loc>
+    <loc>http://gigix.thoughtworkers.org/2008/4/4/running-refactoring-project-on-a-huge-legacy-system/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -2739,21 +2746,14 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2011/2/28/show-off-too/</loc>
+    <loc>http://gigix.thoughtworkers.org/2015/6/19/selling-sympathy/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2014/6/14/analyse-an-enterprise-quickly/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2008/8/5/analogy-on-ajax-and-concurrency/</loc>
+    <loc>http://gigix.thoughtworkers.org/2007/7/26/rubyworks-production-stack-version-1-0-is-coming/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -2761,6 +2761,27 @@
   
   <url>
     <loc>http://gigix.thoughtworkers.org/2008/6/13/sns-on-rails-stats/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2011/1/18/something-new-coming/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2013/10/26/another-way-to-be-proactive/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2011/2/28/show-off-too/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -2781,42 +2802,28 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2011/1/18/something-new-coming/</loc>
+    <loc>http://gigix.thoughtworkers.org/2010/7/8/apt-cyg/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2009/9/27/refactoring-and-design-in-a-real-world/</loc>
+    <loc>http://gigix.thoughtworkers.org/2010/2/8/agile-metrics-slideshow/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2007/12/20/announce-stomperl-0-0-2-message-queuing-and-transaction/</loc>
+    <loc>http://gigix.thoughtworkers.org/2011/6/8/arcade-machine-in-thoughtworks-xian/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2008/3/6/announcement-fluorida-0-0-1/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2009/6/12/pragmatic-performance-testing-requirement-gathering/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2012/5/8/result-oriented-and-test-driven/</loc>
+    <loc>http://gigix.thoughtworkers.org/2009/9/30/5-strategies-of-improvement-implementation/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -2824,34 +2831,6 @@
   
   <url>
     <loc>http://gigix.thoughtworkers.org/2008/10/5/start-to-change/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2013/10/26/another-way-to-be-proactive/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2007/12/7/state-handling-mechanisms-in-erlang/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2008/9/19/starwood-footprint/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2007/12/7/stomperl-stomp-with-erlang/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -2872,14 +2851,14 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2011/10/16/strategy-in-activities/</loc>
+    <loc>http://gigix.thoughtworkers.org/2007/12/7/stomperl-stomp-with-erlang/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2011/1/10/structure-of-a3-report/</loc>
+    <loc>http://gigix.thoughtworkers.org/2009/1/2/arriving-fenghuang/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -2893,7 +2872,21 @@
   </url>
   
   <url>
+    <loc>http://gigix.thoughtworkers.org/2011/1/10/structure-of-a3-report/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://gigix.thoughtworkers.org/2011/6/14/student-reading-list/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2011/10/16/strategy-in-activities/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -2907,6 +2900,13 @@
   </url>
   
   <url>
+    <loc>http://gigix.thoughtworkers.org/2007/12/7/state-handling-mechanisms-in-erlang/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://gigix.thoughtworkers.org/2010/10/14/tale-of-two-cities/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
@@ -2914,7 +2914,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2012/9/20/tddium/</loc>
+    <loc>http://gigix.thoughtworkers.org/2008/8/5/analogy-on-ajax-and-concurrency/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -2928,14 +2928,14 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2012/3/28/teamwork/</loc>
+    <loc>http://gigix.thoughtworkers.org/2012/9/20/tddium/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2011/6/26/telco-and-cloud-1-industry/</loc>
+    <loc>http://gigix.thoughtworkers.org/2008/9/19/starwood-footprint/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -2949,14 +2949,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2008/10/2/ten-thousand-kms/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2009/11/9/test-driven-consulting/</loc>
+    <loc>http://gigix.thoughtworkers.org/2011/6/18/tension-of-innovation/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -2970,21 +2963,21 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2011/6/18/tension-of-innovation/</loc>
+    <loc>http://gigix.thoughtworkers.org/2009/11/9/test-driven-consulting/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2007/10/15/the-legacy-code-change-algorithm/</loc>
+    <loc>http://gigix.thoughtworkers.org/2011/6/26/telco-and-cloud-1-industry/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2012/5/5/the-end-of-entrepreneurship/</loc>
+    <loc>http://gigix.thoughtworkers.org/2008/10/2/ten-thousand-kms/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -2998,20 +2991,6 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2007/12/12/announcement-stomperl-0-0-1/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2007/12/9/the-structure-of-science-revolutions/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://gigix.thoughtworkers.org/2008/9/26/the-way-of-chinese-software-industry/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
@@ -3019,7 +2998,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2011/5/19/thoughtworks-hiring/</loc>
+    <loc>http://gigix.thoughtworkers.org/2012/5/5/the-end-of-entrepreneurship/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -3033,7 +3012,21 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2009/7/15/three-faces-of-tech-lead/</loc>
+    <loc>http://gigix.thoughtworkers.org/2007/10/15/the-legacy-code-change-algorithm/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2013/9/15/thinking-methodology/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2011/5/19/thoughtworks-hiring/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -3054,27 +3047,6 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2008/12/31/thousand-kilometers-a-day/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2008/8/7/tips-from-an-old-test-manager/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2013/9/15/thinking-methodology/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://gigix.thoughtworkers.org/2011/8/22/time-for-continuous-delivery/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
@@ -3082,7 +3054,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2008/12/12/translator-preface-for-implementation-patterns/</loc>
+    <loc>http://gigix.thoughtworkers.org/2008/12/31/thousand-kilometers-a-day/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -3096,7 +3068,21 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2009/3/17/translator-preface-for-productive-programmer/</loc>
+    <loc>http://gigix.thoughtworkers.org/2009/7/15/three-faces-of-tech-lead/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2007/12/9/the-structure-of-science-revolutions/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2008/8/7/tips-from-an-old-test-manager/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -3110,14 +3096,14 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2009/11/19/tricks-answering-agile-questions/</loc>
+    <loc>http://gigix.thoughtworkers.org/2008/12/12/translator-preface-for-implementation-patterns/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2011/12/9/transparency/</loc>
+    <loc>http://gigix.thoughtworkers.org/2009/3/17/translator-preface-for-productive-programmer/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -3138,6 +3124,13 @@
   </url>
   
   <url>
+    <loc>http://gigix.thoughtworkers.org/2010/10/31/tuohuang-info/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://gigix.thoughtworkers.org/2010/8/30/tricks-of-effective-interview/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
@@ -3145,7 +3138,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2010/10/31/tuohuang-info/</loc>
+    <loc>http://gigix.thoughtworkers.org/2009/11/19/tricks-answering-agile-questions/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -3159,14 +3152,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2008/5/5/tw-news/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2014/6/24/understand-inequality/</loc>
+    <loc>http://gigix.thoughtworkers.org/2011/12/9/transparency/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -3180,7 +3166,14 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2015/1/31/update-on-innovative-organisation/</loc>
+    <loc>http://gigix.thoughtworkers.org/2014/6/24/understand-inequality/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2012/3/28/teamwork/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -3194,14 +3187,21 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2009/11/6/value-of-sponsor/</loc>
+    <loc>http://gigix.thoughtworkers.org/2008/5/5/tw-news/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2010/12/18/understand-your-customer/</loc>
+    <loc>http://gigix.thoughtworkers.org/2015/1/31/update-on-innovative-organisation/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2009/11/6/value-of-sponsor/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -3215,7 +3215,21 @@
   </url>
   
   <url>
+    <loc>http://gigix.thoughtworkers.org/2012/8/24/what-do-leaders-do/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://gigix.thoughtworkers.org/2011/2/15/we-are-ninjas/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2010/12/18/understand-your-customer/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -3229,7 +3243,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2012/8/24/what-do-leaders-do/</loc>
+    <loc>http://gigix.thoughtworkers.org/2007/12/20/announce-stomperl-0-0-2-message-queuing-and-transaction/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -3243,14 +3257,14 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2007/10/15/what-is-legacy-code/</loc>
+    <loc>http://gigix.thoughtworkers.org/2011/1/28/what-s-wrong-with-multi-tasking/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2011/6/8/arcade-machine-in-thoughtworks-xian/</loc>
+    <loc>http://gigix.thoughtworkers.org/2007/10/15/what-is-legacy-code/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -3271,49 +3285,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2011/1/28/what-s-wrong-with-multi-tasking/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2010/6/16/who-needs-distributed-transaction/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://gigix.thoughtworkers.org/2010/5/15/what-to-do-and-where-to-stop/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2008/9/19/why-not-start-with-ci/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2011/4/17/why-is-100-test-coverage-easier-to-achieve/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2013/3/28/why-programmers-should-write-articles/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2012/1/16/why-should-you-start-career-from-professional-services/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -3327,14 +3299,28 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2013/7/8/why-you-should-read-sicp/</loc>
+    <loc>http://gigix.thoughtworkers.org/2011/4/17/why-is-100-test-coverage-easier-to-achieve/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2012/1/2/wishes-in-2012/</loc>
+    <loc>http://gigix.thoughtworkers.org/2010/6/16/who-needs-distributed-transaction/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2008/9/19/why-not-start-with-ci/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2013/3/28/why-programmers-should-write-articles/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -3348,14 +3334,14 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2010/12/31/wishes-in-2011/</loc>
+    <loc>http://gigix.thoughtworkers.org/2012/1/16/why-should-you-start-career-from-professional-services/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2008/7/19/words-from-dragon-lance/</loc>
+    <loc>http://gigix.thoughtworkers.org/2012/1/2/wishes-in-2012/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -3376,63 +3362,21 @@
   </url>
   
   <url>
+    <loc>http://gigix.thoughtworkers.org/2008/7/19/words-from-dragon-lance/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2010/12/31/wishes-in-2011/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://gigix.thoughtworkers.org/2008/6/17/xguo-on-lean/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2010/6/13/xiaoxiong/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2008/5/6/yet-another-certification/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2012/11/10/you-are-not-alone/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2008/8/2/you-break-it-you-fix-it/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2009/1/2/arriving-fenghuang/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2009/1/3/at-fenghuang/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2009/2/8/at-thinker-cafe/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2008/9/6/autumn-photos/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -3446,7 +3390,49 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2007/7/3/awdwr-ii%E7%BB%88%E4%BA%8E%E4%B8%8A%E5%B8%82%E4%BA%86/</loc>
+    <loc>http://gigix.thoughtworkers.org/2013/7/8/why-you-should-read-sicp/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2012/11/10/you-are-not-alone/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2010/6/13/xiaoxiong/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2008/8/2/you-break-it-you-fix-it/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2009/1/3/at-fenghuang/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2008/5/6/yet-another-certification/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2009/2/8/at-thinker-cafe/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -3460,28 +3446,21 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2009/1/15/bad-road/</loc>
+    <loc>http://gigix.thoughtworkers.org/2007/7/3/awdwr-ii%E7%BB%88%E4%BA%8E%E4%B8%8A%E5%B8%82%E4%BA%86/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2011/5/16/1-hour-for-me-4th-month/</loc>
+    <loc>http://gigix.thoughtworkers.org/2008/9/6/autumn-photos/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2010/7/8/apt-cyg/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2009/2/25/100-twitter-followers/</loc>
+    <loc>http://gigix.thoughtworkers.org/2009/12/6/4-core-agile-practices/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -3495,6 +3474,27 @@
   </url>
   
   <url>
+    <loc>http://gigix.thoughtworkers.org/2009/2/25/100-twitter-followers/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2009/1/15/bad-road/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2009/5/23/be-practical/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://gigix.thoughtworkers.org/2008/4/3/baomingba-beta-test/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
@@ -3502,14 +3502,14 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2008/3/23/baomingba-test/</loc>
+    <loc>http://gigix.thoughtworkers.org/2007/7/5/be-careful-it-s-enterprise-2-0/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2007/7/5/be-careful-it-s-enterprise-2-0/</loc>
+    <loc>http://gigix.thoughtworkers.org/2008/3/23/baomingba-test/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -3530,13 +3530,6 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2011/10/20/big-data/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://gigix.thoughtworkers.org/2009/2/5/blackhole/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
@@ -3544,7 +3537,14 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2009/5/23/be-practical/</loc>
+    <loc>http://gigix.thoughtworkers.org/2011/10/20/big-data/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2014/8/11/book-review-to-swallows/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -3558,27 +3558,6 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2008/12/19/books-about-american-history/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2010/5/4/blog-of-boss-expert/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2014/1/5/books-in-2013/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://gigix.thoughtworkers.org/2012/2/5/books-in-jan/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
@@ -3586,7 +3565,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2009/12/6/4-core-agile-practices/</loc>
+    <loc>http://gigix.thoughtworkers.org/2011/2/14/2-years/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -3628,21 +3607,14 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2011/11/3/bug-driven-development/</loc>
+    <loc>http://gigix.thoughtworkers.org/2010/5/4/blog-of-boss-expert/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2008/7/28/build-master/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2013/6/16/building-innovative-organization/</loc>
+    <loc>http://gigix.thoughtworkers.org/2008/12/19/books-about-american-history/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -3656,6 +3628,13 @@
   </url>
   
   <url>
+    <loc>http://gigix.thoughtworkers.org/2013/6/16/building-innovative-organization/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://gigix.thoughtworkers.org/2011/10/11/c-mon-it-s-turing-machine-part-1/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
@@ -3663,21 +3642,35 @@
   </url>
   
   <url>
+    <loc>http://gigix.thoughtworkers.org/2014/1/5/books-in-2013/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2011/11/3/bug-driven-development/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2007/6/4/agile-web-development-with-rails-ii%EF%BC%9A%E4%B8%AD%E6%96%87%E7%89%88%E5%87%BA%E7%89%88%E5%9C%A8%E5%8D%B3/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2010/7/26/Individuals-and-interactions-over-processes-and-tools/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://gigix.thoughtworkers.org/2011/10/17/c-mon-it-s-turing-machine-part-2/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2012/2/5/capability-development-as-behavior-change/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2012/5/23/car-insurance-in-oz-and-china/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -3698,7 +3691,14 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2011/2/20/chef-2-rails-server/</loc>
+    <loc>http://gigix.thoughtworkers.org/2012/7/1/change-to-leader/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2012/5/23/car-insurance-in-oz-and-china/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     
@@ -3719,6 +3719,41 @@
   </url>
   
   <url>
+    <loc>http://gigix.thoughtworkers.org/2011/2/20/chef-2-rails-server/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2008/7/28/build-master/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2012/2/5/capability-development-as-behavior-change/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2011/11/9/chengdu/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gigix.thoughtworkers.org/2010/4/18/ci-article-v2-translation/</loc>
+    
+    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://gigix.thoughtworkers.org/2011/12/21/chengdu-open-party/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
@@ -3726,35 +3761,7 @@
   </url>
   
   <url>
-    <loc>http://gigix.thoughtworkers.org/2012/11/13/chengdu-rails-girls/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2012/7/1/change-to-leader/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2011/5/13/chinese-bubble/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2014/8/11/book-review-to-swallows/</loc>
-    
-    <lastmod>2015-11-11T07:46:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gigix.thoughtworkers.org/2010/9/18/lost-found-enthusiasm/</loc>
+    <loc>http://gigix.thoughtworkers.org/2009/6/8/love-me-or-hate-me/</loc>
     
     <lastmod>2015-11-11T07:46:00.000Z</lastmod>
     

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+        技术领导者即服务 | 透明思考
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+    <meta name="author" content="Jeff Xiong">
+    
+    
+    <meta name="description" content="八年前我写了一篇文章《Tech Lead的三重人格》。迄今为止为数众多的敏捷交付团队中，Tech Lead（技术领导者）对于交付的效能和质量起着至关重要的作用。我在那篇文章中指出，Tech Lead需要扮演三种重要的角色：技术决策者、流程监督人、干扰过滤器。一支团队能否有效采用架构最佳实践、交付流程最佳实践和项目运作最佳实践，很大程度上取决于Tech Lead把自己的工作完成得多好。
+如果更进一步">
+    
+
+    <meta name="description" content="八年前我写了一篇文章《Tech Lead的三重人格》。迄今为止为数众多的敏捷交付团队中，Tech Lead（技术领导者）对于交付的效能和质量起着至关重要的作用。我在那篇文章中指出，Tech Lead需要扮演三种重要的角色：技术决策者、流程监督人、干扰过滤器。一支团队能否有效采用架构最佳实践、交付流程最佳实践和项目运作最佳实践，很大程度上取决于Tech Lead把自己的工作完成得多好。
+如果更进一步">
+<meta property="og:type" content="article">
+<meta property="og:title" content="技术领导者即服务 | 透明思考">
+<meta property="og:url" content="http://gigix.thoughtworkers.org/2017/6/23/tech-lead-as-a-service/index.html">
+<meta property="og:site_name" content="透明思考">
+<meta property="og:description" content="八年前我写了一篇文章《Tech Lead的三重人格》。迄今为止为数众多的敏捷交付团队中，Tech Lead（技术领导者）对于交付的效能和质量起着至关重要的作用。我在那篇文章中指出，Tech Lead需要扮演三种重要的角色：技术决策者、流程监督人、干扰过滤器。一支团队能否有效采用架构最佳实践、交付流程最佳实践和项目运作最佳实践，很大程度上取决于Tech Lead把自己的工作完成得多好。
+如果更进一步">
+<meta property="og:image" content="http://gigix.thoughtworkers.org/assets/2017/6/23/3-circles.jpg">
+<meta property="og:updated_time" content="2017-06-23T11:25:15.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="技术领导者即服务 | 透明思考">
+<meta name="twitter:description" content="八年前我写了一篇文章《Tech Lead的三重人格》。迄今为止为数众多的敏捷交付团队中，Tech Lead（技术领导者）对于交付的效能和质量起着至关重要的作用。我在那篇文章中指出，Tech Lead需要扮演三种重要的角色：技术决策者、流程监督人、干扰过滤器。一支团队能否有效采用架构最佳实践、交付流程最佳实践和项目运作最佳实践，很大程度上取决于Tech Lead把自己的工作完成得多好。
+如果更进一步">
+<meta name="twitter:image" content="http://gigix.thoughtworkers.org/assets/2017/6/23/3-circles.jpg">
+
+    
+    <link rel="alternate" href="/atom.xml" title="透明思考" type="application/atom+xml">
+    
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+
+    <script src="/js/jquery.min.js"></script>
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+<header class="panel-cover panel-cover--collapsed">
+
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">透明思考</a></h1>
+
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">
+          Transparent Thoughts
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">Blog</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+------------------------------ -->
+
+<nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+
+  <!-- Github -->
+  <li class="navigation__item">
+    <a href="https://github.com/gigix" title="Gigix on GitHub" target="_blank">
+      <i class='icon icon-social-github'></i>
+      <span class="label">GitHub</span>
+    </a>
+  </li>
+
+  </ul>
+</nav>
+
+          <script>
+    function doSearch() {
+        var keyword = $('#keyword').val();
+        if (keyword.trim() === '') {
+            window.location.href = 'http://gigix.thoughtworkers.org/#blog';
+        } else {
+            window.open('http://www.google.com/search?q=site:gigix.thoughtworkers.org+' + keyword);
+        }
+    }
+</script>
+
+<div class="search">
+    <input id="keyword" type="text"/>
+    <input type="button" value="Search" class="btn" onclick="doSearch()"/>
+</div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+    <header class="post-header">
+
+        
+        <div class="post-meta">
+            <time datetime="6月 23 2017"
+                  class="post-meta__date date">6月 23 2017</time>
+            &#8226;
+
+        <span class="post-meta__tags tags">
+
+            <font class="categories">
+                
+            </font>
+            
+
+        </span>
+        </div>
+        
+
+        <h1 class="post-title">技术领导者即服务</h1>
+    </header>
+
+    <section class="post">
+        <p>八年前我写了一篇文章《<a href="http://www.infoq.com/cn/articles/thoughtworks-practice-part8" target="_blank" rel="external">Tech Lead的三重人格</a>》。迄今为止为数众多的敏捷交付团队中，Tech Lead（技术领导者）对于交付的效能和质量起着至关重要的作用。我在那篇文章中指出，Tech Lead需要扮演三种重要的角色：技术决策者、流程监督人、干扰过滤器。一支团队能否有效采用架构最佳实践、交付流程最佳实践和项目运作最佳实践，很大程度上取决于Tech Lead把自己的工作完成得多好。</p>
+<p>如果更进一步把这篇文章中Tech Lead承担的责任做一个拆解，我们可以看到，一个称职的Tech Lead是这样去为项目的顺利交付做出贡献的：</p>
+<ul>
+<li>首先，他要<strong>制订适合该项目要求的技术方案</strong>。他要参与架构设计，了解平台和编程语言、主要的框架和库、集成点、部署策略、数据迁移策略，确认总体技术方案能够支撑系统的业务要求。</li>
+<li>随后，他要<strong>保障交付顺利开展</strong>。他要确保环境的一致性，搭建和管理持续集成流水线，指导并监督团队遵循持续集成的流程和实践。</li>
+<li>最后但绝非最不重要的，他还要<strong>管理和提升团队的能力</strong>。他需要确认团队是否熟悉用到的技术栈和工具，而且——虽然这一点在我写文章时的ThoughtWorks还不那么凸显——要帮助团队成员组织刻意练习来提升能力。</li>
+</ul>
+<p>正如当时那篇文章的一位读者非常正确地指出的，要一个人做这三方面的贡献很多时候是不切实际的。在很多组织里，这三件事是在三个环节中分别进行的，这三个环节的彼此割裂造成了很多问题：</p>
+<ul>
+<li>在方案环节，架构师根据客户的要求和痛点，基于自己的知识储备设计技术解决方案。他是如何分析客户的要求和痛点，他的知识储备是什么，组织里的其他人不一定知道，于是不同架构师提出的解决方案就很可能不一样。</li>
+<li>在交付环节，交付团队基于自己的知识储备来交付技术解决方案。方案背后隐含的知识储备，交付团队未必具备，所以屡屡会出现交付质量不佳的问题。不是他们没有能力，只是能力与方案的需要不符。</li>
+<li>组织感到团队的能力有不足，于是找来教练提升能力。然而教练基于的是一个标准的能力集来训练团队，这个能力集与项目实际需要的能力又不一定匹配。于是出现能力发展计划不对症、能力建设效果不明显的问题。</li>
+</ul>
+<p>由此可见，只有当方案、交付、能力三者有很好的协同，项目和团队才能健康成长。而这个协同之所以尤其困难，是因为它跨了三个非常不同的问题域（在很多组织是三个不同的功能部门），需要三种非常不同的能力，对这个居中协调者的要求非常高。</p>
+<p>所以，如果我们能用一个云上的平台来承载这个居中协调者的能力，对整个组织的交付质量和能力成长都会有帮助。这个平台的核心实际上就是<a href="/2017/4/14/stack-management-implementation/">技术栈管理</a>：针对典型的应用场景（例如企业资源服务化、移动数字化渠道），制订组织统一的技术栈，并从技术栈推导出对应的能力评估模型和刻意练习课程。于是我们就得到了以技术栈为核心的IT能力三环联动模型：</p>
+<p><img src="/assets/2017/6/23/3-circles.jpg"></p>
+<p>当提供技术方案的架构师选择一个技术栈，用这个技术栈交付软件的能力要求就被明确地传达到交付团队。交付团队不用自己去设置开发环境和持续交付流水线，用<a href="/2017/6/6/continuous-delivery-2/">云原生的持续交付</a>环境即可启动开发，并复用在技术栈上积累的交付最佳实践。通过云上的能力测评系统，能力教练可以清晰地知道哪些成员已经具备需要的能力、哪些成员能力还有差距，然后为有差距的成员提供针对性的刻意练习和指导。</p>
+<p>云计算已经成功地模糊了硬件与软件的界限，使IT的一大挑战——管理设备——极大简化。现在，对于IT的另一个大挑战：人才短缺，云计算的“XXX as a service”模式是否可以继续发挥作用？IT组织是否可能借助云计算获得优质IT人才的弹性和伸缩性？这是一个值得去探索的课题。在这个方向上，将对交付质量与效能起着重要影响的Tech Lead的能力以云平台服务的形式提供，有可能是触手可及的一个目标。</p>
+
+    </section>
+
+    <section class="author">
+<p>（本文作者熊节是ThoughtWorks的总监咨询师）</p>
+</section>
+    <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style_32x32" style="height: 40px">
+    <a class="jiathis_button_tsina"></a>
+    <a class="jiathis_button_weixin"></a>
+    <a class="jiathis_button_douban"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis"
+       target="_blank"></a>
+</div>
+<script type="text/javascript">
+    var jiathis_config = {
+        summary: "",
+        shortUrl: false,
+        hideMore: false
+    }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code_mini/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+    
+</article>
+
+			
+            <footer class="footer">
+    <span class="footer__copyright">&copy;
+        作者保留一切权利，未经许可请勿转载</span>
+    <span class="footer__copyright">&copy;
+        2017
+        Transparent Thoughts. All rights reserved.</span>
+</footer>
+        </div>
+    </div>
+
+    <!-- The main JavaScript file for Casper -->
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    <script src="/js/jquery.imagesloaded.min.js"></script>
+    <script src="/js/gallery.js"></script>
+    <script src="/js/jquery.githubRepoWidget.min.js"></script>
+    <script type="text/javascript"
+            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> 
+      MathJax.Hub.Config({ 
+        tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+    }); 
+
+    </script>
+
+    <!--kill ie6 -->
+    <!--[if IE 6]>
+    <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+    <![endif]-->
+
+    <!-- totop -->
+    <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">
+        <a title="back to top"><img style="width:30px;height:30px;" src="/images/totop.png"/></a>
+    </div>
+    <script>
+        (function ($) {
+            var upperLimit = 100;
+            var scrollElem = $('#totop');
+            var scrollSpeed = 500;
+            scrollElem.hide();
+            $(window).scroll(function () {
+                var scrollTop = $(document).scrollTop();
+                if (scrollTop > upperLimit) {
+                    $(scrollElem).stop().fadeTo(300, 1); // fade back in
+                } else {
+                    $(scrollElem).stop().fadeTo(300, 0); // fade out
+                }
+            });
+            $(scrollElem).click(function () {
+                $('html, body').animate({scrollTop: 0}, scrollSpeed);
+                return false;
+            });
+        })(jQuery);
+    </script>
+
+    <!-- fancybox -->
+    
+    <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+    <script src="/fancybox/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript">
+        (function ($) {
+            $('.fancybox').fancybox();
+        })(jQuery);
+    </script>
+    
+
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-113927-4', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <!-- CNZZ Analytics -->
+    <script src="http://s4.cnzz.com/z_stat.php?id=1255092465&web_id=1255092465" language="JavaScript"></script>
+
+</body>
+</html>
