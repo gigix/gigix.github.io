@@ -179,6 +179,30 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2008/7/26/mysql-timeout/" title="link to MySQL掉线咯">MySQL掉线咯</a></h2>
+
+      <p class="excerpt">
+        <p>一个后台操作算得太久，然后再想跟MySQL说说话的时候，就发现<a href="http://dev.mysql.com/doc/refman/5.0/en/gone-away.html" target="_blank" rel="external">那个server已经偷偷的跑掉了</a>。</p><p>MySQL的超时可以用SQL查到：</p><pre>mysql show variables;</pre><p>看interactive_timeout和wait_timeout这两项。缺省是28800（秒），我们的服务器上设成了600。所以，一个长循环跑了11分钟之后，数据库连接已经被关掉了，因为中间没有和数据库打交道。</p><p>（多长的循环可以跑10分钟？我看到的大概是8000多和20000多的两个数组做了一下select…）</p><p>这些变量可以在/etc/my.cnf里面设置的。</p><p>Rails应用可以把ActiveRecord::Base.verification_timeout设为一个小于数据库连接超时的值（比如500）这样Rails就会帮你每过500秒PING一下数据库这样连接就不会断掉了。</p><p>（唔…10分钟会让很多东西超时，比如Apache…）</p><p>然则我们的操作是Rails之外的一个stand-alone进程，Rails也不管帮忙它，所以要在循环的过程中时不时的PING一下数据库：</p><pre>ActiveRecord::Base.connection.verify!(0)</pre><p>于是就可以了。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="7月 26 2008" class="post-list__meta--date date">7月 26 2008</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2008/7/19/words-from-dragon-lance/" title="link to 坦尼斯·塔西斯之旅">坦尼斯·塔西斯之旅</a></h2>
 
       <p class="excerpt">
@@ -376,30 +400,6 @@ classes that you can use:
 
       <p class="excerpt">
         <p>一个客户正在考虑用<a href="http://www.rubyonrails.org" target="_blank" rel="external">Ruby on Rails</a>做他们的项目，但是又有些顾虑。其中一个问题颇有意思。</p><p><strong>4、网上搜索到的“初期入门，Ruby更容易，但一旦达到一定复杂度，那么Ruby的难度骤然加大。Python入门不容易，复杂的时候也不会太痛苦。rails有入门简单，深入难的问题。rails生成的目录是做什么用途？o/rmapping如何实现的？如何把数据从web中传递到数据库的。这些都是Ruby程序员早晚要面对的问题。Python则不会这样，如果搞不清楚这些，大概根本没办法开始。集成度太高的快速开发工具都有这个特点，无论是VB、Delphi，还是.net，有多少使用了半年以内的开发人员可以说清楚工程目录下面所有的文件的用途、每个文件中的语法？我相信很多很有经验的用户也未必说的清楚。”你们怎么看？</strong></p><p>第一，每个称职的程序员都必须了解那些“窗帘背后”的东西。做不出东西，和做出东西却不知道是怎么做的，两者没有区别。从某个角度，我并不认为Rails“入门简单”，因为有很多魔法需要去了解。而且使用Rails的新手们需要更严格、更紧密的指导，他们需要和有经验的程序员结对，不然他们很容易迷失而找不到最好的（或者说，最符合惯例的）解决办法。Rails程序员的高产是以初期的严格训练换来的，经过了这样的训练之后他们对项目有清晰的了解并且对代码有审美能力，所以我看不出有什么理由会“难度骤然加大”。</p><p>第二，Rails和“VB、Delphi和.NET”的最大区别在于Rails不做代码生成。代码生成是邪恶的，如果你需要维护自动生成的代码的话。而Rails不做代码生成的一个重要原因是Ruby的表达力，它能够在运行时变那些“传统语言”用代码生成才能变的一些魔术。有多少人能弄清楚一个Rails项目里所有的犄角旮旯呢？很多人都可以。因为这里没有自动生成的难懂的代码，并且每件事情都有约定俗成的惯例。不仅是自己的项目，就算别人的项目也很容易弄懂的，大家都用同样的惯例做这些事。</p><p>另一个<a href="http://blog.donews.com/two4hours/archive/2006/04/12/824201.aspx" target="_blank" rel="external">有趣的blog</a>这样说Ruby on Rails的缺点：</p><blockquote>1.Ruby由日本人创造的，尽管ROR是丹麦的小伙子David开发的</blockquote><p>如果我没理解错的话，这话的意思大概就是“Ruby on Rails没有缺点”。当然我并不这么认为，不过我确实认为它是目前看来最舒服的一个工具。</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="6月 16 2008" class="post-list__meta--date date">6月 16 2008</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2008/6/16/minor-tricks/" title="link to 两个tricks">两个tricks</a></h2>
-
-      <p class="excerpt">
-        <p>今天遇到两个tricky的东西，记下来。</p><p>1. 把十六进制数写到字符串里。</p><code>[0xEF, 0xBB, 0xBF].pack(“C*”)</code><p>（这个是<a href="http://unicode.org/faq/utf_bom.html#BOM" target="_blank" rel="external"><span class="caps">UTF8</span>的BOM</a>，写在文本文件比如CSV的头上就可以让读取的软件比如Excel知道这是UTF8编码的文件。）</p><p>2. IE窗口的滚动条如果鼠标点下去也会触发<a href="http://developer.mozilla.org/en/docs/DOM:element.onclick" target="_blank" rel="external">document.onclick</a>事件，而Firefox就不会。</p><p>（不明白为什么滚动条也可以算作document的一部分。）</p>
       </p>
 
       <div class="post-list__meta">

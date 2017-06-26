@@ -179,6 +179,31 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2007/4/11/create-a-yum-repository/" title="link to Create A Yum Repository">Create A Yum Repository</a></h2>
+
+      <p class="excerpt">
+        <p><ol><li><strong>Build your<span class="caps">RPM</span>packages</strong>. Refer to “<a href="http://www.rpm.org/max-rpm/" target="_blank" rel="external">Maximum<span class="caps">RPM</span></a>”. Assume you put your<span class="caps">RPM</span>packages in /path/to/RPMS/i386/*.rpm</li><li><strong>Create a yum repository</strong>.<ul><li>cd /path/to/RPMS/..</li><li><a href="http://linux.duke.edu/projects/metadata/" target="_blank" rel="external">createrepo</a>RPMS</li><li>(Now there should be a /path/to/RPMS/repodata directory.)</li></ul></li><li><strong>Publish your repository</strong>. I wanna publish it via Apache, so I do following:<ul><li>ln -s /path/to/RPMS /var/www/RPMS</li><li>(Browse <a href="http://localhost/RPMS" target="_blank" rel="external">http://localhost/RPMS</a>, there should be “repodata” and “i386”directories.)</li></ul></li><li><strong>Enable your repository in client machine</strong>. Edit<a href="http://www.phy.duke.edu/%7Ergb/General/yum_article/yum_article/node19.html" target="_blank" rel="external">/etc/yum.conf</a>file as following:<pre>[main]cachedir=/var/cache/yumdebuglevel=2logfile=/var/log/yum.log[my-repository]name = My Repositorybaseurl=<a href="http://localhost/RPMSgpgcheck=0" target="_blank" rel="external">http://localhost/RPMSgpgcheck=0</a></pre></li></ol></p><p>Here we go! Invoke “yum list” and you should able to see all<span class="caps">RPM</span>packages you built.</p><p></p>
+
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="4月 11 2007" class="post-list__meta--date date">4月 11 2007</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2007/4/11/歪理斜说：优秀的都是病态的/" title="link to 歪理斜说：优秀的都是病态的">歪理斜说：优秀的都是病态的</a></h2>
 
       <p class="excerpt">
