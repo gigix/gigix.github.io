@@ -174,30 +174,6 @@ classes that you can use:
     
     <li class="post">
 
-      <h2 class="post-list__post-title post-title"><a href="/2007/4/28/create-rpm-for-your-rails-application/" title="link to Create RPM For Your Rails Application">Create RPM For Your Rails Application</a></h2>
-
-      <p class="excerpt">
-        <p>Now you can create<a href="http://www.rpm.org/" target="_blank" rel="external"><span class="caps">RPM</span></a>package for your<a href="http://www.rubyonrails.org/" target="_blank" rel="external">Rails</a>application fairly easily. Here are the instructions:</p><ol><li>Install and config<a href="http://www.rpm.org/max-rpm-snapshot/rpmbuild.8.html" target="_blank" rel="external">rpmbuild</a>.(You may wanna read an<a href="http://genetikayos.com/code/repos/rpm-tutorial/trunk/rpm-tutorial.html" target="_blank" rel="external"><span class="caps">RPM</span>Tutorial</a>.)</li><li>Install rpmpackager plugin:<br><pre>ruby script/plugin install \<a href="http://rubyworks.googlecode.com/svn/trunk/rpmpackager/" target="_blank" rel="external">http://rubyworks.googlecode.com/svn/trunk/rpmpackager/</a></pre></li><li>Config rpmpackager plugin. Edit vendor/plugins/rpmpackager/config.yml as following:<br><pre>configuration:# name of your applicationapp_name: rubyworks-dogfooddescription: This is dogfood of RubyWorks.license: Apacheversion: 1.2.1release: 1# RPM dependencies. separated with commasdependencies: openssl, mysql gt;= 5.0# gem dependencies and installation indecies# 0 for gems don’t need selectiongems:redcloth: 0rcov: 1</pre></li><li>Create<span class="caps">RPM</span>package:<ul><li>rake rpm_package</li><li>(By default the generated<span class="caps">RPM</span>will install your application to ”/usr/local/lib/rails-apps/#{app_name}”.)</li></ul></li></ol><p>That’s it. Package your application and throw it to deployment : </p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="4月 28 2007" class="post-list__meta--date date">4月 28 2007</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
       <h2 class="post-list__post-title post-title"><a href="/2007/4/28/（不愿被代表的）我们在做开源/" title="link to （不愿被代表的）我们在做开源">（不愿被代表的）我们在做开源</a></h2>
 
       <p class="excerpt">
@@ -400,6 +376,30 @@ classes that you can use:
       <div class="post-list__meta">
 
         <time datetime="4月 15 2007" class="post-list__meta--date date">4月 15 2007</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2007/4/14/歪理斜说：不存在的体系/" title="link to 歪理斜说：不存在的体系">歪理斜说：不存在的体系</a></h2>
+
+      <p class="excerpt">
+        <p>InfoQ中文站：<a href="http://www.infoq.com/cn/news/2007/04/enough-of-processes" target="_blank" rel="external">统一过程之父叫停新过程</a></p><p><i>“作为解决方案，IvarJacobson认为我们应该交流实践，而不是过程，来自团队自己的软件过程的构造块是可以装配的。实践的描述是可以独立描述的，描述可以在过程中共享，因此这个团队与别人的过程上的异同就很容易看出来。”</i></p><p>以前关注语言学的时候，我有一个理论（这句话将被作为“歪理斜说”系列的标志<sup>_</sup>）：所谓“语言的体系”是不存在的，存在的只是词汇、以及词汇的用法。譬如说，可能很难找出“英语的语法”这种东西，它是融入到词汇当中的。同样，对于——至少某些——计算机语言，语法本身是不重要的，重要的是其中的词汇可以如何使用。LISP、Smalltalk和Ruby都是这方面的例子。</p><p>还有别的例子。例如MartinFowler说“业务逻辑就是业务没有逻辑”。所谓“业务逻辑的体系”，大抵就是一个你希望套用但基本上一定会套用错的体系。还有敏捷。开大会说“我们要实施敏捷”或者“我们已经实施了敏捷”都是没有意义的，相比之下迭代的周期和有没有持续集成显得更有参考价值。这就是IvarJacobson说的，“过程已经讨论够了，多说点实践吧。”</p><p><em> </em> *</p><p><strong>关于“歪理斜说”的补充说明</strong><br><br>人的眼睛都是会选择性失明的。我们看见我们想要看见的。换句话说，当你有一个理论时，你总能找到论据来支持它。</p><p>但即便如此，如果你每周都能冒出两三个理论，其中总会有一些比较好玩的。</p><p>这就是“歪理斜说”的由来了。好玩的理论，就算是歪理谬论，扔掉了也怪可惜的，不如就收集起来吧。</p><p>（本来还想说“如果相信，责任自负”之类的话，不过细想想，其实别的文字又何尝不是一样呢？）</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="4月 14 2007" class="post-list__meta--date date">4月 14 2007</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">

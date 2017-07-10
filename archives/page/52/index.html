@@ -179,30 +179,6 @@ classes that you can use:
     
     <li class="post">
 
-      <h2 class="post-list__post-title post-title"><a href="/2007/6/3/沦落｜堕落｜失落/" title="link to 沦落｜堕落｜失落">沦落｜堕落｜失落</a></h2>
-
-      <p class="excerpt">
-        <p>不管Google是什么，Google中国（我都恶心于说出“那两个字”）基本上已经沦落到民工一级，在西安火车站赫然陈列。</p><p><a href="http://www.flickr.com/photos/gigix/528715058/" title="Photo Sharing" target="_blank" rel="external"><img src="http://farm1.static.flickr.com/244/528715058_13daabf754.jpg" alt="P1010004" border="0" height="375" width="500"></a></p><p>难道中国就有那么糟糕，让所有——不管曾经多么有品味——的外企都必须在这里堕落么？</p><p><a href="http://www.flickr.com/photos/gigix/528714896/" title="Photo Sharing" target="_blank" rel="external"><img src="http://farm2.static.flickr.com/1049/528714896_19ca2f6d77.jpg" alt="P1010005" border="0" height="375" width="500"></a></p><p>“sigh……太失落了……”</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="6月 3 2007" class="post-list__meta--date date">6月 3 2007</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
       <h2 class="post-list__post-title post-title"><a href="/2007/5/24/铁道下的红宝石：点评ruby畅销书三种/" title="link to 铁道下的红宝石：点评Ruby畅销书三种">铁道下的红宝石：点评Ruby畅销书三种</a></h2>
 
       <p class="excerpt">
@@ -405,6 +381,30 @@ classes that you can use:
       <div class="post-list__meta">
 
         <time datetime="5月 8 2007" class="post-list__meta--date date">5月 8 2007</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2007/4/28/create-rpm-for-your-rails-application/" title="link to Create RPM For Your Rails Application">Create RPM For Your Rails Application</a></h2>
+
+      <p class="excerpt">
+        <p>Now you can create<a href="http://www.rpm.org/" target="_blank" rel="external"><span class="caps">RPM</span></a>package for your<a href="http://www.rubyonrails.org/" target="_blank" rel="external">Rails</a>application fairly easily. Here are the instructions:</p><ol><li>Install and config<a href="http://www.rpm.org/max-rpm-snapshot/rpmbuild.8.html" target="_blank" rel="external">rpmbuild</a>.(You may wanna read an<a href="http://genetikayos.com/code/repos/rpm-tutorial/trunk/rpm-tutorial.html" target="_blank" rel="external"><span class="caps">RPM</span>Tutorial</a>.)</li><li>Install rpmpackager plugin:<br><pre>ruby script/plugin install \<a href="http://rubyworks.googlecode.com/svn/trunk/rpmpackager/" target="_blank" rel="external">http://rubyworks.googlecode.com/svn/trunk/rpmpackager/</a></pre></li><li>Config rpmpackager plugin. Edit vendor/plugins/rpmpackager/config.yml as following:<br><pre>configuration:# name of your applicationapp_name: rubyworks-dogfooddescription: This is dogfood of RubyWorks.license: Apacheversion: 1.2.1release: 1# RPM dependencies. separated with commasdependencies: openssl, mysql gt;= 5.0# gem dependencies and installation indecies# 0 for gems don’t need selectiongems:redcloth: 0rcov: 1</pre></li><li>Create<span class="caps">RPM</span>package:<ul><li>rake rpm_package</li><li>(By default the generated<span class="caps">RPM</span>will install your application to ”/usr/local/lib/rails-apps/#{app_name}”.)</li></ul></li></ol><p>That’s it. Package your application and throw it to deployment : </p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="4月 28 2007" class="post-list__meta--date date">4月 28 2007</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">

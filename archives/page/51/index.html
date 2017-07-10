@@ -179,30 +179,6 @@ classes that you can use:
     
     <li class="post">
 
-      <h2 class="post-list__post-title post-title"><a href="/2007/6/18/抄书-erlang如何使用外部程序/" title="link to (抄书)Erlang如何使用外部程序">(抄书)Erlang如何使用外部程序</a></h2>
-
-      <p class="excerpt">
-        <p>Many programming languages allow code in foreign languages to be linked into the applicationexecutable. In Erlang, we don’t allow this for reasons of safety.1 If we were to link an externalprogram into the Erlang executable, then a mistake in the external program could easily crash theErlang system. For this reason, all foreign language code must be run outside the Erlang system inan external operating system process. The Erlang system and the external process communicate througha byte stream.</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="6月 18 2007" class="post-list__meta--date date">6月 18 2007</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
       <h2 class="post-list__post-title post-title"><a href="/2007/6/15/塑造敏捷企业：第二届“敏捷中国”技术大会/" title="link to 塑造敏捷企业：第二届“敏捷中国”技术大会">塑造敏捷企业：第二届“敏捷中国”技术大会</a></h2>
 
       <p class="excerpt">
@@ -400,6 +376,30 @@ classes that you can use:
 
       <p class="excerpt">
         <p>关于Rails的部署：<a href="http://chinaonrails.com/topic/view/374.html" target="_blank" rel="external">Rails部署艺术</a></p><p>monit作为监控工具有一个缺点：monit会以daemon模式来启动mongrel进程（以及，可能还有，haproxy进程），也就是说每个mongrel需要自己管理PID文件。问题出现在mongrel被意外杀掉的情况：此时PID文件仍然存在，因此monit没办法再用“mongrelstart -d”的命令来启动mongrel。你必须自己想办法清理这些“僵尸PID”文件。</p><p>而runit就比较好：它管理的进程都是自己的子进程，这些子进程以阻塞模式运行，所以也没有PID文件。唯一需要注意的是，haproxy缺省是daemon模式，你需要使用“haproxy-db”把haproxy启动在阻塞模式下。</p><p>所以，用runit来监控mongrel（和haproxy）进程，monit只是看着这些进程有没有异常状况；如果出现异常状况，monit调用sv来重启有问题的服务进程。这就是<a href="http://rubyworks.rubyforge.org" target="_blank" rel="external">RubyWorks</a>目前采用的系统监控策略。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="6月 3 2007" class="post-list__meta--date date">6月 3 2007</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2007/6/3/沦落｜堕落｜失落/" title="link to 沦落｜堕落｜失落">沦落｜堕落｜失落</a></h2>
+
+      <p class="excerpt">
+        <p>不管Google是什么，Google中国（我都恶心于说出“那两个字”）基本上已经沦落到民工一级，在西安火车站赫然陈列。</p><p><a href="http://www.flickr.com/photos/gigix/528715058/" title="Photo Sharing" target="_blank" rel="external"><img src="http://farm1.static.flickr.com/244/528715058_13daabf754.jpg" alt="P1010004" border="0" height="375" width="500"></a></p><p>难道中国就有那么糟糕，让所有——不管曾经多么有品味——的外企都必须在这里堕落么？</p><p><a href="http://www.flickr.com/photos/gigix/528714896/" title="Photo Sharing" target="_blank" rel="external"><img src="http://farm2.static.flickr.com/1049/528714896_19ca2f6d77.jpg" alt="P1010005" border="0" height="375" width="500"></a></p><p>“sigh……太失落了……”</p>
       </p>
 
       <div class="post-list__meta">
