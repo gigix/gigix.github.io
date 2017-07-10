@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+        数字化企业的实验基础设施 | 透明思考
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+    <meta name="author" content="Jeff Xiong">
+    
+    
+    <meta name="description" content="在前文中我们说到，传统企业在逐步建设自己的数字平台过程中，需要抓住交付基础设施、API和架构治理、数据自服务、创新实验基础设施和监控体系、用户触点技术这五个支柱。今天我们讨论的主题是数字平台战略的第四个支柱“实验基础设施”，看看一个倡导消除摩擦、建设生态、推动创新的数字化平台如何赋能快速、有针对性的商业实验。
+
+DPS全局观
+
+概述：什么是数字平台战略 
+第一支柱：数字化企业的交付基础设施
+第二支">
+    
+
+    <meta name="description" content="在前文中我们说到，传统企业在逐步建设自己的数字平台过程中，需要抓住交付基础设施、API和架构治理、数据自服务、创新实验基础设施和监控体系、用户触点技术这五个支柱。今天我们讨论的主题是数字平台战略的第四个支柱“实验基础设施”，看看一个倡导消除摩擦、建设生态、推动创新的数字化平台如何赋能快速、有针对性的商业实验。
+
+DPS全局观
+
+概述：什么是数字平台战略 
+第一支柱：数字化企业的交付基础设施
+第二支">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数字化企业的实验基础设施 | 透明思考">
+<meta property="og:url" content="http://gigix.thoughtworkers.org/2017/7/11/dps-experimental-infrastructure/index.html">
+<meta property="og:site_name" content="透明思考">
+<meta property="og:description" content="在前文中我们说到，传统企业在逐步建设自己的数字平台过程中，需要抓住交付基础设施、API和架构治理、数据自服务、创新实验基础设施和监控体系、用户触点技术这五个支柱。今天我们讨论的主题是数字平台战略的第四个支柱“实验基础设施”，看看一个倡导消除摩擦、建设生态、推动创新的数字化平台如何赋能快速、有针对性的商业实验。
+
+DPS全局观
+
+概述：什么是数字平台战略 
+第一支柱：数字化企业的交付基础设施
+第二支">
+<meta property="og:image" content="http://gigix.thoughtworkers.org/assets/2017/7/11/amazon.jpg">
+<meta property="og:image" content="https://www.pierrelechelle.com/files/2016/09/aarrr-pirate-metrics.png">
+<meta property="og:image" content="https://martinfowler.com/bliki/images/canaryRelease/canary-release-2.png">
+<meta property="og:image" content="https://martinfowler.com/articles/feature-toggles/overview-diagram.png">
+<meta property="og:image" content="https://cloudnative.io/statics/blog/blue-green-deployment-sets.png">
+<meta property="og:image" content="https://static-www.elastic.co/assets/blt375759845321ddbb/kibana-screenshot-aspot-v2.jpg?q=456">
+<meta property="og:updated_time" content="2017-07-10T09:18:39.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="数字化企业的实验基础设施 | 透明思考">
+<meta name="twitter:description" content="在前文中我们说到，传统企业在逐步建设自己的数字平台过程中，需要抓住交付基础设施、API和架构治理、数据自服务、创新实验基础设施和监控体系、用户触点技术这五个支柱。今天我们讨论的主题是数字平台战略的第四个支柱“实验基础设施”，看看一个倡导消除摩擦、建设生态、推动创新的数字化平台如何赋能快速、有针对性的商业实验。
+
+DPS全局观
+
+概述：什么是数字平台战略 
+第一支柱：数字化企业的交付基础设施
+第二支">
+<meta name="twitter:image" content="http://gigix.thoughtworkers.org/assets/2017/7/11/amazon.jpg">
+
+    
+    <link rel="alternate" href="/atom.xml" title="透明思考" type="application/atom+xml">
+    
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+
+    <script src="/js/jquery.min.js"></script>
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+<header class="panel-cover panel-cover--collapsed">
+
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">透明思考</a></h1>
+
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">
+          Transparent Thoughts
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">Blog</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+------------------------------ -->
+
+<nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+
+  <!-- Github -->
+  <li class="navigation__item">
+    <a href="https://github.com/gigix" title="Gigix on GitHub" target="_blank">
+      <i class='icon icon-social-github'></i>
+      <span class="label">GitHub</span>
+    </a>
+  </li>
+
+  </ul>
+</nav>
+
+          <script>
+    function doSearch() {
+        var keyword = $('#keyword').val();
+        if (keyword.trim() === '') {
+            window.location.href = 'http://gigix.thoughtworkers.org/#blog';
+        } else {
+            window.open('http://www.google.com/search?q=site:gigix.thoughtworkers.org+' + keyword);
+        }
+    }
+</script>
+
+<div class="search">
+    <input id="keyword" type="text"/>
+    <input type="button" value="Search" class="btn" onclick="doSearch()"/>
+</div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+    <header class="post-header">
+
+        
+        <div class="post-meta">
+            <time datetime="7月 11 2017"
+                  class="post-meta__date date">7月 11 2017</time>
+            &#8226;
+
+        <span class="post-meta__tags tags">
+
+            <font class="categories">
+                
+            </font>
+            
+
+        </span>
+        </div>
+        
+
+        <h1 class="post-title">数字化企业的实验基础设施</h1>
+    </header>
+
+    <section class="post">
+        <p>在<a href="/2017/4/25/ditigal-platform-strategy-intro/">前文</a>中我们说到，传统企业在逐步建设自己的数字平台过程中，需要抓住交付基础设施、API和架构治理、数据自服务、创新实验基础设施和监控体系、用户触点技术这五个支柱。今天我们讨论的主题是<a href="https://www.thoughtworks.com/digital-platform-strategy" target="_blank" rel="external">数字平台战略</a>的第四个支柱“实验基础设施”，看看一个倡导消除摩擦、建设生态、推动创新的数字化平台如何赋能快速、有针对性的商业实验。</p>
+<blockquote>
+<p><strong>DPS全局观</strong></p>
+<ul>
+<li>概述：<a href="/2017/4/25/ditigal-platform-strategy-intro/">什么是数字平台战略</a> </li>
+<li>第一支柱：<a href="/2017/5/7/dps-delivery-infrastructure/">数字化企业的交付基础设施</a></li>
+<li>第二支柱：<a href="/2017/5/22/dps-api-architecture-remediation/">数字化企业的API架构治理</a></li>
+<li>第三支柱：<a href="https://thoughtworks.jiveon.com/groups/china/blog/2017/06/13/%E5%8D%9A%E5%AE%A2%E5%A4%A7%E8%B5%9B-%E6%95%B0%E5%AD%97%E5%8C%96%E4%BC%81%E4%B8%9A%E7%9A%84%E6%95%B0%E6%8D%AE%E8%87%AA%E6%9C%8D%E5%8A%A1" target="_blank" rel="external">数字化企业的数据自服务</a></li>
+<li>第五支柱：<a href="https://thoughtworks.jiveon.com/groups/china/blog/2017/06/27/%E5%8D%9A%E5%AE%A2%E5%A4%A7%E8%B5%9B%E6%95%B0%E5%AD%97%E5%8C%96%E5%B9%B3%E5%8F%B0%E4%B8%AD%E7%9A%84%E5%AE%A2%E6%88%B7%E8%A7%A6%E7%82%B9%E6%8A%80%E6%9C%AF" target="_blank" rel="external">数字化平台中的客户触点技术</a></li>
+</ul>
+</blockquote>
+<h2 id="什么是实验基础设施"><a href="#什么是实验基础设施" class="headerlink" title="什么是实验基础设施"></a>什么是实验基础设施</h2><p>作为数字化企业的代表，亚马逊是众多怀揣数字化梦想的企业学习的榜样。今天的亚马逊，在零售、广告、消费电子终端、应用商店、云服务等多个领域与各领域的领先企业竞争。更可怕的是，除了丰富的业务线，亚马逊还有Dash Button、Echo、Prime Air、AWS等大量创新。最可怕的是，据AWS的CEO说，除了这些大家知道的、获得了一定成功的创新项目，还有更多创新项目失败了——而亚马逊认为完全OK。亚马逊强大的创新能力，背后体现的是更为强大的快速实验、快速学习、快速调整的能力。缺少这种能力，就算把亚马逊的产品和模式摆在面前照抄，也无法跟上它不断创新的步伐。</p>
+<p><img src="/assets/2017/7/11/amazon.jpg"></p>
+<p>为了支撑数字系统的快速实验、快速学习、快速调整，需要在快速交付基础设施与数据自服务的基础上再考虑下列问题：</p>
+<ul>
+<li>需要从多种来源<strong>采集</strong>关于系统、关于顾客的<strong>数据</strong>。</li>
+<li>需要根据业务目标在系统中<strong>埋设监控点</strong>，并及时把监控结果<strong>可视化</strong>呈现给业务用户。</li>
+<li>为了降低实验试错的风险，在把新版本发布给全部用户之前，应该以<strong>金丝雀发布</strong>的形式首先发布给一小部分用户，确保新版本不造成重大损害。</li>
+<li>系统需要支持<strong>功能切换开关（toggle）</strong>，允许团队在不修改代码的前提下改变系统的行为。</li>
+<li>用<strong>路由技术</strong>支持蓝-绿部署和A/B测试，方可高效地开展受控实验。</li>
+</ul>
+<h2 id="实验基础设施详解"><a href="#实验基础设施详解" class="headerlink" title="实验基础设施详解"></a>实验基础设施详解</h2><p>数字平台中的实验基础设施由以下特性共同支撑。</p>
+<h3 id="数据采集"><a href="#数据采集" class="headerlink" title="数据采集"></a>数据采集</h3><p><a href="http://theleanstartup.com/" target="_blank" rel="external">精益创业</a>的核心逻辑是缩短“Build-Measure-Learn”的周期。为了从实验中学习，就需要全面采集实验数据。交付基础设施通常会包含技术性的监控和数据采集（例如基于ELK的日志监控体系），提供性能、资源、系统告警等角度的数据。</p>
+<p>单纯技术性的数据不足以对业务实验提供反馈，需要贯串用户体验，获取对业务有指导意义的数据。一个可供参考的框架是“<a href="https://www.pierrelechelle.com/aarrr-pirate-metrics" target="_blank" rel="external">海盗度量</a>”：聚焦关注创新业务的获客、活跃、保留、推荐、创收（AARRR）这5个环节，从这个5个点上提出假设，然后用数据来证实或证伪假设。</p>
+<p><img src="https://www.pierrelechelle.com/files/2016/09/aarrr-pirate-metrics.png"></p>
+<h3 id="金丝雀发布"><a href="#金丝雀发布" class="headerlink" title="金丝雀发布"></a>金丝雀发布</h3><p><a href="https://martinfowler.com/bliki/CanaryRelease.html" target="_blank" rel="external">金丝雀发布</a>是一种控制软件发布风险的方式：在把新版本发布给全部用户之前，首先发布给一小部分用户，确保功能完好可用。金丝雀发布的主要目的是为了降低风险。新的软件可以先在与用户隔离的环境中接受UAT测试；如果新的软件有问题，受到影响的只是一小部分用户，不至于立即造成巨大的损失；如果新的软件有问题，可以立即回滚到旧版本。</p>
+<p><img src="https://martinfowler.com/bliki/images/canaryRelease/canary-release-2.png"></p>
+<p>金丝雀发布最基本的形式，就是在前端反向代理上用路由技术把一定比例的用户导向“金丝雀”版本（例如<a href="http://www.conviva.com/canary-deployment-with-nginx/" target="_blank" rel="external">Nginx可以支持多种筛选用户的方式</a>）。在路由技术的背后，应该以<a href="https://martinfowler.com/bliki/PhoenixServer.html" target="_blank" rel="external">凤凰服务器</a>和<a href="https://martinfowler.com/bliki/ImmutableServer.html" target="_blank" rel="external">不可变服务器</a>来实现每个服务，服务的创建和回收应该是完全自动化的。同时还需要需要端到端的综合监控，根据有业务语义的目标（例如转化率）是否发生突变来判断金丝雀的效果。</p>
+<h3 id="Toggle架构"><a href="#Toggle架构" class="headerlink" title="Toggle架构"></a>Toggle架构</h3><p><a href="https://martinfowler.com/articles/feature-toggles.html" target="_blank" rel="external">Feature Toggle</a>的目标是，通过架构设计允许团队在不修改代码的前提下改变系统的行为。常见的一些需要Toggle的场合包括：避免多个交付版本的代码branching/forking；避免未完成功能的代码branching/forking；运行时动态改变系统行为，以实现一些特定能力，例如：线上受控实验、针对不同用户权限提供不同服务、<a href="https://martinfowler.com/bliki/CircuitBreaker.html" target="_blank" rel="external">回路熔断</a>和服务降级等。</p>
+<p>常见的Toggle可以分为4类：</p>
+<ul>
+<li>Release Toggle：某些功能已经存在，但暂时不向用户发布。主要目的是为了基于trunk开发、避免开发分支。静态，生存周期短。可以用<a href="https://www.togglz.org/" target="_blank" rel="external">Togglz</a>之类工具。</li>
+<li>Ops Toggle：回路熔断，高负载或发生故障时自动降级服务。较动态，生存周期长。工具如<a href="https://github.com/Netflix/Hystrix/wiki" target="_blank" rel="external">Hystrix</a>等。</li>
+<li>Experiment Toggles：用于支持线上实验（例如Canary Release、A/B Test等）。动态，生存周期较短。采用路由技术实现。</li>
+<li>Permission Toggles：用于给不同权限的用户提供不同的服务。引入统一的toggle router和toggle configuration，避免在代码中写条件。动态，生存周期长。</li>
+</ul>
+<p><img src="https://martinfowler.com/articles/feature-toggles/overview-diagram.png"></p>
+<p>Feature Toggle也应该以服务API的形式暴露出来，并且鼓励用结构化的、人类可读的配置文件管理Toggle。</p>
+<h3 id="路由技术"><a href="#路由技术" class="headerlink" title="路由技术"></a>路由技术</h3><p>通过路由切换的方式，让用户在不同的时间、不同的场合访问到不同的服务实例（可能是不同的版本）。路由技术可以用来支撑多种实验性部署技巧，包括蓝-绿部署（零宕机部署）、A/B测试、金丝雀发布等。<a href="http://blog.christianposta.com/deploy/blue-green-deployments-a-b-testing-and-canary-releases/" target="_blank" rel="external">这篇文章</a>介绍了这些部署技巧直接的关系。</p>
+<p>路由技术的实现与下层的弹性基础设施有很大关系，<a href="https://www.thoughtworks.com/insights/blog/implementing-blue-green-deployments-aws" target="_blank" rel="external">以AWS为例</a>，有几种比较简单的实现蓝绿部署的方式：</p>
+<ul>
+<li>对于单个EC2实例，可以修改它的Elastic IP</li>
+<li>对于EC2集群，可以切换ELB背后的Auto Scaling Group</li>
+<li>可以用Route53修改DNS重定向</li>
+<li>可以用BeanStalk切换整个应用环境（如果应用部署在BeanStalk上）</li>
+</ul>
+<p><img src="https://cloudnative.io/statics/blog/blue-green-deployment-sets.png"></p>
+<p>Cloud Foundry也有一组<a href="https://docs.cloudfoundry.org/devguide/deploy-apps/blue-green.html" target="_blank" rel="external">实现蓝绿部署的最佳实践</a>。</p>
+<h3 id="可视化和埋点"><a href="#可视化和埋点" class="headerlink" title="可视化和埋点"></a>可视化和埋点</h3><p>通过<a href="http://blog.takipi.com/the-complete-guide-to-instrumentation-how-to-measure-your-application/" target="_blank" rel="external">埋点</a>获得系统运行时的信息，收集之后显示出来，从而把运维环境中的信息及时反馈回开发团队，缩短反馈周期。</p>
+<p>常见的埋点方式有：</p>
+<ul>
+<li>代码中埋点（例如New Relic、AppDynamics、Dynatrace）</li>
+<li>监控进程（例如StatsD、collectd、fluentd）</li>
+<li>日志（例如Splunk、ELK）</li>
+</ul>
+<p>数据需要用一体化的、直观可视的仪表板展示出来，从而快速指导业务调整。<a href="https://grafana.com/" target="_blank" rel="external">Grafana</a>和<a href="https://www.elastic.co/products/kibana" target="_blank" rel="external">Kibana</a>等工具提供了很好的仪表板功能，不过还是需要针对自己的情况加以定制。</p>
+<p><img src="https://static-www.elastic.co/assets/blt375759845321ddbb/kibana-screenshot-aspot-v2.jpg?q=456"></p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>很大程度上，大部分组织的IT建设都谈不上“科学”。科学的基础建立在假说和实验之上，而在很多组织里，“有可能失败的项目”恐怕根本无法立项——更不用说“很有可能失败的项目”。降低做实验和犯错误的成本、从经验中尽可能多学习，是企业面对未知世界的唯一出路。然而快速的受控实验背后隐藏的是基础设施、软件架构、数据等多方面的技术支撑，把实验基础设施作为企业数字化旅程的阶段性目标，拉动各方面基础能力的建设，是建设数字平台的合理路径。</p>
+
+    </section>
+
+    <section class="author">
+<p>（本文作者熊节是ThoughtWorks的总监咨询师）</p>
+</section>
+    <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style_32x32" style="height: 40px">
+    <a class="jiathis_button_tsina"></a>
+    <a class="jiathis_button_weixin"></a>
+    <a class="jiathis_button_douban"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis"
+       target="_blank"></a>
+</div>
+<script type="text/javascript">
+    var jiathis_config = {
+        summary: "",
+        shortUrl: false,
+        hideMore: false
+    }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code_mini/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+    
+</article>
+
+			
+            <footer class="footer">
+    <span class="footer__copyright">&copy;
+        作者保留一切权利，未经许可请勿转载</span>
+    <span class="footer__copyright">&copy;
+        2017
+        Transparent Thoughts. All rights reserved.</span>
+</footer>
+        </div>
+    </div>
+
+    <!-- The main JavaScript file for Casper -->
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    <script src="/js/jquery.imagesloaded.min.js"></script>
+    <script src="/js/gallery.js"></script>
+    <script src="/js/jquery.githubRepoWidget.min.js"></script>
+    <script type="text/javascript"
+            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> 
+      MathJax.Hub.Config({ 
+        tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+    }); 
+
+    </script>
+
+    <!--kill ie6 -->
+    <!--[if IE 6]>
+    <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+    <![endif]-->
+
+    <!-- totop -->
+    <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">
+        <a title="back to top"><img style="width:30px;height:30px;" src="/images/totop.png"/></a>
+    </div>
+    <script>
+        (function ($) {
+            var upperLimit = 100;
+            var scrollElem = $('#totop');
+            var scrollSpeed = 500;
+            scrollElem.hide();
+            $(window).scroll(function () {
+                var scrollTop = $(document).scrollTop();
+                if (scrollTop > upperLimit) {
+                    $(scrollElem).stop().fadeTo(300, 1); // fade back in
+                } else {
+                    $(scrollElem).stop().fadeTo(300, 0); // fade out
+                }
+            });
+            $(scrollElem).click(function () {
+                $('html, body').animate({scrollTop: 0}, scrollSpeed);
+                return false;
+            });
+        })(jQuery);
+    </script>
+
+    <!-- fancybox -->
+    
+    <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+    <script src="/fancybox/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript">
+        (function ($) {
+            $('.fancybox').fancybox();
+        })(jQuery);
+    </script>
+    
+
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-113927-4', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <!-- CNZZ Analytics -->
+    <script src="http://s4.cnzz.com/z_stat.php?id=1255092465&web_id=1255092465" language="JavaScript"></script>
+
+</body>
+</html>

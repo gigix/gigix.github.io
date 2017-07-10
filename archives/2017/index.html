@@ -175,6 +175,88 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2017/7/11/dps-experimental-infrastructure/" title="link to 数字化企业的实验基础设施">数字化企业的实验基础设施</a></h2>
+
+      <p class="excerpt">
+        <p>在<a href="/2017/4/25/ditigal-platform-strategy-intro/">前文</a>中我们说到，传统企业在逐步建设自己的数字平台过程中，需要抓住交付基础设施、API和架构治理、数据自服务、创新实验基础设施和监控体系、用户触点技术这五个支柱。今天我们讨论的主题是<a href="https://www.thoughtworks.com/digital-platform-strategy" target="_blank" rel="external">数字平台战略</a>的第四个支柱“实验基础设施”，看看一个倡导消除摩擦、建设生态、推动创新的数字化平台如何赋能快速、有针对性的商业实验。</p>
+<blockquote>
+<p><strong>DPS全局观</strong></p>
+<ul>
+<li>概述：<a href="/2017/4/25/ditigal-platform-strategy-intro/">什么是数字平台战略</a> </li>
+<li>第一支柱：<a href="/2017/5/7/dps-delivery-infrastructure/">数字化企业的交付基础设施</a></li>
+<li>第二支柱：<a href="/2017/5/22/dps-api-architecture-remediation/">数字化企业的API架构治理</a></li>
+<li>第三支柱：<a href="https://thoughtworks.jiveon.com/groups/china/blog/2017/06/13/%E5%8D%9A%E5%AE%A2%E5%A4%A7%E8%B5%9B-%E6%95%B0%E5%AD%97%E5%8C%96%E4%BC%81%E4%B8%9A%E7%9A%84%E6%95%B0%E6%8D%AE%E8%87%AA%E6%9C%8D%E5%8A%A1" target="_blank" rel="external">数字化企业的数据自服务</a></li>
+<li>第五支柱：<a href="https://thoughtworks.jiveon.com/groups/china/blog/2017/06/27/%E5%8D%9A%E5%AE%A2%E5%A4%A7%E8%B5%9B%E6%95%B0%E5%AD%97%E5%8C%96%E5%B9%B3%E5%8F%B0%E4%B8%AD%E7%9A%84%E5%AE%A2%E6%88%B7%E8%A7%A6%E7%82%B9%E6%8A%80%E6%9C%AF" target="_blank" rel="external">数字化平台中的客户触点技术</a></li>
+</ul>
+</blockquote>
+<h2 id="什么是实验基础设施"><a href="#什么是实验基础设施" class="headerlink" title="什么是实验基础设施"></a>什么是实验基础设施</h2><p>作为数字化企业的代表，亚马逊是众多怀揣数字化梦想的企业学习的榜样。今天的亚马逊，在零售、广告、消费电子终端、应用商店、云服务等多个领域与各领域的领先企业竞争。更可怕的是，除了丰富的业务线，亚马逊还有Dash Button、Echo、Prime Air、AWS等大量创新。最可怕的是，据AWS的CEO说，除了这些大家知道的、获得了一定成功的创新项目，还有更多创新项目失败了——而亚马逊认为完全OK。亚马逊强大的创新能力，背后体现的是更为强大的快速实验、快速学习、快速调整的能力。缺少这种能力，就算把亚马逊的产品和模式摆在面前照抄，也无法跟上它不断创新的步伐。</p>
+<p><img src="/assets/2017/7/11/amazon.jpg"></p>
+<p>为了支撑数字系统的快速实验、快速学习、快速调整，需要在快速交付基础设施与数据自服务的基础上再考虑下列问题：</p>
+<ul>
+<li>需要从多种来源<strong>采集</strong>关于系统、关于顾客的<strong>数据</strong>。</li>
+<li>需要根据业务目标在系统中<strong>埋设监控点</strong>，并及时把监控结果<strong>可视化</strong>呈现给业务用户。</li>
+<li>为了降低实验试错的风险，在把新版本发布给全部用户之前，应该以<strong>金丝雀发布</strong>的形式首先发布给一小部分用户，确保新版本不造成重大损害。</li>
+<li>系统需要支持<strong>功能切换开关（toggle）</strong>，允许团队在不修改代码的前提下改变系统的行为。</li>
+<li>用<strong>路由技术</strong>支持蓝-绿部署和A/B测试，方可高效地开展受控实验。</li>
+</ul>
+<h2 id="实验基础设施详解"><a href="#实验基础设施详解" class="headerlink" title="实验基础设施详解"></a>实验基础设施详解</h2><p>数字平台中的实验基础设施由以下特性共同支撑。</p>
+<h3 id="数据采集"><a href="#数据采集" class="headerlink" title="数据采集"></a>数据采集</h3><p><a href="http://theleanstartup.com/" target="_blank" rel="external">精益创业</a>的核心逻辑是缩短“Build-Measure-Learn”的周期。为了从实验中学习，就需要全面采集实验数据。交付基础设施通常会包含技术性的监控和数据采集（例如基于ELK的日志监控体系），提供性能、资源、系统告警等角度的数据。</p>
+<p>单纯技术性的数据不足以对业务实验提供反馈，需要贯串用户体验，获取对业务有指导意义的数据。一个可供参考的框架是“<a href="https://www.pierrelechelle.com/aarrr-pirate-metrics" target="_blank" rel="external">海盗度量</a>”：聚焦关注创新业务的获客、活跃、保留、推荐、创收（AARRR）这5个环节，从这个5个点上提出假设，然后用数据来证实或证伪假设。</p>
+<p><img src="https://www.pierrelechelle.com/files/2016/09/aarrr-pirate-metrics.png"></p>
+<h3 id="金丝雀发布"><a href="#金丝雀发布" class="headerlink" title="金丝雀发布"></a>金丝雀发布</h3><p><a href="https://martinfowler.com/bliki/CanaryRelease.html" target="_blank" rel="external">金丝雀发布</a>是一种控制软件发布风险的方式：在把新版本发布给全部用户之前，首先发布给一小部分用户，确保功能完好可用。金丝雀发布的主要目的是为了降低风险。新的软件可以先在与用户隔离的环境中接受UAT测试；如果新的软件有问题，受到影响的只是一小部分用户，不至于立即造成巨大的损失；如果新的软件有问题，可以立即回滚到旧版本。</p>
+<p><img src="https://martinfowler.com/bliki/images/canaryRelease/canary-release-2.png"></p>
+<p>金丝雀发布最基本的形式，就是在前端反向代理上用路由技术把一定比例的用户导向“金丝雀”版本（例如<a href="http://www.conviva.com/canary-deployment-with-nginx/" target="_blank" rel="external">Nginx可以支持多种筛选用户的方式</a>）。在路由技术的背后，应该以<a href="https://martinfowler.com/bliki/PhoenixServer.html" target="_blank" rel="external">凤凰服务器</a>和<a href="https://martinfowler.com/bliki/ImmutableServer.html" target="_blank" rel="external">不可变服务器</a>来实现每个服务，服务的创建和回收应该是完全自动化的。同时还需要需要端到端的综合监控，根据有业务语义的目标（例如转化率）是否发生突变来判断金丝雀的效果。</p>
+<h3 id="Toggle架构"><a href="#Toggle架构" class="headerlink" title="Toggle架构"></a>Toggle架构</h3><p><a href="https://martinfowler.com/articles/feature-toggles.html" target="_blank" rel="external">Feature Toggle</a>的目标是，通过架构设计允许团队在不修改代码的前提下改变系统的行为。常见的一些需要Toggle的场合包括：避免多个交付版本的代码branching/forking；避免未完成功能的代码branching/forking；运行时动态改变系统行为，以实现一些特定能力，例如：线上受控实验、针对不同用户权限提供不同服务、<a href="https://martinfowler.com/bliki/CircuitBreaker.html" target="_blank" rel="external">回路熔断</a>和服务降级等。</p>
+<p>常见的Toggle可以分为4类：</p>
+<ul>
+<li>Release Toggle：某些功能已经存在，但暂时不向用户发布。主要目的是为了基于trunk开发、避免开发分支。静态，生存周期短。可以用<a href="https://www.togglz.org/" target="_blank" rel="external">Togglz</a>之类工具。</li>
+<li>Ops Toggle：回路熔断，高负载或发生故障时自动降级服务。较动态，生存周期长。工具如<a href="https://github.com/Netflix/Hystrix/wiki" target="_blank" rel="external">Hystrix</a>等。</li>
+<li>Experiment Toggles：用于支持线上实验（例如Canary Release、A/B Test等）。动态，生存周期较短。采用路由技术实现。</li>
+<li>Permission Toggles：用于给不同权限的用户提供不同的服务。引入统一的toggle router和toggle configuration，避免在代码中写条件。动态，生存周期长。</li>
+</ul>
+<p><img src="https://martinfowler.com/articles/feature-toggles/overview-diagram.png"></p>
+<p>Feature Toggle也应该以服务API的形式暴露出来，并且鼓励用结构化的、人类可读的配置文件管理Toggle。</p>
+<h3 id="路由技术"><a href="#路由技术" class="headerlink" title="路由技术"></a>路由技术</h3><p>通过路由切换的方式，让用户在不同的时间、不同的场合访问到不同的服务实例（可能是不同的版本）。路由技术可以用来支撑多种实验性部署技巧，包括蓝-绿部署（零宕机部署）、A/B测试、金丝雀发布等。<a href="http://blog.christianposta.com/deploy/blue-green-deployments-a-b-testing-and-canary-releases/" target="_blank" rel="external">这篇文章</a>介绍了这些部署技巧直接的关系。</p>
+<p>路由技术的实现与下层的弹性基础设施有很大关系，<a href="https://www.thoughtworks.com/insights/blog/implementing-blue-green-deployments-aws" target="_blank" rel="external">以AWS为例</a>，有几种比较简单的实现蓝绿部署的方式：</p>
+<ul>
+<li>对于单个EC2实例，可以修改它的Elastic IP</li>
+<li>对于EC2集群，可以切换ELB背后的Auto Scaling Group</li>
+<li>可以用Route53修改DNS重定向</li>
+<li>可以用BeanStalk切换整个应用环境（如果应用部署在BeanStalk上）</li>
+</ul>
+<p><img src="https://cloudnative.io/statics/blog/blue-green-deployment-sets.png"></p>
+<p>Cloud Foundry也有一组<a href="https://docs.cloudfoundry.org/devguide/deploy-apps/blue-green.html" target="_blank" rel="external">实现蓝绿部署的最佳实践</a>。</p>
+<h3 id="可视化和埋点"><a href="#可视化和埋点" class="headerlink" title="可视化和埋点"></a>可视化和埋点</h3><p>通过<a href="http://blog.takipi.com/the-complete-guide-to-instrumentation-how-to-measure-your-application/" target="_blank" rel="external">埋点</a>获得系统运行时的信息，收集之后显示出来，从而把运维环境中的信息及时反馈回开发团队，缩短反馈周期。</p>
+<p>常见的埋点方式有：</p>
+<ul>
+<li>代码中埋点（例如New Relic、AppDynamics、Dynatrace）</li>
+<li>监控进程（例如StatsD、collectd、fluentd）</li>
+<li>日志（例如Splunk、ELK）</li>
+</ul>
+<p>数据需要用一体化的、直观可视的仪表板展示出来，从而快速指导业务调整。<a href="https://grafana.com/" target="_blank" rel="external">Grafana</a>和<a href="https://www.elastic.co/products/kibana" target="_blank" rel="external">Kibana</a>等工具提供了很好的仪表板功能，不过还是需要针对自己的情况加以定制。</p>
+<p><img src="https://static-www.elastic.co/assets/blt375759845321ddbb/kibana-screenshot-aspot-v2.jpg?q=456"></p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>很大程度上，大部分组织的IT建设都谈不上“科学”。科学的基础建立在假说和实验之上，而在很多组织里，“有可能失败的项目”恐怕根本无法立项——更不用说“很有可能失败的项目”。降低做实验和犯错误的成本、从经验中尽可能多学习，是企业面对未知世界的唯一出路。然而快速的受控实验背后隐藏的是基础设施、软件架构、数据等多方面的技术支撑，把实验基础设施作为企业数字化旅程的阶段性目标，拉动各方面基础能力的建设，是建设数字平台的合理路径。</p>
+
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="7月 11 2017" class="post-list__meta--date date">7月 11 2017</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2017/6/26/fernando-flores/" title="link to 人生赢家弗洛雷斯">人生赢家弗洛雷斯</a></h2>
 
       <p class="excerpt">
@@ -627,48 +709,6 @@ classes that you can use:
       <div class="post-list__meta">
 
         <time datetime="5月 2 2017" class="post-list__meta--date date">5月 2 2017</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2017/4/25/ditigal-platform-strategy-intro/" title="link to 什么是数字平台战略">什么是数字平台战略</a></h2>
-
-      <p class="excerpt">
-        <p>传统企业正在面临IT新技术的挑战——单从“传统企业”这个居高临下的称谓，你就能读出“非传统企业”（也就是IT企业、互联网企业）满满的优越感。每天在各种新媒体平台看着BAT们又掌握了什么黑科技、又颠覆了哪个行业，“云大物移”已经成了高频出现的热词，传统企业们愈发清晰地感受到<a href="/2016/1/13/it-talent-trend/">IT的重要性与挑战</a>。数字化浪潮躲不过，和BAT拼技术又拼不过，传统企业的出路在哪里？</p>
-<p><img src="/assets/2017/4/25/digital-platform.jpg"></p>
-<p>目光投向大洋彼岸，最传统的传统企业、年收入数千亿美元的<a href="/2017/4/19/walmart-digitization/">沃尔玛在过去几年中的数字化历程</a>颇有可玩味之处。直到2011年，沃尔玛还不是出色的数字化玩家，只能算有个电商网站的线下零售商而已。正因为如此，当沃尔玛的电商收入在2011年至2014年的三年间增长150%、从年销量49亿美元增长到122亿美元、超过史泰博（Staples）成为亚马逊和苹果之后美国第三大在线零售商时，这一变化才更令人惊叹。像沃尔玛一样的数字化转型先行者，能给我们带来哪些启示？</p>
-<h2 id="数字化企业的三个关键字"><a href="#数字化企业的三个关键字" class="headerlink" title="数字化企业的三个关键字"></a>数字化企业的三个关键字</h2><p>首先，传统企业们需要清楚一件事：“传统”不应该是贬义词，它同时意味着数十年积累的宝贵资产，包括客户关系、数据、品牌形象、供应链、渠道等等。传统企业要在互联网时代的竞争环境中占得一席之地，靠的不是突破最高精尖的技术领域，而是以数字化的形式激活自己多年累积的核心资产，将核心资产转变为可以在互联网上使用的服务，使其焕发新的价值。</p>
-<p>对众多成功的数字化企业的调研显示，这些企业有着一些引人注目的共性。在“激活核心资产”的过程中，他们对三个关键字的关注特别值得我们关注：IT效能；生态系统；创新实验。</p>
-<p><img src="/assets/2017/4/25/3-goals.png"></p>
-<p>首先，这些成功的数字化企业重视<strong>提升IT团队的效能</strong>。正如ThoughtWorks在<a href="https://www.thoughtworks.com/radar" target="_blank" rel="external">第16期技术雷达</a>中所指出的，技术人员的工作体验正在成为科技企业的差异化竞争优势。这里所说的“体验”不止是给程序员舒适的座椅和人体工学键盘，更重要的是消除IT团队在工作中遇到的阻力和摩擦，尤其是充分利用云计算的弹性能力大量简化和自动化与实现业务功能无关的基础设施性工作，让IT团队将注意力集中在真正与业务相关的工作上。这里涉及的一些技术和实践（例如<a href="/2017/4/14/stack-management-implementation/">技术栈管理</a>）乍听起来可能困难重重，但为提升IT团队效能付出的成本终将物有所值。</p>
-<p>随后，这些成功的数字化企业把他们的核心商业能力与资产以服务的形式在互联网上提供出来，<strong>构建本行业的数字化生态系统</strong>，使新的服务和产品能够在这些服务的基础上被创造出来。同样是在技术雷达中，我们看到了“平台的崛起”：几年前只有亚马逊这样的巨头企业能在互联网上提供各种云服务；而现在有更多原本不太有“互联网基因”的企业围绕自己的核心资产建立起了数字化平台，不仅对内、而且对外提供服务。在国内，我们看到<a href="http://www.hwclouds.com/devcloud/" target="_blank" rel="external">华为把软件开发能力变成了云服务</a>、<a href="https://www.haihangyun.com/landing" target="_blank" rel="external">海航建立了自己的云生态</a>。我们相信，更多的企业也能从核心资产的服务化中受益良多。</p>
-<p>最后但绝非最不重要的，这些成功的数字化企业养成了<strong>创新实验的习惯</strong>。在互联网中弄潮的经验让他们承认，自己不能预先掌握所有需求、做好所有设计。因此他们转而打造组织的响应力，致力于缩短精益创业的“构建-度量-学习”周期。他们知道成千上万的用户不会明明白白地说自己想要什么功能，于是他们监控用户行为、用A/B测试等方法进行受控实验，用“假说-实验”代替了“需求-实现”，在不断的反馈中完善自己的产品和服务。</p>
-<h2 id="数字平台战略的五大支柱"><a href="#数字平台战略的五大支柱" class="headerlink" title="数字平台战略的五大支柱"></a>数字平台战略的五大支柱</h2><p>以提升IT效能、构建行业生态、促进业务创新为目标，有志于迈出数字化步伐的企业应该立即开始制订自己的数字平台战略蓝图。不要被“平台”和“战略”这样的大词欺骗：这个以增强企业响应力为目标的平台战略不应该是漫长的规划之后建设出一个庞然大物，而应该是迭代的、精益的、价值驱动的。更多的时候，我们谈论的“数字平台”更像是一系列IT技术与实践的落地结合。这些技术与实践有机构成的五个支柱，让数字化的企业能快速交付IT系统、围绕核心资产构建云上生态系统、从线上系统和用户行为中获得洞察、开展受控实验、并为顾客创造全渠道统一的用户体验。在成功的数字化转型案例（例如<a href="/2017/4/19/walmart-digitization/#数字平台战略视角分析">沃尔玛的案例</a>）中，我们就能看到这五个支柱的投影。</p>
-<p><img src="/assets/2017/4/25/5-pillars.png"></p>
-<p>第一个支柱是支持云和敏捷的<strong>交付基础设施</strong>。为了让IT团队快速交付，他们使用的基础设施应该具有弹性，开发、测试、运维等不同角色应该可以随需动态获得完整的应用环境，从而统一环境、标准化研发实践、规范化研发能力。他们开发的应用程序应该用持续交付实践打通开发、构建、验证和部署流程，使软件随时处于可发布状态。他们的交付流程中应该内建对安全的考量，而不是依赖最后的整体安全检查。生产系统所使用的运行时环境应该前向拉通到验证和研发环节，保障运行时环境的一致性。需要对系统的IT运维和业务运营进行全面的监控，聚合起来了解系统整体状况。</p>
-<p>第二个支柱是以微服务为核心的<strong>API和架构治理</strong>。为了鼓励不仅企业内、还包括企业外的开发者在平台上发挥创造力，平台架构和API的设计应该注重开发者体验。在API的背后，应该从业务功能的角度出发划分合理的限界上下文和服务边界，对外提供高内聚低耦合的服务。在服务边界之间，应该考虑使用异步的事件机制实现服务之间的通信，来客观地描述运行时间比较长、甚至本质上不可能立即完成的操作（例如涉及人工操作）。为了方便使用者，应该提供API网关作为所有服务使用者的单一入口点，在API网关背后去处理众多内部IT系统的复杂性。整个API架构应该以微服务的风格呈现，避免典型SOA架构中普遍存在的过于复杂的ESB编排逻辑。</p>
-<p>第三个支柱是允许开发团队<strong>数据自服务</strong>。为了让业务和研发团队获得关于生产环境、关于线上业务、关于顾客的洞见，他们需要首先定义数据流水线，使数据能够顺畅地流过收集、转换、存储、探索/预测、可视化等阶段，产生业务价值。他们需要用实时的架构和API在短时间内处理大量、非结构化的数据，从中获得洞见，并“实时”影响决策。为了提高应变能力，系统中的数据不做ETL预处理，而是以“生数据”的形式首先存入数据湖，等有了具体的问题要回答时，再去组织和筛选数据，从中找出答案。IT团队会更进一步把数据包装成能供外人使用的产品，让第三方从数据中获得新的洞见与价值。为了支持数据产品的运营，他们需要实现细粒度的身份认证，针对不同的用户身份，授权访问不同范围的数据。</p>
-<p>第四个支柱是<strong>创新实验基础设施和监控体系</strong>。为了让创新真正基于数据（而非拍脑袋）来开展，IT团队需要从多种来源采集关于系统、关于顾客的数据。需要根据业务目标在系统中埋设监控点，并及时把监控结果可视化呈现给业务用户。为了降低实验试错的风险，在把新版本发布给全部用户之前，应该以“金丝雀发布”的形式首先发布给一小部分用户，确保新版本不造成重大损害。系统需要支持功能切换开关（toggle），允许团队在不修改代码的前提下改变系统的行为，再加上用路由技术支持蓝-绿部署和A/B测试，方可高效地开展受控实验。</p>
-<p>第五个支柱是支持全渠道的<strong>用户触点技术</strong>。为了通过多样化的触点技术向顾客提供随时随地、连贯一致的用户体验，整个企业需要建立对其顾客和目标顾客的唯一、连贯、准确、整体的视图，从而更好地了解和服务顾客。他们需要结合顾客的特征和不同数字渠道的特征建立连贯的内容策略，在多种渠道（例如电脑、智能手机、门店等）之间引导顾客的消费旅程，与顾客产生正确时间、正确地点、正确方式的交互。基于从各种渠道获得的顾客本人及其行为的数据分析，他们可以向顾客提供定制化的内容、服务和产品推荐。作为必要的技术保障，所有数字渠道的软件应用（尤其是原生的Android和iOS应用）都应该实践持续交付，这样才能实现全渠道的快速响应。</p>
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>在数字化的浪潮面前，传统企业不必恐惧于互联网企业的技术优势。只要抓住交付基础设施、API和架构治理、数据自服务、创新实验基础设施和监控体系、用户触点技术这五个支柱，逐步建设自己的数字平台，不断提升IT效能、构建本行业的数字化生态系统、养成创新实验的习惯，传统企业同样可以用数字技术激活自己多年积累的核心资产，在新的竞争环境中找到自己的一席之地。</p>
-<p><em>（更多关于数字平台战略的信息，请关注<a href="https://www.thoughtworks.com/digital-platform-strategy" target="_blank" rel="external">ThoughtWorks数字平台战略网站</a>。）</em></p>
-
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="4月 25 2017" class="post-list__meta--date date">4月 25 2017</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">
