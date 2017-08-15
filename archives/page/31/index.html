@@ -179,6 +179,30 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2009/8/31/lonely-planet-images/" title="link to Lonely Planet Images">Lonely Planet Images</a></h2>
+
+      <p class="excerpt">
+        <p>Lonely Planet, the experts in independent travel information now present Lonely Planet Images (LPI).<span class="caps">LPI</span>is a digital image library with a unique and comprehensive collection of over 300,000 downloadabletravelphotographs taken by some of the best travel photographers in the business.</p><p><a href="http://www.lonelyplanetimages.com/" target="_blank" rel="external">Lonely Planet Images</a></p><p>Its Chinese collection is relatively small so far. Hmm hmm…</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="8月 31 2009" class="post-list__meta--date date">8月 31 2009</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2009/8/19/expecting-kent-beck-on-agile-china-2009/" title="link to Kent Beck发飙了，AgileChina 2009大有看头">Kent Beck发飙了，AgileChina 2009大有看头</a></h2>
 
       <p class="excerpt">
@@ -396,30 +420,6 @@ classes that you can use:
       <hr class="post-list__divider" />
     </li>
     
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2009/7/7/program-without-else/" title="link to 对象健身操：拒绝else">对象健身操：拒绝else</a></h2>
-
-      <p class="excerpt">
-        <p>（摘自《<a href="http://www.pragprog.com/titles/twa/thoughtworks-anthology" target="_blank" rel="external">ThoughtWorks文集</a>》，第6章，“对象健身操”）</p><p><strong>规则2. 拒绝else关键字</strong></p><p>每个程序员都熟知if/else结构。几乎每种语言都支持if/esle。简单的条件判断对于任何人来说都不难理解。不过大多数程序员也见识过令人眩晕的层层嵌套的条件判断，以及连绵数页的case语句。更糟糕的是，在现有的判断条件上加一个新的分支通常是非常容易的，而将它重构为一个更好的方式的想法却罕有人去提及。条件判断结构通常还是重复代码的来源。例如，状态标识经常会带来这样的问题：</p><pre>public static void endMe() {if (status == DONE) {doSomething();} else {// other code}}</pre><p>你有很多种方式重写这段代码，去掉else关键字。例如下面的代码：</p><pre>public static void endMe() {if (status == DONE) {doSomething();return;}// other code}public static Node head() {if (isAdvancing()) { return first; }else { return last; }}public static Node head() {return isAdvancing() ? first : last;}</pre><p>在上面的例子中，第二段代码由于使用了三元运算符，所以代码长度从四行压缩到了一行。需要小心的是，如果过度使用“提前返回”，代码的清晰度很快会降低。《设计模式》[GHJV95]一书中关于策略模式的部分里有一个实例，演示了如何使用多态避免根据状态进行分支选择的代码。如果这种根据状态进行分支选择的代码大量地重复，就应该考虑使用策略模式了。</p><p>面向对象编程语言给我们提供了一种更为强大的工具——多态。它能够处理更为复杂的条件判断。对于简单的条件判断，我们可以使用“卫语句”和“提前返回”替换它。而基于多态的设计则更容易阅读与维护，从而可以更清晰地表达代码的内在意图。但是，程序员要做出这样的转变并不是一帆风顺的。尤其是你的代码中可能早已充斥了else。所以，作为这个练习的一部分，你是不可以使用else的。在某些场景下可以使用<a href="http://en.wikipedia.org/wiki/Null_Object_pattern" target="_blank" rel="external">Null Object</a>模式，它会对你有所帮助。另外还有很多工具和技术都可以帮助你甩掉else。试一试，看你能提出多少种方案来？</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="7月 7 2009" class="post-list__meta--date date">7月 7 2009</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
   </ol>
 
   <hr class="post-list__divider " />
@@ -431,7 +431,7 @@ classes that you can use:
         
     
 
-    <span class="pagination__page-number">Page 31 of 54</span>
+    <span class="pagination__page-number">Page 31 of 55</span>
     
     
         <a class="older-posts pagination__older btn btn-small btn-tertiary" href="/archives/page/32/">Older Posts &rarr;</a>

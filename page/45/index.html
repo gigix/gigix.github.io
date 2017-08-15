@@ -174,6 +174,30 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2007/11/22/programming-distributed-erlang-applications-pitfalls-and-recipes-chinese-version/" title="link to Programming Distributed Erlang Applications- Pitfalls and Recipes (Chinese Version)">Programming Distributed Erlang Applications- Pitfalls and Recipes (Chinese Version)</a></h2>
+
+      <p class="excerpt">
+        <p>原文：<a href="http://delivery.acm.org/10.1145/1300000/1292527/p37-svensson.pdf?key1=1292527&amp;key2=8758891911&amp;coll=ACM&amp;dl=ACM&amp;CFID=15151515&amp;CFTOKEN=6184618" target="_blank" rel="external">Programming Distributed Erlang Applications: Pitfalls and Recipes</a></p><p>译文：<a href="http://erlang-china.org/WordPress/wp-content/uploads/2007/11/p37-svensson-cn.pdf" target="_blank" rel="external"><strong>编写分布式的Erlang程序：陷阱和对策</strong></a></p><p>为了在Erlang运行时系统基础上开发更可靠的分布式系统和算法，我们研究了Erlang编程语言中分布式的部分。使用Erlang，把一个运行在单个节点上的程序转换成完全分布式（运行在多个节点上）的应用程序可谓易如反掌（只需要修改对spawn函数的调用，使之在不同节点上产生进程）；但尽管如此，Erlang语言和API中仍然有一些阴暗的角落可能在引入分布式运算时带来问题。在本文中，我们将介绍几个这样的陷阱：在这些地方，取决于进程是否运行在同一个节点上，进程间通信的语义会有显著的差异。我们同时还提供了一些关于“编写安全的分布式系统”的指导原则。</p><p>更多Erlang文档见<a href="http://erlang-china.org/wiki/erlang-doc" target="_blank" rel="external">Erlang文档计划</a></p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="11月 22 2007" class="post-list__meta--date date">11月 22 2007</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2007/11/19/extended-process-registry-for-erlang/" title="link to Extended Process Registry for Erlang- Chinese Version">Extended Process Registry for Erlang- Chinese Version</a></h2>
 
       <p class="excerpt">
@@ -388,30 +412,6 @@ classes that you can use:
       <hr class="post-list__divider" />
     </li>
     
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2007/10/23/is-stackless-python-the-way/" title="link to Is Stackless Python THE Way?">Is Stackless Python THE Way?</a></h2>
-
-      <p class="excerpt">
-        <p>Code with<a href="http://www.stackless.com/" target="_blank" rel="external">Stackless Python</a></p><pre><code>## pingpong_stackless.py#import stacklessping_channel = stackless.channel()pong_channel = stackless.channel()def ping():while ping_channel.receive(): #blocks hereprint “PING”pong_channel.send(“from ping”)def pong():while pong_channel.receive():print “PONG”ping_channel.send(“from pong”)stackless.tasklet(ping)()stackless.tasklet(pong)()# we need to ‘prime’ the game by sending a start message# if not, both tasklets will blockstackless.tasklet(ping_channel.send)(‘startup’)stackless.run()</code></pre><p>And it runs…forever.</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="10月 23 2007" class="post-list__meta--date date">10月 23 2007</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
   </ol>
 
   <hr class="post-list__divider " />
@@ -423,7 +423,7 @@ classes that you can use:
         
     
 
-    <span class="pagination__page-number">Page 45 of 54</span>
+    <span class="pagination__page-number">Page 45 of 55</span>
     
     
         <a class="older-posts pagination__older btn btn-small btn-tertiary" href="/page/46/">Older Posts &rarr;</a>
