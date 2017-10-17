@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gigix.thoughtworkers.org/"/>
-  <updated>2017-08-23T13:51:00.000Z</updated>
+  <updated>2017-10-17T04:11:19.000Z</updated>
   <id>http://gigix.thoughtworkers.org/</id>
   
   <author>
@@ -14,6 +14,47 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>从海尔模式看数字化平台</title>
+    <link href="http://gigix.thoughtworkers.org/2017/10/17/haier-and-digital-platform/"/>
+    <id>http://gigix.thoughtworkers.org/2017/10/17/haier-and-digital-platform/</id>
+    <published>2017-10-17T05:01:00.000Z</published>
+    <updated>2017-10-17T04:11:19.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>关于数字化、网络化转型的目标，海尔的定义是：企业无边界、管理无领导、供应链无尺度。企业无边界，意味着要让全球第一流的资源进入海尔，并能够持续动态优化。管理无领导，即打破科层制组织，让员工与用户零距离连接，拥有自主权，快速响应市场，最终实现“无为而治”的最高境界。供应链无尺度，要探索按需设计、按需制造和按需配送的体系，实现从大规模制造向大规模定制的转变。</p>
+<p>与这个定义相对应的运营体系是人单合一管理模式，其中包括了顾客价值、自主经营体、日清体系和人单酬四个基本要素，分别体现了业务经营的目标、组织形态、工作方式、度量方法。对顾客价值负责的自主经营体，抢单进人、按单获酬，日常工作讲究日清日高，那么自主经营体必然就会进化为与顾客、与市场、与业务价值高度对齐的“双创小微”。</p>
+<p>双创小微具有驱动力强、响应灵活的优势，潜在的劣势则有两个方面：第一是小微目标与公司目标缺乏对齐、彼此之间形不成协作效应；第二是基础能力缺失或重复建设，不能保障服务交付的高效与高质量。经过多年的探索，海尔发现三层结构既能体现足够的控制，又能够维持各个系统自身的活力。所以，在海尔的自主经营体结构中，有三个层次的自主经营体，分别是一级经营体、二级经营体和三级经营体。</p>
+<p><img src="http://pic2.pedaily.cn/201609/20169680137734.jpg"></p>
+<ul>
+<li>一级经营体，又称为一线经营体，这些经营体直接面对顾客，为所负责的顾客群创造价值。</li>
+<li>二级经营体，又称为平台经营体，它们为一线经营体提供资源和专业的服务支持，包括人力资源管理、供应链、市场营销、质量体系、战略管理等，所以，平台经营体是一级经营体的资源平台、流程平台、专业化服务平台。</li>
+<li>三级经营体，又称为战略经营体，主要负责制定战略方向，解决内部的协同和发现新的市场机会，同时为经营体配置资源，帮助一级经营体和平台经营体达成目标。</li>
+</ul>
+<p>这个结构与1960年代英国控制论学家斯塔福·比尔提出的“<a href="https://en.wikipedia.org/wiki/Viable_system_model" target="_blank" rel="external">可生存系统模型</a>”有异曲同工之处。如果将可生存系统模型简化为“肌肉（系统1）-神经（系统2/3）-脑（系统4/5）”的三级，它的落地形态就会类似于海尔的三级自主经营体。</p>
+<p><img src="http://7xpvay.com1.z0.glb.clouddn.com/d04bd630-b32d-11e6-96cf-69a982993485"></p>
+<p>双创小微有三个基础：制度之基是用户体验交互制，人才之基是创业者，平台之基是云平台。云平台可以看作是二级经营体的IT替身：为了面向大量、变化频繁的小微（海尔8万多员工分为<a href="http://data.book.hexun.com/chapter-18474-2-7.shtml" target="_blank" rel="external">2千多个自主经营体</a>），为了跨越企业边界支持企业内外的创业者，平台经营体不可能再靠人工提供服务，必须以云平台的形式提供小微需要的资源和服务。</p>
+<p>于是人单合一管理模式就演变为一个创业平台模式，它包括一个主题和两个功能。海尔人单合一创业平台模式的主题是“人和机会的匹配”，即创业者和创业机会的匹配。为了服务这个主题，它有两个主要功能：创业机会的识别和创造（Opportunity Creation）和创业机会的转化和实现（Opportunity Capture）。前者聚焦于创业者如何把市场上的潜在需求转化和升级为消费者的实际需求，从而识别、发现或者创造出新的商业机会；后者则强调通过一系列机制设计、制度安排、创新策略等将战略机会进行转化，从而为消费者创造价值。</p>
+<p>基于机会创造和机会捕捉这两个功能，海尔交互与协同平台是人单合一管理模式最为重要的信息支持平台。海尔交互与协同平台包括6大系统：以顾客为主的虚实交互平台、开放式创新平台、供应链信息平台；以员工为主的电子损益表、电子人单酬表、信息化日清平台。</p>
+<p>用《<a href="https://book.douban.com/subject/27021779/" target="_blank" rel="external">智慧转型</a>》的框架来分析，这些系统帮助一线经营体获得4种能力，从而更好地为顾客创造价值：</p>
+<ol>
+<li>准确掌握顾客和市场需要的能力</li>
+<li>快速、高质量、低成本地交付顾客所需价值的能力</li>
+<li>基于数据了解并改进工作状态的能力</li>
+<li>通过受控实验快速验证创新的能力</li>
+</ol>
+<p><img src="https://brandleadership.files.wordpress.com/2016/02/5-domains-of-digital-transformation-diagram.png?w=398&h=308"></p>
+<p>在创业平台模式下，顾客、企业和员工都被重新定义。顾客被重新定义为“资源”，员工被重新定义为“创客”，企业则被重新定义为数字平台。在海尔组织中只有平台主、小微主和小微成员三类角色，小微成为为用户负责的独立运营主体，只有为用户创造价值才能获得报酬，充分享有决策权、用人权和分配权。小微和平台之间是市场结算关系，平台的报酬源自小微。从这个角度，海尔的组织变革不是简单的扁平化、跨部门和跨层级通道的建立，或者新设部门。海尔组织变革核心是在一流资源和用户之间架构起快速配置资源的平台，释放平台的同边和跨边网络价值。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;关于数字化、网络化转型的目标，海尔的定义是：企业无边界、管理无领导、供应链无尺度。企业无边界，意味着要让全球第一流的资源进入海尔，并能够持续动态优化。管理无领导，即打破科层制组织，让员工与用户零距离连接，拥有自主权，快速响应市场，最终实现“无为而治”的最高境界。供应链无尺度
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>毕业设计中使用敏捷方法的尝试</title>
@@ -868,54 +909,6 @@
     <summary type="html">
     
       &lt;p&gt;来自里格瓦尔村、6岁大的诗雅拉尔·雅达夫已经发烧和头疼三天了。当他的皮肤开始浮现病态的黄色，他的父母找了一个巫医来进行“jhar-phook”（把魔鬼的灵魂赶出孩童的身体）。然后他们又带着孩子去看了一个村里的无证医生，他给孩子打了一针，退烧效果维持了一天。第二天，诗雅拉尔的
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>2016年，读过的那些好故事</title>
-    <link href="http://gigix.thoughtworkers.org/2016/12/31/2016-readings/"/>
-    <id>http://gigix.thoughtworkers.org/2016/12/31/2016-readings/</id>
-    <published>2016-12-31T05:01:00.000Z</published>
-    <updated>2016-12-30T12:35:07.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>2016年是忙碌的一年。为了MBA毕业论文，大半年里所有的业余时间都被耗尽。好在总算功不唐捐，战胜了各种拖延症，写出一篇还算对得起自己的论文，同一个主题在QCon做了一次<a href="http://www.infoq.com/cn/presentations/explore-talent-strategy-in-the-digital-era" target="_blank" rel="external">演讲</a>。而且托<a href="https://www.douban.com/tag/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE/" target="_blank" rel="external">东野大神</a>的福，竟然还读了64本书，其中颇有不少打得出5星的好故事。</p>
-<p><img src="/assets/2016/12/30/books-reading.jpeg"></p>
-<h2 id="中国的故事"><a href="#中国的故事" class="headerlink" title="中国的故事"></a>中国的故事</h2><ul>
-<li><a href="https://book.douban.com/subject/25802944/" target="_blank" rel="external">大唐李白</a>（少年游、凤凰台、将进酒） - 既有精彩的故事，又有旖丽的文字，典故又多，读起来觉得身轻如燕。我唐啊，真是繁华瑰丽，美不胜收！</li>
-<li><a href="https://book.douban.com/subject/10471333/" target="_blank" rel="external">叫魂</a> - 重要的不在于那个事本身是什么，而在于当时的人是怎么看那个事，并从这个“怎么看”折射出当时的制度环境。方法真好！</li>
-<li><a href="https://book.douban.com/subject/25938605/" target="_blank" rel="external">天国之秋</a> - “这个故事说明了我们认为跨越文化与距离的联结有时其实我们虚构的东西。当我们庆幸终于看透将我们与另一个文明隔开的那扇阴暗的窗户，心喜于在另一边的阴影之间发现隐藏其中的类似形体时，有时我们不晓得自己只是在凝视我们自己的倒影。”</li>
-<li><a href="https://book.douban.com/subject/25773436/" target="_blank" rel="external">乱世潜流</a> - 罗大师一贯的风格，从时人眼光看当时事。讲辛亥到北洋一段时人的思想变迁，与《大波》放一起看，正是相映成趣。</li>
-</ul>
-<h2 id="外国的故事"><a href="#外国的故事" class="headerlink" title="外国的故事"></a>外国的故事</h2><ul>
-<li><a href="https://book.douban.com/subject/26698660/" target="_blank" rel="external">巨人的陨落</a> - 好像以前没有这种全球视野的演义小说吧？细节很靠谱。要是笔锋再好一点就能写成一战背景的冰与火之歌了。</li>
-<li><a href="https://book.douban.com/subject/2063579/" target="_blank" rel="external">古拉格群岛</a> - 本来只想给四星，但是当看到作者说“并不是什么人都宽恕，我只宽恕倒下的人”，就决定给他五星了。真实的信息有最大的力量。</li>
-<li><a href="https://book.douban.com/subject/25897763/" target="_blank" rel="external">周期表</a> - 漂亮的小故事，没有特别着意写奥斯维辛，可是那种深远的影响随处可见。</li>
-<li><a href="https://book.douban.com/subject/26606359/" target="_blank" rel="external">新自由主义简史</a> - 知道它的历史，才知道所谓“市场主导”、“自由至上”等观念是多么新鲜、多么人为。</li>
-<li><a href="https://book.douban.com/subject/5980471/" target="_blank" rel="external">生命如歌</a> - 震撼人心。强烈推荐所有对国际发展和全球医疗感兴趣的人看。</li>
-<li><a href="https://book.douban.com/subject/25836293/" target="_blank" rel="external">底特律</a> - 我们太习惯于经济的高速增长，以至于我们忘记了盛衰有时。一座曾经拥有上千万人口的城市如何衰落成不到70万人口，这是当代人几乎无法想象的幻景。</li>
-<li><a href="https://book.douban.com/subject/26724249/" target="_blank" rel="external">资本的终结</a> - 简洁的理论，清晰的数据，有力地阐释今天世界的种种现状。要多么努力地自我欺骗才能死守住自由主义经济学观点而不信这么明显的道理？正如齐泽克所说，freedom hurts。</li>
-</ul>
-<h2 id="虚构的故事"><a href="#虚构的故事" class="headerlink" title="虚构的故事"></a>虚构的故事</h2><ul>
-<li><a href="https://book.douban.com/subject/26286208/" target="_blank" rel="external">没有女人的男人们</a> - 虽说都是小故事，可是写得很真挚，而且致敬变形记那篇相当妙。</li>
-<li><a href="https://book.douban.com/subject/20390695/" target="_blank" rel="external">银河帝国</a>（8～12卷） - 什么机器人三定律，其实只是写好玩的本格推理可以用到的一组预设条件而已。幻想的前提条件用好了以后，写出来的本格推理小说果然严密又精彩，连悬疑感都写出来了。但是仍然不怎么喜欢“人类整体”这个概念…而且心理史学必须建立在心灵控制的基础上，这样合适吗？</li>
-<li><a href="https://book.douban.com/subject/25862578/" target="_blank" rel="external">解忧杂货店</a> - 很感人的小故事，而且结构很周密</li>
-<li><a href="https://book.douban.com/subject/3646172/" target="_blank" rel="external">恶意</a> - 写作手法真漂亮，不但推理层层推进，叙述的视角也不断切换，佳作。</li>
-<li><a href="https://book.douban.com/subject/26417643/" target="_blank" rel="external">歪笑小说</a> - 不剧透，不过最后一页的大反转可真是令人感动啊，满满的都是温情啊。</li>
-</ul>
-<h2 id="科技的故事"><a href="#科技的故事" class="headerlink" title="科技的故事"></a>科技的故事</h2><ul>
-<li><a href="https://book.douban.com/subject/26644070/" target="_blank" rel="external">凤凰项目</a> - 很棒的故事。可惜的是，最后那段介绍的持续交付，需要相当高的技术能力。所以，雇不起优秀的技术人才、玩不转docker的企业，就只能眼睁睁看着比自己强且敏捷的对手屠杀自己，毫无反抗可能性。</li>
-<li><a href="https://book.douban.com/subject/26702829/" target="_blank" rel="external">精益企业</a> - 套路非常清晰，材料非常齐全，Jez桑的集大成之作，IT驱动组织转型的必读</li>
-<li><a href="https://book.douban.com/subject/26107390/" target="_blank" rel="external">Cybernetic Revolutionaries</a> - 尝试用政治与技术的合力建设一个更公正的社会，这样的努力会打开很多新的可能性：技术的、知识的、政治的、等等。Cybersyn是重要的技术和历史遗产，即使它的宏大愿景从未实现。</li>
-<li><a href="https://book.douban.com/subject/3805815/" target="_blank" rel="external">控制论</a> - “预测一个消息的未来，就是用某种算符去运算这个消息的过去……最优预测问题的解决仅仅取决于要加以预测的时间序列的统计性质”——写于1948年，跪了。</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;2016年是忙碌的一年。为了MBA毕业论文，大半年里所有的业余时间都被耗尽。好在总算功不唐捐，战胜了各种拖延症，写出一篇还算对得起自己的论文，同一个主题在QCon做了一次&lt;a href=&quot;http://www.infoq.com/cn/presentations/explo
     
     </summary>
     

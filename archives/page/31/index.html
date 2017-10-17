@@ -179,6 +179,30 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2009/9/27/refactoring-and-design-in-a-real-world/" title="link to Refactoring And Design, In A Real World">Refactoring And Design, In A Real World</a></h2>
+
+      <p class="excerpt">
+        <p>Martin Fowler在《重构》里如是说：</p><blockquote>如果你选择重构，问题的重点就转变了。你仍然做预先设计，但是不必一定找出正确的解决方案。此刻的你只需要得到一个足够合理的解决方案就够了。你很肯定地知道，在实现这个初始解决方案的时候，你对问题的理解也会逐渐加深，你可能会察觉最佳解决方案和你当初设想的有些不同。只要有重构这项武器在手，就不成问题，因为重构让日后的修改成本不再高昂。</blockquote><p>如果做设计的人和写程序的人不是同一帮人，如果写程序的这帮人好不容易学会了写程序然后就会被拉到另一个再也不写程序的位置上，好吧，我们还怎么使用重构这把利器？</p><p>对此，我比较悲观。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="9月 27 2009" class="post-list__meta--date date">9月 27 2009</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2009/9/19/preface-of-tw-anthology/" title="link to 《ThoughtWorks文集》中译本序">《ThoughtWorks文集》中译本序</a></h2>
 
       <p class="excerpt">
@@ -378,30 +402,6 @@ classes that you can use:
 
       <p class="excerpt">
         <p>今天是怎么回事呢？</p><p>除了奇怪的天气和奇怪的事情之外，一打开豆瓣又看到某老师为了推销主打书竟然赤膊上阵连五毛行径也用上了。</p><p>上次建议豆瓣给投票加上权重时，真没有想到会有如此不爱惜羽毛的老师呢。</p><p>风说，利欲熏心这个熏字很形象。范进中举，教给猪油蒙了心。</p><p>博之以文，还得约之以礼不是？</p><p>子曰，见贤思齐，见不贤而内自省。</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="7月 17 2009" class="post-list__meta--date date">7月 17 2009</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2009/7/17/move-to-multi-threaded-rails/" title="link to Move To Multi-threaded Rails">Move To Multi-threaded Rails</a></h2>
-
-      <p class="excerpt">
-        <p>When doing performance in local box, we found that requests are waiting to be processed due to Railsissingle-threaded by default. We changed the configuration to enable multi-threaded mode as describedin this blogentry:</p><p><a href="http://m.onkey.org/2008/10/23/thread-safety-for-your-rails" target="_blank" rel="external">Thread safety for your Rails</a></p><p>(also refer to<a href="http://guides.rubyonrails.org/2_2_release_notes.html#thread-safety" target="_blank" rel="external">Rails 2.2 releasenotes</a>)</p><p>The most important change was to eager-load /lib directory, and thus move libraries for test out ofit.</p><blockquote>config.threadsafe! also disables automatic loading by ActiveSupport::Dependencies.Alternatively, youcan just add lib/ directory to eager load paths. The following inside production.rb will do that :<pre>config.eager_load_paths  “#{RAILS_ROOT}/lib”</pre></blockquote><p>We had some rough tests to ensure the functionality is not broken. Multi-threaded mode also mightrequire morememory than single-threaded mode. Still keep testing.</p>
       </p>
 
       <div class="post-list__meta">
