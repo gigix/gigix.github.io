@@ -179,6 +179,30 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2013/7/13/how-we-promote-innovations/" title="link to 我们如何对外推广创新成果">我们如何对外推广创新成果</a></h2>
+
+      <p class="excerpt">
+        <p>在向企业外部的行业社区进行推广时，内容的组织就显得尤为重要。常见的对外推广的渠道有微博、博客、公开演讲、文章、书籍等，这里不必赘述每种渠道的特点，反而值得指出这些渠道的相关性：实际上，有机地用好这些渠道，有助于组织作者的思路和获得反馈，从而获得更好的内容。</p><p>个人而言，当一个内容结构在我脑海中出现时，我会快速地在<a href="http://weibo.com/2091571657/zAs9hcFs5" target="_blank" rel="external">微博</a>上把它写出来。140字的限制恰好有助于我厘清最核心的要素，从而形成一个可以在30秒内讲出来的电梯演说（elevator pitch），随时可以跟任何人介绍我的想法。随后我会用<a href="http://gigix.thoughtworkers.org/assets/2013/6/16/%E6%89%93%E9%80%A0%E5%88%9B%E6%96%B0%E5%9E%8B%E7%BB%84%E7%BB%87.png">脑图</a>把内容结构整理出来 ，再用一篇不超过2000字的博客来阐述这个结构 ，其中只有最简单的介绍，不做任何展开。<a href="http://gigix.thoughtworkers.org/2013/6/16/building-innovative-organization">这样一篇博客</a>已经足以唤起有类似痛点的读者的共鸣，他们会给作者提供反馈。</p><p>随后，作者就可以把这篇博客交给媒体——包括在线媒体和印刷媒体——的编辑，看这个内容对他们是否有吸引力。如果某个媒体愿意发表这样一篇文章，就可以根据该媒体的特点在内容骨架的基础上增加阐述和实例，形成一篇文章并发表。与此同时，基于同样的内容骨架，作者也可以做出一份演讲稿，写文章时用到的阐述和实例即可填到PPT的“演说者备注”当中。于是当文章完成时（实际上，通常在文章完成之前），你就会得到一个结构严整内容丰富的演讲稿，到各种有影响力的行业会议（例如InfoQ举办的QCon）去提交你的演讲话题吧。</p><p>在<a href="https://github.com/dreamhead/moco" target="_blank" rel="external">Moco</a>这个例子上，我们做的还不止这些。在InfoQ中文站发表了<a href="www.infoq.com/cn/articles/enterprise-systems-integration-points">一篇文章</a>之后，为了让客户看懂，ThoughtWorks成都的两位同事银大伟和崔鹏飞把这篇文章翻译成了英文，随后我们意识到：这篇英文的文章同样可以发表。于是我们又联系了InfoQ全球主站的编辑，向他们投稿，并且再次被采用了。经过几轮反馈和修改，<a href="http://www.infoq.com/articles/testing-enterprise-integration" target="_blank" rel="external">这篇文章</a>在InfoQ全球主站发表了。我们还提名Moco参加Oracle主办的<a href="https://www.java.net//dukeschoice/china" target="_blank" rel="external">“Duke选择奖”</a>（Duke’s Choice），并最终获奖。至此，Moco已经由一个籍籍无名的内部创新变成了具有较大业界影响力的开源项目。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="7月 13 2013" class="post-list__meta--date date">7月 13 2013</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2013/7/8/why-you-should-read-sicp/" title="link to 为什么大家都应该读SICP">为什么大家都应该读SICP</a></h2>
 
       <p class="excerpt">
@@ -380,30 +404,6 @@ classes that you can use:
       <div class="post-list__meta">
 
         <time datetime="3月 27 2013" class="post-list__meta--date date">3月 27 2013</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2013/3/8/javaee-best-practices-2/" title="link to 都是为了半夜能提交（二）">都是为了半夜能提交（二）</a></h2>
-
-      <p class="excerpt">
-        <p>项目里会集成外部的web services，怎么测试？当然最不费脑子的做法就是假装它没什么特别，该怎么写测试还怎么写测试。但这么做的结果就是一大堆测试都会真的去调用webservices，并且至少造成这么几个问题：</p><ol><li><strong>测试慢</strong>。带着web services跑测试，测试的速度会降低好几个数量级。</li><li><strong>测试不稳定</strong>。一旦有个service挂掉，你自己的build就会跟着挂掉。</li><li><strong>测试不易重复</strong>。比如有个service是用来创建用户的，你怎么办？每次跑build创建一个新用户？还是创建完马上删掉？如果删除出错怎么办？</li></ol><p>所以这是不行的。</p><p>我们先站在集成点外来看其他程序怎么使用集成点。显然最终我们会把一个web service包装成一个Java方法。比如“创建用户”这个service最终会体现成这样：</p><blockquote>public interface IdentityService {<br>void createUser(Customer customer);<br>…</blockquote><p>那么使用这个service的所有代码都应该通过<a href="http://martinfowler.com/articles/injection.html" target="_blank" rel="external">依赖注入</a>得到实现IdentityService接口的一个对象，因此这些地方的测试可以很简单地注入一个mock的IdentityService对象，不需要依赖真正的webservice。主要需要看的，还是集成点内部的测试。</p><p>集成点内（也就是IdentityService.createUser的实现）实际上有以下几部分逻辑：</p><ol><li><strong>确定服务地址</strong>。不同的服务方法通常位于不同的URL、接受不同的HTTP方法（GET、POST或PUT）。</li><li><strong>参数转换</strong>。把方法参数转换成service需要的参数，可能是（但不限于）XML文档或URL参数。</li><li><strong>执行网络访问</strong>。朝向步骤（1）确定的服务地址，发送步骤（2）得到的参数，拿回一个HTTP应答。</li><li><strong>解析HTTP应答</strong>。HTTP应答通常包含两部分：HTTP状态码（例如“200<span class="caps">SUCCESS</span>”或者“404<span class="caps">NOT FOUND</span>”），以及应答正文（不一定有），有时还会在HTTP头或者Cookie中携带信息。要把这些信息转换成服务方法调用的结果（函数返回值、给参数传入的对象填充值、或者抛出异常）。</li></ol><p>可以看到，真正与外部web services打交道的其实只有步骤（3）而已。并且步骤（3）所需的程序基本上可以简化地描述为：</p><blockquote>public class EndPoint {<br>public Response get(String url);<br>public Response post(String url, String requestBody);<br>public Response put(String url, String requestBody);<br>}</blockquote><p>如此而已。其中Response类包含以下信息：</p><blockquote>class Response {<br>private int statusCode;<br>private String body;</blockquote><p>请注意：从EndPoint的方法签名可以看到，这里的方法与真实的web services的请求/应答格式是<strong>毫无关系</strong>的。它所做的就是朝一个URL发送一个请求、拿回应答。至于请求正文是什么格式、应答正文是什么格式、是XML还是JSON，它<strong>完全不关心</strong>。换句话说，对唯一的这个产生网络访问的类的测试，第一不需要访问真正的web services，第二不需要考虑真正web services的请求/应答协议格式。这个发现对于我们的测试策略非常有价值。</p><p><em>（今天讲了集成点的结构，并着重考察了需要执行网络访问的EndPoint类。下一篇就开始讲测试策略。）</em></p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="3月 8 2013" class="post-list__meta--date date">3月 8 2013</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">

@@ -179,6 +179,30 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2013/3/8/javaee-best-practices-2/" title="link to 都是为了半夜能提交（二）">都是为了半夜能提交（二）</a></h2>
+
+      <p class="excerpt">
+        <p>项目里会集成外部的web services，怎么测试？当然最不费脑子的做法就是假装它没什么特别，该怎么写测试还怎么写测试。但这么做的结果就是一大堆测试都会真的去调用webservices，并且至少造成这么几个问题：</p><ol><li><strong>测试慢</strong>。带着web services跑测试，测试的速度会降低好几个数量级。</li><li><strong>测试不稳定</strong>。一旦有个service挂掉，你自己的build就会跟着挂掉。</li><li><strong>测试不易重复</strong>。比如有个service是用来创建用户的，你怎么办？每次跑build创建一个新用户？还是创建完马上删掉？如果删除出错怎么办？</li></ol><p>所以这是不行的。</p><p>我们先站在集成点外来看其他程序怎么使用集成点。显然最终我们会把一个web service包装成一个Java方法。比如“创建用户”这个service最终会体现成这样：</p><blockquote>public interface IdentityService {<br>void createUser(Customer customer);<br>…</blockquote><p>那么使用这个service的所有代码都应该通过<a href="http://martinfowler.com/articles/injection.html" target="_blank" rel="external">依赖注入</a>得到实现IdentityService接口的一个对象，因此这些地方的测试可以很简单地注入一个mock的IdentityService对象，不需要依赖真正的webservice。主要需要看的，还是集成点内部的测试。</p><p>集成点内（也就是IdentityService.createUser的实现）实际上有以下几部分逻辑：</p><ol><li><strong>确定服务地址</strong>。不同的服务方法通常位于不同的URL、接受不同的HTTP方法（GET、POST或PUT）。</li><li><strong>参数转换</strong>。把方法参数转换成service需要的参数，可能是（但不限于）XML文档或URL参数。</li><li><strong>执行网络访问</strong>。朝向步骤（1）确定的服务地址，发送步骤（2）得到的参数，拿回一个HTTP应答。</li><li><strong>解析HTTP应答</strong>。HTTP应答通常包含两部分：HTTP状态码（例如“200<span class="caps">SUCCESS</span>”或者“404<span class="caps">NOT FOUND</span>”），以及应答正文（不一定有），有时还会在HTTP头或者Cookie中携带信息。要把这些信息转换成服务方法调用的结果（函数返回值、给参数传入的对象填充值、或者抛出异常）。</li></ol><p>可以看到，真正与外部web services打交道的其实只有步骤（3）而已。并且步骤（3）所需的程序基本上可以简化地描述为：</p><blockquote>public class EndPoint {<br>public Response get(String url);<br>public Response post(String url, String requestBody);<br>public Response put(String url, String requestBody);<br>}</blockquote><p>如此而已。其中Response类包含以下信息：</p><blockquote>class Response {<br>private int statusCode;<br>private String body;</blockquote><p>请注意：从EndPoint的方法签名可以看到，这里的方法与真实的web services的请求/应答格式是<strong>毫无关系</strong>的。它所做的就是朝一个URL发送一个请求、拿回应答。至于请求正文是什么格式、应答正文是什么格式、是XML还是JSON，它<strong>完全不关心</strong>。换句话说，对唯一的这个产生网络访问的类的测试，第一不需要访问真正的web services，第二不需要考虑真正web services的请求/应答协议格式。这个发现对于我们的测试策略非常有价值。</p><p><em>（今天讲了集成点的结构，并着重考察了需要执行网络访问的EndPoint类。下一篇就开始讲测试策略。）</em></p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="3月 8 2013" class="post-list__meta--date date">3月 8 2013</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2013/3/6/javaee-best-practices/" title="link to 都是为了半夜能提交（一）">都是为了半夜能提交（一）</a></h2>
 
       <p class="excerpt">
@@ -382,31 +406,6 @@ classes that you can use:
       <div class="post-list__meta">
 
         <time datetime="12月 1 2012" class="post-list__meta--date date">12月 1 2012</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2012/11/27/adaptivity-matters/" title="link to 生于忧患，死于安乐">生于忧患，死于安乐</a></h2>
-
-      <p class="excerpt">
-        <p></p><p>最近在读这本《<a href="http://book.douban.com/subject/6915733/" target="_blank" rel="external">What Matters Now</a>》。其中“Adaptivity Matters”这一段看得我如芒在背。直接把几段有感触的话抄过来。</p><p><img src="http://img3.douban.com/lpic/s8090342.jpg" alt=""></p><blockquote>在一个动态的经济体中，有任何理由该关心某家公司是死是活吗？或者换个问题，组织的长寿对于股东、员工、顾客或是整个社会有任何实在的价值吗？如果你相信自由市场的力量，你的答案很可能是“不”。</blockquote><blockquote>当一个组织死亡时，通常都是自杀。那些做过（和没有做）的决定使组织不再适应明天的世界。</blockquote><blockquote>随着企业的成长，它的注意力会从创新转到改进，从探索新世界转到榨取现有价值。纪律、聚焦、对齐等词汇会走到舞台中央。年复一年的改善催生效率极高、极度优化的商业体系，资产、技能和流程变得更加专用。大刀阔斧的改变被渐进的小修小补取代。所有这些，从效率的角度来看都很好，但它们会扼杀适应性。</blockquote><blockquote>视而不见，找理由，掩盖，终于不得不直面。面对组织出现的问题，管理者们总是重复这样的行为模式，就像面对家庭问题时一样。</blockquote><blockquote>为了度过动荡时期，组织必须变得更加无组织无管理——更少的结构，更少的层级，更少的规矩。</blockquote><blockquote>只有两件事可以让我们抛弃积习：一场灾难，残酷无情地暴露我们的短视；或是一个如此吸引人、如此跳脱现实的使命，迫使我们重新思考所有即成的实践。</blockquote><blockquote>面对加速变化的世界，大企业所能做的最好的抉择就是：把大一统的业务拆分成更小、更独立的单元，给每个小单元有挑战性的成长目标，激进地将资源重新配置到快速成长的领域，关闭成长放缓的单元，迫使每个小单元想尽办法寻找新的差异点。</blockquote><blockquote>说到底，究竟是什么让一家企业具有（或不具有）适应性？需要关注三种不同形式的灵活性：思想灵活性，策略灵活性，以及结构灵活性。</blockquote><p></p>
-
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="11月 27 2012" class="post-list__meta--date date">11月 27 2012</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">
