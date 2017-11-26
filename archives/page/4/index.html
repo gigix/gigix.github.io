@@ -179,6 +179,108 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2016/8/4/machine-learning-introductions/" title="link to 机器学习：概述">机器学习：概述</a></h2>
+
+      <p class="excerpt">
+        <p>本文摘录了一组关于机器学习的介绍文章，帮助非技术性的读者快速了解机器学习的目的、原理和用途。</p>
+<p><img src="/assets/2016/8/4/ml.jpg"></p>
+<h2 id="为什么要机器学习？"><a href="#为什么要机器学习？" class="headerlink" title="为什么要机器学习？"></a>为什么要机器学习？</h2><p>机器学习有望解决传统企业软件解决方案的很多问题。首先，在传统企业软件中，数据的质量受限于人类的输入。然而现实是，大部分销售不喜欢更新CRM系统中的数据，真正的销售数据只存在于若干电话会议与数字表格中。同时，传统的企业系统大多构建于关系型数据库上，而关系型数据库并不善于表现信息的时间轴视图，因此大多数企业需要依赖于庞大的数据仓库来不断接收来自企业系统的数据转储。使用这种方法，业务人员必须等待几周甚至几个月才能从数据团队得到有用的洞见。最后，传统的企业系统依赖于成千上万人定的规则，而这些规则是静态的，在业务发展的过程中会逐渐失效。</p>
+<p><em>（来源：Crunch Network | <a href="https://techcrunch.com/2015/07/27/the-next-wave-of-enterprise-software-powered-by-machine-learning/" target="_blank" rel="external">The Next Wave Of Enterprise Software Powered By Machine Learning</a>）</em></p>
+<p>机器学习的发展可以分作三个阶段：机器学习1.0是“描述”（description），2.0是“预测”（prediction），3.0是“对策”（prescription）。今天的CxO们大约不用太操心“描述”阶段，大多数企业已经拥有对应的IT系统。眼下他们迫切需要拥抱“预测”阶段。今天的科技不仅能让业务人员查看历史数据，而且能预测未来的行为和结果。</p>
+<p><em>(来源：McKinsey | <a href="http://www.mckinsey.com/industries/high-tech/our-insights/an-executives-guide-to-machine-learning" target="_blank" rel="external">An executive’s guide to machine learning</a>)</em></p>
+<h2 id="机器学习如何工作？"><a href="#机器学习如何工作？" class="headerlink" title="机器学习如何工作？"></a>机器学习如何工作？</h2><p>简单说，机器学习是一类自我改进的算法。计算机从一个模型开始，用试错法反复训练这个模型，然后就可以做出预测，例如预测某一笔金融交易有多大风险。以侦测信用卡欺诈的机器学习算法为例，首先要用大量真实持卡人的交易记录来训练这个模型，并根据历史记录对模型调优。接下来，信用卡交易就会实时地流过这个算法模型，算法模型则对每条交易记录生成一个概率数据，代表该笔交易涉及欺诈的可能性（例如97%）。如果欺诈侦测系统被配置为阻止欺诈概率95%以上的交易，那么这个评估值就会引发POS机拒收这张信用卡。</p>
+<p>在判断交易是否欺诈时，机器学习算法会考虑很多因素：商家的可信度、持卡人的购买行为、时间、地点、IP地址等等。数据点越多，预测就会越准确。人类不可能在几分之一秒内评估几千个数据点，只有自动化的算法能让实时的欺诈侦测成为可能。</p>
+<p><em>（来源：The Conversation | <a href="https://theconversation.com/machine-learning-and-big-data-know-it-wasnt-you-who-just-swiped-your-credit-card-48561" target="_blank" rel="external">Machine learning and big data know it wasn’t you who just swiped your credit card</a>）</em></p>
+<p>机器学习与传统的数据统计有一个重要的区别：使用机器学习时，我们并不关心因果性（causality）。我们可能并不关心什么变化造成什么结果，而是聚焦于预测：只要有一个模型能在当前环境下给出准确的判断就行。可以参考我们如何使用天气预报：天气预报并不告诉我们降雨的原理，只告诉我们下雨的概率，我们参照这个概率判断是否应该带伞出门。机器学习也是一样：个性化推荐就是对人们偏好的预测，尽管并不知道人们为什么喜欢这些东西，但这种预测是有用的。习惯了这个思维方式以后，机器学习的价值就会显而易见。</p>
+<p><em>（来源：HBR | <a href="https://hbr.org/2015/07/what-every-manager-should-know-about-machine-learning" target="_blank" rel="external">What Every Manager Should Know About Machine Learning</a>）</em></p>
+<h2 id="机器学习用来干嘛？"><a href="#机器学习用来干嘛？" class="headerlink" title="机器学习用来干嘛？"></a>机器学习用来干嘛？</h2><p><img src="/assets/2016/8/4/tata.png"><br><em>（来源：Tata Consultancy Services | <a href="http://www.tcs.com/SiteCollectionDocuments/White%20Papers/Machine-Learning-Analytics-in-Manufacturing-0714-1.pdf" target="_blank" rel="external">Using Big Data for Machine Learning Analytics in Manufacturing</a>）</em></p>
+<p>在银行里应用机器学习技术提供个性化服务：</p>
+<ul>
+<li>基于顾客的信用卡/银行卡使用模式给出推荐；</li>
+<li>基于顾客在特定产品/网站上的行为给出推荐；</li>
+<li>预测顾客下一步可能的消费行为；</li>
+<li>如果顾客错过了航班，预测他们立即的需要；</li>
+<li>向顾客推荐有折扣的商品、餐馆、酒吧等；</li>
+<li>根据顾客的还款周期及时推送时尚信息</li>
+</ul>
+<p><em>（来源：Kathiravan Manoharan | <a href="http://tinyurl.com/hcgkkzc" target="_blank" rel="external">Applications of Machine Learning Algorithms in Banking</a>）</em></p>
+<p>应用在金融服务领域，机器学习算法可以揭示新的消费模式、识别未知的交互方式、发现新的顾客群体、获得新的洞见，从而助力银行的全渠道建设。</p>
+<p><em>（来源：Strands Finance | <a href="http://blog.strands.com/machine-learning-pfm-magic" target="_blank" rel="external">Transparent technology: How machine learning brings magic to next-generation PFM</a>）</em></p>
+<p>我们调查了168家年收入5亿美元以上企业的执行官，76%表示机器学习可以通过从大数据中持续学习和优化给销售人员的实时推荐而带来销售增长。超过4成的企业已经开始在销售与市场领域实施机器学习。我们的研究显示，大企业在销售流程中应用机器学习有三个维度：首先是提供数据和流程的可见性，使销售过程更加科学；另外是在销售与市场环境中开展更多数据驱动的实验；第三是通过自动化事务性流程来最大化实际销售活动的时间占比。</p>
+<p>在采用机器学习之前，决策的主要依据是静态的数据库、针对历史数据的分析、经验和直觉。机器学习可以用实时数据来驱动决策，并且持续改进预测质量。假说可以快速被提出、测试、调整、并最终用于改进工作流程。在我们的调查中，接近80%的企业认为机器学习显著提升了销售关键绩效指标。</p>
+<p><em>（来源：Sloan Review | <a href="http://sloanreview.mit.edu/article/sales-gets-a-machine-learning-makeover/" target="_blank" rel="external">Sales Gets a Machine-Learning Makeover</a>）</em></p>
+<p><img src="/assets/2016/8/4/yandex.png"><br><em>（来源：<a href="https://yandexdatafactory.com/industries/retail/" target="_blank" rel="external">Yandex Data Factory</a>）</em></p>
+<p>麦肯锡使用机器学习算法扫描超过1万份应聘者简历，预测出来的招聘结果与真实结果高度相关。有趣的是，机器学习算法接受了比真实招聘略多的女性应聘者，也许将来技术可以有效地消除人类面试官隐藏的偏见。</p>
+<p><em>(来源：McKinsey | <a href="http://www.mckinsey.com/industries/high-tech/our-insights/an-executives-guide-to-machine-learning" target="_blank" rel="external">An executive’s guide to machine learning</a>)</em></p>
+
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="8月 4 2016" class="post-list__meta--date date">8月 4 2016</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2016/7/21/comparing-deep-blue-alphago/" title="link to 深蓝与AlphaGo的对比">深蓝与AlphaGo的对比</a></h2>
+
+      <p class="excerpt">
+        <p>20年前，深蓝与卡斯帕罗夫的对弈使人工智能进入大众视野；20年后，AlphaGo对李世乭的压倒性胜利再次使人工智能成为热议焦点。同样是战胜了棋类世界冠军，两代人工智能最重要的差别在于：深蓝仍然是专注于国际象棋的、以暴力穷举为基础的特定用途人工智能，而AlphaGo是几乎没有特定领域知识的、基于机器学习的、高度通用的人工智能。这一区别决定了深蓝只是一个象征性的里程碑，而AlphaGo则更具实用意义。</p>
+<p><img src="/assets/2016/7/21/AI.png"></p>
+<h2 id="深蓝的算法"><a href="#深蓝的算法" class="headerlink" title="深蓝的算法"></a>深蓝的算法</h2><p>整体而言，深蓝是一套专用于国际象棋的硬件，大部分逻辑是以“象棋芯片”（Chess Chip）的形式用电路实现的。在象棋芯片之上，有较少量的软件负责调度与一些高阶功能。</p>
+<p>深蓝算法的核心是基于暴力穷举：生成所有可能的走法，然后执行尽可能深的搜索，并不断对局面进行评估，尝试找出最佳走法。深蓝的象棋芯片包含三个主要的组件：走棋模块（Move Generator），评估模块（Evaluation Function），以及搜索控制器（Search Controller）。各个组件的设计都服务于“优化搜索速度”这一目标。</p>
+<p>走棋模块负责生成可能的走法。走棋模块的核心是一个8*8的组合逻辑电路阵列，代表棋盘的64个格子。国际象棋的走棋规则以硬件电路的方式嵌入到阵列之中，因此走棋模块可以给出合法的走法。在核心之外还有附加的逻辑电路用于探测和生成特殊走法（例如“吃过路兵”和“王车易位”）。</p>
+<p>评估模块是整个芯片中最主体的部分，占据了芯片上2/3的面积、超过半数的逻辑三极管和80%以上的存储三极管。评估模块又分为三个部分：棋子位置评估；残局评估；以及慢速评估。棋子位置评估对盘面上所有棋子当前所处的位置计分，不同棋子处于不同位置的分值由软件预先计算好后写入硬件。芯片中输入了大约8000种不同的“模式”，并针对每种模式赋予了一定的分值。残局评估也预存了一系列专门针对残局的估值规则，例如“王在棋盘中央有利”（King centralization bonus）的规则。残局评估子模块还以8*8组合逻辑电路阵列的形式跟踪所有兵所处的位置，并计算兵是否越过了对方的王、是否能一路冲到对方底线晋级。由于逻辑嵌入在硬件中，棋子位置评估和残局评估都只需要一个时钟周期就可以完成计算。</p>
+<p>慢速评估子模块是整个芯片上最复杂的元素，占据芯片上约一半的面积，并且完成计算需要10个时钟周期。大量国际象棋特有的逻辑都在慢速评估的过程中计算，包括：</p>
+<blockquote>square control, pins, xrays, king safety, pawn structure, passed pawns, ray control, outposts, pawn majority, rook on the 7th, blockade, restraint, color complex, trapped pieces, development and so on</blockquote>
+
+<p>搜索控制器实现了一个最小窗口alpha-beta搜索算法（minimum-window alpha-beta search algorithm)，也称为alpha-beta剪枝算法，能快速削减搜索的规模。</p>
+<p>深蓝的软件也是专门设计用于与硬件协同工作的。软件部分负责调度最多32个象棋芯片并行搜索，并负责对大范围规划的局面进行软件评估。深蓝的软件还连接了“仅剩5子”的残局数据库，一旦出现仅剩5子的残局，就会直接从这个数据库中搜索最佳走法。软件中还包含了从30万局棋中抽取出来的开局书，并且工程师还不断优化其中记录的开局走法。</p>
+<h2 id="AlphaGo的算法"><a href="#AlphaGo的算法" class="headerlink" title="AlphaGo的算法"></a>AlphaGo的算法</h2><p>AlphaGo是一个能够运行在通用硬件之上的纯软件程序。据称其中<a href="http://www.theverge.com/circuitbreaker/2016/5/19/11716818/google-alphago-hardware-asic-chip-tensor-processor-unit-machine-learning" target="_blank" rel="external">部分程序使用了TensorFlow</a>。</p>
+<p>AlphaGo的核心算法基于机器学习。在训练的第一阶段，AlphaGo仅仅根据彼此无关的盘面信息模仿专家棋手的走法。通过3000万个盘面数据训练一个13层的监督式策略网络，这个神经网络随后就能以超过50%的精度预测人类专家的落子。值得注意的是，在这一阶段，AlphaGo对于围棋规则一无所知，只是毫无目的地模仿而已。尽管如此，由于违反规则的走法（例如“自杀”）专家棋手不会走出，所以AlphaGo也相当于学会了遵守围棋规则。</p>
+<p>在训练的第二阶段，AlphaGo开始与自己下棋：将过往训练迭代中的策略网络与当前的策略网络对弈，并将对弈过程用于自我强化训练。在这一阶段，引入了唯一的围棋规则：对获胜的棋局加以奖励。经过这一阶段的训练，AlphaGo已经超过所有围棋软件，对弈当时最强的开源围棋软件Pachi可以达到85%胜率。</p>
+<p>在训练的第三阶段，AlphaGo在自我对弈中，从不同棋局中采样不同位置生成3000万个新的训练数据，用以训练局面评估函数。经过三阶段训练的策略网络被混和进蒙特卡洛树搜索算法，从而在比赛进行过程中预测棋局未来可能的发展方式、并对各种可能的未来局面进行评估。</p>
+<p>在整个算法中，只有“获胜”这个概念作为围棋规则被输入训练过程，除此之外AlphaGo对于围棋规则一无所知，更没有高级围棋专门概念（例如“定式”）。尤其是第一阶段的训练，完全基于简单的盘面信息训练达到相当可观的预测效果，这一过程在很多需要“预测”这一功能的领域具有显著的意义。</p>
+<h2 id="规模与复用"><a href="#规模与复用" class="headerlink" title="规模与复用"></a>规模与复用</h2><p>深蓝的一枚象棋芯片包含大约1百万个三极管，其中逻辑三极管45万个、存储三极管55万个。该芯片采用0.6微米CMOS技术，主频30～40兆赫。1997年与卡斯帕罗夫对弈并获胜的深蓝II是一台30个节点的RS/6000超级计算机，每个节点上部署16枚象棋芯片，共计480枚象棋芯片并发。由于内嵌大量国际象棋专用逻辑、且采用硬件方式实现，深蓝对于IBM后续的人工智能（例如Watson）并无太多可复用性。</p>
+<p>AlphaGo使用的硬件则要强大得多。与李世乭对弈的分布式版本使用了1920颗CPU和280颗GPU，并且据称该版本的AlphaGo<a href="http://www.theverge.com/circuitbreaker/2016/5/19/11716818/google-alphago-hardware-asic-chip-tensor-processor-unit-machine-learning" target="_blank" rel="external">已经使用了Google自制的“张量处理单元”</a>（TPU）。Google宣称这种芯片专门针对TensorFlow优化，其计算效率比GPU高出一个数量级。由于几乎不包含领域特定知识、且运行于通用硬件基础上，AlphaGo的软件据信非常简单（<a href="https://github.com/Rochester-NRT/RocAlphaGo" target="_blank" rel="external">一个开源项目</a>仅用约1200行代码就实现了AlphaGo的核心算法），且其中大部分算法可以解决用于其它领域的机器学习问题。</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li>Campbell, M., Hoane Jr., a. J., &amp; Hsu, F. (2002). Deep Blue. <em>Artificial Intelligence</em>, 134(1-2), 57–83.</li>
+<li>Ferrucci, D., Brown, E., Chu-Carroll, J., Fan, J., Gondek, D., Kalyanpur, A. a., … Welty, C. (2010). Building Watson: An Overview of the DeepQA Project. <em>AI Magazine</em>, 31(3), 59–79.</li>
+<li>Hsu, F., Campbell, M., &amp; Hoane, J. (1995). Deep Blue system overview. In <em>ICS ’95: Proceedings of the 9th international conference on Supercomputing</em> (pp. 240–244). </li>
+<li>Silver, D., Huang, A., Maddison, C. J., Guez, A., Sifre, L., van den Driessche, G., … Hassabis, D. (2016). Mastering the game of Go with deep neural networks and tree search. <em>Nature</em>, 529(7587), 484–489. </li>
+</ul>
+
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="7月 21 2016" class="post-list__meta--date date">7月 21 2016</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2016/6/11/evil-technology/" title="link to 程序员统治的黑暗世界">程序员统治的黑暗世界</a></h2>
 
       <p class="excerpt">
@@ -519,81 +621,6 @@ classes that you can use:
       <div class="post-list__meta">
 
         <time datetime="12月 16 2015" class="post-list__meta--date date">12月 16 2015</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2015/12/7/small-data-theory-architecture/" title="link to 小数据：理论和架构">小数据：理论和架构</a></h2>
-
-      <p class="excerpt">
-        <p>大数据是当下最热门的IT主题之一。据<a href="http://www.mckinsey.com/insights/business_technology/big_data_the_next_frontier_for_innovation" target="_blank" rel="external">麦肯锡的分析</a>，大数据能使信息更透明、能让决策者获得更精确翔实的绩效信息、能针对客户群体提供更准确的定制、能提升组织决策能力、能帮助开发下一代产品和服务。新时代里与互联网联结的组织不论大小，都需要这些能力。</p>
-<p>然而与此同时，大数据的“大”并非适用于所有组织。Gartner认为，<a href="http://www.forbes.com/sites/gartnergroup/2013/03/27/gartners-big-data-definition-consists-of-three-parts-not-to-be-confused-with-three-vs/" target="_blank" rel="external">大数据具有“3V”的特征</a>：多样性（Variety），数据来自多种不同来源、具有多种不同形态；速度（Velocity），数据形态和呈现形式的变化快且频繁；量级（Volume），数据量非常巨大。然而对于众多的中小型企业及非营利组织而言，这三个特征有两个未必适用。很多中小型组织只有为数不多的几个IT系统，数据都保存在为数不多的几个关系型数据库中，数据量不超过数百万条记录。只有变化速度快这一特征，对于中小型组织仍然适用。从这个意义上，这些中小型组织需要的是一个“小数据”解决方案：</p>
-<blockquote>
-<p><strong>小数据：聚焦中小型组织和新兴业务，在数据量较小、数据来源较简单的情况下，提供非常灵活、非常简便易用、使用过程中对IT技能要求非常低的数据分析和商业智能，为应对多变且未知的外部环境提供决策支持。</strong></p>
-</blockquote>
-<p>传统上，很多小数据场景的分析和商业智能需求以“报表”的形式呈现在IT项目中：在开发<a href="https://en.wikipedia.org/wiki/Online_transaction_processing" target="_blank" rel="external">OLTP</a>系统的项目中列出一组报表需求，由交付OLTP系统的团队以直接SQL查询的形式实现报表。这种做法贴合了数据量小、数据来源简单的特征，但损失了灵活性，报表的定制和修改需要技术人员介入，因此又无法满足对速度的要求。为了赢得灵活性，小数据分析也同样需要首先建模<a href="https://en.wikipedia.org/wiki/OLAP_cube" target="_blank" rel="external">OLAP Cube</a>，然后通过不同维度的切片和钻取进行分析。</p>
-<p>什么是Cube？按照<a href="http://book.douban.com/subject/26301966/" target="_blank" rel="external">维度建模方法</a>，数据可以分为“事实”和“维度”两类。事实数据代表“发生了什么事”，维度数据则从各个角度描述这件事。如果以电商为例，事实数据是“销售记录”（卖了一个东西），常见的维度数据可能包括“产品”（卖的是什么）、“门店”（在哪里卖的）、“时间”（什么时候卖的）、“售货员”（谁卖的）、“顾客”（卖给了谁）等等。不难想象，事实数据表将只有一个主键、一个值、以及一大堆外键指向各个维度表；维度表也可能有外键再指向更多的描述性的子维度表（例如“产品”有外键指向“类别”）。于是我们就会得到一个<a href="https://en.wikipedia.org/wiki/Star_schema" target="_blank" rel="external">星型表结构</a>（或叫<a href="https://en.wikipedia.org/wiki/Snowflake_schema" target="_blank" rel="external">雪花型表结构</a>）。</p>
-<p><img src="/assets/2015/12/7/Star-schema-example.png"></p>
-<p>星型表结构的优势在于，分析操作会变得非常简单：你关心哪些信息，就直接用JOIN子句把这些维度表关联进来；只要在JOIN子句里指定WHERE条件，就可以快速缩减结果集。在星型表结构里，一个事实会被若干个维度修饰，因此可以把整个数据集想象成一个立方体（或<a href="https://en.wikipedia.org/wiki/Hypercube" target="_blank" rel="external">超立方体</a>，当维度多于三个时）。例如当只考虑“产品”、“城市”、“时间”这三个维度时，“销售记录”的数据集就可以被建模为一个立方体。</p>
-<p><img src="/assets/2015/12/7/OLAP_Cube.svg"></p>
-<p>随后就可以在这个立方体上对数据进行各种分析。例如你可以锁定“城市”这一维度，从而得到“某城市各种产品历史销售报表”——“锁定某一维度取值”这一操作也叫“切片”（slice），因为它在这个例子中产生的效果就是从三维的立方体中切出一个二维的数据平面。同样的，我们也可以从“产品”维度切片，从而得到“某产品各市历史销售报表”。当维度具有“分级汇聚”的特性时，我们还可以进行“钻取”（drill）操作，例如当“地区”维度分为“市”和“省”两级时，我们就可以在“地区”维度上进行钻取：首先从产品维度切片得到“某产品各省历史销售报表”，然后选择一个省下钻得到“某产品在某省内各市历史销售报表”。</p>
-<blockquote>
-<p><strong>小数据系统设计原则1：建模一个Cube，就可以快速实现一系列分析操作（及对应的报表）。小数据系统应该支持简便且易于修改的Cube建模。</strong></p>
-</blockquote>
-<p>基于这个设计原则，我们可以大概推知小数据系统的架构：首先，根据指定的Cube描述信息，把业务数据建模成Cube；然后，通过RESTful API对Cube进行切片、钻取和聚合等操作，并取回二维平面表或透视表形式的结果集；最后，根据指定的报表定义信息，把结果集渲染成报表。</p>
-<p><img src="/assets/2015/12/7/architecture.jpg"></p>
-<p>从上图不难看出，在这个架构中，必须由用户（不论是开发者或最终用户）提供的信息只有三项：（1）Cube的描述；（2）数据分析操作对应的URL；（3）呈现分析结果的报表定义。并且第三项信息（即报表定义）与具体业务是完全解耦的，因此理应可以用分别的开源软件组合形成轻量级的小数据解决方案。在下一篇文章中，我将具体介绍一个基于开源软件的小数据解决方案实现。</p>
-
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="12月 7 2015" class="post-list__meta--date date">12月 7 2015</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2015/11/22/myth-of-share-economy/" title="link to 共享经济到底是个什么鬼？">共享经济到底是个什么鬼？</a></h2>
-
-      <p class="excerpt">
-        <p><em>（本文同时发表于<a href="http://groundbreaking.cn/shehui/guoji/4498.html" target="_blank" rel="external">破土网</a>）</em></p>
-<p>据互联网创业专家的<a href="http://toutiao.com/a6192684396577751298/" target="_blank" rel="external">分析</a>，“互联网＋”把各行各业生意都开上了互联网，O2O（Online to Offline）把线上和线下整合起来。这两件事打通了业务上网的渠道，而在这个渠道上要挣钱，就要靠共享经济了。专家说，共享经济能优化资源配置，把原本闲置的资源出租利用，从而创造出一块新的市场。比如汽车，原来一辆家用轿车就上班下班通勤用，利用率不到20%；如果能借助互联网之力把白白放在停车场里的私家车共享利用起来，岂不是好事一件？</p>
-<p>可偏偏就是这共享经济的急先锋、共享租车业务的鼻祖Uber，在世界各地背了<a href="https://en.wikipedia.org/wiki/Legal_status_of_Uber&#39;s_service" target="_blank" rel="external">上百桩诉案</a>，在德国、西班牙、法国、英国等多个国家遭到抗议，两名高官还曾于今年6月在法国<a href="http://fortune.com/2015/06/29/uber-executives-arrested/" target="_blank" rel="external">被捕</a>。另一家共享经济的楷模、专事共享租房业务的Airbnb也曾在<a href="http://www.nydailynews.com/new-york/de-blasio-administration-files-lawsuit-apartments-operating-hotels-sites-liairbnb-article-1.1977461" target="_blank" rel="external">纽约</a>和<a href="http://www.huffingtonpost.com/2014/04/29/airbnb-laws-san-francisco_n_5235820.html" target="_blank" rel="external">旧金山</a>遭遇法律挑战。于是我们不禁要好奇：这共享经济到底是个什么鬼？为何明明听起来很美，却会遭到如此多的反对？</p>
-<p><img src="/assets/2015/11/22/share-economy.jpg"></p>
-<p>其实借助互联网把分散的资源集中起来提供服务，这想法并不新鲜。近的有<a href="https://en.wikipedia.org/wiki/Long_tail" target="_blank" rel="external">长尾理论</a>，说技术可以把大量分散的需求和供给匹配成可行的生意；再回想得远一点，比尔盖茨早在1995年的《未来之路》中就提到了“<a href="https://en.wikipedia.org/wiki/Disintermediation" target="_blank" rel="external">去中介化</a>”的概念：互联网可以把“中间人”（分销渠道）去掉，让生产者和消费者直接联结，降低总体成本，从而使生产者的收益有可能增加、消费者的支出有可能减少。</p>
-<p>Wikipedia的文字中，这两个“有可能”（“may”）颇可玩味。互联网的确能消解传统“中间人”的市场控制力，然而这被消解的力量是否就会让利给生产者和消费者，那又是另一回事。仍以租车为例，Uber模式一方面引入大量兼职司机压低全职司机的收入，另一方面把自己变成了比以前的出租车公司更具垄断力的平台——Uber（以及其他模仿者）要求司机只能使用自己的网络平台，这时他们倒是不把“共享”挂在嘴边了。司机一方议价力削弱，而公司一方垄断力日增，那么司机又怎会得到那只是“有可能”的收益增加呢？</p>
-<p>事实也确是如此：据笔者在美国几个大城市的观察，Uber司机大部分是非洲裔，有少许亚裔和阿拉伯裔，从未见过像Uber广告中的白人中产阶级司机，司机的收入也只堪温饱，比起传统的出租车司机尚自不如。国内的情况也相去不远，随着各家叫车平台补贴逐月减少，滴滴快车的服务水平已经向从前的黑车看齐，神州专车的司机也开始抱怨收入不佳。资本逐利的本性决定了，互联网公司“去中介化”的目的是为了建立垄断力更强的“<a href="http://www.jamieparfitt.com/blog/2014/5/4/disintermediation-reintermediation-and-cybermediation" target="_blank" rel="external">赛博中介</a>”。想着互联网公司消解了传统行业的“中间人”就会让利给消费者和劳动者？这也未免想得太乐观了一点。</p>
-<p>照资本的本性，一旦有了更强力的垄断地位，何止不会让利，还要寻求更多的利润呢。我们回头来看看Airbnb和Uber的诉案，究竟告的是什么缘由。纽约市政府起诉Airbnb，因为他们的房源有相当部分来自于不按照规定缴纳税费的非法酒店；旧金山市政府也立法要求Airbnb缴纳酒店税。Uber最近<a href="http://www.npr.org/2015/09/02/436820824/california-court-grants-uber-drivers-class-action-status" target="_blank" rel="external">在加州被起诉</a>的主要争论点则在于“司机是不是Uber的雇员”。Uber宣称自己只是“平台”，司机则是平台上的“合作伙伴”；而司机一方则认为Uber无疑是司机的雇主，该公司将从事工作所必须的开销都转嫁给了司机——这个“从事工作所必须的开销”，当然不仅是养车、加油和买新衣服，更重要的是医疗、教育、养老等社会保障。这些“共享经济”互联网企业都有一个共同的卖点：“轻资产”。确实，做着跟别人一样的生意，却不用像别人一样承担对员工、对社会的责任，这岂能不盈利、岂能不受全球资本青睐呢？至于谁应该来为市政建设、人民福利买单，不好意思，那可就不是<a href="http://www.48hills.org/2014/07/10/ubers-tax-avoidance-strategy-costs-government-millions/" target="_blank" rel="external">注册在避税天堂</a>的互联网公司们要考虑的啦。</p>
-<p>创造赛博垄断－压榨劳动者－逃避社会责任。这套赚钱逻辑，中国的互联网创业者们看国外大鳄们玩过了以后，才发现是如此好用。于是转眼之间，外卖O2O开始“<a href="http://36kr.com/p/5037825.html" target="_blank" rel="external">全民开店</a>”了，美容O2O开始“<a href="http://www.helijia.com/index.html" target="_blank" rel="external">解放天下手艺人</a>”了——至于这些据说不再依靠组织、不用阿谀上司、不必忍受压榨，实现了财务、时间、心灵三大自由的手艺人，他们的五险一金该由谁来交，互联网公司当然会说自己只是个平台而不是雇主啦。</p>
-<p>所以，现在各位看官能搞明白“共享经济”到底是个什么鬼了吧？说简单也简单，无非就是资本借助互联网掀翻原来的中间渠道，建立互联网上的强大垄断，让劳动者更加没有选择、没有组织，从而施行更残酷的剥削。如果政府要来监管盘问这家企业本应承担的社会责任去了哪里，共享经济先锋们便会一边拿出“自由”的大旗抵挡，一边趁监管法规尚未成型<a href="http://wallstreetcn.com/node/224360" target="_blank" rel="external">捞个时间差</a>。看明白了这个关节，笔者不禁暗想：这不是80年代刚改革开放那会儿的“倒爷”们早就玩儿得熟透的把戏么，又何须这么多高科技的幌子呢？</p>
-
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="11月 22 2015" class="post-list__meta--date date">11月 22 2015</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">

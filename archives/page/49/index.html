@@ -179,6 +179,54 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2007/8/17/itechtag-重建软件开发者的声望/" title="link to iTechTag- 重建软件开发者的声望">iTechTag- 重建软件开发者的声望</a></h2>
+
+      <p class="excerpt">
+        <p>我的blog右边栏里多出了一个mashup的小框：<a href="http://www.itechtag.com/people/view/5" target="_blank" rel="external">我的技能云</a>。提供者是<a href="http://www.itechtag.com/" target="_blank" rel="external">iTechTag</a>。iTechTag出自我的一个点子，被<a href="http://www.1sters.com/" target="_blank" rel="external">1sters!</a>变成了现实。iTechTag到底是什么？抄一段“网站介绍”。</p><p>＊＊＊＊＊＊＊＊</p><p>作为软件开发者，我们从一个又一个的项目中得到了什么？除了学到新的知识、得到应有的薪酬与职位，我们还积累了良好的声望：我们生产有用的软件，我们又快又好地完成工作，我们用自己的专业技能为客户创造了巨大的价值。作为一个软件开发者，我们无时无刻不在为此骄傲。</p><p>但声望给我们带来了多少利益？还有谁记得你几年前完成的那些“不可能的任务”？还有谁记得你通宵加班为项目做出的贡献？还有谁记得客户和领导曾给你的赞扬？我们的声望还没来得及给我们带来回报，就匆匆地销声匿迹了。</p><p><strong>我们的声望被严重低估了。</strong></p><p>我们创建“技能云”就是为了重建软件开发者的声望。我们希望记录下自己辛勤工作的成果，并与他人分享我们的骄傲。我们希望让别人知道我们掌握什么技能、参与过什么项目、帮助过什么客户、做出过什么贡献。我们希望让自己、让同事、让朋友、让所有关注我们的人有机会了解：我们是多么优秀的软件开发者。</p><p>＊＊＊＊＊＊＊＊</p><p>记录自己做过的项目，在自己的blog里放上<a href="http://www.itechtag.com/widget/index" target="_blank" rel="external">“我的技能云”</a>，让所有看到你blog的人都知道你有多么了不起。这就是我的——iTechTag的——想法。</p><p>（关于1sters!团队，请看InfoQ中文站的报道：<a href="http://www.infoq.com/cn/news/2007/08/rails-professional-services" target="_blank" rel="external">梦想上铁道</a>。）</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="8月 17 2007" class="post-list__meta--date date">8月 17 2007</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2007/8/17/jrubyworks-j2ee-on-rails/" title="link to JRubyWorks- J2EE on Rails">JRubyWorks- J2EE on Rails</a></h2>
+
+      <p class="excerpt">
+        <p>(NOTE: JRubyWorks keeps moving forward and this article may not be up to date.)</p><p>How to run your<a href="http://www.rubyonrails.org/" target="_blank" rel="external">Rails</a>application with<span class="caps">J2EE</span>web servers (such as<a href="http://www.mortbay.org/" target="_blank" rel="external">Jetty</a>and<a href="http://tomcat.apache.org/" target="_blank" rel="external">Tomcat</a>)? Here’s a solution:</p><p>1. Set<span class="caps">JRUBY</span>_HOME environment variable properly.</p><pre>export JRUBY_HOME=/usr/lib/jruby</pre><p>2. Install<a href="http://jruby-extras.rubyforge.org/ActiveRecord-JDBC/" target="_blank" rel="external">ActiveRecord-JDBC</a>.</p><pre>jruby -S gem install ActiveRecord-JDBC -y</pre><p>3. Install<a href="http://rubyforge.org/projects/jrubyworks" target="_blank" rel="external">JRubyWorks</a>plugin.</p><pre>script/plugin install \<a href="http://jrubyworks.rubyforge.org/svn/trunk/jrubyworks/" target="_blank" rel="external">http://jrubyworks.rubyforge.org/svn/trunk/jrubyworks/</a></pre><p>4. Configure your Rails application as<a href="http://www.developer.com/db/article.php/10920_3691716_3" target="_blank" rel="external">this article</a>. JRubyWorksplugin includes<a href="http://dev.mysql.com/downloads/connector/j/5.0.html" target="_blank" rel="external">mysql-connector</a>by default. If you use database other than<a href="http://dev.mysql.com/" target="_blank" rel="external">MySQL</a>, you can putcorresponding<span class="caps">JDBC</span>driver in<em>${RAILS_ROOT}/lib/java</em>directory and JRubyWorks will take care of it conventionally.</p><p>5. Run your application and try it at<a href="http://localhost:8080/" target="_blank" rel="external">http://localhost:8080</a>. Alsoyou can find a<a href="http://java.sun.com/j2ee/tutorial/1_3-fcs/doc/WebComponents3.html" target="_blank" rel="external"><span class="caps">WAR</span></a>file of your application in<em>${RAILS_ROOT}/war</em>directory. You can deploy it to other<span class="caps">J2EE</span>web servers.</p><pre>jruby -S rake retty</pre><p>JRubyWorks is based on<a href="http://www.headius.com/jrubywiki/index.php/Rails_Integration" target="_blank" rel="external">JRuby Rails Integration</a>and hope to make the integration easier. It’squite immature so far, apparently. Your<a href="http://rubyforge.org/mailman/listinfo/jrubyworks-discuss" target="_blank" rel="external">feedback</a>and contribution will be very helpful and highly appreciated.</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="8月 17 2007" class="post-list__meta--date date">8月 17 2007</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2007/8/12/如何对private方法进行单元测试/" title="link to 如何对private方法进行单元测试">如何对private方法进行单元测试</a></h2>
 
       <p class="excerpt">
@@ -357,54 +405,6 @@ classes that you can use:
       <div class="post-list__meta">
 
         <time datetime="7月 26 2007" class="post-list__meta--date date">7月 26 2007</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2007/7/19/真实的简历，真实的自我/" title="link to 真实的简历，真实的自我">真实的简历，真实的自我</a></h2>
-
-      <p class="excerpt">
-        <p>其实是没有资格说这些求职之类的东西……因为我自己<a href="http://blog.csdn.net/gigix/archive/2007/02/07/1504161.aspx" target="_blank" rel="external">先天受限</a>，其实从来没有通过“正常”的渠道找过工作。不过最近招聘的工作做了不少，简历看了不少，人面试了不少，多少也有些自己的想法。只当是野人献曝吧。</p><p>勾起动念的是JavaEye的<a href="http://www.javaeye.com/topic/102677?page=2" target="_blank" rel="external">一个讨论</a>。特别是里面这样几句话：</p><p>“简历嘛，大家都知道，肯定是有水分的，而且人都有一种心理，明明知道这个人的简历很大的水分，还是想叫过来面试，所以，造就了现在的简历水分很多。”<br>“你忽略了一点，你太高估现在的简历，想想你的简历是什么样子，现在谁的简历没有一点浮夸”</p><p>起码我知道两点。第一，我自己的简历不会有任何浮夸，我只会根据不同的需要做不同的删减。第二，如果我知道一份简历有很大的水分，我绝对不会想要面试他/她，首先我花不起这个时间，更重要的是我不想和不诚实的人一起工作。</p><p>既不吹牛浮夸，又不让自己的才华在一堆——很可能充斥吹牛浮夸的——竞争简历里被埋没，可能吗？很简单：只陈述事实，不作评论。这其实是给别人提出feedback时的原则：我说“你没有协作精神”，你说“不对，我有”，“你没有”，“我有”……这嘴仗永远打不干净；如果我说“你在结对编程的时候几乎没和我说话，我有点跟不上你的节奏”，那么你就知道是怎么回事了。同样的，“18个月的J2EE开发经验”对于一家公司、一个职位来说可能意味着“天啊，赶快雇他，他将是我们最好的J2EE架构师”，而对另一家公司、另一个职位来说却可能是“呃……他多少有点J2EE背景，或许能帮上忙吧”。既然如此，在简历里写“精通J2EE”，你想表达的究竟是什么呢？不如实实在在写上“18个月J2EE开发经验”吧，你的目标雇主会给事实加上评估的。</p><p>推论一：如果筛选简历的人不是根据这些更显而易见的事实、而是根据“精通”、“熟练”之类毫无意义的自我评价来挑选简历，也许你错过这次面试机会不是坏事。也许这家公司不是一个好的目标雇主。目光放远一点，机会永远都是有的。</p><p>推论二：如果没有足够多的项目经历放在简历上，用我说的这种风格写出来的简历不会好看。而对开源项目的贡献显然地能够给这份简历加分。不过我仍然认为，软件开发者在工作中所从事的项目，对自己的reputation所起到的帮助还是不足。这是另一个话题，就不延伸了。</p><p>推论三：要自己的简历不被埋在简历堆里，最好的办法就是不要把它扔进那一堆。</p><p>关于找工作这件事情，我整个的看法一向是：找工作就像找恋人，一方面你要表现出自己好的东西来吸引对方，另一方面你要真实，不然以后相处的时光足够让你把肠子悔青。如果对方是因为你表现出的真实自我而不喜欢你，那就看开点吧，至少胜过相处在一起之后再扯筋。简历也是一样，不用费劲心思去跟别人比拼，把自己描述出来就够了。适合你的那个人（那个公司），也在找你呢。</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="7月 19 2007" class="post-list__meta--date date">7月 19 2007</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2007/7/14/敏捷工作，敏捷生活，敏捷中国/" title="link to 敏捷工作，敏捷生活，敏捷中国">敏捷工作，敏捷生活，敏捷中国</a></h2>
-
-      <p class="excerpt">
-        <p>这是在<a href="http://subject.csdn.net/agilechina/" target="_blank" rel="external">第二届“敏捷中国”软件技术大会</a>听了<a href="http://blog.csdn.net/myan" target="_blank" rel="external">孟岩</a>演讲之后的感想，也是我在构思的一个讲稿。</p><p>敏捷早已不仅仅是一件软件开发的事，它是<a href="http://www.douban.com/subject/1867642/" target="_blank" rel="external">世界变平</a>以后的必然产物。在一个平坦的、被互联网连接的、遵循同一游戏规则的世界里，说得严重一点，每个企业、每个人都面临来自全球的竞争。你要凭什么赢得这场竞争？</p><p>永远记住一个等式：profit = revenue – cost</p><p>在一个全球化竞争的市场上，价格必定是趋同的，你只能控制成本。有更低的成本，你可以用更低的价格卖出同样的产品（或服务，下同），或者用同样的价格卖出更多（或更好）的产品，从而赢得更大的市场份额；你也可以用同样的价格卖出同样的产品，从而赢得更高的margin——两者的结果都是，更好的profitability。于是问题变成了：如果没有压倒性的技术优势，靠什么降低成本？</p><p>最近我MSN的名字是“むだ!”。这就是答案。（むだ，無馱，muda，waste，浪费）</p><p>什么样的浪费？譬如说，用不上的预先准备，过高的风险规避成本，做出来却没有用的工作，不流动的价值。消除浪费，不仅仅是软件项目的事。就连工作方式，就连生活态度，也是一样。孟岩说到“Life2.0”的时候，自嘲是在扯淡，不过我知道他不是扯淡，因为我自己的生活已经比以前敏捷了很多很多。</p><p>Chad在<a href="http://news.csdn.net/n/20070714/106395.html" target="_blank" rel="external">演讲</a>的时候说，中国是令人激动、充满希望的地方。我相信是的，因为我今天看到了<a href="http://www.agilechina.net" target="_blank" rel="external">敏捷中国</a>的曙光。</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="7月 14 2007" class="post-list__meta--date date">7月 14 2007</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">

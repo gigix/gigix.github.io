@@ -179,6 +179,54 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2007/4/27/中国上铁道/" title="link to 中国上铁道">中国上铁道</a></h2>
+
+      <p class="excerpt">
+        <p>蔡望勤重开了<a href="http://chinaonrails.com/" target="_blank" rel="external">中国上铁道</a>。ChinaonRails是一个关于Rails的论坛，各种元素都相当的2.0。望勤有了自己的老窝，就<a href="http://chinaonrails.com/topic/view/58.html" target="_blank" rel="external">不在其他地方回答Rails问题</a>了。</p><p>还有一个讨论：<a href="http://chinaonrails.com/topic/view/40.html" target="_blank" rel="external">聊聊Rails在国内的现状</a>。有一些著名的网站（例如铁道播客）关闭了，有更多的网站冒出来。今年的<a href="http://docs.google.com/View?docid=adgp94frh63f_11dm7p7m" target="_blank" rel="external">铁道中文报告</a>会是什么样呢？铁道之路，任重而道远。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="4月 27 2007" class="post-list__meta--date date">4月 27 2007</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2007/4/24/haproxy-mongrel-rails/" title="link to HAProxy - Mongrel - Rails">HAProxy - Mongrel - Rails</a></h2>
+
+      <p class="excerpt">
+        <p>这是一个高性能、高伸缩性的<a href="http://www.rubyonrails.org" target="_blank" rel="external">Rails</a>部署方案。有一组<a href="http://blog.kovyrin.net/2006/08/22/high-performance-rails-nginx-lighttpd-mongrel/" target="_blank" rel="external">性能数据</a>可供参考。</p><p>首先接收到HTTP请求的是<a href="http://haproxy.1wt.eu/" target="_blank" rel="external">HAProxy</a>。HAProxy会把请求反向代理给其后的多个<a href="http://mongrel.rubyforge.org/" target="_blank" rel="external">Mongrel</a>实例。每个Mongrel实例同一时间只处理一个请求。只要Rails应用本身贯彻<a href="http://zefhemel.com/archives/2004/09/01/the-share-nothing-architecture" target="_blank" rel="external">无共享架构</a>，就可以直接通过增加服务器和改变HAProxy配置得到线性的性能提升。另外可以用<a href="http://www.tildeslash.com/monit/" target="_blank" rel="external">Monit</a>来管理Mongrel实例的开启和关闭，并且在异常状况发生时及时采取措施。这样一来，企业级超复杂所暗含的性能、伸缩性、可管理性等等要求都满足了。</p><p>“HAProxy is a free,<strong><em>very</em></strong>fast and reliable solution offering<a href="http://en.wikipedia.org/wiki/High_availability" target="_blank" rel="external">high availability</a>,<a href="http://en.wikipedia.org/wiki/Load_balancer" target="_blank" rel="external">load balancing</a>, andproxying for<span class="caps">TCP</span>and<span class="caps">HTTP</span>-based applications.”<br>“Mongrel is a fast<span class="caps">HTTP</span>library and server for Ruby that is intended for hostingRuby web applications of any kind using plain<span class="caps">HTTP</span>rather than FastCGI or<span class="caps">SCGI</span>.”<br>“monit is a utility for managing andmonitoring,processes, files, directories and devices on a<span class="caps">UNIX</span>system.”</p><p>（今天下午和George讨论的主题：我们已经听厌了“企业级”这样的大帽子。我们需要做的是弄明白所谓“企业级”究竟代表什么，然后把解决方案拿出来。基本上——如果真的喜欢“企业级”的话——这就是所谓的“企业级Rails”了。）</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="4月 24 2007" class="post-list__meta--date date">4月 24 2007</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2007/4/22/教育大众还不如看看电影/" title="link to 教育大众还不如看看电影">教育大众还不如看看电影</a></h2>
 
       <p class="excerpt">
@@ -357,54 +405,6 @@ classes that you can use:
       <div class="post-list__meta">
 
         <time datetime="4月 11 2007" class="post-list__meta--date date">4月 11 2007</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2007/4/9/不稳定，才伟大/" title="link to 不稳定，才伟大">不稳定，才伟大</a></h2>
-
-      <p class="excerpt">
-        <p>博弈论告诉我们，一群优秀的员工，在公司没有严格监管的情况下自觉地为公司尽力，这是对双方都最有利的一种局面。问题在于，第一，这是一个信任博弈；第二，这是一个非常容易搭便车的博弈。所以，博弈论指出，这样的情景虽然好，但它是不稳定的，因为懈怠的搭便车者会从中获益，并最终导致所有人懈怠，迫使公司不得不严格监管。</p><p>不过，不稳定并不等价于不可能存在。</p><p>广义来说，系统趋于稳定的过程即是熵增加的过程。所以，只要能够不断注入足够多的能量，就可以对抗熵增加，使不稳定的状态得以保持。<a href="http://www.google.com" target="_blank" rel="external">Google</a>，<a href="http://www.trendmicro.com/cn/home/enterprise.htm" target="_blank" rel="external">趋势</a>，<a href="http://www.tencent.com" target="_blank" rel="external">腾讯</a>，<a href="http://www.thoughtworks.com.cn" target="_blank" rel="external"><strong>Thought</strong>Works</a>……所有拥有精彩文化的团队，都是因为其中的每一个人不断地注入能量：拒绝懈怠，为团队做多一分贡献，装扮自己的办公室，参与招聘流程以免懈怠者混入……精彩的文化不是从天而降的，是靠一张张贴纸、一个个玩具积累起来、维护起来的。</p><p>精彩的文化总是不稳定的，博弈论的原理已经证明了这一点。所以，更应该珍惜，更应该用心去维护它。</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="4月 9 2007" class="post-list__meta--date date">4月 9 2007</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2007/4/9/几种常见的博弈形式/" title="link to 几种常见的博弈形式">几种常见的博弈形式</a></h2>
-
-      <p class="excerpt">
-        <p>协调博弈：在这种博弈情景下，局中人都希望别人知道自己将要做什么，最大限度的合作与信息分享将为所有人带来最大利益。典型的例子如交通灯博弈。</p><p>信任博弈：局中人如果互相信任，则会双双获得最大利益；任何一方的怀疑会使双方都遭受损失；就连怀疑对方可能怀疑自己也会招致损失。</p><p>猜硬币博弈：只要猜出对方的意图就会赢（并且让对方输）的博弈，其要点在于隐藏信息。</p><p>斗鸡博弈：比较非理性的人会赢的博弈，如果你不能证明自己比对方更加非理性，可以考虑切断自己的退路。斗鸡博弈中的玩家应该欢迎对手打探自己的情况。</p><p>固定和博弈（或者零和博弈）：一方的收获意味着另一方的损失。在某些时候甚至会成为负和博弈，因为赢的一方也因为不断压迫对方而感到心理不快。</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="4月 9 2007" class="post-list__meta--date date">4月 9 2007</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">

@@ -174,6 +174,54 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2007/5/19/不用说（或者随便怎么说）/" title="link to 不用说（或者随便怎么说）">不用说（或者随便怎么说）</a></h2>
+
+      <p class="excerpt">
+        <p>今天在<a href="http://agilexa.thoughtworkers.org/" target="_blank" rel="external">敏捷西安</a>做了关于<a href="http://rubyworks.rubyforge.org/" target="_blank" rel="external">RubyWorks</a>的<a href="http://agilexa.googlegroups.com/web/enterprise_ruby.ppt?gda=gnf5_UQAAABHNVgv_zjz6SJL1ZdfIznDTrHLrordqL8TPnttocn_UGG1qiJ7UbTIup-M2XPURDRofGAAaZ-AGpHVjmoefGXg6coCigX_y4kVdZrur1jNxg" target="_blank" rel="external">演讲</a>。在准备讲稿的时候，随便乱看，就看到了孟岩以前的一个blog：<a href="http://blog.csdn.net/myan/archive/2006/09/25/1281151.aspx" target="_blank" rel="external">动态语言，别再说不</a>。</p><p>“国外的大气候和国内的小气候都有共同特点，就是站在传统技术立场上的人对于RoR的火爆看不下去了，首先站出来发难，从而引发Ruby支持者们的回击，然后双方厮杀在一起，连带旁边相干不相干的看热闹的、拉架的、含沙射影的、慷慨激昂的，瞬间就浩浩荡荡，横无际涯了。而争论来争论去，无非还是Ruby的性能问题、可用性问题、前景问题，等等等等。”</p><p>孟岩的态度——如果我没理解错的话——是在劝解大家，不要随便怀疑新生事物，新生事物旺盛的生命力是能够克服一切困难的，要对新生事物抱有希望。而我（现在）的态度是，我不劝说谁。不是怀疑性能问题吗？我们做出<a href="../../articles/2007/05/16/rubyworks-initial-release">唾手可得的高性能部署环境</a>放在这儿。不是担心跟遗留系统不方便整合吗？我们把遗留数据库和消息系统的问题都解决掉。不是没有看到成熟案例吗？我们就来做成熟案例。</p><p>既然对它有信心，那就动手把所有的怀疑都打消掉。人们怀疑什么，我们就解决什么。</p><p>至于<a href="../../articles/2007/04/22/how-to-educate-the-mass">教育大众</a>的事情么……我很相信，我们只要教育“小众”——多半是“大众”们的老板——就行了，“小众”会帮我们教育大众的。</p><p>所以孟岩希望大众“别再说不”，我的态度是，大众随便怎么说，我无所谓。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="5月 19 2007" class="post-list__meta--date date">5月 19 2007</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2007/5/18/rails部署：反向代理优于fastcgi/" title="link to Rails部署：反向代理优于FastCGI">Rails部署：反向代理优于FastCGI</a></h2>
+
+      <p class="excerpt">
+        <p><a href="http://rubyworks.rubyforge.org" target="_blank" rel="external">RubyWorks</a>采用了基于反向代理和Mongrel的部署方案：HAProxy把请求代理给不同的Mongrel实例。在<a href="http://www.infoq.com/cn/news/2007/05/rubyworks" target="_blank" rel="external">InfoQ中文站的报道</a>中写道：</p><p>“RubyWorks项目领导人<a href="mailto:alexey.verkhovsky@gmail.com" target="_blank" rel="external">Alexey Verkhovsky</a>也认为，只有在对节约内存使用非常重视的情况下（例如虚拟共享主机），FastCGI才有其价值；而在普通的企业应用中，可靠性和可管理性重于节约内存，这也是RubyWorks选择基于反向代理和Mongrel的部署方案的原因。”</p><p>在《<a href="http://www.china-pub.com/computers/common/info.asp?id=30058" target="_blank" rel="external">Agile Web Development withRails</a>》的第一版中所推荐的部署方案是基于FastCGI的，而第二版则改为推荐基于反向代理的部署方案。James Duncan Davidson在书中写道：</p><p>“ 简而言之，FastCGI确实是一枚火箭，但有时会因为各种奇怪的原因而爆炸在发射台上。使用代理让Rails应用直接与HTTP对话，这是整个社群的发展方向。”</p><p>即使在<a href="http://www.dreamhost.com" target="_blank" rel="external">DreamHost</a>这样的shared host上，FastCGI也给人们带来了<a href="http://nubyonrails.com/articles/2005/11/16/yet-another-chapter-in-the-fcgi-saga" target="_blank" rel="external">种种困扰</a>，这也是Mongrel（以及相应的，反向代理的部署方案）流行的原因。另一个Rails服务器<a href="http://swiftiply.swiftcore.org/index.html" target="_blank" rel="external">Swiftiply</a>号称比Mongrel更高性能，不过伸缩性方面都是线性的。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="5月 18 2007" class="post-list__meta--date date">5月 18 2007</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2007/5/16/rubyworks-0-0-1-released/" title="link to RubyWorks 0.0.1 Released">RubyWorks 0.0.1 Released</a></h2>
 
       <p class="excerpt">
@@ -352,54 +400,6 @@ classes that you can use:
       <div class="post-list__meta">
 
         <time datetime="4月 28 2007" class="post-list__meta--date date">4月 28 2007</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2007/4/27/中国上铁道/" title="link to 中国上铁道">中国上铁道</a></h2>
-
-      <p class="excerpt">
-        <p>蔡望勤重开了<a href="http://chinaonrails.com/" target="_blank" rel="external">中国上铁道</a>。ChinaonRails是一个关于Rails的论坛，各种元素都相当的2.0。望勤有了自己的老窝，就<a href="http://chinaonrails.com/topic/view/58.html" target="_blank" rel="external">不在其他地方回答Rails问题</a>了。</p><p>还有一个讨论：<a href="http://chinaonrails.com/topic/view/40.html" target="_blank" rel="external">聊聊Rails在国内的现状</a>。有一些著名的网站（例如铁道播客）关闭了，有更多的网站冒出来。今年的<a href="http://docs.google.com/View?docid=adgp94frh63f_11dm7p7m" target="_blank" rel="external">铁道中文报告</a>会是什么样呢？铁道之路，任重而道远。</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="4月 27 2007" class="post-list__meta--date date">4月 27 2007</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2007/4/24/haproxy-mongrel-rails/" title="link to HAProxy - Mongrel - Rails">HAProxy - Mongrel - Rails</a></h2>
-
-      <p class="excerpt">
-        <p>这是一个高性能、高伸缩性的<a href="http://www.rubyonrails.org" target="_blank" rel="external">Rails</a>部署方案。有一组<a href="http://blog.kovyrin.net/2006/08/22/high-performance-rails-nginx-lighttpd-mongrel/" target="_blank" rel="external">性能数据</a>可供参考。</p><p>首先接收到HTTP请求的是<a href="http://haproxy.1wt.eu/" target="_blank" rel="external">HAProxy</a>。HAProxy会把请求反向代理给其后的多个<a href="http://mongrel.rubyforge.org/" target="_blank" rel="external">Mongrel</a>实例。每个Mongrel实例同一时间只处理一个请求。只要Rails应用本身贯彻<a href="http://zefhemel.com/archives/2004/09/01/the-share-nothing-architecture" target="_blank" rel="external">无共享架构</a>，就可以直接通过增加服务器和改变HAProxy配置得到线性的性能提升。另外可以用<a href="http://www.tildeslash.com/monit/" target="_blank" rel="external">Monit</a>来管理Mongrel实例的开启和关闭，并且在异常状况发生时及时采取措施。这样一来，企业级超复杂所暗含的性能、伸缩性、可管理性等等要求都满足了。</p><p>“HAProxy is a free,<strong><em>very</em></strong>fast and reliable solution offering<a href="http://en.wikipedia.org/wiki/High_availability" target="_blank" rel="external">high availability</a>,<a href="http://en.wikipedia.org/wiki/Load_balancer" target="_blank" rel="external">load balancing</a>, andproxying for<span class="caps">TCP</span>and<span class="caps">HTTP</span>-based applications.”<br>“Mongrel is a fast<span class="caps">HTTP</span>library and server for Ruby that is intended for hostingRuby web applications of any kind using plain<span class="caps">HTTP</span>rather than FastCGI or<span class="caps">SCGI</span>.”<br>“monit is a utility for managing andmonitoring,processes, files, directories and devices on a<span class="caps">UNIX</span>system.”</p><p>（今天下午和George讨论的主题：我们已经听厌了“企业级”这样的大帽子。我们需要做的是弄明白所谓“企业级”究竟代表什么，然后把解决方案拿出来。基本上——如果真的喜欢“企业级”的话——这就是所谓的“企业级Rails”了。）</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="4月 24 2007" class="post-list__meta--date date">4月 24 2007</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">

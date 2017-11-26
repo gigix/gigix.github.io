@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gigix.thoughtworkers.org/"/>
-  <updated>2017-11-15T03:52:48.000Z</updated>
+  <updated>2017-11-26T16:16:23.771Z</updated>
   <id>http://gigix.thoughtworkers.org/</id>
   
   <author>
@@ -14,6 +14,91 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>智能技术的伦理风险：研究框架</title>
+    <link href="http://gigix.thoughtworkers.org/2017/11/28/intelligent-disempowerment-research-framework/"/>
+    <id>http://gigix.thoughtworkers.org/2017/11/28/intelligent-disempowerment-research-framework/</id>
+    <published>2017-11-28T05:01:00.000Z</published>
+    <updated>2017-11-26T16:16:23.771Z</updated>
+    
+    <content type="html"><![CDATA[<p>在<a href="/2017/11/27/intelligent-disempowerment/">前一篇文章</a>中我们已经提到，当下常见的关于智能技术伦理危害与风险的讨论总体上强调人工智能对人类整体的影响，并不凸显其对当前社会不同人群造成不同影响的情况，并且在分析这些风险时往往聚焦于技术层面，而并未将社会和政治层面的因素纳入考虑。从这个角度出发的分析难免失于片面，无法充分认识智能技术的潜在风险。由于缺乏一个全面的、结合科技与人文视角的研究框架，使得对于这一问题的研究普遍零散而不成体系，且容易陷入“机器 vs. 人类”的未来学视角。</p>
+<p>例如在分析智能技术对就业造成的影响时，以<a href="https://www.wired.com/2012/12/ff-robots-will-take-our-jobs/" target="_blank" rel="external">Kevin Kelly</a>为代表的未来学家认为人工智能取代人类工作是必然趋势，并乐观地相信“被失业”的人群能找到更有价值的工作。另一些研究者则认为应对大规模结构性失业的关键是社会保障，例如<a href="https://www.brookings.edu/blog/techtank/2015/10/26/how-robots-artificial-intelligence-and-machine-learning-will-affect-employment-and-public-policy/" target="_blank" rel="external">在就业之外提供全民最低收入保障</a>。然而更早的计算机伦理学、乃至科技伦理学研究已经指出，就业对于人而言不仅是提供生活保障的方式。正如<a href="https://book.douban.com/subject/4928961/" target="_blank" rel="external">维纳在70多年前就已经指出</a>的，人需要发挥创造力和灵活性，人需要做决策、需要感受到自己为社会与他人做出的贡献，而工作是满足这些需求、使人获得尊严与成就感的重要途径。如果只看到失业对收入的影响，忽视智能技术在其他方面对人的影响，便无法全面理解智能技术的潜在风险。</p>
+<p>Peter Cullen提出了一个用于<a href="http://informationaccountability.org/the-need-for-an-ethical-framework/" target="_blank" rel="external">讨论伦理问题的框架</a>。在这个框架中，抽象的“伦理”被表述为“价值观”——即个人与群体定义人生意义或集体目标所基于的核心信念与理想，随后价值观再以“原则”的形式具体表述出来，从原则引申出“政策”或“指导方针”，最后通过规则、流程、评估、培训、工具等方式得以“实现”。</p>
+<p><img src="http://informationaccountability.org/wp-content/uploads/Ethical-Framework-Slide-JPEG-640x421.jpg"></p>
+<p>早在1950年代，<a href="https://book.douban.com/subject/4928961/" target="_blank" rel="external">维纳就已经指出</a>，在与自动化机器并存和协作这个上下文中，需要关注人的一些核心价值，例如生命、健康、快乐、安全、资源、机会、知识等。基于对这些价值观的重视，他提出了计算机伦理的4条基本原则：</p>
+<ul>
+<li><strong>自由原则</strong>：人应该有选择各种可能性的自由。</li>
+<li><strong>平等原则</strong>：不同的人群应该享有同样的权利。</li>
+<li><strong>博爱原则</strong>：人与人之间的善良愿望应该得到鼓励。</li>
+<li><strong>最小侵犯自由原则</strong>：团体对个人自由的侵犯应当限制在最低程度。</li>
+</ul>
+<p>基于类似于这些被普遍认同的价值观和基本原则，在智能技术的上下文里，不同的研究者提出了大致相似的一些指导原则。例如IBM在“<a href="http://www.ibmbigdatahub.com/whitepaper/ethics-big-data-and-analytics" target="_blank" rel="external">大数据与分析的伦理要求</a>”中指出，技术本身可能是技术中立的，但技术的使用者不仅应该考虑技术的可能性、组织的诉求和法律的约束，还应该考虑一系列伦理的指导原则，包括适应社会环境、给人们选择的权利、使用合理的数据深度和广度、适当的数据和分析结果所有权、公正性、访问权、可追责等。再例如，King和Richards提出了几条<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2384174" target="_blank" rel="external">大数据伦理规范</a>：</p>
+<ol>
+<li>隐私应该是信息规则的基础</li>
+<li>分享出来的私人信息应该仍然保密</li>
+<li>大数据需要透明性</li>
+<li>大数据可能导致身份泄露</li>
+</ol>
+<p>针对“隐私”这个受到广泛关注的话题，Rijmenam提出了几条<a href="https://datafloq.com/read/big-data-ethics-4-principles-follow-organisations/221" target="_blank" rel="external">大数据隐私指导原则</a>：企业应该更主动地提供透明度；从系统设计之初就考虑简明性；为潜在的安全事故做好准备；在所有环节全面关注数据隐私。英国商业伦理研究所（IBE）则提出了<a href="http://www.ibe.org.uk/userassets/briefings/b52_bigdata.pdf" target="_blank" rel="external">6个与隐私相关的问题</a>，包括数据如何使用、如何采集个人数据、如何评估风险、如何保护数据等。</p>
+<p>除了隐私之外，另一个重要的问题是智能技术的可追责性（accountability）。正如Harpin所说，在社会越来越多地由算法运转的同时，机器学习等智能技术使支撑社会运转的<a href="http://caa-ins.org/archives/442" target="_blank" rel="external">算法变得越来越不透明</a>。<a href="https://www.technologyreview.com/s/602933/how-to-hold-algorithms-accountable/" target="_blank" rel="external">MIT的两位研究者指出</a>，智能算法可能在人无法理解的情况下强化结构性歧视、拒绝为某些人群服务、甚至破坏民主制度的根基。因此他们提出了算法可追责性的五项指导原则：算法应该负责任、可解释、精确、可审查、公平。围绕着这五项指导原则，他们又提出了更加<a href="http://www.fatml.org/resources/principles-for-accountable-algorithms#social-impact" target="_blank" rel="external">具体的实施策略</a>，建议至少在系统设计、上线前和上线后分别进行一次评估，并列举了一些基本的评估问题。</p>
+<p>这种将“系统生命周期”作为一个维度纳入伦理框架的方式，在Etlinger这里得到了进一步发挥，形成了一个二维的<a href="https://www.prophet.com/thinking/2015/06/new-report-the-trust-imperative-a-framework-for-ethical-data-use/" target="_blank" rel="external">大数据伦理框架</a>：数据使用的伦理原则（例如有益于人群、推动进步、可持续、尊重、公平）构成一个坐标，数据的生命周期（例如数据采集、处理、分析、存储、治理、使用、交流）构成另一个维度，两个维度交织形成一个完善的伦理框架。</p>
+<p><img src="https://ci5.googleusercontent.com/proxy/vtbKA28j-O_SbXi1ZM2fdRwUMPLyY73exwuM69pLG14HQVOmgsNPvAchGxaq8pZIeLxc3lUsqSIJls2ckxUNRPPs6r8uL0npd7rpbGRsVFDlGrfJT0cxLdc3HTGbJ0fO1D-88jc91JhnwF5cFfRGn5-U=s0-d-e1-ft#https://susanetlinger.files.wordpress.com/2015/06/screen-shot-2015-06-25-at-9-55-06-am-1.png"></p>
+<p>伦理框架的落实仍然是一个难题。在层出不穷的新技术和新挑战面前，传统的机构审查委员会（IRB）明显<a href="https://www.wired.com/2016/05/scientists-just-confused-ethics-big-data-research/" target="_blank" rel="external">缺乏大数据时代伦理判断的能力</a>。与此同时，又有像<a href="http://www.oneilrisk.com/" target="_blank" rel="external">ORCAA</a>这样专门从事算法审计的企业。<a href="http://bdes.datasociety.net/council-output/perspectives-on-big-data-ethics-and-society/" target="_blank" rel="external">“数据与社会”研究机构</a>的建议是，应对智能技术带来的伦理问题，需要政策、教学和业界网络共同努力。在“平等、可追责和透明的机器学习”研讨会上，<a href="http://blog.geomblog.org/2015/07/the-2nd-workshop-on-fairness-accuracy.html" target="_blank" rel="external">研究者指出</a>：平等和偏见等问题不是抽象的概念，而是与实际的人和人群相关的，因此智能技术的伦理问题必须由科技专家与人文学者共同研究，包括有意图地设计实验，才能深入理解问题并找到解决办法。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在&lt;a href=&quot;/2017/11/27/intelligent-disempowerment/&quot;&gt;前一篇文章&lt;/a&gt;中我们已经提到，当下常见的关于智能技术伦理危害与风险的讨论总体上强调人工智能对人类整体的影响，并不凸显其对当前社会不同人群造成不同影响的情况，并且在分析这
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>智能技术的伦理风险</title>
+    <link href="http://gigix.thoughtworkers.org/2017/11/27/intelligent-disempowerment/"/>
+    <id>http://gigix.thoughtworkers.org/2017/11/27/intelligent-disempowerment/</id>
+    <published>2017-11-27T05:01:00.000Z</published>
+    <updated>2017-11-26T16:13:38.033Z</updated>
+    
+    <content type="html"><![CDATA[<p><em>（旧文一篇，已发表于<a href="https://zhuanlan.zhihu.com/p/25854862" target="_blank" rel="external">土逗公社</a>）</em></p>
+<p>人工智能的风险已经不再是一个新话题。在过去几年中，很多研究者提及了人工智能（以及与之紧密相关的技术，尤其是机器学习和大数据技术）可能带来的危害与风险。值得注意的现象是：在公众话语空间中流行的关于智能技术伦理危害与风险的讨论，大多将“人类”整体视为潜在的被损害的对象。大量的叙事被构建为“机器 vs. 人类”的形式。而关于智能技术如何被当前社会的权力结构主导、并反过来强化当前社会的权力结构、加深对弱势边缘群体的压迫，这一方面的讨论数量较少，且较缺乏系统性。本文将介绍一些关于智能技术伦理危害与风险的讨论，并着重介绍一些智能技术强化社会与经济不公正的案例。</p>
+<p>一些关于智能技术伦理危害与风险的讨论已经进入了流行文化空间，吸引了大众的兴趣。这类讨论通常呈现未来学的形式，试图推测人工智能技术成熟、尤其是具备了自我完善的能力之后可能的未来图景。如<a href="https://book.douban.com/subject/26308917/" target="_blank" rel="external">超级智能</a>、<a href="https://futureoflife.org/background/benefits-risks-of-artificial-intelligence/" target="_blank" rel="external">人工智能毁灭人类</a>、<a href="https://www.washingtonpost.com/opinions/matt-miller-artificial-intelligence-our-final-invention/2013/12/18/26ed6be8-67e6-11e3-8b5b-a77187b716a3_story.html?utm_term=.c6ab1f756972" target="_blank" rel="external">技术奇点</a>等讨论吸引了大众对于智能技术的伦理问题的广泛关注。</p>
+<p>比起这些事关人类存亡、略带科幻感的宏大叙事，另一些由智能技术带来的伦理危害与风险正在更加现实地发生。例如智能技术对就业的影响，是一个经常被提及的主题。<a href="https://www.wired.com/2012/12/ff-robots-will-take-our-jobs/" target="_blank" rel="external">Kevin Kelly认为</a>，机器在工作中对人的取代是一个不可逆的过程，有一些工作暂时只有人类能做或做得比机器更好，但机器终将胜过人类，绝大多数人类在几十年后将不再需要从事生产工作。<a href="http://www.mckinsey.com/business-functions/digital-mckinsey/our-insights/where-machines-could-replace-humans-and-where-they-cant-yet" target="_blank" rel="external">麦肯锡的一个研究</a>则更具体地列出了各种职业被机器取代的可能性，其中生产线工作、准备食物、包装物品等“可预测的物理工作”是最容易被机器取代的。</p>
+<p>除了造成大面积、结构性失业，<a href="https://jsteinhardt.wordpress.com/2015/06/24/long-term-and-short-term-challenges-to-ensuring-the-safety-of-ai-systems/" target="_blank" rel="external">对人工智能的常见担忧</a>还包括赛博空间和物理空间的战争：控制了大量资源甚至自动化武器的人工智能是否会攻击它们本不应该攻击的对象？这种危险甚至不必以战争的形式出现：人工智能的错误行为、甚至只是不恰当的优化，考虑到它们已经在社会经济中扮演如此重要的角色，是否会造成极端恶劣的结果？</p>
+<p>可以注意到，以上几类常见的关于智能技术伦理危害与风险的讨论总体上强调人工智能对人类整体的影响，并不凸显其对当前社会不同人群造成不同影响的情况。同样的趋势也出现在对智能技术的风险进行的分析当中。众多这类分析聚焦于技术层面，而并未将社会和政治层面的因素纳入考虑。例如<a href="https://jsteinhardt.wordpress.com/2015/06/24/long-term-and-short-term-challenges-to-ensuring-the-safety-of-ai-systems/" target="_blank" rel="external">一位斯坦福大学的研究者</a>认为，通过机器学习尤其是深度学习得到的统计学模型具有以下特征，使得它们存有安全隐患：</p>
+<ul>
+<li>不透明：很难、甚至根本无法看懂其中的逻辑；</li>
+<li>整体不可分：无法通过局部分拆理解输入输出之间的关系；</li>
+<li>脆弱：输入的微小变化可能引起输出的重大且无法预测的变化；</li>
+<li>不被充分理解。</li>
+</ul>
+<p>作为对比，《<a href="https://book.douban.com/subject/26785866/" target="_blank" rel="external">Weapons of Math Destruction</a>》一书的作者Cathy O’Neil也提到了广泛影响人们日常工作与生活的众多智能算法工具的<a href="http://boingboing.net/2016/01/06/weapons-of-math-destruction-h.html" target="_blank" rel="external">几个危险的特征</a>：</p>
+<ol>
+<li>它们是秘密的，经常是某家公司的商业秘密；</li>
+<li>它们是不透明的，被它们影响的人群不了解这些算法如何运行；</li>
+<li>它们应用的范围很广；</li>
+<li>它们对“成功”的定义值得置疑，被它们影响的人们未必赞同</li>
+<li>它们制造了有害的反馈环。</li>
+</ol>
+<p>相比前一组特征，O’Neil识别的这一组特征具有一个值得注意的要点：她在其中提及了特定的人群。尤其是在第4点中，O’Neil指出了一个极其重要、但绝非总是明显的问题：智能技术对人的影响是有区别的，同一个技术可能让一部分人受益、同时让另一部分人受损。她举了这样一个例子：2010年在伊利诺伊州开始实施的教师绩效评估算法引发了芝加哥教师的<a href="https://www.revealnews.org/article/the-strike-over-student-growth-chicago-teachers-protest-reflects-a-national-feud/" target="_blank" rel="external">广泛反对乃至游行抗议</a>。正如<a href="https://linnettaylor.wordpress.com/2016/11/01/why-datas-not-a-public-good/" target="_blank" rel="external">Linnet Taylor不无洞见地指出</a>的，在进行伦理评估时，人们倾向于抽象地谈论智能技术可能造成的伤害，而具体地谈论它带来的收益，于是实在的收益总能压倒模糊未知的伤害，从而使项目通过评估。通过将社会和政治因素纳入讨论范围，O’Neil提出的对具体人群的关注给了我们一个重要的视角，来重新审视智能技术可能带来的损害和风险。</p>
+<p>透过这个视角，我们首先可以注意到，智能技术对劳动力市场的影响并非均质。正如Erik Brynjolfsson和Andrew McAfee在《<a href="http://book.douban.com/subject/21326266/" target="_blank" rel="external">与机器赛跑</a>》一书中指出的，教育程度较低、薪酬较低的劳动者更易被智能技术取代，同时也是这部分劳动者更难以获得新的职业技能，从而加重他们在结构性失业中受到的损害。正如<a href="https://krugman.blogs.nytimes.com/2012/12/26/is-growth-over/?_r=0" target="_blank" rel="external">Paul Krugman一针见血地指出</a>的，全能且高效的工作机器人（workbot）的出现未必会让世界变得美好，因为没有能力拥有机器人的那些人的处境将非常悲惨。尽管这方面的研究还很少，但一些现有的研究显示：在高度自动化、智能化的工作环境下，教育和技能水平较低的劳动者正在面临劳动环境恶化、劳动强度增大、收入降低、缺乏劳动和社会保障等挑战。此种现象<a href="http://gigix.thoughtworkers.org/2016/4/30/dark-side-of-sharing-economy/">在“分享经济”形态中普遍可见</a>。在一些极端的情况下，劳动者被异化成“<a href="https://www.thenation.com/article/how-crowdworkers-became-ghosts-digital-machine/" target="_blank" rel="external">数字机器上的幽灵</a>”和“<a href="https://book.douban.com/subject/26916525/" target="_blank" rel="external">生产线上的奴隶</a>”。</p>
+<p>实际上，智能技术可能正在加深对社会弱势群体的偏见和歧视。正如<a href="http://caa-ins.org/archives/1258" target="_blank" rel="external">Wendy Chun所说</a>，“机器学习就像偏见的洗钱”。通过机器学习，偏见和歧视被包装成模型和算法，使不公正变得更加隐秘而影响深远。职场社交网站<a href="http://www.seattletimes.com/business/microsoft/how-linkedins-search-engine-may-reflect-a-bias/" target="_blank" rel="external">LinkedIn的搜索引擎更青睐男性求职者</a>，Google的广告平台<a href="https://www.technologyreview.com/s/510646/racism-is-poisoning-online-ad-delivery-says-harvard-professor/" target="_blank" rel="external">Adsense存在种族偏见</a>，饱受争议的“预测性执法”（predictive policing）<a href="http://www.cnsnews.com/news/article/barbara-hollingsworth/coalition-predictive-policing-supercharges-discrimination" target="_blank" rel="external">对非裔美国人和穆斯林形成结构性歧视</a>，低收入人群会因为智能技术<a href="https://www.theatlantic.com/technology/archive/2016/04/how-big-data-harms-poor-communities/477423/" target="_blank" rel="external">更难从贫困中逃脱</a>。性别、种族、宗教信仰、收入……现实中的各种偏见与歧视，似乎都在智能技术中找到了落脚点。</p>
+<p>智能技术不仅被用于实施对弱势群体的损害、歧视和隔离，而且被用于控制大众情绪。通过<a href="http://bdes.datasociety.net/council-output/perspectives-on-big-data-ethics-and-society/" target="_blank" rel="external">操控用户从新闻订阅渠道看到的信息</a>，Facebook成功地调节了用户发帖的情绪，从而证明情绪可以在大量在线用户之间传染。<a href="https://theintercept.com/2015/06/22/controversial-gchq-unit-domestic-law-enforcement-propaganda/" target="_blank" rel="external">一份曝光的材料</a>显示，JTRIG（联合威胁研究智能小组，隶属于英国情报和国家安全机关政府通信总部)已经在通过Youtube、Facebook、Twitter、博客、论坛、电子邮件、短信、自建网站等渠道操纵大众情绪，从而消除“犯罪、安全和国防威胁”。当用于政治领域，正如<a href="http://boingboing.net/2016/01/06/weapons-of-math-destruction-h.html" target="_blank" rel="external">Cathy O’Neil指出</a>的，智能技术可以诱导选民做出片面的判断；当用于商业领域，<a href="https://book.douban.com/subject/26916525/" target="_blank" rel="external">邱林川则指出</a>，智能技术可以向消费者灌输消费理念，使他们成为对不断更新换代的消费品上瘾的“被制造的奴隶”（manufactured slave）。</p>
+<p>早在1980年代中期，研究者们就围绕“计算机伦理是否具有独特性”这一问题展开了讨论。<a href="http://journals.sagepub.com/doi/abs/10.1177/2053951714559253" target="_blank" rel="external">Johnson认为</a>，计算机伦理只是把标准的道德问题以新形式呈现，逼迫我们在新的领域中延续旧的道德规范，它本身不是一个独特的新题目。而<a href="http://faculty.usfsp.edu/gkearns/Articles_Fraud/computer_ethics.pdf" target="_blank" rel="external">Moor则认为</a>，计算机会大幅度转化/强化现有的伦理问题，并且造成过去未曾出现过的新的伦理问题，因此计算机伦理本身就是一个独特的新题目。这两种观点对于我们全面认识智能技术的伦理问题有着重要的启发意义。我们既需要充分了解智能技术的独特性、及其对伦理问题带来的独特影响，又必须认清新技术背后潜藏的旧有的冲突、斗争和伦理准则，这样才能准确把握智能技术的伦理方向，使其向着对广大民众有益的方向发展。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;em&gt;（旧文一篇，已发表于&lt;a href=&quot;https://zhuanlan.zhihu.com/p/25854862&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;土逗公社&lt;/a&gt;）&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;人工智能的风险已经不再是一个新话题。在过去几
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>数字化转型与平台战略</title>
@@ -823,118 +908,6 @@
     <summary type="html">
     
       &lt;p&gt;尽管2009年就已上线了电商平台Marketplace，但直到2011年，沃尔玛在数字化领域也不能算成功者。当时他们的电商网站只有相当基本的功能，用户体验不算方便，搜索不太好用，也不能与店面或供应链无缝对接。之前的几年，沃尔玛的电商收入跟其他零售商（例如西尔斯、梅西）一样缓
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>技术栈管理：云时代的研发环境</title>
-    <link href="http://gigix.thoughtworkers.org/2017/4/14/stack-management-implementation/"/>
-    <id>http://gigix.thoughtworkers.org/2017/4/14/stack-management-implementation/</id>
-    <published>2017-04-14T05:01:00.000Z</published>
-    <updated>2017-04-13T15:34:06.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="/2017/3/31/stack-management">前文</a>介绍了云计算大背景对研发环境的影响。我们已经指出，现代IT组织应该把研发技术栈以PaaS的形式提供给开发人员，其中的要点是：</p>
-<ul>
-<li>将标准的研发环境封装为虚拟化、云化的技术栈，由技术专家管理维护；</li>
-<li>核心业务价值与技术支撑解耦，工程师专注于业务系统的开发；</li>
-<li>自动化研发流程，降低研发管理成本。</li>
-</ul>
-<p><img src="/assets/2017/4/13/hearty_cloud-wide.jpg"></p>
-<p>如何实现这样一个研发技术栈管理的平台？我们的观点是，这样<strong>一个平台</strong>应该集中管理组织中的技术栈，允许基于一个技术栈创建开发测试PaaS和生产PaaS<strong>两个PaaS服务</strong>，从而支撑开发、测试、生产<strong>三种运行时环境</strong>。</p>
-<h2 id="一个平台"><a href="#一个平台" class="headerlink" title="一个平台"></a>一个平台</h2><p>在一个典型的敏捷软件开发场景（例如更具体的“用Java开发微服务”的场景）中，开发者需要频繁地用到下列工具：</p>
-<ul>
-<li>编程框架，提供基础的结构与功能来支撑业务逻辑代码，例如Spring Boot和Jersey。</li>
-<li>版本控制工具，例如git。</li>
-<li>依赖软件，例如PostgreSQL数据库。</li>
-<li>自动测试工具，包括单元测试工具（TestNG）和功能测试工具（Concordion、Selenium）。</li>
-<li>自动构建工具，Maven或Gradle。</li>
-<li>持续集成工具，Jenkins或GoCD。</li>
-</ul>
-<p>所有这些工具以及它们适当的组合与配置，我们把它称为一个<strong>技术栈</strong>。我们上面的例子就是“Java微服务开发技术栈”，类似的，一个组织中还可以有“Java Web应用开发技术栈”、“H5前端开发技术栈”、“ReactNative移动应用开发技术栈”等等若干个技术栈。对于一般的IT组织而言，有限的几种技术栈就可以覆盖大部分软件项目的形态。体量大如有数万研发员工的某IT巨头，提出的主要技术栈也只有十余种。</p>
-<p>在传统的软件开发团队中，技术栈的组合与配置是<a href="http://insights.thoughtworkers.org/thoughtworks-practice-part8/" target="_blank" rel="external">由团队的技术领导者负责</a>的。在云计算的大背景下，将<a href="https://en.wikipedia.org/wiki/Infrastructure_as_Code" target="_blank" rel="external">基础设施作为源代码</a>的思想再往前推一步，我们就会很自然地得出<strong>技术栈作为源代码</strong>的想法：使用Docker和Ansible等技术，将技术栈的结构以源代码的形式描述。在“基础设施作为源代码”的阶段我们已经知道，以源代码形式管理环境会带来很多好处，例如更高的自动化程度、允许版本控制等。把技术栈作为源代码以后，会带来几个重要的收益：</p>
-<ol>
-<li>技术栈可以很容易地复用，因此可以把搭建技术栈的工作收拢到较少数技术领导者手中，研发团队则只需在技术栈基础上开发业务功能，降低了研发团队的技能门槛。</li>
-<li>最佳实践可以被内嵌到技术栈中，并通过持续集成的形式对研发团队形成约束，从而使研发改进举措更容易推行。</li>
-<li>缩短研发实践的实验和创新周期，可以对多个研发团队开展受控对比实验，团队中自发产生的优秀实践可以被快速抽取并固化到技术栈中。</li>
-</ol>
-<p>技术栈管理平台作为组织级的研发管理载体，承载的是组织对研发团队的引领和治理形式。在这个平台上，技术领导者会创建并维护技术栈，项目团队则可以根据自己的需要选择适合的技术栈，跳过大部分<a href="http://peterschuh.com/?p=129" target="_blank" rel="external">迭代0的技术准备工作</a>，直接进入功能开发，并在整个产品生命周期中享受云化开发环境带来的收益。</p>
-<p><img src="/assets/2017/4/13/stacks.png"></p>
-<h2 id="两个PaaS"><a href="#两个PaaS" class="headerlink" title="两个PaaS"></a>两个PaaS</h2><p>基于已经定义好的技术栈，当项目团队开始研发工作时，技术栈管理平台可以为他们创建两个PaaS服务：一个是研发过程中使用的开发测试PaaS，另一个是真实上线用的生产PaaS。两个PaaS的协作关系如下：</p>
-<p><img src="/assets/2017/4/13/two-paas.png"></p>
-<ul>
-<li>开发人员从开发测试PaaS中获得一个开发环境，在这个环境中编写代码；</li>
-<li>新编写的代码被提交到代码库中，后台的服务自动运行“提交门”测试，测试通过后，把代码构建成可运行应用；</li>
-<li>后台服务针对可运行应用自动运行“验证门”测试，测试通过后，这个版本的可运行应用即被标记为可发布应用，并被存入构建产物仓库；</li>
-<li>测试人员针对通过了“验证门”测试的可发布应用进行必要的手工验证；</li>
-<li>生产环境与开发/测试环境基于同一个技术栈（运行时环境上有具体的差别），开发测试PaaS中构建出的可运行应用可以直接部署到生产环境；</li>
-<li>随不同组织的发布流程不同，构建产物仓库中的可发布应用可能直接（自动或手动）发布到生产环境，也可能被同步到生产PaaS的产品仓库，以后再手动发布到生产环境。</li>
-</ul>
-<p>可以注意到，这个流程、尤其是在开发测试PaaS中发生的流程，与Dave Farley在《<a href="http://www.infoq.com/cn/minibooks/thoughtworks-anthology" target="_blank" rel="external">一键发布</a>》文中介绍的持续集成流水线非常相似。我们相信：持续集成对于现代软件开发是如此重要，以至于它不应该以独立的工具形式存在（因为这样人们就有可能不用或者误用）。持续集成应该被内建在软件开发的工具和过程中，使它不被开发者注意、同时又不能被绕开——正如Spring内建了面向接口编程、IntelliJ IDEA内建了编译和代码格式检查。</p>
-<h2 id="三个运行时环境"><a href="#三个运行时环境" class="headerlink" title="三个运行时环境"></a>三个运行时环境</h2><p>前面介绍的流水线已经暗示，在整个软件交付周期中，存在三个不同的运行时环境。这三个运行时环境都有同样的基础，例如操作系统、依赖软件等。同时它们也有一些重要的差异：</p>
-<ol>
-<li>构建运行时：包含开发工具、构建工具和（可能是部分）测试工具，这是开发人员编写代码的主要环境——需要注意，“编写代码”在敏捷软件开发的上下文中意味着“编写代码并频繁进行提交门测试”，这是为什么这个运行时环境中必须包含（至少部分）测试工具。</li>
-<li>验证运行时：包含全部测试工具及其他质量保障工具，这是对软件质量进行全面验证的主要环境。</li>
-<li>应用运行时：包含运维工具，这是软件真正运行的环境。这个运行时可能被应用于生产环境，也可能仅用在组织内部（例如UAT测试环境、培训环境、demo环境等）。这个运行时中的依赖软件（尤其是数据库）也有可能被替换为环境之外独立运行的软件。</li>
-</ol>
-<p><img src="/assets/2017/4/13/three-runtimes.png"></p>
-<p>尽管为了支持不同环节的工作要求而有这些差异的存在，底线是：构建运行时构建出来的可运行应用，可以在验证运行时中接受完整的验证，也可以被部署到应用运行时正常运行。这与持续交付中“<a href="https://highops.com/insights/continuous-delivery-pipelines-gocd-vs-jenkins/" target="_blank" rel="external">制成件流过整个流水线</a>”（而非在各个构建步骤中分别生成制成件）的理念是一致的。</p>
-<blockquote>
-<p><strong>制成件的形式</strong></p>
-<p>在<a href="/2017/3/31/stack-management">前文</a>中我们已经提到：软件包是一种对云环境不友好的交付形式，理想的研发交付物应该是容器镜像（很可能是一组彼此连接的容器镜像），可以在云上直接运行。Docker等容器技术使我们可以把所有软件（不论背后使用什么编程语言、实现什么功能）都抽象为“IP地址+端口”的服务；再加上例如Docker Swarm或Kubernetes之类集群工具的支持，更可以把服务进一步简化为一个端口。于是，技术栈管理的基础设施可以得到更大程度的复用：不同的技术栈（不管编程平台是Java、NodeJS还是Python）构建出的应用都是一个（或一组）Docker镜像，从而将“产物的形态”与“生产流程的结构”解耦。</p>
-</blockquote>
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>针对<a href="/2017/3/31/stack-management">前文</a>提出的云计算大背景下对软件研发提出的挑战，本文提议了一种解决方案：技术栈管理平台。通过实施技术栈管理平台，为研发团队提供开发测试PaaS和生产PaaS两个PaaS服务、构建/验证/应用三个运行时环境，研发组织能够将技术栈的搭建和管理与业务系统的研发解耦，从而降低研发团队技能门槛、快速有效地推广研发最佳实践、使研发过程中的技术与流程实验和创新成为可能。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;/2017/3/31/stack-management&quot;&gt;前文&lt;/a&gt;介绍了云计算大背景对研发环境的影响。我们已经指出，现代IT组织应该把研发技术栈以PaaS的形式提供给开发人员，其中的要点是：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;将标准的研发环境封装为虚拟化、云化
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>云时代的研发环境长什么样？</title>
-    <link href="http://gigix.thoughtworkers.org/2017/3/31/stack-management/"/>
-    <id>http://gigix.thoughtworkers.org/2017/3/31/stack-management/</id>
-    <published>2017-03-31T05:01:00.000Z</published>
-    <updated>2017-03-30T15:29:41.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>云计算正在毫无疑问地成为企业IT的主流。据<a href="http://www.mckinsey.com/industries/high-tech/our-insights/it-as-a-service-from-build-to-consume" target="_blank" rel="external">麦肯锡调查</a>，六成以上的企业计划在两年内将某种形式的云作为主要IT平台。在国内银行业，<a href="http://www.cbrc.gov.cn/chinese/home/docView/1940BD4B2D7740CC90F4FE4C6B3CD316.html" target="_blank" rel="external">中国银行业信息科技“十三五”发展规划监管指导意见</a>中明确提出：到2020年，国内银行业面向互联网场景的重要信息系统应全部迁移至云计算架构平台，其他系统迁移比例不低于60%。其他行业也有同样的趋势。信息系统云化的大背景给软件系统的研发流程带来了什么挑战，作为软件研发组织的领导者应该如何应对这些挑战？这是本文试图回答的问题。</p>
-<p><img src="/assets/2017/3/31/cloud_challenge.png"></p>
-<p>首先，有必要回顾云计算给企业IT带来的收益。<a href="https://www.ibm.com/cloud-computing/learn-more/benefits-of-cloud-computing/" target="_blank" rel="external">IBM认为</a>云计算有三大优势：</p>
-<ol>
-<li>更灵活。用户可以根据需要，“弹性地”获得IT服务。</li>
-<li>更高效。减少IT团队管理和维护底层基础设施的工作量，IT服务可以更快推向市场。</li>
-<li>战略价值。通过灵活组合现有IT资产与新兴数字渠道，支撑企业业务创新。</li>
-</ol>
-<blockquote>
-<p><strong>云计算与虚拟化的区别</strong></p>
-<p>有很多企业已经采用了虚拟化技术：将企业的计算资源（服务器、存储等）集中管理，以虚拟机的形式分配给使用者。<a href="http://www.businessnewsdaily.com/5791-virtualization-vs-cloud-computing.html" target="_blank" rel="external">虚拟化与云计算的区别</a>在于：虚拟化是指“用软件管理硬件资源”，而云计算是指以虚拟化方式管理硬件资源之后能够对外提供的服务。</p>
-<p>除去这个概念上的差异，我们注意到一些企业在谈论“虚拟化”的时候，背后隐含着一个自动化程度不高的、需要人工参与的虚拟机申请和开通的流程。在这样的流程下，获得一台虚拟主机需要的时间通常以天计。因此，虚拟机的使用者倾向于预先申请虚拟主机并长期占用。在这种情况下，“虚拟化”往往意味着缺乏弹性（elasticity）的计算资源分配——尽管虚拟化技术本身并不妨碍弹性。</p>
-</blockquote>
-<p>可以看出，为了兑现云计算的三大优势，企业IT系统必须云化：软件的形态由从前需要在本地安装的软件包，转变为透过网络在线使用的服务，让使用者随时能够获得；原来体型巨大的单体（monolithic）应用，需要转变为细粒度的服务，从而支持灵活的组合与复用。</p>
-<p>原来习惯了开发本地安装的软件包和/或巨大的单体应用的研发团队，现在要转为开发云化的软件服务，这个转变并非总是无痛的。首先，研发交付物的形态应该是对云环境友好的。从前研发交付物通常是以软件包的形式提供给用户或是运维团队，例如平台特定的JAR、WAR、EGG等软件包，或是RPM、DEB、MSI等操作系统特定的软件包。软件包是一种对云环境不友好的交付形式，因为它没有包含软件运行的环境。例如一个软件需要用到PostgreSQL数据库和monit作为监控工具，平台特定的软件包无法确保这些软件依赖的存在；某些操作系统特定的软件包可以描述软件依赖，但也无法确保依赖软件被正确地配置。过去一段时间里，自动化的配置工具（例如Chef/Puppet/Ansible）被用于解决运行时环境的问题。而在今天的技术背景下，理想的研发交付物应该是容器镜像（很可能是一组彼此连接的容器镜像），可以在云上直接运行。</p>
-<p>对研发交付物的要求随即会影响到研发过程。为了在研发流程的出口得到服务化友好的交付物，最好是在整个开发过程中一直使用与生产环境近似的环境。例如开发人员应该使用全套环境随时验证，自动化测试和手工测试都基于全套环境开展。在这种情况下，环境的设置、管理、更新不可能由每个开发人员和测试人员自己进行，所以环境的管理更新必定是集中进行的，环境的设置必定是自动化的。而且，如果环境固定分配、长期使用，对计算资源的占用可能很大，所以环境应该是云化的、弹性的、按需获得的。</p>
-<p>云计算的大背景还会影响研发实践。为了降低搭建研发环境的技术难度，云化的研发环境应该内建研发工具链（包含开发工具、质量保障工具、持续集成/持续交付工具、DevOps工具、项目管理工具等）。为了规范团队研发质量水平，良好的研发实践（例如代码静态检查、自动化测试等）和流程要求应该固化在工具的日常操作中。理想的情况下，研发团队应该只聚焦关注业务功能开发。开发工具的组合、生产环境的配置、持续集成和持续交付流水线的搭建等工作都应该被标准化和自动化。</p>
-<p>综上所述，在云计算的大背景下，IT组织需要将更多的软件应用部署在云上。云化的IT系统对软件研发的交付物、研发过程、研发实践都提出了新的要求。我们认为：现代IT组织应该从研发环节开始，以原生支持云计算的方式提供、管理和维护研发环境，从而在研发过程中利用云环境的弹性，确保研发交付物对云环境友好，并把优秀的研发实践和流程要求内嵌到研发环境之中。IT组织可以通过以下方式管理其研发环境：</p>
-<ul>
-<li>将标准的研发环境封装为虚拟化、云化的技术栈，由技术专家管理维护；</li>
-<li>核心业务价值与技术支撑解耦，工程师专注于业务系统的开发；</li>
-<li>自动化研发流程，降低研发管理成本。</li>
-</ul>
-<p>在下一篇文章里，我将介绍如何具体实现技术栈的云化管理，把研发技术栈以PaaS的形式提供给开发人员。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;云计算正在毫无疑问地成为企业IT的主流。据&lt;a href=&quot;http://www.mckinsey.com/industries/high-tech/our-insights/it-as-a-service-from-build-to-consume&quot; target=&quot;_b
     
     </summary>
     

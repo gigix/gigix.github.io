@@ -179,6 +179,54 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2011/3/12/devops-readings/" title="link to 这个春天，我感觉运维们鸭梨很大">这个春天，我感觉运维们鸭梨很大</a></h2>
+
+      <p class="excerpt">
+        <p><strong>壹、穷人的EC2自动快照</strong></p><p>用两个简单的shell脚本加一个crontab就能每周（如果你愿意的话，每天也可以）备份EC2的机器。今天在Ubuntu上玩各种东西把环境玩复杂化以后，发现这个脚本蛮有用。</p><p>话说，实在没有什么理由，不到EC2搞台机器放自己的博客兼作翻墙梯啊…</p><p><strong>贰、挪亚，不是方舟</strong></p><p>这位John Vincent同志写了<a href="http://lusislog.blogspot.com/2011/03/ad-hoc-configuration-coordination-and.html" target="_blank" rel="external">一篇博客</a>论述…嗯，为什么有Chef和Puppet还不够。</p><p>Chef和Puppet管理有计划的变更，但你经常会做无计划的<a href="http://dev2ops.org/blog/2011/2/16/peanut-butter-in-my-chocolate-convergence-vs-ad-hoc-control.html" target="_blank" rel="external">偶发变更</a>，而且你不太希望每次变更重启都得重启服务。所以，Vincent桑说，你需要…</p><blockquote>Distributed coordination, dynamically reconfigurable code, elasticity and environment-awareapplications.</blockquote><p>然则，看完<a href="https://github.com/lusis/noah" target="_blank" rel="external">Noah的README</a>就知道了。这就是RESTful的RMI…好吧，正确的思想永远都用得上，而且RESTful总比RMI要好那么一点点。</p><p><strong>叁、飞禽走兽们</strong></p><p><a href="http://www.nagios.org/" target="_blank" rel="external">Nagios</a>是老牌的监控工具，十多年历史了。</p><p><a href="http://hadoop.apache.org/" target="_blank" rel="external">Hadoop</a>这里好玩的东西不少，<a href="http://hadoop.apache.org/hdfs/" target="_blank" rel="external">分布式文件系统</a>，<a href="http://hadoop.apache.org/mapreduce/" target="_blank" rel="external">MapReduce</a>，还有<a href="http://zookeeper.apache.org/" target="_blank" rel="external">重新发明轮子的ZooKeeper</a>。</p><p><a href="http://www.sinatrarb.com/" target="_blank" rel="external">Sinatra</a>，快速做一个web server，不需要Rails那么庞大，比WEBrick容易写。</p><p><a href="http://redis.io/" target="_blank" rel="external">Redis</a>，又一个key-value store。加上<a href="http://ohm.keyvalue.org/" target="_blank" rel="external">Ohm</a>，好了，NoSQL的对象持久化。</p><p>看一遍<a href="https://github.com/lusis/Noah/wiki/Example-Use-Cases" target="_blank" rel="external">Noah的使用场景</a>，感到运维们鸭梨很大。</p><p>（还有一本<a href="http://goo.gl/oVgbx" target="_blank" rel="external">Hadoop的书</a>可我今天看不着…等明天翻墙再说吧。）</p><p><strong>肆、来点音乐</strong></p><p><a href="http://mad.emotionull.com/" title="MAD" target="_blank" rel="external">Music as Data</a>is a live programming language/environment based on Processing.org written in Clojure. It’ssomething likeSuperCollider or Chuck but aims to be easier to hack/experiment live.</p><p>我喜欢他的网站。简约而不简单。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="3月 12 2011" class="post-list__meta--date date">3月 12 2011</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2011/3/2/chef-3-first-cookbook/" title="link to Chef学习手记之叁：红宝石菜谱">Chef学习手记之叁：红宝石菜谱</a></h2>
+
+      <p class="excerpt">
+        <p>有了一台<a href="http://gigix.thoughtworkers.org/2011/2/20/chef-2-rails-server">基本的服务器</a>，现在我就要在上面配置Rails服务器。当然这件事已经有人干过了，但我不想用别人的菜谱，再怎么说我也是<a href="http://rubyworks.rubyforge.org" target="_blank" rel="external">RubyWorks</a>的开发者…</p><p>（还有，我觉得Fedora还是不如Ubuntu好用，所以我偷偷把EC2的机器换成了Ubuntu 10.04。）</p><p><img src="http://gigix.thoughtworkers.org/assets/2011/3/2/ruby-chef.jpg" width="300px"></p><p>新建一个菜谱真容易，用knife一下子就搞定了：</p><pre>$ knife cookbook create my_rails_gig</pre><p>菜谱放在 #{chef-repo}/cookbooks/my_rails_gig 下面。首先要看的是 recipes/default.rb，缺省菜色的做法就写在里面。在我开始做自己的配置之前，我得先保证Apache和<a href="http://www.modrails.com/" target="_blank" rel="external">Passenger</a>都配好了。</p><pre># default.rbinclude_recipe “passenger_apache2::mod_rails”</pre><p>然后涅，我要用“railsapp”这个用户来部署Rails应用──不可以用root来跑服务。所以我得确保有这个用户（以及它独占的一个组）。</p><pre># default.rbgroup ‘rails’ dogroup_name ‘rails’action :createenduser ‘railsapp’ dousername ‘railsapp’action :createend</pre><p>接下来，按照我们RubyWorks的传统，Rails应用应该部署在 /var/rails 目录下面。所以要确保有这个目录。</p><pre># default.rbdeploy_to = ‘/var/rails’directory deploy<em>to doowner “railsapp”group “rails”mode “0755”action :createend</em></pre><p>现在是最挑战的部分：配置Passenger…但是只要是像我一样经验丰富的Rails服务器管理员，这个也小菜一碟<sup></sup><a href="http://cookbooks.opscode.com/cookbooks/apache2" target="_blank" rel="external">Apache2那本菜谱</a>讲了怎么在Apache里做web_app，你只要调用就行：</p><pre># default.rbweb_app ‘rails_app’ dotemplate “rails_app.conf.erb”docroot “#{deploy_to}/current/public”server_name “#{MY_COOL_HOSTNAME}”rails_env ‘production’end</pre><p>唯一的trick就是<a href="http://gigix.thoughtworkers.org/assets/2011/3/2/rails_app.conf.erb">rails_app.conf.erb</a>这个template：我需要把它放在 templates/default 目录下（规则和Rails有点像）。别的么…就再没啥啦～～（不信就<a href="http://gigix.thoughtworkers.org/assets/2011/3/2/default.rb">看代码</a>）噢对了，别忘了在这台机器的角色里加上新的菜色：</p><pre>“run_list”: [“recipe[passenger_apache2::mod_rails]”,”recipe[my_rails_gig]”],</pre><p>噢也～菜谱写完开始做菜～先把菜谱上传到服务器：</p><pre>$ knife cookbook upload my_rails_gig</pre><p>再跑到我的服务器上执行一下 chef-client …这就好了。用 railsapp 用户到 /var/rails/current 下面建一个应用（为什么要“current”？问<a href="https://github.com/capistrano/capistrano/wiki/" target="_blank" rel="external">Capistrano</a>）。浏览器访问80端口，看后台日志，Rails已经开始工作了。</p><p>嗯，虽说写自己的菜谱挺好玩的，不过<a href="http://cookbooks.opscode.com/cookbooks/application" target="_blank" rel="external">这个菜谱</a>很值得学习──其实很多菜谱都值得学习，所以…</p><p><em>（未完待续）</em></p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="3月 2 2011" class="post-list__meta--date date">3月 2 2011</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2011/2/28/show-off-too/" title="link to Show-off Too">Show-off Too</a></h2>
 
       <p class="excerpt">
@@ -357,55 +405,6 @@ classes that you can use:
       <div class="post-list__meta">
 
         <time datetime="2月 11 2011" class="post-list__meta--date date">2月 11 2011</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2011/1/30/devops/" title="link to 关于DevOps的快速阅读">关于DevOps的快速阅读</a></h2>
-
-      <p class="excerpt">
-        <p>中文WikiPedia上的<a href="http://zh.wikipedia.org/wiki/DevOps" target="_blank" rel="external">DevOps</a>这个词条是我今天刚翻译过来的。</p><p><a href="http://zh.wikipedia.org/wiki/File:Devops.png" target="_blank" rel="external"><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Devops.png/220px-Devops.png" alt=""></a></p><blockquote>需要频繁交付的企业可能更需要对DevOps有一个大致的了解。Flickr发展了自己的DevOps能力，使之能够支撑业务部门“每天部署10次”的要求──如果一个组织要生产面向多种用户、具备多样功能的应用程序，其部署周期必然会很短。<p>可以把DevOps看作开发（软件工程）、技术运营和质量保障（QA）三者的交集。</p></blockquote><p><a href="http://dev2ops.org/blog/2010/11/7/devops-is-not-a-technology-problem-devops-is-a-business-prob.html" target="_blank" rel="external">DevOps不是个技术问题，而是个商业问题</a>。</p><blockquote>The whole point of DevOps is to enable your<span class="caps">BUSINESS</span>to react to market forces as quickly, efficiently, and reliably as possible.</blockquote><p>特别值得一提的是，DevOps对于个人来说（再一次地）是个学习和<a href="http://www.kartar.net/2010/02/what-devops-means-to-me/" target="_blank" rel="external">持续改进</a>的问题。</p><blockquote>Automate, automate, automate.<p>Don’t stop innovating and learning. Technology moves fast. So do customer requirements.</p></blockquote><p><a href="http://wiki.opscode.com/display/chef/Home" target="_blank" rel="external">Chef</a>挺好用的。<a href="http://www.puppetlabs.com/puppet/introduction/" target="_blank" rel="external">Puppet</a>也是。怎么我就想不到这么好的点子呢？</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="1月 30 2011" class="post-list__meta--date date">1月 30 2011</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2011/1/28/what-s-wrong-with-multi-tasking/" title="link to What&#39;s Wrong With Multi-tasking?">What&#39;s Wrong With Multi-tasking?</a></h2>
-
-      <p class="excerpt">
-        <p><img src="http://gigix.thoughtworkers.org/assets/2011/1/28/Picture_6.png" width="490px"></p>
-
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="1月 28 2011" class="post-list__meta--date date">1月 28 2011</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">

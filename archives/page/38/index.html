@@ -179,6 +179,55 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2008/12/12/shencongwen/" title="link to 读·沈从文">读·沈从文</a></h2>
+
+      <p class="excerpt">
+        <p>因了某人的缘故，连着两天，读了沈从文的《边城》、《凤凰》和半本的《从文自传》。</p><p>最感触的，便是这句话：</p><blockquote>知识同权力相比，我愿意得到智慧，放下权力。我明白人活到社会里应该有许多事情可作，应当为现在的别人去设想，应当如何去思索生活。且应当如何去为大多数人牺牲，为自己一点点理想受苦，不能随便马虎过日子，不能委屈过日子了。</blockquote><p>太多的道理，太少的感觉。所谓左脑作主，便是如此的罢。</p><p>而后半本的自传里，竟然连他自己也说起道理来了。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="12月 12 2008" class="post-list__meta--date date">12月 12 2008</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2008/12/11/recommendations-from-the-build-master/" title="link to Recommendations From The Build Master">Recommendations From The Build Master</a></h2>
+
+      <p class="excerpt">
+        <p></p><p>It’s about multi-team configuration management (or continuous integration). It’s from<a href="http://www.amazon.com/Build-Master-Microsofts-Configuration-Addison-Wesley/dp/0321332059" target="_blank" rel="external">The BuildMaster</a>.</p><ul><li>Create the mainline (public) and virtual build labs (private) codelines.</li><li>Make sure the mainline is pristine and always buildable and consumable. Create shippable bits ona dailybasis. Use consistent, reliable builds.</li><li>Build private branches in parallel with the main build at a frequency set by the<span class="caps">CBT</span>.</li><li>Use consistent reverse and forward integration criteria across teams.</li><li>Be aware that dev check-ins are normally made only into a private branch or tree, not themainline.</li><li>Know that check-ins into a private branch are only reverse integrated (RId) into main whenstringent,division-wide criteria are met.</li><li>Use atomic check-ins (RI) from private into main. Atomic means all or nothing. You can back outchanges ifneeded.</li><li>Make project teams accountable for their check-ins, and empower them to control their buildprocess withhelp from the<span class="caps">CBT</span>.</li><li>Configure the public/private source so that multisite or parallel development works.</li><li>Optimize the source tree or branch structure so that you have<strong><span class="caps">ONLY ONE</span></strong>branch per component of your product.</li></ul><p></p>
+
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="12月 11 2008" class="post-list__meta--date date">12月 11 2008</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2008/10/19/hack-rails-transaction/" title="link to Hack Rails的事务机制">Hack Rails的事务机制</a></h2>
 
       <p class="excerpt">
@@ -358,54 +407,6 @@ classes that you can use:
       <div class="post-list__meta">
 
         <time datetime="9月 19 2008" class="post-list__meta--date date">9月 19 2008</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2008/9/19/why-not-start-with-ci/" title="link to 从持续集成开始，你怕啥呢？">从持续集成开始，你怕啥呢？</a></h2>
-
-      <p class="excerpt">
-        <p>鼠标说，很多人认为<a href="http://www.infoq.com/cn/articles/road-of-ic" target="_blank" rel="external">敏捷从持续集成开始</a>，于是就<a href="http://www.zhangxun.com/_templates/tmpl_AddComment.aspx?sname=NewsAID&amp;id=54" target="_blank" rel="external">有人害怕了</a>。</p><p>人家说，你们搞这贸贸然的就持续集成，不行的。</p><blockquote>1、认清真正的敏捷<p>通过学习和调研，认清什么是真正的敏捷。如果一些基本初始概念就错了，那么在后续的推行中必然会差之毫厘、谬之千里，真正的敏捷实施也就无从谈起。</p><p>2、预估推行敏捷的收益</p><p>在确认知道什么是真正敏捷的前提下，对自己团队、组织的现状、问题和薄弱环节进行评估，设定改进目标，并预估敏捷能否解决这些问题，带来潜在的改进。如果成功的把握小于 50%或者现状已经足够好，就不要推行敏捷，何必劳民伤财呢。</p></blockquote><p>有意思啊。弄不清什么是“真正的敏捷”，“现状已经足够好”，就不需要改进了？就不要解决问题了？</p><p>怕啥呢？怕的就是这持续集成它是实打实的东西吧。怕的就是持续集成一上，所有的问题都以测试是红是绿这么截然的方式暴露出来，逼着不得不解决吧。怕的就是持续集成它没有放之四海而皆准的套话可以讲，build脚本得一点点写出来吧。怕的就是没人跟您玩“学习和调研”了吧。怕的就是“真正的敏捷实施”卖不掉了吧。</p><p>作为一个专门帮人解决问题的，我越来越频繁的说，我不在乎敏捷不敏捷。你告诉我，你有什么问题，咱们一起来看看怎么解决。可能一个项目做到最后你还是不搞敏捷，没关系，我解决你的问题提高你的效率就行。</p><p><a href="http://www.thoughtworks.com" target="_blank" rel="external"><strong>Thought</strong>Works</a>是一个做实事的公司，所以我们认为每个项目应该做的第一件事就是让真正的软件开口说话，说出它有什么问题，然后我们来解决问题。难怪有人要怕呢。光顾着解决问题，那学习和调研基本初始概念的事可扔到哪儿去了呢？</p><p>怕是又动了谁的奶酪了吧。</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="9月 19 2008" class="post-list__meta--date date">9月 19 2008</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2008/9/18/full-moon-festival/" title="link to 南戴河，中秋">南戴河，中秋</a></h2>
-
-      <p class="excerpt">
-        <p>到昌黎的葡萄沟去买了新鲜的葡萄酒。</p><table style="width:auto;"><tr><td><a href="http://picasaweb.google.com/lh/photo/BM2bTVpZdXBfuHjM5ZSPfQ" target="_blank" rel="external"><img src="http://lh6.ggpht.com/gigix1980/SM8FHldc1qI/AAAAAAAAFEk/IMVjBX2l3ko/s400/DSCF1971.JPG"></a></td></tr><tr><td style="font-family:arial,sans-serif; font-size:11px; text-align:right">From<a href="http://picasaweb.google.com/gigix1980/gyETZF" target="_blank" rel="external">昌黎葡萄沟</a></td></tr></table><p>葡萄一串串的，很好看。</p><table style="width:auto;"><tr><td><a href="http://picasaweb.google.com/lh/photo/J05YQhcQQhLQBJcedhNF3g" target="_blank" rel="external"><img src="http://lh3.ggpht.com/gigix1980/SM8E7AVXOuI/AAAAAAAAFEU/b-Fw8dn9HdM/s400/DSCF1962.JPG"></a></td></tr><tr><td style="font-family:arial,sans-serif; font-size:11px; text-align:right">From<a href="http://picasaweb.google.com/gigix1980/gyETZF" target="_blank" rel="external">昌黎葡萄沟</a></td></tr></table><p>在平坦又少人的路上跑了一天，明明的平均油耗降到5.7…到晚上走了一段乡间路最终到了5.9。</p><table style="width:auto;"><tr><td><a href="http://picasaweb.google.com/lh/photo/47eLpBZE5FQSh5p-kudyFQ" target="_blank" rel="external"><img src="http://lh5.ggpht.com/gigix1980/SNEsQzBkLlI/AAAAAAAAFFs/4ki2k31E7pE/s400/DSCF1990.JPG"></a></td></tr><tr><td style="font-family:arial,sans-serif; font-size:11px; text-align:right">From<a href="http://picasaweb.google.com/gigix1980/gyETZF" target="_blank" rel="external">昌黎葡萄沟</a></td></tr></table><p>乐极生悲…拖底了。跑完长途回京一定要去4S店检查，这个好习惯要保持下去。</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="9月 18 2008" class="post-list__meta--date date">9月 18 2008</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">

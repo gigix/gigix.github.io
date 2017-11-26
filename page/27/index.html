@@ -174,6 +174,54 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2010/6/12/suggestions-about-tool-development/" title="link to 关于内部工具开发的若干建议">关于内部工具开发的若干建议</a></h2>
+
+      <p class="excerpt">
+        <p>（本文都是基于某些现状与设想的建议，没有得到实践验证。仅供参考，责任自负。）</p>作为一个超级大软件企业的内部工具开发部门，需要考虑几个重要问题：<ol><li>避免作恶</li><li>发布管理</li><li>技术支持</li></ol><p>在考虑开发一个工具提供什么价值之前，首先考虑可能造成什么伤害。世界上有很多的开源工具。这些工具不仅仅是源代码的堆积，其中融入了一些最优秀的软件开发者在某一领域的经验与智慧。贸然开发一个新的工具，哪怕只是对现有开源工具的包装，都可能导致很多人失去学习这些经验与智慧的机会。优先考虑知识的普及。教人读《<a href="http://book.douban.com/subject/1436131/" target="_blank" rel="external"><span class="caps">J2EE</span>Development Without<span class="caps">EJB</span></a>》比开发又一套框架要好，虽然做起来会更难。<a href="http://www.springside.org.cn/" target="_blank" rel="external">春天的旁边</a>是一个好的框架，因为它重视知识的传递而非包装现有代码。</p><p>使用业界公认的依赖管理工具来发布。通过邮件发给用户一个“XxxxXxx-V001R002C004B035SP02.exe”是不负责任的。使用<a href="http://maven.apache.org/" target="_blank" rel="external">Maven2</a>或者<a href="http://en.wikipedia.org/wiki/Yellowdog_Updater,_Modified" target="_blank" rel="external"><span class="caps">YUM</span></a>或者<a href="http://en.wikipedia.org/wiki/Advanced_Packaging_Tool" target="_blank" rel="external"><span class="caps">APT</span></a>或者<a href="http://rubygems.org/" target="_blank" rel="external">RubyGems</a>这样体面的依赖包管理工具来发布你的作品。这样能让用户知道自己得到的每个版本都是经过某种发布流程的而不是一个野版本，并且使你的工具能以最低成本与其他依赖包集成。如果公司的信息安全规定禁止普通开发人员上外网从而导致他们无法使用这些体面的依赖管理工具来搭建自己的工作环境，给他们搭一个内部私服，并把下载新依赖的请求委派到互联网。这不仅有利于你自己的工作，而且能让开发人员的生活变得更容易，他们会因此感谢你。</p><p>（Windows到现在也没有一个体面的依赖管理工具，所以Windows is stupid。）</p><p>用一个简单易用的Bug跟踪工具来管理所有的支持要求，例如<a href="http://trac.edgewall.org/" target="_blank" rel="external">Trac</a>就很好。建立一个邮件列表，把所有曾经提出支持要求的人都加进去。给用户建立社群，他们就会自己解决绝大部分的愚蠢问题。不要为了漂亮的界面而把事情搞得复杂。用户提问，你解答，把这些事情都变得就像发一个邮件那么简单，你就能得到一个社群──你确实应该考虑充分利用邮件，因为用户不会在知道了支持人员的邮件地址之后还记住你的在线支持社区地址。向那些体面的开源社区学习，向Google学习，看看他们是如何响应用户需求的。</p><p>最后，开放源代码。尽管概率很小，但确实有些用户会给你贡献源代码（至少在他们失去耐心继续等待你的fix时）。像Microshit那样暴露几个莫名其妙的编程接口然后宣称“我们的软件具有可扩展性”是不够的，因为扩展永远都会在你没有想到的地方发生。不要把工具的开发者和用户隔开，因为那些用户很可能是比你更好的软件开发者。开放你的SVN地址，把它和开发指南的链接放在工具介绍的第一页上，就像绝大多数体面的开源项目所做的那样。及时并真诚地感谢那些给你贡献代码的人，以及那些checkout了你的代码库并嘲笑它的人，因为他们会让你的软件变得更好。</p><p>最后的最后，随时准备抛弃你自己的任何东西，从一段源代码，到一个功能，甚至整个软件。如果你的目标是让别人的工作更容易的话。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="6月 12 2010" class="post-list__meta--date date">6月 12 2010</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2010/6/7/how-to-config-distributed-cruise-control/" title="link to 配置分布式的CruiseControl">配置分布式的CruiseControl</a></h2>
+
+      <p class="excerpt">
+        <p><a href="http://localhost:8080/documentation/distributed/index.html" target="_blank" rel="external">这个文档</a>描述得不是很清楚，因此记录一遍。首先需要同时下载<a href="http://sourceforge.net/projects/cruisecontrol/files/CruiseControl/2.8.3/cruisecontrol-src-2.8.3.zip/download" target="_blank" rel="external">src发布包</a>和<a href="http://sourceforge.net/projects/cruisecontrol/files/CruiseControl/2.8.3/cruisecontrol-bin-2.8.3.zip/download" target="_blank" rel="external">bin发布包</a>。</p>解开src发布包，在其中build distributed插件，然后把contrib目录copy到bin发布包解压后的目录：<blockquote><pre>cd $CC_SRC/contrib/distributedantcd $CC_BINcp -r $CC_SRC/contrib ./contrib</pre></blockquote>修改$CC_BIN/cruisecontrol.sh，在其中包含distributed插件的classpath：<blockquote><pre>… …CCDIST=$CCDIR/contrib/distributedCCDIST_BUILDER=$CCDIST/dist/builder/CCDIST_CORE=$CCDIST/dist/core/CCDIST_JINICORE=$CCDIST/jini-core/CCDIST_JINILIBDL=$CCDIST/jini-lib-dl/jsk-dl.jarCCDIST_CONF=$CCDIST/confEXEC=”$JAVA_HOME/bin/java $CC_OPTS -Djavax.management.builder.initial=mx4j.server.MX4JMBeanServerBuilder -Djava.security.policy=$CCDIST_CONF/insecure.policy -Dcc.library.dir=$LIBDIR -Djetty.logs=$JETTY_LOGS -jar \$LAUNCHER -lib $JAVA_HOME/lib/tools.jar -lib $CCDIST_BUILDER:$CCDIST_CORE:$CCDIST_JINICORE:$CCDIST_JINILIBDL:$CCDIST_CONF \$@ -jmxport 8000 -webport 8080 -rmiport 1099”echo $EXEC$EXEC &amp;echo $!  cc.pid</pre></blockquote>在$CC_BIN/config.xml中指定需要分布的工程：<blockquote><pre>plugin name=”distributed”classname=”net.sourceforge.cruisecontrol.builders.DistributedMasterBuilder”/… …distributedant antscript=”/usr/bin/ant”antworkingdir=”/path/to/my/project” //distributed</pre></blockquote>打开Lookup server：<blockquote><pre>cd $CC_BIN/contrib/distributed/dist/lookupant</pre></blockquote><p>然后，把cc_agent.zip拷到Agent机器上，修改conf/agent.properties配置，ant启动，就好了。</p><p>（郁闷地搞了一下午的心得是：不要尝试在Windows上做任何严肃的开发工作。Stupid Windows.）</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="6月 7 2010" class="post-list__meta--date date">6月 7 2010</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2010/5/29/how-to-create-a-test-tool-which-sucks/" title="link to 如何做一个能害死人的自动化测试工具">如何做一个能害死人的自动化测试工具</a></h2>
 
       <p class="excerpt">
@@ -353,54 +401,6 @@ classes that you can use:
       <div class="post-list__meta">
 
         <time datetime="4月 18 2010" class="post-list__meta--date date">4月 18 2010</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2010/4/17/fearless-or-courage/" title="link to 无畏·勇气">无畏·勇气</a></h2>
-
-      <p class="excerpt">
-        <p>做360度评价。发现别人对我的认知和我的自我认知之间，差别最大的是“fearless”这项。</p><p>原来那么多人认为我”always fearless”，还有”like challenge”。 天知道我有多胆小。风险只会让我焦虑并加重颈椎病症状。</p><p>风说，要勇敢，至少装作勇敢的样子，很少有人能看出两者的差别。（知人论世就是，你不仅要知道大家都认为他很勇敢，还要知道他其实只是装作勇敢的样子。）</p><p>Deliberative和Context的特质，使你面对风险时思考它的前因后果。对它认识得更多，也就更容易去承受它。所以让你看起来无畏。可能这不是无畏（不害怕），而是勇气（害怕也敢于去做）。郭晓如是说。</p><p>也许知道自己胆子小，就会认真去计算一个uncertainty的成本和收益；反而成天嘴上喊着“敢于尝新”的某些人，面对风险总以“要想清楚”做借口。这么一来，岂不是比我更胆小了么。</p><p>原来勇气是一种与知识、与经验、与计算有关的东西。嗯，符合敏捷价值观。</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="4月 17 2010" class="post-list__meta--date date">4月 17 2010</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2010/4/10/foundamental-ci/" title="link to 持续集成不是敏捷的基础">持续集成不是敏捷的基础</a></h2>
-
-      <p class="excerpt">
-        <p>它就是敏捷本身。或者说得更大一点，持续集成就是软件交付本身。</p><p>持续集成反映交付形态。这句话实际上是肖鹏说的。实际上是肖鹏很久前说过然后李丰用了很长时间理解了然后再说出来然后我听了一耳朵然后又用了很长时间理解然后再说出来的。持续集成是什么样，不是由持续集成负责人设计的，而是由软件交付形态决定的。</p><p>所以持续集成反映交付团队的一切现状和问题。分层分级的持续集成，说明团队与团队之间的沟通成本高。层级之间以二进制还是源代码集成，代表团队之间的依赖层面和交付形式。测试用例失败时构建不失败，说明交付团队没有可依赖的质量标准。构建的频率，代表团队关注质量的频率。每日构建，说明质量没有内建在生产流程中，全靠“守门人”把关。</p><p>没有持续集成，说明交付流程是混乱不清晰随机的。</p><p>（推论：关于“敏捷是不是必须有持续集成”的讨论再也不想听到，因为持续集成不是敏捷的组成部分，它就是敏捷本身。连交付流程都没有还提什么敏不敏捷的，没有意思。）</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="4月 10 2010" class="post-list__meta--date date">4月 10 2010</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">
