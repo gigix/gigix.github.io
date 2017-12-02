@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gigix.thoughtworkers.org/"/>
-  <updated>2017-11-26T16:16:23.771Z</updated>
+  <updated>2017-12-02T16:55:25.258Z</updated>
   <id>http://gigix.thoughtworkers.org/</id>
   
   <author>
@@ -14,6 +14,92 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>数据管理平台（DMP）综述</title>
+    <link href="http://gigix.thoughtworkers.org/2017/12/3/dmp-overview/"/>
+    <id>http://gigix.thoughtworkers.org/2017/12/3/dmp-overview/</id>
+    <published>2017-12-03T05:01:00.000Z</published>
+    <updated>2017-12-02T16:55:25.258Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="在线广告技术生态"><a href="#在线广告技术生态" class="headerlink" title="在线广告技术生态"></a>在线广告技术生态</h2><p>ADN（广告网络）批量地运营媒体的广告位资源，按照人群或上下文标签售卖给需求方，并用竞价的方式决定流量分配。广告网络的结算以按点击付费（Cost per Click，CPC）的方式为主。面向多个ADN或媒体按人群一站式采买广告并优化投入产出比的需求方产品叫交易终端（Trading Desk，TD）。</p>
+<p>在ADN中，核心的竞价逻辑是封闭的，不能满足需求方越来越明确的利益要求，于是市场上产生了大量聚合各媒体剩余流量并采用实时竞价方式为他们变现的产品形态——广告交易平台（AD Exchange，ADX）。</p>
+<p>在ADX上通过实时竞价的方式，按照定制化人群标签购买广告，这样的产品就是需求方平台（Demand Side Platform，DSP）。对应的管理媒体广告位的产品就是供给方平台（Supply Side Platform，SSP）。</p>
+<p>DSP会向DMP（数据管理平台）寻求数据支持，达到更精准的投放。</p>
+<p><img src="http://www.rtbchina.com/wp-content/uploads/2017/10/China-Programmatic-Ad-Tech_2017Q3_R-1.png"></p>
+<h2 id="在线广告业务中数据的价值"><a href="#在线广告业务中数据的价值" class="headerlink" title="在线广告业务中数据的价值"></a>在线广告业务中数据的价值</h2><p>对精准广告业务产生直接贡献的数据有以下几类：</p>
+<ol>
+<li>用户标识。对广告而言，如何确定哪些行为来自于同一个用户是非常关键的问题。</li>
+<li>用户行为。转化、预转化、搜索广告点击、展示广告点击、搜索点击、搜索、分享、页面浏览、广告浏览等在线行为是可以被广泛采集并且对于受众定向或广告决策有明显作用。这些行为又可以分为决策行为（转化、预转化）、主动行为（广告点击、搜索、搜索点击）、半主动行为（分享、网页浏览）、被动行为（广告浏览）。</li>
+<li>人口属性。一般来说只有与用户实名身份绑定的服务可以得到此信息，也可以利用网络行为数据进行人口属性标签的预测，但准确程度有限，而且仍然需要标定的数据用于训练。</li>
+<li>地理位置。地理位置信息随能获得的精度不同，其用途也有相当大的差异。</li>
+<li>社交关系。社交关系可用于用户兴趣的平滑。</li>
+</ol>
+<h2 id="数据管理平台的功能"><a href="#数据管理平台的功能" class="headerlink" title="数据管理平台的功能"></a>数据管理平台的功能</h2><p>DMP日渐火爆源于广告主对投放效果的更高追求以及对营销浪费更低的容忍度，DMP即是为解决这些问题而生。广告主希望更精准的对目标人群进行广告投放，如果投放的对象对某些广告不感兴趣，却反复被广告轰炸只会适得其反。如果企业能够在投放广告或其他营销手段前就能对受众进行具体、精准的识别，广告投放的效果会因此增强。</p>
+<p>数据的来源分为三类：</p>
+<ul>
+<li>第一方数据：广告主自有用户数据，包括网站/APP监测数据、CRM数据、电商交易数据等。</li>
+<li>第二方数据：广告商在广告投放过程中积累的业务数据，如DSP平台业务中积累的受众浏览广告、点击广告等相关数据。</li>
+<li>第三方数据：非直接合作方拥有的数据，如运营商数据等。</li>
+</ul>
+<p>第三方数据中，BAT的数据只能应用于各自的生态圈，实际产生效果并不容易；运营商的数据不一定总能通过商务关系得到，又有各地军阀割据的问题、有流量劫持等争议问题，而且越来越多网站和APP采用加密，运营商看不到了；垂直领域的数据相对比较细和专，质量高。</p>
+<p>DMP有下面几个核心的产品功能：</p>
+<ol>
+<li>它可以为网站（可以是媒体也可以是广告主网站）提供受众定向功能，并将得到的用户标签应用于网站业务。</li>
+<li>如果媒体网站授权，DMP可以提供接口对加工出来的用户标签进行变现，并与网站分成。</li>
+<li>广告主网站可以通过DMP广告采买渠道进行更方便的数据对接。</li>
+</ol>
+<p><img src="http://www.iyunying.org/wp-content/uploads/2017/03/1e471f277c0d6bf12d49bef4dc7cb780.png"></p>
+<p>可以从以下几个角度对DMP进行评估：</p>
+<ol>
+<li>数据来源。有多少优质的数据源可以利用。在中国能使用BAT的数据是一个重要因素，腾讯广点通和阿里达摩盘在这方面有优势。</li>
+<li>数据处理。进入DMP的数据（包括结构化的和非结构化的）能多灵活地处理。</li>
+<li>ID联结。DMP能多准确地联结来自不同数据源的用户信息。</li>
+<li>受众区分。对受众分群的多样性和准确性。受众定向标签可以分为人口学标签、上下文标签、行业定制标签三类。</li>
+<li>数据建模。通过对数据的分析提供look-alike或其他更深度的洞察和投放指导。</li>
+<li>与程序化广告平台的整合度。</li>
+</ol>
+<p><img src="https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAerAAAAJDIxODdmZjBmLTJiYzItNDNhNi04M2U2LTY1Y2EwOTBkYjJmNg.png"></p>
+<p>这里有一个<a href="https://adexchanger.com/data-exchanges/oracle-dmp-still-recognized-used-salesforce-dmp-others-ascending/" target="_blank" rel="external">国外DMP产品的排名</a>。Oracle收购的BlueKai排名第一。SalesForce收购的Krux紧随其后。</p>
+<p>针对BAT各自DMP的功能，这里有一个<a href="http://www.pmcaff.com/article/index/630074472566912" target="_blank" rel="external">分析对比</a>。</p>
+<h2 id="为何企业要自建DMP"><a href="#为何企业要自建DMP" class="headerlink" title="为何企业要自建DMP"></a>为何企业要自建DMP</h2><p>自建程序化广告系统的主要目的是增加透明度、控制力和效率：</p>
+<ul>
+<li>透明度：企业希望清楚知道广告投放的效果，不想被欺诈。据<a href="http://adage.com/article/digital/ana-report-7-2-billion-lost-ad-fraud-2015/302201/" target="_blank" rel="external">ANA的统计</a>，可能有多达37%的在线广告点击是虚假的。</li>
+<li>控制力：企业拥有越来越多的第一方数据，希望有更强的数据掌控，尤其不希望自己的第一方数据被广告平台用来帮助竞争对手投放（以增强广告平台DMP能力的形式）。</li>
+<li>效率：企业希望基于DMP能做更复杂的分析、更多的实验、与市场营销更紧密配合。</li>
+</ul>
+<p>Target选择自建DMP，分析师认为除了以上理由之外，Target还希望充分利用自己已有的客源流量，把自己变成数字化媒体。</p>
+<p>自建DMP需要有以下功能模块：</p>
+<ul>
+<li>数据的获取入口</li>
+<li>数据的清洗，整合</li>
+<li>标签的计算，挖掘</li>
+<li>打标签及标签的展示</li>
+<li>用户分群</li>
+</ul>
+<p>前三块是DMP的基础，虽然看不见，但是决定了一个DMP的质量。后两块是比较偏产品前端的内容，DMP是否简单易用，是否友好易懂就是这部分体现出来的。</p>
+<p><img src="http://img.pmcaff.com/fetch_fileecf894d68088f1fd6a51c2da6faab00a-picture"></p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a href="https://zhuanlan.zhihu.com/p/24808308" target="_blank" rel="external">程序化广告生态实用手册</a></li>
+<li><a href="http://www.chinawebanalytics.cn/dmp-review-and-how-to-implement-dmp-in-an-enterprise/" target="_blank" rel="external">DMP全面剖析以及企业DMP应用可执行指南</a></li>
+<li><a href="http://www.pmcaff.com/article/index/630074472566912" target="_blank" rel="external">DMP（数据管理平台）产品之我见</a></li>
+<li><a href="http://www.pmcaff.com/article/index/1034496870584448" target="_blank" rel="external">关于DMP数据管理平台的认知和浅析</a></li>
+<li><a href="https://book.douban.com/subject/26596778/" target="_blank" rel="external">计算广告</a></li>
+<li><a href="http://adage.com/article/digital/ana-report-7-2-billion-lost-ad-fraud-2015/302201/" target="_blank" rel="external">ANA: Ad Fraud Will Cost $7.2 Billion in 2016, Up From 2015</a></li>
+<li><a href="https://www.linkedin.com/pulse/how-build-good-dmp-platform-dan-zhang/" target="_blank" rel="external">How to build a good DMP platform</a></li>
+<li><a href="http://adage.com/article/cmo-strategy/advertise-a-target-shopper-luck/305753/" target="_blank" rel="external">Is Target The Next Digital Media Giant?</a>* <a href="https://adexchanger.com/data-exchanges/oracle-dmp-still-recognized-used-salesforce-dmp-others-ascending/" target="_blank" rel="external">Oracle DMP: Still The Most Recognized And Used, But Salesforce DMP And Others Are Ascending</a></li>
+<li><a href="http://www.thedrum.com/opinion/2016/04/15/outsourced-or-house-advertisers-shift-their-thinking-about-house-programmatic" target="_blank" rel="external">Outsourced or in-house? Advertisers shift their thinking about in-house programmatic</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;在线广告技术生态&quot;&gt;&lt;a href=&quot;#在线广告技术生态&quot; class=&quot;headerlink&quot; title=&quot;在线广告技术生态&quot;&gt;&lt;/a&gt;在线广告技术生态&lt;/h2&gt;&lt;p&gt;ADN（广告网络）批量地运营媒体的广告位资源，按照人群或上下文标签售卖给需求方，并用竞价的方
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>智能技术的伦理风险：研究框架</title>
@@ -833,81 +919,6 @@
     <summary type="html">
     
       &lt;p&gt;&lt;a href=&quot;/2017/4/14/stack-management-implementation/&quot;&gt;前文&lt;/a&gt;讲到，在云计算的时代大背景下，我们推荐采用研发技术栈管理平台来集中管理组织中的技术栈，允许基于一个技术栈创建开发测试PaaS和生产PaaS两个PaaS服务
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>沃尔玛的数字化平台分析</title>
-    <link href="http://gigix.thoughtworkers.org/2017/4/19/walmart-digitization/"/>
-    <id>http://gigix.thoughtworkers.org/2017/4/19/walmart-digitization/</id>
-    <published>2017-04-19T05:01:00.000Z</published>
-    <updated>2017-04-18T13:58:42.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>尽管2009年就已上线了电商平台Marketplace，但直到2011年，沃尔玛在数字化领域也不能算成功者。当时他们的电商网站只有相当基本的功能，用户体验不算方便，搜索不太好用，也不能与店面或供应链无缝对接。之前的几年，沃尔玛的电商收入跟其他零售商（例如西尔斯、梅西）一样缓慢线性增长。正因为如此，当沃尔玛的电商收入在2011年至2014年的三年间增长150%、从年销量49亿美元增长到122亿美元、超过史泰博（Staples）成为亚马逊和苹果之后美国第三大在线零售商时，这一变化才更令人好奇。</p>
-<p><img src="/assets/2017/4/19/wal-mart.jpg"></p>
-<h2 id="数字化之旅"><a href="#数字化之旅" class="headerlink" title="数字化之旅"></a>数字化之旅</h2><p>沃尔玛的全球电商部门主要有三方面的责任与行动：</p>
-<ol>
-<li>运营沃尔玛全球10个网站，在线提供超过700万种SKU，无缝连接门店与仓库，给顾客提供多种购物选择。</li>
-<li>通过@WalmartLabs这个创新孵化器，不断更新网站和移动应用，利用顾客数据和社交网络洞察预测顾客行为，给顾客提供更好的在线和在店购物体验。</li>
-<li>对内打造沃尔玛的电商能力，在全美国建设线上业务服务中心，建设新的电商操作系统Pangaea。</li>
-</ol>
-<p>为了达到这些目标，沃尔玛在几年中收购了多家IT企业，光是作为创新引擎的@WalmartLabs就收购了14支科技团队，为整个企业的数字化转型提供了能力上和文化上的支撑。2013年，沃尔玛收购了提供云计算解决方案的<a href="http://oneops.com/" target="_blank" rel="external">OneOps</a>公司。该公司拥有成熟的PaaS和私有云IaaS能力，支持多种公有和私有云平台，包括Azure、Rackspace、AWS、OpenStack等，与沃尔玛的云化、服务化趋势相符。到2016年，沃尔玛全公司有超过3000名工程师基于OneOps平台开发和管理IT系统。</p>
-<p>在电商销量猛增的过程中，沃尔玛的IT系统遭遇了性能瓶颈，这也是他们开始将IT系统服务化的重要出发点。他们希望“系统拥有足够的弹性去处理峰值，同时不产生负面的用户体验”。事实证明，微服务架构带来的效果是明显的：</p>
-<ul>
-<li>销售提升：转化率在一夜之间提升了20%，移动端的订单立即增长了98%；</li>
-<li>可靠性提升：黑色星期五或节礼日等大型购物节期间，再没有出现过宕机；</li>
-<li>运维成本降低：将昂贵的硬件换成了便宜的X86服务器，节省了40%的计算资源，总成本下降了20-50%。</li>
-</ul>
-<p>沃尔玛还把自己的数字化能力提供给自己的供应商。2014年，他们上线了自己的广告平台Walmart Exchange（WMX），用自己门店和线上电商的数据帮助供应商更有效地投放广告（包括沃尔玛网站、第三方网站和邮件广告）。</p>
-<h2 id="数字平台战略视角分析"><a href="#数字平台战略视角分析" class="headerlink" title="数字平台战略视角分析"></a>数字平台战略视角分析</h2><p>从<a href="https://www.thoughtworks.com/digital-platform-strategy" target="_blank" rel="external">数字平台战略</a>的角度分析，沃尔玛在构建自己的数字平台能力支柱方面已经取得了令人瞩目的成绩，这也是其电商销量能大幅提升的重要原因。</p>
-<h3 id="交付基础设施"><a href="#交付基础设施" class="headerlink" title="交付基础设施"></a>交付基础设施</h3><ul>
-<li>通过将业务系统改造为大量、小规模、无状态的服务，使系统可以部署到廉价服务器的集群上。同时弹性基础设施也允许随需增减计算节点。</li>
-<li>没有应用服务器。所有服务以standalone的形式通过docker部署。</li>
-<li>全面的监控机制（使用ConductR），当服务失败时能自动响应，并提供排错所需的信息。在集群层面汇集日志，避免需要分别查看每个节点的日志。</li>
-<li>Akka可以把一个交易建模为一个有穷状态机，可以在中途持久化状态，可以取回状态，提供了一种错误恢复的机制。</li>
-<li>Akka的监控（supervisor）机制类似于Erlang：“let-it-crash”，不需要假设虚拟机或计算节点可靠。</li>
-</ul>
-<h3 id="API和架构治理"><a href="#API和架构治理" class="headerlink" title="API和架构治理"></a>API和架构治理</h3><ul>
-<li>用Play实现API Gateway，以RESTful API的形式为其背后的系统提供统一的入口。</li>
-<li>原来的大块系统按照业务领域划分为小块，团队也随之划分，例如搜索团队、商品团队等等。每个bounded context有它自己的词汇表、拥有自己的数据。</li>
-<li>服务切分不仅仅是IT系统的事，而是组织、代码、数据库三个层面的重构。一开始不先直接做“硬”的切分，而是先从逻辑上做划分（例如数据库的schema命名规则、代码的包），然后检查是否有循环依赖；等依赖关系逐渐理清了，再分解成独立的服务、独立的数据库、甚至NoSQL数据库。</li>
-<li>解决性能问题的主要方式是通过异步操作（使用Akka）：把数据库写操作异步化，从而减少对JVM线程的占用，并且使能并行处理，极大地提升系统的性能和可扩展性。</li>
-</ul>
-<h3 id="数据自服务"><a href="#数据自服务" class="headerlink" title="数据自服务"></a>数据自服务</h3><ul>
-<li>因为数据量太大，必须改变ETL、数据预处理的思路，对数据做真正意义上的实时处理（使用Akka Streams）。</li>
-<li>用Spark对数据进行单件流处理，数据处理的延迟由6小时（ETL过程）缩短到10秒。</li>
-</ul>
-<p>数据方面的架构如图：</p>
-<p><img src="/assets/2017/4/19/data-arch.png"></p>
-<h3 id="创新实验基础设施"><a href="#创新实验基础设施" class="headerlink" title="创新实验基础设施"></a>创新实验基础设施</h3><ul>
-<li>组织层面上，@WalmartLabs是一个创新的孵化器机制。</li>
-<li>技术层面上，OneOps提供了路由技术和监控能力，使在线的快速实验成为可能。</li>
-<li>WMX能统一收集和利用各种渠道（门店和电商）的用户数据。</li>
-</ul>
-<h3 id="客户触点技术"><a href="#客户触点技术" class="headerlink" title="客户触点技术"></a>客户触点技术</h3><ul>
-<li>@WalmartLabs对整个组织输出全渠道、移动、响应式设计等能力。</li>
-<li>沃尔玛的电商平台支持多种客户触点（电脑、移动）。Walmart.com在美国的流量超过一半来自移动设备，Walmart Pay应用部署到4600多家门店。</li>
-<li>使用大数据（购买行为、搜索历史等）个性化顾客的交互体验。个性化搜索引擎Polaris提升了20%在线销售转化率。</li>
-<li>WMX支持单一顾客视图，形成对顾客的全面理解。</li>
-</ul>
-<h2 id="参考材料"><a href="#参考材料" class="headerlink" title="参考材料"></a>参考材料</h2><ul>
-<li><a href="https://www.applicoinc.com/blog/walmart-jet-digital-transformation/" target="_blank" rel="external">电商平台的介绍</a></li>
-<li><a href="https://rctom.hbs.org/submission/digitization-at-walmart/" target="_blank" rel="external">业务数字化整体介绍</a></li>
-<li><a href="https://www.capgemini-consulting.com/resource-file-access/resource/pdf/walmart_pov_15_7_2015.pdf" target="_blank" rel="external">另一篇业务数字化整体介绍</a></li>
-<li><a href="https://risnews.com/walmart-boosts-efficiency-digital-media-platform" target="_blank" rel="external">关于WMX的报道</a></li>
-<li><a href="grumomedia.com/walmart-exchange-wmx/">介绍WMX的视频</a></li>
-<li><a href="https://digit.hbs.org/submission/walmart-exchange-using-data-to-go-from-retail-to-media/" target="_blank" rel="external">WMX的分析</a></li>
-<li><a href="https://www.youtube.com/watch?v=SPGCdziXlHU" target="_blank" rel="external">关于微服务架构转型的演讲</a></li>
-<li><a href="https://techcrunch.com/2016/01/26/walmart-launches-oneops-an-open-source-cloud-and-application-lifecycle-management-platform/" target="_blank" rel="external">关于收购OneOps的报道</a></li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;尽管2009年就已上线了电商平台Marketplace，但直到2011年，沃尔玛在数字化领域也不能算成功者。当时他们的电商网站只有相当基本的功能，用户体验不算方便，搜索不太好用，也不能与店面或供应链无缝对接。之前的几年，沃尔玛的电商收入跟其他零售商（例如西尔斯、梅西）一样缓
     
     </summary>
     

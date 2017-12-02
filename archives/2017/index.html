@@ -175,6 +175,98 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2017/12/3/dmp-overview/" title="link to 数据管理平台（DMP）综述">数据管理平台（DMP）综述</a></h2>
+
+      <p class="excerpt">
+        <h2 id="在线广告技术生态"><a href="#在线广告技术生态" class="headerlink" title="在线广告技术生态"></a>在线广告技术生态</h2><p>ADN（广告网络）批量地运营媒体的广告位资源，按照人群或上下文标签售卖给需求方，并用竞价的方式决定流量分配。广告网络的结算以按点击付费（Cost per Click，CPC）的方式为主。面向多个ADN或媒体按人群一站式采买广告并优化投入产出比的需求方产品叫交易终端（Trading Desk，TD）。</p>
+<p>在ADN中，核心的竞价逻辑是封闭的，不能满足需求方越来越明确的利益要求，于是市场上产生了大量聚合各媒体剩余流量并采用实时竞价方式为他们变现的产品形态——广告交易平台（AD Exchange，ADX）。</p>
+<p>在ADX上通过实时竞价的方式，按照定制化人群标签购买广告，这样的产品就是需求方平台（Demand Side Platform，DSP）。对应的管理媒体广告位的产品就是供给方平台（Supply Side Platform，SSP）。</p>
+<p>DSP会向DMP（数据管理平台）寻求数据支持，达到更精准的投放。</p>
+<p><img src="http://www.rtbchina.com/wp-content/uploads/2017/10/China-Programmatic-Ad-Tech_2017Q3_R-1.png"></p>
+<h2 id="在线广告业务中数据的价值"><a href="#在线广告业务中数据的价值" class="headerlink" title="在线广告业务中数据的价值"></a>在线广告业务中数据的价值</h2><p>对精准广告业务产生直接贡献的数据有以下几类：</p>
+<ol>
+<li>用户标识。对广告而言，如何确定哪些行为来自于同一个用户是非常关键的问题。</li>
+<li>用户行为。转化、预转化、搜索广告点击、展示广告点击、搜索点击、搜索、分享、页面浏览、广告浏览等在线行为是可以被广泛采集并且对于受众定向或广告决策有明显作用。这些行为又可以分为决策行为（转化、预转化）、主动行为（广告点击、搜索、搜索点击）、半主动行为（分享、网页浏览）、被动行为（广告浏览）。</li>
+<li>人口属性。一般来说只有与用户实名身份绑定的服务可以得到此信息，也可以利用网络行为数据进行人口属性标签的预测，但准确程度有限，而且仍然需要标定的数据用于训练。</li>
+<li>地理位置。地理位置信息随能获得的精度不同，其用途也有相当大的差异。</li>
+<li>社交关系。社交关系可用于用户兴趣的平滑。</li>
+</ol>
+<h2 id="数据管理平台的功能"><a href="#数据管理平台的功能" class="headerlink" title="数据管理平台的功能"></a>数据管理平台的功能</h2><p>DMP日渐火爆源于广告主对投放效果的更高追求以及对营销浪费更低的容忍度，DMP即是为解决这些问题而生。广告主希望更精准的对目标人群进行广告投放，如果投放的对象对某些广告不感兴趣，却反复被广告轰炸只会适得其反。如果企业能够在投放广告或其他营销手段前就能对受众进行具体、精准的识别，广告投放的效果会因此增强。</p>
+<p>数据的来源分为三类：</p>
+<ul>
+<li>第一方数据：广告主自有用户数据，包括网站/APP监测数据、CRM数据、电商交易数据等。</li>
+<li>第二方数据：广告商在广告投放过程中积累的业务数据，如DSP平台业务中积累的受众浏览广告、点击广告等相关数据。</li>
+<li>第三方数据：非直接合作方拥有的数据，如运营商数据等。</li>
+</ul>
+<p>第三方数据中，BAT的数据只能应用于各自的生态圈，实际产生效果并不容易；运营商的数据不一定总能通过商务关系得到，又有各地军阀割据的问题、有流量劫持等争议问题，而且越来越多网站和APP采用加密，运营商看不到了；垂直领域的数据相对比较细和专，质量高。</p>
+<p>DMP有下面几个核心的产品功能：</p>
+<ol>
+<li>它可以为网站（可以是媒体也可以是广告主网站）提供受众定向功能，并将得到的用户标签应用于网站业务。</li>
+<li>如果媒体网站授权，DMP可以提供接口对加工出来的用户标签进行变现，并与网站分成。</li>
+<li>广告主网站可以通过DMP广告采买渠道进行更方便的数据对接。</li>
+</ol>
+<p><img src="http://www.iyunying.org/wp-content/uploads/2017/03/1e471f277c0d6bf12d49bef4dc7cb780.png"></p>
+<p>可以从以下几个角度对DMP进行评估：</p>
+<ol>
+<li>数据来源。有多少优质的数据源可以利用。在中国能使用BAT的数据是一个重要因素，腾讯广点通和阿里达摩盘在这方面有优势。</li>
+<li>数据处理。进入DMP的数据（包括结构化的和非结构化的）能多灵活地处理。</li>
+<li>ID联结。DMP能多准确地联结来自不同数据源的用户信息。</li>
+<li>受众区分。对受众分群的多样性和准确性。受众定向标签可以分为人口学标签、上下文标签、行业定制标签三类。</li>
+<li>数据建模。通过对数据的分析提供look-alike或其他更深度的洞察和投放指导。</li>
+<li>与程序化广告平台的整合度。</li>
+</ol>
+<p><img src="https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAerAAAAJDIxODdmZjBmLTJiYzItNDNhNi04M2U2LTY1Y2EwOTBkYjJmNg.png"></p>
+<p>这里有一个<a href="https://adexchanger.com/data-exchanges/oracle-dmp-still-recognized-used-salesforce-dmp-others-ascending/" target="_blank" rel="external">国外DMP产品的排名</a>。Oracle收购的BlueKai排名第一。SalesForce收购的Krux紧随其后。</p>
+<p>针对BAT各自DMP的功能，这里有一个<a href="http://www.pmcaff.com/article/index/630074472566912" target="_blank" rel="external">分析对比</a>。</p>
+<h2 id="为何企业要自建DMP"><a href="#为何企业要自建DMP" class="headerlink" title="为何企业要自建DMP"></a>为何企业要自建DMP</h2><p>自建程序化广告系统的主要目的是增加透明度、控制力和效率：</p>
+<ul>
+<li>透明度：企业希望清楚知道广告投放的效果，不想被欺诈。据<a href="http://adage.com/article/digital/ana-report-7-2-billion-lost-ad-fraud-2015/302201/" target="_blank" rel="external">ANA的统计</a>，可能有多达37%的在线广告点击是虚假的。</li>
+<li>控制力：企业拥有越来越多的第一方数据，希望有更强的数据掌控，尤其不希望自己的第一方数据被广告平台用来帮助竞争对手投放（以增强广告平台DMP能力的形式）。</li>
+<li>效率：企业希望基于DMP能做更复杂的分析、更多的实验、与市场营销更紧密配合。</li>
+</ul>
+<p>Target选择自建DMP，分析师认为除了以上理由之外，Target还希望充分利用自己已有的客源流量，把自己变成数字化媒体。</p>
+<p>自建DMP需要有以下功能模块：</p>
+<ul>
+<li>数据的获取入口</li>
+<li>数据的清洗，整合</li>
+<li>标签的计算，挖掘</li>
+<li>打标签及标签的展示</li>
+<li>用户分群</li>
+</ul>
+<p>前三块是DMP的基础，虽然看不见，但是决定了一个DMP的质量。后两块是比较偏产品前端的内容，DMP是否简单易用，是否友好易懂就是这部分体现出来的。</p>
+<p><img src="http://img.pmcaff.com/fetch_fileecf894d68088f1fd6a51c2da6faab00a-picture"></p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a href="https://zhuanlan.zhihu.com/p/24808308" target="_blank" rel="external">程序化广告生态实用手册</a></li>
+<li><a href="http://www.chinawebanalytics.cn/dmp-review-and-how-to-implement-dmp-in-an-enterprise/" target="_blank" rel="external">DMP全面剖析以及企业DMP应用可执行指南</a></li>
+<li><a href="http://www.pmcaff.com/article/index/630074472566912" target="_blank" rel="external">DMP（数据管理平台）产品之我见</a></li>
+<li><a href="http://www.pmcaff.com/article/index/1034496870584448" target="_blank" rel="external">关于DMP数据管理平台的认知和浅析</a></li>
+<li><a href="https://book.douban.com/subject/26596778/" target="_blank" rel="external">计算广告</a></li>
+<li><a href="http://adage.com/article/digital/ana-report-7-2-billion-lost-ad-fraud-2015/302201/" target="_blank" rel="external">ANA: Ad Fraud Will Cost $7.2 Billion in 2016, Up From 2015</a></li>
+<li><a href="https://www.linkedin.com/pulse/how-build-good-dmp-platform-dan-zhang/" target="_blank" rel="external">How to build a good DMP platform</a></li>
+<li><a href="http://adage.com/article/cmo-strategy/advertise-a-target-shopper-luck/305753/" target="_blank" rel="external">Is Target The Next Digital Media Giant?</a>* <a href="https://adexchanger.com/data-exchanges/oracle-dmp-still-recognized-used-salesforce-dmp-others-ascending/" target="_blank" rel="external">Oracle DMP: Still The Most Recognized And Used, But Salesforce DMP And Others Are Ascending</a></li>
+<li><a href="http://www.thedrum.com/opinion/2016/04/15/outsourced-or-house-advertisers-shift-their-thinking-about-house-programmatic" target="_blank" rel="external">Outsourced or in-house? Advertisers shift their thinking about in-house programmatic</a></li>
+</ul>
+
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="12月 3 2017" class="post-list__meta--date date">12月 3 2017</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2017/11/28/intelligent-disempowerment-research-framework/" title="link to 智能技术的伦理风险：研究框架">智能技术的伦理风险：研究框架</a></h2>
 
       <p class="excerpt">
@@ -561,48 +653,6 @@ classes that you can use:
       <div class="post-list__meta">
 
         <time datetime="6月 26 2017" class="post-list__meta--date date">6月 26 2017</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2017/6/23/tech-lead-as-a-service/" title="link to 技术领导者即服务">技术领导者即服务</a></h2>
-
-      <p class="excerpt">
-        <p>八年前我写了一篇文章《<a href="http://www.infoq.com/cn/articles/thoughtworks-practice-part8" target="_blank" rel="external">Tech Lead的三重人格</a>》。迄今为止为数众多的敏捷交付团队中，Tech Lead（技术领导者）对于交付的效能和质量起着至关重要的作用。我在那篇文章中指出，Tech Lead需要扮演三种重要的角色：技术决策者、流程监督人、干扰过滤器。一支团队能否有效采用架构最佳实践、交付流程最佳实践和项目运作最佳实践，很大程度上取决于Tech Lead把自己的工作完成得多好。</p>
-<p>如果更进一步把这篇文章中Tech Lead承担的责任做一个拆解，我们可以看到，一个称职的Tech Lead是这样去为项目的顺利交付做出贡献的：</p>
-<ul>
-<li>首先，他要<strong>制订适合该项目要求的技术方案</strong>。他要参与架构设计，了解平台和编程语言、主要的框架和库、集成点、部署策略、数据迁移策略，确认总体技术方案能够支撑系统的业务要求。</li>
-<li>随后，他要<strong>保障交付顺利开展</strong>。他要确保环境的一致性，搭建和管理持续集成流水线，指导并监督团队遵循持续集成的流程和实践。</li>
-<li>最后但绝非最不重要的，他还要<strong>管理和提升团队的能力</strong>。他需要确认团队是否熟悉用到的技术栈和工具，而且——虽然这一点在我写文章时的ThoughtWorks还不那么凸显——要帮助团队成员组织刻意练习来提升能力。</li>
-</ul>
-<p>正如当时那篇文章的一位读者非常正确地指出的，要一个人做这三方面的贡献很多时候是不切实际的。在很多组织里，这三件事是在三个环节中分别进行的，这三个环节的彼此割裂造成了很多问题：</p>
-<ul>
-<li>在方案环节，架构师根据客户的要求和痛点，基于自己的知识储备设计技术解决方案。他是如何分析客户的要求和痛点，他的知识储备是什么，组织里的其他人不一定知道，于是不同架构师提出的解决方案就很可能不一样。</li>
-<li>在交付环节，交付团队基于自己的知识储备来交付技术解决方案。方案背后隐含的知识储备，交付团队未必具备，所以屡屡会出现交付质量不佳的问题。不是他们没有能力，只是能力与方案的需要不符。</li>
-<li>组织感到团队的能力有不足，于是找来教练提升能力。然而教练基于的是一个标准的能力集来训练团队，这个能力集与项目实际需要的能力又不一定匹配。于是出现能力发展计划不对症、能力建设效果不明显的问题。</li>
-</ul>
-<p>由此可见，只有当方案、交付、能力三者有很好的协同，项目和团队才能健康成长。而这个协同之所以尤其困难，是因为它跨了三个非常不同的问题域（在很多组织是三个不同的功能部门），需要三种非常不同的能力，对这个居中协调者的要求非常高。</p>
-<p>所以，如果我们能用一个云上的平台来承载这个居中协调者的能力，对整个组织的交付质量和能力成长都会有帮助。这个平台的核心实际上就是<a href="/2017/4/14/stack-management-implementation/">技术栈管理</a>：针对典型的应用场景（例如企业资源服务化、移动数字化渠道），制订组织统一的技术栈，并从技术栈推导出对应的能力评估模型和刻意练习课程。于是我们就得到了以技术栈为核心的IT能力三环联动模型：</p>
-<p><img src="/assets/2017/6/23/3-circles.jpg"></p>
-<p>当提供技术方案的架构师选择一个技术栈，用这个技术栈交付软件的能力要求就被明确地传达到交付团队。交付团队不用自己去设置开发环境和持续交付流水线，用<a href="/2017/6/6/continuous-delivery-2/">云原生的持续交付</a>环境即可启动开发，并复用在技术栈上积累的交付最佳实践。通过云上的能力测评系统，能力教练可以清晰地知道哪些成员已经具备需要的能力、哪些成员能力还有差距，然后为有差距的成员提供针对性的刻意练习和指导。</p>
-<p>云计算已经成功地模糊了硬件与软件的界限，使IT的一大挑战——管理设备——极大简化。现在，对于IT的另一个大挑战：人才短缺，云计算的“XXX as a service”模式是否可以继续发挥作用？IT组织是否可能借助云计算获得优质IT人才的弹性和伸缩性？这是一个值得去探索的课题。在这个方向上，将对交付质量与效能起着重要影响的Tech Lead的能力以云平台服务的形式提供，有可能是触手可及的一个目标。</p>
-
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="6月 23 2017" class="post-list__meta--date date">6月 23 2017</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">

@@ -174,6 +174,46 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2016/8/9/micro-services-conways-law/" title="link to 微服务与康威定律">微服务与康威定律</a></h2>
+
+      <p class="excerpt">
+        <p><em>（本文是对《<a href="https://book.douban.com/subject/25881698/" target="_blank" rel="external">Building Microservices</a>》一书第10章的摘录）</em></p>
+<h2 id="康威定律"><a href="#康威定律" class="headerlink" title="康威定律"></a>康威定律</h2><p>Melvin Conway于1968年发表的论文《<a href="http://www.melconway.com/Home/pdf/committees.pdf" target="_blank" rel="external">How Do Committees Invent</a>》指出：系统设计的结构必定复制设计该系统的组织的沟通结构。这一论断被称为“康威定律”。在《<a href="http://hbs.me/2aNCbIY" target="_blank" rel="external">Exploring the Duality Between Product and Organizational Architectures</a>》一文中，作者发现紧密耦合的组织（例如典型的商业产品公司，所有员工在同一地点工作，具有高度一致的愿景与目标）开发的软件倾向于较少模块化，而松散耦合的组织（例如分布式的开源社区）开发的软件则倾向于更加模块化、耦合较少。</p>
+<p>当一支小型团队负责整个系统的设计与实现时，团队内部可以具有频繁的、细粒度的沟通。而随着团队变大、分布在不同地点甚至时区，协调变更成本急剧增加，紧跟着就有两种可能性：人们要么找到降低协作／沟通成本的办法，或是停止做变更。后者就会导致庞大、难以维护的代码库。最终，各个地点不得不选择各自专门处理的一部分工作，拥有一部分代码，并在团队之间形成更粗粒度的沟通机制。组织结构中的沟通路径会造就与之对应的粗粒度API，形成代码库各个大块之间的边界。</p>
+<p>服务的边界应该围绕着约束上下文（<a href="http://martinfowler.com/bliki/BoundedContext.html" target="_blank" rel="external">bounded context</a>）来画，正如我们希望团队结构与约束上下文保持一致。这样做有几方面的好处。首先，团队在一个约束上下文内更容易抓住领域概念；其次，一个约束上下文内的多个服务更可能彼此交互，因此系统设计和发布协作都得以简化；最后，交付团队与业务代表沟通时，团队只需与各自约束上下文中的一两个专家建立良好关系即可。</p>
+<h2 id="服务所有权"><a href="#服务所有权" class="headerlink" title="服务所有权"></a>服务所有权</h2><p>一般而言，每个服务属于一个团队，拥有这个服务的团队负责其所有修改。这个团队可以任意调整代码结构，只要这些修改不对服务的消费者造成破坏即可。在很多团队中，“所有权”延伸到了服务的各个方面，从需求来源直到软件的构建、部署和维护。由同一个团队负责开发、部署和维护会促使他们简化部署环节，而不是“写完代码扔过墙”。</p>
+<p>有很多团队采用“共享服务所有权”的模式。这种模式并不理想，但有必要了解团队为什么做此选择。常见的理由包括：</p>
+<ul>
+<li>难以拆分。《Building Microservices》一书的第5章提供了一些关于如何拆分服务的建议。也可以考虑把团队合并，从而使组织结构与软件架构匹配。</li>
+<li>特性团队。比起传统的“按技术/职能划分团队”的IT组织结构，“一个团队端到端负责一个特性开发”的结构是一个进步。然而微服务环境下的团队结构可以再向前一步：如果业务领域、服务边界、团队结构三者能保持对齐，一个团队就能聚焦一组客户，以整体视角为这组客户提供服务。横切多个业务领域的修改固然会发生，但可能性会降低很多。</li>
+<li>交付瓶颈。有几个办法可以应对交付瓶颈而不必共享服务所有权。第一个办法就是等待，各个服务不一定要以同样的节奏发布，遇到交付瓶颈的服务可以稍后再发布。另外，也可以直接向有交付困难的团队中加人。横跨整个组织的技术栈越标准，临时加人的效果就会越好。当然，另一方面，标准化的技术栈也可能给团队造成束缚。</li>
+</ul>
+<h2 id="内部开源"><a href="#内部开源" class="headerlink" title="内部开源"></a>内部开源</h2><p>通常的开源项目组织方式可以用在企业内部：一个代码库由一组受信任的提交者（核心团队）管理，并接受未获信任的提交者（外围团队）提交的修改。开源项目以这种方式来保障代码质量和一致性。大多数开源项目在第一个核心版本成型之前倾向于不接受外来的提交。当服务变得成熟且稳定，便可以更放心地开放接受贡献。</p>
+<p>分布式版本控制工具允许任何人提交pull request，这是很重要的能力。取决于组织的规模，内部开源体系可能需要考虑借助代码评审工具来讨论和评估是否接受pull request。同时，类似于github提供的pull request评论功能也很有用。最后，需要让提交者很容易构建和部署整个软件，通常这需要定义良好的构建和部署流水线，以及集中管理的构建产物仓库。</p>
+<h2 id="案例：REA"><a href="#案例：REA" class="headerlink" title="案例：REA"></a>案例：REA</h2><p>REA的服务由“小队”（squad）拥有，小队负责服务的整个生命周期，包括构建、测试、发布、支持、直到下线。一支交付服务团队给这些小队提供建议和指导，以及必要的工具支持。REA有着强烈的自动化文化，并大量使用AWS使团队更具自主性。</p>
+<p>不仅交付团队与业务经营对齐，软件架构也是一样。以服务集成为例：在一条业务线内部，所有服务可以用任何方式自由交流，小队自己可以做决定；然而在业务线之间，所有交流必须以异步批处理的形式发生，这是中央架构团队规定的很少几条“铁律”之一。粗粒度的系统集成与业务线之间已有的粗粒度交流相匹配。</p>
+<h2 id="人"><a href="#人" class="headerlink" title="人"></a>人</h2><p>为了对齐业务经营，组织结构和软件架构都需要改变。变革的阻力真实存在：从大一统的系统转到微服务，对于习惯了单一编程语言、不用考虑运维问题的开发者而言是一次痛苦的觉醒；习惯了把软件“丢过墙”的程序员突然发现没有别人可以推诿责任，可能会很不习惯自己对所有工作负责；如果要让开发者承担7*24在线支持工作，甚至可能有劳动合同上的阻碍。变革推动者需要理解员工的喜恶，顺势而为，不能急于求成。</p>
+
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="8月 9 2016" class="post-list__meta--date date">8月 9 2016</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2016/8/4/machine-learning-introductions/" title="link to 机器学习：概述">机器学习：概述</a></h2>
 
       <p class="excerpt">
@@ -550,72 +590,6 @@ classes that you can use:
       <div class="post-list__meta">
 
         <time datetime="12月 31 2015" class="post-list__meta--date date">12月 31 2015</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2015/12/16/small-data-steps-interfaces/" title="link to 小数据：环节和接口">小数据：环节和接口</a></h2>
-
-      <p class="excerpt">
-        <p><em>（续前文：<a href="/2015/12/7/small-data-theory-architecture/">小数据：理论和架构</a>）</em></p>
-<p>从前文的架构图中可以看到，针对“小数据”的OLAP应用可以分为三个环节：</p>
-<ol>
-<li><strong>Cube建模</strong>。将数据从OLTP数据库中抽取到OLAP Cube中。</li>
-<li><strong>分析</strong>。针对OLAP Cube进行切片、钻取等操作，获得需要的结果集。</li>
-<li><strong>呈现</strong>。将结果集呈现为直观的报表形式。</li>
-</ol>
-<p>在建模Cube的时候，需要用户提供的信息是Cube本身星型结构的描述，以及星型结构中各项信息与OLTP数据库中表和字段的映射关系。具体而言，这里必需的信息包括：</p>
-<ul>
-<li>Cube的标识符</li>
-<li>Cube对哪些数据项量值（measure）<ul>
-<li>如果涉及聚合值(aggregate)，采用何种算法聚合</li>
-</ul>
-</li>
-<li>Cube有哪些维度（dimension）<ul>
-<li>其中某些维度可能有层级（hierarchy）关系</li>
-</ul>
-</li>
-<li>Cube的量值项和维度项如何与OLTP数据库中的表和字段映射（mapping）<ul>
-<li>其中通常会涉及多表的关联（join）</li>
-</ul>
-</li>
-</ul>
-<p>由于分析操作仅以RESTful API的形式提供服务，因此用户在进行分析操作时需要提供的信息就是一个URL，在其中描述分析操作的详情，包括下列信息：</p>
-<ul>
-<li>对哪个Cube进行分析</li>
-<li>呈现所有事实（fact）还是聚合（aggregate）结果</li>
-<li>对哪些维度进行切片(cut)</li>
-<li>对哪些维度进行下钻（drilldown）</li>
-</ul>
-<p>从分析环节得到的数据应该是一张平面的二维表（flat table）或与之等价的其它形式（例如JSON）。在报表呈现环节，用户就只需要描述如何将二维表渲染成报表。必需的信息大致包括：</p>
-<ul>
-<li>采用何种报表形式（折线图、柱状图、饼图……）</li>
-<li>如何使用二维表中的各列数据，以柱状图为例：<ul>
-<li>使用哪一列作为横坐标的取值</li>
-<li>使用哪一列作为纵坐标的取值</li>
-<li>使用哪一列分组或堆叠</li>
-<li>如果允许下钻，使用哪一列（或几列）下钻</li>
-</ul>
-</li>
-</ul>
-<p>以上列表未必完备，但已经能覆盖大多数小数据场景的OLAP需求。不论采用何种技术实现，小数据分析系统应该尽力约束用户（不论开发者还是最终用户）需要输入的信息量，尽量使其只需输入（不论通过编程还是图形界面操作）上述列表中的必需信息项，从而降低系统建设和使用的难度。</p>
-
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="12月 16 2015" class="post-list__meta--date date">12月 16 2015</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">
