@@ -174,6 +174,30 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2011/3/29/太阳底下没有新雪/" title="link to 太阳底下没有新雪">太阳底下没有新雪</a></h2>
+
+      <p class="excerpt">
+        <p>胡凯说，他用了五年时间<a href="http://www.iamhukai.com/?p=422" target="_blank" rel="external">从纸卡回归纸卡</a>。</p><p>用胡凯惯有的乐观态度，这事情是一个学习思考和成长的过程。</p><p>用我惯有的悲观态度，这就是个傻逼事情。人家老早跟你说过了，你不听，绕个大圈子终于绕回来。好不好早点听老人劝呢？</p><p>我惯有的悲观态度之关键在于：大师们当初那样说，其实早就考虑到了各种情况。只是你不知道。你以为自己有了新想法。你以为自己在创新在改进。其实呢，太阳底下没有新雪。过了很久以后你才明白，其实你想的那些，大师们都想过了，想过了才跟你那样说的。你只是自己折腾着玩。</p>真正不幸的是我每每看到的创新思维无非分成两类：<ul><li>跟大师们说的一样。很遗憾，你只是想明白了人家二十年前就说过的事。</li><li>跟大师们说的不一样。很遗憾，你搞错了。</li></ul><p>考虑到比如穆斯林从两千年前就在打仗直到今天还在打仗这种事情，这世界还真是令人感到可悲啊。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="3月 29 2011" class="post-list__meta--date date">3月 29 2011</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2011/3/28/devops-at-xian/" title="link to 转战西安">转战西安</a></h2>
 
       <p class="excerpt">
@@ -390,30 +414,6 @@ classes that you can use:
       <hr class="post-list__divider" />
     </li>
     
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2011/2/19/chef-1/" title="link to Chef学习手记之壹：概念">Chef学习手记之壹：概念</a></h2>
-
-      <p class="excerpt">
-        <p><a href="http://www.opscode.com/chef/" target="_blank" rel="external">Chef</a>据说是<a href="http://zh.wikipedia.org/wiki/DevOps" target="_blank" rel="external">DevOps</a>运动中的一个重要工具。现在我开始学它了。</p><p>首先是几个名词解释：</p><ul><li><strong>Chef</strong>: 大厨。我就是个新手大厨。我想要烹调一桌服务器大餐，也就是一台体面的、可以用来满足某种用途的服务器，比如“一台高性能的Rails服务器”。</li><li><strong>Cookbook</strong>: 菜谱。别人写好的一本书，书上写着一堆相关菜色的做法（比如“家常川菜”）。一些出色的服务器大厨已经写了<a href="http://cookbooks.opscode.com/" target="_blank" rel="external">很多菜谱</a>，这些是我要学习和抄袭的。</li><li><strong>Recipe</strong>：菜谱里的一道菜色（比如“麻婆豆腐”）。服务器大餐里的某一部分该怎么做，都在菜色里写着呢。</li></ul><p>所以，整个故事就是：作为一个服务器大厨（Chef），我想要从现成的很多菜谱（Cookbook）里挑选几道合适的菜色（Recipe），组合成一道大餐（服务器）来款待我的客人。</p><p>（等我的手艺熟练之后我还会写我自己的菜色和菜谱，这就是后面的故事了。）</p><p><img src="http://tucsoncitizen.com/morgue/files/2007/02/l42507-1.jpg" width="300px"></p><p>Chef的主要目标是：把服务器配置变成源代码。这样做的好处有两个：</p><ol><li><strong>自动化</strong>。我可以很轻松地把一台服务器大餐的做法直接照搬到另一台服务器上，于是我就得到了另一台大餐。</li><li><strong>配置管理</strong>。服务器的配置信息可以用SVN或者Git来管理，可以分享，可以多人协作，可以跟踪变化历史。</li></ol><p>Chef使用服务器-客户端模式管理所有需要配置的机器。使用Chef涉及至少三台机器：一台开发机器，我会在上面编写大餐的做法；一台Chef服务器，它会管理所有要配置的机器，给它们下发配置信息；至少一台Chef客户端或“节点”（Node），它就是我要烹调的大餐。</p><p>理论上，只要支持Ruby的操作系统，都可以作为Chef节点来管理。不过<a href="http://en.wikipedia.org/wiki/Comparison_of_open_source_configuration_management_software#Platform_support" target="_blank" rel="external">认真说起来</a>，AIX、HP-UX和Windows不能算真的支持（个人认为这些到了21世纪10年代还没有体面的<a href="http://en.wikipedia.org/wiki/Package_management_system" target="_blank" rel="external">包管理工具</a>的操作系统就应该自己去死）。另外，每个Cookbook对操作系统的支持也可能不同。我大概看了一下，Ubuntu和Debian应该是被支持得比较好的（再次说明一个体面的包管理工具有多重要）。</p><p>概念就是这些了。接下来我要自己动手做一顿服务器大餐。</p><p><em>（未完待续）</em></p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="2月 19 2011" class="post-list__meta--date date">2月 19 2011</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
   </ol>
 
   <hr class="post-list__divider " />
@@ -425,7 +425,7 @@ classes that you can use:
         
     
 
-    <span class="pagination__page-number">Page 22 of 55</span>
+    <span class="pagination__page-number">Page 22 of 56</span>
     
     
         <a class="older-posts pagination__older btn btn-small btn-tertiary" href="/page/23/">Older Posts &rarr;</a>
@@ -438,7 +438,7 @@ classes that you can use:
     <span class="footer__copyright">&copy;
         作者保留一切权利，未经许可请勿转载</span>
     <span class="footer__copyright">&copy;
-        2017
+        2018
         Transparent Thoughts. All rights reserved.</span>
 </footer>
         </div>

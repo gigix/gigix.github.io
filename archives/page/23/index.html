@@ -179,6 +179,30 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2011/2/19/chef-1/" title="link to Chef学习手记之壹：概念">Chef学习手记之壹：概念</a></h2>
+
+      <p class="excerpt">
+        <p><a href="http://www.opscode.com/chef/" target="_blank" rel="external">Chef</a>据说是<a href="http://zh.wikipedia.org/wiki/DevOps" target="_blank" rel="external">DevOps</a>运动中的一个重要工具。现在我开始学它了。</p><p>首先是几个名词解释：</p><ul><li><strong>Chef</strong>: 大厨。我就是个新手大厨。我想要烹调一桌服务器大餐，也就是一台体面的、可以用来满足某种用途的服务器，比如“一台高性能的Rails服务器”。</li><li><strong>Cookbook</strong>: 菜谱。别人写好的一本书，书上写着一堆相关菜色的做法（比如“家常川菜”）。一些出色的服务器大厨已经写了<a href="http://cookbooks.opscode.com/" target="_blank" rel="external">很多菜谱</a>，这些是我要学习和抄袭的。</li><li><strong>Recipe</strong>：菜谱里的一道菜色（比如“麻婆豆腐”）。服务器大餐里的某一部分该怎么做，都在菜色里写着呢。</li></ul><p>所以，整个故事就是：作为一个服务器大厨（Chef），我想要从现成的很多菜谱（Cookbook）里挑选几道合适的菜色（Recipe），组合成一道大餐（服务器）来款待我的客人。</p><p>（等我的手艺熟练之后我还会写我自己的菜色和菜谱，这就是后面的故事了。）</p><p><img src="http://tucsoncitizen.com/morgue/files/2007/02/l42507-1.jpg" width="300px"></p><p>Chef的主要目标是：把服务器配置变成源代码。这样做的好处有两个：</p><ol><li><strong>自动化</strong>。我可以很轻松地把一台服务器大餐的做法直接照搬到另一台服务器上，于是我就得到了另一台大餐。</li><li><strong>配置管理</strong>。服务器的配置信息可以用SVN或者Git来管理，可以分享，可以多人协作，可以跟踪变化历史。</li></ol><p>Chef使用服务器-客户端模式管理所有需要配置的机器。使用Chef涉及至少三台机器：一台开发机器，我会在上面编写大餐的做法；一台Chef服务器，它会管理所有要配置的机器，给它们下发配置信息；至少一台Chef客户端或“节点”（Node），它就是我要烹调的大餐。</p><p>理论上，只要支持Ruby的操作系统，都可以作为Chef节点来管理。不过<a href="http://en.wikipedia.org/wiki/Comparison_of_open_source_configuration_management_software#Platform_support" target="_blank" rel="external">认真说起来</a>，AIX、HP-UX和Windows不能算真的支持（个人认为这些到了21世纪10年代还没有体面的<a href="http://en.wikipedia.org/wiki/Package_management_system" target="_blank" rel="external">包管理工具</a>的操作系统就应该自己去死）。另外，每个Cookbook对操作系统的支持也可能不同。我大概看了一下，Ubuntu和Debian应该是被支持得比较好的（再次说明一个体面的包管理工具有多重要）。</p><p>概念就是这些了。接下来我要自己动手做一顿服务器大餐。</p><p><em>（未完待续）</em></p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="2月 19 2011" class="post-list__meta--date date">2月 19 2011</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2011/2/15/we-are-ninjas/" title="link to We Are Ninjas">We Are Ninjas</a></h2>
 
       <p class="excerpt">
@@ -395,30 +419,6 @@ classes that you can use:
       <hr class="post-list__divider" />
     </li>
     
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2011/1/4/problem-solving-communication-part-4/" title="link to 问题解决型沟通（肆）：基本原则">问题解决型沟通（肆）：基本原则</a></h2>
-
-      <p class="excerpt">
-        <p>一次通常的多人参加的沟通，有一些基本的原则，我把它叫做“SOFT原则”：</p><p><img src="http://gigix.thoughtworkers.org/assets/2011/1/5/communication-principle.png" width="490px"></p><ul><li><strong>Subject</strong>：每次沟通应该有且仅有一个主题。如果有多个主题，也许需要不同的人、不同的时间、不同的方式。</li><li><strong>One conversation</strong>：任何时间仅有一个人在说话，其他人应该听这个人说。必要时使用令牌。</li><li><strong>Facilitator</strong>：应该有一个主持人。主持人应该表现中立：他的任务不是发表观点，而是保证沟通过程顺畅高效。</li><li><strong>Timebox</strong>：应该预先设定时间。尽量把主题细分以便控制时间。总用时不要超过两小时。</li></ul><p>具体到一次沟通开始时，应该有一个<strong>主持人</strong>在白板上写下要讨论的<strong>主题</strong>和计划的<strong>时间</strong>。如果缺少其中任何一样，你就需要注意：沟通是否以高效的方式在进行。</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="1月 4 2011" class="post-list__meta--date date">1月 4 2011</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
   </ol>
 
   <hr class="post-list__divider " />
@@ -430,7 +430,7 @@ classes that you can use:
         
     
 
-    <span class="pagination__page-number">Page 23 of 55</span>
+    <span class="pagination__page-number">Page 23 of 56</span>
     
     
         <a class="older-posts pagination__older btn btn-small btn-tertiary" href="/archives/page/24/">Older Posts &rarr;</a>
@@ -443,7 +443,7 @@ classes that you can use:
     <span class="footer__copyright">&copy;
         作者保留一切权利，未经许可请勿转载</span>
     <span class="footer__copyright">&copy;
-        2017
+        2018
         Transparent Thoughts. All rights reserved.</span>
 </footer>
         </div>

@@ -174,25 +174,38 @@ classes that you can use:
     
     <li class="post">
 
-      <h2 class="post-list__post-title post-title"><a href="/2017/12/12/ml-project-management-current-situation/" title="link to 机器学习项目如何管理：现状">机器学习项目如何管理：现状</a></h2>
+      <h2 class="post-list__post-title post-title"><a href="/2018/1/1/2017-readings/" title="link to 2017年读过的好书">2017年读过的好书</a></h2>
 
       <p class="excerpt">
-        <p><a href="https://www.atlassian.com/blog/software-teams/3-ways-ai-will-change-project-management-better" target="_blank" rel="external">Atlassian今年4月的一篇博客</a>提出，到2020年有87%的Jira用户认为他们的工作会被AI改变。具体到项目管理上，Atlassian的观点是，AI首先会作为项目管理助手进入我们的视野，然后透过数据拓展我们对项目的理解，更进一步还能通过主动猜测、倡导优秀实践、创造新的元数据层等方式弥补数据的缺失，最终对项目提出有益的建议。</p>
-<p><img src="https://orhachaim.co.il/wp-content/uploads/thumbs/1-338ubis538emc7477jajgq.jpg"></p>
-<p>然而愿望是美好的现实是骨感的。还不要说在项目管理中使用机器学习，关于机器学习的项目应该怎么管理，业界似乎已经有很多不甚圆满的经历。例如一位创业者谈他们如何<a href="https://medium.com/xeneta/boosting-sales-with-machine-learning-fbcf2e618be3" target="_blank" rel="external">用自然语言处理技术推动销售</a>。看起来他们尝试了各种不同的数据源、多种特征工程的方法、以及多种算法，接下来还有很多想要尝试的东西。从这个故事中我们看不到的是，他们给自己设置的目标是什么、目前的进展是什么、基于什么原则在指导每一次的尝试。简而言之，这位创业者的机器学习项目并没有任何有效的管理。</p>
-<p>另一个<a href="https://zhuanlan.zhihu.com/p/26435192" target="_blank" rel="external">同样缺乏管理的机器学习项目</a>就没有那么幸运。年薪百万的数据科学家被认为“没有给公司带来实际价值。高管们不知道他们具体做了什么，业务人员每周都给他们提出预测需求，却很少能在短时间得到回应”。与前面一个故事相比，这里的数据科学家需要在别人的管理之下开展工作，管理方法的欠缺无疑是矛盾累积和激化的原因之一。针对这个故事，作者提出了五点非常抽象的建议：1.从最简单的模型开始；2.探索更多问题；3.用全部的数据和特征训练模型；4.业务驱动模型；5.专注于自动化。我认为这几点并不能引导这家公司的管理者更有效地管理他们的数据科学家。</p>
-<p>这种缺乏管理方法的现象，一个重要的原因是典型的IT管理者对机器学习缺乏必要的了解（甚至更糟糕，有一些似是而非的半吊子的了解）。目前而论，咨询公司和商业/科技传媒在普及“必要的了解”方面并没有起到很好的作用。<a href="https://www.mckinsey.com/industries/high-tech/our-insights/an-executives-guide-to-machine-learning" target="_blank" rel="external">麦肯锡2015年的文章</a>说，关于机器学习，企业领导层需要了解的问题还是“传统行业能通过机器学习获得什么新的洞察”这种高层面的，提出的建议也是“机器学习要分描述、预测、处方三步走”这样的宏观建议。当然麦记的建议历来是面向CxO级别的，不落到项目管理层面也很正常。</p>
-<p>HBR也在2015年讨论“<a href="https://hbr.org/2015/07/what-every-manager-should-know-about-machine-learning" target="_blank" rel="external">每个管理者都需要了解的机器学习知识</a>”，提出了一些很重要的点：不光需要大数据、还需要广泛的数据；机器学习只是做预测、不提供因果性；要区分信号与噪音（还提到了特征提取、规则化、交叉验证等具体技术）；以及一些容易犯的错误（例如强行归因、不恰当的期望、迷信大数据量、对人的判断利用不足等）。但这篇文章的问题在于，它没有提供一套成型的工作方法。这些技术应该什么时候用，这些错误会在什么时候犯，文章没有提供出来，于是读者仍然被置于一个“等你该知道的时候你就知道了”的状态，很难对项目管理带来立竿见影的改变。</p>
-<p><a href="https://machinelearningmastery.com/how-to-layout-and-manage-your-machine-learning-project/" target="_blank" rel="external">2014年的一篇博客</a>着重谈机器学习项目的布置，包括应该有哪些目录、数据怎么管理、代码怎么组织等非常具体的实践。作者提出了项目流程的几个原则：透明；可维护；模块化；可迁移；可复制；效率。关于项目的可复制性，作者也从工程实践角度<a href="https://machinelearningmastery.com/reproducible-machine-learning-results-by-default/" target="_blank" rel="external">提出了10条原则</a>。在工程实践这个角度，这位作者给出的指导原则具有很好的可操作性。</p>
-<p>但是在项目管理角度，行业仍在继续探索。今年7月InfoQ的一篇文章讨论<a href="http://www.infoq.com/cn/articles/agile-development-of-artificial-intelligence-applications" target="_blank" rel="external">如何开发机器学习的MVP</a>，作者总结了四个思考步骤：第一问题是否能转化成分类/回归的问题；第二目标是否是容易获取、客观无偏差的数据；第三是问题的预测目标，因果关系是什么；第四是这个问题是不是一个真的业务需求。这也是几个很重要的思考点，不足之处仍然是缺乏系统性，并且缺落地的方法指导。</p>
-<p>有一篇博客提出了很有意义的问题：<a href="https://zhuanlan.zhihu.com/p/20729176" target="_blank" rel="external">机器学习项目为什么未实现敏捷开发</a>？作者发现算法类项目流程漫长，并结合之前实践Scrum的经验，提出了一些可能可以优化的方面，尤其是在团队组织形式上，是否可以参考敏捷的全功能团队经验。作者并且提出了一个重要的问题：对算法模型的评估是否必须在线上进行？或者换个角度来问这个问题：如何降低线下模型评估的偏差程度？</p>
-<p>敏捷软件开发之所以成为一种被广泛接受的软件开发方法论，不仅仅是因为它有高阶的思想支撑和指导原则，更重要的是它有一系列非常具体、非常可落地的实践。这些实践对于一线工作者的意义在于：(1)知道什么时候该做什么事；(2)知道什么时候该看什么指标；(3)知道什么时候可能有什么风险。机器学习类的项目要真正普及，也会需要这么一套具体可落地的实践指导。</p>
+        <p>今年读了66本书，不过有很大部分是工作需要。而且不知道什么原因，中间读的很多关于内亚性的书都只标了四星……</p>
+<h2 id="仅存的内亚性"><a href="#仅存的内亚性" class="headerlink" title="仅存的内亚性"></a>仅存的内亚性</h2><ul>
+<li><a href="https://book.douban.com/subject/25883305/" target="_blank" rel="external">阿拉伯的劳伦斯 : 战争、谎言、帝国愚行与现代中东的形成</a> - 一战武器的先进和指挥、情报等其他技术的落后形成一个古怪的组合，让人觉得好多事情都不可理喻。这种对世界充满未知的感觉恐怕未来很多年不会再有了。</li>
+</ul>
+<h2 id="科技与社会的交集"><a href="#科技与社会的交集" class="headerlink" title="科技与社会的交集"></a>科技与社会的交集</h2><ul>
+<li><a href="https://book.douban.com/subject/27021779/" target="_blank" rel="external">智慧转型：重新思考商业模式</a> - 有理论有工具有案例，实在，好用</li>
+<li><a href="https://book.douban.com/subject/26916525/" target="_blank" rel="external">Goodbye iSlave : A Manifesto for Digital Abolition</a> - 不仅谈了工厂里的奴隶，还谈到了作为消费者被成瘾性数字产品捆绑而创造无偿内容的另一种奴隶，从而完整展现了数字奴隶制的生态系统。极具洞见，并且只有在中国才能写出。#<a href="https://www.douban.com/update/topic/%E6%95%B0%E5%AD%97%E5%8C%96" target="_blank" rel="external">数字化</a># #<a href="https://www.douban.com/update/topic/%E6%99%BA%E8%83%BD%E8%B5%8B%E6%9D%83" target="_blank" rel="external">智能赋权</a>#</li>
+<li><a href="https://book.douban.com/subject/6435517/" target="_blank" rel="external">路易·波拿巴的雾月十八日</a> - 感觉就跟邱林川讲的保守主义回潮有异曲同工之妙，历史第一次是正剧、第二次是闹剧，第三次是什么呢？</li>
+</ul>
+<h2 id="早就想看的好故事"><a href="#早就想看的好故事" class="headerlink" title="早就想看的好故事"></a>早就想看的好故事</h2><ul>
+<li><a href="https://book.douban.com/subject/25796066/" target="_blank" rel="external">恶棍列传</a> - 超级漂亮的小故事，最爱博尔赫斯的故事了</li>
+<li><a href="https://book.douban.com/subject/20515828/" target="_blank" rel="external">傅科摆</a> - 太博大了…艾柯编造的神学阴谋论让达芬奇密码就像刺客信条一样直白</li>
+<li><a href="https://book.douban.com/subject/26318111/" target="_blank" rel="external">麦田里的守望者</a> - 这才叫中二嘛……我是为素子姐来看塞林格的。</li>
+<li><a href="https://book.douban.com/subject/1858513/" target="_blank" rel="external">月亮和六便士</a> - 所谓四十不惑的“不惑”，大概就该是这样的形式吧，知道自己要做什么而不惑于其他，多么令人羡慕。</li>
+<li><a href="https://book.douban.com/subject/2035162/" target="_blank" rel="external">刀锋</a> - 求财的得财，求死的得死，求解脱的得解脱，真是一场欢喜大戏。</li>
+<li><a href="https://book.douban.com/subject/2165037/" target="_blank" rel="external">荒原狼</a> - 最后终于和荒原狼和解了，这还真是一个美好的故事。</li>
+</ul>
+<h2 id="比日系推理更好的国产推理"><a href="#比日系推理更好的国产推理" class="headerlink" title="比日系推理更好的国产推理"></a>比日系推理更好的国产推理</h2><ul>
+<li><a href="https://book.douban.com/subject/26614581/" target="_blank" rel="external">暗黑者外传：惩罚</a> - 这个故事比欧门尼德系列还好，诡计设置很妙</li>
+<li><a href="https://book.douban.com/subject/26923390/" target="_blank" rel="external">长夜难明</a> - 推理其实稍微有点弱，但是故事设置得好，抓人。</li>
+<li><a href="https://book.douban.com/subject/26612116/" target="_blank" rel="external">真相推理师：幸存</a> - 这已经甩东野十条街了好吗！瞬间爱上这个作者！（虽然感情戏写得很挫…）</li>
+<li><a href="https://book.douban.com/subject/6794021/" target="_blank" rel="external">红手指</a> - 谜题很棒，对人性的描写更是精彩，看完心里堵得慌。</li>
+</ul>
 
       </p>
 
       <div class="post-list__meta">
 
-        <time datetime="12月 12 2017" class="post-list__meta--date date">12月 12 2017</time> &#8226; 
+        <time datetime="1月 1 2018" class="post-list__meta--date date">1月 1 2018</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">
@@ -230,6 +243,40 @@ classes that you can use:
 <p>人工智能技术所需的理科基础则更高一些：如果想要比较深入地了解其原理（而不止是使用几个工具），需要微积分和线性代数的基础知识。以高中水平的数学能力，在一学期时间里重新捡回这两门课应该是可以做到的。（听说一些高校的文科院系大一已经不上高数课，我认为这是一个错误的导向。）</p>
 <p>除了这一点数学基础以外，大部分数据处理和机器学习算法可以说是出人意料地简单。John Foreman的<a href="https://book.douban.com/subject/24550921/" target="_blank" rel="external">Data Smart</a>一书教它的读者用Excel（是的，你没看错，就是你每天用的Excel）实现分类、推荐、预测等典型的机器学习算法，我认为这本书非常有助于破除笼罩在“人工智能”这个概念之上的神秘感。另外我也强烈推荐人文社科学者在学了一点Python基础之后尝试一下华盛顿大学的<a href="https://www.coursera.org/specializations/machine-learning" target="_blank" rel="external">机器学习公开课</a>。学完它的第一门课程，你就会发现，机器学习（乃至“人工智能”）其实是一件很简单、毫不神秘的事情——这一点，对岸的科技工作者们其实一直都知道。</p>
 <p>科技与人文社科的失联，会导致整个左翼运动陷入一种尴尬的境地：对于资本用以牟利并同时制造社会不公的科技工具，科技工作者看不到其社会危害所在，人文学者又无法提出有效的批判和改进方向。无形之中，双方对于对方专业领域的有意为之的无知，都在帮助保持当前科技-社会结构的现状。要打破这种现状，需要双方都开始努力了解对方的专业领域，包括——我今天特别想强调的——人文社科学者学一点编程和人工智能技术。</p>
+
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="12月 12 2017" class="post-list__meta--date date">12月 12 2017</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2017/12/12/ml-project-management-current-situation/" title="link to 机器学习项目如何管理：现状">机器学习项目如何管理：现状</a></h2>
+
+      <p class="excerpt">
+        <p><a href="https://www.atlassian.com/blog/software-teams/3-ways-ai-will-change-project-management-better" target="_blank" rel="external">Atlassian今年4月的一篇博客</a>提出，到2020年有87%的Jira用户认为他们的工作会被AI改变。具体到项目管理上，Atlassian的观点是，AI首先会作为项目管理助手进入我们的视野，然后透过数据拓展我们对项目的理解，更进一步还能通过主动猜测、倡导优秀实践、创造新的元数据层等方式弥补数据的缺失，最终对项目提出有益的建议。</p>
+<p><img src="https://orhachaim.co.il/wp-content/uploads/thumbs/1-338ubis538emc7477jajgq.jpg"></p>
+<p>然而愿望是美好的现实是骨感的。还不要说在项目管理中使用机器学习，关于机器学习的项目应该怎么管理，业界似乎已经有很多不甚圆满的经历。例如一位创业者谈他们如何<a href="https://medium.com/xeneta/boosting-sales-with-machine-learning-fbcf2e618be3" target="_blank" rel="external">用自然语言处理技术推动销售</a>。看起来他们尝试了各种不同的数据源、多种特征工程的方法、以及多种算法，接下来还有很多想要尝试的东西。从这个故事中我们看不到的是，他们给自己设置的目标是什么、目前的进展是什么、基于什么原则在指导每一次的尝试。简而言之，这位创业者的机器学习项目并没有任何有效的管理。</p>
+<p>另一个<a href="https://zhuanlan.zhihu.com/p/26435192" target="_blank" rel="external">同样缺乏管理的机器学习项目</a>就没有那么幸运。年薪百万的数据科学家被认为“没有给公司带来实际价值。高管们不知道他们具体做了什么，业务人员每周都给他们提出预测需求，却很少能在短时间得到回应”。与前面一个故事相比，这里的数据科学家需要在别人的管理之下开展工作，管理方法的欠缺无疑是矛盾累积和激化的原因之一。针对这个故事，作者提出了五点非常抽象的建议：1.从最简单的模型开始；2.探索更多问题；3.用全部的数据和特征训练模型；4.业务驱动模型；5.专注于自动化。我认为这几点并不能引导这家公司的管理者更有效地管理他们的数据科学家。</p>
+<p>这种缺乏管理方法的现象，一个重要的原因是典型的IT管理者对机器学习缺乏必要的了解（甚至更糟糕，有一些似是而非的半吊子的了解）。目前而论，咨询公司和商业/科技传媒在普及“必要的了解”方面并没有起到很好的作用。<a href="https://www.mckinsey.com/industries/high-tech/our-insights/an-executives-guide-to-machine-learning" target="_blank" rel="external">麦肯锡2015年的文章</a>说，关于机器学习，企业领导层需要了解的问题还是“传统行业能通过机器学习获得什么新的洞察”这种高层面的，提出的建议也是“机器学习要分描述、预测、处方三步走”这样的宏观建议。当然麦记的建议历来是面向CxO级别的，不落到项目管理层面也很正常。</p>
+<p>HBR也在2015年讨论“<a href="https://hbr.org/2015/07/what-every-manager-should-know-about-machine-learning" target="_blank" rel="external">每个管理者都需要了解的机器学习知识</a>”，提出了一些很重要的点：不光需要大数据、还需要广泛的数据；机器学习只是做预测、不提供因果性；要区分信号与噪音（还提到了特征提取、规则化、交叉验证等具体技术）；以及一些容易犯的错误（例如强行归因、不恰当的期望、迷信大数据量、对人的判断利用不足等）。但这篇文章的问题在于，它没有提供一套成型的工作方法。这些技术应该什么时候用，这些错误会在什么时候犯，文章没有提供出来，于是读者仍然被置于一个“等你该知道的时候你就知道了”的状态，很难对项目管理带来立竿见影的改变。</p>
+<p><a href="https://machinelearningmastery.com/how-to-layout-and-manage-your-machine-learning-project/" target="_blank" rel="external">2014年的一篇博客</a>着重谈机器学习项目的布置，包括应该有哪些目录、数据怎么管理、代码怎么组织等非常具体的实践。作者提出了项目流程的几个原则：透明；可维护；模块化；可迁移；可复制；效率。关于项目的可复制性，作者也从工程实践角度<a href="https://machinelearningmastery.com/reproducible-machine-learning-results-by-default/" target="_blank" rel="external">提出了10条原则</a>。在工程实践这个角度，这位作者给出的指导原则具有很好的可操作性。</p>
+<p>但是在项目管理角度，行业仍在继续探索。今年7月InfoQ的一篇文章讨论<a href="http://www.infoq.com/cn/articles/agile-development-of-artificial-intelligence-applications" target="_blank" rel="external">如何开发机器学习的MVP</a>，作者总结了四个思考步骤：第一问题是否能转化成分类/回归的问题；第二目标是否是容易获取、客观无偏差的数据；第三是问题的预测目标，因果关系是什么；第四是这个问题是不是一个真的业务需求。这也是几个很重要的思考点，不足之处仍然是缺乏系统性，并且缺落地的方法指导。</p>
+<p>有一篇博客提出了很有意义的问题：<a href="https://zhuanlan.zhihu.com/p/20729176" target="_blank" rel="external">机器学习项目为什么未实现敏捷开发</a>？作者发现算法类项目流程漫长，并结合之前实践Scrum的经验，提出了一些可能可以优化的方面，尤其是在团队组织形式上，是否可以参考敏捷的全功能团队经验。作者并且提出了一个重要的问题：对算法模型的评估是否必须在线上进行？或者换个角度来问这个问题：如何降低线下模型评估的偏差程度？</p>
+<p>敏捷软件开发之所以成为一种被广泛接受的软件开发方法论，不仅仅是因为它有高阶的思想支撑和指导原则，更重要的是它有一系列非常具体、非常可落地的实践。这些实践对于一线工作者的意义在于：(1)知道什么时候该做什么事；(2)知道什么时候该看什么指标；(3)知道什么时候可能有什么风险。机器学习类的项目要真正普及，也会需要这么一套具体可落地的实践指导。</p>
 
       </p>
 
@@ -627,40 +674,6 @@ classes that you can use:
       <hr class="post-list__divider" />
     </li>
     
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2017/8/15/agile-in-chinese-journals/" title="link to 敏捷在中文期刊中的投影">敏捷在中文期刊中的投影</a></h2>
-
-      <p class="excerpt">
-        <p>在中国推广敏捷软件开发方法十五年之后，我很想回头去看这段历史的全景。今天我用<a href="http://www.cnki.net/" target="_blank" rel="external">知网</a>做了一些检索，看到了一些有趣的数据。</p>
-<p>我在所有期刊中检索主题中包含“敏捷”和“软件”的文章。其他的关键词检索会得出略有不同的结果。如果只用“敏捷”作为关键词，会得到13258条结果，但其中绝大多数与我想要谈论的软件开发方法无关。这是“敏捷”这个译名词的宿命：它是一个普遍被认可的、带有褒义的形容词，使用这个词让听众更容易接纳这些新千年以后发展起来的<a href="http://softwarepractitioner.org/translations/fowler/newMethodology.shtml" target="_blank" rel="external">新方法学</a>。但与此同时，这个译名也让听众产生更多的误解：很多人会以自己的想法去期望这些新方法学，而不去深究它们的内涵。</p>
-<p>我尝试的另一个检索条件是把文献类别限定在“计算机软件及计算机应用”，并检索主题中包含“敏捷”、且不包含“制造”的文章。排除“制造”的原因是“<a href="http://wiki.mbalib.com/wiki/%E6%95%8F%E6%8D%B7%E5%88%B6%E9%80%A0" target="_blank" rel="external">敏捷制造</a>”也是一个相当热门、且与计算机技术很有关系的领域。这个检索的结果从统计上看与前一个相去不远。以下我主要讨论第一个检索的结果。从相关关键词来看，这个结果是比较准确的。</p>
-<p><img src="/assets/2017/8/15/keywords.png"></p>
-<p>首先，令我略有些惊讶且失望：检索到的文章只有972篇。作为对比，“云计算”检索到的文章有10880篇，“软件工程”有9890篇，“SOA”也有3992篇。回顾这十五年，不论在IT技术领域还是软件工程领域，敏捷仍然是一个非常小众的话题。</p>
-<p>从时间趋势来看，2001年及以前有一些涉及“敏捷”和“软件”主题的文章，虽然并不与现在意义上的“敏捷软件开发”直接关联，但在理念上有一定相通之处。除了敏捷制造、敏捷物流等领域的文章之外，<a href="http://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=CJFQ&amp;dbname=CJFD9899&amp;filename=JYXX199803000&amp;v=MDkyOTBkcUZDam5VTHJPTHpUVGRyS3hGOW5Nckk5RlpJUjhlWDFMdXhZUzdEaDFUM3FUcldNMUZyQ1VSTDJmYis=" target="_blank" rel="external">向华和邹平的文章</a>、<a href="http://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=CJFQ&amp;dbname=CJFD2000&amp;filename=QBXB200006011&amp;v=MjIzOThSOGVYMUx1eFlTN0RoMVQzcVRyV00xRnJDVVJMMmZiK2RxRkNqblY3M0pOQy9UYkxHNEh0SE1xWTlFWlk=" target="_blank" rel="external">赵捧未和窦永香的文章</a>、<a href="http://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=CJFQ&amp;dbname=CJFD2000&amp;filename=JSJC200005009&amp;v=MjcyNDZHNEh0SE1xbzlGYllSOGVYMUx1eFlTN0RoMVQzcVRyV00xRnJDVVJMMmZiK2RxRkNqblZML0pMejdCYmI=" target="_blank" rel="external">段永强、张申生、高国军的文章</a>都提及了“基于对象的软件代理”概念，这可能是“前敏捷时代”一个值得探寻的线索。</p>
-<p><img src="/assets/2017/8/15/annual_trend.png"></p>
-<p>“敏捷软件开发”这个名词的出现是在<a href="http://agilemanifesto.org/" target="_blank" rel="external">2001年</a>，并于2002年正式进入了中文期刊的话语空间，从时间轴上可以清晰地看出这个趋势。从统计数据上看，敏捷的潮流在2007年达到高峰，从2011年开始有一次显著的下滑，随后又逐渐回暖。这里面有一个异常因素：《程序员》杂志2010年以后的数据没有被知网收录。但即使排除这个因素，大趋势估计相去不远。某种程度上，这个曲线和Gartner的“<a href="https://en.wikipedia.org/wiki/Hype_cycle" target="_blank" rel="external">技术成熟度曲线</a>”（或者叫吹牛逼曲线）有某种暗合之处。</p>
-<p><img src="/assets/2017/8/15/Gartner_Hype_Cycle.svg"></p>
-<p>然后——我不知道该高兴还是悲伤——《程序员》杂志无疑地在这场潮流中扮演了领袖角色。在所有检索到的文章中，《程序员》发表的超过20%，与其他任何报刊杂志都不在同一个数量级上。排名第二的《电脑知识与技术》在十五年中发表了共计23篇相关文章，我觉得这就基本上可以解读为“毫不关心”。《程序员》在2002年3月的《<a href="http://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=ITSJ200203012&amp;dbname=CJFD2002" target="_blank" rel="external">极限编程</a>》专题，经确认，的确是中国期刊中最早介绍敏捷方法的一组文章。（实际上，《程序员》2001年12期的《代码重构》专题还略早于此，但由于刊号变迁的缘故，知网没有正确收录《程序员》2001年的内容，而是收录了之前使用该刊号的《Internet信息世界》的内容。）最早引介敏捷方法，并在之后的几年中贡献了整个期刊领域最多的篇幅。我们可以无疑地确认，《程序员》是敏捷方法在中国期刊领域最重要的——并且也是唯一的——支持者。这一数据，从一个侧面映射出敏捷在中国传奇而又尴尬的境遇。</p>
-
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="8月 15 2017" class="post-list__meta--date date">8月 15 2017</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
   </ol>
 
   <hr class="post-list__divider " />
@@ -668,7 +681,7 @@ classes that you can use:
 <nav class="pagination" role="navigation">
     
 
-    <span class="pagination__page-number">Page 1 of 55</span>
+    <span class="pagination__page-number">Page 1 of 56</span>
     
     
         <a class="older-posts pagination__older btn btn-small btn-tertiary" href="/archives/page/2/">Older Posts &rarr;</a>
@@ -681,7 +694,7 @@ classes that you can use:
     <span class="footer__copyright">&copy;
         作者保留一切权利，未经许可请勿转载</span>
     <span class="footer__copyright">&copy;
-        2017
+        2018
         Transparent Thoughts. All rights reserved.</span>
 </footer>
         </div>
