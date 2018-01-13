@@ -174,6 +174,30 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2007/8/1/i-know-ruby-works-in-lijiang/" title="link to I Know Ruby Works...In Lijiang">I Know Ruby Works...In Lijiang</a></h2>
+
+      <p class="excerpt">
+        <p><a href="http://picasaweb.google.com/gigix1980/LcbOEK/photo#5093741596994574594" target="_blank" rel="external"><img src="http://lh5.google.com/gigix1980/RrCa_qJ-GQI/AAAAAAAAAK4/sJLNyZDebmM/s400/P1010113.JPG" border="0"></a></p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="8月 1 2007" class="post-list__meta--date date">8月 1 2007</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2007/8/1/i-saw-glacier-today/" title="link to I Saw Glacier Today">I Saw Glacier Today</a></h2>
 
       <p class="excerpt">
@@ -376,30 +400,6 @@ classes that you can use:
       <div class="post-list__meta">
 
         <time datetime="7月 9 2007" class="post-list__meta--date date">7月 9 2007</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2007/7/6/编程选择gem安装版本/" title="link to 编程选择GEM安装版本">编程选择GEM安装版本</a></h2>
-
-      <p class="excerpt">
-        <p>rayzer<a href="http://gigix.thoughtworkers.org/articles/2007/07/05/existing-rails-deployment-stacks#comments">留言</a>说：</p><p><em>“昨天在feisty上装<a href="http://rubyworks.rubyforge.org" target="_blank" rel="external">rubyworks</a>的时候,到了安装fastthread一步，会编译本地gem,并提示mkmf模块依赖关系无法满足，需要引入ruby1.8-dev来解决。”</em></p><p>出现这个问题的原因是，在选择gem安装版本的时候，选中了一个错误的版本：我们提供了预编译好的二进制版本，安装这个版本是不需要有GCC和头文件的；但如果选中了没有预编译的版本，就会在安装的过程中buildnative extension。</p><p>而选中了错误版本的原因是，<a href="http://rubygems.org/" target="_blank" rel="external">RubyGems</a>本身没有提供非交互式的安装命令。一旦需要在多个版本中选择，就必须从命令行输入。我们以前用的简单办法是：</p><pre>echo “1” | gem install fastthread -y</pre><p>这样做的问题是，如果已经有gemcache（看看你有没有/usr/lib/ruby/gems/1.8/source_cache这个文件），编号1的版本很可能就不是我们提供的那个，而是RubyForge的gemrepository里的某一个。于是就出现了开头提到的问题。昨天看到rayzer的留言以后，我终于下定决心把这个问题解决掉……</p><p>其实也不难。用IO.popen来开启进程，一行一行读STDOUT，看到合适的选项就往STDIN输入数字：</p><pre>def install_gem(name)cmd = “gem install #{name} -y –no-rdoc –no-ri”puts cmdIO.popen(cmd, “r+”) do |io|io.each_line do |line|puts “[out] #{line}”if(line =~ /\s(\d+).*(i[3|4]86-linux)/)puts “[selection] #{$1}”io.puts $1endendbr / endendinstall_gem “fastthread”</pre><p>这个修改将在0.0.3版本中发布。</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="7月 6 2007" class="post-list__meta--date date">7月 6 2007</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">

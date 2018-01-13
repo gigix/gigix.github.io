@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gigix.thoughtworkers.org/"/>
-  <updated>2018-01-01T04:09:32.786Z</updated>
+  <updated>2018-01-13T07:34:26.036Z</updated>
   <id>http://gigix.thoughtworkers.org/</id>
   
   <author>
@@ -14,6 +14,81 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>数字化企业的数据自服务</title>
+    <link href="http://gigix.thoughtworkers.org/2018/1/13/dps-self-service-data/"/>
+    <id>http://gigix.thoughtworkers.org/2018/1/13/dps-self-service-data/</id>
+    <published>2018-01-13T05:04:00.000Z</published>
+    <updated>2018-01-13T07:34:26.036Z</updated>
+    
+    <content type="html"><![CDATA[<p>在<a href="/2017/4/25/ditigal-platform-strategy-intro/">前文</a>中我们说到，传统企业在逐步建设自己的数字平台过程中，需要抓住交付基础设施、API和架构治理、数据自服务、创新实验基础设施和监控体系、用户触点技术这五个支柱。今天我们讨论的主题是“数据自服务”，看看一个倡导消除摩擦、建设生态、推动创新的数字化平台如何处理数据。</p>
+<blockquote>
+<p><strong>前情回顾</strong></p>
+<ul>
+<li><a href="/2017/4/25/ditigal-platform-strategy-intro/">什么是数字平台战略</a> </li>
+<li><a href="/2017/5/7/dps-delivery-infrastructure/">数字化企业的交付基础设施</a></li>
+<li><a href="/2017/5/22/dps-api-architecture-remediation/">数字化企业的API架构治理</a></li>
+</ul>
+</blockquote>
+<h2 id="什么是数据自服务"><a href="#什么是数据自服务" class="headerlink" title="什么是数据自服务"></a>什么是数据自服务</h2><p>数据在企业中的处理过程，能清晰地映射出<a href="http://www.melconway.com/Home/Conways_Law.html" target="_blank" rel="external">康威定律</a>对IT系统的影响。在各个部门分别建设IT系统、组织内部大量存在信息筒仓（silo）的年代，数据的操作由OLTP应用系统的开发团队同步开发，那时几乎每个政府信息化、企业信息化系统都会有一块“报表需求”。随后众多组织认识到筒仓系统导致信息在组织内不能拉通，不能产生对整体业务流程的洞察，于是开始建设以数据仓库为代表的OLAP系统。</p>
+<p>这些系统在支撑更高级、更复杂的数据分析的同时，也对应地在组织中造就了一支专业的“数据团队”。这些人使用非常专业的技术和工具对数据进行提取、转换、装载、建立数据立方、多维钻取、生成报表。这些专业的技术和工具，普通的软件开发人员并不掌握，因此对数据处理、分析和呈现的变更都必须归集到这个数据团队来完成。结果是，数据团队的backlog里累积了来自各个部门的需求，需求的响应能力下降，IT系统从上线到获得市场洞察的周期变长。</p>
+<p>微服务架构鼓励小型的、全功能的团队拥有一个完整的服务（及其对应的业务）。这样的全功能团队不光要开发和运维IT系统，还要能从数据中获得洞察——而且要快，不然就会跟不上市场变化，甚至使一些重要的业务场景无法得到支撑。因此他们不能坐等一支集中式的、缓慢的数据团队来响应他们的需求，他们需要数据自服务能力。</p>
+<p>要赋能数据自服务，企业的数字化平台要考虑“两个披萨团队”的下列诉求：</p>
+<ul>
+<li>需要定义<strong>数据流水线</strong>，使数据能够顺畅地流过收集、转换、存储、探索/预测、可视化等阶段，产生业务价值。</li>
+<li>需要用<strong>实时的架构和API</strong>在短时间内处理大量、非结构化的数据，从中获得洞见，并实时影响决策。</li>
+<li>为了提高应变能力，系统中的数据不做ETL预处理，而是以“生数据”的形式首先存入<strong>数据湖</strong>，等有了具体的问题要回答时，再去组织和筛选数据，从中找出答案。</li>
+<li>更进一步把数据包装成能供外人使用的<strong>数据产品</strong>，让第三方从数据中获得新的洞见与价值。</li>
+<li>为了支持数据产品的运营，需要实现<strong>细粒度授权</strong>，针对不同的用户身份，授权访问不同范围的数据。</li>
+</ul>
+<h2 id="数据自服务解读"><a href="#数据自服务解读" class="headerlink" title="数据自服务解读"></a>数据自服务解读</h2><p>下面是ThoughtWorks的<a href="https://www.thoughtworks.com/digital-platform-strategy" target="_blank" rel="external">数字平台战略</a>第三个支柱“数据自服务”中所蕴涵的具体内容。</p>
+<p><img src="/assets/2017/6/13/self-service-data.jpg"></p>
+<h3 id="数据流水线设计"><a href="#数据流水线设计" class="headerlink" title="数据流水线设计"></a>数据流水线设计</h3><p>所谓流水线，是指用大数据创造价值的整个数据流。流水线从数据采集开始，随后是数据的清洗或过滤，再然后是将数据结构化到存储仓库中以便访问和查询，这之后就可以通过探索或预测的方式从数据中找到业务问题的答案，并可视化呈现出来。</p>
+<p><img src="/assets/2017/6/13/data-pipeline.jpg"></p>
+<p>一条运转良好的数据流水线，能有效处理移动/物联网等新技术制造出的极其大量的数据，缩短数据从获取到产生洞见的反馈周期，并以开发者友好的方式完成数据各个环节的处理，赋能一体化团队。</p>
+<p>数据流水线的实现有两种可能的方式。一种方式是在各个环节采用各种特定的工具，例如<a href="https://www.thoughtworks.com/insights/blog/scala-symposium-big-data-pipeline-powered-scala" target="_blank" rel="external">前面介绍的数据流水线</a>，各个环节都可以用开源的工具来实现。当然，<a href="http://www.techrepublic.com/article/manage-complex-big-data-pipeline-challenges-with-these-approaches/" target="_blank" rel="external">选择这种方式也并非没有挑战</a>：组织必须自己编写和维护“胶水代码”，把各种专用工具组合成一个内聚的整体。对组织的技术能力有较高的要求。</p>
+<p><img src="/assets/2017/6/13/data-pipeline-impl.jpg"></p>
+<p>除了基于开源软件实现自己的数据流水线，也可以考虑采用云上的数据流水线PaaS服务，例如<a href="https://databricks.com/" target="_blank" rel="external">Databricks</a>、<a href="http://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/what-is-datapipeline.html" target="_blank" rel="external">AWS Data Pipeline</a>、<a href="https://docs.microsoft.com/en-us/azure/data-factory/data-factory-introduction" target="_blank" rel="external">Azure Data Factory</a>等。这个方式的优点是对技术能力要求较低，缺点则是造成对特定云平台/PaaS提供商的依赖。</p>
+<h3 id="实时架构和API"><a href="#实时架构和API" class="headerlink" title="实时架构和API"></a>实时架构和API</h3><p>实时的数据架构和API支持短时间内处理大量、非结构化的数据，从中获得洞见，并“实时”影响决策。正如<a href="http://www.oreilly.com/data/free/files/big-data-analytics.pdf" target="_blank" rel="external">Mike Barlow所说</a>：“这是关于在正确时间做出更好决定并采取行动的能力，例如在顾客刷卡的时候识别信用卡欺诈，或者当顾客在排队结账的时候给个优惠，或者当用户在阅读某篇文章的时候推送某个广告。”</p>
+<p>在<a href="http://blog.cloudera.com/blog/2015/06/architectural-patterns-for-near-real-time-data-processing-with-apache-hadoop/" target="_blank" rel="external">Cloudera的一篇文章</a>中介绍了实时数据处理的4个架构模式，整个流水线架构在Flume/Kafka基础上：</p>
+<ul>
+<li>数据流吸收：低延迟将事件持久化到HDFS、HBase、Solr等存储机制</li>
+<li>近实时（100毫秒以下）的事件处理：数据到达时立即采取警告、标记、转换、过滤等初步行动</li>
+<li>近实时的事件分片处理：与前一个模式类似，但是先对数据分片</li>
+<li>复杂而灵活的聚合或机器学习拓扑，使用Spark</li>
+</ul>
+<h3 id="数据湖设计"><a href="#数据湖设计" class="headerlink" title="数据湖设计"></a>数据湖设计</h3><p>数据湖概念最初提出是在<a href="https://www.forbes.com/sites/edddumbill/2014/01/14/the-data-lake-dream/#28439a1869c0" target="_blank" rel="external">2014年Forbes的一篇文章</a>中。它的概念是：不对数据做提前的“优化”处理，而是直接把生数据存储在容易获得的、便宜的存储环境中；等有了具体的问题要回答时，再去组织和筛选数据，从中找出答案。按照<a href="https://www.thoughtworks.com/radar/techniques/data-lake" target="_blank" rel="external">ThoughtWorks技术雷达的定义</a>，数据湖中的数据应该是不可修改（immutable）的。</p>
+<p>数据湖试图解决数据仓库几方面的问题：</p>
+<ul>
+<li>预先的ETL处理终归会损失信息，如果事后才发现需要生数据中的某些信息、但是这些信息又没有通过ETL进入数据仓库，那么信息就无法寻回了。</li>
+<li>ETL的编写相当麻烦。数据仓库的schema发生改变，ETL也要跟着改变；应用程序的schema发生改变，ETL也要跟着改变。因此数据仓库通常由一个单独的团队负责，于是形成一个function team，响应速度慢。</li>
+<li>数据仓库的分析需要专门的技能，大部分应用程序开发者不掌握，再度强化了数据仓库专门团队；而数据仓库团队其实离业务很远，并不能快速准确地响应业务对数据分析的需求。</li>
+</ul>
+<p>在数据湖概念背后是康威法则的体现：数据能力与业务需求对齐。它要解决的核心问题是专门的数据仓库团队成为响应力瓶颈。当IT能力与业务需求组合形成一体化团队以后，数据的产生方不再假设未来要解决什么问题，因此也不对数据做预处理，只是直接存储生数据；数据的使用方以通用编程语言（例如Java或Python）来操作数据，从而无需依赖专门的、集中式的数据团队。</p>
+<p><a href="https://www.forbes.com/sites/edddumbill/2014/01/14/the-data-lake-dream/#28439a1869c0" target="_blank" rel="external">数据湖实施</a>的第一步是把生数据存储在廉价的存储介质（可能是HDFS，也可能是S3，或者FTP等）。对于每份生数据，应该有一份元数据描述其来源、用途、和哪些数据相关等等。元数据允许整个组织查看和搜索，让每个一体化团队能够自助式寻找自己需要的数据。任何团队都可以在生数据的基础上开发自己的微服务，微服务处理之后的数据可以作为另一份生数据回到数据湖。维护数据湖的团队只做很少的基础设施工作，生数据的输入和使用都由与业务强关联的开发团队来进行。传统数据仓库的多维分析、报表等功能同样可以作为一个服务接入数据湖。</p>
+<p>在实施数据湖的时候，有一种常见的反模式：企业有了一个名义上的数据湖（例如一个非常大的HDFS），但是数据只进不出，成了“数据泥沼”（或数据墓地）。在这种情况下，尽管数据湖的存储做得很棒，但是组织并没有很好地消化这些数据（可能是因为数据科学家不具备分析生数据的技术能力，而是更习惯于传统的、基于数据仓库的分析方式），从而不能很好地兑现数据湖的价值。</p>
+<h3 id="数据即产品"><a href="#数据即产品" class="headerlink" title="数据即产品"></a>数据即产品</h3><p><a href="http://www.juiceanalytics.com/writing/turning-data-into-product" target="_blank" rel="external">数据产品</a>是指将企业已经拥有或能够采集的数据资产，转变成能帮助用户解决具体问题的产品。Forbes列举了<a href="https://www.forbes.com/sites/lutzfinger/2014/08/19/3-data-products-you-need-to-know/#7f497e0566f6" target="_blank" rel="external">几类值得关注的数据产品</a>：</p>
+<ul>
+<li>用于benchmark的数据</li>
+<li>用于推荐系统的数据</li>
+<li>用于预测的数据</li>
+</ul>
+<p><a href="https://datafloq.com/read/simplest-way-monetize-data-product/980" target="_blank" rel="external">数据产品是数据资产变现的快速途径</a>。因为数据产品有几个优势：开发快，不需要开发出完整的模型，只要做好数据整理就可以对外提供；顾客面宽，一份数据可以产生多种用途；数据可以再度加工。数据产品给企业创造的收益既可以是直接的（用户想要访问数据或分析时收费）也可以是间接的（提升顾客忠诚度、节省成本、或增加渠道转化率）。</p>
+<p>在实现数据产品的时候，不仅要把数据打包，更重要的是提供数据之间的关联。数据产品的供应者需要提出洞见、指导用户做决策，而不仅仅是提供数据点。数据产品需要考虑用户的场景和体验，并在使用过程中不断演进。</p>
+<h3 id="细粒度授权"><a href="#细粒度授权" class="headerlink" title="细粒度授权"></a>细粒度授权</h3><p>当数据以产品或服务的形式对外提供时，企业可能需要针对不同的用户身份，授权访问不同范围的数据，对应不同的服务水平和不同的安全级别。一些典型的细粒度授权的场景可能包括：企业内部和外部用户能够访问的数据范围不同；供应链上不同环节的合作伙伴能够访问的数据范围不同；付费与免费的用户能够访问的数据范围不同；不同会员级别能够访问的数据范围不同；等等。</p>
+<p>允许访问的数据范围属于数据产品/服务自身的业务规则。《微服务设计》的第9章建议，“[服务]网关可以提供相当有效的粗粒度的身份验证……不过，比允许（或禁止）的特定资源或端点更细粒度的访问控制，可以留给微服务本身来处理”。</p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>为了加速“构建-度量-学习”的精益创业循环，业务与IT共同组成的一体化团队不能依赖于集中式的数据团队来获得对业务的洞察。他们需要规划适宜自己的数据流水线，在必要时引入实时数据架构和API，用数据湖来支撑自服务的数据操作，从而更快、更准确地从数据中获得洞察，影响业务决策。更进一步，数据本身也可以作为产品对内部用户乃至外部用户提供服务，并通过细粒度授权体现服务的差异化和安全性需求。通过建设“数据自服务”这个支柱，企业将真正能够盘活数据资产，使其在创新的数字化业务中发挥更大的价值，这是企业数字化旅程的第三步。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在&lt;a href=&quot;/2017/4/25/ditigal-platform-strategy-intro/&quot;&gt;前文&lt;/a&gt;中我们说到，传统企业在逐步建设自己的数字平台过程中，需要抓住交付基础设施、API和架构治理、数据自服务、创新实验基础设施和监控体系、用户触点技术这五个支
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>2017年读过的好书</title>
@@ -58,6 +133,34 @@
   </entry>
   
   <entry>
+    <title>机器学习项目如何管理：现状</title>
+    <link href="http://gigix.thoughtworkers.org/2017/12/12/ml-project-management-current-situation/"/>
+    <id>http://gigix.thoughtworkers.org/2017/12/12/ml-project-management-current-situation/</id>
+    <published>2017-12-12T05:01:00.000Z</published>
+    <updated>2017-12-08T12:23:10.376Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://www.atlassian.com/blog/software-teams/3-ways-ai-will-change-project-management-better" target="_blank" rel="external">Atlassian今年4月的一篇博客</a>提出，到2020年有87%的Jira用户认为他们的工作会被AI改变。具体到项目管理上，Atlassian的观点是，AI首先会作为项目管理助手进入我们的视野，然后透过数据拓展我们对项目的理解，更进一步还能通过主动猜测、倡导优秀实践、创造新的元数据层等方式弥补数据的缺失，最终对项目提出有益的建议。</p>
+<p><img src="https://orhachaim.co.il/wp-content/uploads/thumbs/1-338ubis538emc7477jajgq.jpg"></p>
+<p>然而愿望是美好的现实是骨感的。还不要说在项目管理中使用机器学习，关于机器学习的项目应该怎么管理，业界似乎已经有很多不甚圆满的经历。例如一位创业者谈他们如何<a href="https://medium.com/xeneta/boosting-sales-with-machine-learning-fbcf2e618be3" target="_blank" rel="external">用自然语言处理技术推动销售</a>。看起来他们尝试了各种不同的数据源、多种特征工程的方法、以及多种算法，接下来还有很多想要尝试的东西。从这个故事中我们看不到的是，他们给自己设置的目标是什么、目前的进展是什么、基于什么原则在指导每一次的尝试。简而言之，这位创业者的机器学习项目并没有任何有效的管理。</p>
+<p>另一个<a href="https://zhuanlan.zhihu.com/p/26435192" target="_blank" rel="external">同样缺乏管理的机器学习项目</a>就没有那么幸运。年薪百万的数据科学家被认为“没有给公司带来实际价值。高管们不知道他们具体做了什么，业务人员每周都给他们提出预测需求，却很少能在短时间得到回应”。与前面一个故事相比，这里的数据科学家需要在别人的管理之下开展工作，管理方法的欠缺无疑是矛盾累积和激化的原因之一。针对这个故事，作者提出了五点非常抽象的建议：1.从最简单的模型开始；2.探索更多问题；3.用全部的数据和特征训练模型；4.业务驱动模型；5.专注于自动化。我认为这几点并不能引导这家公司的管理者更有效地管理他们的数据科学家。</p>
+<p>这种缺乏管理方法的现象，一个重要的原因是典型的IT管理者对机器学习缺乏必要的了解（甚至更糟糕，有一些似是而非的半吊子的了解）。目前而论，咨询公司和商业/科技传媒在普及“必要的了解”方面并没有起到很好的作用。<a href="https://www.mckinsey.com/industries/high-tech/our-insights/an-executives-guide-to-machine-learning" target="_blank" rel="external">麦肯锡2015年的文章</a>说，关于机器学习，企业领导层需要了解的问题还是“传统行业能通过机器学习获得什么新的洞察”这种高层面的，提出的建议也是“机器学习要分描述、预测、处方三步走”这样的宏观建议。当然麦记的建议历来是面向CxO级别的，不落到项目管理层面也很正常。</p>
+<p>HBR也在2015年讨论“<a href="https://hbr.org/2015/07/what-every-manager-should-know-about-machine-learning" target="_blank" rel="external">每个管理者都需要了解的机器学习知识</a>”，提出了一些很重要的点：不光需要大数据、还需要广泛的数据；机器学习只是做预测、不提供因果性；要区分信号与噪音（还提到了特征提取、规则化、交叉验证等具体技术）；以及一些容易犯的错误（例如强行归因、不恰当的期望、迷信大数据量、对人的判断利用不足等）。但这篇文章的问题在于，它没有提供一套成型的工作方法。这些技术应该什么时候用，这些错误会在什么时候犯，文章没有提供出来，于是读者仍然被置于一个“等你该知道的时候你就知道了”的状态，很难对项目管理带来立竿见影的改变。</p>
+<p><a href="https://machinelearningmastery.com/how-to-layout-and-manage-your-machine-learning-project/" target="_blank" rel="external">2014年的一篇博客</a>着重谈机器学习项目的布置，包括应该有哪些目录、数据怎么管理、代码怎么组织等非常具体的实践。作者提出了项目流程的几个原则：透明；可维护；模块化；可迁移；可复制；效率。关于项目的可复制性，作者也从工程实践角度<a href="https://machinelearningmastery.com/reproducible-machine-learning-results-by-default/" target="_blank" rel="external">提出了10条原则</a>。在工程实践这个角度，这位作者给出的指导原则具有很好的可操作性。</p>
+<p>但是在项目管理角度，行业仍在继续探索。今年7月InfoQ的一篇文章讨论<a href="http://www.infoq.com/cn/articles/agile-development-of-artificial-intelligence-applications" target="_blank" rel="external">如何开发机器学习的MVP</a>，作者总结了四个思考步骤：第一问题是否能转化成分类/回归的问题；第二目标是否是容易获取、客观无偏差的数据；第三是问题的预测目标，因果关系是什么；第四是这个问题是不是一个真的业务需求。这也是几个很重要的思考点，不足之处仍然是缺乏系统性，并且缺落地的方法指导。</p>
+<p>有一篇博客提出了很有意义的问题：<a href="https://zhuanlan.zhihu.com/p/20729176" target="_blank" rel="external">机器学习项目为什么未实现敏捷开发</a>？作者发现算法类项目流程漫长，并结合之前实践Scrum的经验，提出了一些可能可以优化的方面，尤其是在团队组织形式上，是否可以参考敏捷的全功能团队经验。作者并且提出了一个重要的问题：对算法模型的评估是否必须在线上进行？或者换个角度来问这个问题：如何降低线下模型评估的偏差程度？</p>
+<p>敏捷软件开发之所以成为一种被广泛接受的软件开发方法论，不仅仅是因为它有高阶的思想支撑和指导原则，更重要的是它有一系列非常具体、非常可落地的实践。这些实践对于一线工作者的意义在于：(1)知道什么时候该做什么事；(2)知道什么时候该看什么指标；(3)知道什么时候可能有什么风险。机器学习类的项目要真正普及，也会需要这么一套具体可落地的实践指导。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;https://www.atlassian.com/blog/software-teams/3-ways-ai-will-change-project-management-better&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;At
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>保持现状与有意为之的无知</title>
     <link href="http://gigix.thoughtworkers.org/2017/12/12/minded-unmindedness/"/>
     <id>http://gigix.thoughtworkers.org/2017/12/12/minded-unmindedness/</id>
@@ -89,34 +192,6 @@
     
       &lt;p&gt;&lt;em&gt;（本文同时发表于&lt;a href=&quot;http://tootopia.me/article/8761&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;土逗公社&lt;/a&gt;）&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;1970年9月，萨尔瓦多·阿连德当选智利总统。智利人民用自己
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>机器学习项目如何管理：现状</title>
-    <link href="http://gigix.thoughtworkers.org/2017/12/12/ml-project-management-current-situation/"/>
-    <id>http://gigix.thoughtworkers.org/2017/12/12/ml-project-management-current-situation/</id>
-    <published>2017-12-12T05:01:00.000Z</published>
-    <updated>2017-12-08T12:23:10.376Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://www.atlassian.com/blog/software-teams/3-ways-ai-will-change-project-management-better" target="_blank" rel="external">Atlassian今年4月的一篇博客</a>提出，到2020年有87%的Jira用户认为他们的工作会被AI改变。具体到项目管理上，Atlassian的观点是，AI首先会作为项目管理助手进入我们的视野，然后透过数据拓展我们对项目的理解，更进一步还能通过主动猜测、倡导优秀实践、创造新的元数据层等方式弥补数据的缺失，最终对项目提出有益的建议。</p>
-<p><img src="https://orhachaim.co.il/wp-content/uploads/thumbs/1-338ubis538emc7477jajgq.jpg"></p>
-<p>然而愿望是美好的现实是骨感的。还不要说在项目管理中使用机器学习，关于机器学习的项目应该怎么管理，业界似乎已经有很多不甚圆满的经历。例如一位创业者谈他们如何<a href="https://medium.com/xeneta/boosting-sales-with-machine-learning-fbcf2e618be3" target="_blank" rel="external">用自然语言处理技术推动销售</a>。看起来他们尝试了各种不同的数据源、多种特征工程的方法、以及多种算法，接下来还有很多想要尝试的东西。从这个故事中我们看不到的是，他们给自己设置的目标是什么、目前的进展是什么、基于什么原则在指导每一次的尝试。简而言之，这位创业者的机器学习项目并没有任何有效的管理。</p>
-<p>另一个<a href="https://zhuanlan.zhihu.com/p/26435192" target="_blank" rel="external">同样缺乏管理的机器学习项目</a>就没有那么幸运。年薪百万的数据科学家被认为“没有给公司带来实际价值。高管们不知道他们具体做了什么，业务人员每周都给他们提出预测需求，却很少能在短时间得到回应”。与前面一个故事相比，这里的数据科学家需要在别人的管理之下开展工作，管理方法的欠缺无疑是矛盾累积和激化的原因之一。针对这个故事，作者提出了五点非常抽象的建议：1.从最简单的模型开始；2.探索更多问题；3.用全部的数据和特征训练模型；4.业务驱动模型；5.专注于自动化。我认为这几点并不能引导这家公司的管理者更有效地管理他们的数据科学家。</p>
-<p>这种缺乏管理方法的现象，一个重要的原因是典型的IT管理者对机器学习缺乏必要的了解（甚至更糟糕，有一些似是而非的半吊子的了解）。目前而论，咨询公司和商业/科技传媒在普及“必要的了解”方面并没有起到很好的作用。<a href="https://www.mckinsey.com/industries/high-tech/our-insights/an-executives-guide-to-machine-learning" target="_blank" rel="external">麦肯锡2015年的文章</a>说，关于机器学习，企业领导层需要了解的问题还是“传统行业能通过机器学习获得什么新的洞察”这种高层面的，提出的建议也是“机器学习要分描述、预测、处方三步走”这样的宏观建议。当然麦记的建议历来是面向CxO级别的，不落到项目管理层面也很正常。</p>
-<p>HBR也在2015年讨论“<a href="https://hbr.org/2015/07/what-every-manager-should-know-about-machine-learning" target="_blank" rel="external">每个管理者都需要了解的机器学习知识</a>”，提出了一些很重要的点：不光需要大数据、还需要广泛的数据；机器学习只是做预测、不提供因果性；要区分信号与噪音（还提到了特征提取、规则化、交叉验证等具体技术）；以及一些容易犯的错误（例如强行归因、不恰当的期望、迷信大数据量、对人的判断利用不足等）。但这篇文章的问题在于，它没有提供一套成型的工作方法。这些技术应该什么时候用，这些错误会在什么时候犯，文章没有提供出来，于是读者仍然被置于一个“等你该知道的时候你就知道了”的状态，很难对项目管理带来立竿见影的改变。</p>
-<p><a href="https://machinelearningmastery.com/how-to-layout-and-manage-your-machine-learning-project/" target="_blank" rel="external">2014年的一篇博客</a>着重谈机器学习项目的布置，包括应该有哪些目录、数据怎么管理、代码怎么组织等非常具体的实践。作者提出了项目流程的几个原则：透明；可维护；模块化；可迁移；可复制；效率。关于项目的可复制性，作者也从工程实践角度<a href="https://machinelearningmastery.com/reproducible-machine-learning-results-by-default/" target="_blank" rel="external">提出了10条原则</a>。在工程实践这个角度，这位作者给出的指导原则具有很好的可操作性。</p>
-<p>但是在项目管理角度，行业仍在继续探索。今年7月InfoQ的一篇文章讨论<a href="http://www.infoq.com/cn/articles/agile-development-of-artificial-intelligence-applications" target="_blank" rel="external">如何开发机器学习的MVP</a>，作者总结了四个思考步骤：第一问题是否能转化成分类/回归的问题；第二目标是否是容易获取、客观无偏差的数据；第三是问题的预测目标，因果关系是什么；第四是这个问题是不是一个真的业务需求。这也是几个很重要的思考点，不足之处仍然是缺乏系统性，并且缺落地的方法指导。</p>
-<p>有一篇博客提出了很有意义的问题：<a href="https://zhuanlan.zhihu.com/p/20729176" target="_blank" rel="external">机器学习项目为什么未实现敏捷开发</a>？作者发现算法类项目流程漫长，并结合之前实践Scrum的经验，提出了一些可能可以优化的方面，尤其是在团队组织形式上，是否可以参考敏捷的全功能团队经验。作者并且提出了一个重要的问题：对算法模型的评估是否必须在线上进行？或者换个角度来问这个问题：如何降低线下模型评估的偏差程度？</p>
-<p>敏捷软件开发之所以成为一种被广泛接受的软件开发方法论，不仅仅是因为它有高阶的思想支撑和指导原则，更重要的是它有一系列非常具体、非常可落地的实践。这些实践对于一线工作者的意义在于：(1)知道什么时候该做什么事；(2)知道什么时候该看什么指标；(3)知道什么时候可能有什么风险。机器学习类的项目要真正普及，也会需要这么一套具体可落地的实践指导。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;https://www.atlassian.com/blog/software-teams/3-ways-ai-will-change-project-management-better&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;At
     
     </summary>
     
@@ -829,53 +904,6 @@
     <summary type="html">
     
       &lt;p&gt;在&lt;a href=&quot;/2017/4/25/ditigal-platform-strategy-intro/&quot;&gt;前文&lt;/a&gt;中我们说到，传统企业在逐步建设自己的数字平台过程中，需要抓住&lt;a href=&quot;/2017/5/7/dps-delivery-infrastructure
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>数字化企业的交付基础设施</title>
-    <link href="http://gigix.thoughtworkers.org/2017/5/7/dps-delivery-infrastructure/"/>
-    <id>http://gigix.thoughtworkers.org/2017/5/7/dps-delivery-infrastructure/</id>
-    <published>2017-05-07T05:04:00.000Z</published>
-    <updated>2017-05-07T02:43:59.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>在<a href="/2017/4/25/ditigal-platform-strategy-intro/">前文</a>中我们说到，传统企业在逐步建设自己的数字平台过程中，需要抓住交付基础设施、API和架构治理、数据自服务、创新实验基础设施和监控体系、用户触点技术这五个支柱。那么，当我们谈“交付基础设施”，我们究竟在谈什么？怎样的交付基础设施能加速数字化项目的交付？</p>
-<p><img src="/assets/2017/5/7/infra.jpg"></p>
-<h2 id="什么是交付基础设施"><a href="#什么是交付基础设施" class="headerlink" title="什么是交付基础设施"></a>什么是交付基础设施</h2><p><a href="/2017/3/31/stack-management/">云时代的研发环境</a>应该以原生支持云计算的方式提供、管理和维护。在提供基础的弹性计算能力的IaaS平台之上，交付基础设施负责为交付团队提供便利的、最好是自助式的工作环境，让交付团队专注于交付软件的功能性需求，而不必操心软件功能之外的“脚手架”工作。按照ThoughtWorks<a href="https://www.thoughtworks.com/digital-platform-strategy" target="_blank" rel="external">数字平台战略</a>的定义，这些脚手架包括：</p>
-<ul>
-<li><strong>弹性基础设施</strong>，即交付团队使用底层云计算平台的方式，既包括各种虚拟机和镜像的管理，也包括生产环境的水平伸缩能力。</li>
-<li><strong>持续交付流水线</strong>，交付团队编写的代码需要通过这条流水线最终变成可以上线运行的软件。</li>
-<li><strong>部署运行时</strong>，软件在开发、测试、试运行、用户验收、培训、生产等各种环境需要部署的环境。</li>
-<li><strong>监控</strong>，为交付团队提供生产环境（及其他环境）的可观测性，方便他们发现和解决问题。</li>
-<li><strong>安全</strong>，把安全内建在软件的研发过程中，尽量避免因为人为失误造成安全隐患。</li>
-</ul>
-<p>从前这些交付基础设施脚手架通常是由每个交付团队的技术领导者（<a href="http://insights.thoughtworkers.org/thoughtworks-practice-part8/" target="_blank" rel="external">Tech Lead</a>）来负责搭建和维护的。并且由于软硬件资源的稀缺和不灵活，团队经常需要微调自己的实践来适应不同的环境。所以，即使在同一家公司，各支团队所使用的交付基础设施也可能大相径庭。交付基础设施不一致、不规范的情况会迫使团队花费额外的精力去操心脚手架工作，并且使<a href="/2017/5/2/stack-management-and-tech-radar/">最佳实践不易推广普及</a>。走上数字化道路的企业必定有大量的软件项目，尤其是微服务架构风格的引入会使企业拥有数量更多、单体规模更小的软件应用，此时交付基础设施不一致、不规范的情况就会对企业的数字化进程带来更大的阻力。</p>
-<p>云计算带来的弹性和灵活性让组织级的交付基础设施标准化、规范化成为可能。一个跨越项目团队的、组织级的交付基础设施团队现在可以在IaaS的基础上封装标准的脚手架，甚至把<a href="/2017/4/14/stack-management-implementation/">脚手架本身以PaaS的形式提供</a>给交付团队。通过把整个企业优秀技术领导者的知识与经验内嵌在交付基础设施脚手架中，就降低了对单个交付团队的技术要求，帮助企业缓解优秀技术领导者难以获得的人才挑战。从这个意义上，以PaaS形式提供的交付基础设施本质上是<strong>技术领导者作为服务</strong>（Tech Lead as a Service）的云计算应用形式，它解决的是优秀技术人才的弹性和灵活性问题，让企业能够以一种创新的方式使用这些人才。</p>
-<blockquote>
-<p><strong>架构师写代码吗？</strong></p>
-<p>关于“架构师是否应该写代码”这个问题，业界有各种不同的声音。在敏捷的社区里，意见倾向于认为<a href="https://www.infoq.com/articles/architects-should-code-bryson" target="_blank" rel="external">架构师需要写代码</a>，因为这是他们获得关于技术决策的反馈和建立技术领导力的重要方式。将交付基础设施明确提出来，就给了架构师又一个清晰的编程目标——他们需要<a href="https://yaowenjie.github.io/devops/infrastructure-as-code" target="_blank" rel="external">用代码的形式描述</a>软件交付中的基础设施和最佳实践。除了培训、开会、代码评审等我们已经知道效率并不太高的方式以外，架构师对交付团队的指导和监管现在可以用实实在在的代码来承载。当交付团队不理解架构师说的某件事应该怎么做，现在他们更有理由要求架构师“show me the code”。</p>
-</blockquote>
-<h2 id="交付基础设施解读"><a href="#交付基础设施解读" class="headerlink" title="交付基础设施解读"></a>交付基础设施解读</h2><p>下面我们来看看，在“交付基础设施”这顶帽子下面，架构师/技术领导者们究竟应该关心哪些问题，又有哪些最佳实践应该被纳入他们的视线。</p>
-<p><img src="/assets/2017/5/7/di.jpg"></p>
-<h3 id="弹性基础设施"><a href="#弹性基础设施" class="headerlink" title="弹性基础设施"></a>弹性基础设施</h3><p>允许交付随需获得计算能力。在微服务语境下，这种弹性有两层常见的含义：在生产环境下，服务可以随负载动态获得和释放计算资源，从而更高效地使用计算资源，更自动化地应对负载变化；在研发环境下，开发、测试、运维等不同角色可以随需动态获得完整的环境，从而统一环境、标准化研发实践、规范化研发能力，并且给研发提供体验更好的开发环境。</p>
-<p>为了实现弹性基础设施，一方面基础设施需要支持弹性，例如使用支持弹性计算的公有/私有云，并且有对生产环境的监控和自动化手段；另一方面应用本身需要有可扩展性，例如服务能分别独立部署、无状态化、容器化、有透明的前端负载均衡机制。有状态服务（比如数据库服务）的弹性伸缩问题是特别需要考虑的重要挑战。</p>
-<h3 id="持续交付流水线"><a href="#持续交付流水线" class="headerlink" title="持续交付流水线"></a>持续交付流水线</h3><p>用持续交付实践打通微服务的开发、构建、验证和部署流程。在数字化、服务化的背景下，众多互相依赖的微服务形成的系统架构，对构建、验证和部署造成更大的压力：各个服务有独立的代码库和构建流程，又需要随时能组合成可用的软件；构建产物需要有统一的存储管理；完整的运行时环境应该能按需获得；配置和部署应该能快速准确地完成。</p>
-<p>为了应对这些挑战，交付基础设施中应该包含完整的持续交付概念：流水线、环境管理、构建产物管理等。应该鼓励对服务虚拟化，最好是每个主机运行一个微服务，而不共享使用主机。应该包含配置自动化工具，例如Chef、Puppet等。在服务化的背景下，持续交付流水线需要体现服务间的依赖关系和团队间的协作关系，设计一个运转良好的流水线不是容易的任务。</p>
-<h3 id="部署运行时"><a href="#部署运行时" class="headerlink" title="部署运行时"></a>部署运行时</h3><p>交付基础设施应该包含生产系统所使用的运行时环境，并把生产环境前向拉通到验证和研发环节。为了在研发流程的出口得到服务化友好的交付物，最好是在整个开发过程中一直使用与生产环境近似的环境。例如开发人员应该使用全套环境随时验证，自动化测试和手工测试都基于全套环境开展。在这种情况下，环境的设置、管理、更新不可能由每个开发人员和测试人员自己进行，所以环境的管理更新必定是集中进行的，环境的设置必定是自动化的。</p>
-<p>在《<a href="/2017/4/14/stack-management-implementation/">技术栈管理：云时代的研发环境</a>》一文中，我们已经介绍过“一个平台、两个PaaS服务、三个运行时环境”的技术栈管理理念。特别需要注意的是，如何将生产数据拉通到验证和研发环节。</p>
-<h3 id="监控"><a href="#监控" class="headerlink" title="监控"></a>监控</h3><p>在微服务架构中，系统由多个小服务组成，且广泛使用异步通信，使问题和故障更难定位。因此交付基础设施需要提供全面可靠的监控机制，帮助交付团队了解系统的整体状况。</p>
-<p>监控的实现涉及日志、服务指标跟踪、业务语义综合监控等方式。在云环境下如何划分和管理监控的层级，监控系统如何无侵入的在各个微服务体系中收集故障和信息，如何有效管理监控的反馈环，如何在前后端分离和移动应用情况下收集和监控客户端日志，都是常见的挑战。</p>
-<h3 id="安全"><a href="#安全" class="headerlink" title="安全"></a>安全</h3><p>当数字化、服务化IT系统的数量剧增，安全的设置会变得更加复杂。在微服务架构下，系统的安全性需要有一个整体的考虑。例如单点登录、服务间的身份验证和授权、各种防御措施等安全考量不应该下放到交付团队，而应该被涵盖在交付基础设施中统一提供、统一管理、统一更新。</p>
-<p>交付基础设施还应该鼓励<a href="https://www.buildsecurityin.net/zh/" target="_blank" rel="external">安全实践内建</a>（Build Security In），例如团队应该熟悉OWASP安全列表和测试框架、需求分析中应该包含安全需求和恶意用户需求、测试过程中应该包含安全性测试、应该进行自动化安全性测试并纳入持续交付流水线。这些流程与工作方法虽然不能完全以软件代码的形式承载，但它们同样是交付基础设施的重要组成部分。</p>
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>数字化、服务化的IT大背景会让企业开发和拥有的IT系统数量剧增。当企业IT交付更多地以“两个pizza团队”的形式组织，依赖于每个交付团队的技术领导者来搭建和维护一套完整高效的交付基础设施脚手架，这种期望即使不是完全不现实，也会对企业的人才积累提出非常高的要求。因此，企业应该集中优秀的技术人才（包括架构师们），打造一套标准的交付基础设施，充分考虑生产环境与研发环境的弹性、持续交付、部署运行时的统一、监控、安全等因素，并借助云计算的弹性和灵活性将其提供给交付团队。用便利的脚手架赋能一支能快速交付的团队，这是企业的数字化旅程的第一步。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;在&lt;a href=&quot;/2017/4/25/ditigal-platform-strategy-intro/&quot;&gt;前文&lt;/a&gt;中我们说到，传统企业在逐步建设自己的数字平台过程中，需要抓住交付基础设施、API和架构治理、数据自服务、创新实验基础设施和监控体系、用户触点技术这五个支
     
     </summary>
     
