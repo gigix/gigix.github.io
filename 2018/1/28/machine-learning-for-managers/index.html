@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+        机器学习项目如何管理：设置期望 | 透明思考
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+    <meta name="author" content="Jeff Xiong">
+    
+    
+    <meta name="description" content="我在之前的一篇文章中提到，机器学习项目如何管理，目前在行业内是一个普遍存在的难题。具体而言，对于这类项目，我们需要一套行之有效的工作办法，帮助一线工作者：(1)知道什么时候该做什么事；(2)知道什么时候该看什么指标；(3)知道什么时候可能有什么风险。这样一套工作办法的第一步，就是对一个机器学习项目设置合理的期望。
+机器学习到底是在做什么机器学习的基本过程可以用下面这张图来呈现：
+
+拿到已有的历史数">
+    
+
+    <meta name="description" content="我在之前的一篇文章中提到，机器学习项目如何管理，目前在行业内是一个普遍存在的难题。具体而言，对于这类项目，我们需要一套行之有效的工作办法，帮助一线工作者：(1)知道什么时候该做什么事；(2)知道什么时候该看什么指标；(3)知道什么时候可能有什么风险。这样一套工作办法的第一步，就是对一个机器学习项目设置合理的期望。
+机器学习到底是在做什么机器学习的基本过程可以用下面这张图来呈现：
+
+拿到已有的历史数">
+<meta property="og:type" content="article">
+<meta property="og:title" content="机器学习项目如何管理：设置期望 | 透明思考">
+<meta property="og:url" content="http://gigix.thoughtworkers.org/2018/1/28/machine-learning-for-managers/index.html">
+<meta property="og:site_name" content="透明思考">
+<meta property="og:description" content="我在之前的一篇文章中提到，机器学习项目如何管理，目前在行业内是一个普遍存在的难题。具体而言，对于这类项目，我们需要一套行之有效的工作办法，帮助一线工作者：(1)知道什么时候该做什么事；(2)知道什么时候该看什么指标；(3)知道什么时候可能有什么风险。这样一套工作办法的第一步，就是对一个机器学习项目设置合理的期望。
+机器学习到底是在做什么机器学习的基本过程可以用下面这张图来呈现：
+
+拿到已有的历史数">
+<meta property="og:image" content="http://gigix.thoughtworkers.org/assets/2018/1/28/ml-process.png">
+<meta property="og:image" content="http://gigix.thoughtworkers.org/assets/2018/1/28/accuracy.png">
+<meta property="og:image" content="http://gigix.thoughtworkers.org/assets/2018/1/28/accuracy-paradox.png">
+<meta property="og:image" content="http://gigix.thoughtworkers.org/assets/2018/1/28/precision-recall.png">
+<meta property="og:updated_time" content="2018-01-27T01:13:00.906Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="机器学习项目如何管理：设置期望 | 透明思考">
+<meta name="twitter:description" content="我在之前的一篇文章中提到，机器学习项目如何管理，目前在行业内是一个普遍存在的难题。具体而言，对于这类项目，我们需要一套行之有效的工作办法，帮助一线工作者：(1)知道什么时候该做什么事；(2)知道什么时候该看什么指标；(3)知道什么时候可能有什么风险。这样一套工作办法的第一步，就是对一个机器学习项目设置合理的期望。
+机器学习到底是在做什么机器学习的基本过程可以用下面这张图来呈现：
+
+拿到已有的历史数">
+<meta name="twitter:image" content="http://gigix.thoughtworkers.org/assets/2018/1/28/ml-process.png">
+
+    
+    <link rel="alternate" href="/atom.xml" title="透明思考" type="application/atom+xml">
+    
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+
+    <script src="/js/jquery.min.js"></script>
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+<header class="panel-cover panel-cover--collapsed">
+
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">透明思考</a></h1>
+
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">
+          Transparent Thoughts
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">Blog</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+------------------------------ -->
+
+<nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+
+  <!-- Github -->
+  <li class="navigation__item">
+    <a href="https://github.com/gigix" title="Gigix on GitHub" target="_blank">
+      <i class='icon icon-social-github'></i>
+      <span class="label">GitHub</span>
+    </a>
+  </li>
+
+  </ul>
+</nav>
+
+          <script>
+    function doSearch() {
+        var keyword = $('#keyword').val();
+        if (keyword.trim() === '') {
+            window.location.href = 'http://gigix.thoughtworkers.org/#blog';
+        } else {
+            window.open('http://www.google.com/search?q=site:gigix.thoughtworkers.org+' + keyword);
+        }
+    }
+</script>
+
+<div class="search">
+    <input id="keyword" type="text"/>
+    <input type="button" value="Search" class="btn" onclick="doSearch()"/>
+</div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+    <header class="post-header">
+
+        
+        <div class="post-meta">
+            <time datetime="1月 28 2018"
+                  class="post-meta__date date">1月 28 2018</time>
+            &#8226;
+
+        <span class="post-meta__tags tags">
+
+            <font class="categories">
+                
+            </font>
+            
+
+        </span>
+        </div>
+        
+
+        <h1 class="post-title">机器学习项目如何管理：设置期望</h1>
+    </header>
+
+    <section class="post">
+        <p>我在之前的一篇文章中提到，<a href="/2017/12/12/ml-project-management-current-situation/">机器学习项目如何管理</a>，目前在行业内是一个普遍存在的难题。具体而言，对于这类项目，我们需要一套行之有效的工作办法，帮助一线工作者：(1)知道什么时候该做什么事；(2)知道什么时候该看什么指标；(3)知道什么时候可能有什么风险。这样一套工作办法的第一步，就是对一个机器学习项目设置合理的期望。</p>
+<h2 id="机器学习到底是在做什么"><a href="#机器学习到底是在做什么" class="headerlink" title="机器学习到底是在做什么"></a>机器学习到底是在做什么</h2><p>机器学习的基本过程可以用下面这张图来呈现：</p>
+<p><img src="/assets/2018/1/28/ml-process.png"></p>
+<p>拿到已有的历史数据作为训练数据，我们需要对训练数据进行<strong>矢量化</strong>处理，把输入的不论什么形态的数据（例如文本、音频、图片、棋盘盘面）都转化成包含若干列的矢量。从矢量中我们再分出<strong>特征</strong>（X）和结果（Y），通常特征的列数远多于结果。</p>
+<p>我们把X部分交给一个<strong>模型</strong>，算出与每一行训练数据对应的预测值Y’。所谓模型，就是一系列的权重系数，把这些权重系数用在一行输入数据上，就会得到针对这一行输入数据的结果预测。我们把Y’与Y对比，评判这一轮预测的效果。这个效果，我们用<strong>损失</strong>来度量。</p>
+<p>然后我们用一个机器学习<strong>算法</strong>来尝试优化损失。所谓优化，就是不断尝试调整模型中的权重参数。调一次，再计算出一组新的Y’，再与Y比较效果。如此迭代，直到损失不再降低，或者达到预设的迭代次数。</p>
+<p>所以，首先必须要记住：机器学习是一种优化任务。优化任务的目标不是找到“正确”的答案，而是找到一个“看起来不错”的答案。这一点会对我们看待这类项目的方式产生深远的影响。</p>
+<h2 id="如何为优化任务设置期望"><a href="#如何为优化任务设置期望" class="headerlink" title="如何为优化任务设置期望"></a>如何为优化任务设置期望</h2><p>传统意义上的软件开发（例如开发一个电商网站、开发一个社交app）是能够得到确定结果的：只要需求分析得够细致、原型设计得够保真、测试进行得够周全，你就可以准确地框定一个软件开发过程的产出结果，点击哪个按钮得到什么效果都是可以预先定义的。而机器学习项目则不然：不论分类、回归、聚类，本质上都是对某个损失函数迭代优化的过程。它没有唯一正确的答案，只是有希望得到看起来不错的答案。优化任务的逻辑不是因果，而是概率。</p>
+<p>对于优化任务，我们不能问“是否正确”这个问题。有意义的问题是，模型的预测准确率能达到多少。一个缺乏经验的管理者可能会说“越高越好”，或者拍脑袋说出一个数字“90%”，显然这都不太有助于合理地管理期望和把控进展。暂时放下“准确率”的定义不谈，我们如何知道对于一个机器学习得出的模型应该期望什么样的准确率呢？显然大多数情况下预测准确率不可能达到100%，那么这个期望应该如何设置？</p>
+<p>我们需要引入一个概念：<a href="https://en.wikipedia.org/wiki/Bayes_error_rate" target="_blank" rel="external">贝叶斯错误率</a>。简单说，贝叶斯错误率是对于一个问题有可能达到的最好的预测效果。贝叶斯错误率通常不是那么容易直接获得的，所以我们用人类的判断作为一个代理指标：一般来说，我们认为人类的判断错误率高于贝叶斯错误率，但是也相差不大。于是前面的问题变成了：对于一个机器学习得到的模型，我们期望它的预测准确率与人类的判断相比如何？</p>
+<p>这个问题没有唯一正确的答案。有些时候我们希望模型的准确率高于、甚至远高于人类的判断；另一些时候，我们只需要模型的准确率勉强接近人类的判断，这样的模型就可以帮人类完成大量繁琐的工作量。对模型的期望设置不是一个技术问题，而是一个业务问题，在开始一个机器学习项目之前，就需要先与业务的负责人展开相关的对话。</p>
+<h2 id="如何定义“准确”"><a href="#如何定义“准确”" class="headerlink" title="如何定义“准确”"></a>如何定义“准确”</h2><p>仍然以最简单的分类问题为例，模型的判别分为阳性（positive）和阴性（negative）两种，两种判别都有正确和错误的可能，于是总共就有了四种可能的情况：</p>
+<ul>
+<li>True Positive（TP）：判别为阳性，实际也是阳性</li>
+<li>False Positive（FP）：判别为阳性，实际却是阴性</li>
+<li>True Negative（TN）：判别为阴性，实际也是阴性</li>
+<li>False Negative（FN）：判别为阴性，实际却是阳性</li>
+</ul>
+<p>一种朴素的“准确率”定义方法是“判别正确的比例”，即：</p>
+<p><img src="/assets/2018/1/28/accuracy.png"></p>
+<p>但是当样本的分布极其不均衡时，这个对准确率的定义会很有误导性。例如我们假设10000人里有150人患胃癌（阳性），经过对血样的分析，一个模型识别出100名患者（TP），有50名患者没有发现（FN），同时误报了另外没有患病的150人（FP）；另一个模型则不做任何判断，直接宣称所有人都没有胃癌。我们直觉会认为前一个模型优于后一个，但朴素的准确率定义却给了我们相反的结论：</p>
+<p><img src="/assets/2018/1/28/accuracy-paradox.png"></p>
+<p>因为<a href="https://en.wikipedia.org/wiki/Accuracy_paradox" target="_blank" rel="external">朴素的准确率定义有这样的问题</a>，实践中更常用的指标是“精确率”（Precision）和“召回率”（Recall）。它们的定义分别是：</p>
+<ul>
+<li>Precision = TP/(TP+FP)：在预测的阳性个例中，有多少是预测正确的？</li>
+<li>Recall = TP/(TP+FN)：在所有的阳性个例中，总共找出了多少？</li>
+</ul>
+<p><img src="/assets/2018/1/28/precision-recall.png"></p>
+<p>可以看出，Precision和Recall往往是互相矛盾的：如果追求找出更多阳性个例（提高Recall），那么阴性个例被误判为阳性的情况也会增加（降低Precision），反之亦然。在不同的业务场景下，需要追求的指标也会不同。例如在前面的体检场景下，我们会追求更高的Recall：尽量找出所有患病的人，有一些人被误报也没关系。而另一个极端场景是推荐顾客可能会卖的商品，这时我们会追求更高的Precision：推荐位只有5个，我们必须保证推荐的每一件商品都打中用户的兴趣点，至于还有几千个他可能感兴趣的商品没有被推荐，那并不重要。</p>
+<p>所以我们再次看到，采用什么指标来定义“准确”、应该如何权衡指标的取舍，这同样是一个与场景高度相关的业务问题。项目的管理者和业务代表需要清晰理解指标的含义、并合理设置对指标的期望。</p>
+<h2 id="然后呢……"><a href="#然后呢……" class="headerlink" title="然后呢……"></a>然后呢……</h2><p>如果项目的管理者和业务方代表能懂得机器学习是一类优化任务、能理解优化任务的度量方式、能针对这类任务设置合理的期望，在理解和把握项目进度与风险的路上他们就迈出了第一步。在下一篇文章里，我会拆解出机器学习类项目涉及的工作内容。读者将会看到，看起来高大上的机器学习、人工智能，实际上需要特殊技能和高中以上数学能力的只有极小一部分，其他都是普通的、确定性的软件开发工作，可以用典型的软件开发过程和管理方法来对待。针对份额极小、但有时非常重要的“自行训练模型”部分，我会给出更加细化的工作内容拆解，并提出任务拆分、进度管理、风险管理的相关办法。</p>
+
+    </section>
+
+    <section class="author">
+<p>（本文作者熊节是ThoughtWorks的总监咨询师）</p>
+</section>
+    <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style_32x32" style="height: 40px">
+    <a class="jiathis_button_tsina"></a>
+    <a class="jiathis_button_weixin"></a>
+    <a class="jiathis_button_douban"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis"
+       target="_blank"></a>
+</div>
+<script type="text/javascript">
+    var jiathis_config = {
+        summary: "",
+        shortUrl: false,
+        hideMore: false
+    }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code_mini/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+    
+</article>
+
+			
+            <footer class="footer">
+    <span class="footer__copyright">&copy;
+        作者保留一切权利，未经许可请勿转载</span>
+    <span class="footer__copyright">&copy;
+        2018
+        Transparent Thoughts. All rights reserved.</span>
+</footer>
+        </div>
+    </div>
+
+    <!-- The main JavaScript file for Casper -->
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    <script src="/js/jquery.imagesloaded.min.js"></script>
+    <script src="/js/gallery.js"></script>
+    <script src="/js/jquery.githubRepoWidget.min.js"></script>
+    <script type="text/javascript"
+            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> 
+      MathJax.Hub.Config({ 
+        tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+    }); 
+
+    </script>
+
+    <!--kill ie6 -->
+    <!--[if IE 6]>
+    <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+    <![endif]-->
+
+    <!-- totop -->
+    <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">
+        <a title="back to top"><img style="width:30px;height:30px;" src="/images/totop.png"/></a>
+    </div>
+    <script>
+        (function ($) {
+            var upperLimit = 100;
+            var scrollElem = $('#totop');
+            var scrollSpeed = 500;
+            scrollElem.hide();
+            $(window).scroll(function () {
+                var scrollTop = $(document).scrollTop();
+                if (scrollTop > upperLimit) {
+                    $(scrollElem).stop().fadeTo(300, 1); // fade back in
+                } else {
+                    $(scrollElem).stop().fadeTo(300, 0); // fade out
+                }
+            });
+            $(scrollElem).click(function () {
+                $('html, body').animate({scrollTop: 0}, scrollSpeed);
+                return false;
+            });
+        })(jQuery);
+    </script>
+
+    <!-- fancybox -->
+    
+    <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+    <script src="/fancybox/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript">
+        (function ($) {
+            $('.fancybox').fancybox();
+        })(jQuery);
+    </script>
+    
+
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-113927-4', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <!-- CNZZ Analytics -->
+    <script src="http://s4.cnzz.com/z_stat.php?id=1255092465&web_id=1255092465" language="JavaScript"></script>
+
+</body>
+</html>

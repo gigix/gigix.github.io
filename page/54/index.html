@@ -174,6 +174,30 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2007/5/10/dsl不要太多/" title="link to DSL不要太多">DSL不要太多</a></h2>
+
+      <p class="excerpt">
+        <p><a href="http://activeform.rubyforge.org/" target="_blank" rel="external">ActiveForm</a>据说是用来生成HTML表单的DSL。<a href="http://dongbin.javaeye.com/blog/74784" target="_blank" rel="external">董斌</a>还颇赞赏。</p><p>然则，这个代码真的比HTML更容易弄吗？</p><p><span class="caps">HTML</span>原本就被认为是描述web界面的DSL，现在又弄出一套DSL来生成HTML。</p><p>用好现在的工具，会不会比不断发明新工具要好？</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="5月 10 2007" class="post-list__meta--date date">5月 10 2007</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2007/5/9/甘肃行｜边塞怀古/" title="link to 甘肃行｜边塞怀古">甘肃行｜边塞怀古</a></h2>
 
       <p class="excerpt">
@@ -371,30 +395,6 @@ classes that you can use:
 
       <p class="excerpt">
         <p>很早就有朋友在<a href="http://www.javaeye.com/topic/65549" target="_blank" rel="external">研究Erlang</a>，但一直认为这只是一场茶杯里的风暴，没有投入精力去关注。</p><p>最近的信号是，<a href="http://www.pragmaticprogrammer.com/" target="_blank" rel="external">PragmaticProgrammers</a>出了一本《<a href="http://www.pragmaticprogrammer.com/titles/jaerlang/" target="_blank" rel="external">Programming Erlang</a>》，同时还有<a href="http://www.pragmaticprogrammer.com/articles/erlang.html" target="_blank" rel="external">一篇文章</a>介绍。照以往的经验，PragmaticProgrammers从来不做曲高和寡的书。因为这个信号，我决定花一点工夫去了解一下。找到了<a href="http://groups.google.com/group/erlang-china" target="_blank" rel="external">Erlang China</a>这个讨论组，另一个网站<a href="http://www.erlang-china.org/" target="_blank" rel="external">Erlang-China.org</a>不知何故不能访问了。</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="4月 20 2007" class="post-list__meta--date date">4月 20 2007</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2007/4/20/ruby-on-rails走向企业/" title="link to Ruby on Rails走向企业">Ruby on Rails走向企业</a></h2>
-
-      <p class="excerpt">
-        <p>我的标题不是一个问句。因为我已经相当确定，<a href="http://www.rubyonrails.org" target="_blank" rel="external">Ruby on Rails</a>走向企业是早晚的事情。</p><p>已经有太多的讨论围绕着“<a href="http://rubako.com/2007/04/19/who-said-development-on-rails-is-x-times-faster/" target="_blank" rel="external">用Rails要快多少多少倍</a>”展开。但是，对于<a href="http://patricklogan.blogspot.com/2006/03/its-enterprisey.html" target="_blank" rel="external">企业级超复杂</a>来说，开发的效率只是一方面。至少还有其他几个方面是必须关注的。</p><ol><li>非功能性需求，也就是软件的-ilities：性能，并发吞吐量，伸缩性，安全，等等。</li><li>完整的生命周期支持：需求，设计，开发，配置管理，质量保证，部署，维护，升级。软件生命周期的各个环节是否有适当的工具和/或最佳实践来覆盖。</li><li>系统整合。与遗留系统是否能够协同工作。这主要体现在两个方面：（1）消息系统；（2）遗留数据库。</li></ol><p>实际上动态语言早已在各种企业IT系统中扮演胶水的角色，一些成熟的组织早已认识到它们并<a href="http://www.infoworld.com/archives/emailPrint.jsp?R=printThis&amp;A=/article/07/04/16/16FEscripting_1.html" target="_blank" rel="external">不止是急就章</a>拼凑软件的法宝。动态语言本身的特点使得它们能够相当漂亮地描述各种领域，这正是<a href="http://www.oreillynet.com/ruby/blog/2007/03/why_was_rails_only_possible_wi.html?ref=most_discussed" target="_blank" rel="external">为何Rails只会在Ruby上出现</a>的原因。</p><p>至于前面提到的、企业级超复杂所看重的三个方面。结合<a href="http://httpd.apache.org/" target="_blank" rel="external">Apache</a>、<a href="http://mongrel.rubyforge.org/" target="_blank" rel="external">Mongrel</a>和<a href="http://haproxy.1wt.eu/" target="_blank" rel="external">HAProxy</a>的部署方案已经被证明具有轻松超过任何J2EE应用服务器的性能和吞吐量，<a href="http://zefhemel.com/archives/2004/09/01/the-share-nothing-architecture" target="_blank" rel="external">无共享架构</a>使其具有完全线性的水平伸缩能力；至于安全性，Unix本身就已经构造了完备而可靠的安全体系。在今年的<a href="http://conferences.oreillynet.com/rails/" target="_blank" rel="external">RailsConf</a>上，我们将看到关于“如何部署高性能企业级Rails应用环境”的产品和最佳实践。</p><p>在生命周期方面，我们已经有了<a href="http://cruisecontrolrb.thoughtworks.com/" target="_blank" rel="external">CruiseControl.rb</a>和<a href="http://wiki.rubyonrails.org/rails/pages/Capistrano" target="_blank" rel="external">Capistrano</a>；我们即将看到<a href="http://studios.thoughtworks.com/" target="_blank" rel="external">Mingle</a>的正式亮相，以及基于这些工具的最佳实践。系统整合或许是目前最不明朗的一个领域：我们有<a href="http://www.infoq.com/articles/intro-active-messaging-rails" target="_blank" rel="external">ActiveMessaging</a>，我们有<a href="http://compositekeys.rubyforge.org/" target="_blank" rel="external">复合主键支持</a>，但是很明显这离着“方便的遗留系统整合”还有相当距离。在未来的一年中，这可能是“<a href="http://blog.csdn.net/mfowler/archive/2006/08/14/1061954.aspx" target="_blank" rel="external">企业级Rails</a>”最有看头的一个领域。</p><p>总而言之，不难看到，即便是对于企业级超复杂的要求，Ruby和Rails也已经做好了——至少是大部分的——准备。即便客气一点不说“<a href="http://jutopia.tirsen.com/articles/2005/10/22/rails-is-more-enterprise-ready-than-j2ee-in-a-way" target="_blank" rel="external">Rails比J2EE还要适合企业使用</a>”这样的话，对于那些愿意承担一定风险来提升IT效率的企业而言，是的，Ruby和Rails整装待发。</p>
       </p>
 
       <div class="post-list__meta">
