@@ -174,6 +174,30 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2007/9/15/rolling-out-from-rubyworks/" title="link to RubyWorks近况很好，将来会更好">RubyWorks近况很好，将来会更好</a></h2>
+
+      <p class="excerpt">
+        <p>经过一番调整之后，<a href="http://cruisecontrolrb.thoughtworks.com/" target="_blank" rel="external">CruiseControl.rb</a>的网站又回来了，顺便host了<a href="http://cruisecontrolrb.thoughtworks.com/projects" target="_blank" rel="external">Ruby on Rails的持续集成</a>。这次用了一个<a href="http://www.centos.org/" target="_blank" rel="external">CentOS 5</a>的服务器，用<a href="http://rubyworks.rubyforge.org/" target="_blank" rel="external">RubyWorks Production Stack</a>做部署环境。自己的狗食自己吃，自己的产品自己用。在下周的<a href="http://www.railsconfeurope.com/" target="_blank" rel="external">RailsConf Europe 2007</a>上，我们的CC.rb、Production Stack和<a href="http://gigix.thoughtworkers.org/2007/8/17/jrubyworks-j2ee-on-rails">JRubyWorks</a>都会亮相。这就是我们<a href="http://studios.thoughtworks.com/rubyworks" target="_blank" rel="external">RubyWorks</a>团队取得的阶段性成果。</p><p>不过，当负责宣传推广的同事去参加RailsConf Europe的时候，我就已经从这个项目中rollout了。至少在可预见的将来，我的角色将从RubyWorks的核心开发者变成热心的开源参与者之一。这就是控球后卫的姿态，运球推进到前场，晃开防守找到空档，把球传给位置最好的队友让他得分，自己转身投入防守。</p><p>不过说真的，但愿很快能再进入一个Ruby项目……昨天和<a href="http://dreamhead.blogbus.com/" target="_blank" rel="external">dreamhead</a>聊天的时候瞎扯了一句：你知道为什么以前的程序员总是想做几年技术就转为做管理吗？因为他们用C++编程太没乐趣了。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="9月 15 2007" class="post-list__meta--date date">9月 15 2007</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2007/9/12/对冲基金那些事/" title="link to 对冲基金那些事">对冲基金那些事</a></h2>
 
       <p class="excerpt">
@@ -376,30 +400,6 @@ classes that you can use:
       <div class="post-list__meta">
 
         <time datetime="8月 17 2007" class="post-list__meta--date date">8月 17 2007</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2007/8/12/如何对private方法进行单元测试/" title="link to 如何对private方法进行单元测试">如何对private方法进行单元测试</a></h2>
-
-      <p class="excerpt">
-        <p>（有很多人很多次问过我这个问题。以下是标准答案。）</p><p>问：如何对私有方法进行单元测试？</p><p>答：重点在于，你不应该有任何方法是从一开始设计出来就是private的，因为你的每段程序都应该在单元测试的驱动之下产生，而测试是不可能驱动出来一个private方法的。那么private方法从哪里来？只能从重构而来。所以答案是：private方法是不需要测试的，因为它是重构的产物，而重构是不改变程序可观察之行为的。既然行为不改变，测试自然也不需要有任何改变，所以不需要针对private方法建立任何新的测试。</p><p>问：但是，如果private方法确实出现问题了怎么办？如果确实希望用测试来弄清一个private方法里面到底发生了什么，该怎么办？</p><p>答：如果一个private方法复杂到你不能一眼看清它，那它就太复杂了，你应该把它重构成为一个独立的class，然后针对这个class来建立单元测试。</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="8月 12 2007" class="post-list__meta--date date">8月 12 2007</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">
