@@ -174,6 +174,31 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2007/6/9/escript-running-erlang-as-scripts/" title="link to Escript- Running Erlang As Scripts">Escript- Running Erlang As Scripts</a></h2>
+
+      <p class="excerpt">
+        <p></p><p>（以下摘抄自<a href="http://www.pragmaticprogrammer.com/titles/jaerlang/" target="_blank" rel="external">Programming Erlang</a>第六章）</p><p>Using escript you can run your programs directly as scripts—there’s no need to compile them first.</p><p><em>Warning:escript is included in Erlang versions<span class="caps">R11B</span>-4 and onward. If you havean earlier version of Erlang, then you should upgrade to the latestversion of Erlang.</em></p><p>To run hello as an escript, we create the following file:</p><pre>#!/usr/bin/env escriptmain(_) -gt;nbsp;io:format(“Hello world\n” ).</pre><p>On a Unix system,we can run this immediately and without compilation as follows:</p><pre>$ chmod u+x hello$ ./helloHello world$</pre><p></p>
+
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="6月 9 2007" class="post-list__meta--date date">6月 9 2007</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2007/6/9/这是我们的纪念日/" title="link to 这是我们的纪念日">这是我们的纪念日</a></h2>
 
       <p class="excerpt">
@@ -376,30 +401,6 @@ classes that you can use:
       <div class="post-list__meta">
 
         <time datetime="5月 19 2007" class="post-list__meta--date date">5月 19 2007</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2007/5/18/rails部署：反向代理优于fastcgi/" title="link to Rails部署：反向代理优于FastCGI">Rails部署：反向代理优于FastCGI</a></h2>
-
-      <p class="excerpt">
-        <p><a href="http://rubyworks.rubyforge.org" target="_blank" rel="external">RubyWorks</a>采用了基于反向代理和Mongrel的部署方案：HAProxy把请求代理给不同的Mongrel实例。在<a href="http://www.infoq.com/cn/news/2007/05/rubyworks" target="_blank" rel="external">InfoQ中文站的报道</a>中写道：</p><p>“RubyWorks项目领导人<a href="mailto:alexey.verkhovsky@gmail.com" target="_blank" rel="external">Alexey Verkhovsky</a>也认为，只有在对节约内存使用非常重视的情况下（例如虚拟共享主机），FastCGI才有其价值；而在普通的企业应用中，可靠性和可管理性重于节约内存，这也是RubyWorks选择基于反向代理和Mongrel的部署方案的原因。”</p><p>在《<a href="http://www.china-pub.com/computers/common/info.asp?id=30058" target="_blank" rel="external">Agile Web Development withRails</a>》的第一版中所推荐的部署方案是基于FastCGI的，而第二版则改为推荐基于反向代理的部署方案。James Duncan Davidson在书中写道：</p><p>“ 简而言之，FastCGI确实是一枚火箭，但有时会因为各种奇怪的原因而爆炸在发射台上。使用代理让Rails应用直接与HTTP对话，这是整个社群的发展方向。”</p><p>即使在<a href="http://www.dreamhost.com" target="_blank" rel="external">DreamHost</a>这样的shared host上，FastCGI也给人们带来了<a href="http://nubyonrails.com/articles/2005/11/16/yet-another-chapter-in-the-fcgi-saga" target="_blank" rel="external">种种困扰</a>，这也是Mongrel（以及相应的，反向代理的部署方案）流行的原因。另一个Rails服务器<a href="http://swiftiply.swiftcore.org/index.html" target="_blank" rel="external">Swiftiply</a>号称比Mongrel更高性能，不过伸缩性方面都是线性的。</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="5月 18 2007" class="post-list__meta--date date">5月 18 2007</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">

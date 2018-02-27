@@ -174,6 +174,88 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2018/2/27/dps-experimental-infrastructure/" title="link to 数字化企业的实验基础设施">数字化企业的实验基础设施</a></h2>
+
+      <p class="excerpt">
+        <p>在<a href="/2017/4/25/ditigal-platform-strategy-intro/">前文</a>中我们说到，传统企业在逐步建设自己的数字平台过程中，需要抓住交付基础设施、API和架构治理、数据自服务、创新实验基础设施和监控体系、用户触点技术这五个支柱。今天我们讨论的主题是<a href="https://www.thoughtworks.com/digital-platform-strategy" target="_blank" rel="external">数字平台战略</a>的第四个支柱“实验基础设施”，看看一个倡导消除摩擦、建设生态、推动创新的数字化平台如何赋能快速、有针对性的商业实验。</p>
+<blockquote>
+<p><strong>DPS全局观</strong></p>
+<ul>
+<li>概述：<a href="/2017/4/25/ditigal-platform-strategy-intro/">什么是数字平台战略</a> </li>
+<li>第一支柱：<a href="/2017/5/7/dps-delivery-infrastructure/">数字化企业的交付基础设施</a></li>
+<li>第二支柱：<a href="/2017/5/22/dps-api-architecture-remediation/">数字化企业的API架构治理</a></li>
+<li>第三支柱：<a href="/2018/1/13/dps-self-service-data/">数字化企业的数据自服务</a></li>
+<li>第五支柱：<a href="http://insights.thoughtworks.cn/customer-touchpoint-technology/" target="_blank" rel="external">数字化平台中的客户触点技术</a></li>
+</ul>
+</blockquote>
+<h2 id="什么是实验基础设施"><a href="#什么是实验基础设施" class="headerlink" title="什么是实验基础设施"></a>什么是实验基础设施</h2><p>作为数字化企业的代表，亚马逊是众多怀揣数字化梦想的企业学习的榜样。今天的亚马逊，在零售、广告、消费电子终端、应用商店、云服务等多个领域与各领域的领先企业竞争。更可怕的是，除了丰富的业务线，亚马逊还有Dash Button、Echo、Prime Air、AWS等大量创新。最可怕的是，据AWS的CEO说，除了这些大家知道的、获得了一定成功的创新项目，还有更多创新项目失败了——而亚马逊认为完全OK。亚马逊强大的创新能力，背后体现的是更为强大的快速实验、快速学习、快速调整的能力。缺少这种能力，就算把亚马逊的产品和模式摆在面前照抄，也无法跟上它不断创新的步伐。</p>
+<p><img src="/assets/2017/7/11/amazon.jpg"></p>
+<p>为了支撑数字系统的快速实验、快速学习、快速调整，需要在快速交付基础设施与数据自服务的基础上再考虑下列问题：</p>
+<ul>
+<li>需要从多种来源<strong>采集</strong>关于系统、关于顾客的<strong>数据</strong>。</li>
+<li>需要根据业务目标在系统中<strong>埋设监控点</strong>，并及时把监控结果<strong>可视化</strong>呈现给业务用户。</li>
+<li>为了降低实验试错的风险，在把新版本发布给全部用户之前，应该以<strong>金丝雀发布</strong>的形式首先发布给一小部分用户，确保新版本不造成重大损害。</li>
+<li>系统需要支持<strong>功能切换开关（toggle）</strong>，允许团队在不修改代码的前提下改变系统的行为。</li>
+<li>用<strong>路由技术</strong>支持蓝-绿部署和A/B测试，方可高效地开展受控实验。</li>
+</ul>
+<h2 id="实验基础设施详解"><a href="#实验基础设施详解" class="headerlink" title="实验基础设施详解"></a>实验基础设施详解</h2><p>数字平台中的实验基础设施由以下特性共同支撑。</p>
+<h3 id="数据采集"><a href="#数据采集" class="headerlink" title="数据采集"></a>数据采集</h3><p><a href="http://theleanstartup.com/" target="_blank" rel="external">精益创业</a>的核心逻辑是缩短“Build-Measure-Learn”的周期。为了从实验中学习，就需要全面采集实验数据。交付基础设施通常会包含技术性的监控和数据采集（例如基于ELK的日志监控体系），提供性能、资源、系统告警等角度的数据。</p>
+<p>单纯技术性的数据不足以对业务实验提供反馈，需要贯串用户体验，获取对业务有指导意义的数据。一个可供参考的框架是“<a href="https://www.pierrelechelle.com/aarrr-pirate-metrics" target="_blank" rel="external">海盗度量</a>”：聚焦关注创新业务的获客、活跃、保留、推荐、创收（AARRR）这5个环节，从这个5个点上提出假设，然后用数据来证实或证伪假设。</p>
+<p><img src="https://www.pierrelechelle.com/files/2016/09/aarrr-pirate-metrics.png"></p>
+<h3 id="金丝雀发布"><a href="#金丝雀发布" class="headerlink" title="金丝雀发布"></a>金丝雀发布</h3><p><a href="https://martinfowler.com/bliki/CanaryRelease.html" target="_blank" rel="external">金丝雀发布</a>是一种控制软件发布风险的方式：在把新版本发布给全部用户之前，首先发布给一小部分用户，确保功能完好可用。金丝雀发布的主要目的是为了降低风险。新的软件可以先在与用户隔离的环境中接受UAT测试；如果新的软件有问题，受到影响的只是一小部分用户，不至于立即造成巨大的损失；如果新的软件有问题，可以立即回滚到旧版本。</p>
+<p><img src="https://martinfowler.com/bliki/images/canaryRelease/canary-release-2.png"></p>
+<p>金丝雀发布最基本的形式，就是在前端反向代理上用路由技术把一定比例的用户导向“金丝雀”版本（例如<a href="http://www.conviva.com/canary-deployment-with-nginx/" target="_blank" rel="external">Nginx可以支持多种筛选用户的方式</a>）。在路由技术的背后，应该以<a href="https://martinfowler.com/bliki/PhoenixServer.html" target="_blank" rel="external">凤凰服务器</a>和<a href="https://martinfowler.com/bliki/ImmutableServer.html" target="_blank" rel="external">不可变服务器</a>来实现每个服务，服务的创建和回收应该是完全自动化的。同时还需要需要端到端的综合监控，根据有业务语义的目标（例如转化率）是否发生突变来判断金丝雀的效果。</p>
+<h3 id="Toggle架构"><a href="#Toggle架构" class="headerlink" title="Toggle架构"></a>Toggle架构</h3><p><a href="https://martinfowler.com/articles/feature-toggles.html" target="_blank" rel="external">Feature Toggle</a>的目标是，通过架构设计允许团队在不修改代码的前提下改变系统的行为。常见的一些需要Toggle的场合包括：避免多个交付版本的代码branching/forking；避免未完成功能的代码branching/forking；运行时动态改变系统行为，以实现一些特定能力，例如：线上受控实验、针对不同用户权限提供不同服务、<a href="https://martinfowler.com/bliki/CircuitBreaker.html" target="_blank" rel="external">回路熔断</a>和服务降级等。</p>
+<p>常见的Toggle可以分为4类：</p>
+<ul>
+<li>Release Toggle：某些功能已经存在，但暂时不向用户发布。主要目的是为了基于trunk开发、避免开发分支。静态，生存周期短。可以用<a href="https://www.togglz.org/" target="_blank" rel="external">Togglz</a>之类工具。</li>
+<li>Ops Toggle：回路熔断，高负载或发生故障时自动降级服务。较动态，生存周期长。工具如<a href="https://github.com/Netflix/Hystrix/wiki" target="_blank" rel="external">Hystrix</a>等。</li>
+<li>Experiment Toggles：用于支持线上实验（例如Canary Release、A/B Test等）。动态，生存周期较短。采用路由技术实现。</li>
+<li>Permission Toggles：用于给不同权限的用户提供不同的服务。引入统一的toggle router和toggle configuration，避免在代码中写条件。动态，生存周期长。</li>
+</ul>
+<p><img src="https://martinfowler.com/articles/feature-toggles/overview-diagram.png"></p>
+<p>Feature Toggle也应该以服务API的形式暴露出来，并且鼓励用结构化的、人类可读的配置文件管理Toggle。</p>
+<h3 id="路由技术"><a href="#路由技术" class="headerlink" title="路由技术"></a>路由技术</h3><p>通过路由切换的方式，让用户在不同的时间、不同的场合访问到不同的服务实例（可能是不同的版本）。路由技术可以用来支撑多种实验性部署技巧，包括蓝-绿部署（零宕机部署）、A/B测试、金丝雀发布等。<a href="http://blog.christianposta.com/deploy/blue-green-deployments-a-b-testing-and-canary-releases/" target="_blank" rel="external">这篇文章</a>介绍了这些部署技巧直接的关系。</p>
+<p>路由技术的实现与下层的弹性基础设施有很大关系，<a href="https://www.thoughtworks.com/insights/blog/implementing-blue-green-deployments-aws" target="_blank" rel="external">以AWS为例</a>，有几种比较简单的实现蓝绿部署的方式：</p>
+<ul>
+<li>对于单个EC2实例，可以修改它的Elastic IP</li>
+<li>对于EC2集群，可以切换ELB背后的Auto Scaling Group</li>
+<li>可以用Route53修改DNS重定向</li>
+<li>可以用BeanStalk切换整个应用环境（如果应用部署在BeanStalk上）</li>
+</ul>
+<p><img src="https://cloudnative.io/statics/blog/blue-green-deployment-sets.png"></p>
+<p>Cloud Foundry也有一组<a href="https://docs.cloudfoundry.org/devguide/deploy-apps/blue-green.html" target="_blank" rel="external">实现蓝绿部署的最佳实践</a>。</p>
+<h3 id="可视化和埋点"><a href="#可视化和埋点" class="headerlink" title="可视化和埋点"></a>可视化和埋点</h3><p>通过<a href="http://blog.takipi.com/the-complete-guide-to-instrumentation-how-to-measure-your-application/" target="_blank" rel="external">埋点</a>获得系统运行时的信息，收集之后显示出来，从而把运维环境中的信息及时反馈回开发团队，缩短反馈周期。</p>
+<p>常见的埋点方式有：</p>
+<ul>
+<li>代码中埋点（例如New Relic、AppDynamics、Dynatrace）</li>
+<li>监控进程（例如StatsD、collectd、fluentd）</li>
+<li>日志（例如Splunk、ELK）</li>
+</ul>
+<p>数据需要用一体化的、直观可视的仪表板展示出来，从而快速指导业务调整。<a href="https://grafana.com/" target="_blank" rel="external">Grafana</a>和<a href="https://www.elastic.co/products/kibana" target="_blank" rel="external">Kibana</a>等工具提供了很好的仪表板功能，不过还是需要针对自己的情况加以定制。</p>
+<p><img src="https://static-www.elastic.co/assets/blt375759845321ddbb/kibana-screenshot-aspot-v2.jpg?q=456"></p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>很大程度上，大部分组织的IT建设都谈不上“科学”。科学的基础建立在假说和实验之上，而在很多组织里，“有可能失败的项目”恐怕根本无法立项——更不用说“很有可能失败的项目”。降低做实验和犯错误的成本、从经验中尽可能多学习，是企业面对未知世界的唯一出路。然而快速的受控实验背后隐藏的是基础设施、软件架构、数据等多方面的技术支撑，把实验基础设施作为企业数字化旅程的阶段性目标，拉动各方面基础能力的建设，是建设数字平台的合理路径。</p>
+
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="2月 27 2018" class="post-list__meta--date date">2月 27 2018</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2018/2/23/managing-ml-projects/" title="link to 机器学习项目如何管理：工作内容">机器学习项目如何管理：工作内容</a></h2>
 
       <p class="excerpt">
@@ -673,55 +755,6 @@ classes that you can use:
       <div class="post-list__meta">
 
         <time datetime="11月 28 2017" class="post-list__meta--date date">11月 28 2017</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2017/11/27/intelligent-disempowerment/" title="link to 智能技术的伦理风险">智能技术的伦理风险</a></h2>
-
-      <p class="excerpt">
-        <p><em>（旧文一篇，已发表于<a href="https://zhuanlan.zhihu.com/p/25854862" target="_blank" rel="external">土逗公社</a>）</em></p>
-<p>人工智能的风险已经不再是一个新话题。在过去几年中，很多研究者提及了人工智能（以及与之紧密相关的技术，尤其是机器学习和大数据技术）可能带来的危害与风险。值得注意的现象是：在公众话语空间中流行的关于智能技术伦理危害与风险的讨论，大多将“人类”整体视为潜在的被损害的对象。大量的叙事被构建为“机器 vs. 人类”的形式。而关于智能技术如何被当前社会的权力结构主导、并反过来强化当前社会的权力结构、加深对弱势边缘群体的压迫，这一方面的讨论数量较少，且较缺乏系统性。本文将介绍一些关于智能技术伦理危害与风险的讨论，并着重介绍一些智能技术强化社会与经济不公正的案例。</p>
-<p>一些关于智能技术伦理危害与风险的讨论已经进入了流行文化空间，吸引了大众的兴趣。这类讨论通常呈现未来学的形式，试图推测人工智能技术成熟、尤其是具备了自我完善的能力之后可能的未来图景。如<a href="https://book.douban.com/subject/26308917/" target="_blank" rel="external">超级智能</a>、<a href="https://futureoflife.org/background/benefits-risks-of-artificial-intelligence/" target="_blank" rel="external">人工智能毁灭人类</a>、<a href="https://www.washingtonpost.com/opinions/matt-miller-artificial-intelligence-our-final-invention/2013/12/18/26ed6be8-67e6-11e3-8b5b-a77187b716a3_story.html?utm_term=.c6ab1f756972" target="_blank" rel="external">技术奇点</a>等讨论吸引了大众对于智能技术的伦理问题的广泛关注。</p>
-<p>比起这些事关人类存亡、略带科幻感的宏大叙事，另一些由智能技术带来的伦理危害与风险正在更加现实地发生。例如智能技术对就业的影响，是一个经常被提及的主题。<a href="https://www.wired.com/2012/12/ff-robots-will-take-our-jobs/" target="_blank" rel="external">Kevin Kelly认为</a>，机器在工作中对人的取代是一个不可逆的过程，有一些工作暂时只有人类能做或做得比机器更好，但机器终将胜过人类，绝大多数人类在几十年后将不再需要从事生产工作。<a href="http://www.mckinsey.com/business-functions/digital-mckinsey/our-insights/where-machines-could-replace-humans-and-where-they-cant-yet" target="_blank" rel="external">麦肯锡的一个研究</a>则更具体地列出了各种职业被机器取代的可能性，其中生产线工作、准备食物、包装物品等“可预测的物理工作”是最容易被机器取代的。</p>
-<p>除了造成大面积、结构性失业，<a href="https://jsteinhardt.wordpress.com/2015/06/24/long-term-and-short-term-challenges-to-ensuring-the-safety-of-ai-systems/" target="_blank" rel="external">对人工智能的常见担忧</a>还包括赛博空间和物理空间的战争：控制了大量资源甚至自动化武器的人工智能是否会攻击它们本不应该攻击的对象？这种危险甚至不必以战争的形式出现：人工智能的错误行为、甚至只是不恰当的优化，考虑到它们已经在社会经济中扮演如此重要的角色，是否会造成极端恶劣的结果？</p>
-<p>可以注意到，以上几类常见的关于智能技术伦理危害与风险的讨论总体上强调人工智能对人类整体的影响，并不凸显其对当前社会不同人群造成不同影响的情况。同样的趋势也出现在对智能技术的风险进行的分析当中。众多这类分析聚焦于技术层面，而并未将社会和政治层面的因素纳入考虑。例如<a href="https://jsteinhardt.wordpress.com/2015/06/24/long-term-and-short-term-challenges-to-ensuring-the-safety-of-ai-systems/" target="_blank" rel="external">一位斯坦福大学的研究者</a>认为，通过机器学习尤其是深度学习得到的统计学模型具有以下特征，使得它们存有安全隐患：</p>
-<ul>
-<li>不透明：很难、甚至根本无法看懂其中的逻辑；</li>
-<li>整体不可分：无法通过局部分拆理解输入输出之间的关系；</li>
-<li>脆弱：输入的微小变化可能引起输出的重大且无法预测的变化；</li>
-<li>不被充分理解。</li>
-</ul>
-<p>作为对比，《<a href="https://book.douban.com/subject/26785866/" target="_blank" rel="external">Weapons of Math Destruction</a>》一书的作者Cathy O’Neil也提到了广泛影响人们日常工作与生活的众多智能算法工具的<a href="http://boingboing.net/2016/01/06/weapons-of-math-destruction-h.html" target="_blank" rel="external">几个危险的特征</a>：</p>
-<ol>
-<li>它们是秘密的，经常是某家公司的商业秘密；</li>
-<li>它们是不透明的，被它们影响的人群不了解这些算法如何运行；</li>
-<li>它们应用的范围很广；</li>
-<li>它们对“成功”的定义值得置疑，被它们影响的人们未必赞同</li>
-<li>它们制造了有害的反馈环。</li>
-</ol>
-<p>相比前一组特征，O’Neil识别的这一组特征具有一个值得注意的要点：她在其中提及了特定的人群。尤其是在第4点中，O’Neil指出了一个极其重要、但绝非总是明显的问题：智能技术对人的影响是有区别的，同一个技术可能让一部分人受益、同时让另一部分人受损。她举了这样一个例子：2010年在伊利诺伊州开始实施的教师绩效评估算法引发了芝加哥教师的<a href="https://www.revealnews.org/article/the-strike-over-student-growth-chicago-teachers-protest-reflects-a-national-feud/" target="_blank" rel="external">广泛反对乃至游行抗议</a>。正如<a href="https://linnettaylor.wordpress.com/2016/11/01/why-datas-not-a-public-good/" target="_blank" rel="external">Linnet Taylor不无洞见地指出</a>的，在进行伦理评估时，人们倾向于抽象地谈论智能技术可能造成的伤害，而具体地谈论它带来的收益，于是实在的收益总能压倒模糊未知的伤害，从而使项目通过评估。通过将社会和政治因素纳入讨论范围，O’Neil提出的对具体人群的关注给了我们一个重要的视角，来重新审视智能技术可能带来的损害和风险。</p>
-<p>透过这个视角，我们首先可以注意到，智能技术对劳动力市场的影响并非均质。正如Erik Brynjolfsson和Andrew McAfee在《<a href="http://book.douban.com/subject/21326266/" target="_blank" rel="external">与机器赛跑</a>》一书中指出的，教育程度较低、薪酬较低的劳动者更易被智能技术取代，同时也是这部分劳动者更难以获得新的职业技能，从而加重他们在结构性失业中受到的损害。正如<a href="https://krugman.blogs.nytimes.com/2012/12/26/is-growth-over/?_r=0" target="_blank" rel="external">Paul Krugman一针见血地指出</a>的，全能且高效的工作机器人（workbot）的出现未必会让世界变得美好，因为没有能力拥有机器人的那些人的处境将非常悲惨。尽管这方面的研究还很少，但一些现有的研究显示：在高度自动化、智能化的工作环境下，教育和技能水平较低的劳动者正在面临劳动环境恶化、劳动强度增大、收入降低、缺乏劳动和社会保障等挑战。此种现象<a href="http://gigix.thoughtworkers.org/2016/4/30/dark-side-of-sharing-economy/">在“分享经济”形态中普遍可见</a>。在一些极端的情况下，劳动者被异化成“<a href="https://www.thenation.com/article/how-crowdworkers-became-ghosts-digital-machine/" target="_blank" rel="external">数字机器上的幽灵</a>”和“<a href="https://book.douban.com/subject/26916525/" target="_blank" rel="external">生产线上的奴隶</a>”。</p>
-<p>实际上，智能技术可能正在加深对社会弱势群体的偏见和歧视。正如<a href="http://caa-ins.org/archives/1258" target="_blank" rel="external">Wendy Chun所说</a>，“机器学习就像偏见的洗钱”。通过机器学习，偏见和歧视被包装成模型和算法，使不公正变得更加隐秘而影响深远。职场社交网站<a href="http://www.seattletimes.com/business/microsoft/how-linkedins-search-engine-may-reflect-a-bias/" target="_blank" rel="external">LinkedIn的搜索引擎更青睐男性求职者</a>，Google的广告平台<a href="https://www.technologyreview.com/s/510646/racism-is-poisoning-online-ad-delivery-says-harvard-professor/" target="_blank" rel="external">Adsense存在种族偏见</a>，饱受争议的“预测性执法”（predictive policing）<a href="http://www.cnsnews.com/news/article/barbara-hollingsworth/coalition-predictive-policing-supercharges-discrimination" target="_blank" rel="external">对非裔美国人和穆斯林形成结构性歧视</a>，低收入人群会因为智能技术<a href="https://www.theatlantic.com/technology/archive/2016/04/how-big-data-harms-poor-communities/477423/" target="_blank" rel="external">更难从贫困中逃脱</a>。性别、种族、宗教信仰、收入……现实中的各种偏见与歧视，似乎都在智能技术中找到了落脚点。</p>
-<p>智能技术不仅被用于实施对弱势群体的损害、歧视和隔离，而且被用于控制大众情绪。通过<a href="http://bdes.datasociety.net/council-output/perspectives-on-big-data-ethics-and-society/" target="_blank" rel="external">操控用户从新闻订阅渠道看到的信息</a>，Facebook成功地调节了用户发帖的情绪，从而证明情绪可以在大量在线用户之间传染。<a href="https://theintercept.com/2015/06/22/controversial-gchq-unit-domestic-law-enforcement-propaganda/" target="_blank" rel="external">一份曝光的材料</a>显示，JTRIG（联合威胁研究智能小组，隶属于英国情报和国家安全机关政府通信总部)已经在通过Youtube、Facebook、Twitter、博客、论坛、电子邮件、短信、自建网站等渠道操纵大众情绪，从而消除“犯罪、安全和国防威胁”。当用于政治领域，正如<a href="http://boingboing.net/2016/01/06/weapons-of-math-destruction-h.html" target="_blank" rel="external">Cathy O’Neil指出</a>的，智能技术可以诱导选民做出片面的判断；当用于商业领域，<a href="https://book.douban.com/subject/26916525/" target="_blank" rel="external">邱林川则指出</a>，智能技术可以向消费者灌输消费理念，使他们成为对不断更新换代的消费品上瘾的“被制造的奴隶”（manufactured slave）。</p>
-<p>早在1980年代中期，研究者们就围绕“计算机伦理是否具有独特性”这一问题展开了讨论。<a href="http://journals.sagepub.com/doi/abs/10.1177/2053951714559253" target="_blank" rel="external">Johnson认为</a>，计算机伦理只是把标准的道德问题以新形式呈现，逼迫我们在新的领域中延续旧的道德规范，它本身不是一个独特的新题目。而<a href="http://faculty.usfsp.edu/gkearns/Articles_Fraud/computer_ethics.pdf" target="_blank" rel="external">Moor则认为</a>，计算机会大幅度转化/强化现有的伦理问题，并且造成过去未曾出现过的新的伦理问题，因此计算机伦理本身就是一个独特的新题目。这两种观点对于我们全面认识智能技术的伦理问题有着重要的启发意义。我们既需要充分了解智能技术的独特性、及其对伦理问题带来的独特影响，又必须认清新技术背后潜藏的旧有的冲突、斗争和伦理准则，这样才能准确把握智能技术的伦理方向，使其向着对广大民众有益的方向发展。</p>
-
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="11月 27 2017" class="post-list__meta--date date">11月 27 2017</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">

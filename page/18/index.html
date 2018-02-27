@@ -174,6 +174,30 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2011/10/20/big-data/" title="link to 关于大数据">关于大数据</a></h2>
+
+      <p class="excerpt">
+        <p>最近McKinsey Quarterly连续出了两篇关于<a href="http://en.wikipedia.org/wiki/Big_data" target="_blank" rel="external">大数据</a>的文章。读完以后简单记录一下感想。</p><p><img src="http://gigix.thoughtworkers.org/assets/2011/10/20/i_love_big_data_tshirt-p235669940947588937qqbf_4001.jpg" alt=""></p><p><a href="https://www.mckinseyquarterly.com/Strategy/Innovation/Are_you_ready_for_the_era_of_big_data_2864" target="_blank" rel="external">第一篇文章</a>提出了非常好的问题：对于大数据时代，你做好准备了吗？这个问题之所以提得好，因为它是面向各个行业的Senior Executives来提的。这是我最近特别喜欢McKinseyQuarterly的原因之一：它在谈论技术问题的时候，出发的视角是业务领导者的视角。而我这样做了十年技术的人很容易从技术视角讲技术，于是就成了自说自话。</p><p>另一个亮点是文中的图表“行业不是生而平等”：这个图表让读者能很快找到自己在大数据时代的定位和挑战。政府从大数据中能得到巨大收益，而且数据容易得到；制造业的数据价值潜力不大，而且获得更多数据很困难；金融保险业的数据已经相当齐备，但可以挖掘的价值潜力还很大⋯⋯这样的图表能给读者提供信心：你了解我的行业。</p>这篇文章还提出了几个更具体、同样精彩的问题：<ol><li>如果世界变得完全透明，各种信息都可以得到，对你会产生什么影响？</li><li>如果你可以快速验证所有决策，你的竞争方式会发生什么变化？</li><li>如果你根据数据对你的服务进行实时的定制，你的业务会有什么变化？</li><li>大数据会如何影响企业管理？透明度会完全取代管理吗？</li><li>你能创造出基于数据的新业务模式吗？</li></ol><a href="https://www.mckinseyquarterly.com/Strategy/Strategy_in_Practice/Seizing_the_potential_of_big_data_2870" target="_blank" rel="external">第二篇文章</a>则是跟上讲“怎么做”。它给了采取行动的几个要点：<ol><li>估计与大数据相关的机遇与挑战</li><li>识别数据资源和差距</li><li>将数据策略与商业战略匹配</li><li>从数据中理解企业隐含的改进点</li></ol><p>最后，强烈推荐McKinseyQuarterly：案例多，数据多，讲述的视角很高，讲述的方法很好。更新量不大（每周两三篇），每篇都很有看头。同样是做咨询，麦肯锡已经把咨询做成了研究，这是很值得学习的。对商业感兴趣的话，我认为读McKinseyQuarterly比Economist和HBR都好。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="10月 20 2011" class="post-list__meta--date date">10月 20 2011</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2011/10/17/c-mon-it-s-turing-machine-part-2/" title="link to C&#39;mon, It&#39;s Turing Machine! (Part 2)">C&#39;mon, It&#39;s Turing Machine! (Part 2)</a></h2>
 
       <p class="excerpt">
@@ -375,30 +399,6 @@ classes that you can use:
       <div class="post-list__meta">
 
         <time datetime="9月 16 2011" class="post-list__meta--date date">9月 16 2011</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2011/9/9/development-as-delivery/" title="link to 什么是爹式开发？">什么是爹式开发？</a></h2>
-
-      <p class="excerpt">
-        <p>这几天跟Simore在车上聊研发云和<a href="http://continuous-delivery.thoughtworks.com/" target="_blank" rel="external">持续交付</a>，聊来聊去就聊出了一个新概念：开发即交付——Development As Delivery，缩写DAD，也就是“爹式开发”。</p><p><em><strong>免责声明</strong>：爹式开发绝大部分理念和实践是基于持续交付的。我们发明这个概念主要是为了搞笑。</em></p><p><img src="http://gigix.thoughtworkers.org/assets/2011/9/9/dad.jpg" width="320px"></p><p>在持续集成的场景下，每当程序员提交代码，就会触发一次完整的构建（包括编译、静态检查、部署、自动测试等），确保软件系统可用并且符合质量要求。但持续集成之后的软件往往仍然没有针对真实环境进行验证，没有考虑投入真实环境使用的各种问题，因此“符合质量要求”与“达到可发布水平”之间还有明显的距离，我们称之为<a href="http://book.douban.com/subject/4031959/" target="_blank" rel="external">软件交付的最后一英里</a>。</p><p>为了解决这最后一英里的问题，我们有了持续交付。持续交付的核心是<a href="http://blog.csdn.net/tony1130/article/details/5996420" target="_blank" rel="external">构建流水线</a>：流水线越靠后的阶段，验证越接近真实环境。当一个发布候选版本最终通过正规的发布过程被部署在非常类似生产环境的UAT或者staging环境上然后执行了大量的自动化功能测试，我们就可以说：这个发布候选版本已经为交付做好了准备。</p><p>然而，问题是，我们为什么需要等到提交代码<strong>之后</strong>才做这一切？为什么不在提交代码<strong>之前</strong>就确认我刚编写的代码已经达到了交付要求，然后每个人都提交绝对高质量的代码？</p><p>其中一个重要的原因是历史相关的：我们已经太习惯于测试环境（尤其是与生产环境相仿的测试环境）的匮乏了。因为这样的环境是昂贵而不易获得的，所以我们要让它成为整个团队共享的资源；因为要让它被整个团队共享，所以我们要降低它的使用频率，所以要把它放在构建流水线的最后一环。</p><p>但研发云将改变现状。测试环境将不再昂贵：它可能仍然需要5台服务器，但由于每个环境的使用率只有10%，所以整体来说它没有那么贵。并且它也不再难以获得：云计算平台方便的开通（provision）加上自动配置工具例如Chef方便的配置（configuration），让我们只要一条命令加三十秒等待就能得到一套接近生产环境的测试环境。</p><p>于是我们的观念将发生一个根本性的转变。从前当我们讲“开发环境”，我们讲的所有东西都是基于“每个人一台电脑”这个假设。但这个假设不是必要的。我们每个人都可以有<strong>一整套生产环境</strong>来做开发。你仍然做单元测试，你仍然降低耦合，但此刻你不再与生产环境隔离——你随时身处在生产环境中，你随时可以看到刚写的代码在生产环境中如何工作，并且你写的所有代码将通过生产级别的验证<strong>之后</strong>才提交。</p><p>这时候我们已经不必再强调“持续交付”，因为我们的<strong>开发就是交付</strong>（Development As Delivery，DAD）。这就是“爹式开发”。</p><p>当然它不会那么容易就实现。一切使你无法做到爹式开发的障碍，我们都称之为“坑爹”。所以，在一个践行爹式开发的团队中，我们的口号就是“不坑爹”。</p><p><em><strong>附录</strong>：由于爹式开发要求每个程序员充分了解生产环境，因此会极大地促进<a href="http://www.infoq.com/cn/articles/thoughtworks-anthology-xj-devops-business-agile" target="_blank" rel="external">DevOps</a>在团队中的推广。最终，爹式开发会造就一种新的、具备开发和运维全面技能的人才，他们会把开发和运维工作全部搞定。这些人开展运维工作的方式，称为“多技能运维模型”（Multi-skillOperationModel），缩写MOM，简称“妈式运维”。</em></p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="9月 9 2011" class="post-list__meta--date date">9月 9 2011</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">
