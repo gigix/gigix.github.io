@@ -179,6 +179,30 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2010/6/12/suggestions-about-tool-development/" title="link to 关于内部工具开发的若干建议">关于内部工具开发的若干建议</a></h2>
+
+      <p class="excerpt">
+        <p>（本文都是基于某些现状与设想的建议，没有得到实践验证。仅供参考，责任自负。）</p>作为一个超级大软件企业的内部工具开发部门，需要考虑几个重要问题：<ol><li>避免作恶</li><li>发布管理</li><li>技术支持</li></ol><p>在考虑开发一个工具提供什么价值之前，首先考虑可能造成什么伤害。世界上有很多的开源工具。这些工具不仅仅是源代码的堆积，其中融入了一些最优秀的软件开发者在某一领域的经验与智慧。贸然开发一个新的工具，哪怕只是对现有开源工具的包装，都可能导致很多人失去学习这些经验与智慧的机会。优先考虑知识的普及。教人读《<a href="http://book.douban.com/subject/1436131/" target="_blank" rel="external"><span class="caps">J2EE</span>Development Without<span class="caps">EJB</span></a>》比开发又一套框架要好，虽然做起来会更难。<a href="http://www.springside.org.cn/" target="_blank" rel="external">春天的旁边</a>是一个好的框架，因为它重视知识的传递而非包装现有代码。</p><p>使用业界公认的依赖管理工具来发布。通过邮件发给用户一个“XxxxXxx-V001R002C004B035SP02.exe”是不负责任的。使用<a href="http://maven.apache.org/" target="_blank" rel="external">Maven2</a>或者<a href="http://en.wikipedia.org/wiki/Yellowdog_Updater,_Modified" target="_blank" rel="external"><span class="caps">YUM</span></a>或者<a href="http://en.wikipedia.org/wiki/Advanced_Packaging_Tool" target="_blank" rel="external"><span class="caps">APT</span></a>或者<a href="http://rubygems.org/" target="_blank" rel="external">RubyGems</a>这样体面的依赖包管理工具来发布你的作品。这样能让用户知道自己得到的每个版本都是经过某种发布流程的而不是一个野版本，并且使你的工具能以最低成本与其他依赖包集成。如果公司的信息安全规定禁止普通开发人员上外网从而导致他们无法使用这些体面的依赖管理工具来搭建自己的工作环境，给他们搭一个内部私服，并把下载新依赖的请求委派到互联网。这不仅有利于你自己的工作，而且能让开发人员的生活变得更容易，他们会因此感谢你。</p><p>（Windows到现在也没有一个体面的依赖管理工具，所以Windows is stupid。）</p><p>用一个简单易用的Bug跟踪工具来管理所有的支持要求，例如<a href="http://trac.edgewall.org/" target="_blank" rel="external">Trac</a>就很好。建立一个邮件列表，把所有曾经提出支持要求的人都加进去。给用户建立社群，他们就会自己解决绝大部分的愚蠢问题。不要为了漂亮的界面而把事情搞得复杂。用户提问，你解答，把这些事情都变得就像发一个邮件那么简单，你就能得到一个社群──你确实应该考虑充分利用邮件，因为用户不会在知道了支持人员的邮件地址之后还记住你的在线支持社区地址。向那些体面的开源社区学习，向Google学习，看看他们是如何响应用户需求的。</p><p>最后，开放源代码。尽管概率很小，但确实有些用户会给你贡献源代码（至少在他们失去耐心继续等待你的fix时）。像Microshit那样暴露几个莫名其妙的编程接口然后宣称“我们的软件具有可扩展性”是不够的，因为扩展永远都会在你没有想到的地方发生。不要把工具的开发者和用户隔开，因为那些用户很可能是比你更好的软件开发者。开放你的SVN地址，把它和开发指南的链接放在工具介绍的第一页上，就像绝大多数体面的开源项目所做的那样。及时并真诚地感谢那些给你贡献代码的人，以及那些checkout了你的代码库并嘲笑它的人，因为他们会让你的软件变得更好。</p><p>最后的最后，随时准备抛弃你自己的任何东西，从一段源代码，到一个功能，甚至整个软件。如果你的目标是让别人的工作更容易的话。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="6月 12 2010" class="post-list__meta--date date">6月 12 2010</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2010/6/7/how-to-config-distributed-cruise-control/" title="link to 配置分布式的CruiseControl">配置分布式的CruiseControl</a></h2>
 
       <p class="excerpt">
@@ -382,30 +406,6 @@ classes that you can use:
       <div class="post-list__meta">
 
         <time datetime="4月 18 2010" class="post-list__meta--date date">4月 18 2010</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2010/4/17/fearless-or-courage/" title="link to 无畏·勇气">无畏·勇气</a></h2>
-
-      <p class="excerpt">
-        <p>做360度评价。发现别人对我的认知和我的自我认知之间，差别最大的是“fearless”这项。</p><p>原来那么多人认为我”always fearless”，还有”like challenge”。 天知道我有多胆小。风险只会让我焦虑并加重颈椎病症状。</p><p>风说，要勇敢，至少装作勇敢的样子，很少有人能看出两者的差别。（知人论世就是，你不仅要知道大家都认为他很勇敢，还要知道他其实只是装作勇敢的样子。）</p><p>Deliberative和Context的特质，使你面对风险时思考它的前因后果。对它认识得更多，也就更容易去承受它。所以让你看起来无畏。可能这不是无畏（不害怕），而是勇气（害怕也敢于去做）。郭晓如是说。</p><p>也许知道自己胆子小，就会认真去计算一个uncertainty的成本和收益；反而成天嘴上喊着“敢于尝新”的某些人，面对风险总以“要想清楚”做借口。这么一来，岂不是比我更胆小了么。</p><p>原来勇气是一种与知识、与经验、与计算有关的东西。嗯，符合敏捷价值观。</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="4月 17 2010" class="post-list__meta--date date">4月 17 2010</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">

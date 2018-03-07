@@ -174,6 +174,80 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2017/4/14/stack-management-implementation/" title="link to 技术栈管理：云时代的研发环境">技术栈管理：云时代的研发环境</a></h2>
+
+      <p class="excerpt">
+        <p><a href="/2017/3/31/stack-management">前文</a>介绍了云计算大背景对研发环境的影响。我们已经指出，现代IT组织应该把研发技术栈以PaaS的形式提供给开发人员，其中的要点是：</p>
+<ul>
+<li>将标准的研发环境封装为虚拟化、云化的技术栈，由技术专家管理维护；</li>
+<li>核心业务价值与技术支撑解耦，工程师专注于业务系统的开发；</li>
+<li>自动化研发流程，降低研发管理成本。</li>
+</ul>
+<p><img src="/assets/2017/4/13/hearty_cloud-wide.jpg"></p>
+<p>如何实现这样一个研发技术栈管理的平台？我们的观点是，这样<strong>一个平台</strong>应该集中管理组织中的技术栈，允许基于一个技术栈创建开发测试PaaS和生产PaaS<strong>两个PaaS服务</strong>，从而支撑开发、测试、生产<strong>三种运行时环境</strong>。</p>
+<h2 id="一个平台"><a href="#一个平台" class="headerlink" title="一个平台"></a>一个平台</h2><p>在一个典型的敏捷软件开发场景（例如更具体的“用Java开发微服务”的场景）中，开发者需要频繁地用到下列工具：</p>
+<ul>
+<li>编程框架，提供基础的结构与功能来支撑业务逻辑代码，例如Spring Boot和Jersey。</li>
+<li>版本控制工具，例如git。</li>
+<li>依赖软件，例如PostgreSQL数据库。</li>
+<li>自动测试工具，包括单元测试工具（TestNG）和功能测试工具（Concordion、Selenium）。</li>
+<li>自动构建工具，Maven或Gradle。</li>
+<li>持续集成工具，Jenkins或GoCD。</li>
+</ul>
+<p>所有这些工具以及它们适当的组合与配置，我们把它称为一个<strong>技术栈</strong>。我们上面的例子就是“Java微服务开发技术栈”，类似的，一个组织中还可以有“Java Web应用开发技术栈”、“H5前端开发技术栈”、“ReactNative移动应用开发技术栈”等等若干个技术栈。对于一般的IT组织而言，有限的几种技术栈就可以覆盖大部分软件项目的形态。体量大如有数万研发员工的某IT巨头，提出的主要技术栈也只有十余种。</p>
+<p>在传统的软件开发团队中，技术栈的组合与配置是<a href="http://insights.thoughtworkers.org/thoughtworks-practice-part8/" target="_blank" rel="external">由团队的技术领导者负责</a>的。在云计算的大背景下，将<a href="https://en.wikipedia.org/wiki/Infrastructure_as_Code" target="_blank" rel="external">基础设施作为源代码</a>的思想再往前推一步，我们就会很自然地得出<strong>技术栈作为源代码</strong>的想法：使用Docker和Ansible等技术，将技术栈的结构以源代码的形式描述。在“基础设施作为源代码”的阶段我们已经知道，以源代码形式管理环境会带来很多好处，例如更高的自动化程度、允许版本控制等。把技术栈作为源代码以后，会带来几个重要的收益：</p>
+<ol>
+<li>技术栈可以很容易地复用，因此可以把搭建技术栈的工作收拢到较少数技术领导者手中，研发团队则只需在技术栈基础上开发业务功能，降低了研发团队的技能门槛。</li>
+<li>最佳实践可以被内嵌到技术栈中，并通过持续集成的形式对研发团队形成约束，从而使研发改进举措更容易推行。</li>
+<li>缩短研发实践的实验和创新周期，可以对多个研发团队开展受控对比实验，团队中自发产生的优秀实践可以被快速抽取并固化到技术栈中。</li>
+</ol>
+<p>技术栈管理平台作为组织级的研发管理载体，承载的是组织对研发团队的引领和治理形式。在这个平台上，技术领导者会创建并维护技术栈，项目团队则可以根据自己的需要选择适合的技术栈，跳过大部分<a href="http://peterschuh.com/?p=129" target="_blank" rel="external">迭代0的技术准备工作</a>，直接进入功能开发，并在整个产品生命周期中享受云化开发环境带来的收益。</p>
+<p><img src="/assets/2017/4/13/stacks.png"></p>
+<h2 id="两个PaaS"><a href="#两个PaaS" class="headerlink" title="两个PaaS"></a>两个PaaS</h2><p>基于已经定义好的技术栈，当项目团队开始研发工作时，技术栈管理平台可以为他们创建两个PaaS服务：一个是研发过程中使用的开发测试PaaS，另一个是真实上线用的生产PaaS。两个PaaS的协作关系如下：</p>
+<p><img src="/assets/2017/4/13/two-paas.png"></p>
+<ul>
+<li>开发人员从开发测试PaaS中获得一个开发环境，在这个环境中编写代码；</li>
+<li>新编写的代码被提交到代码库中，后台的服务自动运行“提交门”测试，测试通过后，把代码构建成可运行应用；</li>
+<li>后台服务针对可运行应用自动运行“验证门”测试，测试通过后，这个版本的可运行应用即被标记为可发布应用，并被存入构建产物仓库；</li>
+<li>测试人员针对通过了“验证门”测试的可发布应用进行必要的手工验证；</li>
+<li>生产环境与开发/测试环境基于同一个技术栈（运行时环境上有具体的差别），开发测试PaaS中构建出的可运行应用可以直接部署到生产环境；</li>
+<li>随不同组织的发布流程不同，构建产物仓库中的可发布应用可能直接（自动或手动）发布到生产环境，也可能被同步到生产PaaS的产品仓库，以后再手动发布到生产环境。</li>
+</ul>
+<p>可以注意到，这个流程、尤其是在开发测试PaaS中发生的流程，与Dave Farley在《<a href="http://www.infoq.com/cn/minibooks/thoughtworks-anthology" target="_blank" rel="external">一键发布</a>》文中介绍的持续集成流水线非常相似。我们相信：持续集成对于现代软件开发是如此重要，以至于它不应该以独立的工具形式存在（因为这样人们就有可能不用或者误用）。持续集成应该被内建在软件开发的工具和过程中，使它不被开发者注意、同时又不能被绕开——正如Spring内建了面向接口编程、IntelliJ IDEA内建了编译和代码格式检查。</p>
+<h2 id="三个运行时环境"><a href="#三个运行时环境" class="headerlink" title="三个运行时环境"></a>三个运行时环境</h2><p>前面介绍的流水线已经暗示，在整个软件交付周期中，存在三个不同的运行时环境。这三个运行时环境都有同样的基础，例如操作系统、依赖软件等。同时它们也有一些重要的差异：</p>
+<ol>
+<li>构建运行时：包含开发工具、构建工具和（可能是部分）测试工具，这是开发人员编写代码的主要环境——需要注意，“编写代码”在敏捷软件开发的上下文中意味着“编写代码并频繁进行提交门测试”，这是为什么这个运行时环境中必须包含（至少部分）测试工具。</li>
+<li>验证运行时：包含全部测试工具及其他质量保障工具，这是对软件质量进行全面验证的主要环境。</li>
+<li>应用运行时：包含运维工具，这是软件真正运行的环境。这个运行时可能被应用于生产环境，也可能仅用在组织内部（例如UAT测试环境、培训环境、demo环境等）。这个运行时中的依赖软件（尤其是数据库）也有可能被替换为环境之外独立运行的软件。</li>
+</ol>
+<p><img src="/assets/2017/4/13/three-runtimes.png"></p>
+<p>尽管为了支持不同环节的工作要求而有这些差异的存在，底线是：构建运行时构建出来的可运行应用，可以在验证运行时中接受完整的验证，也可以被部署到应用运行时正常运行。这与持续交付中“<a href="https://highops.com/insights/continuous-delivery-pipelines-gocd-vs-jenkins/" target="_blank" rel="external">制成件流过整个流水线</a>”（而非在各个构建步骤中分别生成制成件）的理念是一致的。</p>
+<blockquote>
+<p><strong>制成件的形式</strong></p>
+<p>在<a href="/2017/3/31/stack-management">前文</a>中我们已经提到：软件包是一种对云环境不友好的交付形式，理想的研发交付物应该是容器镜像（很可能是一组彼此连接的容器镜像），可以在云上直接运行。Docker等容器技术使我们可以把所有软件（不论背后使用什么编程语言、实现什么功能）都抽象为“IP地址+端口”的服务；再加上例如Docker Swarm或Kubernetes之类集群工具的支持，更可以把服务进一步简化为一个端口。于是，技术栈管理的基础设施可以得到更大程度的复用：不同的技术栈（不管编程平台是Java、NodeJS还是Python）构建出的应用都是一个（或一组）Docker镜像，从而将“产物的形态”与“生产流程的结构”解耦。</p>
+</blockquote>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>针对<a href="/2017/3/31/stack-management">前文</a>提出的云计算大背景下对软件研发提出的挑战，本文提议了一种解决方案：技术栈管理平台。通过实施技术栈管理平台，为研发团队提供开发测试PaaS和生产PaaS两个PaaS服务、构建/验证/应用三个运行时环境，研发组织能够将技术栈的搭建和管理与业务系统的研发解耦，从而降低研发团队技能门槛、快速有效地推广研发最佳实践、使研发过程中的技术与流程实验和创新成为可能。</p>
+
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="4月 14 2017" class="post-list__meta--date date">4月 14 2017</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2017/3/31/stack-management/" title="link to 云时代的研发环境长什么样？">云时代的研发环境长什么样？</a></h2>
 
       <p class="excerpt">
@@ -631,60 +705,6 @@ classes that you can use:
       <div class="post-list__meta">
 
         <time datetime="8月 9 2016" class="post-list__meta--date date">8月 9 2016</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2016/8/4/machine-learning-introductions/" title="link to 机器学习：概述">机器学习：概述</a></h2>
-
-      <p class="excerpt">
-        <p>本文摘录了一组关于机器学习的介绍文章，帮助非技术性的读者快速了解机器学习的目的、原理和用途。</p>
-<p><img src="/assets/2016/8/4/ml.jpg"></p>
-<h2 id="为什么要机器学习？"><a href="#为什么要机器学习？" class="headerlink" title="为什么要机器学习？"></a>为什么要机器学习？</h2><p>机器学习有望解决传统企业软件解决方案的很多问题。首先，在传统企业软件中，数据的质量受限于人类的输入。然而现实是，大部分销售不喜欢更新CRM系统中的数据，真正的销售数据只存在于若干电话会议与数字表格中。同时，传统的企业系统大多构建于关系型数据库上，而关系型数据库并不善于表现信息的时间轴视图，因此大多数企业需要依赖于庞大的数据仓库来不断接收来自企业系统的数据转储。使用这种方法，业务人员必须等待几周甚至几个月才能从数据团队得到有用的洞见。最后，传统的企业系统依赖于成千上万人定的规则，而这些规则是静态的，在业务发展的过程中会逐渐失效。</p>
-<p><em>（来源：Crunch Network | <a href="https://techcrunch.com/2015/07/27/the-next-wave-of-enterprise-software-powered-by-machine-learning/" target="_blank" rel="external">The Next Wave Of Enterprise Software Powered By Machine Learning</a>）</em></p>
-<p>机器学习的发展可以分作三个阶段：机器学习1.0是“描述”（description），2.0是“预测”（prediction），3.0是“对策”（prescription）。今天的CxO们大约不用太操心“描述”阶段，大多数企业已经拥有对应的IT系统。眼下他们迫切需要拥抱“预测”阶段。今天的科技不仅能让业务人员查看历史数据，而且能预测未来的行为和结果。</p>
-<p><em>(来源：McKinsey | <a href="http://www.mckinsey.com/industries/high-tech/our-insights/an-executives-guide-to-machine-learning" target="_blank" rel="external">An executive’s guide to machine learning</a>)</em></p>
-<h2 id="机器学习如何工作？"><a href="#机器学习如何工作？" class="headerlink" title="机器学习如何工作？"></a>机器学习如何工作？</h2><p>简单说，机器学习是一类自我改进的算法。计算机从一个模型开始，用试错法反复训练这个模型，然后就可以做出预测，例如预测某一笔金融交易有多大风险。以侦测信用卡欺诈的机器学习算法为例，首先要用大量真实持卡人的交易记录来训练这个模型，并根据历史记录对模型调优。接下来，信用卡交易就会实时地流过这个算法模型，算法模型则对每条交易记录生成一个概率数据，代表该笔交易涉及欺诈的可能性（例如97%）。如果欺诈侦测系统被配置为阻止欺诈概率95%以上的交易，那么这个评估值就会引发POS机拒收这张信用卡。</p>
-<p>在判断交易是否欺诈时，机器学习算法会考虑很多因素：商家的可信度、持卡人的购买行为、时间、地点、IP地址等等。数据点越多，预测就会越准确。人类不可能在几分之一秒内评估几千个数据点，只有自动化的算法能让实时的欺诈侦测成为可能。</p>
-<p><em>（来源：The Conversation | <a href="https://theconversation.com/machine-learning-and-big-data-know-it-wasnt-you-who-just-swiped-your-credit-card-48561" target="_blank" rel="external">Machine learning and big data know it wasn’t you who just swiped your credit card</a>）</em></p>
-<p>机器学习与传统的数据统计有一个重要的区别：使用机器学习时，我们并不关心因果性（causality）。我们可能并不关心什么变化造成什么结果，而是聚焦于预测：只要有一个模型能在当前环境下给出准确的判断就行。可以参考我们如何使用天气预报：天气预报并不告诉我们降雨的原理，只告诉我们下雨的概率，我们参照这个概率判断是否应该带伞出门。机器学习也是一样：个性化推荐就是对人们偏好的预测，尽管并不知道人们为什么喜欢这些东西，但这种预测是有用的。习惯了这个思维方式以后，机器学习的价值就会显而易见。</p>
-<p><em>（来源：HBR | <a href="https://hbr.org/2015/07/what-every-manager-should-know-about-machine-learning" target="_blank" rel="external">What Every Manager Should Know About Machine Learning</a>）</em></p>
-<h2 id="机器学习用来干嘛？"><a href="#机器学习用来干嘛？" class="headerlink" title="机器学习用来干嘛？"></a>机器学习用来干嘛？</h2><p><img src="/assets/2016/8/4/tata.png"><br><em>（来源：Tata Consultancy Services | <a href="http://www.tcs.com/SiteCollectionDocuments/White%20Papers/Machine-Learning-Analytics-in-Manufacturing-0714-1.pdf" target="_blank" rel="external">Using Big Data for Machine Learning Analytics in Manufacturing</a>）</em></p>
-<p>在银行里应用机器学习技术提供个性化服务：</p>
-<ul>
-<li>基于顾客的信用卡/银行卡使用模式给出推荐；</li>
-<li>基于顾客在特定产品/网站上的行为给出推荐；</li>
-<li>预测顾客下一步可能的消费行为；</li>
-<li>如果顾客错过了航班，预测他们立即的需要；</li>
-<li>向顾客推荐有折扣的商品、餐馆、酒吧等；</li>
-<li>根据顾客的还款周期及时推送时尚信息</li>
-</ul>
-<p><em>（来源：Kathiravan Manoharan | <a href="http://tinyurl.com/hcgkkzc" target="_blank" rel="external">Applications of Machine Learning Algorithms in Banking</a>）</em></p>
-<p>应用在金融服务领域，机器学习算法可以揭示新的消费模式、识别未知的交互方式、发现新的顾客群体、获得新的洞见，从而助力银行的全渠道建设。</p>
-<p><em>（来源：Strands Finance | <a href="http://blog.strands.com/machine-learning-pfm-magic" target="_blank" rel="external">Transparent technology: How machine learning brings magic to next-generation PFM</a>）</em></p>
-<p>我们调查了168家年收入5亿美元以上企业的执行官，76%表示机器学习可以通过从大数据中持续学习和优化给销售人员的实时推荐而带来销售增长。超过4成的企业已经开始在销售与市场领域实施机器学习。我们的研究显示，大企业在销售流程中应用机器学习有三个维度：首先是提供数据和流程的可见性，使销售过程更加科学；另外是在销售与市场环境中开展更多数据驱动的实验；第三是通过自动化事务性流程来最大化实际销售活动的时间占比。</p>
-<p>在采用机器学习之前，决策的主要依据是静态的数据库、针对历史数据的分析、经验和直觉。机器学习可以用实时数据来驱动决策，并且持续改进预测质量。假说可以快速被提出、测试、调整、并最终用于改进工作流程。在我们的调查中，接近80%的企业认为机器学习显著提升了销售关键绩效指标。</p>
-<p><em>（来源：Sloan Review | <a href="http://sloanreview.mit.edu/article/sales-gets-a-machine-learning-makeover/" target="_blank" rel="external">Sales Gets a Machine-Learning Makeover</a>）</em></p>
-<p><img src="/assets/2016/8/4/yandex.png"><br><em>（来源：<a href="https://yandexdatafactory.com/industries/retail/" target="_blank" rel="external">Yandex Data Factory</a>）</em></p>
-<p>麦肯锡使用机器学习算法扫描超过1万份应聘者简历，预测出来的招聘结果与真实结果高度相关。有趣的是，机器学习算法接受了比真实招聘略多的女性应聘者，也许将来技术可以有效地消除人类面试官隐藏的偏见。</p>
-<p><em>(来源：McKinsey | <a href="http://www.mckinsey.com/industries/high-tech/our-insights/an-executives-guide-to-machine-learning" target="_blank" rel="external">An executive’s guide to machine learning</a>)</em></p>
-
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="8月 4 2016" class="post-list__meta--date date">8月 4 2016</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">
