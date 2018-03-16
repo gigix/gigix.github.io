@@ -174,6 +174,69 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2018/3/16/infrastructure-of-big-data/" title="link to 浅谈大数据平台基建的逻辑">浅谈大数据平台基建的逻辑</a></h2>
+
+      <p class="excerpt">
+        <p>这篇文章主要目的是面向初接触大数据的朋友简单介绍大数据平台基础建设所需要的各个模块以及缘由。</p>
+<h2 id="数据仓库和数据平台架构"><a href="#数据仓库和数据平台架构" class="headerlink" title="数据仓库和数据平台架构"></a>数据仓库和数据平台架构</h2><p>按照<a href="https://book.douban.com/subject/26792705/" target="_blank" rel="external">Ralph Hughes的观点</a>，企业数据仓库参考架构由下列几层构成：</p>
+<p><img src="/assets/2018/3/16/data-warehouse-layers.png"></p>
+<ul>
+<li>接入层（Landing）：以和源系统相同的结构暂存原始数据。有时被称为“贴源层”或ODS。</li>
+<li>整合层（Integration）：持久存储整合后的企业数据，针对企业信息实体和业务事件建模，代表组织的“唯一真相来源”。有时被称为“数据仓库”。</li>
+<li>表现层（Presentation）：为满足最终用户的需求提供可消费的数据，针对商业智能和查询性能建模。有时被称为“数据集市”。</li>
+<li>语义层（Semantic）：提供数据的呈现形式和访问控制。例如某种报表工具。</li>
+<li>终端用户应用（End-user applications）：使用语义层的工具，将表现层数据最终呈现给用户，包括仪表板、报表、图表等多种形式。</li>
+<li>元数据（Metadata）：记录各层数据项的定义（Definitions）、血缘（Genealogy）、处理过程（Processing）。</li>
+</ul>
+<h2 id="把数据放到一起：数据湖"><a href="#把数据放到一起：数据湖" class="headerlink" title="把数据放到一起：数据湖"></a>把数据放到一起：数据湖</h2><p>企业大数据平台的核心是把企业数据资产汇集一处的数据湖。ThoughtWorks的“<a href="https://info.thoughtworks.com/DPS-subscription.html" target="_blank" rel="external">数字平台战略</a>”这样描述数据湖：</p>
+<blockquote>
+<p>数据湖……的概念是：不对数据做提前的“优化”处理，而是直接把生数据存储在容易获得的、便宜的存储环境中；等有了具体的问题要回答时，再去组织和筛选数据，从中找出答案。按照<a href="https://www.thoughtworks.com/radar/techniques/data-lake" target="_blank" rel="external">ThoughtWorks技术雷达</a>的定义，数据湖中的数据应该是不可修改（immutable）的。</p>
+</blockquote>
+<p>来自不同数据源的“生”数据（接入层），和经过中间处理之后得到的整合层、表现层的数据模型，都会存储在数据湖里备用。</p>
+<p>数据湖的实现通常建立在Hadoop生态上，可能直接存储在HDFS上，也可能存储在HBase或Hive上，也有用关系型数据库作为数据湖存储的可能存在。</p>
+<p><img src="/assets/2018/3/16/data-lake.png"></p>
+<h2 id="接入原始数据：数据通道"><a href="#接入原始数据：数据通道" class="headerlink" title="接入原始数据：数据通道"></a>接入原始数据：数据通道</h2><p>企业大数据平台创造价值的基础是能把各种与业务有关的数据都接入到数据湖中，这就需要针对各种不同的数据源开发数据通道。数据接入的连接器（connector）通常是一个定时执行的任务，技术选型随数据源而定，有些项目采用定制开发的数据接入任务，也有些项目采用像<a href="https://www.talend.com/products/talend-open-studio/" target="_blank" rel="external">Talend</a>这样的套装工具。对于来自企业之外乃至互联网上的数据，可能需要编写爬虫。</p>
+<p><img src="/assets/2018/3/16/data-channel.png"></p>
+<h2 id="数据加工处理：数据流水线"><a href="#数据加工处理：数据流水线" class="headerlink" title="数据加工处理：数据流水线"></a>数据加工处理：数据流水线</h2><p>在数据湖内部，数据会经过“接入层 =&gt; 整合层 =&gt; 表现层”的加工处理链，逐步变成用户可用的形式。其中每一层的加工处理，至少包含ETL（提取-转换-装载）、指标计算、异常检测、数据质量管理等工作，还可能对数据进行语义标签、分类预测等更深入的操作。</p>
+<p>数据流水线的技术选型主要分为流式数据和批量数据两大类。在Hadoop生态中，Spark常被用于批量数据处理，Kafka和Spark Streaming的组合常被用于流式数据处理。</p>
+<p><img src="/assets/2018/3/16/data-pipeline.png"></p>
+<h2 id="面向业务领域：数据集市"><a href="#面向业务领域：数据集市" class="headerlink" title="面向业务领域：数据集市"></a>面向业务领域：数据集市</h2><p>整合层存放了整个企业的数据，并且以规范化的、巨细靡遗的形式（例如<a href="https://book.douban.com/subject/26978943/" target="_blank" rel="external">Data Vault</a>）对数据建模。表现层则与之不同：数据集市中的数据是针对业务应用领域选择出来的，并且建模形式更方便查询（例如宽表）。数据集市的技术选型也是为了查询的便利，例如采用ElasticSearch或关系型数据库，因为这些工具都支持很完备的查询功能，而且用户也非常熟悉。</p>
+<p><img src="/assets/2018/3/16/data-mart.png"></p>
+<h2 id="保障数据质量：数据治理"><a href="#保障数据质量：数据治理" class="headerlink" title="保障数据质量：数据治理"></a>保障数据质量：数据治理</h2><p>在实施数据湖的时候，有一种常见的反模式：企业有了一个名义上的数据湖（例如一个非常大的HDFS），但是数据只进不出，成了“数据泥沼”（或数据墓地）。造成这种现象的原因之一，就是因为缺乏必要的数据治理：数据缺乏一致性、数据质量不佳，导致用户无法从数据中获得可靠的洞察。</p>
+<p>数据治理的基本工作包括了数据脱敏、数据质量管理、主数据管理等。<a href="https://atlas.apache.org/" target="_blank" rel="external">Atlas</a>、<a href="https://hortonworks.com/apache/falcon/" target="_blank" rel="external">Falcon</a>等工具提供了数据治理的技术能力。</p>
+<p><img src="/assets/2018/3/16/data-governance.png"></p>
+<h2 id="探索未知：数据实验室"><a href="#探索未知：数据实验室" class="headerlink" title="探索未知：数据实验室"></a>探索未知：数据实验室</h2><p><a href="https://insights.thoughtworks.cn/self-service-data/" target="_blank" rel="external">数据自服务</a>能力的一大亮点是鼓励小型的、全功能的团队自行从数据中获得洞察。为了形成从数据到洞察的快速响应循环，业务团队需要对整合层甚至接入层的数据做快速的探索和实验，而不是先完成接入-整合-表现的整个数据处理链。数据实验室提供模型管理和数据沙箱的能力，让业务团队能用Python、Java等通用编程语言快速展开数据探索和实验。PyTorch、Jupyter、Pandas等工具提供了便捷的途径来搭建数据实验室。</p>
+<p><img src="/assets/2018/3/16/data-lab.png"></p>
+<h2 id="供给应用：数据商店"><a href="#供给应用：数据商店" class="headerlink" title="供给应用：数据商店"></a>供给应用：数据商店</h2><p>确定要提供给业务团队使用的数据，就可以进入数据商店，包装成数据产品或服务的形式供应出来。基础的形态可以是直接对外提供数据（通过数据库同步、事件订阅、文件服务等形式），在微服务语境下我们更鼓励的方式是以API的形式对外暴露数据服务，更进一步的想法可能是以SaaS服务的形式对外提供。例如<a href="https://www.forbes.com/sites/lutzfinger/2014/08/19/3-data-products-you-need-to-know" target="_blank" rel="external">Forbes认为</a>以下几种数据服务已经具有较高的成熟度和接受度：</p>
+<ul>
+<li>用于benchmark的数据</li>
+<li>用于推荐系统的数据</li>
+<li>用于预测的数据</li>
+</ul>
+<p><img src="/assets/2018/3/16/data-store.png"></p>
+<h2 id="大数据平台的全貌"><a href="#大数据平台的全貌" class="headerlink" title="大数据平台的全貌"></a>大数据平台的全貌</h2><p>到这里我们已经看到了大数据平台各个组件的来由和形状：以数据湖为中心，由数据通道接入原始数据，经过数据流水线的加工处理，根据业务需求进入不同的数据集市，业务用户或是通过数据实验室探索、或是从数据商店获得自己需要的服务，整个过程接受数据质量和一致性的治理。再加上系统监控、日志管理、身份认证、任务调度、配置管理、项目管理、持续交付等通用的能力，我们就看到了一个企业级大数据平台的全貌。</p>
+<p><img src="/assets/2018/3/16/data-platform.png"></p>
+
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="3月 16 2018" class="post-list__meta--date date">3月 16 2018</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2018/3/7/agile-in-china-fifteen-years/" title="link to 敏捷在中国这十五年">敏捷在中国这十五年</a></h2>
 
       <p class="excerpt">
@@ -650,98 +713,6 @@ classes that you can use:
       <div class="post-list__meta">
 
         <time datetime="12月 12 2017" class="post-list__meta--date date">12月 12 2017</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2017/12/3/dmp-overview/" title="link to 数据管理平台（DMP）综述">数据管理平台（DMP）综述</a></h2>
-
-      <p class="excerpt">
-        <h2 id="在线广告技术生态"><a href="#在线广告技术生态" class="headerlink" title="在线广告技术生态"></a>在线广告技术生态</h2><p>ADN（广告网络）批量地运营媒体的广告位资源，按照人群或上下文标签售卖给需求方，并用竞价的方式决定流量分配。广告网络的结算以按点击付费（Cost per Click，CPC）的方式为主。面向多个ADN或媒体按人群一站式采买广告并优化投入产出比的需求方产品叫交易终端（Trading Desk，TD）。</p>
-<p>在ADN中，核心的竞价逻辑是封闭的，不能满足需求方越来越明确的利益要求，于是市场上产生了大量聚合各媒体剩余流量并采用实时竞价方式为他们变现的产品形态——广告交易平台（AD Exchange，ADX）。</p>
-<p>在ADX上通过实时竞价的方式，按照定制化人群标签购买广告，这样的产品就是需求方平台（Demand Side Platform，DSP）。对应的管理媒体广告位的产品就是供给方平台（Supply Side Platform，SSP）。</p>
-<p>DSP会向DMP（数据管理平台）寻求数据支持，达到更精准的投放。</p>
-<p><img src="http://www.rtbchina.com/wp-content/uploads/2017/10/China-Programmatic-Ad-Tech_2017Q3_R-1.png"></p>
-<h2 id="在线广告业务中数据的价值"><a href="#在线广告业务中数据的价值" class="headerlink" title="在线广告业务中数据的价值"></a>在线广告业务中数据的价值</h2><p>对精准广告业务产生直接贡献的数据有以下几类：</p>
-<ol>
-<li>用户标识。对广告而言，如何确定哪些行为来自于同一个用户是非常关键的问题。</li>
-<li>用户行为。转化、预转化、搜索广告点击、展示广告点击、搜索点击、搜索、分享、页面浏览、广告浏览等在线行为是可以被广泛采集并且对于受众定向或广告决策有明显作用。这些行为又可以分为决策行为（转化、预转化）、主动行为（广告点击、搜索、搜索点击）、半主动行为（分享、网页浏览）、被动行为（广告浏览）。</li>
-<li>人口属性。一般来说只有与用户实名身份绑定的服务可以得到此信息，也可以利用网络行为数据进行人口属性标签的预测，但准确程度有限，而且仍然需要标定的数据用于训练。</li>
-<li>地理位置。地理位置信息随能获得的精度不同，其用途也有相当大的差异。</li>
-<li>社交关系。社交关系可用于用户兴趣的平滑。</li>
-</ol>
-<h2 id="数据管理平台的功能"><a href="#数据管理平台的功能" class="headerlink" title="数据管理平台的功能"></a>数据管理平台的功能</h2><p>DMP日渐火爆源于广告主对投放效果的更高追求以及对营销浪费更低的容忍度，DMP即是为解决这些问题而生。广告主希望更精准的对目标人群进行广告投放，如果投放的对象对某些广告不感兴趣，却反复被广告轰炸只会适得其反。如果企业能够在投放广告或其他营销手段前就能对受众进行具体、精准的识别，广告投放的效果会因此增强。</p>
-<p>数据的来源分为三类：</p>
-<ul>
-<li>第一方数据：广告主自有用户数据，包括网站/APP监测数据、CRM数据、电商交易数据等。</li>
-<li>第二方数据：广告商在广告投放过程中积累的业务数据，如DSP平台业务中积累的受众浏览广告、点击广告等相关数据。</li>
-<li>第三方数据：非直接合作方拥有的数据，如运营商数据等。</li>
-</ul>
-<p>第三方数据中，BAT的数据只能应用于各自的生态圈，实际产生效果并不容易；运营商的数据不一定总能通过商务关系得到，又有各地军阀割据的问题、有流量劫持等争议问题，而且越来越多网站和APP采用加密，运营商看不到了；垂直领域的数据相对比较细和专，质量高。</p>
-<p>DMP有下面几个核心的产品功能：</p>
-<ol>
-<li>它可以为网站（可以是媒体也可以是广告主网站）提供受众定向功能，并将得到的用户标签应用于网站业务。</li>
-<li>如果媒体网站授权，DMP可以提供接口对加工出来的用户标签进行变现，并与网站分成。</li>
-<li>广告主网站可以通过DMP广告采买渠道进行更方便的数据对接。</li>
-</ol>
-<p><img src="http://www.iyunying.org/wp-content/uploads/2017/03/1e471f277c0d6bf12d49bef4dc7cb780.png"></p>
-<p>可以从以下几个角度对DMP进行评估：</p>
-<ol>
-<li>数据来源。有多少优质的数据源可以利用。在中国能使用BAT的数据是一个重要因素，腾讯广点通和阿里达摩盘在这方面有优势。</li>
-<li>数据处理。进入DMP的数据（包括结构化的和非结构化的）能多灵活地处理。</li>
-<li>ID联结。DMP能多准确地联结来自不同数据源的用户信息。</li>
-<li>受众区分。对受众分群的多样性和准确性。受众定向标签可以分为人口学标签、上下文标签、行业定制标签三类。</li>
-<li>数据建模。通过对数据的分析提供look-alike或其他更深度的洞察和投放指导。</li>
-<li>与程序化广告平台的整合度。</li>
-</ol>
-<p><img src="https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAerAAAAJDIxODdmZjBmLTJiYzItNDNhNi04M2U2LTY1Y2EwOTBkYjJmNg.png"></p>
-<p>这里有一个<a href="https://adexchanger.com/data-exchanges/oracle-dmp-still-recognized-used-salesforce-dmp-others-ascending/" target="_blank" rel="external">国外DMP产品的排名</a>。Oracle收购的BlueKai排名第一。SalesForce收购的Krux紧随其后。</p>
-<p>针对BAT各自DMP的功能，这里有一个<a href="http://www.pmcaff.com/article/index/630074472566912" target="_blank" rel="external">分析对比</a>。</p>
-<h2 id="为何企业要自建DMP"><a href="#为何企业要自建DMP" class="headerlink" title="为何企业要自建DMP"></a>为何企业要自建DMP</h2><p>自建程序化广告系统的主要目的是增加透明度、控制力和效率：</p>
-<ul>
-<li>透明度：企业希望清楚知道广告投放的效果，不想被欺诈。据<a href="http://adage.com/article/digital/ana-report-7-2-billion-lost-ad-fraud-2015/302201/" target="_blank" rel="external">ANA的统计</a>，可能有多达37%的在线广告点击是虚假的。</li>
-<li>控制力：企业拥有越来越多的第一方数据，希望有更强的数据掌控，尤其不希望自己的第一方数据被广告平台用来帮助竞争对手投放（以增强广告平台DMP能力的形式）。</li>
-<li>效率：企业希望基于DMP能做更复杂的分析、更多的实验、与市场营销更紧密配合。</li>
-</ul>
-<p>Target选择自建DMP，分析师认为除了以上理由之外，Target还希望充分利用自己已有的客源流量，把自己变成数字化媒体。</p>
-<p>自建DMP需要有以下功能模块：</p>
-<ul>
-<li>数据的获取入口</li>
-<li>数据的清洗，整合</li>
-<li>标签的计算，挖掘</li>
-<li>打标签及标签的展示</li>
-<li>用户分群</li>
-</ul>
-<p>前三块是DMP的基础，虽然看不见，但是决定了一个DMP的质量。后两块是比较偏产品前端的内容，DMP是否简单易用，是否友好易懂就是这部分体现出来的。</p>
-<p><img src="http://img.pmcaff.com/fetch_fileecf894d68088f1fd6a51c2da6faab00a-picture"></p>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
-<li><a href="https://zhuanlan.zhihu.com/p/24808308" target="_blank" rel="external">程序化广告生态实用手册</a></li>
-<li><a href="http://www.chinawebanalytics.cn/dmp-review-and-how-to-implement-dmp-in-an-enterprise/" target="_blank" rel="external">DMP全面剖析以及企业DMP应用可执行指南</a></li>
-<li><a href="http://www.pmcaff.com/article/index/630074472566912" target="_blank" rel="external">DMP（数据管理平台）产品之我见</a></li>
-<li><a href="http://www.pmcaff.com/article/index/1034496870584448" target="_blank" rel="external">关于DMP数据管理平台的认知和浅析</a></li>
-<li><a href="https://book.douban.com/subject/26596778/" target="_blank" rel="external">计算广告</a></li>
-<li><a href="http://adage.com/article/digital/ana-report-7-2-billion-lost-ad-fraud-2015/302201/" target="_blank" rel="external">ANA: Ad Fraud Will Cost $7.2 Billion in 2016, Up From 2015</a></li>
-<li><a href="https://www.linkedin.com/pulse/how-build-good-dmp-platform-dan-zhang/" target="_blank" rel="external">How to build a good DMP platform</a></li>
-<li><a href="http://adage.com/article/cmo-strategy/advertise-a-target-shopper-luck/305753/" target="_blank" rel="external">Is Target The Next Digital Media Giant?</a>* <a href="https://adexchanger.com/data-exchanges/oracle-dmp-still-recognized-used-salesforce-dmp-others-ascending/" target="_blank" rel="external">Oracle DMP: Still The Most Recognized And Used, But Salesforce DMP And Others Are Ascending</a></li>
-<li><a href="http://www.thedrum.com/opinion/2016/04/15/outsourced-or-house-advertisers-shift-their-thinking-about-house-programmatic" target="_blank" rel="external">Outsourced or in-house? Advertisers shift their thinking about in-house programmatic</a></li>
-</ul>
-
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="12月 3 2017" class="post-list__meta--date date">12月 3 2017</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">

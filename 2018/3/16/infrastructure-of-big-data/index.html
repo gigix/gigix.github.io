@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+        浅谈大数据平台基建的逻辑 | 透明思考
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+    <meta name="author" content="Jeff Xiong">
+    
+    
+    <meta name="description" content="这篇文章主要目的是面向初接触大数据的朋友简单介绍大数据平台基础建设所需要的各个模块以及缘由。
+数据仓库和数据平台架构按照Ralph Hughes的观点，企业数据仓库参考架构由下列几层构成：
+
+
+接入层（Landing）：以和源系统相同的结构暂存原始数据。有时被称为“贴源层”或ODS。
+整合层（Integration）：持久存储整合后的企业数据，针对企业信息实体和业务事件建模，代表组织的“唯一真相来">
+    
+
+    <meta name="description" content="这篇文章主要目的是面向初接触大数据的朋友简单介绍大数据平台基础建设所需要的各个模块以及缘由。
+数据仓库和数据平台架构按照Ralph Hughes的观点，企业数据仓库参考架构由下列几层构成：
+
+
+接入层（Landing）：以和源系统相同的结构暂存原始数据。有时被称为“贴源层”或ODS。
+整合层（Integration）：持久存储整合后的企业数据，针对企业信息实体和业务事件建模，代表组织的“唯一真相来">
+<meta property="og:type" content="article">
+<meta property="og:title" content="浅谈大数据平台基建的逻辑 | 透明思考">
+<meta property="og:url" content="http://gigix.thoughtworkers.org/2018/3/16/infrastructure-of-big-data/index.html">
+<meta property="og:site_name" content="透明思考">
+<meta property="og:description" content="这篇文章主要目的是面向初接触大数据的朋友简单介绍大数据平台基础建设所需要的各个模块以及缘由。
+数据仓库和数据平台架构按照Ralph Hughes的观点，企业数据仓库参考架构由下列几层构成：
+
+
+接入层（Landing）：以和源系统相同的结构暂存原始数据。有时被称为“贴源层”或ODS。
+整合层（Integration）：持久存储整合后的企业数据，针对企业信息实体和业务事件建模，代表组织的“唯一真相来">
+<meta property="og:image" content="http://gigix.thoughtworkers.org/assets/2018/3/16/data-warehouse-layers.png">
+<meta property="og:image" content="http://gigix.thoughtworkers.org/assets/2018/3/16/data-lake.png">
+<meta property="og:image" content="http://gigix.thoughtworkers.org/assets/2018/3/16/data-channel.png">
+<meta property="og:image" content="http://gigix.thoughtworkers.org/assets/2018/3/16/data-pipeline.png">
+<meta property="og:image" content="http://gigix.thoughtworkers.org/assets/2018/3/16/data-mart.png">
+<meta property="og:image" content="http://gigix.thoughtworkers.org/assets/2018/3/16/data-governance.png">
+<meta property="og:image" content="http://gigix.thoughtworkers.org/assets/2018/3/16/data-lab.png">
+<meta property="og:image" content="http://gigix.thoughtworkers.org/assets/2018/3/16/data-store.png">
+<meta property="og:image" content="http://gigix.thoughtworkers.org/assets/2018/3/16/data-platform.png">
+<meta property="og:updated_time" content="2018-03-16T04:42:37.317Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="浅谈大数据平台基建的逻辑 | 透明思考">
+<meta name="twitter:description" content="这篇文章主要目的是面向初接触大数据的朋友简单介绍大数据平台基础建设所需要的各个模块以及缘由。
+数据仓库和数据平台架构按照Ralph Hughes的观点，企业数据仓库参考架构由下列几层构成：
+
+
+接入层（Landing）：以和源系统相同的结构暂存原始数据。有时被称为“贴源层”或ODS。
+整合层（Integration）：持久存储整合后的企业数据，针对企业信息实体和业务事件建模，代表组织的“唯一真相来">
+<meta name="twitter:image" content="http://gigix.thoughtworkers.org/assets/2018/3/16/data-warehouse-layers.png">
+
+    
+    <link rel="alternate" href="/atom.xml" title="透明思考" type="application/atom+xml">
+    
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+
+    <script src="/js/jquery.min.js"></script>
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+<header class="panel-cover panel-cover--collapsed">
+
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">透明思考</a></h1>
+
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">
+          Transparent Thoughts
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">Blog</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+------------------------------ -->
+
+<nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+
+  <!-- Github -->
+  <li class="navigation__item">
+    <a href="https://github.com/gigix" title="Gigix on GitHub" target="_blank">
+      <i class='icon icon-social-github'></i>
+      <span class="label">GitHub</span>
+    </a>
+  </li>
+
+  </ul>
+</nav>
+
+          <script>
+    function doSearch() {
+        var keyword = $('#keyword').val();
+        if (keyword.trim() === '') {
+            window.location.href = 'http://gigix.thoughtworkers.org/#blog';
+        } else {
+            window.open('http://www.google.com/search?q=site:gigix.thoughtworkers.org+' + keyword);
+        }
+    }
+</script>
+
+<div class="search">
+    <input id="keyword" type="text"/>
+    <input type="button" value="Search" class="btn" onclick="doSearch()"/>
+</div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+    <header class="post-header">
+
+        
+        <div class="post-meta">
+            <time datetime="3月 16 2018"
+                  class="post-meta__date date">3月 16 2018</time>
+            &#8226;
+
+        <span class="post-meta__tags tags">
+
+            <font class="categories">
+                
+            </font>
+            
+
+        </span>
+        </div>
+        
+
+        <h1 class="post-title">浅谈大数据平台基建的逻辑</h1>
+    </header>
+
+    <section class="post">
+        <p>这篇文章主要目的是面向初接触大数据的朋友简单介绍大数据平台基础建设所需要的各个模块以及缘由。</p>
+<h2 id="数据仓库和数据平台架构"><a href="#数据仓库和数据平台架构" class="headerlink" title="数据仓库和数据平台架构"></a>数据仓库和数据平台架构</h2><p>按照<a href="https://book.douban.com/subject/26792705/" target="_blank" rel="external">Ralph Hughes的观点</a>，企业数据仓库参考架构由下列几层构成：</p>
+<p><img src="/assets/2018/3/16/data-warehouse-layers.png"></p>
+<ul>
+<li>接入层（Landing）：以和源系统相同的结构暂存原始数据。有时被称为“贴源层”或ODS。</li>
+<li>整合层（Integration）：持久存储整合后的企业数据，针对企业信息实体和业务事件建模，代表组织的“唯一真相来源”。有时被称为“数据仓库”。</li>
+<li>表现层（Presentation）：为满足最终用户的需求提供可消费的数据，针对商业智能和查询性能建模。有时被称为“数据集市”。</li>
+<li>语义层（Semantic）：提供数据的呈现形式和访问控制。例如某种报表工具。</li>
+<li>终端用户应用（End-user applications）：使用语义层的工具，将表现层数据最终呈现给用户，包括仪表板、报表、图表等多种形式。</li>
+<li>元数据（Metadata）：记录各层数据项的定义（Definitions）、血缘（Genealogy）、处理过程（Processing）。</li>
+</ul>
+<h2 id="把数据放到一起：数据湖"><a href="#把数据放到一起：数据湖" class="headerlink" title="把数据放到一起：数据湖"></a>把数据放到一起：数据湖</h2><p>企业大数据平台的核心是把企业数据资产汇集一处的数据湖。ThoughtWorks的“<a href="https://info.thoughtworks.com/DPS-subscription.html" target="_blank" rel="external">数字平台战略</a>”这样描述数据湖：</p>
+<blockquote>
+<p>数据湖……的概念是：不对数据做提前的“优化”处理，而是直接把生数据存储在容易获得的、便宜的存储环境中；等有了具体的问题要回答时，再去组织和筛选数据，从中找出答案。按照<a href="https://www.thoughtworks.com/radar/techniques/data-lake" target="_blank" rel="external">ThoughtWorks技术雷达</a>的定义，数据湖中的数据应该是不可修改（immutable）的。</p>
+</blockquote>
+<p>来自不同数据源的“生”数据（接入层），和经过中间处理之后得到的整合层、表现层的数据模型，都会存储在数据湖里备用。</p>
+<p>数据湖的实现通常建立在Hadoop生态上，可能直接存储在HDFS上，也可能存储在HBase或Hive上，也有用关系型数据库作为数据湖存储的可能存在。</p>
+<p><img src="/assets/2018/3/16/data-lake.png"></p>
+<h2 id="接入原始数据：数据通道"><a href="#接入原始数据：数据通道" class="headerlink" title="接入原始数据：数据通道"></a>接入原始数据：数据通道</h2><p>企业大数据平台创造价值的基础是能把各种与业务有关的数据都接入到数据湖中，这就需要针对各种不同的数据源开发数据通道。数据接入的连接器（connector）通常是一个定时执行的任务，技术选型随数据源而定，有些项目采用定制开发的数据接入任务，也有些项目采用像<a href="https://www.talend.com/products/talend-open-studio/" target="_blank" rel="external">Talend</a>这样的套装工具。对于来自企业之外乃至互联网上的数据，可能需要编写爬虫。</p>
+<p><img src="/assets/2018/3/16/data-channel.png"></p>
+<h2 id="数据加工处理：数据流水线"><a href="#数据加工处理：数据流水线" class="headerlink" title="数据加工处理：数据流水线"></a>数据加工处理：数据流水线</h2><p>在数据湖内部，数据会经过“接入层 =&gt; 整合层 =&gt; 表现层”的加工处理链，逐步变成用户可用的形式。其中每一层的加工处理，至少包含ETL（提取-转换-装载）、指标计算、异常检测、数据质量管理等工作，还可能对数据进行语义标签、分类预测等更深入的操作。</p>
+<p>数据流水线的技术选型主要分为流式数据和批量数据两大类。在Hadoop生态中，Spark常被用于批量数据处理，Kafka和Spark Streaming的组合常被用于流式数据处理。</p>
+<p><img src="/assets/2018/3/16/data-pipeline.png"></p>
+<h2 id="面向业务领域：数据集市"><a href="#面向业务领域：数据集市" class="headerlink" title="面向业务领域：数据集市"></a>面向业务领域：数据集市</h2><p>整合层存放了整个企业的数据，并且以规范化的、巨细靡遗的形式（例如<a href="https://book.douban.com/subject/26978943/" target="_blank" rel="external">Data Vault</a>）对数据建模。表现层则与之不同：数据集市中的数据是针对业务应用领域选择出来的，并且建模形式更方便查询（例如宽表）。数据集市的技术选型也是为了查询的便利，例如采用ElasticSearch或关系型数据库，因为这些工具都支持很完备的查询功能，而且用户也非常熟悉。</p>
+<p><img src="/assets/2018/3/16/data-mart.png"></p>
+<h2 id="保障数据质量：数据治理"><a href="#保障数据质量：数据治理" class="headerlink" title="保障数据质量：数据治理"></a>保障数据质量：数据治理</h2><p>在实施数据湖的时候，有一种常见的反模式：企业有了一个名义上的数据湖（例如一个非常大的HDFS），但是数据只进不出，成了“数据泥沼”（或数据墓地）。造成这种现象的原因之一，就是因为缺乏必要的数据治理：数据缺乏一致性、数据质量不佳，导致用户无法从数据中获得可靠的洞察。</p>
+<p>数据治理的基本工作包括了数据脱敏、数据质量管理、主数据管理等。<a href="https://atlas.apache.org/" target="_blank" rel="external">Atlas</a>、<a href="https://hortonworks.com/apache/falcon/" target="_blank" rel="external">Falcon</a>等工具提供了数据治理的技术能力。</p>
+<p><img src="/assets/2018/3/16/data-governance.png"></p>
+<h2 id="探索未知：数据实验室"><a href="#探索未知：数据实验室" class="headerlink" title="探索未知：数据实验室"></a>探索未知：数据实验室</h2><p><a href="https://insights.thoughtworks.cn/self-service-data/" target="_blank" rel="external">数据自服务</a>能力的一大亮点是鼓励小型的、全功能的团队自行从数据中获得洞察。为了形成从数据到洞察的快速响应循环，业务团队需要对整合层甚至接入层的数据做快速的探索和实验，而不是先完成接入-整合-表现的整个数据处理链。数据实验室提供模型管理和数据沙箱的能力，让业务团队能用Python、Java等通用编程语言快速展开数据探索和实验。PyTorch、Jupyter、Pandas等工具提供了便捷的途径来搭建数据实验室。</p>
+<p><img src="/assets/2018/3/16/data-lab.png"></p>
+<h2 id="供给应用：数据商店"><a href="#供给应用：数据商店" class="headerlink" title="供给应用：数据商店"></a>供给应用：数据商店</h2><p>确定要提供给业务团队使用的数据，就可以进入数据商店，包装成数据产品或服务的形式供应出来。基础的形态可以是直接对外提供数据（通过数据库同步、事件订阅、文件服务等形式），在微服务语境下我们更鼓励的方式是以API的形式对外暴露数据服务，更进一步的想法可能是以SaaS服务的形式对外提供。例如<a href="https://www.forbes.com/sites/lutzfinger/2014/08/19/3-data-products-you-need-to-know" target="_blank" rel="external">Forbes认为</a>以下几种数据服务已经具有较高的成熟度和接受度：</p>
+<ul>
+<li>用于benchmark的数据</li>
+<li>用于推荐系统的数据</li>
+<li>用于预测的数据</li>
+</ul>
+<p><img src="/assets/2018/3/16/data-store.png"></p>
+<h2 id="大数据平台的全貌"><a href="#大数据平台的全貌" class="headerlink" title="大数据平台的全貌"></a>大数据平台的全貌</h2><p>到这里我们已经看到了大数据平台各个组件的来由和形状：以数据湖为中心，由数据通道接入原始数据，经过数据流水线的加工处理，根据业务需求进入不同的数据集市，业务用户或是通过数据实验室探索、或是从数据商店获得自己需要的服务，整个过程接受数据质量和一致性的治理。再加上系统监控、日志管理、身份认证、任务调度、配置管理、项目管理、持续交付等通用的能力，我们就看到了一个企业级大数据平台的全貌。</p>
+<p><img src="/assets/2018/3/16/data-platform.png"></p>
+
+    </section>
+
+    <section class="author">
+<p>（本文作者熊节是ThoughtWorks的总监咨询师）</p>
+</section>
+    <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style_32x32" style="height: 40px">
+    <a class="jiathis_button_tsina"></a>
+    <a class="jiathis_button_weixin"></a>
+    <a class="jiathis_button_douban"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis"
+       target="_blank"></a>
+</div>
+<script type="text/javascript">
+    var jiathis_config = {
+        summary: "",
+        shortUrl: false,
+        hideMore: false
+    }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code_mini/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+    
+</article>
+
+			
+            <footer class="footer">
+    <span class="footer__copyright">&copy;
+        作者保留一切权利，未经许可请勿转载</span>
+    <span class="footer__copyright">&copy;
+        2018
+        Transparent Thoughts. All rights reserved.</span>
+</footer>
+        </div>
+    </div>
+
+    <!-- The main JavaScript file for Casper -->
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    <script src="/js/jquery.imagesloaded.min.js"></script>
+    <script src="/js/gallery.js"></script>
+    <script src="/js/jquery.githubRepoWidget.min.js"></script>
+    <script type="text/javascript"
+            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> 
+      MathJax.Hub.Config({ 
+        tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+    }); 
+
+    </script>
+
+    <!--kill ie6 -->
+    <!--[if IE 6]>
+    <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+    <![endif]-->
+
+    <!-- totop -->
+    <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">
+        <a title="back to top"><img style="width:30px;height:30px;" src="/images/totop.png"/></a>
+    </div>
+    <script>
+        (function ($) {
+            var upperLimit = 100;
+            var scrollElem = $('#totop');
+            var scrollSpeed = 500;
+            scrollElem.hide();
+            $(window).scroll(function () {
+                var scrollTop = $(document).scrollTop();
+                if (scrollTop > upperLimit) {
+                    $(scrollElem).stop().fadeTo(300, 1); // fade back in
+                } else {
+                    $(scrollElem).stop().fadeTo(300, 0); // fade out
+                }
+            });
+            $(scrollElem).click(function () {
+                $('html, body').animate({scrollTop: 0}, scrollSpeed);
+                return false;
+            });
+        })(jQuery);
+    </script>
+
+    <!-- fancybox -->
+    
+    <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+    <script src="/fancybox/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript">
+        (function ($) {
+            $('.fancybox').fancybox();
+        })(jQuery);
+    </script>
+    
+
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-113927-4', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <!-- CNZZ Analytics -->
+    <script src="http://s4.cnzz.com/z_stat.php?id=1255092465&web_id=1255092465" language="JavaScript"></script>
+
+</body>
+</html>

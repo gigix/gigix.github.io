@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gigix.thoughtworkers.org/"/>
-  <updated>2018-03-07T04:12:07.196Z</updated>
+  <updated>2018-03-16T04:42:37.317Z</updated>
   <id>http://gigix.thoughtworkers.org/</id>
   
   <author>
@@ -14,6 +14,64 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>浅谈大数据平台基建的逻辑</title>
+    <link href="http://gigix.thoughtworkers.org/2018/3/16/infrastructure-of-big-data/"/>
+    <id>http://gigix.thoughtworkers.org/2018/3/16/infrastructure-of-big-data/</id>
+    <published>2018-03-16T05:04:00.000Z</published>
+    <updated>2018-03-16T04:42:37.317Z</updated>
+    
+    <content type="html"><![CDATA[<p>这篇文章主要目的是面向初接触大数据的朋友简单介绍大数据平台基础建设所需要的各个模块以及缘由。</p>
+<h2 id="数据仓库和数据平台架构"><a href="#数据仓库和数据平台架构" class="headerlink" title="数据仓库和数据平台架构"></a>数据仓库和数据平台架构</h2><p>按照<a href="https://book.douban.com/subject/26792705/" target="_blank" rel="external">Ralph Hughes的观点</a>，企业数据仓库参考架构由下列几层构成：</p>
+<p><img src="/assets/2018/3/16/data-warehouse-layers.png"></p>
+<ul>
+<li>接入层（Landing）：以和源系统相同的结构暂存原始数据。有时被称为“贴源层”或ODS。</li>
+<li>整合层（Integration）：持久存储整合后的企业数据，针对企业信息实体和业务事件建模，代表组织的“唯一真相来源”。有时被称为“数据仓库”。</li>
+<li>表现层（Presentation）：为满足最终用户的需求提供可消费的数据，针对商业智能和查询性能建模。有时被称为“数据集市”。</li>
+<li>语义层（Semantic）：提供数据的呈现形式和访问控制。例如某种报表工具。</li>
+<li>终端用户应用（End-user applications）：使用语义层的工具，将表现层数据最终呈现给用户，包括仪表板、报表、图表等多种形式。</li>
+<li>元数据（Metadata）：记录各层数据项的定义（Definitions）、血缘（Genealogy）、处理过程（Processing）。</li>
+</ul>
+<h2 id="把数据放到一起：数据湖"><a href="#把数据放到一起：数据湖" class="headerlink" title="把数据放到一起：数据湖"></a>把数据放到一起：数据湖</h2><p>企业大数据平台的核心是把企业数据资产汇集一处的数据湖。ThoughtWorks的“<a href="https://info.thoughtworks.com/DPS-subscription.html" target="_blank" rel="external">数字平台战略</a>”这样描述数据湖：</p>
+<blockquote>
+<p>数据湖……的概念是：不对数据做提前的“优化”处理，而是直接把生数据存储在容易获得的、便宜的存储环境中；等有了具体的问题要回答时，再去组织和筛选数据，从中找出答案。按照<a href="https://www.thoughtworks.com/radar/techniques/data-lake" target="_blank" rel="external">ThoughtWorks技术雷达</a>的定义，数据湖中的数据应该是不可修改（immutable）的。</p>
+</blockquote>
+<p>来自不同数据源的“生”数据（接入层），和经过中间处理之后得到的整合层、表现层的数据模型，都会存储在数据湖里备用。</p>
+<p>数据湖的实现通常建立在Hadoop生态上，可能直接存储在HDFS上，也可能存储在HBase或Hive上，也有用关系型数据库作为数据湖存储的可能存在。</p>
+<p><img src="/assets/2018/3/16/data-lake.png"></p>
+<h2 id="接入原始数据：数据通道"><a href="#接入原始数据：数据通道" class="headerlink" title="接入原始数据：数据通道"></a>接入原始数据：数据通道</h2><p>企业大数据平台创造价值的基础是能把各种与业务有关的数据都接入到数据湖中，这就需要针对各种不同的数据源开发数据通道。数据接入的连接器（connector）通常是一个定时执行的任务，技术选型随数据源而定，有些项目采用定制开发的数据接入任务，也有些项目采用像<a href="https://www.talend.com/products/talend-open-studio/" target="_blank" rel="external">Talend</a>这样的套装工具。对于来自企业之外乃至互联网上的数据，可能需要编写爬虫。</p>
+<p><img src="/assets/2018/3/16/data-channel.png"></p>
+<h2 id="数据加工处理：数据流水线"><a href="#数据加工处理：数据流水线" class="headerlink" title="数据加工处理：数据流水线"></a>数据加工处理：数据流水线</h2><p>在数据湖内部，数据会经过“接入层 =&gt; 整合层 =&gt; 表现层”的加工处理链，逐步变成用户可用的形式。其中每一层的加工处理，至少包含ETL（提取-转换-装载）、指标计算、异常检测、数据质量管理等工作，还可能对数据进行语义标签、分类预测等更深入的操作。</p>
+<p>数据流水线的技术选型主要分为流式数据和批量数据两大类。在Hadoop生态中，Spark常被用于批量数据处理，Kafka和Spark Streaming的组合常被用于流式数据处理。</p>
+<p><img src="/assets/2018/3/16/data-pipeline.png"></p>
+<h2 id="面向业务领域：数据集市"><a href="#面向业务领域：数据集市" class="headerlink" title="面向业务领域：数据集市"></a>面向业务领域：数据集市</h2><p>整合层存放了整个企业的数据，并且以规范化的、巨细靡遗的形式（例如<a href="https://book.douban.com/subject/26978943/" target="_blank" rel="external">Data Vault</a>）对数据建模。表现层则与之不同：数据集市中的数据是针对业务应用领域选择出来的，并且建模形式更方便查询（例如宽表）。数据集市的技术选型也是为了查询的便利，例如采用ElasticSearch或关系型数据库，因为这些工具都支持很完备的查询功能，而且用户也非常熟悉。</p>
+<p><img src="/assets/2018/3/16/data-mart.png"></p>
+<h2 id="保障数据质量：数据治理"><a href="#保障数据质量：数据治理" class="headerlink" title="保障数据质量：数据治理"></a>保障数据质量：数据治理</h2><p>在实施数据湖的时候，有一种常见的反模式：企业有了一个名义上的数据湖（例如一个非常大的HDFS），但是数据只进不出，成了“数据泥沼”（或数据墓地）。造成这种现象的原因之一，就是因为缺乏必要的数据治理：数据缺乏一致性、数据质量不佳，导致用户无法从数据中获得可靠的洞察。</p>
+<p>数据治理的基本工作包括了数据脱敏、数据质量管理、主数据管理等。<a href="https://atlas.apache.org/" target="_blank" rel="external">Atlas</a>、<a href="https://hortonworks.com/apache/falcon/" target="_blank" rel="external">Falcon</a>等工具提供了数据治理的技术能力。</p>
+<p><img src="/assets/2018/3/16/data-governance.png"></p>
+<h2 id="探索未知：数据实验室"><a href="#探索未知：数据实验室" class="headerlink" title="探索未知：数据实验室"></a>探索未知：数据实验室</h2><p><a href="https://insights.thoughtworks.cn/self-service-data/" target="_blank" rel="external">数据自服务</a>能力的一大亮点是鼓励小型的、全功能的团队自行从数据中获得洞察。为了形成从数据到洞察的快速响应循环，业务团队需要对整合层甚至接入层的数据做快速的探索和实验，而不是先完成接入-整合-表现的整个数据处理链。数据实验室提供模型管理和数据沙箱的能力，让业务团队能用Python、Java等通用编程语言快速展开数据探索和实验。PyTorch、Jupyter、Pandas等工具提供了便捷的途径来搭建数据实验室。</p>
+<p><img src="/assets/2018/3/16/data-lab.png"></p>
+<h2 id="供给应用：数据商店"><a href="#供给应用：数据商店" class="headerlink" title="供给应用：数据商店"></a>供给应用：数据商店</h2><p>确定要提供给业务团队使用的数据，就可以进入数据商店，包装成数据产品或服务的形式供应出来。基础的形态可以是直接对外提供数据（通过数据库同步、事件订阅、文件服务等形式），在微服务语境下我们更鼓励的方式是以API的形式对外暴露数据服务，更进一步的想法可能是以SaaS服务的形式对外提供。例如<a href="https://www.forbes.com/sites/lutzfinger/2014/08/19/3-data-products-you-need-to-know" target="_blank" rel="external">Forbes认为</a>以下几种数据服务已经具有较高的成熟度和接受度：</p>
+<ul>
+<li>用于benchmark的数据</li>
+<li>用于推荐系统的数据</li>
+<li>用于预测的数据</li>
+</ul>
+<p><img src="/assets/2018/3/16/data-store.png"></p>
+<h2 id="大数据平台的全貌"><a href="#大数据平台的全貌" class="headerlink" title="大数据平台的全貌"></a>大数据平台的全貌</h2><p>到这里我们已经看到了大数据平台各个组件的来由和形状：以数据湖为中心，由数据通道接入原始数据，经过数据流水线的加工处理，根据业务需求进入不同的数据集市，业务用户或是通过数据实验室探索、或是从数据商店获得自己需要的服务，整个过程接受数据质量和一致性的治理。再加上系统监控、日志管理、身份认证、任务调度、配置管理、项目管理、持续交付等通用的能力，我们就看到了一个企业级大数据平台的全貌。</p>
+<p><img src="/assets/2018/3/16/data-platform.png"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这篇文章主要目的是面向初接触大数据的朋友简单介绍大数据平台基础建设所需要的各个模块以及缘由。&lt;/p&gt;
+&lt;h2 id=&quot;数据仓库和数据平台架构&quot;&gt;&lt;a href=&quot;#数据仓库和数据平台架构&quot; class=&quot;headerlink&quot; title=&quot;数据仓库和数据平台架构&quot;&gt;&lt;/a
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>敏捷在中国这十五年</title>
@@ -886,42 +944,6 @@
     <summary type="html">
     
       &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Fernando_Flores&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;费尔南多·弗洛雷斯&lt;/a&gt;有着传奇的一生。他作为理工科的好学生留校，在智利社会主义的浪潮中涉足政坛，
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>技术领导者即服务</title>
-    <link href="http://gigix.thoughtworkers.org/2017/6/23/tech-lead-as-a-service/"/>
-    <id>http://gigix.thoughtworkers.org/2017/6/23/tech-lead-as-a-service/</id>
-    <published>2017-06-23T05:01:00.000Z</published>
-    <updated>2017-06-23T11:25:15.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>八年前我写了一篇文章《<a href="http://www.infoq.com/cn/articles/thoughtworks-practice-part8" target="_blank" rel="external">Tech Lead的三重人格</a>》。迄今为止为数众多的敏捷交付团队中，Tech Lead（技术领导者）对于交付的效能和质量起着至关重要的作用。我在那篇文章中指出，Tech Lead需要扮演三种重要的角色：技术决策者、流程监督人、干扰过滤器。一支团队能否有效采用架构最佳实践、交付流程最佳实践和项目运作最佳实践，很大程度上取决于Tech Lead把自己的工作完成得多好。</p>
-<p>如果更进一步把这篇文章中Tech Lead承担的责任做一个拆解，我们可以看到，一个称职的Tech Lead是这样去为项目的顺利交付做出贡献的：</p>
-<ul>
-<li>首先，他要<strong>制订适合该项目要求的技术方案</strong>。他要参与架构设计，了解平台和编程语言、主要的框架和库、集成点、部署策略、数据迁移策略，确认总体技术方案能够支撑系统的业务要求。</li>
-<li>随后，他要<strong>保障交付顺利开展</strong>。他要确保环境的一致性，搭建和管理持续集成流水线，指导并监督团队遵循持续集成的流程和实践。</li>
-<li>最后但绝非最不重要的，他还要<strong>管理和提升团队的能力</strong>。他需要确认团队是否熟悉用到的技术栈和工具，而且——虽然这一点在我写文章时的ThoughtWorks还不那么凸显——要帮助团队成员组织刻意练习来提升能力。</li>
-</ul>
-<p>正如当时那篇文章的一位读者非常正确地指出的，要一个人做这三方面的贡献很多时候是不切实际的。在很多组织里，这三件事是在三个环节中分别进行的，这三个环节的彼此割裂造成了很多问题：</p>
-<ul>
-<li>在方案环节，架构师根据客户的要求和痛点，基于自己的知识储备设计技术解决方案。他是如何分析客户的要求和痛点，他的知识储备是什么，组织里的其他人不一定知道，于是不同架构师提出的解决方案就很可能不一样。</li>
-<li>在交付环节，交付团队基于自己的知识储备来交付技术解决方案。方案背后隐含的知识储备，交付团队未必具备，所以屡屡会出现交付质量不佳的问题。不是他们没有能力，只是能力与方案的需要不符。</li>
-<li>组织感到团队的能力有不足，于是找来教练提升能力。然而教练基于的是一个标准的能力集来训练团队，这个能力集与项目实际需要的能力又不一定匹配。于是出现能力发展计划不对症、能力建设效果不明显的问题。</li>
-</ul>
-<p>由此可见，只有当方案、交付、能力三者有很好的协同，项目和团队才能健康成长。而这个协同之所以尤其困难，是因为它跨了三个非常不同的问题域（在很多组织是三个不同的功能部门），需要三种非常不同的能力，对这个居中协调者的要求非常高。</p>
-<p>所以，如果我们能用一个云上的平台来承载这个居中协调者的能力，对整个组织的交付质量和能力成长都会有帮助。这个平台的核心实际上就是<a href="/2017/4/14/stack-management-implementation/">技术栈管理</a>：针对典型的应用场景（例如企业资源服务化、移动数字化渠道），制订组织统一的技术栈，并从技术栈推导出对应的能力评估模型和刻意练习课程。于是我们就得到了以技术栈为核心的IT能力三环联动模型：</p>
-<p><img src="/assets/2017/6/23/3-circles.jpg"></p>
-<p>当提供技术方案的架构师选择一个技术栈，用这个技术栈交付软件的能力要求就被明确地传达到交付团队。交付团队不用自己去设置开发环境和持续交付流水线，用<a href="/2017/6/6/continuous-delivery-2/">云原生的持续交付</a>环境即可启动开发，并复用在技术栈上积累的交付最佳实践。通过云上的能力测评系统，能力教练可以清晰地知道哪些成员已经具备需要的能力、哪些成员能力还有差距，然后为有差距的成员提供针对性的刻意练习和指导。</p>
-<p>云计算已经成功地模糊了硬件与软件的界限，使IT的一大挑战——管理设备——极大简化。现在，对于IT的另一个大挑战：人才短缺，云计算的“XXX as a service”模式是否可以继续发挥作用？IT组织是否可能借助云计算获得优质IT人才的弹性和伸缩性？这是一个值得去探索的课题。在这个方向上，将对交付质量与效能起着重要影响的Tech Lead的能力以云平台服务的形式提供，有可能是触手可及的一个目标。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;八年前我写了一篇文章《&lt;a href=&quot;http://www.infoq.com/cn/articles/thoughtworks-practice-part8&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Tech Lead的三重人格&lt;/a&gt;》。迄今为止
     
     </summary>
     
