@@ -174,6 +174,55 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2007/4/14/歪理斜说：不存在的体系/" title="link to 歪理斜说：不存在的体系">歪理斜说：不存在的体系</a></h2>
+
+      <p class="excerpt">
+        <p>InfoQ中文站：<a href="http://www.infoq.com/cn/news/2007/04/enough-of-processes" target="_blank" rel="external">统一过程之父叫停新过程</a></p><p><i>“作为解决方案，IvarJacobson认为我们应该交流实践，而不是过程，来自团队自己的软件过程的构造块是可以装配的。实践的描述是可以独立描述的，描述可以在过程中共享，因此这个团队与别人的过程上的异同就很容易看出来。”</i></p><p>以前关注语言学的时候，我有一个理论（这句话将被作为“歪理斜说”系列的标志<sup>_</sup>）：所谓“语言的体系”是不存在的，存在的只是词汇、以及词汇的用法。譬如说，可能很难找出“英语的语法”这种东西，它是融入到词汇当中的。同样，对于——至少某些——计算机语言，语法本身是不重要的，重要的是其中的词汇可以如何使用。LISP、Smalltalk和Ruby都是这方面的例子。</p><p>还有别的例子。例如MartinFowler说“业务逻辑就是业务没有逻辑”。所谓“业务逻辑的体系”，大抵就是一个你希望套用但基本上一定会套用错的体系。还有敏捷。开大会说“我们要实施敏捷”或者“我们已经实施了敏捷”都是没有意义的，相比之下迭代的周期和有没有持续集成显得更有参考价值。这就是IvarJacobson说的，“过程已经讨论够了，多说点实践吧。”</p><p><em> </em> *</p><p><strong>关于“歪理斜说”的补充说明</strong><br><br>人的眼睛都是会选择性失明的。我们看见我们想要看见的。换句话说，当你有一个理论时，你总能找到论据来支持它。</p><p>但即便如此，如果你每周都能冒出两三个理论，其中总会有一些比较好玩的。</p><p>这就是“歪理斜说”的由来了。好玩的理论，就算是歪理谬论，扔掉了也怪可惜的，不如就收集起来吧。</p><p>（本来还想说“如果相信，责任自负”之类的话，不过细想想，其实别的文字又何尝不是一样呢？）</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="4月 14 2007" class="post-list__meta--date date">4月 14 2007</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2007/4/11/create-a-yum-repository/" title="link to Create A Yum Repository">Create A Yum Repository</a></h2>
+
+      <p class="excerpt">
+        <p><ol><li><strong>Build your<span class="caps">RPM</span>packages</strong>. Refer to “<a href="http://www.rpm.org/max-rpm/" target="_blank" rel="external">Maximum<span class="caps">RPM</span></a>”. Assume you put your<span class="caps">RPM</span>packages in /path/to/RPMS/i386/*.rpm</li><li><strong>Create a yum repository</strong>.<ul><li>cd /path/to/RPMS/..</li><li><a href="http://linux.duke.edu/projects/metadata/" target="_blank" rel="external">createrepo</a>RPMS</li><li>(Now there should be a /path/to/RPMS/repodata directory.)</li></ul></li><li><strong>Publish your repository</strong>. I wanna publish it via Apache, so I do following:<ul><li>ln -s /path/to/RPMS /var/www/RPMS</li><li>(Browse <a href="http://localhost/RPMS" target="_blank" rel="external">http://localhost/RPMS</a>, there should be “repodata” and “i386”directories.)</li></ul></li><li><strong>Enable your repository in client machine</strong>. Edit<a href="http://www.phy.duke.edu/%7Ergb/General/yum_article/yum_article/node19.html" target="_blank" rel="external">/etc/yum.conf</a>file as following:<pre>[main]cachedir=/var/cache/yumdebuglevel=2logfile=/var/log/yum.log[my-repository]name = My Repositorybaseurl=<a href="http://localhost/RPMSgpgcheck=0" target="_blank" rel="external">http://localhost/RPMSgpgcheck=0</a></pre></li></ol></p><p>Here we go! Invoke “yum list” and you should able to see all<span class="caps">RPM</span>packages you built.</p><p></p>
+
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="4月 11 2007" class="post-list__meta--date date">4月 11 2007</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2007/4/11/歪理斜说：优秀的都是病态的/" title="link to 歪理斜说：优秀的都是病态的">歪理斜说：优秀的都是病态的</a></h2>
 
       <p class="excerpt">

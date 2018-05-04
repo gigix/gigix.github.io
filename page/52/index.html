@@ -174,6 +174,54 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2007/7/5/汇总：一站式的rails环境/" title="link to 汇总：一站式的Rails环境">汇总：一站式的Rails环境</a></h2>
+
+      <p class="excerpt">
+        <p><strong>RubyWorks Production Stack:</strong><a href="http://rubyworks.rubyforge.org/" target="_blank" rel="external">http://rubyworks.rubyforge.org/</a></p><p>RubyWorks production stack is a collection of open-source software required to host a<a href="http://www.rubyonrails.org" target="_blank" rel="external">RubyOnRails</a>application on a Linux server. Supported Linux variants include RedHat Enterprise Linux 4 (both i386and x64 versions), CentOS 4 (both i386 and x64 versions), Debian 4 (Etch)and Ubuntu 7 (Feisty Fawn).</p><p>RubyWorks ProductionStack的特点是提供了方便的服务管理、强大的服务监控和可靠的多应用服务器负载均衡。此外，以RPM包/DEB包的形式发布，同时支持RedHat和Debian也是我们的一大优势。</p><p><strong>deprec:</strong><a href="http://www.deprec.org/" target="_blank" rel="external">http://www.deprec.org/</a></p><p>Deprec is a collection of automated recipes, written in Ruby, for settingup production ready Ruby on Rails servers. This includes everything fromcreating admin accounts and setting up your ssh keys to compiling and installingthe packages required to get a Rails application running on a freshly installedUbuntu 6.06.1<span class="caps">LTS</span>server.</p><p>平心而论deprec确实做得很不错。基于<a href="http://capify.org/" target="_blank" rel="external">Capistrano</a>来搭建远端的部署服务器，这个想法很巧妙，也让部署环境和Capistrano的结合更紧密。主要的缺点有两个：（1）要求部署环境安装GCC（build-essential），因为所有的gem都是在本地buildnative extension的；（2）目前为止只支持Ubuntu。</p><p><strong>LinRails:</strong><a href="http://linrails.thembid.com/" target="_blank" rel="external">http://linrails.thembid.com/</a></p><p>While developing<a href="http://www.thembid.com/" target="_blank" rel="external">ThemBid.com</a>using<a href="http://www.symfony-project.com/" target="_blank" rel="external">Symfony</a>, our developers used<a href="http://www.apachefriends.org/en/xampp.html" target="_blank" rel="external"><span class="caps">XAMPP</span></a>to standardize development environments and have something easy to install. When we started using<a href="http://www.rubyonrails.org/" target="_blank" rel="external">Ruby on Rails</a>, we could not find something similarfor Linux so LinRails was started.</p><p>从这段简介来看，LinRails认为他们在做一个Rails的开发环境，事实上他们打包的东西也确实更像是一个开发环境。同时，LinRails也只在Ubuntu上测试过。</p><p><strong>Rails Machine:</strong><a href="http://www.railsmachine.com/" target="_blank" rel="external">http://www.railsmachine.com/</a></p><p>Rails Machine provides software, services and support for commercial<a href="http://rubyonrails.com/" target="_blank" rel="external">Ruby on Rails</a>application deployments. Our primary customers are professional Ruby onRails developers that need simple and high quality solutions fordeploying their applications either in a hosted environment or internalcorporate environment.</p><p>我印象里Rails Machine是率先引入虚拟化技术（我喜欢这种大词）的stack：之所以叫“machine”，因为他们发布的stack整个是一个<a href="http://www.cl.cam.ac.uk/research/srg/netos/xen/index.html" target="_blank" rel="external">Xen</a>虚拟机，里面装着CentOS和Rails服务器所需的一切东西。这就是它的特点（优点＋缺点）所在。RailsMachine是商业软件，同时也提供<a href="http://www.railsmachine.com/hosting" target="_blank" rel="external">hosting服务</a>。</p><p><strong>FiveRuns RM-Install:</strong><a href="http://www.fiveruns.com/products/rm/install" target="_blank" rel="external">http://www.fiveruns.com/products/rm/install</a></p><p>RM-Install is a free, multi-platform, full-tested and enterprise-ready Rails stack that enables youto instantly begin developing and deploying your great Rails applications without the worry ofinstalling or maintaining the various integrated software components.</p><p>这个产品也不是开源的（尽管是免费的）。不过最困扰的还是：目前压根看不到它是什么样子。FiveRuns最吸引我的是<a href="http://www.fiveruns.com/products/rm/manage" target="_blank" rel="external">RM-Manage</a>产品，点一下“SystemBrowser”那里的图片，这样奢华的服务管理界面确实值得卖一定价钱。</p><p><strong>Engine Yard:</strong><a href="http://www.engineyard.com/" target="_blank" rel="external">http://www.engineyard.com/</a></p><p>We handle deployment and operations, so you can focus on yourapplication and your business. Smoothly scale from 1 user to 1 million.</p><p>Engine Yard就完全是shared host了，吸引我注意到它的是一篇“<a href="http://brainspl.at/xen_and_the_art_of_rails_deployment.pdf" target="_blank" rel="external">Xen And The Art of RailsDeployment</a>”的演讲稿，以及那华丽的<a href="http://www.engineyard.com/assets/2007/5/2/cluster_layers_big.jpg" target="_blank" rel="external">24层架构图</a>。也许他们是不会把自己的deployment stack卖出来的——当然更不用说开源出来了。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="7月 5 2007" class="post-list__meta--date date">7月 5 2007</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2007/7/3/awdwr-ii终于上市了/" title="link to AWDWR II终于上市了">AWDWR II终于上市了</a></h2>
+
+      <p class="excerpt">
+        <p>《<a href="http://www.dearbook.com/book/183840" target="_blank" rel="external">Web开发敏捷之道：应用Rails进行敏捷Web开发</a>》（第2版），DHH和DaveThomas等著，林芷薰译，电子工业出版社出版。</p><p>针对<a href="http://www.rubyonrails.org" target="_blank" rel="external">Rails</a>1.2版本的这个第二版，中文译本终于上市了，此时Rails的大版本仍然是1.2。好样的，芷薰；好样的，<a href="http://www.broadview.com.cn/" target="_blank" rel="external">博文视点</a>的出版团队。你们也很敏捷，就像Rails一样。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="7月 3 2007" class="post-list__meta--date date">7月 3 2007</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2007/7/1/精益设计/" title="link to 精益设计">精益设计</a></h2>
 
       <p class="excerpt">
@@ -352,54 +400,6 @@ classes that you can use:
       <div class="post-list__meta">
 
         <time datetime="6月 18 2007" class="post-list__meta--date date">6月 18 2007</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2007/6/18/抄书-erlang如何使用外部程序/" title="link to (抄书)Erlang如何使用外部程序">(抄书)Erlang如何使用外部程序</a></h2>
-
-      <p class="excerpt">
-        <p>Many programming languages allow code in foreign languages to be linked into the applicationexecutable. In Erlang, we don’t allow this for reasons of safety.1 If we were to link an externalprogram into the Erlang executable, then a mistake in the external program could easily crash theErlang system. For this reason, all foreign language code must be run outside the Erlang system inan external operating system process. The Erlang system and the external process communicate througha byte stream.</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="6月 18 2007" class="post-list__meta--date date">6月 18 2007</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2007/6/15/塑造敏捷企业：第二届“敏捷中国”技术大会/" title="link to 塑造敏捷企业：第二届“敏捷中国”技术大会">塑造敏捷企业：第二届“敏捷中国”技术大会</a></h2>
-
-      <p class="excerpt">
-        <p>软件项目需要敏捷，企业同样需要敏捷。一支敏捷的团队能够在项目中收获成功，而一家敏捷的企业能够在市场的风雨中屹立不倒。</p><p>本次<a href="http://subject.csdn.net/agilechina/" target="_blank" rel="external">“敏捷中国”技术大会</a>将会集中展现塑造敏捷企业所需的方方面面：业界领先的敏捷项目管理工具；极大提升软件开发效率的新语言和新框架；数据库领域的敏捷实践；全方位的敏捷项目管理指导；还有身临其境的亲身体验。来自开源社区和<strong>Thought</strong>Works公司的技术领导者们将带领听众全面感受敏捷企业。</p><p><strong>塑造敏捷企业，就从<a href="http://subject.csdn.net/agilechina/" target="_blank" rel="external">第二届“敏捷中国”技术大会</a>开始。</strong></p><ul><li><strong>时 间：</strong>2007年7月14日 星期六</li><li><strong>地 址：</strong>北京市海淀区知春路25号 <a href="http://www.go2map.com/htm/poi/1/10004057/1_100040576907.htm" target="_blank" rel="external">北京丽亭华苑酒店</a>（原天鸿科园） 鸿运厅</li><li><strong>联系方式</strong>：</li><ul><li>电 话： 010-51661202转286</li><li>E-mail：<a href="mailto:%20wanglin@csdn.net" target="_blank" rel="external">wanglin@csdn.net</a></li></ul></ul><p>.现在即可<a href="http://subject.csdn.net/agilechina/baoming.htm" target="_blank" rel="external">在线报名</a>。流火七月，我们相约北京。</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="6月 15 2007" class="post-list__meta--date date">6月 15 2007</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">

@@ -179,6 +179,54 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2008/6/16/why-ruby-on-rails-is-different/" title="link to 为什么Ruby on Rails不一样">为什么Ruby on Rails不一样</a></h2>
+
+      <p class="excerpt">
+        <p>一个客户正在考虑用<a href="http://www.rubyonrails.org" target="_blank" rel="external">Ruby on Rails</a>做他们的项目，但是又有些顾虑。其中一个问题颇有意思。</p><p><strong>4、网上搜索到的“初期入门，Ruby更容易，但一旦达到一定复杂度，那么Ruby的难度骤然加大。Python入门不容易，复杂的时候也不会太痛苦。rails有入门简单，深入难的问题。rails生成的目录是做什么用途？o/rmapping如何实现的？如何把数据从web中传递到数据库的。这些都是Ruby程序员早晚要面对的问题。Python则不会这样，如果搞不清楚这些，大概根本没办法开始。集成度太高的快速开发工具都有这个特点，无论是VB、Delphi，还是.net，有多少使用了半年以内的开发人员可以说清楚工程目录下面所有的文件的用途、每个文件中的语法？我相信很多很有经验的用户也未必说的清楚。”你们怎么看？</strong></p><p>第一，每个称职的程序员都必须了解那些“窗帘背后”的东西。做不出东西，和做出东西却不知道是怎么做的，两者没有区别。从某个角度，我并不认为Rails“入门简单”，因为有很多魔法需要去了解。而且使用Rails的新手们需要更严格、更紧密的指导，他们需要和有经验的程序员结对，不然他们很容易迷失而找不到最好的（或者说，最符合惯例的）解决办法。Rails程序员的高产是以初期的严格训练换来的，经过了这样的训练之后他们对项目有清晰的了解并且对代码有审美能力，所以我看不出有什么理由会“难度骤然加大”。</p><p>第二，Rails和“VB、Delphi和.NET”的最大区别在于Rails不做代码生成。代码生成是邪恶的，如果你需要维护自动生成的代码的话。而Rails不做代码生成的一个重要原因是Ruby的表达力，它能够在运行时变那些“传统语言”用代码生成才能变的一些魔术。有多少人能弄清楚一个Rails项目里所有的犄角旮旯呢？很多人都可以。因为这里没有自动生成的难懂的代码，并且每件事情都有约定俗成的惯例。不仅是自己的项目，就算别人的项目也很容易弄懂的，大家都用同样的惯例做这些事。</p><p>另一个<a href="http://blog.donews.com/two4hours/archive/2006/04/12/824201.aspx" target="_blank" rel="external">有趣的blog</a>这样说Ruby on Rails的缺点：</p><blockquote>1.Ruby由日本人创造的，尽管ROR是丹麦的小伙子David开发的</blockquote><p>如果我没理解错的话，这话的意思大概就是“Ruby on Rails没有缺点”。当然我并不这么认为，不过我确实认为它是目前看来最舒服的一个工具。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="6月 16 2008" class="post-list__meta--date date">6月 16 2008</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2008/6/16/minor-tricks/" title="link to 两个tricks">两个tricks</a></h2>
+
+      <p class="excerpt">
+        <p>今天遇到两个tricky的东西，记下来。</p><p>1. 把十六进制数写到字符串里。</p><code>[0xEF, 0xBB, 0xBF].pack(“C*”)</code><p>（这个是<a href="http://unicode.org/faq/utf_bom.html#BOM" target="_blank" rel="external"><span class="caps">UTF8</span>的BOM</a>，写在文本文件比如CSV的头上就可以让读取的软件比如Excel知道这是UTF8编码的文件。）</p><p>2. IE窗口的滚动条如果鼠标点下去也会触发<a href="http://developer.mozilla.org/en/docs/DOM:element.onclick" target="_blank" rel="external">document.onclick</a>事件，而Firefox就不会。</p><p>（不明白为什么滚动条也可以算作document的一部分。）</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="6月 16 2008" class="post-list__meta--date date">6月 16 2008</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2008/6/13/sns-on-rails-stats/" title="link to 基于Rails的SNS的比较">基于Rails的SNS的比较</a></h2>
 
       <p class="excerpt">
@@ -358,54 +406,6 @@ classes that you can use:
       <div class="post-list__meta">
 
         <time datetime="5月 12 2008" class="post-list__meta--date date">5月 12 2008</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2008/5/6/yet-another-certification/" title="link to 无利不起早">无利不起早</a></h2>
-
-      <p class="excerpt">
-        <p>我<a href="http://gigix.thoughtworkers.org/2008/4/30/thoughts-about-lean-and-agile">早说过</a>，王洋同志突然那么热心的要<a href="http://blog.csdn.net/arthur5933/archive/2008/04/29/2343988.aspx" target="_blank" rel="external">解读精益</a>，一定是为了混口饭吃。果然吧，不幸而言中。挂个好羊头，卖的是这块<a href="http://blog.csdn.net/arthur5933/archive/2008/05/05/2391923.aspx" target="_blank" rel="external">狗肉</a>。</p><blockquote><span class="caps">CSDP</span>英文为Certified Software DevelopmentProfessional，即“被认证的软件开发人员”。CSDP认证体系由IEEE-CS于2002年创建，是对全世界范围的软件工程师在知识领域、工作经验及职业道德等方面的资质认证程序。它不仅是一个对软件从业人员的专业评测体系，而且还蕴涵了软件开发与管理的诸多标准，熟悉和掌握这些软件工程国际标准对于我国软件企业走向国际市场具有重要意义。</blockquote><p>我这个人偏偏记性比较好。IEEE-CS的SWBOK无疾而终这才几年呢？现在又改头换面来认证软件开发人员了。真是把戏人人会变各有奥妙不同啊。（刚才坐在旁边的销售总监扫了一眼我的标题说：“谁不是无利不起早呢？”嗯嗯，这话说得很对。）</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="5月 6 2008" class="post-list__meta--date date">5月 6 2008</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2008/5/5/tw-news/" title="link to 新闻两则">新闻两则</a></h2>
-
-      <p class="excerpt">
-        <p>第一件，<a href="http://www.thoughtworks.com.cn" target="_blank" rel="external"><strong>Thought</strong>Works中国公司</a>被评为<a href="http://blog.csdn.net/programmer_editor/archive/2008/05/05/2392083.aspx" target="_blank" rel="external">2007年度最受程序员欢迎雇主</a>。</p><blockquote>1、聪明(Smart)是第一要素：公司的HR对猎头寻访候选人的最根本要求就是Smart。<strong>Thought</strong>Works是聪明人聚集的地方，即使工作经验再丰富、背景再好，如果不聪明，也不是他们所要的。聪明人在一起才会碰撞火花产生智慧。<p>2、平等沟通：<strong>Thought</strong>Works管理扁平，每位员工都能充分发挥积极性。平等的沟通氛围是难得一求的。没有高管独立办公室就很能说明问题。</p></blockquote><p>另一件是关于几个“聪明人”（嘿嘿…）去年做的事情：<a href="http://rubyforge.org/pipermail/cruisecontrolrb-developers/2008-May/000260.html" target="_blank" rel="external">CruiseControl.rb的下载量达到10,000次</a>。Alexey说：</p><blockquote>Once upon a time (around version 0.1) I said that building CC.rb will be worth the hassle ifitevergetsover 10k downloads. Just an arbitrary big number, yes. But yay! We are there now. :)</blockquote><p><a href="http://rubyforge.org/top/toplist.php?type=downloads" target="_blank" rel="external">最新的数字</a>是10174次下载。看见自己做的东西有人用，感觉也挺不错的。</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="5月 5 2008" class="post-list__meta--date date">5月 5 2008</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gigix.thoughtworkers.org/"/>
-  <updated>2018-03-16T04:42:37.317Z</updated>
+  <updated>2018-05-04T05:21:54.359Z</updated>
   <id>http://gigix.thoughtworkers.org/</id>
   
   <author>
@@ -16,10 +16,79 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>区块链：原理和应用解读</title>
+    <link href="http://gigix.thoughtworkers.org/2018/5/4/block-chain-introduction/"/>
+    <id>http://gigix.thoughtworkers.org/2018/5/4/block-chain-introduction/</id>
+    <published>2018-05-04T03:04:00.000Z</published>
+    <updated>2018-05-04T05:21:54.359Z</updated>
+    
+    <content type="html"><![CDATA[<p><em>（正值五四青年节之际，谨以此文送给有志青年们，祝大家多学技术，多写文章。）</em></p>
+<p>区块链进入大众视野，是从比特币开始的——准确说，是从某些人因为比特币一夜暴富的传奇开始的。然而在随后的区块链热潮中，应该说大部分人是懵逼的。百度百科上，区块链的定义是这样：</p>
+<blockquote>区块链是分布式数据存储、点对点传输、共识机制、加密算法等计算机技术的新型应用模式。所谓共识机制是区块链系统中实现不同节点之间建立信任、获取权益的数学算法。</blockquote>
+
+<p>嗯，看得懂的人请举手。</p>
+<p>一种如此难懂、绝大多数人不知道它究竟有何特点的技术，突然获得如此大的关注，怎么可能不被用于割韭菜、收智商税？（用区块链收智商税的终极形态，请看“<a href="http://www.stupidcoin.cn/" target="_blank" rel="external">傻逼链</a>”。）但是我要说，区块链不仅是一种可以被掌握技术的资本家和骗子用来割韭菜的工具，它还是可以有一些靠谱的应用场景的。</p>
+<h2 id="到底什么是区块链？"><a href="#到底什么是区块链？" class="headerlink" title="到底什么是区块链？"></a>到底什么是区块链？</h2><p>很多人大概都听过某个版本的关于“什么是区块链”的解释。但我这个版本，经过验证，没有IT背景的土老财也能听懂，因此很可能是最适合广大人文社科有志青年来听的版本。</p>
+<p>想象一个场景。某甲和某乙，两人合伙做生意。他们马上就有一个挑战：由谁来记账？这两个人必须互相信任，否则任何一个人记账，另一个人都可以怀疑他：你是否少记了一笔收入中饱私囊？这两个人如果各执一词，没有办法调解，所以他俩脆弱的信任如果破裂，生意就做不下去。</p>
+<p>现在两个人的合伙里又加入了一个某丙，三个人，情况会好转吗？并不会。丙负责记账，甲照样可以怀疑：你和乙是不是串通一气的？你们是否少记收入自己私吞了？</p>
+<p>那么大家是怎么解决这个信任危机的呢？办法有两个。第一个，是大家常见的办法：新来的丙是个持证的会计师，那么大家都可以信任他了。我们深究一下，为什么这种方式可行？为什么丙拿一本证书，就突然建立起了信任？原因当然是，丙如果被发现营私舞弊，他可能被吊销会计师资格，甚至可能身陷囹圄。这种风险太大，使得丙不太可能在常规的生意中这么做。而这种风险（换个角度，即围绕这本证书的信任）是由谁来背书的？答案是政府。政府用国家机器的暴力力量确保了，绝大多数情况下，会计师不会营私舞弊，会计师记的账是可以信任的。这个信任的背后，是枪在背书。</p>
+<p>有了这个认知，我们可以去看看社会上绝大多数的信任机制，你会发现，几乎所有陌生人之间的契约和信任，都是国家机器、是枪在背书。为什么我拿钱可以买到面包？纸币的背后是国家的枪在保障，任何人一定认可它的交换价值。为什么我刷个信用卡也可以买到面包？招商银行的背后是央行在保障它的承兑能力，央行的背后是国家的枪。为什么我在淘宝上买的东西不满意就可以退货？因为货款在支付宝里，支付宝背后有银行保障它的承兑能力，最终背后还是国家的枪。</p>
+<p>基于枪建立起来的信任机制足以满足大多数商业场景。但假如这个三人合伙做的不是合法生意，他们不想让国家机器知道这个生意，他们的信任危机又该如何解决呢？这里有第二种方法：三个人各记一本帐，分别都记录所有交易。如果帐对不上，以多数人相同的记录为准。当然，在三个人的情景下，这种机制能建立的信任还是很有限，因为你只要收买一个人就可以占到多数。但如果参与记账的有成百上千人，收买大多数的成本就会很高。随着参与记账的人越多，整套记账机制的可信度就越高。</p>
+<p>这种“每个人都记一本账”的机制，就叫“分布式账本”。围绕着分布式账本建立的信任，不需要国家的枪背书，也不会因为任何一个人的腐化或者退出而破坏。所以我们说，这是一种“去中心化”的信任机制。</p>
+<p>同时，虽然分布式账本是不需要国家的枪了，但分布式账本能实现，依赖于一个关键技术：所有的记账能迅速同步到所有账本。区块链就是实现分布式账本的关键技术。在这种技术中，每一次交易被记录为一“块”（block）数据，这样的“块”又彼此串联成一条“链”（chain），任何一个参与者都可以从任何一次交易的“块”牵出整条“链”，从而得到完整的分布式账本，这就是“区块链”（blockchain）这个名字的由来。</p>
+<h2 id="比特币的价值从何而来？"><a href="#比特币的价值从何而来？" class="headerlink" title="比特币的价值从何而来？"></a>比特币的价值从何而来？</h2><p>区块链的应用，最广为人知的无疑是比特币。但是只看各种正式的比特币介绍，你恐怕看不出为什么它有如此高的价值。比如说，一个正式的介绍可能会说，比特币是一种去中心的货币，它不需要国家为它的信用背书。但是，货币从来是用枪背书的，枪杆子越硬，货币就越值钱。一个不需要枪杆子背书的货币反而很值钱，这个逻辑是不通的。而这个不通的逻辑大家还能讲得这么热闹，恨不得把民主自由人权隐私全都放上来，说这个没有枪杆子背书的货币就应该值钱，这是一个很奇怪的现象。</p>
+<p>当一个东西很值钱但是大多数人都看不懂它为什么很值钱，大概会是两种情况。第一，有人在搅浑水养韭菜。第二，有些关键信息没有说出来。而比特币的情况，两者皆是。我们不谈养韭菜的部分，谈谈那些没有说出来的关键信息是什么。</p>
+<p>前面说了，分布式账本背书的去中心化信任机制，是在一个前提下有意义的：这个账本上记的账，参与交易的各方不想让国家机器知道。不然直接使用枪杆子背书的信任机制就好了。比如我们说比特币是一种货币（当然比特币实际上不是货币，但无所谓了，既然大家都说它是去中心化的货币，那就当它是货币好了），货币是用来买东西的，那么你买什么东西需要一种去中心化的、国家机器不插手的机制来建立信任呢？或者说，你买什么东西不能到淘宝去买（顺便叫卖家给你开张发票）呢？</p>
+<p>毒品。枪支。儿童色情。人体器官。代孕。各种只能在黑市上交易的非法商品。</p>
+<p>这就是比特币的拥护者们不肯/不愿/不能说出来的关键信息：比特币的价值，就是黑市的流动性。黑市对流动性的需求越大，比特币就会越值钱。（想炒币的有志青年请牢记这条基本价值法则。）</p>
+<p>带着这个知识，再反观国内的区块链热潮，你就会明白为什么我说现在国内做区块链项目的有一个算一个全都是割韭菜收智商税的骗子。为什么呢？现在你想做某个事情，做这个事情你需要一种信任机制，而这种信任机制你不能靠国家机器的枪杆子来给你背书，这意味着什么？你敢把这件事拿到互联网上来宣传，你的网站上还打着工信部的备案编号，然后你跟我说你做的这件事非得有去中心化的信任机制才行，不觉得自相矛盾吗？</p>
+<h2 id="作为写作平台的区块链"><a href="#作为写作平台的区块链" class="headerlink" title="作为写作平台的区块链"></a>作为写作平台的区块链</h2><p>还别说，我在国内还真的看到过靠谱的区块链应用。比如说，如果把党建信息承载在区块链上（而不是保存在一个数据库里），效果是什么呢？效果是，假如有一天中国共产党的执政党地位被反动派颠覆了，党组织被破坏，党员被清洗，党组织的活动可以立即转入地下，整个党建链上记录的党组织信息不可伪造、不可篡改、不可删除。万一有那一天，党建链就是传递革命薪火的火种。这事情现在已经有单位在做了，可见我党的先进性和忧患意识。</p>
+<p>最近北大某同学的一篇文章又让我们看到了另一种靠谱的区块链应用。大家可以打开下面这个链接：<br><a href="https://etherscan.io/tx/0x2d6a7b0f6adeff38423d4c62cd8b6ccb708ddad85da5d3d06756ad4d8a04a6a2" target="_blank" rel="external">https://etherscan.io/tx/0x2d6a7b0f6adeff38423d4c62cd8b6ccb708ddad85da5d3d06756ad4d8a04a6a2</a></p>
+<p><img src="/assets/2018/5/4/1.png"></p>
+<p>这是以太币（跟比特币相当的另一种去中心化数字货币）的一次交易记录。非常平淡的一次交易，这次交易本身的编号是“0x2d6a7b0f6adeff38423d4c62cd8b6ccb708ddad85da5d3d06756ad4d8a04a6a2”（以“0x”开头表示这是一个16进制的数字），它发生的时间是“Apr-23-2018 07:02:20 AM +UTC”，从编号“0x44938b01da1feb3f6fa1cf38870ee564e25d9bf3”的钱包转出，转入编号“0x44938b01da1feb3f6fa1cf38870ee564e25d9bf3”的钱包，转账的金额是“0 Ether ($0.00)”——对的，没真的打钱，不过没关系，金额为0也可以发起一次交易。所以真的是一次很无聊的交易。</p>
+<p>这个交易真正有趣的部分，在于它挂载的数据，也就是下面的“Input Data”字段。区块链的每个“块”是有一定容量的，交易者可以把与这次交易相关的备注信息放进去，备注信息也会随交易块同步到所有的分布式账本。现在，在这个交易的“Input Data”字段，你可以看到一长串16进制数字：</p>
+<p><img src="/assets/2018/5/4/2.png"></p>
+<p>如果你点击下面的“Convert To UTF8”按钮，你就会看到一篇熟悉的文章。我把这个探索的乐趣留给读者自己了，一定要去点哟。</p>
+<p>这篇文章，现在已经同步到了全世界上千万个分布式账本。除非收买其中超过50%的人，否则这篇文章无法篡改、无法删除。也许你在豆瓣的转发会被删，也许这个查看以太币交易信息的网站会被墙，但是这篇文章会一直在那里，国外能看到，翻个墙也能看到，谁也删不掉，包括你自己也删不掉，哪怕你妈跪下来求你也删不掉。</p>
+<p>所以，各位有志青年请记住，如果下次你想写一篇文章，并且你确定一定以及肯定绝对不会想删除这篇文章，不管是辅导员、校长、你妈、还是别的谁来求你，你都不会删除这篇文章，那么你可以把以太币、比特币之类的区块链平台用来做你的写作平台。你把文章发表到一次区块链交易的备注信息里，然后给大家发一个查看这次交易的链接。</p>
+<p>要我说，这才是区块链技术正确的打开方式。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;em&gt;（正值五四青年节之际，谨以此文送给有志青年们，祝大家多学技术，多写文章。）&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;区块链进入大众视野，是从比特币开始的——准确说，是从某些人因为比特币一夜暴富的传奇开始的。然而在随后的区块链热潮中，应该说大部分人是懵逼的。百度百科上，区块链的定义是
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>月照西乡</title>
+    <link href="http://gigix.thoughtworkers.org/2018/4/13/leaving-thoughtworks/"/>
+    <id>http://gigix.thoughtworkers.org/2018/4/13/leaving-thoughtworks/</id>
+    <published>2018-04-13T03:04:00.000Z</published>
+    <updated>2018-04-13T06:25:04.579Z</updated>
+    
+    <content type="html"><![CDATA[<p>终于还是到了这一天。过去十二年零四个月里，我一直保持着每半年更新一次简历的习惯。我跟每一个</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;终于还是到了这一天。过去十二年零四个月里，我一直保持着每半年更新一次简历的习惯。我跟每一个&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>浅谈大数据平台基建的逻辑</title>
     <link href="http://gigix.thoughtworkers.org/2018/3/16/infrastructure-of-big-data/"/>
     <id>http://gigix.thoughtworkers.org/2018/3/16/infrastructure-of-big-data/</id>
-    <published>2018-03-16T05:04:00.000Z</published>
+    <published>2018-03-16T03:04:00.000Z</published>
     <updated>2018-03-16T04:42:37.317Z</updated>
     
     <content type="html"><![CDATA[<p>这篇文章主要目的是面向初接触大数据的朋友简单介绍大数据平台基础建设所需要的各个模块以及缘由。</p>
@@ -77,7 +146,7 @@
     <title>敏捷在中国这十五年</title>
     <link href="http://gigix.thoughtworkers.org/2018/3/7/agile-in-china-fifteen-years/"/>
     <id>http://gigix.thoughtworkers.org/2018/3/7/agile-in-china-fifteen-years/</id>
-    <published>2018-03-07T05:04:00.000Z</published>
+    <published>2018-03-07T03:04:00.000Z</published>
     <updated>2018-03-07T04:12:07.196Z</updated>
     
     <content type="html"><![CDATA[<p><em>题记：2002年3月，《程序员》杂志发表了《极限编程》技术专题。以此为标记，敏捷进入中国已经十六年了。这篇文章是我去年为《程序员》写的年终回顾文章，发表于《程序员》2018年第1期。</em></p>
@@ -106,7 +175,7 @@
     <title>数字化企业的实验基础设施</title>
     <link href="http://gigix.thoughtworkers.org/2018/2/27/dps-experimental-infrastructure/"/>
     <id>http://gigix.thoughtworkers.org/2018/2/27/dps-experimental-infrastructure/</id>
-    <published>2018-02-27T05:04:00.000Z</published>
+    <published>2018-02-27T03:04:00.000Z</published>
     <updated>2018-02-27T13:29:42.730Z</updated>
     
     <content type="html"><![CDATA[<p>在<a href="/2017/4/25/ditigal-platform-strategy-intro/">前文</a>中我们说到，传统企业在逐步建设自己的数字平台过程中，需要抓住交付基础设施、API和架构治理、数据自服务、创新实验基础设施和监控体系、用户触点技术这五个支柱。今天我们讨论的主题是<a href="https://www.thoughtworks.com/digital-platform-strategy" target="_blank" rel="external">数字平台战略</a>的第四个支柱“实验基础设施”，看看一个倡导消除摩擦、建设生态、推动创新的数字化平台如何赋能快速、有针对性的商业实验。</p>
@@ -182,7 +251,7 @@
     <title>机器学习项目如何管理：工作内容</title>
     <link href="http://gigix.thoughtworkers.org/2018/2/23/managing-ml-projects/"/>
     <id>http://gigix.thoughtworkers.org/2018/2/23/managing-ml-projects/</id>
-    <published>2018-02-23T05:01:00.000Z</published>
+    <published>2018-02-23T03:01:00.000Z</published>
     <updated>2018-02-23T06:32:05.632Z</updated>
     
     <content type="html"><![CDATA[<p><a href="/2018/1/28/machine-learning-for-managers/">前一篇文章</a>介绍了机器学习的基本过程，然后讨论了如何对机器学习项目设置期望的问题。我们了解到，度量准确率的指标可以有多种，需要根据应用场景来选择。一旦选好了度量指标，接下来就可以围绕这个指标来划分任务、监控进度、管理风险。</p>
@@ -245,7 +314,7 @@
     <title>精准投放的原理及其担忧</title>
     <link href="http://gigix.thoughtworkers.org/2018/2/17/precise-deliverying/"/>
     <id>http://gigix.thoughtworkers.org/2018/2/17/precise-deliverying/</id>
-    <published>2018-02-17T05:01:00.000Z</published>
+    <published>2018-02-17T03:01:00.000Z</published>
     <updated>2018-02-17T05:37:19.406Z</updated>
     
     <content type="html"><![CDATA[<p>从WWW网站发源之初，网站的经营者们就清楚地认识到，自己经营的是一份媒体，就跟报刊杂志一样。媒体的收入，第一是来自读者付费，第二也是更主要的，是来自广告。于是站长们在自己的网站页面上开辟出或大或小、或纵或横的广告位，广告主则可以采购广告位。据笔者亲眼所见，迟至2001年，中国很多网站的广告销售方式仍然是由销售人员拿着一份打印出来的“刊例”（这个词也同样是来自报刊出版领域），直接向广告主介绍。购买广告位的方式，也通常是一家广告主承包一个广告位一段时间（通常是几天，有时长达几周），只有在最热门的广告位（例如首页顶部Banner）才有简单的轮换机制。广告收费是按照广告位与放置时长计算，网站几乎不向广告主反馈投放的效果。简而言之，这是在线广告的初创阶段，网站基本上是被当做报刊来经营的。</p>
@@ -285,7 +354,7 @@
     <title>机器学习项目如何管理：设置期望</title>
     <link href="http://gigix.thoughtworkers.org/2018/1/28/machine-learning-for-managers/"/>
     <id>http://gigix.thoughtworkers.org/2018/1/28/machine-learning-for-managers/</id>
-    <published>2018-01-28T05:01:00.000Z</published>
+    <published>2018-01-28T03:01:00.000Z</published>
     <updated>2018-01-27T01:17:48.962Z</updated>
     
     <content type="html"><![CDATA[<p>我在之前的一篇文章中提到，<a href="/2017/12/12/ml-project-management-current-situation/">机器学习项目如何管理</a>，目前在行业内是一个普遍存在的难题。具体而言，对于这类项目，我们需要一套行之有效的工作办法，帮助一线工作者：(1)知道什么时候该做什么事；(2)知道什么时候该看什么指标；(3)知道什么时候可能有什么风险。这样一套工作办法的第一步，就是对一个机器学习项目设置合理的期望。</p>
@@ -334,7 +403,7 @@
     <title>数字化企业的数据自服务</title>
     <link href="http://gigix.thoughtworkers.org/2018/1/13/dps-self-service-data/"/>
     <id>http://gigix.thoughtworkers.org/2018/1/13/dps-self-service-data/</id>
-    <published>2018-01-13T05:04:00.000Z</published>
+    <published>2018-01-13T03:04:00.000Z</published>
     <updated>2018-01-13T07:34:26.036Z</updated>
     
     <content type="html"><![CDATA[<p>在<a href="/2017/4/25/ditigal-platform-strategy-intro/">前文</a>中我们说到，传统企业在逐步建设自己的数字平台过程中，需要抓住交付基础设施、API和架构治理、数据自服务、创新实验基础设施和监控体系、用户触点技术这五个支柱。今天我们讨论的主题是“数据自服务”，看看一个倡导消除摩擦、建设生态、推动创新的数字化平台如何处理数据。</p>
@@ -409,7 +478,7 @@
     <title>2017年读过的好书</title>
     <link href="http://gigix.thoughtworkers.org/2018/1/1/2017-readings/"/>
     <id>http://gigix.thoughtworkers.org/2018/1/1/2017-readings/</id>
-    <published>2018-01-01T05:01:00.000Z</published>
+    <published>2018-01-01T03:01:00.000Z</published>
     <updated>2018-01-01T04:09:32.786Z</updated>
     
     <content type="html"><![CDATA[<p>今年读了66本书，不过有很大部分是工作需要。而且不知道什么原因，中间读的很多关于内亚性的书都只标了四星……</p>
@@ -448,38 +517,10 @@
   </entry>
   
   <entry>
-    <title>机器学习项目如何管理：现状</title>
-    <link href="http://gigix.thoughtworkers.org/2017/12/12/ml-project-management-current-situation/"/>
-    <id>http://gigix.thoughtworkers.org/2017/12/12/ml-project-management-current-situation/</id>
-    <published>2017-12-12T05:01:00.000Z</published>
-    <updated>2017-12-08T12:23:10.376Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://www.atlassian.com/blog/software-teams/3-ways-ai-will-change-project-management-better" target="_blank" rel="external">Atlassian今年4月的一篇博客</a>提出，到2020年有87%的Jira用户认为他们的工作会被AI改变。具体到项目管理上，Atlassian的观点是，AI首先会作为项目管理助手进入我们的视野，然后透过数据拓展我们对项目的理解，更进一步还能通过主动猜测、倡导优秀实践、创造新的元数据层等方式弥补数据的缺失，最终对项目提出有益的建议。</p>
-<p><img src="https://orhachaim.co.il/wp-content/uploads/thumbs/1-338ubis538emc7477jajgq.jpg"></p>
-<p>然而愿望是美好的现实是骨感的。还不要说在项目管理中使用机器学习，关于机器学习的项目应该怎么管理，业界似乎已经有很多不甚圆满的经历。例如一位创业者谈他们如何<a href="https://medium.com/xeneta/boosting-sales-with-machine-learning-fbcf2e618be3" target="_blank" rel="external">用自然语言处理技术推动销售</a>。看起来他们尝试了各种不同的数据源、多种特征工程的方法、以及多种算法，接下来还有很多想要尝试的东西。从这个故事中我们看不到的是，他们给自己设置的目标是什么、目前的进展是什么、基于什么原则在指导每一次的尝试。简而言之，这位创业者的机器学习项目并没有任何有效的管理。</p>
-<p>另一个<a href="https://zhuanlan.zhihu.com/p/26435192" target="_blank" rel="external">同样缺乏管理的机器学习项目</a>就没有那么幸运。年薪百万的数据科学家被认为“没有给公司带来实际价值。高管们不知道他们具体做了什么，业务人员每周都给他们提出预测需求，却很少能在短时间得到回应”。与前面一个故事相比，这里的数据科学家需要在别人的管理之下开展工作，管理方法的欠缺无疑是矛盾累积和激化的原因之一。针对这个故事，作者提出了五点非常抽象的建议：1.从最简单的模型开始；2.探索更多问题；3.用全部的数据和特征训练模型；4.业务驱动模型；5.专注于自动化。我认为这几点并不能引导这家公司的管理者更有效地管理他们的数据科学家。</p>
-<p>这种缺乏管理方法的现象，一个重要的原因是典型的IT管理者对机器学习缺乏必要的了解（甚至更糟糕，有一些似是而非的半吊子的了解）。目前而论，咨询公司和商业/科技传媒在普及“必要的了解”方面并没有起到很好的作用。<a href="https://www.mckinsey.com/industries/high-tech/our-insights/an-executives-guide-to-machine-learning" target="_blank" rel="external">麦肯锡2015年的文章</a>说，关于机器学习，企业领导层需要了解的问题还是“传统行业能通过机器学习获得什么新的洞察”这种高层面的，提出的建议也是“机器学习要分描述、预测、处方三步走”这样的宏观建议。当然麦记的建议历来是面向CxO级别的，不落到项目管理层面也很正常。</p>
-<p>HBR也在2015年讨论“<a href="https://hbr.org/2015/07/what-every-manager-should-know-about-machine-learning" target="_blank" rel="external">每个管理者都需要了解的机器学习知识</a>”，提出了一些很重要的点：不光需要大数据、还需要广泛的数据；机器学习只是做预测、不提供因果性；要区分信号与噪音（还提到了特征提取、规则化、交叉验证等具体技术）；以及一些容易犯的错误（例如强行归因、不恰当的期望、迷信大数据量、对人的判断利用不足等）。但这篇文章的问题在于，它没有提供一套成型的工作方法。这些技术应该什么时候用，这些错误会在什么时候犯，文章没有提供出来，于是读者仍然被置于一个“等你该知道的时候你就知道了”的状态，很难对项目管理带来立竿见影的改变。</p>
-<p><a href="https://machinelearningmastery.com/how-to-layout-and-manage-your-machine-learning-project/" target="_blank" rel="external">2014年的一篇博客</a>着重谈机器学习项目的布置，包括应该有哪些目录、数据怎么管理、代码怎么组织等非常具体的实践。作者提出了项目流程的几个原则：透明；可维护；模块化；可迁移；可复制；效率。关于项目的可复制性，作者也从工程实践角度<a href="https://machinelearningmastery.com/reproducible-machine-learning-results-by-default/" target="_blank" rel="external">提出了10条原则</a>。在工程实践这个角度，这位作者给出的指导原则具有很好的可操作性。</p>
-<p>但是在项目管理角度，行业仍在继续探索。今年7月InfoQ的一篇文章讨论<a href="http://www.infoq.com/cn/articles/agile-development-of-artificial-intelligence-applications" target="_blank" rel="external">如何开发机器学习的MVP</a>，作者总结了四个思考步骤：第一问题是否能转化成分类/回归的问题；第二目标是否是容易获取、客观无偏差的数据；第三是问题的预测目标，因果关系是什么；第四是这个问题是不是一个真的业务需求。这也是几个很重要的思考点，不足之处仍然是缺乏系统性，并且缺落地的方法指导。</p>
-<p>有一篇博客提出了很有意义的问题：<a href="https://zhuanlan.zhihu.com/p/20729176" target="_blank" rel="external">机器学习项目为什么未实现敏捷开发</a>？作者发现算法类项目流程漫长，并结合之前实践Scrum的经验，提出了一些可能可以优化的方面，尤其是在团队组织形式上，是否可以参考敏捷的全功能团队经验。作者并且提出了一个重要的问题：对算法模型的评估是否必须在线上进行？或者换个角度来问这个问题：如何降低线下模型评估的偏差程度？</p>
-<p>敏捷软件开发之所以成为一种被广泛接受的软件开发方法论，不仅仅是因为它有高阶的思想支撑和指导原则，更重要的是它有一系列非常具体、非常可落地的实践。这些实践对于一线工作者的意义在于：(1)知道什么时候该做什么事；(2)知道什么时候该看什么指标；(3)知道什么时候可能有什么风险。机器学习类的项目要真正普及，也会需要这么一套具体可落地的实践指导。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;https://www.atlassian.com/blog/software-teams/3-ways-ai-will-change-project-management-better&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;At
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>保持现状与有意为之的无知</title>
     <link href="http://gigix.thoughtworkers.org/2017/12/12/minded-unmindedness/"/>
     <id>http://gigix.thoughtworkers.org/2017/12/12/minded-unmindedness/</id>
-    <published>2017-12-12T05:01:00.000Z</published>
+    <published>2017-12-12T03:01:00.000Z</published>
     <updated>2017-12-11T10:43:43.343Z</updated>
     
     <content type="html"><![CDATA[<p><em>（本文同时发表于<a href="http://tootopia.me/article/8761" target="_blank" rel="external">土逗公社</a>）</em></p>
@@ -514,10 +555,38 @@
   </entry>
   
   <entry>
+    <title>机器学习项目如何管理：现状</title>
+    <link href="http://gigix.thoughtworkers.org/2017/12/12/ml-project-management-current-situation/"/>
+    <id>http://gigix.thoughtworkers.org/2017/12/12/ml-project-management-current-situation/</id>
+    <published>2017-12-12T03:01:00.000Z</published>
+    <updated>2017-12-08T12:23:10.376Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://www.atlassian.com/blog/software-teams/3-ways-ai-will-change-project-management-better" target="_blank" rel="external">Atlassian今年4月的一篇博客</a>提出，到2020年有87%的Jira用户认为他们的工作会被AI改变。具体到项目管理上，Atlassian的观点是，AI首先会作为项目管理助手进入我们的视野，然后透过数据拓展我们对项目的理解，更进一步还能通过主动猜测、倡导优秀实践、创造新的元数据层等方式弥补数据的缺失，最终对项目提出有益的建议。</p>
+<p><img src="https://orhachaim.co.il/wp-content/uploads/thumbs/1-338ubis538emc7477jajgq.jpg"></p>
+<p>然而愿望是美好的现实是骨感的。还不要说在项目管理中使用机器学习，关于机器学习的项目应该怎么管理，业界似乎已经有很多不甚圆满的经历。例如一位创业者谈他们如何<a href="https://medium.com/xeneta/boosting-sales-with-machine-learning-fbcf2e618be3" target="_blank" rel="external">用自然语言处理技术推动销售</a>。看起来他们尝试了各种不同的数据源、多种特征工程的方法、以及多种算法，接下来还有很多想要尝试的东西。从这个故事中我们看不到的是，他们给自己设置的目标是什么、目前的进展是什么、基于什么原则在指导每一次的尝试。简而言之，这位创业者的机器学习项目并没有任何有效的管理。</p>
+<p>另一个<a href="https://zhuanlan.zhihu.com/p/26435192" target="_blank" rel="external">同样缺乏管理的机器学习项目</a>就没有那么幸运。年薪百万的数据科学家被认为“没有给公司带来实际价值。高管们不知道他们具体做了什么，业务人员每周都给他们提出预测需求，却很少能在短时间得到回应”。与前面一个故事相比，这里的数据科学家需要在别人的管理之下开展工作，管理方法的欠缺无疑是矛盾累积和激化的原因之一。针对这个故事，作者提出了五点非常抽象的建议：1.从最简单的模型开始；2.探索更多问题；3.用全部的数据和特征训练模型；4.业务驱动模型；5.专注于自动化。我认为这几点并不能引导这家公司的管理者更有效地管理他们的数据科学家。</p>
+<p>这种缺乏管理方法的现象，一个重要的原因是典型的IT管理者对机器学习缺乏必要的了解（甚至更糟糕，有一些似是而非的半吊子的了解）。目前而论，咨询公司和商业/科技传媒在普及“必要的了解”方面并没有起到很好的作用。<a href="https://www.mckinsey.com/industries/high-tech/our-insights/an-executives-guide-to-machine-learning" target="_blank" rel="external">麦肯锡2015年的文章</a>说，关于机器学习，企业领导层需要了解的问题还是“传统行业能通过机器学习获得什么新的洞察”这种高层面的，提出的建议也是“机器学习要分描述、预测、处方三步走”这样的宏观建议。当然麦记的建议历来是面向CxO级别的，不落到项目管理层面也很正常。</p>
+<p>HBR也在2015年讨论“<a href="https://hbr.org/2015/07/what-every-manager-should-know-about-machine-learning" target="_blank" rel="external">每个管理者都需要了解的机器学习知识</a>”，提出了一些很重要的点：不光需要大数据、还需要广泛的数据；机器学习只是做预测、不提供因果性；要区分信号与噪音（还提到了特征提取、规则化、交叉验证等具体技术）；以及一些容易犯的错误（例如强行归因、不恰当的期望、迷信大数据量、对人的判断利用不足等）。但这篇文章的问题在于，它没有提供一套成型的工作方法。这些技术应该什么时候用，这些错误会在什么时候犯，文章没有提供出来，于是读者仍然被置于一个“等你该知道的时候你就知道了”的状态，很难对项目管理带来立竿见影的改变。</p>
+<p><a href="https://machinelearningmastery.com/how-to-layout-and-manage-your-machine-learning-project/" target="_blank" rel="external">2014年的一篇博客</a>着重谈机器学习项目的布置，包括应该有哪些目录、数据怎么管理、代码怎么组织等非常具体的实践。作者提出了项目流程的几个原则：透明；可维护；模块化；可迁移；可复制；效率。关于项目的可复制性，作者也从工程实践角度<a href="https://machinelearningmastery.com/reproducible-machine-learning-results-by-default/" target="_blank" rel="external">提出了10条原则</a>。在工程实践这个角度，这位作者给出的指导原则具有很好的可操作性。</p>
+<p>但是在项目管理角度，行业仍在继续探索。今年7月InfoQ的一篇文章讨论<a href="http://www.infoq.com/cn/articles/agile-development-of-artificial-intelligence-applications" target="_blank" rel="external">如何开发机器学习的MVP</a>，作者总结了四个思考步骤：第一问题是否能转化成分类/回归的问题；第二目标是否是容易获取、客观无偏差的数据；第三是问题的预测目标，因果关系是什么；第四是这个问题是不是一个真的业务需求。这也是几个很重要的思考点，不足之处仍然是缺乏系统性，并且缺落地的方法指导。</p>
+<p>有一篇博客提出了很有意义的问题：<a href="https://zhuanlan.zhihu.com/p/20729176" target="_blank" rel="external">机器学习项目为什么未实现敏捷开发</a>？作者发现算法类项目流程漫长，并结合之前实践Scrum的经验，提出了一些可能可以优化的方面，尤其是在团队组织形式上，是否可以参考敏捷的全功能团队经验。作者并且提出了一个重要的问题：对算法模型的评估是否必须在线上进行？或者换个角度来问这个问题：如何降低线下模型评估的偏差程度？</p>
+<p>敏捷软件开发之所以成为一种被广泛接受的软件开发方法论，不仅仅是因为它有高阶的思想支撑和指导原则，更重要的是它有一系列非常具体、非常可落地的实践。这些实践对于一线工作者的意义在于：(1)知道什么时候该做什么事；(2)知道什么时候该看什么指标；(3)知道什么时候可能有什么风险。机器学习类的项目要真正普及，也会需要这么一套具体可落地的实践指导。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;https://www.atlassian.com/blog/software-teams/3-ways-ai-will-change-project-management-better&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;At
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>数据管理平台（DMP）综述</title>
     <link href="http://gigix.thoughtworkers.org/2017/12/3/dmp-overview/"/>
     <id>http://gigix.thoughtworkers.org/2017/12/3/dmp-overview/</id>
-    <published>2017-12-03T05:01:00.000Z</published>
+    <published>2017-12-03T03:01:00.000Z</published>
     <updated>2017-12-02T16:55:25.258Z</updated>
     
     <content type="html"><![CDATA[<h2 id="在线广告技术生态"><a href="#在线广告技术生态" class="headerlink" title="在线广告技术生态"></a>在线广告技术生态</h2><p>ADN（广告网络）批量地运营媒体的广告位资源，按照人群或上下文标签售卖给需求方，并用竞价的方式决定流量分配。广告网络的结算以按点击付费（Cost per Click，CPC）的方式为主。面向多个ADN或媒体按人群一站式采买广告并优化投入产出比的需求方产品叫交易终端（Trading Desk，TD）。</p>
@@ -603,7 +672,7 @@
     <title>智能技术的伦理风险：研究框架</title>
     <link href="http://gigix.thoughtworkers.org/2017/11/28/intelligent-disempowerment-research-framework/"/>
     <id>http://gigix.thoughtworkers.org/2017/11/28/intelligent-disempowerment-research-framework/</id>
-    <published>2017-11-28T05:01:00.000Z</published>
+    <published>2017-11-28T03:01:00.000Z</published>
     <updated>2017-11-26T16:16:23.771Z</updated>
     
     <content type="html"><![CDATA[<p>在<a href="/2017/11/27/intelligent-disempowerment/">前一篇文章</a>中我们已经提到，当下常见的关于智能技术伦理危害与风险的讨论总体上强调人工智能对人类整体的影响，并不凸显其对当前社会不同人群造成不同影响的情况，并且在分析这些风险时往往聚焦于技术层面，而并未将社会和政治层面的因素纳入考虑。从这个角度出发的分析难免失于片面，无法充分认识智能技术的潜在风险。由于缺乏一个全面的、结合科技与人文视角的研究框架，使得对于这一问题的研究普遍零散而不成体系，且容易陷入“机器 vs. 人类”的未来学视角。</p>
@@ -644,7 +713,7 @@
     <title>智能技术的伦理风险</title>
     <link href="http://gigix.thoughtworkers.org/2017/11/27/intelligent-disempowerment/"/>
     <id>http://gigix.thoughtworkers.org/2017/11/27/intelligent-disempowerment/</id>
-    <published>2017-11-27T05:01:00.000Z</published>
+    <published>2017-11-27T03:01:00.000Z</published>
     <updated>2017-11-26T16:13:38.033Z</updated>
     
     <content type="html"><![CDATA[<p><em>（旧文一篇，已发表于<a href="https://zhuanlan.zhihu.com/p/25854862" target="_blank" rel="external">土逗公社</a>）</em></p>
@@ -688,7 +757,7 @@
     <title>数字化转型与平台战略</title>
     <link href="http://gigix.thoughtworkers.org/2017/11/15/digitization-and-digital-platform/"/>
     <id>http://gigix.thoughtworkers.org/2017/11/15/digitization-and-digital-platform/</id>
-    <published>2017-11-15T05:01:00.000Z</published>
+    <published>2017-11-15T03:01:00.000Z</published>
     <updated>2017-11-15T03:52:48.000Z</updated>
     
     <content type="html"><![CDATA[<p>数字化浪潮对传统行业的冲击已经被越来越多的企业领导者所感知。据《<a href="https://hbr.org/2016/03/the-industries-that-are-being-disrupted-the-most-by-digital" target="_blank" rel="external">哈佛商业评论</a>》的调查，半数以上的企业高管认为自己的业务将在12个月内受到数字化浪潮较大程度的冲击，其中媒体、通信、消费者金融服务、零售、科技、保险、消费者产品、专业服务和教育等10个行业受到的影响最大。</p>
@@ -752,7 +821,7 @@
     <title>企业IT的经营模式及其与企业架构师的关系</title>
     <link href="http://gigix.thoughtworkers.org/2017/11/10/operating-models/"/>
     <id>http://gigix.thoughtworkers.org/2017/11/10/operating-models/</id>
-    <published>2017-11-10T05:01:00.000Z</published>
+    <published>2017-11-10T03:01:00.000Z</published>
     <updated>2017-11-11T13:36:48.000Z</updated>
     
     <content type="html"><![CDATA[<p>企业IT的经营模式可以由两个维度来定义。第一个维度是标准化，第二个维度是整合。这两个维度划分出的四个象限，定义了四种不同的经营模式。不同的经营模式，有各自不同的聚焦重心，对企业架构师的关注点也有不同的要求。</p>
@@ -788,7 +857,7 @@
     <title>从海尔模式看数字化平台</title>
     <link href="http://gigix.thoughtworkers.org/2017/10/17/haier-and-digital-platform/"/>
     <id>http://gigix.thoughtworkers.org/2017/10/17/haier-and-digital-platform/</id>
-    <published>2017-10-17T05:01:00.000Z</published>
+    <published>2017-10-17T03:01:00.000Z</published>
     <updated>2017-10-17T04:11:19.000Z</updated>
     
     <content type="html"><![CDATA[<p>关于数字化、网络化转型的目标，海尔的定义是：企业无边界、管理无领导、供应链无尺度。企业无边界，意味着要让全球第一流的资源进入海尔，并能够持续动态优化。管理无领导，即打破科层制组织，让员工与用户零距离连接，拥有自主权，快速响应市场，最终实现“无为而治”的最高境界。供应链无尺度，要探索按需设计、按需制造和按需配送的体系，实现从大规模制造向大规模定制的转变。</p>
@@ -829,7 +898,7 @@
     <title>毕业设计中使用敏捷方法的尝试</title>
     <link href="http://gigix.thoughtworkers.org/2017/8/23/agile-in-graduation-projects/"/>
     <id>http://gigix.thoughtworkers.org/2017/8/23/agile-in-graduation-projects/</id>
-    <published>2017-08-23T05:04:00.000Z</published>
+    <published>2017-08-23T03:04:00.000Z</published>
     <updated>2017-08-23T13:51:00.000Z</updated>
     
     <content type="html"><![CDATA[<p>从CNKI收录的共计超过1000篇与敏捷软件开发相关的论文中，我找到了5篇关于在毕业设计中使用敏捷方法的文章，从一个侧面勾勒出高校教育工作者看待敏捷的一种视角。</p>
@@ -856,7 +925,7 @@
     <title>敏捷在中文期刊中的投影</title>
     <link href="http://gigix.thoughtworkers.org/2017/8/15/agile-in-chinese-journals/"/>
     <id>http://gigix.thoughtworkers.org/2017/8/15/agile-in-chinese-journals/</id>
-    <published>2017-08-15T05:04:00.000Z</published>
+    <published>2017-08-15T03:04:00.000Z</published>
     <updated>2017-08-15T14:23:36.000Z</updated>
     
     <content type="html"><![CDATA[<p>在中国推广敏捷软件开发方法十五年之后，我很想回头去看这段历史的全景。今天我用<a href="http://www.cnki.net/" target="_blank" rel="external">知网</a>做了一些检索，看到了一些有趣的数据。</p>
@@ -875,75 +944,6 @@
     
       &lt;p&gt;在中国推广敏捷软件开发方法十五年之后，我很想回头去看这段历史的全景。今天我用&lt;a href=&quot;http://www.cnki.net/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;知网&lt;/a&gt;做了一些检索，看到了一些有趣的数据。&lt;/p&gt;
 &lt;p&gt;我在所有期
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>云原生软件开发九要素</title>
-    <link href="http://gigix.thoughtworkers.org/2017/7/14/cloud-native-9-factors/"/>
-    <id>http://gigix.thoughtworkers.org/2017/7/14/cloud-native-9-factors/</id>
-    <published>2017-07-14T05:04:00.000Z</published>
-    <updated>2017-07-14T05:21:08.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>随着云计算逐渐成为主流的计算环境，我们提出这样一个问题：在云原生（Cloud Native）的环境下，软件开发应该是怎样的？在其他领域，我们看到云计算带来了弹性、标准化和更高的效率。当云成为软件开发团队的缺省环境，哪些实践能帮助他们兑现云计算的价值？各个组织、各个团队采用的软件开发方法论和流程各有不同，我们尝试找出一个最佳实践的最小集合：如果缺少其中的任一实践，就会在一定程度上妨碍团队享受云计算能带来的价值。从这个角度出发，我们识别出了下面这个列表：</p>
-<p><img src="/assets/2017/7/14/9-factors.jpg"></p>
-<h3 id="脚手架"><a href="#脚手架" class="headerlink" title="脚手架"></a>脚手架</h3><p>开发一个应用，采用什么基础框架、代码目录结构怎么安排、引入哪些测试工具、使用什么构建工具、遵循什么构建流程，这些问题在典型的应用类型（例如“Java微服务”或者“React前端应用”）下都有成熟的答案。大多数情况下，新的项目不应该从头新建这一套结构：一来是为了节省工作量，二来更重要的是应该尽量复用已有的最佳实践。建议的做法是使用标准的脚手架，例如<a href="https://jhipster.github.io/" target="_blank" rel="external">JHipster</a>或者其他基于<a href="http://yeoman.io/" target="_blank" rel="external">Yeoman</a>的生成器可以提供较为通用的脚手架，IT组织也可以设计自己的标准脚手架。</p>
-<h3 id="自包含应用"><a href="#自包含应用" class="headerlink" title="自包含应用"></a>自包含应用</h3><p>应用程序应该尽可能少依赖周边环境。对周边环境依赖越少，因为环境差异而带来的工作量和错误就会越少。以Java应用为例，基于<a href="https://projects.spring.io/spring-boot/" target="_blank" rel="external">Spring Boot</a>的独立应用，就比依赖Tomcat甚至WebSphere应用服务器的应用更具自包含性，环境的配置和管理都会容易得多。其他例如npm、rvm等工具都意图让应用程序更具自包含性。</p>
-<h3 id="统一构建"><a href="#统一构建" class="headerlink" title="统一构建"></a>统一构建</h3><p>每一次构建，不论是由开发者自行发起的，还是在持续集成环境执行的构建，都应该尽量、最好是完全一致。为了达到这种效果，不仅构建工具和构建流程本身统一，执行构建的外部环境也应该统一。最好的方式是把构建放在虚拟机或容器里进行，而不是在彼此不同的计算机上执行。为了避免个人电脑计算资源的局限，构建最好是在云上进行。</p>
-<h3 id="镜像化"><a href="#镜像化" class="headerlink" title="镜像化"></a>镜像化</h3><p>为了保证构建的外部环境完全统一，执行构建的不应该是各自不同的计算机，而应该是虚拟机或容器。因此运行应用程序的机器应该被镜像化。<a href="https://www.vagrantup.com/" target="_blank" rel="external">Vagrant</a>之类的工具提供了很好的版本化管理虚拟机镜像的能力，但VMWare和VirtualBox等虚拟机在性能上和资源占用上都并不鼓励频繁启停的使用方式，<a href="https://www.docker.com/" target="_blank" rel="external">Docker</a>等容器技术可能是更好的选择。构建产物也应该是可执行的容器镜像。</p>
-<h3 id="基础设施即代码"><a href="#基础设施即代码" class="headerlink" title="基础设施即代码"></a>基础设施即代码</h3><p>为了保证构建的外部环境完全统一，获得运行环境的过程应该完全自动化，不应该允许任何手动修改运行环境的情况。如果运行环境是<a href="https://martinfowler.com/bliki/ImmutableServer.html" target="_blank" rel="external">不可变的</a>，那么就可以<a href="https://martinfowler.com/bliki/ImmutableServer.html" target="_blank" rel="external">随时抛弃并重建</a>。因此环境的配置应该以代码形式记录并自动化，并且还能顺便得到环境可以版本管理、可以自动化测试等好处。</p>
-<h3 id="构建产物仓库"><a href="#构建产物仓库" class="headerlink" title="构建产物仓库"></a>构建产物仓库</h3><p>构建成功的产物应该被放入统一的仓库，并分版本管理。这样做的目的是按照《<a href="https://book.douban.com/subject/6862062/" target="_blank" rel="external">持续交付</a>》的理念，整个构建发布流程中使用用同一个构建产物；并且统一且分版本管理的构建产物可以在组织内复用。<a href="https://www.sonatype.com/nexus-repository-sonatype" target="_blank" rel="external">Nexus</a>可以用于管理各种构建产物，包括容器镜像。</p>
-<h3 id="弹性运行环境"><a href="#弹性运行环境" class="headerlink" title="弹性运行环境"></a>弹性运行环境</h3><p>运行应用程序的环境，不论是用于执行测试、还是用于试用、培训、用户验收测试、乃至生产，都应该是弹性的：需要时可以立即开通，不需要时可以理解销毁。对于生产系统，运行环境的弹性使系统可以随负载水平扩展，使各种<a href="http://blog.christianposta.com/deploy/blue-green-deployments-a-b-testing-and-canary-releases/" target="_blank" rel="external">路由技术</a>成为可能；对于开发、测试、预发布等场景，运行环境的弹性使环境开通和使用变得简单且不会出错。</p>
-<h3 id="服务质量透明"><a href="#服务质量透明" class="headerlink" title="服务质量透明"></a>服务质量透明</h3><p>诸如高吞吐量、高可用性、高安全性、双机热备等服务质量，由运维或数据库的专家配置好，在生产环境提供给应用程序使用时，只暴露IP地址和端口（甚至<a href="https://12factor.net/port-binding" target="_blank" rel="external">只有端口</a>）。对于应用开发者而言，服务质量是透明的，不会感觉到生产环境与开发环境依赖的外部服务有任何差别。</p>
-<h3 id="诊断信息服务"><a href="#诊断信息服务" class="headerlink" title="诊断信息服务"></a>诊断信息服务</h3><p>当构建和运行都在容器中乃至云上发生，并且容器是为应用程序专门定制的，调试诊断必然不能像在本地开发机器一样直接。需要借助完善的日志、监控等方式（例如基于<a href="https://www.splunk.com/" target="_blank" rel="external">Splunk</a>或<a href="https://www.elastic.co/webinars/introduction-elk-stack" target="_blank" rel="external">ELK</a>的方案）的来提供应用程序的诊断信息。诊断信息服务不仅作用于生产环境，测试、开发、构建等各个环境也使用同样的方式获得诊断信息。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;随着云计算逐渐成为主流的计算环境，我们提出这样一个问题：在云原生（Cloud Native）的环境下，软件开发应该是怎样的？在其他领域，我们看到云计算带来了弹性、标准化和更高的效率。当云成为软件开发团队的缺省环境，哪些实践能帮助他们兑现云计算的价值？各个组织、各个团队采用的
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>人生赢家弗洛雷斯</title>
-    <link href="http://gigix.thoughtworkers.org/2017/6/26/fernando-flores/"/>
-    <id>http://gigix.thoughtworkers.org/2017/6/26/fernando-flores/</id>
-    <published>2017-06-26T05:01:00.000Z</published>
-    <updated>2017-06-26T00:56:03.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://en.wikipedia.org/wiki/Fernando_Flores" target="_blank" rel="external">费尔南多·弗洛雷斯</a>有着传奇的一生。他作为理工科的好学生留校，在智利社会主义的浪潮中涉足政坛，因为科技背景步步高升，陪着萨尔瓦多·阿连德总统走完政权和人生的最后一段路，作为政治犯坐了三年牢，然后摇身一变成为世界级学霸，顺便在硅谷搞了两家创业公司挣了一大把钱，终于衣锦还乡再次投身政治，支持的却是与阿连德政纲截然不同的总统。</p>
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Fernando_Flores.jpg"></p>
-<p><em>（本文绝大部分内容出自《<a href="https://book.douban.com/subject/26107390/" target="_blank" rel="external">控制论革命者</a>》一书。）</em></p>
-<h2 id="工科背景"><a href="#工科背景" class="headerlink" title="工科背景"></a>工科背景</h2><p>弗洛雷斯于1943年出生于塔尔卡市，位于智利首都圣地亚哥以南200多公里的一个城市。他的父亲是铁路工程师，母亲经营着一家小型的木材公司。在学校里，他是一个思维敏捷、尤其擅长数学的好学生。尽管还不知道未来的人生要干什么，弗洛雷斯已经意识到成为工程师是“一件大事”，所以他申请了天主教大学的工程学院，并被这所声名远播的大学接纳。在2003年的一次访谈中，他猜测自己可能是家族里第一个接受了大学教育的人。在正式的大学教育之外，一系列的人际关系、工作经历和政治变迁让弗洛雷斯发现了控制论和比尔。在大学里，弗洛雷斯跟随阿诺尔多·海克斯学习运筹学，后者在1963年至1964年间任天主教大学工程学院院长，后来接受了MIT斯隆管理学院的教授职位。</p>
-<p>因为弗洛雷斯受过运筹学训练，[斯塔福·比尔的公司]SIGMA雇佣他在智利铁路的项目上[作为实习学生]工作。在这个项目上，他接触到了《控制论与管理》，一本在他看来“脑洞大开”的书。弗洛雷斯于1968年毕业，获得工业工程学位。……1968年至1970年间，弗洛雷斯在天主教大学工程学院任教务主任，随后他的职责范围逐渐扩展到了大学的各项事务。</p>
-<h2 id="初涉政坛"><a href="#初涉政坛" class="headerlink" title="初涉政坛"></a>初涉政坛</h2><p>这一时期大学正在进行改革，弗洛雷斯监督开展了很多工程课程的改革，包括增加课堂与社会的联系。和很多同时代人一样，弗洛雷斯在学术圈和政治圈都很活跃。1969年，弗洛雷斯等一群天主教大学的年轻知识分子脱离基督教民主党，成立了“统一人民行动运动”（简称“MAPU”）。这个由年轻知识分子组成的小型政党批评基督教民主党和总统爱德华多·弗雷·蒙塔尔瓦（1964年至1970年在位）采取的中间路线，与左翼的人民阵线中的共产主义者和社会主义者政见一致。MAPU加入人民阵线，再加上右翼和基督教民主党组成的获胜联盟内部的不稳定因素，最终促成社会主义者阿连德在1970年大选中以微弱优势获胜。</p>
-<p>作为对弗洛雷斯政治忠诚和技术能力的认可，阿连德政府将他任命为国家开发公司（简称“CORFO”）的技术总监，这家公司的使命是国有化智利的工业。弗洛雷斯成为了国家开发公司的三号人物，也是MAPU成员占据的最高位置。他最重要的职责就是管理已经国有化的工厂的日常调控。</p>
-<h2 id="步步高升"><a href="#步步高升" class="headerlink" title="步步高升"></a>步步高升</h2><p>[Cybersyn]项目的资金部分来自国家科技学院，该学院的预算一直在增加；另一部分资金来自CORFO，这是全国资金最充裕的政府机关之一，毕竟它的使命是指导国家经济。弗洛雷斯在这两个机构都担任高管，既是发展机构CORFO的三号人物，也是国家科技学院的理事长。他动用了各种社会和组织关系来保障这个项目需要的财政、物资和人力资源，其中大部分是通过非正式渠道获得的。“我有很大的权力。”弗洛雷斯承认。不过CORFO实在太庞大了，弗洛雷斯与比尔提议的这个项目仅需要其整个预算中的一小部分。</p>
-<p>……比尔见到了阿连德，获得了总统的许可继续开展他的项目。但比尔相信这次会见还有别的意义。他猜测弗洛雷斯想在智利政府中更广泛地应用控制论原理，而不仅是用于管理国有经济，这次会见则会帮弗洛雷斯未来的项目铺平道路。团队中最了解政治的施温伯提供了另一种解读。弗洛雷斯“有着更高级的大脑，”施温伯这样说道，“非常复杂，老于世故，精明能干，有时甚至是狡诈，但绝对精明。”弗洛雷斯很早就认识到了这个系统的科技价值和政治价值。照施温伯的看法，比尔与阿连德的会见一方面是为了解释正在开发的控制论管理系统，另一方面也是为了“让阿连德意识到有这么一个人，弗洛雷斯，掌管着这种力量”。弗洛雷斯希望给总统留下这样的印象：他是科技专家，并且他正在为政府做着有趣、大胆而且可能很有价值的工作。最重要的是，这次会见确认了弗洛雷斯与比尔之间的工作同盟，把阿连德也拉进了项目中。这次会见再次强调了在智利社会主义道路上正在发生的科技创新与政治创新之间的相互依赖关系。</p>
-<p>[1972年]10月初，弗洛雷斯升任经济部副部长。[发生于1972年的]十月罢工后，这位29岁的年轻人被总统任命为经济部长。……弗洛雷斯相信是他对科技的使用帮他赢得了这个内阁级别的位置，他认为继续发展自己作为科技专家的形象或许能给他带来政治上的优势。</p>
-<h2 id="大厦将倾"><a href="#大厦将倾" class="headerlink" title="大厦将倾"></a>大厦将倾</h2><p>弗洛雷斯仍然是阿连德内阁的成员，但他在[1973年]新年当天离开了刚上任两个月的经济部长职位，转任财政部长。这个新的任命使弗洛雷斯离Cybersyn项目更远了。</p>
-<p>在[发生于1973年8月的]第二次卡车主罢工期间……阿连德任命弗洛雷斯担任政府的秘书长，负责政府对内对外的沟通。在风雨飘摇的智利政府中，弗洛雷斯已经占据了一个最高的位置，此时他才刚刚30岁。</p>
-<p>[1973年9月11日武装政变发生时]弗洛雷斯……已经是阿连德身边最贴近的助手之一，轰炸发生时他正与总统在一起，一直与军方保持着电话联系。他告知阿连德，军方要求总统立即、无条件投降。总统拒绝了这个要求，并派弗洛雷斯去和军方谈判。弗洛雷斯刚走出建筑即被逮捕，从此没有再见到总统。</p>
-<p>费尔南多·弗洛雷斯作为政治犯在监狱里呆了3年。……1976年，大赦国际的旧金山分部成功地通过谈判促成弗洛雷斯获释，并在斯坦福大学计算机科学系给他安排了为期一年的研究职位。</p>
-<h2 id="变身学霸"><a href="#变身学霸" class="headerlink" title="变身学霸"></a>变身学霸</h2><p>在斯坦福，他遇到了计算机科学家特里·维诺格拉德，两人在1970年代后期和1980年代紧密合作。</p>
-<p>弗洛雷斯在加州大学伯克利分校获得了博士学位，师从哲学家约翰·赛尔、休伯特·德莱弗斯和经济学家安·马库森。他于1982年完成的毕业论文讨论了如何在“未来的办公室”里用计算机改进管理和交流。……比尔在早年间对弗洛雷斯的想法有所影响，但在完成毕业论文的时候，弗洛雷斯的关注点已经从管理控制论转移到言语行为理论和海德格尔哲学，因为这些是他的博士委员会成员专擅的领域。</p>
-<p>1986年，弗洛雷斯发表了他的第一本书，与维诺格拉德合著的《理解计算机和认知》（Understanding Computers and Cognition）。这本书结合了计算机领域的问题与“生物本质、语言、人类行为本质等方面的理论”，着重讨论计算机能和不能从事哪些人类实践。……美国信息科学学会把《理解计算机和认知》评为1987年“最佳信息科学书籍”，这本书现在被认为是人机交互领域的关键文本之一。</p>
-<p>[注：约翰·赛尔和休伯特·德莱弗斯是人工智能哲学领域的大师；特里·维诺格拉德是人机交互领域的大师，1995年至1998年间指导了谷歌创始人拉里·佩奇的博士研究。]</p>
-<h2 id="名利双收"><a href="#名利双收" class="headerlink" title="名利双收"></a>名利双收</h2><p>1980年代，弗洛雷斯还转型成了一名硅谷企业家。他创立了教育咨询公司Logonet，向商业社会传授本体论设计思想。他还跟维诺格拉德一起创立了Action科技公司，开发了名为“协调者工作组生产力系统”的软件包，他们自称是第一款用于计算机网络的工作组系统。……后来一位记者称“协调者”是“全世界第一款社交网络软件”。</p>
-<p>1989年，弗洛雷斯又成立了一家咨询公司，名叫“商业设计合伙人”，或者简称BDA。BDA向困境中的企业传授言语行为理论的原则，例如提出明确的请求、做出明确的承诺等，试图以这种方式改变这些企业。……在其巅峰时，BDA有150名员工，在3个大陆上开展工作，年收入5千万美元。……到2007年，弗洛雷斯的财富净值据估算达到了4千万美元。他的名气也随着财富一道蒸蒸日上。有人认为他唐突、脾气暴躁、说话直接甚至是粗鲁、惹人讨厌；但他对外传递的讯息，以及他在学界和商界的成功，让不少人把他视为偶像。</p>
-<p>2002年，弗洛雷斯以百万富商的身份回到智利，并作为国家最北端地区的代表被选为参议员，由此开启了他作为政治家的人生新篇章。2008年，他脱离支持他当选参议员的中左联盟，成立了自己的政党“<strong>智利第一党</strong>”。2009年，他又完全转变立场，公开支持右翼总统候选人、亿万富商塞巴斯蒂安·皮涅拉。最终皮涅拉赢得了大选。</p>
-<p>[2010年3月，弗洛雷斯被皮涅拉总统任命为智利国家竞争力创新委员会主席。]</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Fernando_Flores&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;费尔南多·弗洛雷斯&lt;/a&gt;有着传奇的一生。他作为理工科的好学生留校，在智利社会主义的浪潮中涉足政坛，
     
     </summary>
     

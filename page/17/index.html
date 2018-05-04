@@ -174,6 +174,54 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2012/1/2/wishes-in-2012/" title="link to 走向2012">走向2012</a></h2>
+
+      <p class="excerpt">
+        <p>鉴于今天已经是1月2号，不应该叫“走向”，而应该叫“走进”之类的⋯⋯不管怎么说，这些是2012年想做的事：</p><p>壹。要坚持读书。去年最终是读了70本书。今年至少也要读到<a href="http://gigix.thoughtworkers.org/2011/9/20/read-50-books-per-year">50本</a>才可以。</p><p>贰。要有长性，要把看准的事做到底。少一点纠结，少一点选择障碍，做了选择就一直做下去。少一点小聪明，多一点踏实。</p><p>叁。要学到新的东西。去年学到了游泳和素描，很好。今年还要学到更多，工作或生活都是。</p><p>（愿望越来越简单了。进入平稳的中年期了吗？）</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="1月 2 2012" class="post-list__meta--date date">1月 2 2012</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2011/12/26/open-party-on-dreamhost/" title="link to 在DreamHost安装OpenParty手记">在DreamHost安装OpenParty手记</a></h2>
+
+      <p class="excerpt">
+        <p>自从开始帮忙组织<a href="http://groups.google.com/d/forum/openpartycd" target="_blank" rel="external">成都的OpenParty</a>以来，每天抽一点时间做OpenParty成都的网站。感谢<a href="http://www.diamondtin.com/" target="_blank" rel="external">Tin</a>和<a href="http://cleverpig.name/dan/" target="_blank" rel="external">cleverpig</a>的大力支持，今天终于把<a href="http://www.chengdu-open-party.org/" target="_blank" rel="external">OpenParty成都</a>网站给弄起来了。</p><p><img src="http://gigix.thoughtworkers.org/assets/2011/12/26/Chengdu_Jinli_Street_Night_by_AllenHwong.jpg" alt=""></p><p>首先把<a href="https://github.com/openparty/openparty" target="_blank" rel="external">OpenParty的Django应用</a>给fork出来到<a href="https://github.com/gigix/openparty" target="_blank" rel="external">一个新的repository</a>。没多少需要修改的，只是页面稍做调整，改改文字。</p><p>DreamHost有<a href="http://wiki.dreamhost.com/Django" target="_blank" rel="external">一篇文章</a>讲如何安装Django的。需要照着它做一遍，生成Passenger配置。但是这样弄完以后肯定是跑不起来的，因为所有的依赖包都没有装，而且因为没有root权限所以系统缺省的easy_install也不能安装任何东西。所以，这个配置弄好以后先放着，还得装个自己的Python。</p><p>有个哥们写了一篇博客讲<a href="http://andrew.io/weblog/2010/02/installing-python-2-6-virtualenv-and-virtualenvwrapper-on-dreamhost/" target="_blank" rel="external">如何在DreamHost安装virtualenv</a>。也是照着做就行了。装好<a href="http://pypi.python.org/pypi/virtualenv" target="_blank" rel="external">virtualenv</a>以后直接就可以用<a href="http://www.pip-installer.org/en/latest/index.html" target="_blank" rel="external">pip</a>安装依赖包了。</p><p>接下来就是修改passenger_wsgi.py里的配置了。有两个需要修改的内容：第一是需要用virtualenv装的Python；第二是DreamHost缺省生成的配置有问题，没有引入应用程序的路径。直接把我的passenger_wsgi.py贴上来：</p><pre>import sys, osINTERP = path_to_python_in_virtualenvif sys.executable != INTERP: os.execl(INTERP, INTERP, *sys.argv)project_path = path_to_applicationdjango_path = path_to_django_in_virtualenvsys.path.append(os.getcwd())sys.path.insert(1, project_path)sys.path.insert(1, django_path)sys.path.insert(1, os.path.join(project_path, “apps”))sys.path.insert(1, os.path.join(project_path, “vendor”))os.environ[‘DJANGO_SETTINGS_MODULE’] = “ChengduOpenParty.settings”import django.core.handlers.wsgiapplication = django.core.handlers.wsgi.WSGIHandler()</pre><p>然后就是配数据库啦同步数据库啦这些常规操作了。然后<a href="http://www.chengdu-open-party.org/" target="_blank" rel="external">OpenParty成都的网站</a>就美美的跑起来啦～四川地区的技术爱好者们，欢迎来分享！</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="12月 26 2011" class="post-list__meta--date date">12月 26 2011</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2011/12/21/chengdu-open-party/" title="link to 成都OpenParty第一波：围炉映雪">成都OpenParty第一波：围炉映雪</a></h2>
 
       <p class="excerpt">
@@ -351,54 +399,6 @@ classes that you can use:
       <div class="post-list__meta">
 
         <time datetime="11月 7 2011" class="post-list__meta--date date">11月 7 2011</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2011/11/4/economics-is-politics/" title="link to 关于多数人的事务，就是政治">关于多数人的事务，就是政治</a></h2>
-
-      <p class="excerpt">
-        <p><em>（商业读书会第十四期：<a href="http://book.douban.com/subject/5264585/" target="_blank" rel="external">There is no such thing as a free market</a>）</em></p><p>大概在2003年前后，我认为政治是一件很丑恶的事；后来我认为政治是一种必要的恶：必要时我可以关心它乃至从事它，但我仍然持续地反感和回避它。直到最近两年，看见老师开始越来越多地关注和谈论政治，然后我开始回想起《理想国》说的：政治，就是关于多数人的事务。一旦开始关注作为一个组织的人，政治就在那里，就像客厅里的大象。</p><p><img src="http://gigix.thoughtworkers.org/assets/2011/11/5/Stock-Market.jpg" alt=""></p><p>这篇文章是《<a href="http://book.douban.com/subject/6435564/" target="_blank" rel="external">资本主义的真相</a>》的第一段。作者的观点是：没有所谓的“自由市场”，所有的市场都有来自政治的管制；对一个市场机制的认可与否，实际上不是因为这个市场是否自由，而是因为对背后的政治意味是否认同。</p><p>2006年我在墨尔本的时候，跟一个同事聊起网游。我说中国的网游都有“装备工厂”，有人专门打装备出来卖钱。对此该同事表示非常不解。那时我就意识到：如果要讲“自由”的话，其实中国的市场比澳洲要自由得多。最低生活保障就是劳动力交易成本的底线，低于最低生活保障的工作是不会有人从事的，这就是为什么只有中国才有7块钱的出租车和38块钱的捏脚、只有中国才能发展出《征途》这样的游戏模式。这时西方人批评中国的又不是“自由”了，他们开始批评“人道”和“公平”——是的，我也关心人道和公平，但我们原来的话题不是“自由市场”吗？</p><p>这里的关键在于，“人道”和“公平”是政治话题，而“自由”似乎因其作为一个经济话题而具有了先验的、超越的地位——自由是前提条件，政治是一时一地的权衡，难道不是吗？然而自由（以其经济学的意义）本身就是关于“多数人的效率”的组织方式。自由本身就是政治话题。</p><p>更关键的是，随着<a href="http://www.mckinseyquarterly.com/Strategy/Growth/The_second_economy_2853" target="_blank" rel="external">第二经济</a>的快速发展，“效率”作为一个问题的重要性将不断降低，经济的主要挑战将从“生产繁荣”转换到“分配繁荣”：第二经济会不断生产财富，不管我们（绝大多数人类）做什么；如何分配这些财富将成为人类的主要问题。公平将重于自由。人将重于流程。</p><p>结论：作为多数人的事务，经济很可能并不是一个独立的领域，并因此没有一个简单的理想解。（这个结论对于像我这样为人的问题权衡感到痛苦的新手来说，是一个很好的安慰。）</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="11月 4 2011" class="post-list__meta--date date">11月 4 2011</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2011/11/3/bug-driven-development/" title="link to Bug Driven Development">Bug Driven Development</a></h2>
-
-      <p class="excerpt">
-        <p>周六一起开会的时候，徐昊说起这样一种开发方式：当我拿到需求，如果我一行代码都不写就交给测试人员去测，测出一个bug我再写一段代码来fix它。我说：真正的测试驱动开发啊。徐昊说：这叫Bug驱动开发。</p><p><img src="http://gigix.thoughtworkers.org/assets/2011/11/4/ReddishRussianBug.jpg" alt=""></p><p>我当时以为他说笑呢。直到今天突然我弄明白了他说的什么意思。然后我就发现自己有多笨。</p><p>首先，Bug驱动开发是一种需求分解的方法。当无能的BA拿着一个一句话需求说“这个需求就是这么大没办法再分得更小了”，请使用Bug驱动开发，测试人员说出来的第一个bug就是一个story：它必定相当独立，它必定有价值，它必定比原来的整个大需求要小，并且它必定可测试。</p><p>然后我很激动地给徐昊发了个短信，然后他告诉我，其实这个方法的学名叫<a href="http://www.infoq.com/cn/news/2009/05/feature-injection-comics" target="_blank" rel="external">Feature Injection</a>，是价值拉动思想的具现化。然后我又发现原来这篇新闻是我的sponsee翻译的⋯⋯为自己的笨和无知挠墙⋯⋯</p><p>显然，为了真正做到Bug驱动开发，我们需要快速、可重复的反馈机制，也就是说：持续集成，自动化测试。这是拉动出来的改善需求。</p><p>顺便我今天又想到了一个检验交付流程的度量指标：往代码里随便乱改一行，改变系统的行为但是不破坏编译，提交它。好了，现在系统里有一个bug，你需要多长时间才能把它抓出来？我把这个度量指标叫做“Bug寿命”（BugLifeTime，BLT）——感谢<a href="http://www.linkedin.com/profile/view?id=35014759" target="_blank" rel="external">Praveen</a>对这个名字的贡献。</p><p>一个理想的交付流程，BLT应该无限趋近0：第一，你应该不能提交这样的代码，因为本地构建会抓住这个bug；第二，提交后持续集成应该会抓住这个bug，并且持续集成的反馈越快越好。</p><p>以“<strong><span class="caps">BLT</span>趋于0</strong>”作为目标进行改善，第一你有清晰的方向，第二你可以很容易地度量改善的效果，第三这个目标是如此简单而又如此困难以至于你永远找不到理由停止改善。这就是Bug驱动改善，一个相当有效的改善活动。</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="11月 3 2011" class="post-list__meta--date date">11月 3 2011</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">

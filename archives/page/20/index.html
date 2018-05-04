@@ -179,6 +179,54 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2011/8/2/complexity-exponential-curve/" title="link to 复杂度的指数曲线，以及敏捷原则的根本">复杂度的指数曲线，以及敏捷原则的根本</a></h2>
+
+      <p class="excerpt">
+        <p>想象我正在往一个已有的代码库中添加新的功能。假如我一次只添加一个小修改，这个小修改是如此简单以至于它只有两种状态——写完代码之后只要看一看，我要么是改对了要么是改错了；如果改错了，我就用另一种方式来修改，后者一定是正确的。</p><p><img src="http://gigix.thoughtworkers.org/assets/2011/8/2/complexity-1.png" alt=""></p><p>如果我一次不是添加一个小修改，而是添加两个，然后把两个修改放在一起来验证。这时可能的状态就有四种：一种正确的，以及三种不同的出错方式。</p><p><img src="http://gigix.thoughtworkers.org/assets/2011/8/2/complexity-2.png" alt=""></p><p>如果我再贪心一点（或者是因为某些客观条件的约束），一次添加三个小修改然后再验证。这时可能的状态就成了八种：一种正确的，以及七种不同的出错方式。</p><p><img src="http://gigix.thoughtworkers.org/assets/2011/8/2/complexity-3.png" width="350px"></p><p>所以这就是复杂度和变量个数之间的关系：C=(V的N次方)，其中C为“复杂度”，V为“单个变量可能的取值个数”，N为“变量个数”。所以复杂度随变量个数的增加而指数上升。所以几个简单的问题可以分别解决、而合并成一个复杂的大问题就根本无法解决，因为整个问题的复杂度不是做加法而是做乘方。</p><p><img src="http://gigix.thoughtworkers.org/assets/2011/8/2/complexity-curve.png" width="350px"></p><p>所以聪明的程序员知道要小步快跑。所以一次只做一件事、做好提交等build通过了再开始下一件。所以要频繁地跟其他人的修改集成。所以不要同时开多个story卡来做。所以不要讲什么“反正这些都是我的工作怎么做都是一样的”。所以不要讲什么“小心翼翼地重构太麻烦了不如一步就改过去多省事”。因为软件开发的工作量不是<strong>要敲多少次键盘</strong>，而是<strong>要处理多少复杂度</strong>。把渐进式的修改变成大步伐的修改，会增加工作量，而不是取巧。</p><p>所以越是痛苦的事越要频繁做直到它不再痛苦。所以要让反馈周期缩短再缩短。不光是为了练习和得到信息，更是为了降低需要处理的问题的复杂度，使普通人也可以处理——从这个意义上来说，再次向所有不采用敏捷方法的程序员致敬，为他们所能处理的超大复杂度。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="8月 2 2011" class="post-list__meta--date date">8月 2 2011</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2011/7/30/future-of-china-economy/" title="link to 展望未来，关心则乱">展望未来，关心则乱</a></h2>
+
+      <p class="excerpt">
+        <p><em>（商业读书会第九期的题目突然变得很难：<a href="http://finance.sina.com.cn/g/20110718/141510164810.shtml" target="_blank" rel="external">拆弹滞与胀 | 财经杂志</a>和<a href="http://www.economist.com/node/18832106" target="_blank" rel="external">Growth prospects: Beware the middle-income trap| TheEconomist</a>）</em></p><p>其实主题本身并不复杂：按人均GDP，中国正在进入中等收入水平国家行列；但过去几年保持经济增速，主要靠的是4万亿投资尤其是基础设施建设的拉动。尽管有家电下乡、汽车下乡等等政策，居民消费仍然不见起色。将GDP的50%投资到新的固定资产建设，这不是可以长期维持的成长方式。投资拉动的成长和中小企业在货币政策紧缩环境下的产销两滞，在财经杂志这篇文章看来，是已经响起的警钟。</p><p><img src="http://gigix.thoughtworkers.org/assets/2011/7/30/chinese_consumers.jpg" width="350px"></p><p>解决方案其实也很明显。中国的消费市场潜力巨大，基本上就是保持增速的救命稻草。如果消费市场不能自行启动，就继续拉动。财经杂志提到的4万亿水利投资、Economist提到的55个新机场，都是在十二五延续基础设施建设拉动内需的标志。（居民收入一增加，就意味着大量的“传统企业”要走向互联网，因为这是接触大量消费者最直接最便宜的途径；就意味着这些企业需要人告诉他们怎么做互联网上的生意、怎么投资和运营互联网上的IT系统。嗯，跑题了～）</p><p>但是正如Economist这篇文章暗示的，中国人不消费，不是缺钱，而是缺安全感，所以居民储蓄居高不下：未来生老病死买房失业都没保障，没辙，只好攒钱。所以拉动消费市场还得靠社会保障。Economist这篇文章提到的3600万套保障性住房就是朝这个方向迈出的一步，还有财经杂志这篇提到的减税措施。今天跟徐昊聊的：改革开放三十年，又回到房管所排队分房，大家感到有组织管着真有幸福感。这倒也符合人类固有的认知偏差。</p><p>问题和办法都明显，之所以说这个题目很难，还是关心则乱：发生在身边的事，跟自己有关的事，就很难平平淡淡地看。形势本身就是前有狼后有虎，既怕增速放缓工人失业，又怕通胀过速怨声载道，再加上各种与形势无关与人有关的丑事，就愈发觉得事情真是难办。大抵事情真做起来都是复杂的、困难的、需要权衡取舍的，不会像书上写的那样简单明了。</p><p>对比这两篇文章，有几个关于阅读本身的心得：</p><ol><li>萨缪尔森说，宏观经济都是扯淡，经纪人假设、边际效用递减、交易成本，三条原理解释一切。</li><li>看材料要看到人的想法。没有一个抽象的“政府”，各级官员的想法是不一样的，官员和央企的想法是不一样的。在这一点上，Economist显得不如财经杂志了解中国国情；当然大面的预测本来也不需要太多国情。</li><li>严肃的文章不要感情色彩太重，诉诸于感情反而教人看不懂了。财经杂志这篇文章看着总觉得有点悲壮（可能作者要的就是这效果），反而不如英文的文章易懂。</li></ol><p>其实也不用太悲壮。不管最终消费市场是拉动还是拉不动，起码十二五期间还有几年好日子可以过。即便Economist文章里那几位“熊人”，预测撞墙的时间也是三五年后。三五年后的事⋯⋯不如就三五年后再说吧。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="7月 30 2011" class="post-list__meta--date date">7月 30 2011</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2011/7/20/from-nanjing-to-tokyo/" title="link to 从南京到东京">从南京到东京</a></h2>
 
       <p class="excerpt">
@@ -356,54 +404,6 @@ classes that you can use:
       <div class="post-list__meta">
 
         <time datetime="6月 20 2011" class="post-list__meta--date date">6月 20 2011</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2011/6/18/tension-of-innovation/" title="link to 创新的张力">创新的张力</a></h2>
-
-      <p class="excerpt">
-        <p><em>（商业读书会第五期的题目：<a href="http://hbr.org/2011/01/the-ceos-role-in-business-model-reinvention/ar/1" target="_blank" rel="external">The<span class="caps">CEO</span>’s Role In Business Model Reinvention</a>|<span class="caps">HBR</span>January–February 2011。我又延伸了一篇：<a href="http://hbr.org/2010/07/stop-the-innovation-wars/ar/1" target="_blank" rel="external">Stop the Innovation Wars</a>|<span class="caps">HBR</span>July–August 2010。）</em></p><p>这两篇文章都是关于“现在”与“将来”的平衡：绝大多数取得成功的企业都拥有一个运转良好的效能引擎（performanceengine），它是稳定的收入来源，它确保当前的成熟业务持续正常运行。但效能引擎的问题在于：它从本质上不是面向剧变的。而现代企业越来越多地需要面对剧变，例如新技术的发明，例如全球化带来的超低价格，例如互联网企业得到了所有潜在用户之后的增长瓶颈。效能引擎在面对剧变时，表现出的是温水煮青蛙的痛苦和无力。</p><p><img src="http://gigix.thoughtworkers.org/assets/2011/6/18/innovation-tension.jpg" width="330px"></p><p>作者的观点是：在最大化利用今天的同时，为了应对剧变的明天，企业必须有意识地打破昨天的习惯。另一方面，昨天的习惯往往是效能引擎在今天运转良好的重要原因。在三者之间做好平衡，就是CEO需要扮演的角色。</p><p>以InfoSys的咨询业务为例，作者提到了商业模型创新中需要注意的三个方面：策略制定，责任明晰，组织设计。在这三个方面，创新工作需要体现与效能引擎的极大不同。如何应对这种差异带来的张力，是第二篇文章的主题，也是我更关心的主题，因为它的视角出发点是创新领导者而非CEO。</p><p>从创新领导者的角度，同一位作者用Westlaw的例子阐述了业务创新的一个根本原则：创新不能脱离效能引擎进行。游离于运行良好的效能引擎之外去“一心搞创新”，实际上就是在浪费企业过去积累的经验和资产。创新领导者的挑战就在于促成创新团队与效能引擎之间的协作关系。这需要创新领导者做好三件事：</p><ol><li><strong>划分任务</strong>。哪些事是效能引擎善于达成的？哪些事是必须在创新团队中实现的？如果一件任务需要超出现有人员的能力、或者要求不同的协作方式，它很可能应该在创新团队中实现。</li><li><strong>组建团队</strong>。创新团队需要尽量借助于效能引擎，但又不能全无变化。通过引入空降兵、设立不同的团队结构和考核标准，创新团队必定要在某些方面差异于效能引擎。“如果来自效能引擎的员工全都对在创新团队中工作感到舒服，那只能说明这是又一个具体而微的效能引擎。”诚哉斯言。</li><li><strong>管理两者之间的张力</strong>。通过前两个环节建立创新团队的独特性，随之而来的问题是如何保持协作和企业文化的连贯性。两个团队互相尊重吗？他们在面对资源争用时是在积极地协作解决问题吗？跨团队的成员对创新行动有足够的重视吗？创新团队与效能引擎之间的冲突很容易被升级为企业文化的断裂，保持平衡是一件微妙并且需要持续努力的事。</li></ol><p>在做好现在的同时关注未来，在积极创新的同时给予效能引擎充分的尊重，这是谈到业务创新时战略和执行层面的两个基本原则。InfoSys和Westlaw遵循这些基本原则成功地实现了业务创新。在固有文化中就不去极端强调可预测、可控制的企业，业务创新时的张力可能相对较小；但在保持创新团队的独特性同时保持企业文化的连贯性，这对于创新领导者而言始终都是一个挑战。</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="6月 18 2011" class="post-list__meta--date date">6月 18 2011</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2011/6/14/student-reading-list/" title="link to 遇到了好学的小孩">遇到了好学的小孩</a></h2>
-
-      <p class="excerpt">
-        <p><strong>Thought</strong>Works西安办公室搞了一个“开放日”活动，邀请在校学生来参观我们的工作环境，了解IT行业以及<strong>Thought</strong>Works这家公司。在开放日上，遇到了西安电子科技大学的李朝印同学，一个好学的小孩，跟他谈到阅读一些根本性著作的重要性。</p><p><img src="http://gigix.thoughtworkers.org/assets/2011/6/14/IMG_1286.jpg" width="350px"></p><p>有点出乎意料，李同学晚上给我发来邮件：</p><blockquote>下午和你聊到计算机“树根”，我想做个2~3年的阅读计划把这些最核心的知识吃透。以下是一个书单：<ul><li>The C++ Programming Language</li><li>Computer Systems： A Programmer’s Perspective</li><li>Indroduction to algorithm</li><li>Compliers:Parinciples, Techniques, and Tools</li><li>Code Complete</li><li>The Pragmatic Programmer</li><li>Refactoring: Improving the Design of Existing Code</li><li>Thinking in java</li><li>Effective C++</li><li>The Art of Computer Programming(First Volume Hardcover)</li></ul><p>这些是我根据网上大家的建议大致列出的，不足或不妥之处希望你能指出！</p></blockquote><p>我的回复：</p><blockquote>不错的书单。具体说起来，C++ Programming Language（如果你是指Stroustrup那本的话）比较生涩而且过于细节化，作为语言向导而言不如C++Primer。TAOCP很艰深，需要量力而为。算法导论和编译原理应该都是专业课里的内容，把课程和自学结合起来可以事半功倍。另外我推荐SICP，这本书关于计算本质的介绍是你的书单（以及整个中国的计算机教育）所缺少的。<p>如果能用两三年把这些书读完（不一定”吃透”，吃个七八分透就够了），对自己的水平提升是非常有好处的。另外记着读万卷书行万里路，多读书同时多写代码，学以致用是长进最快的。</p></blockquote><p>不由得想起十年前在学校里，跟虫虫、孟岩等人一起读书的时光。好学的年轻人总是让人看着充满希望。</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="6月 14 2011" class="post-list__meta--date date">6月 14 2011</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">

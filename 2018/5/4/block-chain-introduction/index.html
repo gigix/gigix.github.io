@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+        区块链：原理和应用解读 | 透明思考
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+    <meta name="author" content="Jeff Xiong">
+    
+    
+    <meta name="description" content="（正值五四青年节之际，谨以此文送给有志青年们，祝大家多学技术，多写文章。）
+区块链进入大众视野，是从比特币开始的——准确说，是从某些人因为比特币一夜暴富的传奇开始的。然而在随后的区块链热潮中，应该说大部分人是懵逼的。百度百科上，区块链的定义是这样：
+区块链是分布式数据存储、点对点传输、共识机制、加密算法等计算机技术的新型应用模式。所谓共识机制是区块链系统中实现不同节点之间建立信任、获取权益的数学算">
+    
+
+    <meta name="description" content="（正值五四青年节之际，谨以此文送给有志青年们，祝大家多学技术，多写文章。）
+区块链进入大众视野，是从比特币开始的——准确说，是从某些人因为比特币一夜暴富的传奇开始的。然而在随后的区块链热潮中，应该说大部分人是懵逼的。百度百科上，区块链的定义是这样：
+区块链是分布式数据存储、点对点传输、共识机制、加密算法等计算机技术的新型应用模式。所谓共识机制是区块链系统中实现不同节点之间建立信任、获取权益的数学算">
+<meta property="og:type" content="article">
+<meta property="og:title" content="区块链：原理和应用解读 | 透明思考">
+<meta property="og:url" content="http://gigix.thoughtworkers.org/2018/5/4/block-chain-introduction/index.html">
+<meta property="og:site_name" content="透明思考">
+<meta property="og:description" content="（正值五四青年节之际，谨以此文送给有志青年们，祝大家多学技术，多写文章。）
+区块链进入大众视野，是从比特币开始的——准确说，是从某些人因为比特币一夜暴富的传奇开始的。然而在随后的区块链热潮中，应该说大部分人是懵逼的。百度百科上，区块链的定义是这样：
+区块链是分布式数据存储、点对点传输、共识机制、加密算法等计算机技术的新型应用模式。所谓共识机制是区块链系统中实现不同节点之间建立信任、获取权益的数学算">
+<meta property="og:image" content="http://gigix.thoughtworkers.org/assets/2018/5/4/1.png">
+<meta property="og:image" content="http://gigix.thoughtworkers.org/assets/2018/5/4/2.png">
+<meta property="og:updated_time" content="2018-05-04T05:21:54.359Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="区块链：原理和应用解读 | 透明思考">
+<meta name="twitter:description" content="（正值五四青年节之际，谨以此文送给有志青年们，祝大家多学技术，多写文章。）
+区块链进入大众视野，是从比特币开始的——准确说，是从某些人因为比特币一夜暴富的传奇开始的。然而在随后的区块链热潮中，应该说大部分人是懵逼的。百度百科上，区块链的定义是这样：
+区块链是分布式数据存储、点对点传输、共识机制、加密算法等计算机技术的新型应用模式。所谓共识机制是区块链系统中实现不同节点之间建立信任、获取权益的数学算">
+<meta name="twitter:image" content="http://gigix.thoughtworkers.org/assets/2018/5/4/1.png">
+
+    
+    <link rel="alternate" href="/atom.xml" title="透明思考" type="application/atom+xml">
+    
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+
+    <script src="/js/jquery.min.js"></script>
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+<header class="panel-cover panel-cover--collapsed">
+
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">透明思考</a></h1>
+
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">
+          Transparent Thoughts
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">Blog</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+------------------------------ -->
+
+<nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+
+  <!-- Github -->
+  <li class="navigation__item">
+    <a href="https://github.com/gigix" title="Gigix on GitHub" target="_blank">
+      <i class='icon icon-social-github'></i>
+      <span class="label">GitHub</span>
+    </a>
+  </li>
+
+  </ul>
+</nav>
+
+          <script>
+    function doSearch() {
+        var keyword = $('#keyword').val();
+        if (keyword.trim() === '') {
+            window.location.href = 'http://gigix.thoughtworkers.org/#blog';
+        } else {
+            window.open('http://www.google.com/search?q=site:gigix.thoughtworkers.org+' + keyword);
+        }
+    }
+</script>
+
+<div class="search">
+    <input id="keyword" type="text"/>
+    <input type="button" value="Search" class="btn" onclick="doSearch()"/>
+</div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+    <header class="post-header">
+
+        
+        <div class="post-meta">
+            <time datetime="5月 4 2018"
+                  class="post-meta__date date">5月 4 2018</time>
+            &#8226;
+
+        <span class="post-meta__tags tags">
+
+            <font class="categories">
+                
+            </font>
+            
+
+        </span>
+        </div>
+        
+
+        <h1 class="post-title">区块链：原理和应用解读</h1>
+    </header>
+
+    <section class="post">
+        <p><em>（正值五四青年节之际，谨以此文送给有志青年们，祝大家多学技术，多写文章。）</em></p>
+<p>区块链进入大众视野，是从比特币开始的——准确说，是从某些人因为比特币一夜暴富的传奇开始的。然而在随后的区块链热潮中，应该说大部分人是懵逼的。百度百科上，区块链的定义是这样：</p>
+<blockquote>区块链是分布式数据存储、点对点传输、共识机制、加密算法等计算机技术的新型应用模式。所谓共识机制是区块链系统中实现不同节点之间建立信任、获取权益的数学算法。</blockquote>
+
+<p>嗯，看得懂的人请举手。</p>
+<p>一种如此难懂、绝大多数人不知道它究竟有何特点的技术，突然获得如此大的关注，怎么可能不被用于割韭菜、收智商税？（用区块链收智商税的终极形态，请看“<a href="http://www.stupidcoin.cn/" target="_blank" rel="external">傻逼链</a>”。）但是我要说，区块链不仅是一种可以被掌握技术的资本家和骗子用来割韭菜的工具，它还是可以有一些靠谱的应用场景的。</p>
+<h2 id="到底什么是区块链？"><a href="#到底什么是区块链？" class="headerlink" title="到底什么是区块链？"></a>到底什么是区块链？</h2><p>很多人大概都听过某个版本的关于“什么是区块链”的解释。但我这个版本，经过验证，没有IT背景的土老财也能听懂，因此很可能是最适合广大人文社科有志青年来听的版本。</p>
+<p>想象一个场景。某甲和某乙，两人合伙做生意。他们马上就有一个挑战：由谁来记账？这两个人必须互相信任，否则任何一个人记账，另一个人都可以怀疑他：你是否少记了一笔收入中饱私囊？这两个人如果各执一词，没有办法调解，所以他俩脆弱的信任如果破裂，生意就做不下去。</p>
+<p>现在两个人的合伙里又加入了一个某丙，三个人，情况会好转吗？并不会。丙负责记账，甲照样可以怀疑：你和乙是不是串通一气的？你们是否少记收入自己私吞了？</p>
+<p>那么大家是怎么解决这个信任危机的呢？办法有两个。第一个，是大家常见的办法：新来的丙是个持证的会计师，那么大家都可以信任他了。我们深究一下，为什么这种方式可行？为什么丙拿一本证书，就突然建立起了信任？原因当然是，丙如果被发现营私舞弊，他可能被吊销会计师资格，甚至可能身陷囹圄。这种风险太大，使得丙不太可能在常规的生意中这么做。而这种风险（换个角度，即围绕这本证书的信任）是由谁来背书的？答案是政府。政府用国家机器的暴力力量确保了，绝大多数情况下，会计师不会营私舞弊，会计师记的账是可以信任的。这个信任的背后，是枪在背书。</p>
+<p>有了这个认知，我们可以去看看社会上绝大多数的信任机制，你会发现，几乎所有陌生人之间的契约和信任，都是国家机器、是枪在背书。为什么我拿钱可以买到面包？纸币的背后是国家的枪在保障，任何人一定认可它的交换价值。为什么我刷个信用卡也可以买到面包？招商银行的背后是央行在保障它的承兑能力，央行的背后是国家的枪。为什么我在淘宝上买的东西不满意就可以退货？因为货款在支付宝里，支付宝背后有银行保障它的承兑能力，最终背后还是国家的枪。</p>
+<p>基于枪建立起来的信任机制足以满足大多数商业场景。但假如这个三人合伙做的不是合法生意，他们不想让国家机器知道这个生意，他们的信任危机又该如何解决呢？这里有第二种方法：三个人各记一本帐，分别都记录所有交易。如果帐对不上，以多数人相同的记录为准。当然，在三个人的情景下，这种机制能建立的信任还是很有限，因为你只要收买一个人就可以占到多数。但如果参与记账的有成百上千人，收买大多数的成本就会很高。随着参与记账的人越多，整套记账机制的可信度就越高。</p>
+<p>这种“每个人都记一本账”的机制，就叫“分布式账本”。围绕着分布式账本建立的信任，不需要国家的枪背书，也不会因为任何一个人的腐化或者退出而破坏。所以我们说，这是一种“去中心化”的信任机制。</p>
+<p>同时，虽然分布式账本是不需要国家的枪了，但分布式账本能实现，依赖于一个关键技术：所有的记账能迅速同步到所有账本。区块链就是实现分布式账本的关键技术。在这种技术中，每一次交易被记录为一“块”（block）数据，这样的“块”又彼此串联成一条“链”（chain），任何一个参与者都可以从任何一次交易的“块”牵出整条“链”，从而得到完整的分布式账本，这就是“区块链”（blockchain）这个名字的由来。</p>
+<h2 id="比特币的价值从何而来？"><a href="#比特币的价值从何而来？" class="headerlink" title="比特币的价值从何而来？"></a>比特币的价值从何而来？</h2><p>区块链的应用，最广为人知的无疑是比特币。但是只看各种正式的比特币介绍，你恐怕看不出为什么它有如此高的价值。比如说，一个正式的介绍可能会说，比特币是一种去中心的货币，它不需要国家为它的信用背书。但是，货币从来是用枪背书的，枪杆子越硬，货币就越值钱。一个不需要枪杆子背书的货币反而很值钱，这个逻辑是不通的。而这个不通的逻辑大家还能讲得这么热闹，恨不得把民主自由人权隐私全都放上来，说这个没有枪杆子背书的货币就应该值钱，这是一个很奇怪的现象。</p>
+<p>当一个东西很值钱但是大多数人都看不懂它为什么很值钱，大概会是两种情况。第一，有人在搅浑水养韭菜。第二，有些关键信息没有说出来。而比特币的情况，两者皆是。我们不谈养韭菜的部分，谈谈那些没有说出来的关键信息是什么。</p>
+<p>前面说了，分布式账本背书的去中心化信任机制，是在一个前提下有意义的：这个账本上记的账，参与交易的各方不想让国家机器知道。不然直接使用枪杆子背书的信任机制就好了。比如我们说比特币是一种货币（当然比特币实际上不是货币，但无所谓了，既然大家都说它是去中心化的货币，那就当它是货币好了），货币是用来买东西的，那么你买什么东西需要一种去中心化的、国家机器不插手的机制来建立信任呢？或者说，你买什么东西不能到淘宝去买（顺便叫卖家给你开张发票）呢？</p>
+<p>毒品。枪支。儿童色情。人体器官。代孕。各种只能在黑市上交易的非法商品。</p>
+<p>这就是比特币的拥护者们不肯/不愿/不能说出来的关键信息：比特币的价值，就是黑市的流动性。黑市对流动性的需求越大，比特币就会越值钱。（想炒币的有志青年请牢记这条基本价值法则。）</p>
+<p>带着这个知识，再反观国内的区块链热潮，你就会明白为什么我说现在国内做区块链项目的有一个算一个全都是割韭菜收智商税的骗子。为什么呢？现在你想做某个事情，做这个事情你需要一种信任机制，而这种信任机制你不能靠国家机器的枪杆子来给你背书，这意味着什么？你敢把这件事拿到互联网上来宣传，你的网站上还打着工信部的备案编号，然后你跟我说你做的这件事非得有去中心化的信任机制才行，不觉得自相矛盾吗？</p>
+<h2 id="作为写作平台的区块链"><a href="#作为写作平台的区块链" class="headerlink" title="作为写作平台的区块链"></a>作为写作平台的区块链</h2><p>还别说，我在国内还真的看到过靠谱的区块链应用。比如说，如果把党建信息承载在区块链上（而不是保存在一个数据库里），效果是什么呢？效果是，假如有一天中国共产党的执政党地位被反动派颠覆了，党组织被破坏，党员被清洗，党组织的活动可以立即转入地下，整个党建链上记录的党组织信息不可伪造、不可篡改、不可删除。万一有那一天，党建链就是传递革命薪火的火种。这事情现在已经有单位在做了，可见我党的先进性和忧患意识。</p>
+<p>最近北大某同学的一篇文章又让我们看到了另一种靠谱的区块链应用。大家可以打开下面这个链接：<br><a href="https://etherscan.io/tx/0x2d6a7b0f6adeff38423d4c62cd8b6ccb708ddad85da5d3d06756ad4d8a04a6a2" target="_blank" rel="external">https://etherscan.io/tx/0x2d6a7b0f6adeff38423d4c62cd8b6ccb708ddad85da5d3d06756ad4d8a04a6a2</a></p>
+<p><img src="/assets/2018/5/4/1.png"></p>
+<p>这是以太币（跟比特币相当的另一种去中心化数字货币）的一次交易记录。非常平淡的一次交易，这次交易本身的编号是“0x2d6a7b0f6adeff38423d4c62cd8b6ccb708ddad85da5d3d06756ad4d8a04a6a2”（以“0x”开头表示这是一个16进制的数字），它发生的时间是“Apr-23-2018 07:02:20 AM +UTC”，从编号“0x44938b01da1feb3f6fa1cf38870ee564e25d9bf3”的钱包转出，转入编号“0x44938b01da1feb3f6fa1cf38870ee564e25d9bf3”的钱包，转账的金额是“0 Ether ($0.00)”——对的，没真的打钱，不过没关系，金额为0也可以发起一次交易。所以真的是一次很无聊的交易。</p>
+<p>这个交易真正有趣的部分，在于它挂载的数据，也就是下面的“Input Data”字段。区块链的每个“块”是有一定容量的，交易者可以把与这次交易相关的备注信息放进去，备注信息也会随交易块同步到所有的分布式账本。现在，在这个交易的“Input Data”字段，你可以看到一长串16进制数字：</p>
+<p><img src="/assets/2018/5/4/2.png"></p>
+<p>如果你点击下面的“Convert To UTF8”按钮，你就会看到一篇熟悉的文章。我把这个探索的乐趣留给读者自己了，一定要去点哟。</p>
+<p>这篇文章，现在已经同步到了全世界上千万个分布式账本。除非收买其中超过50%的人，否则这篇文章无法篡改、无法删除。也许你在豆瓣的转发会被删，也许这个查看以太币交易信息的网站会被墙，但是这篇文章会一直在那里，国外能看到，翻个墙也能看到，谁也删不掉，包括你自己也删不掉，哪怕你妈跪下来求你也删不掉。</p>
+<p>所以，各位有志青年请记住，如果下次你想写一篇文章，并且你确定一定以及肯定绝对不会想删除这篇文章，不管是辅导员、校长、你妈、还是别的谁来求你，你都不会删除这篇文章，那么你可以把以太币、比特币之类的区块链平台用来做你的写作平台。你把文章发表到一次区块链交易的备注信息里，然后给大家发一个查看这次交易的链接。</p>
+<p>要我说，这才是区块链技术正确的打开方式。</p>
+
+    </section>
+
+    <section class="author">
+<p>（本文作者熊节是ThoughtWorks的总监咨询师）</p>
+</section>
+    <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style_32x32" style="height: 40px">
+    <a class="jiathis_button_tsina"></a>
+    <a class="jiathis_button_weixin"></a>
+    <a class="jiathis_button_douban"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis"
+       target="_blank"></a>
+</div>
+<script type="text/javascript">
+    var jiathis_config = {
+        summary: "",
+        shortUrl: false,
+        hideMore: false
+    }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code_mini/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+    
+</article>
+
+			
+            <footer class="footer">
+    <span class="footer__copyright">&copy;
+        作者保留一切权利，未经许可请勿转载</span>
+    <span class="footer__copyright">&copy;
+        2018
+        Transparent Thoughts. All rights reserved.</span>
+</footer>
+        </div>
+    </div>
+
+    <!-- The main JavaScript file for Casper -->
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    <script src="/js/jquery.imagesloaded.min.js"></script>
+    <script src="/js/gallery.js"></script>
+    <script src="/js/jquery.githubRepoWidget.min.js"></script>
+    <script type="text/javascript"
+            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> 
+      MathJax.Hub.Config({ 
+        tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+    }); 
+
+    </script>
+
+    <!--kill ie6 -->
+    <!--[if IE 6]>
+    <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+    <![endif]-->
+
+    <!-- totop -->
+    <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">
+        <a title="back to top"><img style="width:30px;height:30px;" src="/images/totop.png"/></a>
+    </div>
+    <script>
+        (function ($) {
+            var upperLimit = 100;
+            var scrollElem = $('#totop');
+            var scrollSpeed = 500;
+            scrollElem.hide();
+            $(window).scroll(function () {
+                var scrollTop = $(document).scrollTop();
+                if (scrollTop > upperLimit) {
+                    $(scrollElem).stop().fadeTo(300, 1); // fade back in
+                } else {
+                    $(scrollElem).stop().fadeTo(300, 0); // fade out
+                }
+            });
+            $(scrollElem).click(function () {
+                $('html, body').animate({scrollTop: 0}, scrollSpeed);
+                return false;
+            });
+        })(jQuery);
+    </script>
+
+    <!-- fancybox -->
+    
+    <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+    <script src="/fancybox/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript">
+        (function ($) {
+            $('.fancybox').fancybox();
+        })(jQuery);
+    </script>
+    
+
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-113927-4', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <!-- CNZZ Analytics -->
+    <script src="http://s4.cnzz.com/z_stat.php?id=1255092465&web_id=1255092465" language="JavaScript"></script>
+
+</body>
+</html>

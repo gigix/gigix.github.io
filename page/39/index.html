@@ -174,6 +174,55 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2008/12/17/duplication-is-evil/" title="link to 重复信息是邪恶的">重复信息是邪恶的</a></h2>
+
+      <p class="excerpt">
+        <p>就算不说所有的软件问题都是因为信息重复造成的，至少很多问题确实是因为重复造成的。</p><p><a href="http://www.javaeye.com/topic/295106" target="_blank" rel="external">源文件里有字符串就不是好程序？</a></p><p>是什么带来了痛苦？是信息的分布吗？</p><pre>String title = “Blog”;</pre>和<pre>String title = “博客”;</pre>有什么重要的区别？<p>一个字符串字面量包含了两重信息：（1）字符串的内容；（2）字符串的编码方式。这两个字符串的区别在于，前者的编码方式是缺省的ASCII而后者带有额外的编码方式信息（例如UTF8或者GBK）。</p><p>所以真正的问题是<strong>信息重复</strong>，关于“如何编码字符串”的信息被重复了。</p><p>重复信息是邪恶的，信息应该在并且只在一处被表述。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="12月 17 2008" class="post-list__meta--date date">12月 17 2008</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2008/12/14/mongrel-memory-issue/" title="link to Mongrel的内存占用确实成问题">Mongrel的内存占用确实成问题</a></h2>
+
+      <p class="excerpt">
+        <p>2 sets of configurations:<ul><li>A. 20 mongrel instances <em> 300MB memory limitation for each</em></li><li>B. 10 mongrel instances  512MB memory limitation for each</li></ul>Findings without surprise:<ul><li>with config A, total memory usage is about 6000+MBytes</li><li>with config B, total memory usage is about 4000+MBytes</li><li>in normal cases, the momory usage of each mongrel instance is about 400MBytes</li><li>for operations with light calculation, config A is generally faster than config B</li></ul>Findings with surprise:<ul><li>for operations with heavy calculation, config B is more efficient than config A when load(amount ofconcurrent users) grows</li><li>more importantly, config B performs more consistenly than config A<ul><li>config A fails 2 test cases for 15 concurrent users, and the possibility of failuregrowssignificantly to 5.57% for 20 concurrent users</li><li>config B doesn’t fail any test case</li><li>the degrading curve of performance of config B is flatter than config A</li></ul></li></ul>Conclusion:<ul><li>besides the memory usage,<span class="caps">CPU</span>usage is yet another bottle neck of performance</li><li>20 mongrel instances on 1 server overloads the CPUs, and thus degrades the performance</li><li>reducing the amount of mongrel instances makes HAProxy works as a queue, therefore makes thesystem performslinearly</li></ul>Suggestion:<ul><li>prefer config B than A: 10 mongrel instances on each of 2 production servers can handle 20concurrent users,which (based on my experience) effectively means at least 1000 users online<span class="caps">AT THE SAME TIME</span></li><li>try config C (15 mongrel instances <em> 400MB limitation for each) and D (5 or 7 mongrel instances</em> 512MBlimitation for each),<span class="caps">IF NECESSARY</span></li></ul></p>
+
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="12月 14 2008" class="post-list__meta--date date">12月 14 2008</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2008/12/12/translator-preface-for-implementation-patterns/" title="link to 僭序《实现模式》">僭序《实现模式》</a></h2>
 
       <p class="excerpt">
@@ -352,56 +401,6 @@ classes that you can use:
       <div class="post-list__meta">
 
         <time datetime="9月 28 2008" class="post-list__meta--date date">9月 28 2008</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2008/9/26/the-way-of-chinese-software-industry/" title="link to (LINK)敏捷与精益- 中国软件的发展之路">(LINK)敏捷与精益- 中国软件的发展之路</a></h2>
-
-      <p class="excerpt">
-        <p></p><p>最近在计算机世界发表了<a href="http://soft.ccw.com.cn/it/htm2008/20080916_502511.shtml" target="_blank" rel="external">一篇文章</a></p><blockquote>中国应该追求并效仿印度的软件公司吗，比如把它们的组织结构和做事方式都照搬过来？这里的建议是”不”。印度的软件业建立在外包业务的基础上，而中国软件企业有一个更为广大的内需市场。相比用完全可预测的提前计划来保护自己的既得利益，中国更为重要的应该是为快速发展的中国经济提供适应变化的IT支持，从而创造更大的价值。<p>正在日益发展壮大的中国软件公司应该拥抱敏捷的开发方法和精益管理的行事方式以及一种不同于以往的软件开发者能力模型。笔者相信，通过采用敏捷与精益，这些公司将有能力更快速地交付低成本、高客户满意度的软件产品，并在市场上凸显出中国公司的与众不同。这也是一条可以同印度软件公司竞争的发展之路。</p></blockquote><p></p>
-
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="9月 26 2008" class="post-list__meta--date date">9月 26 2008</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2008/9/23/replace-long-calculation-with-asynch/" title="link to 重构模式：用异步计算替代长计算">重构模式：用异步计算替代长计算</a></h2>
-
-      <p class="excerpt">
-        <p></p><h2>问题</h2><p>当一个JavaScript计算进程耗时太长，浏览器会弹出警告框，不仅烦人而且一不小心就会点错导致后面的程序不被执行。</p><p>很多这类长计算是由于操作大数组造成的。虽然每个元素的处理耗时很少，当数组有几百上千个元素时整个计算时间就会长到超时。由于数组元素数不确定，对单一元素操作调优仍然不能根本解决问题。</p><h2>办法</h2><p>把长计算拆解成多个异步的短计算。</p><p>即使计算所需的总时间并不缩短，将阻塞的长计算拆解成异步的短计算至少带来响应性的提升：在计算进行的同时用户还可以做其他操作，而不是眼看着整个浏览器失去响应。</p><p>在拆解的基础上可以改进任务分发机制以提升整体计算时间。</p><h2>步骤</h2><ul><li>重构原来的长计算<ul><li>把整个长计算抽取到一个方法中</li><li>重构该方法使之呈现以下结构：</li></ul></li></ul><pre>function longCalculation() {before();var items = getItems();items.each(handleSingleItem);after();}</pre><ul><li>把循环重构为递归<ul><li>把“操作数组中所有元素”的逻辑抽取到一个递归调用的方法，使之呈现以下结构：</li></ul></li></ul><pre>function handleItems(items, cur) {if(cur == items.length - 1) {after();return;}var item = items[cur];handleSingleItem(item);handleItems(items, cur + 1);}function longCalculation() {before();var items = getItems();handleItems(items, 0);}</pre><ul><li>把针对每个元素的操作变成一个异步的计算进程──这一步很简单，只要在调用handleItems方法时始终加上delay就行。</li></ul><p>以上。应该很容易写出一个类似于library的玩意来封装这个模式。太容易了以至于我不想写。</p><p></p>
-
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="9月 23 2008" class="post-list__meta--date date">9月 23 2008</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">
