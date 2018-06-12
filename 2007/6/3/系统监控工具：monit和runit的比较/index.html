@@ -24,6 +24,7 @@
 <meta property="og:url" content="http://gigix.thoughtworkers.org/2007/6/3/系统监控工具：monit和runit的比较/index.html">
 <meta property="og:site_name" content="透明思考">
 <meta property="og:description" content="关于Rails的部署：Rails部署艺术monit作为监控工具有一个缺点：monit会以daemon模式来启动mongrel进程（以及，可能还有，haproxy进程），也就是说每个mongrel需要自己管理PID文件。问题出现在mongrel被意外杀掉的情况：此时PID文件仍然存在，因此monit没办法再用“mongrelstart -d”的命令来启动mongrel。你必须自己想办法清理这些“僵尸">
+<meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2015-11-11T07:46:01.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="系统监控工具：monit和runit的比较 | 透明思考">
@@ -199,8 +200,9 @@ classes that you can use:
     </section>
 
     <section class="author">
-<p>（本文作者熊节是ThoughtWorks的总监咨询师）</p>
+<p></p>
 </section>
+
     <!-- JiaThis Button BEGIN -->
 <div class="jiathis_style_32x32" style="height: 40px">
     <a class="jiathis_button_tsina"></a>

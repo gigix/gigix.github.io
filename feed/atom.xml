@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gigix.thoughtworkers.org/"/>
-  <updated>2018-05-04T05:21:54.359Z</updated>
+  <updated>2018-06-12T14:45:06.052Z</updated>
   <id>http://gigix.thoughtworkers.org/</id>
   
   <author>
@@ -16,11 +16,47 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>机器学习项目如何管理：看板</title>
+    <link href="http://gigix.thoughtworkers.org/2018/6/13/ml-project-kanban/"/>
+    <id>http://gigix.thoughtworkers.org/2018/6/13/ml-project-kanban/</id>
+    <published>2018-06-13T05:01:00.000Z</published>
+    <updated>2018-06-12T14:45:06.052Z</updated>
+    
+    <content type="html"><![CDATA[<p>在前面的文章中我们看到，涉及机器学习、人工智能的项目，普遍地存在<a href="/2017/12/12/ml-project-management-current-situation/">项目管理的困难</a>。然后我介绍了针对这类项目<a href="/2018/1/28/machine-learning-for-managers/">如何设置合理的期望</a>，并且深入分析了<a href="/2018/2/23/managing-ml-projects/">机器学习项目的工作内容</a>。既然已经知道如何设置客户的期望、又知道可以做哪些事来逼近这个期望，那么围绕期望和动作进行任务的拆解、管理和可视化应该是顺理成章的。</p>
+<p><img src="/assets/2018/1/28/ml-process.png"></p>
+<p>在<a href="/2018/2/23/managing-ml-projects/">前一篇文章</a>中我们已经看到，一个机器学习项目涉及的三类九项工作内容当中，只有一项（“自行训练模型”，上图右下角标星星的部分）不是传统的软件开发任务。只有针对这项工作内容，我们需要新的任务拆解和管理方式，其他部分可以用标准的Scrum方法来处理。</p>
+<p>对于“自行训练模型”过程中的具体任务，可以沿用学校里做实验的概念，将每次模型训练记录为一次“实验”。每次实验应该包含两个部分：</p>
+<ul>
+<li>输入部分，即实验的初始状态：数据从哪里来；如何对原始数据加工；选取哪些参数；如何训练模型</li>
+<li>输出部分，即实验的效果：模型是否准确描述训练集；模型是否overfit训练集；有多少false positive；有多少false negative</li>
+</ul>
+<p>于是我们得到了一张“实验卡”，上半部分记录实验输入，下半部分记录实验输出。</p>
+<p><img src="/assets/2018/6/13/experiment-card.png"></p>
+<p>把若干张实验卡放在一个看板上，就得到了可视化的实验管理墙。在项目启动时，首先制定一部分实验计划（以一批实验卡的形式），记录每个实验设计的输入部分。每做完一个实验，就在对应的实验卡上记录实验输出。在项目进展过程中，也可以不断增加新的实验卡。项目过程中，做实验的优先级由上一篇文章中介绍的“自行训练模型的流程”来判断：从一个简单的模型开始，首先尝试能降低Bias的实验，当Bias逼近期望时，再做降低Variance的实验。</p>
+<p>作为项目管理者，对着这样一面实验看板墙，需要关注的信息有以下几个方面：</p>
+<ul>
+<li><strong>看产出</strong>：实验效果（Bias-Variance组合）是否逼近预期？接下来应该做哪些实验？</li>
+<li><strong>看计划</strong>：实验计划是否完备？是否考虑到各种可能的算法？是否考虑到各种数据来源？是否考虑到各种数据加工方式？</li>
+<li><strong>看进度</strong>：做实验的速度有多快？训练集获取是否耗时太长？模型训练是否耗时太长？是否需要优化训练算法？是否需要增加计算资源？是否需要提高数据流水线自动化水平？</li>
+</ul>
+<p>用这种方法，我们可以把看似神秘的机器学习项目拆解成独立、可讨论、有价值、可估计工作量、相对较小、可测试（<a href="https://agileforall.com/new-to-agile-invest-in-good-user-stories/" target="_blank" rel="external">INVEST</a>）的实验卡，于是我们可以用Scrum方法来管理和度量围绕这些卡开展的工作。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在前面的文章中我们看到，涉及机器学习、人工智能的项目，普遍地存在&lt;a href=&quot;/2017/12/12/ml-project-management-current-situation/&quot;&gt;项目管理的困难&lt;/a&gt;。然后我介绍了针对这类项目&lt;a href=&quot;/2018/1/2
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>区块链：原理和应用解读</title>
     <link href="http://gigix.thoughtworkers.org/2018/5/4/block-chain-introduction/"/>
     <id>http://gigix.thoughtworkers.org/2018/5/4/block-chain-introduction/</id>
-    <published>2018-05-04T03:04:00.000Z</published>
-    <updated>2018-05-04T05:21:54.359Z</updated>
+    <published>2018-05-04T05:04:00.000Z</published>
+    <updated>2018-05-04T05:21:54.000Z</updated>
     
     <content type="html"><![CDATA[<p><em>（正值五四青年节之际，谨以此文送给有志青年们，祝大家多学技术，多写文章。）</em></p>
 <p>区块链进入大众视野，是从比特币开始的——准确说，是从某些人因为比特币一夜暴富的传奇开始的。然而在随后的区块链热潮中，应该说大部分人是懵逼的。百度百科上，区块链的定义是这样：</p>
@@ -65,31 +101,11 @@
   </entry>
   
   <entry>
-    <title>月照西乡</title>
-    <link href="http://gigix.thoughtworkers.org/2018/4/13/leaving-thoughtworks/"/>
-    <id>http://gigix.thoughtworkers.org/2018/4/13/leaving-thoughtworks/</id>
-    <published>2018-04-13T03:04:00.000Z</published>
-    <updated>2018-04-13T06:25:04.579Z</updated>
-    
-    <content type="html"><![CDATA[<p>终于还是到了这一天。过去十二年零四个月里，我一直保持着每半年更新一次简历的习惯。我跟每一个</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;终于还是到了这一天。过去十二年零四个月里，我一直保持着每半年更新一次简历的习惯。我跟每一个&lt;/p&gt;
-
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>浅谈大数据平台基建的逻辑</title>
     <link href="http://gigix.thoughtworkers.org/2018/3/16/infrastructure-of-big-data/"/>
     <id>http://gigix.thoughtworkers.org/2018/3/16/infrastructure-of-big-data/</id>
-    <published>2018-03-16T03:04:00.000Z</published>
-    <updated>2018-03-16T04:42:37.317Z</updated>
+    <published>2018-03-16T05:04:00.000Z</published>
+    <updated>2018-03-16T04:42:37.000Z</updated>
     
     <content type="html"><![CDATA[<p>这篇文章主要目的是面向初接触大数据的朋友简单介绍大数据平台基础建设所需要的各个模块以及缘由。</p>
 <h2 id="数据仓库和数据平台架构"><a href="#数据仓库和数据平台架构" class="headerlink" title="数据仓库和数据平台架构"></a>数据仓库和数据平台架构</h2><p>按照<a href="https://book.douban.com/subject/26792705/" target="_blank" rel="external">Ralph Hughes的观点</a>，企业数据仓库参考架构由下列几层构成：</p>
@@ -146,8 +162,8 @@
     <title>敏捷在中国这十五年</title>
     <link href="http://gigix.thoughtworkers.org/2018/3/7/agile-in-china-fifteen-years/"/>
     <id>http://gigix.thoughtworkers.org/2018/3/7/agile-in-china-fifteen-years/</id>
-    <published>2018-03-07T03:04:00.000Z</published>
-    <updated>2018-03-07T04:12:07.196Z</updated>
+    <published>2018-03-07T05:04:00.000Z</published>
+    <updated>2018-03-07T04:12:07.000Z</updated>
     
     <content type="html"><![CDATA[<p><em>题记：2002年3月，《程序员》杂志发表了《极限编程》技术专题。以此为标记，敏捷进入中国已经十六年了。这篇文章是我去年为《程序员》写的年终回顾文章，发表于《程序员》2018年第1期。</em></p>
 <p>时至岁末，各种年度调查报告渐次登台。其中我注意到云栖社区发布的《2017开发者调查报告》中有一项数据：45.6%软件开发者所在的组织采用了敏捷软件开发方法，在各种开发方法学中位居第一。这个数字又让我联想起，CSDN在年初发布的《2016年度中国软件开发者白皮书》中提到，64%的受访企业采用了敏捷项目管理工具。虽然之前也曾经看到某些调查声称“98%的企业计划采用Scrum”，但我对于这些调查的采样范围一向存疑。云栖社区与CSDN的这两个报告，在我看来客观而坚实地明确了敏捷在当今IT行业的主流地位。</p>
@@ -175,8 +191,8 @@
     <title>数字化企业的实验基础设施</title>
     <link href="http://gigix.thoughtworkers.org/2018/2/27/dps-experimental-infrastructure/"/>
     <id>http://gigix.thoughtworkers.org/2018/2/27/dps-experimental-infrastructure/</id>
-    <published>2018-02-27T03:04:00.000Z</published>
-    <updated>2018-02-27T13:29:42.730Z</updated>
+    <published>2018-02-27T05:04:00.000Z</published>
+    <updated>2018-02-27T13:29:42.000Z</updated>
     
     <content type="html"><![CDATA[<p>在<a href="/2017/4/25/ditigal-platform-strategy-intro/">前文</a>中我们说到，传统企业在逐步建设自己的数字平台过程中，需要抓住交付基础设施、API和架构治理、数据自服务、创新实验基础设施和监控体系、用户触点技术这五个支柱。今天我们讨论的主题是<a href="https://www.thoughtworks.com/digital-platform-strategy" target="_blank" rel="external">数字平台战略</a>的第四个支柱“实验基础设施”，看看一个倡导消除摩擦、建设生态、推动创新的数字化平台如何赋能快速、有针对性的商业实验。</p>
 <blockquote>
@@ -251,8 +267,8 @@
     <title>机器学习项目如何管理：工作内容</title>
     <link href="http://gigix.thoughtworkers.org/2018/2/23/managing-ml-projects/"/>
     <id>http://gigix.thoughtworkers.org/2018/2/23/managing-ml-projects/</id>
-    <published>2018-02-23T03:01:00.000Z</published>
-    <updated>2018-02-23T06:32:05.632Z</updated>
+    <published>2018-02-23T05:01:00.000Z</published>
+    <updated>2018-02-23T06:32:05.000Z</updated>
     
     <content type="html"><![CDATA[<p><a href="/2018/1/28/machine-learning-for-managers/">前一篇文章</a>介绍了机器学习的基本过程，然后讨论了如何对机器学习项目设置期望的问题。我们了解到，度量准确率的指标可以有多种，需要根据应用场景来选择。一旦选好了度量指标，接下来就可以围绕这个指标来划分任务、监控进度、管理风险。</p>
 <h2 id="机器学习项目涉及哪些工作"><a href="#机器学习项目涉及哪些工作" class="headerlink" title="机器学习项目涉及哪些工作"></a>机器学习项目涉及哪些工作</h2><p>站在非常宏观的角度，机器学习系统工作的方式是：你有一个模型，你把一堆数据输入给它，然后你以某种方式使用它提供给你的输出。所以机器学习项目要完成的任务也是三大块：处理输入；获得模型；提供产出。</p>
@@ -314,8 +330,8 @@
     <title>精准投放的原理及其担忧</title>
     <link href="http://gigix.thoughtworkers.org/2018/2/17/precise-deliverying/"/>
     <id>http://gigix.thoughtworkers.org/2018/2/17/precise-deliverying/</id>
-    <published>2018-02-17T03:01:00.000Z</published>
-    <updated>2018-02-17T05:37:19.406Z</updated>
+    <published>2018-02-17T05:01:00.000Z</published>
+    <updated>2018-02-17T05:37:19.000Z</updated>
     
     <content type="html"><![CDATA[<p>从WWW网站发源之初，网站的经营者们就清楚地认识到，自己经营的是一份媒体，就跟报刊杂志一样。媒体的收入，第一是来自读者付费，第二也是更主要的，是来自广告。于是站长们在自己的网站页面上开辟出或大或小、或纵或横的广告位，广告主则可以采购广告位。据笔者亲眼所见，迟至2001年，中国很多网站的广告销售方式仍然是由销售人员拿着一份打印出来的“刊例”（这个词也同样是来自报刊出版领域），直接向广告主介绍。购买广告位的方式，也通常是一家广告主承包一个广告位一段时间（通常是几天，有时长达几周），只有在最热门的广告位（例如首页顶部Banner）才有简单的轮换机制。广告收费是按照广告位与放置时长计算，网站几乎不向广告主反馈投放的效果。简而言之，这是在线广告的初创阶段，网站基本上是被当做报刊来经营的。</p>
 <p>这种投放方式显然是很原始的，最大的问题有两个：首先，广告主需要自己接洽多家媒体，分配各家媒体的投放预算，媒体则要自己管理多家广告主的投放排期，这对于广告主和媒体都是个很大的工作量；而且，广告投放出去以后效果如何，哪些媒体效果更好，后续投放应该如何调整，这些信息广告主无法获得，即使媒体有回馈数据，其中有多大成分的数据夸大，广告主也无从知晓。在这两个痛点的催生下，就出现了“媒体采买平台”的服务形式：经营这个平台的广告代理公司向大量媒体（即网站）购买广告位，广告主只要把广告投放到这一家代理公司，代理公司自会通过软件程序把广告派发到媒体。如此一来，广告主和媒体不用彼此一对一接洽，工作量都减少很多。并且在这个阶段，广告收费模式也改为按点击付费（通常会承诺一定浏览流量），广告主可以更准确地知道广告的效果，按实际效果付费。</p>
@@ -354,8 +370,8 @@
     <title>机器学习项目如何管理：设置期望</title>
     <link href="http://gigix.thoughtworkers.org/2018/1/28/machine-learning-for-managers/"/>
     <id>http://gigix.thoughtworkers.org/2018/1/28/machine-learning-for-managers/</id>
-    <published>2018-01-28T03:01:00.000Z</published>
-    <updated>2018-01-27T01:17:48.962Z</updated>
+    <published>2018-01-28T05:01:00.000Z</published>
+    <updated>2018-01-27T01:17:48.000Z</updated>
     
     <content type="html"><![CDATA[<p>我在之前的一篇文章中提到，<a href="/2017/12/12/ml-project-management-current-situation/">机器学习项目如何管理</a>，目前在行业内是一个普遍存在的难题。具体而言，对于这类项目，我们需要一套行之有效的工作办法，帮助一线工作者：(1)知道什么时候该做什么事；(2)知道什么时候该看什么指标；(3)知道什么时候可能有什么风险。这样一套工作办法的第一步，就是对一个机器学习项目设置合理的期望。</p>
 <h2 id="机器学习到底是在做什么"><a href="#机器学习到底是在做什么" class="headerlink" title="机器学习到底是在做什么"></a>机器学习到底是在做什么</h2><p>机器学习的基本过程可以用下面这张图来呈现：</p>
@@ -403,8 +419,8 @@
     <title>数字化企业的数据自服务</title>
     <link href="http://gigix.thoughtworkers.org/2018/1/13/dps-self-service-data/"/>
     <id>http://gigix.thoughtworkers.org/2018/1/13/dps-self-service-data/</id>
-    <published>2018-01-13T03:04:00.000Z</published>
-    <updated>2018-01-13T07:34:26.036Z</updated>
+    <published>2018-01-13T05:04:00.000Z</published>
+    <updated>2018-01-13T07:34:26.000Z</updated>
     
     <content type="html"><![CDATA[<p>在<a href="/2017/4/25/ditigal-platform-strategy-intro/">前文</a>中我们说到，传统企业在逐步建设自己的数字平台过程中，需要抓住交付基础设施、API和架构治理、数据自服务、创新实验基础设施和监控体系、用户触点技术这五个支柱。今天我们讨论的主题是“数据自服务”，看看一个倡导消除摩擦、建设生态、推动创新的数字化平台如何处理数据。</p>
 <blockquote>
@@ -478,8 +494,8 @@
     <title>2017年读过的好书</title>
     <link href="http://gigix.thoughtworkers.org/2018/1/1/2017-readings/"/>
     <id>http://gigix.thoughtworkers.org/2018/1/1/2017-readings/</id>
-    <published>2018-01-01T03:01:00.000Z</published>
-    <updated>2018-01-01T04:09:32.786Z</updated>
+    <published>2018-01-01T05:01:00.000Z</published>
+    <updated>2018-01-01T04:09:32.000Z</updated>
     
     <content type="html"><![CDATA[<p>今年读了66本书，不过有很大部分是工作需要。而且不知道什么原因，中间读的很多关于内亚性的书都只标了四星……</p>
 <h2 id="仅存的内亚性"><a href="#仅存的内亚性" class="headerlink" title="仅存的内亚性"></a>仅存的内亚性</h2><ul>
@@ -520,8 +536,8 @@
     <title>保持现状与有意为之的无知</title>
     <link href="http://gigix.thoughtworkers.org/2017/12/12/minded-unmindedness/"/>
     <id>http://gigix.thoughtworkers.org/2017/12/12/minded-unmindedness/</id>
-    <published>2017-12-12T03:01:00.000Z</published>
-    <updated>2017-12-11T10:43:43.343Z</updated>
+    <published>2017-12-12T05:01:00.000Z</published>
+    <updated>2017-12-11T10:43:43.000Z</updated>
     
     <content type="html"><![CDATA[<p><em>（本文同时发表于<a href="http://tootopia.me/article/8761" target="_blank" rel="external">土逗公社</a>）</em></p>
 <p>1970年9月，萨尔瓦多·阿连德当选智利总统。智利人民用自己的选票，选择了他倡导的社会主义路线。执政之后，阿连德政府开始收购智利最重要的工业企业，将它们纳入国家控制。到1971年底，国家开发公司已经必须负责指导下属150多家企业，包括智利20家最大企业中的12家。国有经济的高速发展创造了一个笨重的、智利政府从未见过的怪兽，管理已经成为国有化进程的一个核心问题。为此，阿连德政府联系到了英国控制论学者斯塔福·比尔。比尔发现，控制论中关于反馈与掌控的思想能够指导开发一套新的科技系统来改善国有经济的管理，从车间直到国家开发公司办公室。这样一个系统将会搭建起实时信息交换的网络，管理者和政府官员将能够基于实时数据来做决策，并能够快速调整行动。这个系统，就是传奇的Cybersyn，距今<a href="/2016/12/24/cybersyn-1/">半个世纪前出现在智利的大数据系统</a>。</p>
@@ -558,8 +574,8 @@
     <title>机器学习项目如何管理：现状</title>
     <link href="http://gigix.thoughtworkers.org/2017/12/12/ml-project-management-current-situation/"/>
     <id>http://gigix.thoughtworkers.org/2017/12/12/ml-project-management-current-situation/</id>
-    <published>2017-12-12T03:01:00.000Z</published>
-    <updated>2017-12-08T12:23:10.376Z</updated>
+    <published>2017-12-12T05:01:00.000Z</published>
+    <updated>2017-12-08T12:23:10.000Z</updated>
     
     <content type="html"><![CDATA[<p><a href="https://www.atlassian.com/blog/software-teams/3-ways-ai-will-change-project-management-better" target="_blank" rel="external">Atlassian今年4月的一篇博客</a>提出，到2020年有87%的Jira用户认为他们的工作会被AI改变。具体到项目管理上，Atlassian的观点是，AI首先会作为项目管理助手进入我们的视野，然后透过数据拓展我们对项目的理解，更进一步还能通过主动猜测、倡导优秀实践、创造新的元数据层等方式弥补数据的缺失，最终对项目提出有益的建议。</p>
 <p><img src="https://orhachaim.co.il/wp-content/uploads/thumbs/1-338ubis538emc7477jajgq.jpg"></p>
@@ -586,8 +602,8 @@
     <title>数据管理平台（DMP）综述</title>
     <link href="http://gigix.thoughtworkers.org/2017/12/3/dmp-overview/"/>
     <id>http://gigix.thoughtworkers.org/2017/12/3/dmp-overview/</id>
-    <published>2017-12-03T03:01:00.000Z</published>
-    <updated>2017-12-02T16:55:25.258Z</updated>
+    <published>2017-12-03T05:01:00.000Z</published>
+    <updated>2017-12-02T16:55:25.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="在线广告技术生态"><a href="#在线广告技术生态" class="headerlink" title="在线广告技术生态"></a>在线广告技术生态</h2><p>ADN（广告网络）批量地运营媒体的广告位资源，按照人群或上下文标签售卖给需求方，并用竞价的方式决定流量分配。广告网络的结算以按点击付费（Cost per Click，CPC）的方式为主。面向多个ADN或媒体按人群一站式采买广告并优化投入产出比的需求方产品叫交易终端（Trading Desk，TD）。</p>
 <p>在ADN中，核心的竞价逻辑是封闭的，不能满足需求方越来越明确的利益要求，于是市场上产生了大量聚合各媒体剩余流量并采用实时竞价方式为他们变现的产品形态——广告交易平台（AD Exchange，ADX）。</p>
@@ -672,8 +688,8 @@
     <title>智能技术的伦理风险：研究框架</title>
     <link href="http://gigix.thoughtworkers.org/2017/11/28/intelligent-disempowerment-research-framework/"/>
     <id>http://gigix.thoughtworkers.org/2017/11/28/intelligent-disempowerment-research-framework/</id>
-    <published>2017-11-28T03:01:00.000Z</published>
-    <updated>2017-11-26T16:16:23.771Z</updated>
+    <published>2017-11-28T05:01:00.000Z</published>
+    <updated>2017-11-26T16:16:23.000Z</updated>
     
     <content type="html"><![CDATA[<p>在<a href="/2017/11/27/intelligent-disempowerment/">前一篇文章</a>中我们已经提到，当下常见的关于智能技术伦理危害与风险的讨论总体上强调人工智能对人类整体的影响，并不凸显其对当前社会不同人群造成不同影响的情况，并且在分析这些风险时往往聚焦于技术层面，而并未将社会和政治层面的因素纳入考虑。从这个角度出发的分析难免失于片面，无法充分认识智能技术的潜在风险。由于缺乏一个全面的、结合科技与人文视角的研究框架，使得对于这一问题的研究普遍零散而不成体系，且容易陷入“机器 vs. 人类”的未来学视角。</p>
 <p>例如在分析智能技术对就业造成的影响时，以<a href="https://www.wired.com/2012/12/ff-robots-will-take-our-jobs/" target="_blank" rel="external">Kevin Kelly</a>为代表的未来学家认为人工智能取代人类工作是必然趋势，并乐观地相信“被失业”的人群能找到更有价值的工作。另一些研究者则认为应对大规模结构性失业的关键是社会保障，例如<a href="https://www.brookings.edu/blog/techtank/2015/10/26/how-robots-artificial-intelligence-and-machine-learning-will-affect-employment-and-public-policy/" target="_blank" rel="external">在就业之外提供全民最低收入保障</a>。然而更早的计算机伦理学、乃至科技伦理学研究已经指出，就业对于人而言不仅是提供生活保障的方式。正如<a href="https://book.douban.com/subject/4928961/" target="_blank" rel="external">维纳在70多年前就已经指出</a>的，人需要发挥创造力和灵活性，人需要做决策、需要感受到自己为社会与他人做出的贡献，而工作是满足这些需求、使人获得尊严与成就感的重要途径。如果只看到失业对收入的影响，忽视智能技术在其他方面对人的影响，便无法全面理解智能技术的潜在风险。</p>
@@ -713,8 +729,8 @@
     <title>智能技术的伦理风险</title>
     <link href="http://gigix.thoughtworkers.org/2017/11/27/intelligent-disempowerment/"/>
     <id>http://gigix.thoughtworkers.org/2017/11/27/intelligent-disempowerment/</id>
-    <published>2017-11-27T03:01:00.000Z</published>
-    <updated>2017-11-26T16:13:38.033Z</updated>
+    <published>2017-11-27T05:01:00.000Z</published>
+    <updated>2017-11-26T16:13:38.000Z</updated>
     
     <content type="html"><![CDATA[<p><em>（旧文一篇，已发表于<a href="https://zhuanlan.zhihu.com/p/25854862" target="_blank" rel="external">土逗公社</a>）</em></p>
 <p>人工智能的风险已经不再是一个新话题。在过去几年中，很多研究者提及了人工智能（以及与之紧密相关的技术，尤其是机器学习和大数据技术）可能带来的危害与风险。值得注意的现象是：在公众话语空间中流行的关于智能技术伦理危害与风险的讨论，大多将“人类”整体视为潜在的被损害的对象。大量的叙事被构建为“机器 vs. 人类”的形式。而关于智能技术如何被当前社会的权力结构主导、并反过来强化当前社会的权力结构、加深对弱势边缘群体的压迫，这一方面的讨论数量较少，且较缺乏系统性。本文将介绍一些关于智能技术伦理危害与风险的讨论，并着重介绍一些智能技术强化社会与经济不公正的案例。</p>
@@ -757,7 +773,7 @@
     <title>数字化转型与平台战略</title>
     <link href="http://gigix.thoughtworkers.org/2017/11/15/digitization-and-digital-platform/"/>
     <id>http://gigix.thoughtworkers.org/2017/11/15/digitization-and-digital-platform/</id>
-    <published>2017-11-15T03:01:00.000Z</published>
+    <published>2017-11-15T05:01:00.000Z</published>
     <updated>2017-11-15T03:52:48.000Z</updated>
     
     <content type="html"><![CDATA[<p>数字化浪潮对传统行业的冲击已经被越来越多的企业领导者所感知。据《<a href="https://hbr.org/2016/03/the-industries-that-are-being-disrupted-the-most-by-digital" target="_blank" rel="external">哈佛商业评论</a>》的调查，半数以上的企业高管认为自己的业务将在12个月内受到数字化浪潮较大程度的冲击，其中媒体、通信、消费者金融服务、零售、科技、保险、消费者产品、专业服务和教育等10个行业受到的影响最大。</p>
@@ -821,7 +837,7 @@
     <title>企业IT的经营模式及其与企业架构师的关系</title>
     <link href="http://gigix.thoughtworkers.org/2017/11/10/operating-models/"/>
     <id>http://gigix.thoughtworkers.org/2017/11/10/operating-models/</id>
-    <published>2017-11-10T03:01:00.000Z</published>
+    <published>2017-11-10T05:01:00.000Z</published>
     <updated>2017-11-11T13:36:48.000Z</updated>
     
     <content type="html"><![CDATA[<p>企业IT的经营模式可以由两个维度来定义。第一个维度是标准化，第二个维度是整合。这两个维度划分出的四个象限，定义了四种不同的经营模式。不同的经营模式，有各自不同的聚焦重心，对企业架构师的关注点也有不同的要求。</p>
@@ -857,7 +873,7 @@
     <title>从海尔模式看数字化平台</title>
     <link href="http://gigix.thoughtworkers.org/2017/10/17/haier-and-digital-platform/"/>
     <id>http://gigix.thoughtworkers.org/2017/10/17/haier-and-digital-platform/</id>
-    <published>2017-10-17T03:01:00.000Z</published>
+    <published>2017-10-17T05:01:00.000Z</published>
     <updated>2017-10-17T04:11:19.000Z</updated>
     
     <content type="html"><![CDATA[<p>关于数字化、网络化转型的目标，海尔的定义是：企业无边界、管理无领导、供应链无尺度。企业无边界，意味着要让全球第一流的资源进入海尔，并能够持续动态优化。管理无领导，即打破科层制组织，让员工与用户零距离连接，拥有自主权，快速响应市场，最终实现“无为而治”的最高境界。供应链无尺度，要探索按需设计、按需制造和按需配送的体系，实现从大规模制造向大规模定制的转变。</p>
@@ -898,7 +914,7 @@
     <title>毕业设计中使用敏捷方法的尝试</title>
     <link href="http://gigix.thoughtworkers.org/2017/8/23/agile-in-graduation-projects/"/>
     <id>http://gigix.thoughtworkers.org/2017/8/23/agile-in-graduation-projects/</id>
-    <published>2017-08-23T03:04:00.000Z</published>
+    <published>2017-08-23T05:04:00.000Z</published>
     <updated>2017-08-23T13:51:00.000Z</updated>
     
     <content type="html"><![CDATA[<p>从CNKI收录的共计超过1000篇与敏捷软件开发相关的论文中，我找到了5篇关于在毕业设计中使用敏捷方法的文章，从一个侧面勾勒出高校教育工作者看待敏捷的一种视角。</p>
@@ -925,7 +941,7 @@
     <title>敏捷在中文期刊中的投影</title>
     <link href="http://gigix.thoughtworkers.org/2017/8/15/agile-in-chinese-journals/"/>
     <id>http://gigix.thoughtworkers.org/2017/8/15/agile-in-chinese-journals/</id>
-    <published>2017-08-15T03:04:00.000Z</published>
+    <published>2017-08-15T05:04:00.000Z</published>
     <updated>2017-08-15T14:23:36.000Z</updated>
     
     <content type="html"><![CDATA[<p>在中国推广敏捷软件开发方法十五年之后，我很想回头去看这段历史的全景。今天我用<a href="http://www.cnki.net/" target="_blank" rel="external">知网</a>做了一些检索，看到了一些有趣的数据。</p>

@@ -24,6 +24,7 @@
 <meta property="og:url" content="http://gigix.thoughtworkers.org/2008/10/19/hack-rails-transaction/index.html">
 <meta property="og:site_name" content="透明思考">
 <meta property="og:description" content="ActiveRecord不支持嵌套事务。为了简单我们在ApplicationController里做了个filter，于是所有POST/PUT/DELETE的action都被包裹在一个事务里，事务边界是整个请求。偏偏有时候你希望让某个操作中的某个部分不被包含在事务里。原因是当某些操作同时进行，你想看到的不是原子的结果，而是所有同时进行的操作汇总的最终结果比如说，“审核改进措施”这个操作中包含了“重">
+<meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2015-11-11T07:46:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hack Rails的事务机制 | 透明思考">
@@ -199,8 +200,9 @@ classes that you can use:
     </section>
 
     <section class="author">
-<p>（本文作者熊节是ThoughtWorks的总监咨询师）</p>
+<p></p>
 </section>
+
     <!-- JiaThis Button BEGIN -->
 <div class="jiathis_style_32x32" style="height: 40px">
     <a class="jiathis_button_tsina"></a>

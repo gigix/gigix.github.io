@@ -24,6 +24,7 @@
 <meta property="og:url" content="http://gigix.thoughtworkers.org/2008/7/26/mysql-timeout/index.html">
 <meta property="og:site_name" content="透明思考">
 <meta property="og:description" content="一个后台操作算得太久，然后再想跟MySQL说说话的时候，就发现那个server已经偷偷的跑掉了。MySQL的超时可以用SQL查到：mysql show variables;看interactive_timeout和wait_timeout这两项。缺省是28800（秒），我们的服务器上设成了600。所以，一个长循环跑了11分钟之后，数据库连接已经被关掉了，因为中间没有和数据库打交道。（多长的循环可以">
+<meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2015-11-11T07:46:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MySQL掉线咯 | 透明思考">
@@ -199,8 +200,9 @@ classes that you can use:
     </section>
 
     <section class="author">
-<p>（本文作者熊节是ThoughtWorks的总监咨询师）</p>
+<p></p>
 </section>
+
     <!-- JiaThis Button BEGIN -->
 <div class="jiathis_style_32x32" style="height: 40px">
     <a class="jiathis_button_tsina"></a>
