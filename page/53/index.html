@@ -175,6 +175,30 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2007/6/18/抄书-erlang的接口库/" title="link to (抄书)Erlang的接口库">(抄书)Erlang的接口库</a></h2>
+
+      <p class="excerpt">
+        <p>However, several libraries included in the Erlang distribution simplifythe job of interfacingErlang to external programs; these include the following:</p><p><a href="http://www.erlang.org/doc/pdf/erl_interface.pdf" target="_blank" rel="external">http://www.erlang.org/doc/pdf/erl_interface.pdf</a></p><p>Erl interface (ei) is a set of C routines and macros for encoding and decoding the Erlang externalformat. On the Erlang side, an Erlang program uses term_to_binary to serialize an Erlang term, andon the C side the routines in ei can be used to unpack this binary. ei can also be used to constructa binary, which the Erlang side can unpack with binary_to_term.</p><p><a href="http://www.erlang.org/doc/pdf/ic.pdf" target="_blank" rel="external">http://www.erlang.org/doc/pdf/ic.pdf</a></p><p>The Erlang<span class="caps">IDL</span>Compiler (ic). The ic application is an Erlang implementation of an<span class="caps">OMG IDL</span>complier.</p><p><a href="http://www.erlang.org/doc/pdf/jinterface.pdf" target="_blank" rel="external">http://www.erlang.org/doc/pdf/jinterface.pdf</a></p><p>Jinteface is a set of tools for interfacing Java to Erlang. It provides a full mapping of Erlangtypes to Java objects, encoding and decoding Erlang terms, linking to Erlang processes, and so on,as well as a wide range of additional features.</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="6月 18 2007" class="post-list__meta--date date">6月 18 2007</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2007/6/18/抄书-erlang如何使用外部程序/" title="link to (抄书)Erlang如何使用外部程序">(抄书)Erlang如何使用外部程序</a></h2>
 
       <p class="excerpt">
@@ -390,30 +414,6 @@ classes that you can use:
       <hr class="post-list__divider" />
     </li>
     
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2007/6/3/系统监控工具：monit和runit的比较/" title="link to 系统监控工具：monit和runit的比较">系统监控工具：monit和runit的比较</a></h2>
-
-      <p class="excerpt">
-        <p>关于Rails的部署：<a href="http://chinaonrails.com/topic/view/374.html" target="_blank" rel="external">Rails部署艺术</a></p><p>monit作为监控工具有一个缺点：monit会以daemon模式来启动mongrel进程（以及，可能还有，haproxy进程），也就是说每个mongrel需要自己管理PID文件。问题出现在mongrel被意外杀掉的情况：此时PID文件仍然存在，因此monit没办法再用“mongrelstart -d”的命令来启动mongrel。你必须自己想办法清理这些“僵尸PID”文件。</p><p>而runit就比较好：它管理的进程都是自己的子进程，这些子进程以阻塞模式运行，所以也没有PID文件。唯一需要注意的是，haproxy缺省是daemon模式，你需要使用“haproxy-db”把haproxy启动在阻塞模式下。</p><p>所以，用runit来监控mongrel（和haproxy）进程，monit只是看着这些进程有没有异常状况；如果出现异常状况，monit调用sv来重启有问题的服务进程。这就是<a href="http://rubyworks.rubyforge.org" target="_blank" rel="external">RubyWorks</a>目前采用的系统监控策略。</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="6月 3 2007" class="post-list__meta--date date">6月 3 2007</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
   </ol>
 
   <hr class="post-list__divider " />
@@ -425,7 +425,7 @@ classes that you can use:
         
     
 
-    <span class="pagination__page-number">Page 53 of 56</span>
+    <span class="pagination__page-number">Page 53 of 57</span>
     
     
         <a class="older-posts pagination__older btn btn-small btn-tertiary" href="/page/54/">Older Posts &rarr;</a>

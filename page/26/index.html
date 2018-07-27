@@ -175,6 +175,30 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2010/11/25/html5-contest/" title="link to 只要写程序，就会有收获">只要写程序，就会有收获</a></h2>
+
+      <p class="excerpt">
+        <p>公司搞了个<a href="http://en.wikipedia.org/wiki/HTML5" target="_blank" rel="external"><span class="caps">HTML5</span></a>编程比赛。奖品是一台iPad。于是我也报名了。（不想被年过三十并且已经拥有iPad的大叔打败的年轻TWer们，赶快加油吧～～）</p><p>一，<a href="http://www.w3.org/TR/webdatabase/" target="_blank" rel="external">Web<span class="caps">SQL</span>数据库</a>尽是些异步操作，搞得我很难测试…如果谁做一个JsDbUnit之类的东西我一定挺他一票。</p><p>二，Safari上也可以用<a href="http://getfirebug.com/firebuglite" target="_blank" rel="external">Firebug</a>，Chrome上也可以用，IE上也可以用～～</p><p>三，搞出了一个牛逼闪闪的“Techlead项目启动手册”，这就叫经验啊经验啊～～</p><p><img src="http://gigix.thoughtworkers.org/assets/2010/11/25/InceptionChecklist.png" width="375px"></p><p>继续写程序去～～</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="11月 25 2010" class="post-list__meta--date date">11月 25 2010</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2010/11/14/principles-of-lean-manufacturing/" title="link to 精益生产的六大要素">精益生产的六大要素</a></h2>
 
       <p class="excerpt">
@@ -389,30 +413,6 @@ classes that you can use:
       <hr class="post-list__divider" />
     </li>
     
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2010/9/1/migrating-to-a-decent-scm/" title="link to Migrating To A Decent SCM">Migrating To A Decent SCM</a></h2>
-
-      <p class="excerpt">
-        <p>I know that lots of organizations are still using old-expensive-counterproductive configurationmanagementsystems (ClearCase,<span class="caps">VSS</span>, etc.). I understand the fear that prevents many ofthem frommoving to a decent<span class="caps">SCM</span>(Subversion,<a href="http://mercurial.selenic.com/" target="_blank" rel="external">Mercurial</a>, etc.). I’ll try to tell a story about that kind of migration, which might alleviate thefear.</p><p>A huge company, with 40,000+ software developers, with 10+ years history using ClearCase, wants tomigrate toSubversion, because of<span class="caps">SVN</span>’s encouragement to atomic commit andoptimisticlocking. The movement is still ongoing. Every single pace involves at least one delivery team,normally with100+ programmers in it.</p><p>The movement must be as seamless as possible, because people are pushed to meet their next milestone.For acodebase sized over 4GB, we made the migration in a week:</p><ul><li><strong>Monday</strong><ul><li>Export the existing codebase and check it into<span class="caps">SVN AS</span>-IS—it’stime consuming so you have enough time for following items.</li><li>Send mail to everyone to inform the migration plan, ask them to install<a href="http://tortoisesvn.tigris.org/" target="_blank" rel="external"><span class="caps">SVN</span>client</a>if they haven’t.</li><li>Make sure everyone can access new<span class="caps">SVN</span>repository.</li></ul></li></ul><ul><li><strong>Tuesday</strong><ul><li>Check out the codebase from<span class="caps">SVN</span>and build it, to make sure you are not breaking anything—that’s why youreally shouldmigrate<span class="caps">AFTER</span>you have a decent build script.</li><li>Compose a shell script to synchronize from ClearCase local view to<span class="caps">SVN</span>working copy. Synchronize frequently and build every time.</li></ul></li></ul><ul><li><strong>Wednesday</strong><ul><li>Clean the codebase: legacy repositories often have lots of garbage (temp files, compiledbinaries,etc.) checked in, it’s now a chance to do some clearance, delete and ignore themfrom<span class="caps">SCM</span>. Just don’t break the build.</li><li>Install<a href="http://cruisecontrol.sourceforge.net/" target="_blank" rel="external">continuous integration</a>instance for the codebase in<span class="caps">SVN</span>.</li><li>Synchronize and build frequently. Ask people to fix build if it breaks.</li></ul></li></ul><ul><li><strong>Thursday</strong><ul><li>Send mail to everyone, ask them to commit any modifications by the end of day, and tellthem “there’san<span class="caps">SVN</span>training tomorrow morning”.</li><li>Keep doing clearance. Synchronize and build frequently.</li></ul></li></ul><ul><li><strong>Friday</strong><ul><li>Disable write-access to ClearCase.</li><li>Training: Configuration Management &amp;<span class="caps">SVN</span>. People need tounderstandsome<span class="caps">SCM</span>principles to make a better use of<span class="caps">SVN</span>—at least not tomess up thecodebase with garbage again.</li><li>At the same time, synchronize a last time, build, check in.</li><li>Package your working copy and upload it to a shared directory: it’s much faster tocopy andunzip, than checking out from the repository. Mail everyone about how to get a workingcopy and makefirst commit.</li><li>Publish your CI to the team. It’s now the team’s CI.</li></ul></li></ul><p>That’s it. Now your team is on<span class="caps">SVN</span>.</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="9月 1 2010" class="post-list__meta--date date">9月 1 2010</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
   </ol>
 
   <hr class="post-list__divider " />
@@ -424,7 +424,7 @@ classes that you can use:
         
     
 
-    <span class="pagination__page-number">Page 26 of 56</span>
+    <span class="pagination__page-number">Page 26 of 57</span>
     
     
         <a class="older-posts pagination__older btn btn-small btn-tertiary" href="/page/27/">Older Posts &rarr;</a>
