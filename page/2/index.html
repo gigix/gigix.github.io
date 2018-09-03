@@ -175,6 +175,87 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2018/1/13/dps-self-service-data/" title="link to 数字化企业的数据自服务">数字化企业的数据自服务</a></h2>
+
+      <p class="excerpt">
+        <p>在<a href="/2017/4/25/ditigal-platform-strategy-intro/">前文</a>中我们说到，传统企业在逐步建设自己的数字平台过程中，需要抓住交付基础设施、API和架构治理、数据自服务、创新实验基础设施和监控体系、用户触点技术这五个支柱。今天我们讨论的主题是“数据自服务”，看看一个倡导消除摩擦、建设生态、推动创新的数字化平台如何处理数据。</p>
+<blockquote>
+<p><strong>前情回顾</strong></p>
+<ul>
+<li><a href="/2017/4/25/ditigal-platform-strategy-intro/">什么是数字平台战略</a> </li>
+<li><a href="/2017/5/7/dps-delivery-infrastructure/">数字化企业的交付基础设施</a></li>
+<li><a href="/2017/5/22/dps-api-architecture-remediation/">数字化企业的API架构治理</a></li>
+</ul>
+</blockquote>
+<h2 id="什么是数据自服务"><a href="#什么是数据自服务" class="headerlink" title="什么是数据自服务"></a>什么是数据自服务</h2><p>数据在企业中的处理过程，能清晰地映射出<a href="http://www.melconway.com/Home/Conways_Law.html" target="_blank" rel="external">康威定律</a>对IT系统的影响。在各个部门分别建设IT系统、组织内部大量存在信息筒仓（silo）的年代，数据的操作由OLTP应用系统的开发团队同步开发，那时几乎每个政府信息化、企业信息化系统都会有一块“报表需求”。随后众多组织认识到筒仓系统导致信息在组织内不能拉通，不能产生对整体业务流程的洞察，于是开始建设以数据仓库为代表的OLAP系统。</p>
+<p>这些系统在支撑更高级、更复杂的数据分析的同时，也对应地在组织中造就了一支专业的“数据团队”。这些人使用非常专业的技术和工具对数据进行提取、转换、装载、建立数据立方、多维钻取、生成报表。这些专业的技术和工具，普通的软件开发人员并不掌握，因此对数据处理、分析和呈现的变更都必须归集到这个数据团队来完成。结果是，数据团队的backlog里累积了来自各个部门的需求，需求的响应能力下降，IT系统从上线到获得市场洞察的周期变长。</p>
+<p>微服务架构鼓励小型的、全功能的团队拥有一个完整的服务（及其对应的业务）。这样的全功能团队不光要开发和运维IT系统，还要能从数据中获得洞察——而且要快，不然就会跟不上市场变化，甚至使一些重要的业务场景无法得到支撑。因此他们不能坐等一支集中式的、缓慢的数据团队来响应他们的需求，他们需要数据自服务能力。</p>
+<p>要赋能数据自服务，企业的数字化平台要考虑“两个披萨团队”的下列诉求：</p>
+<ul>
+<li>需要定义<strong>数据流水线</strong>，使数据能够顺畅地流过收集、转换、存储、探索/预测、可视化等阶段，产生业务价值。</li>
+<li>需要用<strong>实时的架构和API</strong>在短时间内处理大量、非结构化的数据，从中获得洞见，并实时影响决策。</li>
+<li>为了提高应变能力，系统中的数据不做ETL预处理，而是以“生数据”的形式首先存入<strong>数据湖</strong>，等有了具体的问题要回答时，再去组织和筛选数据，从中找出答案。</li>
+<li>更进一步把数据包装成能供外人使用的<strong>数据产品</strong>，让第三方从数据中获得新的洞见与价值。</li>
+<li>为了支持数据产品的运营，需要实现<strong>细粒度授权</strong>，针对不同的用户身份，授权访问不同范围的数据。</li>
+</ul>
+<h2 id="数据自服务解读"><a href="#数据自服务解读" class="headerlink" title="数据自服务解读"></a>数据自服务解读</h2><p>下面是ThoughtWorks的<a href="https://www.thoughtworks.com/digital-platform-strategy" target="_blank" rel="external">数字平台战略</a>第三个支柱“数据自服务”中所蕴涵的具体内容。</p>
+<p><img src="/assets/2017/6/13/self-service-data.jpg"></p>
+<h3 id="数据流水线设计"><a href="#数据流水线设计" class="headerlink" title="数据流水线设计"></a>数据流水线设计</h3><p>所谓流水线，是指用大数据创造价值的整个数据流。流水线从数据采集开始，随后是数据的清洗或过滤，再然后是将数据结构化到存储仓库中以便访问和查询，这之后就可以通过探索或预测的方式从数据中找到业务问题的答案，并可视化呈现出来。</p>
+<p><img src="/assets/2017/6/13/data-pipeline.jpg"></p>
+<p>一条运转良好的数据流水线，能有效处理移动/物联网等新技术制造出的极其大量的数据，缩短数据从获取到产生洞见的反馈周期，并以开发者友好的方式完成数据各个环节的处理，赋能一体化团队。</p>
+<p>数据流水线的实现有两种可能的方式。一种方式是在各个环节采用各种特定的工具，例如<a href="https://www.thoughtworks.com/insights/blog/scala-symposium-big-data-pipeline-powered-scala" target="_blank" rel="external">前面介绍的数据流水线</a>，各个环节都可以用开源的工具来实现。当然，<a href="http://www.techrepublic.com/article/manage-complex-big-data-pipeline-challenges-with-these-approaches/" target="_blank" rel="external">选择这种方式也并非没有挑战</a>：组织必须自己编写和维护“胶水代码”，把各种专用工具组合成一个内聚的整体。对组织的技术能力有较高的要求。</p>
+<p><img src="/assets/2017/6/13/data-pipeline-impl.jpg"></p>
+<p>除了基于开源软件实现自己的数据流水线，也可以考虑采用云上的数据流水线PaaS服务，例如<a href="https://databricks.com/" target="_blank" rel="external">Databricks</a>、<a href="http://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/what-is-datapipeline.html" target="_blank" rel="external">AWS Data Pipeline</a>、<a href="https://docs.microsoft.com/en-us/azure/data-factory/data-factory-introduction" target="_blank" rel="external">Azure Data Factory</a>等。这个方式的优点是对技术能力要求较低，缺点则是造成对特定云平台/PaaS提供商的依赖。</p>
+<h3 id="实时架构和API"><a href="#实时架构和API" class="headerlink" title="实时架构和API"></a>实时架构和API</h3><p>实时的数据架构和API支持短时间内处理大量、非结构化的数据，从中获得洞见，并“实时”影响决策。正如<a href="http://www.oreilly.com/data/free/files/big-data-analytics.pdf" target="_blank" rel="external">Mike Barlow所说</a>：“这是关于在正确时间做出更好决定并采取行动的能力，例如在顾客刷卡的时候识别信用卡欺诈，或者当顾客在排队结账的时候给个优惠，或者当用户在阅读某篇文章的时候推送某个广告。”</p>
+<p>在<a href="http://blog.cloudera.com/blog/2015/06/architectural-patterns-for-near-real-time-data-processing-with-apache-hadoop/" target="_blank" rel="external">Cloudera的一篇文章</a>中介绍了实时数据处理的4个架构模式，整个流水线架构在Flume/Kafka基础上：</p>
+<ul>
+<li>数据流吸收：低延迟将事件持久化到HDFS、HBase、Solr等存储机制</li>
+<li>近实时（100毫秒以下）的事件处理：数据到达时立即采取警告、标记、转换、过滤等初步行动</li>
+<li>近实时的事件分片处理：与前一个模式类似，但是先对数据分片</li>
+<li>复杂而灵活的聚合或机器学习拓扑，使用Spark</li>
+</ul>
+<h3 id="数据湖设计"><a href="#数据湖设计" class="headerlink" title="数据湖设计"></a>数据湖设计</h3><p>数据湖概念最初提出是在<a href="https://www.forbes.com/sites/edddumbill/2014/01/14/the-data-lake-dream/#28439a1869c0" target="_blank" rel="external">2014年Forbes的一篇文章</a>中。它的概念是：不对数据做提前的“优化”处理，而是直接把生数据存储在容易获得的、便宜的存储环境中；等有了具体的问题要回答时，再去组织和筛选数据，从中找出答案。按照<a href="https://www.thoughtworks.com/radar/techniques/data-lake" target="_blank" rel="external">ThoughtWorks技术雷达的定义</a>，数据湖中的数据应该是不可修改（immutable）的。</p>
+<p>数据湖试图解决数据仓库几方面的问题：</p>
+<ul>
+<li>预先的ETL处理终归会损失信息，如果事后才发现需要生数据中的某些信息、但是这些信息又没有通过ETL进入数据仓库，那么信息就无法寻回了。</li>
+<li>ETL的编写相当麻烦。数据仓库的schema发生改变，ETL也要跟着改变；应用程序的schema发生改变，ETL也要跟着改变。因此数据仓库通常由一个单独的团队负责，于是形成一个function team，响应速度慢。</li>
+<li>数据仓库的分析需要专门的技能，大部分应用程序开发者不掌握，再度强化了数据仓库专门团队；而数据仓库团队其实离业务很远，并不能快速准确地响应业务对数据分析的需求。</li>
+</ul>
+<p>在数据湖概念背后是康威法则的体现：数据能力与业务需求对齐。它要解决的核心问题是专门的数据仓库团队成为响应力瓶颈。当IT能力与业务需求组合形成一体化团队以后，数据的产生方不再假设未来要解决什么问题，因此也不对数据做预处理，只是直接存储生数据；数据的使用方以通用编程语言（例如Java或Python）来操作数据，从而无需依赖专门的、集中式的数据团队。</p>
+<p><a href="https://www.forbes.com/sites/edddumbill/2014/01/14/the-data-lake-dream/#28439a1869c0" target="_blank" rel="external">数据湖实施</a>的第一步是把生数据存储在廉价的存储介质（可能是HDFS，也可能是S3，或者FTP等）。对于每份生数据，应该有一份元数据描述其来源、用途、和哪些数据相关等等。元数据允许整个组织查看和搜索，让每个一体化团队能够自助式寻找自己需要的数据。任何团队都可以在生数据的基础上开发自己的微服务，微服务处理之后的数据可以作为另一份生数据回到数据湖。维护数据湖的团队只做很少的基础设施工作，生数据的输入和使用都由与业务强关联的开发团队来进行。传统数据仓库的多维分析、报表等功能同样可以作为一个服务接入数据湖。</p>
+<p>在实施数据湖的时候，有一种常见的反模式：企业有了一个名义上的数据湖（例如一个非常大的HDFS），但是数据只进不出，成了“数据泥沼”（或数据墓地）。在这种情况下，尽管数据湖的存储做得很棒，但是组织并没有很好地消化这些数据（可能是因为数据科学家不具备分析生数据的技术能力，而是更习惯于传统的、基于数据仓库的分析方式），从而不能很好地兑现数据湖的价值。</p>
+<h3 id="数据即产品"><a href="#数据即产品" class="headerlink" title="数据即产品"></a>数据即产品</h3><p><a href="http://www.juiceanalytics.com/writing/turning-data-into-product" target="_blank" rel="external">数据产品</a>是指将企业已经拥有或能够采集的数据资产，转变成能帮助用户解决具体问题的产品。Forbes列举了<a href="https://www.forbes.com/sites/lutzfinger/2014/08/19/3-data-products-you-need-to-know/#7f497e0566f6" target="_blank" rel="external">几类值得关注的数据产品</a>：</p>
+<ul>
+<li>用于benchmark的数据</li>
+<li>用于推荐系统的数据</li>
+<li>用于预测的数据</li>
+</ul>
+<p><a href="https://datafloq.com/read/simplest-way-monetize-data-product/980" target="_blank" rel="external">数据产品是数据资产变现的快速途径</a>。因为数据产品有几个优势：开发快，不需要开发出完整的模型，只要做好数据整理就可以对外提供；顾客面宽，一份数据可以产生多种用途；数据可以再度加工。数据产品给企业创造的收益既可以是直接的（用户想要访问数据或分析时收费）也可以是间接的（提升顾客忠诚度、节省成本、或增加渠道转化率）。</p>
+<p>在实现数据产品的时候，不仅要把数据打包，更重要的是提供数据之间的关联。数据产品的供应者需要提出洞见、指导用户做决策，而不仅仅是提供数据点。数据产品需要考虑用户的场景和体验，并在使用过程中不断演进。</p>
+<h3 id="细粒度授权"><a href="#细粒度授权" class="headerlink" title="细粒度授权"></a>细粒度授权</h3><p>当数据以产品或服务的形式对外提供时，企业可能需要针对不同的用户身份，授权访问不同范围的数据，对应不同的服务水平和不同的安全级别。一些典型的细粒度授权的场景可能包括：企业内部和外部用户能够访问的数据范围不同；供应链上不同环节的合作伙伴能够访问的数据范围不同；付费与免费的用户能够访问的数据范围不同；不同会员级别能够访问的数据范围不同；等等。</p>
+<p>允许访问的数据范围属于数据产品/服务自身的业务规则。《微服务设计》的第9章建议，“[服务]网关可以提供相当有效的粗粒度的身份验证……不过，比允许（或禁止）的特定资源或端点更细粒度的访问控制，可以留给微服务本身来处理”。</p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>为了加速“构建-度量-学习”的精益创业循环，业务与IT共同组成的一体化团队不能依赖于集中式的数据团队来获得对业务的洞察。他们需要规划适宜自己的数据流水线，在必要时引入实时数据架构和API，用数据湖来支撑自服务的数据操作，从而更快、更准确地从数据中获得洞察，影响业务决策。更进一步，数据本身也可以作为产品对内部用户乃至外部用户提供服务，并通过细粒度授权体现服务的差异化和安全性需求。通过建设“数据自服务”这个支柱，企业将真正能够盘活数据资产，使其在创新的数字化业务中发挥更大的价值，这是企业数字化旅程的第三步。</p>
+
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="1月 13 2018" class="post-list__meta--date date">1月 13 2018</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2018/1/1/2017-readings/" title="link to 2017年读过的好书">2017年读过的好书</a></h2>
 
       <p class="excerpt">
@@ -222,40 +303,6 @@ classes that you can use:
     
     <li class="post">
 
-      <h2 class="post-list__post-title post-title"><a href="/2017/12/12/ml-project-management-current-situation/" title="link to 机器学习项目如何管理：现状">机器学习项目如何管理：现状</a></h2>
-
-      <p class="excerpt">
-        <p><a href="https://www.atlassian.com/blog/software-teams/3-ways-ai-will-change-project-management-better" target="_blank" rel="external">Atlassian今年4月的一篇博客</a>提出，到2020年有87%的Jira用户认为他们的工作会被AI改变。具体到项目管理上，Atlassian的观点是，AI首先会作为项目管理助手进入我们的视野，然后透过数据拓展我们对项目的理解，更进一步还能通过主动猜测、倡导优秀实践、创造新的元数据层等方式弥补数据的缺失，最终对项目提出有益的建议。</p>
-<p><img src="https://orhachaim.co.il/wp-content/uploads/thumbs/1-338ubis538emc7477jajgq.jpg"></p>
-<p>然而愿望是美好的现实是骨感的。还不要说在项目管理中使用机器学习，关于机器学习的项目应该怎么管理，业界似乎已经有很多不甚圆满的经历。例如一位创业者谈他们如何<a href="https://medium.com/xeneta/boosting-sales-with-machine-learning-fbcf2e618be3" target="_blank" rel="external">用自然语言处理技术推动销售</a>。看起来他们尝试了各种不同的数据源、多种特征工程的方法、以及多种算法，接下来还有很多想要尝试的东西。从这个故事中我们看不到的是，他们给自己设置的目标是什么、目前的进展是什么、基于什么原则在指导每一次的尝试。简而言之，这位创业者的机器学习项目并没有任何有效的管理。</p>
-<p>另一个<a href="https://zhuanlan.zhihu.com/p/26435192" target="_blank" rel="external">同样缺乏管理的机器学习项目</a>就没有那么幸运。年薪百万的数据科学家被认为“没有给公司带来实际价值。高管们不知道他们具体做了什么，业务人员每周都给他们提出预测需求，却很少能在短时间得到回应”。与前面一个故事相比，这里的数据科学家需要在别人的管理之下开展工作，管理方法的欠缺无疑是矛盾累积和激化的原因之一。针对这个故事，作者提出了五点非常抽象的建议：1.从最简单的模型开始；2.探索更多问题；3.用全部的数据和特征训练模型；4.业务驱动模型；5.专注于自动化。我认为这几点并不能引导这家公司的管理者更有效地管理他们的数据科学家。</p>
-<p>这种缺乏管理方法的现象，一个重要的原因是典型的IT管理者对机器学习缺乏必要的了解（甚至更糟糕，有一些似是而非的半吊子的了解）。目前而论，咨询公司和商业/科技传媒在普及“必要的了解”方面并没有起到很好的作用。<a href="https://www.mckinsey.com/industries/high-tech/our-insights/an-executives-guide-to-machine-learning" target="_blank" rel="external">麦肯锡2015年的文章</a>说，关于机器学习，企业领导层需要了解的问题还是“传统行业能通过机器学习获得什么新的洞察”这种高层面的，提出的建议也是“机器学习要分描述、预测、处方三步走”这样的宏观建议。当然麦记的建议历来是面向CxO级别的，不落到项目管理层面也很正常。</p>
-<p>HBR也在2015年讨论“<a href="https://hbr.org/2015/07/what-every-manager-should-know-about-machine-learning" target="_blank" rel="external">每个管理者都需要了解的机器学习知识</a>”，提出了一些很重要的点：不光需要大数据、还需要广泛的数据；机器学习只是做预测、不提供因果性；要区分信号与噪音（还提到了特征提取、规则化、交叉验证等具体技术）；以及一些容易犯的错误（例如强行归因、不恰当的期望、迷信大数据量、对人的判断利用不足等）。但这篇文章的问题在于，它没有提供一套成型的工作方法。这些技术应该什么时候用，这些错误会在什么时候犯，文章没有提供出来，于是读者仍然被置于一个“等你该知道的时候你就知道了”的状态，很难对项目管理带来立竿见影的改变。</p>
-<p><a href="https://machinelearningmastery.com/how-to-layout-and-manage-your-machine-learning-project/" target="_blank" rel="external">2014年的一篇博客</a>着重谈机器学习项目的布置，包括应该有哪些目录、数据怎么管理、代码怎么组织等非常具体的实践。作者提出了项目流程的几个原则：透明；可维护；模块化；可迁移；可复制；效率。关于项目的可复制性，作者也从工程实践角度<a href="https://machinelearningmastery.com/reproducible-machine-learning-results-by-default/" target="_blank" rel="external">提出了10条原则</a>。在工程实践这个角度，这位作者给出的指导原则具有很好的可操作性。</p>
-<p>但是在项目管理角度，行业仍在继续探索。今年7月InfoQ的一篇文章讨论<a href="http://www.infoq.com/cn/articles/agile-development-of-artificial-intelligence-applications" target="_blank" rel="external">如何开发机器学习的MVP</a>，作者总结了四个思考步骤：第一问题是否能转化成分类/回归的问题；第二目标是否是容易获取、客观无偏差的数据；第三是问题的预测目标，因果关系是什么；第四是这个问题是不是一个真的业务需求。这也是几个很重要的思考点，不足之处仍然是缺乏系统性，并且缺落地的方法指导。</p>
-<p>有一篇博客提出了很有意义的问题：<a href="https://zhuanlan.zhihu.com/p/20729176" target="_blank" rel="external">机器学习项目为什么未实现敏捷开发</a>？作者发现算法类项目流程漫长，并结合之前实践Scrum的经验，提出了一些可能可以优化的方面，尤其是在团队组织形式上，是否可以参考敏捷的全功能团队经验。作者并且提出了一个重要的问题：对算法模型的评估是否必须在线上进行？或者换个角度来问这个问题：如何降低线下模型评估的偏差程度？</p>
-<p>敏捷软件开发之所以成为一种被广泛接受的软件开发方法论，不仅仅是因为它有高阶的思想支撑和指导原则，更重要的是它有一系列非常具体、非常可落地的实践。这些实践对于一线工作者的意义在于：(1)知道什么时候该做什么事；(2)知道什么时候该看什么指标；(3)知道什么时候可能有什么风险。机器学习类的项目要真正普及，也会需要这么一套具体可落地的实践指导。</p>
-
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="12月 12 2017" class="post-list__meta--date date">12月 12 2017</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
       <h2 class="post-list__post-title post-title"><a href="/2017/12/12/minded-unmindedness/" title="link to 保持现状与有意为之的无知">保持现状与有意为之的无知</a></h2>
 
       <p class="excerpt">
@@ -278,6 +325,40 @@ classes that you can use:
 <p>人工智能技术所需的理科基础则更高一些：如果想要比较深入地了解其原理（而不止是使用几个工具），需要微积分和线性代数的基础知识。以高中水平的数学能力，在一学期时间里重新捡回这两门课应该是可以做到的。（听说一些高校的文科院系大一已经不上高数课，我认为这是一个错误的导向。）</p>
 <p>除了这一点数学基础以外，大部分数据处理和机器学习算法可以说是出人意料地简单。John Foreman的<a href="https://book.douban.com/subject/24550921/" target="_blank" rel="external">Data Smart</a>一书教它的读者用Excel（是的，你没看错，就是你每天用的Excel）实现分类、推荐、预测等典型的机器学习算法，我认为这本书非常有助于破除笼罩在“人工智能”这个概念之上的神秘感。另外我也强烈推荐人文社科学者在学了一点Python基础之后尝试一下华盛顿大学的<a href="https://www.coursera.org/specializations/machine-learning" target="_blank" rel="external">机器学习公开课</a>。学完它的第一门课程，你就会发现，机器学习（乃至“人工智能”）其实是一件很简单、毫不神秘的事情——这一点，对岸的科技工作者们其实一直都知道。</p>
 <p>科技与人文社科的失联，会导致整个左翼运动陷入一种尴尬的境地：对于资本用以牟利并同时制造社会不公的科技工具，科技工作者看不到其社会危害所在，人文学者又无法提出有效的批判和改进方向。无形之中，双方对于对方专业领域的有意为之的无知，都在帮助保持当前科技-社会结构的现状。要打破这种现状，需要双方都开始努力了解对方的专业领域，包括——我今天特别想强调的——人文社科学者学一点编程和人工智能技术。</p>
+
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="12月 12 2017" class="post-list__meta--date date">12月 12 2017</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
+      <h2 class="post-list__post-title post-title"><a href="/2017/12/12/ml-project-management-current-situation/" title="link to 机器学习项目如何管理：现状">机器学习项目如何管理：现状</a></h2>
+
+      <p class="excerpt">
+        <p><a href="https://www.atlassian.com/blog/software-teams/3-ways-ai-will-change-project-management-better" target="_blank" rel="external">Atlassian今年4月的一篇博客</a>提出，到2020年有87%的Jira用户认为他们的工作会被AI改变。具体到项目管理上，Atlassian的观点是，AI首先会作为项目管理助手进入我们的视野，然后透过数据拓展我们对项目的理解，更进一步还能通过主动猜测、倡导优秀实践、创造新的元数据层等方式弥补数据的缺失，最终对项目提出有益的建议。</p>
+<p><img src="https://orhachaim.co.il/wp-content/uploads/thumbs/1-338ubis538emc7477jajgq.jpg"></p>
+<p>然而愿望是美好的现实是骨感的。还不要说在项目管理中使用机器学习，关于机器学习的项目应该怎么管理，业界似乎已经有很多不甚圆满的经历。例如一位创业者谈他们如何<a href="https://medium.com/xeneta/boosting-sales-with-machine-learning-fbcf2e618be3" target="_blank" rel="external">用自然语言处理技术推动销售</a>。看起来他们尝试了各种不同的数据源、多种特征工程的方法、以及多种算法，接下来还有很多想要尝试的东西。从这个故事中我们看不到的是，他们给自己设置的目标是什么、目前的进展是什么、基于什么原则在指导每一次的尝试。简而言之，这位创业者的机器学习项目并没有任何有效的管理。</p>
+<p>另一个<a href="https://zhuanlan.zhihu.com/p/26435192" target="_blank" rel="external">同样缺乏管理的机器学习项目</a>就没有那么幸运。年薪百万的数据科学家被认为“没有给公司带来实际价值。高管们不知道他们具体做了什么，业务人员每周都给他们提出预测需求，却很少能在短时间得到回应”。与前面一个故事相比，这里的数据科学家需要在别人的管理之下开展工作，管理方法的欠缺无疑是矛盾累积和激化的原因之一。针对这个故事，作者提出了五点非常抽象的建议：1.从最简单的模型开始；2.探索更多问题；3.用全部的数据和特征训练模型；4.业务驱动模型；5.专注于自动化。我认为这几点并不能引导这家公司的管理者更有效地管理他们的数据科学家。</p>
+<p>这种缺乏管理方法的现象，一个重要的原因是典型的IT管理者对机器学习缺乏必要的了解（甚至更糟糕，有一些似是而非的半吊子的了解）。目前而论，咨询公司和商业/科技传媒在普及“必要的了解”方面并没有起到很好的作用。<a href="https://www.mckinsey.com/industries/high-tech/our-insights/an-executives-guide-to-machine-learning" target="_blank" rel="external">麦肯锡2015年的文章</a>说，关于机器学习，企业领导层需要了解的问题还是“传统行业能通过机器学习获得什么新的洞察”这种高层面的，提出的建议也是“机器学习要分描述、预测、处方三步走”这样的宏观建议。当然麦记的建议历来是面向CxO级别的，不落到项目管理层面也很正常。</p>
+<p>HBR也在2015年讨论“<a href="https://hbr.org/2015/07/what-every-manager-should-know-about-machine-learning" target="_blank" rel="external">每个管理者都需要了解的机器学习知识</a>”，提出了一些很重要的点：不光需要大数据、还需要广泛的数据；机器学习只是做预测、不提供因果性；要区分信号与噪音（还提到了特征提取、规则化、交叉验证等具体技术）；以及一些容易犯的错误（例如强行归因、不恰当的期望、迷信大数据量、对人的判断利用不足等）。但这篇文章的问题在于，它没有提供一套成型的工作方法。这些技术应该什么时候用，这些错误会在什么时候犯，文章没有提供出来，于是读者仍然被置于一个“等你该知道的时候你就知道了”的状态，很难对项目管理带来立竿见影的改变。</p>
+<p><a href="https://machinelearningmastery.com/how-to-layout-and-manage-your-machine-learning-project/" target="_blank" rel="external">2014年的一篇博客</a>着重谈机器学习项目的布置，包括应该有哪些目录、数据怎么管理、代码怎么组织等非常具体的实践。作者提出了项目流程的几个原则：透明；可维护；模块化；可迁移；可复制；效率。关于项目的可复制性，作者也从工程实践角度<a href="https://machinelearningmastery.com/reproducible-machine-learning-results-by-default/" target="_blank" rel="external">提出了10条原则</a>。在工程实践这个角度，这位作者给出的指导原则具有很好的可操作性。</p>
+<p>但是在项目管理角度，行业仍在继续探索。今年7月InfoQ的一篇文章讨论<a href="http://www.infoq.com/cn/articles/agile-development-of-artificial-intelligence-applications" target="_blank" rel="external">如何开发机器学习的MVP</a>，作者总结了四个思考步骤：第一问题是否能转化成分类/回归的问题；第二目标是否是容易获取、客观无偏差的数据；第三是问题的预测目标，因果关系是什么；第四是这个问题是不是一个真的业务需求。这也是几个很重要的思考点，不足之处仍然是缺乏系统性，并且缺落地的方法指导。</p>
+<p>有一篇博客提出了很有意义的问题：<a href="https://zhuanlan.zhihu.com/p/20729176" target="_blank" rel="external">机器学习项目为什么未实现敏捷开发</a>？作者发现算法类项目流程漫长，并结合之前实践Scrum的经验，提出了一些可能可以优化的方面，尤其是在团队组织形式上，是否可以参考敏捷的全功能团队经验。作者并且提出了一个重要的问题：对算法模型的评估是否必须在线上进行？或者换个角度来问这个问题：如何降低线下模型评估的偏差程度？</p>
+<p>敏捷软件开发之所以成为一种被广泛接受的软件开发方法论，不仅仅是因为它有高阶的思想支撑和指导原则，更重要的是它有一系列非常具体、非常可落地的实践。这些实践对于一线工作者的意义在于：(1)知道什么时候该做什么事；(2)知道什么时候该看什么指标；(3)知道什么时候可能有什么风险。机器学习类的项目要真正普及，也会需要这么一套具体可落地的实践指导。</p>
 
       </p>
 
@@ -630,38 +711,6 @@ classes that you can use:
       <div class="post-list__meta">
 
         <time datetime="10月 17 2017" class="post-list__meta--date date">10月 17 2017</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2017/8/23/agile-in-graduation-projects/" title="link to 毕业设计中使用敏捷方法的尝试">毕业设计中使用敏捷方法的尝试</a></h2>
-
-      <p class="excerpt">
-        <p>从CNKI收录的共计超过1000篇与敏捷软件开发相关的论文中，我找到了5篇关于在毕业设计中使用敏捷方法的文章，从一个侧面勾勒出高校教育工作者看待敏捷的一种视角。</p>
-<p><img src="/assets/2017/8/23/scholarship.jpg"></p>
-<p>最早谈这个话题的是广东工业大学计算机学院的刘竹松、李振坤、王文彦三位作者。他们于2007年发表的《极限编程在计算机本科毕业设计中的应用》一文中认为，“将极限编程应用到计算机专业本科毕业设计中”的主要目的是“有助于学生形成团队合作的精神”，从而“促进学生学习的兴趣，加强学生综合应用各方面知识的能力，增强学生之间的相互交流、相互学习，提高毕业设计的整体效果”。从这个出发点，作者们认为“极限编程的核心是结对编程”，具体实施时谈的也是“合理设计结对”和“合理分配任务”。</p>
-<p>（这篇文章先后发表在《电脑知识与技术》和《计算机教育》两个期刊，可能是作者一稿多投。所以讨论“在毕业设计中使用敏捷方法”这一主题的文章其实只有4篇。）</p>
-<p>稍后，2007年10月，大理学院数学与计算机学院的杨健、张晓玲、周少云三位作者在《计算机时代》发表了《软件开发类毕业设计中敏捷软件技术的应用》一文。在这篇文章中，作者尝试解决“毕业设计质量低下，学生得不到真正锻炼”的问题，具体表现形式包括“软件各个功能模块无法有效整合”、“需求因为各种原因不断改变”、“软件的错误和缺陷不断涌现”等。与此前的刘文不同，杨文尝试回答的问题更为全面，包含了沟通、需求、质量等多个角度。因此在看待敏捷方法时，三位作者关注到了更为全面的多个敏捷原则，包括“增量式开发、可持续的开发速度、简单、结对编程、适应改变、个体激励和交流、反省”等。值得注意的是，这些概念在敏捷软件开发的理论框架中并不都是“原则”，有一些是具体的实践。并且杨文完全没有提及测试驱动开发、持续集成等技术性的实践，也没有提及用户故事、看板等需求管理和迭代管理的实践。似乎三位作者的关注点主要还是在团队内部的交流和协作，对于团队对外的呈现（需求的获取和管理、项目进度、软件质量）的考虑较少。</p>
-<p>第三篇文章是石家庄外经贸职业学院的马静媛和河北交通职业技术学院的薛惠于2009年发表于《电脑知识与技术》的《极限编程在高职计算机专业毕业设计中的应用》。与刘文相似，这篇文章想要达到的目标也是“加强学生综合应用各方面知识的能力，挖掘学生的学习潜力，并且培养学生之间的合作意识，提高毕业设计的整体水平”，重心仍然是在团队的内部与沟通协作上。与刘文和杨文相比，马文明确指出了极限编程的12个最佳实践，并着重讨论其中的简单设计、结对编程和集体代码所有制三个实践。另外，马文提出了对测试驱动开发实践的要求：“编码之前必须先写好单元测试代码”、“代码完成后用编码前编写的测试用例进行单元测试”、“代码和测试用例一起存入代码库”。马文没有提及如何划分用户故事和开发任务，也没有提及持续集成，从文中无法判断，学生在实际开展测试驱动开发时是否遇到任务过大、失败的测试被荒废等问题。</p>
-<p>第四篇文章是湖南工业大学计算机与通信学院的曾志浩和肖小克于2012年发表于《计算机教育》的《以敏捷开发和极限编程为指导的软件工程毕业设计》。曾文与前三篇文章有一个显著的区别：这篇文章的关注重心不在内部的沟通、协作和学生能力培养，更多地关注毕业设计的进度和质量这两个对外指标。以此为出发点，曾文提出了一套“以AD和XP为指导的毕业设计过程”，包括项目的组织方式、管理方式和考核方式，并给出了具体的“典型过程及相关支撑工具”。在管理侧，曾文提出“贯穿整个毕业设计过程，以各个阶段时间点为标志，要求学生以增量的方式来完善项目开发”，并在考核时注重代码功能而非文档、交叉检查结对学生的编码工作量、要求学生就系统的多个可运行版本进行演示等，把敏捷实践与毕业设计考核方式相结合。在工具侧，曾文仅推荐了测试管理工具Mercury Quality Center和持续集成工具Jenkins，并未推荐具体的测试工具。这可能是为了顾及建议的通用性，但也给具体项目开展时自动化测试和测试驱动开发的落地留下了一个问号。</p>
-<p>综观这四篇文章，我们可以勾勒出敏捷方法在中国高校计算机教育领域的历程。从早期的刘文以偏概全地看到一个特立独行的实践（结对编程）、杨文对敏捷理论的解读不清晰不准确，到马文能够准确描述极限编程的实践、并有意识地选择自己需要的实践，再到曾文从组织、管理、考核等角度全方位运用并辅以工具支撑，我们能看到中国高校计算机专业指导老师逐步深化对敏捷理解的过程。另一方面，从刘文直到曾文，对于测试驱动开发和重构的描述是语焉不详的，关于持续集成的具体实践和具体挑战的论述是缺位的，由此不难想象，在实际的毕业设计项目中，这些技术性的实践很可能并没有得到有效实施，于是敏捷会更多地退化为一种鼓励沟通、鼓励协作的团队运作方式——这与前三篇文章的诉求相一致，而曾文也没能提供技术性支撑工具（尤其是Jenkins）在实施中的真实情况。这种“重沟通轻技术”的敏捷采纳方式，恰是敏捷在整个中国IT业的境遇缩影。</p>
-
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="8月 23 2017" class="post-list__meta--date date">8月 23 2017</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">

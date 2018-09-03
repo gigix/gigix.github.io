@@ -180,6 +180,30 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2007/7/6/编程选择gem安装版本/" title="link to 编程选择GEM安装版本">编程选择GEM安装版本</a></h2>
+
+      <p class="excerpt">
+        <p>rayzer<a href="http://gigix.thoughtworkers.org/articles/2007/07/05/existing-rails-deployment-stacks#comments">留言</a>说：</p><p><em>“昨天在feisty上装<a href="http://rubyworks.rubyforge.org" target="_blank" rel="external">rubyworks</a>的时候,到了安装fastthread一步，会编译本地gem,并提示mkmf模块依赖关系无法满足，需要引入ruby1.8-dev来解决。”</em></p><p>出现这个问题的原因是，在选择gem安装版本的时候，选中了一个错误的版本：我们提供了预编译好的二进制版本，安装这个版本是不需要有GCC和头文件的；但如果选中了没有预编译的版本，就会在安装的过程中buildnative extension。</p><p>而选中了错误版本的原因是，<a href="http://rubygems.org/" target="_blank" rel="external">RubyGems</a>本身没有提供非交互式的安装命令。一旦需要在多个版本中选择，就必须从命令行输入。我们以前用的简单办法是：</p><pre>echo “1” | gem install fastthread -y</pre><p>这样做的问题是，如果已经有gemcache（看看你有没有/usr/lib/ruby/gems/1.8/source_cache这个文件），编号1的版本很可能就不是我们提供的那个，而是RubyForge的gemrepository里的某一个。于是就出现了开头提到的问题。昨天看到rayzer的留言以后，我终于下定决心把这个问题解决掉……</p><p>其实也不难。用IO.popen来开启进程，一行一行读STDOUT，看到合适的选项就往STDIN输入数字：</p><pre>def install_gem(name)cmd = “gem install #{name} -y –no-rdoc –no-ri”puts cmdIO.popen(cmd, “r+”) do |io|io.each_line do |line|puts “[out] #{line}”if(line =~ /\s(\d+).*(i[3|4]86-linux)/)puts “[selection] #{$1}”io.puts $1endendbr / endendinstall_gem “fastthread”</pre><p>这个修改将在0.0.3版本中发布。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="7月 6 2007" class="post-list__meta--date date">7月 6 2007</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2007/7/5/be-careful-it-s-enterprise-2-0/" title="link to Be Careful- It&#39;s Enterprise 2.0">Be Careful- It&#39;s Enterprise 2.0</a></h2>
 
       <p class="excerpt">
@@ -382,30 +406,6 @@ classes that you can use:
       <div class="post-list__meta">
 
         <time datetime="6月 25 2007" class="post-list__meta--date date">6月 25 2007</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2007/6/19/rubyworks迈出第二步：production-stack-on-ubuntu/" title="link to RubyWorks迈出第二步：Production Stack on Ubuntu">RubyWorks迈出第二步：Production Stack on Ubuntu</a></h2>
-
-      <p class="excerpt">
-        <p><a href="http://rubyworks.rubyforge.org/" target="_blank" rel="external">RubyWorks Production Stack</a>今天发布0.0.2版本。</p><p>虽然只是千分位上的进展，不过也可以说是比前一个版本进步了一倍——事实也差不多正是这样：除了Redhat/CentOS以外，我们现在开始支持<a href="http://www.debian.org/" target="_blank" rel="external">Debian</a>4 Etch和<a href="http://www.ubuntu.com/" target="_blank" rel="external">Ubuntu</a>7.04 Feisty Fawn。此外我们还用<a href="http://smarden.org/runit/" target="_blank" rel="external">runit</a>替换了<a href="http://www.tildeslash.com/monit/" target="_blank" rel="external">monit</a>来负责管理所有的服务器进程，从而避免了由于非正常退出而留下PID文件、导致服务无法启动的问题。monit仍然可以提供监控服务器进程的功能。</p><p>我们还全面重写了<a href="http://rubyworks.rubyforge.org/index.html" target="_blank" rel="external">文档</a>。Alexey和我，两个“外国人”写出的文档，文采就不敢说了，但愿对用户有所帮助就行。</p><p>下一步我们将支持x64架构的服务器，进一步加强安全性和可管理性，以及增加对<a href="http://www.capify.org/" target="_blank" rel="external">Capistrano</a>的支持。下一次的发布——如果一切顺利的话——应该在<a href="http://subject.csdn.net/agilechina/" target="_blank" rel="external">“敏捷中国”技术大会</a>之前出来。</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="6月 19 2007" class="post-list__meta--date date">6月 19 2007</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">

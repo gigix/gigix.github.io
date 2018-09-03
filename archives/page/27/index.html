@@ -180,6 +180,30 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2010/9/2/continuous-integration-as-management-tool/" title="link to 作为管理工具的持续集成">作为管理工具的持续集成</a></h2>
+
+      <p class="excerpt">
+        <p>有一个敏捷推行人，给她的团队设立了一个规则：每个函数不要超过30行。一开始，领导们都说，很好，很有道理。可是真的做起来，就发现遗留代码里有这样那样的特殊情况。紧跟着，开发人员也有了抱怨：我这里写32行又有什么损害呢？为什么一定要那么死板呢？于是，一个又一个的口子被打开。当然，你可以想象，有了越来越多的口子以后，“改善代码质量”也就成了纯理念──跟没有规则之前没什么区别。</p><p>我打算怎么做这件事呢？</p><ul><li>把持续集成搭起来，只做编译。编译失败就红。红了就不能转测试，红了就必须马上修复，红了就是在阻塞整个团队的工作，红了就是最高优先级。让领导开始盯住持续集成。破坏构建就是和整个团队作对。</li></ul><ul><li>大家讨论一下，30行是不是一个合适的门限？如果不是，35行？40行？50行？行。我们就把门限定在50行。把静态检查放进持续集成。旧的代码我们既往不咎。就算现在有100个函数超过50行吧，没关系，我们容忍它。但是如果出现第101个长函数，就会让持续集成变红，要马上修复。</li></ul><ul><li>每次构建失败就是一个教育和学习的机会。一个人第一次写出长函数，我跟他一起重构；第二次写出长函数，我要看着他用我教的方法重构；第三次再写出长函数，那就要让领导来关心一下了。没有能力可以学，有了能力还破坏规则，说不过去了吧？</li></ul><ul><li>现在大家都学到怎么写更短小的函数了。偷偷把门限降低到45行试试？又多出来10个长函数。拉上几个开发者，我们来搞一次代码优化活动，把这10个长函数解决掉。于是大家又学到了更多的重构技巧。于是45行的门限变成了持续集成的要求。</li></ul><ul><li>两周搞一次代码优化学习会，降一次门限值。两个月以后，30行的标准就放在了持续集成里。如果有时间就去重构以前遗留的长函数，如果没时间就留着吧，至少大家已经不会写出新的长函数了。</li></ul><p>先讲道理，再定规则，然后帮所有人提升能力以遵守规则，随着能力的提升逐渐拉高规则。30行的规则落实不下去？我就不信了。</p><p>把持续集成作为团队规则的自动、可视执行者，于是敏捷推行人就不必扮演那个凶恶的执法者，只需专心帮人排疑解难。持续集成把违规行为变成一个人与整个团队的对立，而不是一个人与另一个人的对立。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="9月 2 2010" class="post-list__meta--date date">9月 2 2010</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2010/9/1/migrating-to-a-decent-scm/" title="link to Migrating To A Decent SCM">Migrating To A Decent SCM</a></h2>
 
       <p class="excerpt">
@@ -384,31 +408,6 @@ classes that you can use:
       <div class="post-list__meta">
 
         <time datetime="7月 1 2010" class="post-list__meta--date date">7月 1 2010</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2010/6/29/ci-discipline/" title="link to 持续集成铁的纪律是怎样炼成的">持续集成铁的纪律是怎样炼成的</a></h2>
-
-      <p class="excerpt">
-        <p></p><p><strong>持续集成问题说到底是人的问题</strong></p><p>有一种常见的观点认为：持续集成是一系列技术问题；只要安装配置了适当的持续集成工具，解决了某些构建、测试自动化的技术问题，持续集成建设就能顺利开展。但实际上，持续集成建设中很少出现高难度的、超出团队本身能力范围的技术问题，涉及的工具也大多通用。持续集成建设中遭遇的一些典型难题，归根结底都不是技术问题，而是人的问题：</p><ul><li>构建失败率高：背后的原因是开发人员质量意识不足，习惯把质量保证的责任全部丢给测试人员</li><li>构建修复难：背后的原因是开发人员在本地开发机无法重复构建过程，难以定位问题</li><li>在失败构建上继续提交代码：背后的原因是构建结果不够公开、受重视不足</li></ul><p><strong>持续集成建设就是提升团队质量能力的过程</strong></p><p>建设一个运转良好的持续集成体系的过程，就是在培养每个团队成员重视质量的意识，就是在帮助团队发现交付“最后一英里”潜藏的问题、并督促团队解决这些问题。为了保持项目的健康，需要整个团队的努力：</p><ul><li>加强对质量的关注，代码经过必要的自检再提交</li><li>制定简明严格的提交纪律，构建失败及时修复</li><li>用构建监视器显示持续集成状态，使项目健康情况公开可视</li><li>为开发人员提供本地构建能力，以方便自检和问题定位</li></ul><p></p>
-
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="6月 29 2010" class="post-list__meta--date date">6月 29 2010</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">

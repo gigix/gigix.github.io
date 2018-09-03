@@ -175,6 +175,30 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2011/2/20/chef-2-rails-server/" title="link to Chef学习手记之贰：基本套餐">Chef学习手记之贰：基本套餐</a></h2>
+
+      <p class="excerpt">
+        <p>现在我要配置一台体面的Rails服务器。也许我会用它来跑<a href="http://1.hourfor.me" target="_blank" rel="external">1.HourFor.me</a>。</p><p>要配置一台Rails服务器，首先要有一台服务器。于是我到<a href="http://aws.amazon.com/ec2/" target="_blank" rel="external"><span class="caps">EC2</span></a>搞了一台服务器。EC2之于DevOps就像SourceForge之于轻量级J2EE：它让你有机会去尝试那些原来只有在超级大企业里才会出现的东西。你可以在自己家里、在业余时间积累经验，而且不花多少钱。我装了一台Fedora8的机器。</p><p>在<a href="http://gigix.thoughtworkers.org/2011/2/19/chef-1">学习手记之壹</a>里我说需要有一个Chef服务器。其实Chef有三种运行的方式：你自己装Chef服务器；压根不要Chef服务器（叫<a href="http://wiki.opscode.com/display/chef/Chef+Solo" target="_blank" rel="external">Chef Solo</a>）；或者用OpsCode做你的Chef服务器。第三种方式蛮好，又不用自己多架台服务器，又可以在世界任何地方共享我的大餐。所以我就要这样做。</p><p><img src="http://gigix.thoughtworkers.org/assets/2011/2/20/cakes_1.jpg" width="300px"></p><p>首先要在OpsCode注册，并创建一个组织（organization）。这部分蛮简单，照着网站的指示一步步做就行了。我创建了一个叫“thoughtworkers”的组织。创建组织的时候小心，有免费的plan可以用的。我现在还不需要收费plan那么强的功能。</p><p>紧跟着要搞定开发环境。我要在自己的机器上建一个<a href="http://wiki.opscode.com/display/chef/Chef+Repository" target="_blank" rel="external">Chef Repository</a>，配置与Chef服务器连接的身份认证信息。基本上，按照<a href="http://wiki.opscode.com/display/chef/Quick+Start#QuickStart-SettingUpTheUserEnvironment" target="_blank" rel="external">这个文档</a>来操作就可以了。</p><p>接下来要在EC2那台Fedora机器上安装Chef客户端。这也蛮简单，也有<a href="http://wiki.opscode.com/display/chef/Installation+with+RubyGems" target="_blank" rel="external">一个文档</a>。其实关键就是要把RubyGems升级到1.3.7以上，然后就可以“gem installchef”啦。装好之后执行一下“chef-client”，应该会报错，需要从本地环境拷贝/etc/chef下面的client.rb和validation.pem去Fedora机器上。</p><p>现在可以写程序咯～在ChefRepository下面的roles目录里建一个base.json文件。先不管是Rails服务器还是Django服务器，我的体面服务器必须满足一些基本条件，比如有GCC啦，有Git啦，之类的。所以我在base.json里这样描述我的体面服务器：</p><pre>{“name”: “base”,”default_attributes”: {“chef”: {“server_url”: “<a href="https://api.opscode.com/organizations/thoughtworkers&quot;,&quot;cache_path" target="_blank" rel="external">https://api.opscode.com/organizations/thoughtworkers&quot;,&quot;cache_path</a>“: “/var/chef/cache”,”backup_path”: “/var/chef/backup”,”validation_client_name”: “thoughtworkers-validator”,”run_path”: “/var/chef”}},”json_class”: “Chef::Role”,”run_list”: [“recipe[build-essential::default]”,”recipe[openssl::default]”,”recipe[chef::client]”,”recipe[chef::delete_validation]”,”recipe[git::default]”],”description”: “Basic Server”,”chef_type”: “role”,”override_attributes”: {}}</pre><p>然后涅…那台Fedora机器咋知道它自己应该有“base”这个角色呢？当然答案是它不知道。我得告诉它。<a href="http://wiki.opscode.com/display/chef/Knife" target="_blank" rel="external">Knife</a>是Chef的便利命令行工具。比如说，可以列出所有可管的节点（必须在Chef Repository目录下）：</p><pre>$ knife node list# 下面是输出回显[“ip-10-130-9-17.ap-southeast-1.compute.internal”,”jeffxiong3650”]</pre><p>有两台机器。下面这个是我自己的笔记本电脑，上面那个名字很长的就是在EC2的Fedora。我要让它知道，自己有“base”这个角色要扮演：</p><pre>$ knife node run_list add \ip-10-130-9-17.ap-southeast-1.compute.internal “role[base]”# 下面是输出回显{“run_list”: [“role[base]”]}</pre><p>好乖～现在ssh登录到Fedora上去，执行一把“chef-client”…体面的服务器就这样装好啦～试试git，没问题的说～嗯嗯，当然这只是第一步。接下来要配置好体面的Rails服务器才行呢。</p><p><em>（未完待续）</em></p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="2月 20 2011" class="post-list__meta--date date">2月 20 2011</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2011/2/19/chef-1/" title="link to Chef学习手记之壹：概念">Chef学习手记之壹：概念</a></h2>
 
       <p class="excerpt">
@@ -378,30 +402,6 @@ classes that you can use:
       <div class="post-list__meta">
 
         <time datetime="1月 10 2011" class="post-list__meta--date date">1月 10 2011</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2011/1/5/travelling-driving/" title="link to 达摩流浪者">达摩流浪者</a></h2>
-
-      <p class="excerpt">
-        <p>2010年，世界杯以后，从广州回到北京以后，开着车，又去了很多地方。</p><p><a href="http://maps.google.com/maps/ms?ie=UTF&amp;msa=0&amp;msid=212502388818692005384.00049927c863fa8999bf6" target="_blank"><img src="http://gigix.thoughtworkers.org/assets/2011/1/6/2010-driving.png" width="480px"></a></p><p>在路上的感觉真好。</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="1月 5 2011" class="post-list__meta--date date">1月 5 2011</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">
