@@ -180,6 +180,30 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2008/7/6/rewrite-default-task/" title="link to Rewrite -default task">Rewrite -default task</a></h2>
+
+      <p class="excerpt">
+        <pre>Rake::Task[:default].prerequisites.cleartask :default = %w(db:test:prepare unit functional)</pre>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="7月 6 2008" class="post-list__meta--date date">7月 6 2008</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2008/7/3/essentials-of-software-process/" title="link to Essentials of Software Process">Essentials of Software Process</a></h2>
 
       <p class="excerpt">
@@ -383,30 +407,6 @@ classes that you can use:
       <div class="post-list__meta">
 
         <time datetime="6月 4 2008" class="post-list__meta--date date">6月 4 2008</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2008/5/30/database-view-in-rails-app/" title="link to 给Rails应用搞上数据库视图">给Rails应用搞上数据库视图</a></h2>
-
-      <p class="excerpt">
-        <p>第一次在Rails应用里用到了<a href="http://dev.mysql.com/tech-resources/articles/mysql-views.html" target="_blank" rel="external">MySQL 5的视图</a>，留个纪念。</p><p>Rails创建大概50,000个ActiveRecord对象就会很慢（大概50~60秒，在我的双核Mac Mini上），为了对付一个报表，就搞了一个视图。整体时间从70秒降到7秒。</p><p>Rails预先定义的rake任务中有db:test:prepare（里面调用db:test:clone_structure），但这个任务只把development库的所有表复制到test，不会复制视图，所以要自己在Rakefile里准备test库。</p><p>以上。</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="5月 30 2008" class="post-list__meta--date date">5月 30 2008</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">

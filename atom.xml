@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gigix.thoughtworkers.org/"/>
-  <updated>2019-01-07T12:52:02.789Z</updated>
+  <updated>2019-04-06T12:50:27.417Z</updated>
   <id>http://gigix.thoughtworkers.org/</id>
   
   <author>
@@ -14,6 +14,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>去年在研读营的发言摘录</title>
+    <link href="http://gigix.thoughtworkers.org/2019/4/6/discussion-in-2018-kaifeng-camp/"/>
+    <id>http://gigix.thoughtworkers.org/2019/4/6/discussion-in-2018-kaifeng-camp/</id>
+    <published>2019-04-06T05:01:00.000Z</published>
+    <updated>2019-04-06T12:50:27.417Z</updated>
+    
+    <content type="html"><![CDATA[<p><em>（就，觉得自己还挺有洞察力的……）</em></p>
+<p>熊节：我在看《<a href="https://book.douban.com/subject/26628087/" target="_blank" rel="external">赛博无产阶级</a>》这本书的时候有一个观察，就是它用马克思的理论在呼吁赛博空间的无产阶级联合起来，但关于“如何联合起来”这个问题是缺乏回答的。可能跟我来自产业界的背景有关，我看到这本书的时候就会想，我们认识到问题的存在了，那么接下来应该怎么办呢？这个“怎么办”的问题，我觉得仍然缺乏一个令人满意的答案。</p>
+<p>无产阶级应该如何联合起来，这个问题一直找不到好的答案，这让我们隐约看到，背后有一种力量的存在。昨天我跟吴老师讨论传播学的时候，我们就谈到一个现象：偏右翼的、偏自由主义的、偏市场的这些传播学学者，他们可以很自然地去做跟市场有关的研究，很自然地得到市场的资助，形成一个生态，不断去强化他的影响力。而左翼的学者，当他们要谈论社会问题的时候，就会遇到更多的阻力，需要更努力地去克服困难才能做这件事。在赛博空间的无产阶级联合这个问题上，我们也看到一种类似的现象：资本的联合、资本和权力的联合、资本和市场的联合，好像不需要特别的努力，很自然地就联合起来了；而弱势群体则有着各种各样的隔阂，很难形成一个联合的、共同的网络空间，很难形成合力。我觉得，这种现象不应该解释为赛博无产阶级是一盘散沙，这不是一个合理的解释。我认为这种现象的背后，是有一种力量在促成资本那一方的联合，并且打压无产阶级这一方的联合。这种力量是什么？我认为这是一个值得探索的问题。</p>
+<p>现在中国的互联网已经形成了一种中心化的结构。这方面可能邱老师的研究会给我们一些线索：中国的互联网在很早的早期（2000年代初期），是有着草根的、自发的联合的形式的。但很快我们就发现，网络在逐渐中心化，并且每一个中心、每一个热点都是资本在推动。在今天这样一个已经中心化的网络生态下，用什么方式去创造一个无产者的联合，这是一个难题。因为这种无产者的联合，是现在的网络中心所不乐见的。那么我们用什么方式去联合？是创造一个新的中心？还是用一种去中心化的方式来形成分享和共识？这可能也是一个需要讨论的问题。</p>
+<p>当我们想去探讨赛博空间的无产阶级如何联合的时候，我们首先要意识到，这种联合并不是所有人都喜闻乐见的，它可能是资本所不愿意看到的。在这种情况下，我们用什么去驱动这种联合的形成，使之不会轻易被破坏，这既是一个学术理论问题，同时也是一个技术问题。这里面需要一个有效的组织方式。因为我们现在看到资本的力量，资本和权力的结合，这个力量是非常庞大的。并且我们谈论的现在也不是工厂里面成千上万的工人每天在同一个地方工作这样的形态，我们谈论的是赛博空间的无产阶级，这种新的无产阶级形态一定需要新的组织方式。我不知道答案是什么，我觉得它可能需要不同的思考。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;em&gt;（就，觉得自己还挺有洞察力的……）&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;熊节：我在看《&lt;a href=&quot;https://book.douban.com/subject/26628087/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;赛博无产阶级&lt;/a&gt;》这本
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>2018年读过的好书</title>
@@ -808,6 +832,34 @@ Hello, World!</pre>
   </entry>
   
   <entry>
+    <title>机器学习项目如何管理：现状</title>
+    <link href="http://gigix.thoughtworkers.org/2017/12/12/ml-project-management-current-situation/"/>
+    <id>http://gigix.thoughtworkers.org/2017/12/12/ml-project-management-current-situation/</id>
+    <published>2017-12-12T05:01:00.000Z</published>
+    <updated>2017-12-08T12:23:10.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://www.atlassian.com/blog/software-teams/3-ways-ai-will-change-project-management-better" target="_blank" rel="external">Atlassian今年4月的一篇博客</a>提出，到2020年有87%的Jira用户认为他们的工作会被AI改变。具体到项目管理上，Atlassian的观点是，AI首先会作为项目管理助手进入我们的视野，然后透过数据拓展我们对项目的理解，更进一步还能通过主动猜测、倡导优秀实践、创造新的元数据层等方式弥补数据的缺失，最终对项目提出有益的建议。</p>
+<p><img src="https://orhachaim.co.il/wp-content/uploads/thumbs/1-338ubis538emc7477jajgq.jpg"></p>
+<p>然而愿望是美好的现实是骨感的。还不要说在项目管理中使用机器学习，关于机器学习的项目应该怎么管理，业界似乎已经有很多不甚圆满的经历。例如一位创业者谈他们如何<a href="https://medium.com/xeneta/boosting-sales-with-machine-learning-fbcf2e618be3" target="_blank" rel="external">用自然语言处理技术推动销售</a>。看起来他们尝试了各种不同的数据源、多种特征工程的方法、以及多种算法，接下来还有很多想要尝试的东西。从这个故事中我们看不到的是，他们给自己设置的目标是什么、目前的进展是什么、基于什么原则在指导每一次的尝试。简而言之，这位创业者的机器学习项目并没有任何有效的管理。</p>
+<p>另一个<a href="https://zhuanlan.zhihu.com/p/26435192" target="_blank" rel="external">同样缺乏管理的机器学习项目</a>就没有那么幸运。年薪百万的数据科学家被认为“没有给公司带来实际价值。高管们不知道他们具体做了什么，业务人员每周都给他们提出预测需求，却很少能在短时间得到回应”。与前面一个故事相比，这里的数据科学家需要在别人的管理之下开展工作，管理方法的欠缺无疑是矛盾累积和激化的原因之一。针对这个故事，作者提出了五点非常抽象的建议：1.从最简单的模型开始；2.探索更多问题；3.用全部的数据和特征训练模型；4.业务驱动模型；5.专注于自动化。我认为这几点并不能引导这家公司的管理者更有效地管理他们的数据科学家。</p>
+<p>这种缺乏管理方法的现象，一个重要的原因是典型的IT管理者对机器学习缺乏必要的了解（甚至更糟糕，有一些似是而非的半吊子的了解）。目前而论，咨询公司和商业/科技传媒在普及“必要的了解”方面并没有起到很好的作用。<a href="https://www.mckinsey.com/industries/high-tech/our-insights/an-executives-guide-to-machine-learning" target="_blank" rel="external">麦肯锡2015年的文章</a>说，关于机器学习，企业领导层需要了解的问题还是“传统行业能通过机器学习获得什么新的洞察”这种高层面的，提出的建议也是“机器学习要分描述、预测、处方三步走”这样的宏观建议。当然麦记的建议历来是面向CxO级别的，不落到项目管理层面也很正常。</p>
+<p>HBR也在2015年讨论“<a href="https://hbr.org/2015/07/what-every-manager-should-know-about-machine-learning" target="_blank" rel="external">每个管理者都需要了解的机器学习知识</a>”，提出了一些很重要的点：不光需要大数据、还需要广泛的数据；机器学习只是做预测、不提供因果性；要区分信号与噪音（还提到了特征提取、规则化、交叉验证等具体技术）；以及一些容易犯的错误（例如强行归因、不恰当的期望、迷信大数据量、对人的判断利用不足等）。但这篇文章的问题在于，它没有提供一套成型的工作方法。这些技术应该什么时候用，这些错误会在什么时候犯，文章没有提供出来，于是读者仍然被置于一个“等你该知道的时候你就知道了”的状态，很难对项目管理带来立竿见影的改变。</p>
+<p><a href="https://machinelearningmastery.com/how-to-layout-and-manage-your-machine-learning-project/" target="_blank" rel="external">2014年的一篇博客</a>着重谈机器学习项目的布置，包括应该有哪些目录、数据怎么管理、代码怎么组织等非常具体的实践。作者提出了项目流程的几个原则：透明；可维护；模块化；可迁移；可复制；效率。关于项目的可复制性，作者也从工程实践角度<a href="https://machinelearningmastery.com/reproducible-machine-learning-results-by-default/" target="_blank" rel="external">提出了10条原则</a>。在工程实践这个角度，这位作者给出的指导原则具有很好的可操作性。</p>
+<p>但是在项目管理角度，行业仍在继续探索。今年7月InfoQ的一篇文章讨论<a href="http://www.infoq.com/cn/articles/agile-development-of-artificial-intelligence-applications" target="_blank" rel="external">如何开发机器学习的MVP</a>，作者总结了四个思考步骤：第一问题是否能转化成分类/回归的问题；第二目标是否是容易获取、客观无偏差的数据；第三是问题的预测目标，因果关系是什么；第四是这个问题是不是一个真的业务需求。这也是几个很重要的思考点，不足之处仍然是缺乏系统性，并且缺落地的方法指导。</p>
+<p>有一篇博客提出了很有意义的问题：<a href="https://zhuanlan.zhihu.com/p/20729176" target="_blank" rel="external">机器学习项目为什么未实现敏捷开发</a>？作者发现算法类项目流程漫长，并结合之前实践Scrum的经验，提出了一些可能可以优化的方面，尤其是在团队组织形式上，是否可以参考敏捷的全功能团队经验。作者并且提出了一个重要的问题：对算法模型的评估是否必须在线上进行？或者换个角度来问这个问题：如何降低线下模型评估的偏差程度？</p>
+<p>敏捷软件开发之所以成为一种被广泛接受的软件开发方法论，不仅仅是因为它有高阶的思想支撑和指导原则，更重要的是它有一系列非常具体、非常可落地的实践。这些实践对于一线工作者的意义在于：(1)知道什么时候该做什么事；(2)知道什么时候该看什么指标；(3)知道什么时候可能有什么风险。机器学习类的项目要真正普及，也会需要这么一套具体可落地的实践指导。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;https://www.atlassian.com/blog/software-teams/3-ways-ai-will-change-project-management-better&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;At
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>保持现状与有意为之的无知</title>
     <link href="http://gigix.thoughtworkers.org/2017/12/12/minded-unmindedness/"/>
     <id>http://gigix.thoughtworkers.org/2017/12/12/minded-unmindedness/</id>
@@ -839,34 +891,6 @@ Hello, World!</pre>
     
       &lt;p&gt;&lt;em&gt;（本文同时发表于&lt;a href=&quot;http://tootopia.me/article/8761&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;土逗公社&lt;/a&gt;）&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;1970年9月，萨尔瓦多·阿连德当选智利总统。智利人民用自己
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>机器学习项目如何管理：现状</title>
-    <link href="http://gigix.thoughtworkers.org/2017/12/12/ml-project-management-current-situation/"/>
-    <id>http://gigix.thoughtworkers.org/2017/12/12/ml-project-management-current-situation/</id>
-    <published>2017-12-12T05:01:00.000Z</published>
-    <updated>2017-12-08T12:23:10.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://www.atlassian.com/blog/software-teams/3-ways-ai-will-change-project-management-better" target="_blank" rel="external">Atlassian今年4月的一篇博客</a>提出，到2020年有87%的Jira用户认为他们的工作会被AI改变。具体到项目管理上，Atlassian的观点是，AI首先会作为项目管理助手进入我们的视野，然后透过数据拓展我们对项目的理解，更进一步还能通过主动猜测、倡导优秀实践、创造新的元数据层等方式弥补数据的缺失，最终对项目提出有益的建议。</p>
-<p><img src="https://orhachaim.co.il/wp-content/uploads/thumbs/1-338ubis538emc7477jajgq.jpg"></p>
-<p>然而愿望是美好的现实是骨感的。还不要说在项目管理中使用机器学习，关于机器学习的项目应该怎么管理，业界似乎已经有很多不甚圆满的经历。例如一位创业者谈他们如何<a href="https://medium.com/xeneta/boosting-sales-with-machine-learning-fbcf2e618be3" target="_blank" rel="external">用自然语言处理技术推动销售</a>。看起来他们尝试了各种不同的数据源、多种特征工程的方法、以及多种算法，接下来还有很多想要尝试的东西。从这个故事中我们看不到的是，他们给自己设置的目标是什么、目前的进展是什么、基于什么原则在指导每一次的尝试。简而言之，这位创业者的机器学习项目并没有任何有效的管理。</p>
-<p>另一个<a href="https://zhuanlan.zhihu.com/p/26435192" target="_blank" rel="external">同样缺乏管理的机器学习项目</a>就没有那么幸运。年薪百万的数据科学家被认为“没有给公司带来实际价值。高管们不知道他们具体做了什么，业务人员每周都给他们提出预测需求，却很少能在短时间得到回应”。与前面一个故事相比，这里的数据科学家需要在别人的管理之下开展工作，管理方法的欠缺无疑是矛盾累积和激化的原因之一。针对这个故事，作者提出了五点非常抽象的建议：1.从最简单的模型开始；2.探索更多问题；3.用全部的数据和特征训练模型；4.业务驱动模型；5.专注于自动化。我认为这几点并不能引导这家公司的管理者更有效地管理他们的数据科学家。</p>
-<p>这种缺乏管理方法的现象，一个重要的原因是典型的IT管理者对机器学习缺乏必要的了解（甚至更糟糕，有一些似是而非的半吊子的了解）。目前而论，咨询公司和商业/科技传媒在普及“必要的了解”方面并没有起到很好的作用。<a href="https://www.mckinsey.com/industries/high-tech/our-insights/an-executives-guide-to-machine-learning" target="_blank" rel="external">麦肯锡2015年的文章</a>说，关于机器学习，企业领导层需要了解的问题还是“传统行业能通过机器学习获得什么新的洞察”这种高层面的，提出的建议也是“机器学习要分描述、预测、处方三步走”这样的宏观建议。当然麦记的建议历来是面向CxO级别的，不落到项目管理层面也很正常。</p>
-<p>HBR也在2015年讨论“<a href="https://hbr.org/2015/07/what-every-manager-should-know-about-machine-learning" target="_blank" rel="external">每个管理者都需要了解的机器学习知识</a>”，提出了一些很重要的点：不光需要大数据、还需要广泛的数据；机器学习只是做预测、不提供因果性；要区分信号与噪音（还提到了特征提取、规则化、交叉验证等具体技术）；以及一些容易犯的错误（例如强行归因、不恰当的期望、迷信大数据量、对人的判断利用不足等）。但这篇文章的问题在于，它没有提供一套成型的工作方法。这些技术应该什么时候用，这些错误会在什么时候犯，文章没有提供出来，于是读者仍然被置于一个“等你该知道的时候你就知道了”的状态，很难对项目管理带来立竿见影的改变。</p>
-<p><a href="https://machinelearningmastery.com/how-to-layout-and-manage-your-machine-learning-project/" target="_blank" rel="external">2014年的一篇博客</a>着重谈机器学习项目的布置，包括应该有哪些目录、数据怎么管理、代码怎么组织等非常具体的实践。作者提出了项目流程的几个原则：透明；可维护；模块化；可迁移；可复制；效率。关于项目的可复制性，作者也从工程实践角度<a href="https://machinelearningmastery.com/reproducible-machine-learning-results-by-default/" target="_blank" rel="external">提出了10条原则</a>。在工程实践这个角度，这位作者给出的指导原则具有很好的可操作性。</p>
-<p>但是在项目管理角度，行业仍在继续探索。今年7月InfoQ的一篇文章讨论<a href="http://www.infoq.com/cn/articles/agile-development-of-artificial-intelligence-applications" target="_blank" rel="external">如何开发机器学习的MVP</a>，作者总结了四个思考步骤：第一问题是否能转化成分类/回归的问题；第二目标是否是容易获取、客观无偏差的数据；第三是问题的预测目标，因果关系是什么；第四是这个问题是不是一个真的业务需求。这也是几个很重要的思考点，不足之处仍然是缺乏系统性，并且缺落地的方法指导。</p>
-<p>有一篇博客提出了很有意义的问题：<a href="https://zhuanlan.zhihu.com/p/20729176" target="_blank" rel="external">机器学习项目为什么未实现敏捷开发</a>？作者发现算法类项目流程漫长，并结合之前实践Scrum的经验，提出了一些可能可以优化的方面，尤其是在团队组织形式上，是否可以参考敏捷的全功能团队经验。作者并且提出了一个重要的问题：对算法模型的评估是否必须在线上进行？或者换个角度来问这个问题：如何降低线下模型评估的偏差程度？</p>
-<p>敏捷软件开发之所以成为一种被广泛接受的软件开发方法论，不仅仅是因为它有高阶的思想支撑和指导原则，更重要的是它有一系列非常具体、非常可落地的实践。这些实践对于一线工作者的意义在于：(1)知道什么时候该做什么事；(2)知道什么时候该看什么指标；(3)知道什么时候可能有什么风险。机器学习类的项目要真正普及，也会需要这么一套具体可落地的实践指导。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;https://www.atlassian.com/blog/software-teams/3-ways-ai-will-change-project-management-better&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;At
     
     </summary>
     
@@ -1038,70 +1062,6 @@ Hello, World!</pre>
     
       &lt;p&gt;&lt;em&gt;（旧文一篇，已发表于&lt;a href=&quot;https://zhuanlan.zhihu.com/p/25854862&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;土逗公社&lt;/a&gt;）&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;人工智能的风险已经不再是一个新话题。在过去几
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>数字化转型与平台战略</title>
-    <link href="http://gigix.thoughtworkers.org/2017/11/15/digitization-and-digital-platform/"/>
-    <id>http://gigix.thoughtworkers.org/2017/11/15/digitization-and-digital-platform/</id>
-    <published>2017-11-15T05:01:00.000Z</published>
-    <updated>2017-11-15T03:52:48.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>数字化浪潮对传统行业的冲击已经被越来越多的企业领导者所感知。据《<a href="https://hbr.org/2016/03/the-industries-that-are-being-disrupted-the-most-by-digital" target="_blank" rel="external">哈佛商业评论</a>》的调查，半数以上的企业高管认为自己的业务将在12个月内受到数字化浪潮较大程度的冲击，其中媒体、通信、消费者金融服务、零售、科技、保险、消费者产品、专业服务和教育等10个行业受到的影响最大。</p>
-<p><img src="https://hbr.org/resources/images/article_assets/2016/03/W160311_GROSSMAN_EXECUTIVESWHO1-850x505.png"></p>
-<h2 id="数字化对企业的要求"><a href="#数字化对企业的要求" class="headerlink" title="数字化对企业的要求"></a>数字化对企业的要求</h2><p>数字化到底对企业提出了什么要求？可以从一个真实的案例中看出端倪。一家全球知名的快消品企业，在京东618购物节之前花了大量的成本和精力设计促销计划，细到优惠力度、广告Banner等每个具体环节都经过多次论证。市场部从领导到一线员工都如临大敌，力求方案精益求精。对待一次重要的促销机会，当然需要重视，但是从上到下如此关注、投入如此多的精力，这是为什么？原来这家企业对市场数据的处理能力还停留在相当初级的阶段，电商平台提供的数据还在用Excel归集处理。在这种数据处理能力的支撑下，市场部的促销举措至少需要两周时间才能看到数据反馈。也就是说，一旦促销举措设计失误，在购物节的时间窗口内就没有再次调整的机会。</p>
-<p>这家公司的情况让我联想起几年前看过的<a href="https://www.thoughtworks.com/insights/blog/case-continuous-delivery" target="_blank" rel="external">一组数据</a>：Etsy在2012年平均每天能往生产系统部署超过30次；Amazon在工作日平均每11.6秒就有一次生产系统部署发生，峰值时一小时内部署超过1000次。当这家快消品企业响应一次变化、进行一次实验的周期需要以两周计，领先的互联网企业几年前就已经能够以小时、分钟为单位响应变化和开展实验。这种快速响应变化的能力，是数字化企业的核心竞争力。</p>
-<p>为了打造快速响应的能力，海尔把传统的层级管理体制改造成了三级的自主经营体机制。海尔将7万名员工自我组织成了2000多个自主经营体，最大的自主经营体数百人，最小的只有7人，如果一个员工在海尔内部找不到一个自营体能够接受他，海尔就会和他解除劳动合同。海尔的首席执行官<a href="http://www.it-times.com.cn/xwss/39791.jhtml" target="_blank" rel="external">张瑞敏说</a>：“每个小微（团队）都要变成一个个的小团体，所有相关人员都在这里头，负责开发某一个地方的市场，或某一个地区的市场。”直接来自顾客和市场的信息，就像鲶鱼一样激活了小团队的响应能力。</p>
-<p><img src="/assets/2017/11/15/haier.jpg"></p>
-<p>芬兰的游戏公司<a href="http://supercell.com/en/" target="_blank" rel="external">Supercell</a>也倡导以小团队模式进行游戏开发，一般来说两个员工、或者5个员工、最多不超过7个员工组成独立的开发团队，称之为Cell（细胞），这也是公司名字Supercell（超级细胞）的由来。团队自己决定做什么样的产品，然后最快的时间推出产品的公测版，看看游戏是否受用户欢迎。如果用户不欢迎，迅速放弃这个产品，再进行新的尝试，期间几乎没有管理角色的介入。这家公司在2015年手机游戏排行Top10中曾占据榜单大半江山，2016年腾讯以86亿美元收购了员工数不到200人的Supercell公司84.3%的股份。</p>
-<p>从海尔、Supercell以及其他很多小团队的成功经验中，我们看到直面市场与顾客的具有四大优势，使得他们能很好地应对数字化浪潮带来的对响应力的要求：</p>
-<ol>
-<li><strong>协作高效</strong>。小团队协同效率最高，能全力提供顾客所需，避免组织内耗。</li>
-<li><strong>目标清晰</strong>。小团队对战机（商机）的把握更加敏锐。</li>
-<li><strong>调整快捷</strong>。当情况发生变化或获得新信息，小团队能更快调整。</li>
-<li><strong>迅速扩展</strong>。一旦找准目标，小团队能全力投入，迅速扩大战果。</li>
-</ol>
-<h2 id="小团队需要大平台"><a href="#小团队需要大平台" class="headerlink" title="小团队需要大平台"></a>小团队需要大平台</h2><p>然而，并非所有小团队都能天生地具备这四大优势。实际上，我们看到很多创业小团队并没有很强的感知和响应变化的能力。成都的一支小团队在2016年创办了“<a href="http://www.lieyunwang.com/archives/147235" target="_blank" rel="external">翘翘动感沙拉</a>”品牌，针对有轻餐食及塑形需求的白领人士，一方面能够作为一道主食满足都市白领的午餐需求，另一方面为有塑形减脂需求的人士提供热量较低且健康的食物。翘翘沙拉斥资30多万装修厨房，邀请了国际五星级酒店主厨加盟，筹备用了近半年时间。上市后才发现产品定位与市场不符，4个月后就停止了经营。这支小团队规模虽小，却没能发挥出预期的响应力。</p>
-<p>再次放眼站在数字化潮流前端的企业，我们会发现：原来他们不止是倡导小团队模式，而且为小团队建立了一整套的支撑平台。在海尔的自主经营体结构中，有三个层次的自主经营体。其中一线经营体经营体直接面对顾客，为所负责的顾客群创造价值；二级经营体（或称平台经营体）则为一线经营体提供资源和专业的服务支持，包括人力资源管理、供应链、市场营销、质量体系、战略管理等，所以，平台经营体是一级经营体的资源平台、流程平台、专业化服务平台。平台的存在让一线经营体获得了响应力。</p>
-<p><img src="http://pic2.pedaily.cn/201609/20169680137734.jpg"></p>
-<p>阿里巴巴则是用共享服务体系支撑前端业务。今天的阿里巴巴已经将集团20多个核心业务中公共的、通用的业务以服务的形式沉淀到了共享业务事业部，整个集团的核心业务能力均建立在这样一套共享服务体系之上。共享服务体系从会员、商品、交易、支付四大中心开始建设，支撑1688、淘宝、聚划算、闲鱼及全集团超过2000个应用。共享服务体系强调的能力包括：服务分布的能力；数据分布的能力；数字化运营的能力；平台稳定的能力；平台开放的能力等。</p>
-<p><img src="/assets/2017/11/15/ali.png"></p>
-<p>华为也在强调用大平台炮火支撑前线指战员。任正非在华为质量与流程IT管理部员工座谈会上说，华为内部IT要做到“能力模块化和微服务化，使能公司实现数字化转型和大平台下的精兵作战，在研发、销服、供应等业务领域要率先实现ROADS体验（实时、按需服务、在线、自助、社交化连接）”。</p>
-<p>透过对各种小团队的观察我们发现，独立自主、直面顾客的小团队，在具备组织灵活性的同时，也必定面对基础能力的局限。那些走在数字化潮流前端的企业，都是以平台形式为小团队提供了四大能力的支撑，才能发挥出小团队精准、灵活、高效的优势：</p>
-<ol>
-<li><strong>洞察顾客</strong>的能力。小团队需要透过多种数字化渠道获得对顾客的全面了解。</li>
-<li><strong>服务供给</strong>的能力。小团队需要迅速整合企业内部的资源和能力为顾客提供服务。</li>
-<li><strong>数据决策</strong>的能力。小团队需要随时捕获市场反馈，根据真实数据做决策。</li>
-<li><strong>实验创新</strong>的能力。小团队需要开展受控实验，通过实验检验创新假设。</li>
-</ol>
-<h2 id="数字平台战略"><a href="#数字平台战略" class="headerlink" title="数字平台战略"></a>数字平台战略</h2><p>企业数字平台，是基于云计算“基础设施即服务”（IaaS）能力之上，为企业数字化战略提供能力支撑的一系列平台服务（PaaS），涵盖IT系统研发与运营全生命周期。企业数字平台为直面市场与顾客的精益团队提供顾客洞察、服务供给、数据决策、实验创新四大能力支撑，赋能团队快速创新和响应变化。而这四大能力的基础，是IT组织的精益研发能力和相应的基础设施。</p>
-<p><img src="/assets/2017/11/15/digital-capabilities.png"></p>
-<p>对众多成功的数字化企业的调研显示，这些企业有着一些引人注目的共性。他们逐步构建自己的数字平台，以此为基础激活企业核心资产。数字平台支撑小团队迅速响应市场和顾客的变化、高效地实验创新，给这些企业带来了显著的改变：</p>
-<ul>
-<li>提升IT效能，为产品和技术团队赋能，更快更好地为客户交付产品。</li>
-<li>构建行业生态，使得新业务、新产品、新服务能充分利用服务化后的企业核心能力和资源。</li>
-<li>促进业务创新，充分利用核心资产进行高效、快速的创新实验，保持企业竞争力。</li>
-</ul>
-<p>特别针对数字化小团队需要的四大能力，ThoughtWorks的<a href="https://www.thoughtworks.com/cn/digital-platform-strategy" target="_blank" rel="external">数字平台战略</a>提出了一个基础设施、四个平台的框架结构：</p>
-<ol>
-<li>精益研发需要的<strong>交付基础设施</strong>。</li>
-<li><strong>顾客触点平台</strong>全方位洞察顾客所需。</li>
-<li><strong>资源服务化平台</strong>快速供给数字化服务。</li>
-<li><strong>数据自服务平台</strong>支持基于数据的决策。</li>
-<li><strong>实验测量平台</strong>赋能受控创新实验。</li>
-</ol>
-<p><img src="/assets/2017/11/15/digital-platforms.png"></p>
-<p>基于数字平台战略提出的框架，企业可以结合自身情况，逐步建设当前数字化进程所需的支撑平台，用平台助推企业的数字化战略。</p>
-<p><em>（更多关于数字平台战略的信息，请下载我们的《<a href="https://info.thoughtworks.com/DPS-subscription.html" target="_blank" rel="external">数字平台战略</a>》白皮书）</em></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;数字化浪潮对传统行业的冲击已经被越来越多的企业领导者所感知。据《&lt;a href=&quot;https://hbr.org/2016/03/the-industries-that-are-being-disrupted-the-most-by-digital&quot; target=&quot;_bl
     
     </summary>
     

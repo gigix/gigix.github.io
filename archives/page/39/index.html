@@ -180,6 +180,30 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2008/12/31/thousand-kilometers-a-day/" title="link to 千里走单骑">千里走单骑</a></h2>
+
+      <p class="excerpt">
+        <p>早上6:30，从望京磨磨唧唧发车。天漆黑。日出很美。</p><p>7:34，出北京界。京石高速￥15。</p><p>过石家庄，在元氏服务区加油，￥140。</p><p>11:36，出河北界，高速收费￥160。</p><p>12:03在安阳服务区休息，吃自己带的肉松饼。犯困，喝红牛。右侧脖子酸疼。</p><p>13:10在新乡服务区加油，￥125，听说是乙醇汽油又买了加油员推荐的添加剂，￥30</p><p>郑州许昌一段脖子疼得难受，戴墨镜更觉头疼。在许昌服务区再次休息，喝红牛。转上许平南高速以后头疼减轻。</p><p>改成右腿（准确说是右膝附近）酸疼。平顶山和方城服务区都休息。许平南路况好，车少。</p><p>16:13，南阳下高速，收费￥210。</p><p>16:40酒店checkin。晚饭吃一大碗烩面，当地的辣椒呈小块状，很香。</p><p>总里程约950KM，总时间约10小时，路上总费用680。</p><p>结论：（1）日行千里是可行的；（2）也是很累的。（3）如果夏天两人换开的话一天可以干到武汉去。</p><p>明日目标：荆州-常德</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="12月 31 2008" class="post-list__meta--date date">12月 31 2008</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2008/12/24/rhythm-of-code-jam/" title="link to 快速冲锋步">快速冲锋步</a></h2>
 
       <p class="excerpt">
@@ -383,30 +407,6 @@ classes that you can use:
       <div class="post-list__meta">
 
         <time datetime="12月 11 2008" class="post-list__meta--date date">12月 11 2008</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2008/10/19/hack-rails-transaction/" title="link to Hack Rails的事务机制">Hack Rails的事务机制</a></h2>
-
-      <p class="excerpt">
-        <ol><li>ActiveRecord不支持嵌套事务。</li><li>为了简单我们在ApplicationController里做了个filter，于是所有POST/PUT/DELETE的action都被包裹在一个事务里，事务边界是整个请求。</li><li>偏偏有时候你希望让某个操作中的某个部分不被包含在事务里。原因是当某些操作同时进行，你想看到的不是原子的结果，而是所有同时进行的操作汇总的最终结果<ul><li>比如说，“审核改进措施”这个操作中包含了“重新算分”。</li><li>某企业有两项改进措施R1和R2，分别对应考核类别C1和C2。C1的原始分数是98，C2的原始分数是89。</li><li>R1能给C1加回1分，R2能给C2加回11分。也就是说审核R1之后C1变成99分，审核R2后C2变成100分。</li><li>但，“重新算分”是在整个“审核”的事务之中的，于是如果R1和R2同时审核，你一定会看到下列两种原子结果之一：<ul><li><span class="caps">C1 99</span>分，C2 89分；或者</li><li><span class="caps">C1 98</span>分，C2 100分。</li></ul></li><li>其实这个时候我们不想让“重新算分”跟“审核”成为原子操作，我们希望把“算分”从“审核”的事务里拿出来，这样最后一次算分一定能体现最终的分数状态。</li></ul></li><li>可以开一个<a href="http://www.ruby-doc.org/core/classes/Thread.html" target="_blank" rel="external">线程</a>或者进程（比如<a href="http://ruby-doc.org/core/classes/Kernel.html" target="_blank" rel="external">Kernel.system</a>）把算分的逻辑分出来。</li><li>因为可以确定“算分”不会跟“审核”发生死锁，所以把这个线程join起来。<ul><li>一定要小心，要是算分跟审核修改到同一条数据那么就会死锁…因为审核等待算分线程结束，而算分线程等待审核交出数据锁。</li><li>多个算分线程之间是不会死锁滴…为了确保时序可以一上来就锁自己最后要更新的分数记录。</li></ul></li></ol>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="10月 19 2008" class="post-list__meta--date date">10月 19 2008</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">

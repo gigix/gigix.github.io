@@ -180,6 +180,30 @@ classes that you can use:
     
     <li class="post">
 
+      <h2 class="post-list__post-title post-title"><a href="/2007/4/22/教育大众还不如看看电影/" title="link to 教育大众还不如看看电影">教育大众还不如看看电影</a></h2>
+
+      <p class="excerpt">
+        <p>孟岩永远是那么忧国忧民，动不动就要把工作赚钱的事情上升到<a href="http://blog.csdn.net/myan/archive/2007/04/21/1574142.aspx" target="_blank" rel="external">教育大众</a>的高度。不过我真想问问孟岩，你到底要跟“大众”去沟通什么呢？猛禽把自己<a href="http://blog.csdn.net/Raptor/archive/2007/04/21/1573757.aspx" target="_blank" rel="external">对开源的理解</a>简明扼要地整理出来，孟岩你自己睁开眼睛去看看，开动脑筋去想想，你想沟通的“大众”，他们能看懂、想看懂这样的一个blog吗？你就别再骗自己了，这些“大众”连在苏宁电器买台电视机都不知道自己究竟接受了什么合同，你还跟他们说得上什么开源协议？</p><p>但是专业人士一直在和大众沟通，一直在教育大众。对自己的工作缺乏自信吗？我会建议你去看梅里尔·斯特里普《<a href="http://ent.sina.com.cn/f/prada/index.shtml" target="_blank" rel="external">穿普拉达的女王</a>》，好好倾听剧中米兰达的下列台词：</p><p>“你身上这件松垮的蓝色绒线衫，不仅仅是蓝色。它不是宝蓝色，也不是湖蓝色，而是天蓝色。2002年，奥斯卡设计过一系列天蓝色的晚礼服，然后——我猜——是圣罗兰设计出天蓝色的军式夹克衫，之后天蓝色就成了其他8位不同设计师的最爱，然后放入其名下的商店，最后慢慢渗入可悲的CasualCorner，才让你从她们的打折货中淘到。简而言之，那蓝色值几千万和数不尽的心血。滑稽的是，你以为是你选择了这个颜色，让自己远离时尚界，事实却是这屋子里的人帮你从一堆衣服里选了这件绒线衫。”</p><p>所以这是给孟岩以及给我自己和所有<strong>Thought</strong>Workers的忠告：如果你仍然认为自己是最优秀的专业人士，就不要再徒劳地去谋求与“大众”的对话。你应该做的是影响那些站在经济体系金字塔顶端的人，然后社会的自发力量——感谢资本主义——会在适当的时机以适当的方式将你的意见散布给所有的大众，让他们无知无觉、自觉自愿地接受你、跟随你。</p><p>当然，撒泼骂街、声嘶力竭地与大众对话，这样的角色自有其存在的价值。但，如果你能够做一个最优秀的专业人士，还请你珍惜资源，别放低自己的身段和该有的专业形象。</p>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="4月 22 2007" class="post-list__meta--date date">4月 22 2007</time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            
+          </font>
+          
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li class="post">
+
       <h2 class="post-list__post-title post-title"><a href="/2007/4/20/信号：erlang正在靠近中/" title="link to 信号：Erlang正在靠近中">信号：Erlang正在靠近中</a></h2>
 
       <p class="excerpt">
@@ -382,30 +406,6 @@ classes that you can use:
       <div class="post-list__meta">
 
         <time datetime="4月 9 2007" class="post-list__meta--date date">4月 9 2007</time> &#8226; 
-
-        <span class="post-list__meta--tags tags">
-          <font class="categories">
-            
-          </font>
-          
-
-        </span>
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li class="post">
-
-      <h2 class="post-list__post-title post-title"><a href="/2007/4/7/迈向敏捷的第一步/" title="link to 迈向敏捷的第一步">迈向敏捷的第一步</a></h2>
-
-      <p class="excerpt">
-        <p>［以下内容来自一封私人邮件］</p><p>从最容易实践的技术层面上，我推荐你依序做以下事情：</p><p>0. 源代码配置管理（CVS或者SVN，很可能你们已经有了）。</p><p>1. 严格的签入／签出管理制度：做任何任务之前必须checkout/update到最新版本，完成任务之后必须立即checkin到代码库。</p><p>2.自动化构建：用Ant/Maven/NAnt/Rake/Make……编写项目构建脚本，并把构建脚本也checkin到代码库。自动化构建的目标：在一台新的机器（安装了一些基本的平台例如Java）上checkout完整的源代码之后，能够用一条命令完成编译、链接、打包、部署等所有步骤，得到一个可工作的软件。</p><p>3. 持续集成：安装持续集成服务器（推荐<a href="http://cruisecontrolrb.thoughtworks.com/" target="_blank" rel="external">CruiseControl.rb</a>），让它监视你的项目，在每次checkin发生之后立即执行自动化构建脚本，确保项目能够完整构建。如果构建失败，所有工作必须停止，修复之后才能继续checkout/checkin。</p><p>4. 加入测试：在发现bug时，首先编写测试来重现这个bug；修复bug之后应该保证测试通过。把测试代码也放进代码库，并在构建脚本中执行所有测试。此时你的持续集成环境应该也开始执行测试。</p><p>5. 测试驱动：开始实现任何新功能之前，首先编写测试来描述自己要做的事情，然后编写代码让测试通过。</p><p>如果你能够成功做到以上5个（或者说，6个）步骤，你就迈出了成功的第一步，软件的质量会有效提升，响应需求变化的能力也会有效提升。那时我们可以继续探讨以后的步骤。</p>
-      </p>
-
-      <div class="post-list__meta">
-
-        <time datetime="4月 7 2007" class="post-list__meta--date date">4月 7 2007</time> &#8226; 
 
         <span class="post-list__meta--tags tags">
           <font class="categories">
